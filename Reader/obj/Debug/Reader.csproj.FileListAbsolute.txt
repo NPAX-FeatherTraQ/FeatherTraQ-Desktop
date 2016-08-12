@@ -1,0 +1,100 @@
+D:\Project\Luo\R2000Project\UHFDemo\Reader\bin\Debug\Reader.dll
+D:\Project\Luo\R2000Project\UHFDemo\Reader\bin\Debug\Reader.pdb
+D:\Project\Luo\R2000Project\UHFDemo\Reader\obj\Debug\ResolveAssemblyReference.cache
+D:\Project\Luo\R2000Project\UHFDemo\Reader\obj\Debug\Reader.dll
+D:\Project\Luo\R2000Project\UHFDemo\Reader\obj\Debug\Reader.pdb
+C:\Users\Roxy\Desktop\UHF Prototype 4(RECENT)\Reader\bin\Debug\Reader.dll
+C:\Users\Roxy\Desktop\UHF Prototype 4(RECENT)\Reader\bin\Debug\Reader.pdb
+C:\Users\Roxy\Desktop\UHF Prototype 4(RECENT)\Reader\obj\Debug\Reader.csprojResolveAssemblyReference.cache
+C:\Users\Roxy\Desktop\UHF Prototype 4(RECENT)\Reader\obj\Debug\Reader.dll
+C:\Users\Roxy\Desktop\UHF Prototype 4(RECENT)\Reader\obj\Debug\Reader.pdb
+C:\Users\Roxy\Desktop\December 17, 2015\December 17,2015V9\Reader\bin\Debug\Reader.dll
+C:\Users\Roxy\Desktop\December 17, 2015\December 17,2015V9\Reader\bin\Debug\Reader.pdb
+C:\Users\Roxy\Desktop\December 17, 2015\December 17,2015V9\Reader\obj\Debug\Reader.csprojResolveAssemblyReference.cache
+C:\Users\Roxy\Desktop\December 17, 2015\December 17,2015V9\Reader\obj\Debug\Reader.dll
+C:\Users\Roxy\Desktop\December 17, 2015\December 17,2015V9\Reader\obj\Debug\Reader.pdb
+F:\program prototype\December 17,2015V10\Reader\bin\Debug\Reader.dll
+F:\program prototype\December 17,2015V10\Reader\bin\Debug\Reader.pdb
+F:\program prototype\December 17,2015V10\Reader\obj\Debug\Reader.csprojResolveAssemblyReference.cache
+F:\program prototype\December 17,2015V10\Reader\obj\Debug\Reader.dll
+F:\program prototype\December 17,2015V10\Reader\obj\Debug\Reader.pdb
+C:\Users\JM\Desktop\Jan 5, 2016 Version 2\Reader\bin\Debug\Reader.dll
+C:\Users\JM\Desktop\Jan 5, 2016 Version 2\Reader\bin\Debug\Reader.pdb
+C:\Users\JM\Desktop\Jan 5, 2016 Version 2\Reader\obj\Debug\Reader.csprojResolveAssemblyReference.cache
+C:\Users\JM\Desktop\Jan 5, 2016 Version 2\Reader\obj\Debug\Reader.dll
+C:\Users\JM\Desktop\Jan 5, 2016 Version 2\Reader\obj\Debug\Reader.pdb
+D:\FLASHDRIVE NAKO\Jan 8, 2016\Reader\bin\Debug\Reader.dll
+D:\FLASHDRIVE NAKO\Jan 8, 2016\Reader\bin\Debug\Reader.pdb
+D:\FLASHDRIVE NAKO\Jan 8, 2016\Reader\obj\Debug\Reader.csprojResolveAssemblyReference.cache
+D:\FLASHDRIVE NAKO\Jan 8, 2016\Reader\obj\Debug\Reader.dll
+D:\FLASHDRIVE NAKO\Jan 8, 2016\Reader\obj\Debug\Reader.pdb
+D:\FLASHDRIVE NAKO\Jan 13, 2016\Reader\bin\Debug\Reader.dll
+D:\FLASHDRIVE NAKO\Jan 13, 2016\Reader\bin\Debug\Reader.pdb
+D:\FLASHDRIVE NAKO\Jan 13, 2016\Reader\obj\Debug\Reader.csprojResolveAssemblyReference.cache
+D:\FLASHDRIVE NAKO\Jan 13, 2016\Reader\obj\Debug\Reader.dll
+D:\FLASHDRIVE NAKO\Jan 13, 2016\Reader\obj\Debug\Reader.pdb
+D:\FLASHDRIVE NAKO\Jan 22, 2016(Version 07)\Reader\bin\Debug\Reader.dll
+D:\FLASHDRIVE NAKO\Jan 22, 2016(Version 07)\Reader\bin\Debug\Reader.pdb
+D:\FLASHDRIVE NAKO\Jan 22, 2016(Version 07)\Reader\obj\Debug\Reader.csprojResolveAssemblyReference.cache
+D:\FLASHDRIVE NAKO\Jan 22, 2016(Version 07)\Reader\obj\Debug\Reader.dll
+D:\FLASHDRIVE NAKO\Jan 22, 2016(Version 07)\Reader\obj\Debug\Reader.pdb
+C:\Users\Roxy\Documents\Jan 29, 2016(Version 09)\Reader\bin\Debug\Reader.dll
+C:\Users\Roxy\Documents\Jan 29, 2016(Version 09)\Reader\bin\Debug\Reader.pdb
+C:\Users\Roxy\Documents\Jan 29, 2016(Version 09)\Reader\obj\Debug\Reader.dll
+C:\Users\Roxy\Documents\Jan 29, 2016(Version 09)\Reader\obj\Debug\Reader.pdb
+C:\Users\Roxy\Documents\Jan 29, 2016(Version 09)\Reader\obj\Debug\Reader.csprojResolveAssemblyReference.cache
+C:\Users\Roxy\Documents\Feb 01, 2016\Reader\bin\Debug\Reader.dll
+C:\Users\Roxy\Documents\Feb 01, 2016\Reader\bin\Debug\Reader.pdb
+C:\Users\Roxy\Documents\Feb 01, 2016\Reader\obj\Debug\Reader.dll
+C:\Users\Roxy\Documents\Feb 01, 2016\Reader\obj\Debug\Reader.pdb
+C:\Users\Roxy\Documents\Feb 01, 2016\Reader\obj\Debug\Reader.csprojResolveAssemblyReference.cache
+C:\Users\Roxy\Documents\Feb 2, 2016\Reader\bin\Debug\Reader.dll
+C:\Users\Roxy\Documents\Feb 2, 2016\Reader\bin\Debug\Reader.pdb
+C:\Users\Roxy\Documents\Feb 2, 2016\Reader\obj\Debug\Reader.csprojResolveAssemblyReference.cache
+C:\Users\Roxy\Documents\Feb 2, 2016\Reader\obj\Debug\Reader.dll
+C:\Users\Roxy\Documents\Feb 2, 2016\Reader\obj\Debug\Reader.pdb
+C:\Users\Roxy\Documents\Feb 03, 2016\Reader\bin\Debug\Reader.dll
+C:\Users\Roxy\Documents\Feb 03, 2016\Reader\bin\Debug\Reader.pdb
+C:\Users\Roxy\Documents\Feb 03, 2016\Reader\obj\Debug\Reader.csprojResolveAssemblyReference.cache
+C:\Users\Roxy\Documents\Feb 03, 2016\Reader\obj\Debug\Reader.dll
+C:\Users\Roxy\Documents\Feb 03, 2016\Reader\obj\Debug\Reader.pdb
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\February  07, 2016\Reader\bin\Debug\Reader.dll
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\February  07, 2016\Reader\bin\Debug\Reader.pdb
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\February  07, 2016\Reader\obj\Debug\Reader.csprojResolveAssemblyReference.cache
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\February  07, 2016\Reader\obj\Debug\Reader.dll
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\February  07, 2016\Reader\obj\Debug\Reader.pdb
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\February 11, 2016\Reader\bin\Debug\Reader.dll
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\February 11, 2016\Reader\bin\Debug\Reader.pdb
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\February 11, 2016\Reader\obj\Debug\Reader.csprojResolveAssemblyReference.cache
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\February 11, 2016\Reader\obj\Debug\Reader.dll
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\February 11, 2016\Reader\obj\Debug\Reader.pdb
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\February 12, 2016\Reader\bin\Debug\Reader.dll
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\February 12, 2016\Reader\bin\Debug\Reader.pdb
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\February 12, 2016\Reader\obj\Debug\Reader.csprojResolveAssemblyReference.cache
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\February 12, 2016\Reader\obj\Debug\Reader.dll
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\February 12, 2016\Reader\obj\Debug\Reader.pdb
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\February 15, 2016\Reader\bin\Debug\Reader.dll
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\February 15, 2016\Reader\bin\Debug\Reader.pdb
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\February 15, 2016\Reader\obj\Debug\Reader.csprojResolveAssemblyReference.cache
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\February 15, 2016\Reader\obj\Debug\Reader.dll
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\February 15, 2016\Reader\obj\Debug\Reader.pdb
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\February 16, 2016\Reader\bin\Debug\Reader.dll
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\February 16, 2016\Reader\bin\Debug\Reader.pdb
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\February 16, 2016\Reader\obj\Debug\Reader.csprojResolveAssemblyReference.cache
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\February 16, 2016\Reader\obj\Debug\Reader.dll
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\February 16, 2016\Reader\obj\Debug\Reader.pdb
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\PRE-FINAL (Server)\Reader\bin\Debug\Reader.dll
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\PRE-FINAL (Server)\Reader\bin\Debug\Reader.pdb
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\PRE-FINAL (Server)\Reader\obj\Debug\Reader.csprojResolveAssemblyReference.cache
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\PRE-FINAL (Server)\Reader\obj\Debug\Reader.dll
+C:\Users\Roxy\Desktop\FINAL CODES FOR PROJECT DESIGNS AS OF FEBRUARY\PRE-FINAL (Server)\Reader\obj\Debug\Reader.pdb
+C:\Users\Myrnoel\Desktop\PRE-FINAL (Server)\Reader\bin\Debug\Reader.dll
+C:\Users\Myrnoel\Desktop\PRE-FINAL (Server)\Reader\bin\Debug\Reader.pdb
+C:\Users\Myrnoel\Desktop\PRE-FINAL (Server)\Reader\obj\Debug\Reader.csprojResolveAssemblyReference.cache
+C:\Users\Myrnoel\Desktop\PRE-FINAL (Server)\Reader\obj\Debug\Reader.dll
+C:\Users\Myrnoel\Desktop\PRE-FINAL (Server)\Reader\obj\Debug\Reader.pdb
+E:\RFID\PRE-FINAL (Server)\Reader\bin\Debug\Reader.dll
+E:\RFID\PRE-FINAL (Server)\Reader\bin\Debug\Reader.pdb
+E:\RFID\PRE-FINAL (Server)\Reader\obj\Debug\Reader.csprojResolveAssemblyReference.cache
+E:\RFID\PRE-FINAL (Server)\Reader\obj\Debug\Reader.dll
+E:\RFID\PRE-FINAL (Server)\Reader\obj\Debug\Reader.pdb
