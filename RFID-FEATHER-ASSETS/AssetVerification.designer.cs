@@ -30,12 +30,31 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Verification));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblCurrentDateTime = new System.Windows.Forms.Label();
             this.VerifyTimer = new System.Windows.Forms.Timer(this.components);
             this.BackgroundTimer = new System.Windows.Forms.Timer(this.components);
             this.CurrentDateTimer = new System.Windows.Forms.Timer(this.components);
-            this.ClearTimer = new System.Windows.Forms.Timer(this.components);
+            this.ClearGridTimer = new System.Windows.Forms.Timer(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnReport = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtOwnerName = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtValidFrom = new System.Windows.Forms.TextBox();
+            this.txtValidUntil = new System.Windows.Forms.TextBox();
+            this.lblValidUntil = new System.Windows.Forms.Label();
+            this.lblDesc = new System.Windows.Forms.Label();
+            this.txtTakeOutNote = new System.Windows.Forms.TextBox();
+            this.lblMemo = new System.Windows.Forms.Label();
+            this.txtAssetName = new System.Windows.Forms.TextBox();
+            this.txtRFIDTag = new System.Windows.Forms.TextBox();
+            this.lblTag = new System.Windows.Forms.Label();
+            this.txtDescription = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.lblLoadingInformation = new System.Windows.Forms.Label();
             this.lblSubmittingInformation = new System.Windows.Forms.Label();
             this.lblAssetPhoto3 = new System.Windows.Forms.Label();
@@ -45,9 +64,7 @@
             this.lblOwnerPhoto = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
-            this.btnReport = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
-            this.lblLoginUserName = new System.Windows.Forms.Label();
             this.lblOwnerPic = new System.Windows.Forms.Label();
             this.lblAssetPic = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -56,17 +73,6 @@
             this.imgCapture3 = new System.Windows.Forms.PictureBox();
             this.imgCapture2 = new System.Windows.Forms.PictureBox();
             this.imgCapture1 = new System.Windows.Forms.PictureBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtValidUntil = new System.Windows.Forms.TextBox();
-            this.lblValidUntil = new System.Windows.Forms.Label();
-            this.lblDesc = new System.Windows.Forms.Label();
-            this.txtTakeOutNote = new System.Windows.Forms.TextBox();
-            this.lblMemo = new System.Windows.Forms.Label();
-            this.txtAssetName = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtRFIDTag = new System.Windows.Forms.TextBox();
-            this.lblTag = new System.Windows.Forms.Label();
-            this.txtDescription = new System.Windows.Forms.TextBox();
             this.grpBoxReportedInfo = new System.Windows.Forms.GroupBox();
             this.txtReportedNote = new System.Windows.Forms.TextBox();
             this.picPersonBroughtOut = new System.Windows.Forms.PictureBox();
@@ -76,24 +82,33 @@
             this.txtOwnerPosition = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.picOwner = new System.Windows.Forms.PictureBox();
-            this.txtOwnerName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.grdViewRFIDTag = new System.Windows.Forms.DataGridView();
+            this.colIDTag = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colIDOwner = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAssetTag = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAssetOwner = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRFIDTag = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colIsCompared = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblLoginUserName = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCapture5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCapture4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCapture3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCapture2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCapture1)).BeginInit();
-            this.groupBox2.SuspendLayout();
             this.grpBoxReportedInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPersonBroughtOut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOwner)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdViewRFIDTag)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCurrentDateTime
             // 
             resources.ApplyResources(this.lblCurrentDateTime, "lblCurrentDateTime");
-            this.lblCurrentDateTime.BackColor = System.Drawing.SystemColors.Control;
+            this.lblCurrentDateTime.BackColor = System.Drawing.Color.White;
             this.lblCurrentDateTime.Name = "lblCurrentDateTime";
             // 
             // VerifyTimer
@@ -108,12 +123,14 @@
             // 
             this.CurrentDateTimer.Tick += new System.EventHandler(this.CurrentTimer_Tick);
             // 
-            // ClearTimer
+            // ClearGridTimer
             // 
-            this.ClearTimer.Tick += new System.EventHandler(this.ClearTimer_Tick);
+            this.ClearGridTimer.Tick += new System.EventHandler(this.ClearGridTimer_Tick);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnReport);
+            this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.lblLoadingInformation);
             this.groupBox1.Controls.Add(this.lblSubmittingInformation);
             this.groupBox1.Controls.Add(this.lblAssetPhoto3);
@@ -123,9 +140,7 @@
             this.groupBox1.Controls.Add(this.lblOwnerPhoto);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btnBack);
-            this.groupBox1.Controls.Add(this.btnReport);
             this.groupBox1.Controls.Add(this.btnSubmit);
-            this.groupBox1.Controls.Add(this.lblLoginUserName);
             this.groupBox1.Controls.Add(this.lblOwnerPic);
             this.groupBox1.Controls.Add(this.lblAssetPic);
             this.groupBox1.Controls.Add(this.label6);
@@ -134,11 +149,134 @@
             this.groupBox1.Controls.Add(this.imgCapture3);
             this.groupBox1.Controls.Add(this.imgCapture2);
             this.groupBox1.Controls.Add(this.imgCapture1);
-            this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.grpBoxReportedInfo);
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            // 
+            // btnReport
+            // 
+            resources.ApplyResources(this.btnReport, "btnReport");
+            this.btnReport.BackColor = System.Drawing.Color.Orange;
+            this.btnReport.Name = "btnReport";
+            this.btnReport.UseVisualStyleBackColor = false;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            // 
+            // groupBox2
+            // 
+            resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.Controls.Add(this.txtOwnerName);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.txtValidFrom);
+            this.groupBox2.Controls.Add(this.txtValidUntil);
+            this.groupBox2.Controls.Add(this.lblValidUntil);
+            this.groupBox2.Controls.Add(this.lblDesc);
+            this.groupBox2.Controls.Add(this.txtTakeOutNote);
+            this.groupBox2.Controls.Add(this.lblMemo);
+            this.groupBox2.Controls.Add(this.txtAssetName);
+            this.groupBox2.Controls.Add(this.txtRFIDTag);
+            this.groupBox2.Controls.Add(this.lblTag);
+            this.groupBox2.Controls.Add(this.txtDescription);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.TabStop = false;
+            // 
+            // txtOwnerName
+            // 
+            resources.ApplyResources(this.txtOwnerName, "txtOwnerName");
+            this.txtOwnerName.BackColor = System.Drawing.Color.White;
+            this.txtOwnerName.Name = "txtOwnerName";
+            this.txtOwnerName.ReadOnly = true;
+            // 
+            // label9
+            // 
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.Name = "label9";
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // txtValidFrom
+            // 
+            resources.ApplyResources(this.txtValidFrom, "txtValidFrom");
+            this.txtValidFrom.BackColor = System.Drawing.Color.White;
+            this.txtValidFrom.Name = "txtValidFrom";
+            this.txtValidFrom.ReadOnly = true;
+            this.txtValidFrom.TabStop = false;
+            // 
+            // txtValidUntil
+            // 
+            resources.ApplyResources(this.txtValidUntil, "txtValidUntil");
+            this.txtValidUntil.BackColor = System.Drawing.Color.White;
+            this.txtValidUntil.Name = "txtValidUntil";
+            this.txtValidUntil.ReadOnly = true;
+            this.txtValidUntil.TabStop = false;
+            // 
+            // lblValidUntil
+            // 
+            resources.ApplyResources(this.lblValidUntil, "lblValidUntil");
+            this.lblValidUntil.Name = "lblValidUntil";
+            // 
+            // lblDesc
+            // 
+            resources.ApplyResources(this.lblDesc, "lblDesc");
+            this.lblDesc.Name = "lblDesc";
+            // 
+            // txtTakeOutNote
+            // 
+            resources.ApplyResources(this.txtTakeOutNote, "txtTakeOutNote");
+            this.txtTakeOutNote.BackColor = System.Drawing.Color.White;
+            this.txtTakeOutNote.Name = "txtTakeOutNote";
+            this.txtTakeOutNote.ReadOnly = true;
+            this.txtTakeOutNote.TabStop = false;
+            // 
+            // lblMemo
+            // 
+            resources.ApplyResources(this.lblMemo, "lblMemo");
+            this.lblMemo.Name = "lblMemo";
+            // 
+            // txtAssetName
+            // 
+            resources.ApplyResources(this.txtAssetName, "txtAssetName");
+            this.txtAssetName.BackColor = System.Drawing.Color.White;
+            this.txtAssetName.Name = "txtAssetName";
+            this.txtAssetName.ReadOnly = true;
+            this.txtAssetName.TabStop = false;
+            // 
+            // txtRFIDTag
+            // 
+            resources.ApplyResources(this.txtRFIDTag, "txtRFIDTag");
+            this.txtRFIDTag.BackColor = System.Drawing.Color.White;
+            this.txtRFIDTag.Name = "txtRFIDTag";
+            this.txtRFIDTag.ReadOnly = true;
+            this.txtRFIDTag.TabStop = false;
+            // 
+            // lblTag
+            // 
+            resources.ApplyResources(this.lblTag, "lblTag");
+            this.lblTag.Name = "lblTag";
+            // 
+            // txtDescription
+            // 
+            resources.ApplyResources(this.txtDescription, "txtDescription");
+            this.txtDescription.BackColor = System.Drawing.Color.White;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.ReadOnly = true;
+            this.txtDescription.TabStop = false;
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
             // 
             // lblLoadingInformation
             // 
@@ -192,14 +330,6 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // btnReport
-            // 
-            resources.ApplyResources(this.btnReport, "btnReport");
-            this.btnReport.BackColor = System.Drawing.Color.Orange;
-            this.btnReport.Name = "btnReport";
-            this.btnReport.UseVisualStyleBackColor = false;
-            this.btnReport.Click += new System.EventHandler(this.btnCreateReport_Click);
-            // 
             // btnSubmit
             // 
             resources.ApplyResources(this.btnSubmit, "btnSubmit");
@@ -207,12 +337,6 @@
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
-            // 
-            // lblLoginUserName
-            // 
-            resources.ApplyResources(this.lblLoginUserName, "lblLoginUserName");
-            this.lblLoginUserName.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblLoginUserName.Name = "lblLoginUserName";
             // 
             // lblOwnerPic
             // 
@@ -267,87 +391,6 @@
             this.imgCapture1.Name = "imgCapture1";
             this.imgCapture1.TabStop = false;
             // 
-            // groupBox2
-            // 
-            resources.ApplyResources(this.groupBox2, "groupBox2");
-            this.groupBox2.Controls.Add(this.txtValidUntil);
-            this.groupBox2.Controls.Add(this.lblValidUntil);
-            this.groupBox2.Controls.Add(this.lblDesc);
-            this.groupBox2.Controls.Add(this.txtTakeOutNote);
-            this.groupBox2.Controls.Add(this.lblMemo);
-            this.groupBox2.Controls.Add(this.txtAssetName);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.txtRFIDTag);
-            this.groupBox2.Controls.Add(this.lblTag);
-            this.groupBox2.Controls.Add(this.txtDescription);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.TabStop = false;
-            // 
-            // txtValidUntil
-            // 
-            resources.ApplyResources(this.txtValidUntil, "txtValidUntil");
-            this.txtValidUntil.BackColor = System.Drawing.Color.White;
-            this.txtValidUntil.Name = "txtValidUntil";
-            this.txtValidUntil.ReadOnly = true;
-            this.txtValidUntil.TabStop = false;
-            // 
-            // lblValidUntil
-            // 
-            resources.ApplyResources(this.lblValidUntil, "lblValidUntil");
-            this.lblValidUntil.Name = "lblValidUntil";
-            // 
-            // lblDesc
-            // 
-            resources.ApplyResources(this.lblDesc, "lblDesc");
-            this.lblDesc.Name = "lblDesc";
-            // 
-            // txtTakeOutNote
-            // 
-            resources.ApplyResources(this.txtTakeOutNote, "txtTakeOutNote");
-            this.txtTakeOutNote.BackColor = System.Drawing.Color.White;
-            this.txtTakeOutNote.Name = "txtTakeOutNote";
-            this.txtTakeOutNote.ReadOnly = true;
-            this.txtTakeOutNote.TabStop = false;
-            // 
-            // lblMemo
-            // 
-            resources.ApplyResources(this.lblMemo, "lblMemo");
-            this.lblMemo.Name = "lblMemo";
-            // 
-            // txtAssetName
-            // 
-            resources.ApplyResources(this.txtAssetName, "txtAssetName");
-            this.txtAssetName.BackColor = System.Drawing.Color.White;
-            this.txtAssetName.Name = "txtAssetName";
-            this.txtAssetName.ReadOnly = true;
-            this.txtAssetName.TabStop = false;
-            // 
-            // label8
-            // 
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.Name = "label8";
-            // 
-            // txtRFIDTag
-            // 
-            resources.ApplyResources(this.txtRFIDTag, "txtRFIDTag");
-            this.txtRFIDTag.BackColor = System.Drawing.Color.White;
-            this.txtRFIDTag.Name = "txtRFIDTag";
-            this.txtRFIDTag.ReadOnly = true;
-            this.txtRFIDTag.TabStop = false;
-            // 
-            // lblTag
-            // 
-            resources.ApplyResources(this.lblTag, "lblTag");
-            this.lblTag.Name = "lblTag";
-            // 
-            // txtDescription
-            // 
-            resources.ApplyResources(this.txtDescription, "txtDescription");
-            this.txtDescription.BackColor = System.Drawing.Color.White;
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.ReadOnly = true;
-            this.txtDescription.TabStop = false;
-            // 
             // grpBoxReportedInfo
             // 
             resources.ApplyResources(this.grpBoxReportedInfo, "grpBoxReportedInfo");
@@ -359,7 +402,6 @@
             this.grpBoxReportedInfo.Controls.Add(this.txtOwnerPosition);
             this.grpBoxReportedInfo.Controls.Add(this.label2);
             this.grpBoxReportedInfo.Controls.Add(this.picOwner);
-            this.grpBoxReportedInfo.Controls.Add(this.txtOwnerName);
             this.grpBoxReportedInfo.Controls.Add(this.label1);
             this.grpBoxReportedInfo.Name = "grpBoxReportedInfo";
             this.grpBoxReportedInfo.TabStop = false;
@@ -420,27 +462,111 @@
             this.picOwner.Name = "picOwner";
             this.picOwner.TabStop = false;
             // 
-            // txtOwnerName
-            // 
-            this.txtOwnerName.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.txtOwnerName, "txtOwnerName");
-            this.txtOwnerName.Name = "txtOwnerName";
-            this.txtOwnerName.ReadOnly = true;
-            this.txtOwnerName.TabStop = false;
-            // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
+            // grdViewRFIDTag
+            // 
+            this.grdViewRFIDTag.AllowUserToAddRows = false;
+            this.grdViewRFIDTag.AllowUserToDeleteRows = false;
+            this.grdViewRFIDTag.AllowUserToResizeColumns = false;
+            this.grdViewRFIDTag.AllowUserToResizeRows = false;
+            this.grdViewRFIDTag.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grdViewRFIDTag.BackgroundColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdViewRFIDTag.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.grdViewRFIDTag.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdViewRFIDTag.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colIDTag,
+            this.colIDOwner,
+            this.colAssetTag,
+            this.colAssetOwner,
+            this.colRFIDTag,
+            this.colStatus,
+            this.colIsCompared});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdViewRFIDTag.DefaultCellStyle = dataGridViewCellStyle2;
+            resources.ApplyResources(this.grdViewRFIDTag, "grdViewRFIDTag");
+            this.grdViewRFIDTag.Name = "grdViewRFIDTag";
+            this.grdViewRFIDTag.ReadOnly = true;
+            this.grdViewRFIDTag.RowHeadersVisible = false;
+            this.grdViewRFIDTag.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdViewRFIDTag_CellContentDoubleClick);
+            // 
+            // colIDTag
+            // 
+            resources.ApplyResources(this.colIDTag, "colIDTag");
+            this.colIDTag.Name = "colIDTag";
+            this.colIDTag.ReadOnly = true;
+            this.colIDTag.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colIDOwner
+            // 
+            resources.ApplyResources(this.colIDOwner, "colIDOwner");
+            this.colIDOwner.Name = "colIDOwner";
+            this.colIDOwner.ReadOnly = true;
+            // 
+            // colAssetTag
+            // 
+            resources.ApplyResources(this.colAssetTag, "colAssetTag");
+            this.colAssetTag.Name = "colAssetTag";
+            this.colAssetTag.ReadOnly = true;
+            this.colAssetTag.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colAssetOwner
+            // 
+            resources.ApplyResources(this.colAssetOwner, "colAssetOwner");
+            this.colAssetOwner.Name = "colAssetOwner";
+            this.colAssetOwner.ReadOnly = true;
+            // 
+            // colRFIDTag
+            // 
+            resources.ApplyResources(this.colRFIDTag, "colRFIDTag");
+            this.colRFIDTag.Name = "colRFIDTag";
+            this.colRFIDTag.ReadOnly = true;
+            // 
+            // colStatus
+            // 
+            resources.ApplyResources(this.colStatus, "colStatus");
+            this.colStatus.Name = "colStatus";
+            this.colStatus.ReadOnly = true;
+            this.colStatus.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colIsCompared
+            // 
+            resources.ApplyResources(this.colIsCompared, "colIsCompared");
+            this.colIsCompared.Name = "colIsCompared";
+            this.colIsCompared.ReadOnly = true;
+            this.colIsCompared.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // lblLoginUserName
+            // 
+            resources.ApplyResources(this.lblLoginUserName, "lblLoginUserName");
+            this.lblLoginUserName.BackColor = System.Drawing.Color.White;
+            this.lblLoginUserName.Name = "lblLoginUserName";
+            // 
             // Verification
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblLoginUserName);
             this.Controls.Add(this.lblCurrentDateTime);
+            this.Controls.Add(this.grdViewRFIDTag);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
             this.Name = "Verification";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Verification_FormClosed);
@@ -448,17 +574,18 @@
             this.Shown += new System.EventHandler(this.Verification_Shown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCapture5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCapture4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCapture3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCapture2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCapture1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.grpBoxReportedInfo.ResumeLayout(false);
             this.grpBoxReportedInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPersonBroughtOut)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOwner)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdViewRFIDTag)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -469,7 +596,7 @@
         private System.Windows.Forms.Timer VerifyTimer;
         private System.Windows.Forms.Timer BackgroundTimer;
         private System.Windows.Forms.Timer CurrentDateTimer;
-        private System.Windows.Forms.Timer ClearTimer;
+        private System.Windows.Forms.Timer ClearGridTimer;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox grpBoxReportedInfo;
         private System.Windows.Forms.Label label5;
@@ -478,7 +605,6 @@
         private System.Windows.Forms.TextBox txtOwnerPosition;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox picOwner;
-        private System.Windows.Forms.TextBox txtOwnerName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblLoadingInformation;
         private System.Windows.Forms.Label label6;
@@ -489,30 +615,43 @@
         private System.Windows.Forms.PictureBox imgCapture1;
         private System.Windows.Forms.Label lblOwnerPic;
         private System.Windows.Forms.Label lblAssetPic;
-        private System.Windows.Forms.Label lblLoginUserName;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label lblDesc;
-        private System.Windows.Forms.TextBox txtDescription;
-        private System.Windows.Forms.TextBox txtTakeOutNote;
-        private System.Windows.Forms.Label lblMemo;
-        private System.Windows.Forms.TextBox txtAssetName;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtRFIDTag;
-        private System.Windows.Forms.Label lblTag;
         private System.Windows.Forms.PictureBox picPersonBroughtOut;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblValidIDPhoto;
         private System.Windows.Forms.Label lblOwnerPhoto;
         private System.Windows.Forms.Label lblAssetPhoto3;
         private System.Windows.Forms.Label lblAssetPhoto2;
         private System.Windows.Forms.Label lblAssetPhoto1;
-        private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label lblSubmittingInformation;
         private System.Windows.Forms.TextBox txtReportedNote;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.DataGridView grdViewRFIDTag;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox txtOwnerName;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtValidFrom;
         private System.Windows.Forms.TextBox txtValidUntil;
         private System.Windows.Forms.Label lblValidUntil;
+        private System.Windows.Forms.Label lblDesc;
+        private System.Windows.Forms.TextBox txtTakeOutNote;
+        private System.Windows.Forms.Label lblMemo;
+        private System.Windows.Forms.TextBox txtAssetName;
+        private System.Windows.Forms.TextBox txtRFIDTag;
+        private System.Windows.Forms.Label lblTag;
+        private System.Windows.Forms.TextBox txtDescription;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblLoginUserName;
+        private System.Windows.Forms.Button btnReport;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colIDTag;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colIDOwner;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAssetTag;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAssetOwner;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colRFIDTag;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colIsCompared;
 
 
     }

@@ -12,6 +12,7 @@ using Microsoft.Win32;
 using System.Resources;
 using System.Reflection;
 using System.Globalization;
+using System.Media;
 
 namespace RFID_FEATHER_ASSETS
 {
@@ -37,10 +38,17 @@ namespace RFID_FEATHER_ASSETS
         string roleValue;
         int userId;
         //int companyId;
+        bool IsRFIDTagExist = false;
+        int totalAssetRead = 0;
+        //string updatedImgFileNames;
+        //string assetName;
+        bool IsStopComparing = false;
+        int startRowComparing;
 
         public Verification()//string tokenvaluesource, string roleSource) //(string tokenvaluesource, string portnamesource, string roleSource)
         {
             InitializeComponent();
+
             getLanguage();
             languageHandler();
             GetAssetSystemInfo();
@@ -116,7 +124,7 @@ namespace RFID_FEATHER_ASSETS
                         if (language == "English") btnBack.Text = "Log Out";
                         else btnBack.Text = "ログアウト";
                         btnBack.BackColor = Color.Red;
-                        btnBack.ForeColor = Color.White;
+                        btnBack.BackColor = Color.White;
                     }
                 }
             }
@@ -130,14 +138,18 @@ namespace RFID_FEATHER_ASSETS
         {
             try
             {
-                //ClearTimer.Interval = 7000;
-                //VerifyTimer.Interval = 7000;
                 btnBack.Focus();
 
                 BackgroundTimer.Interval = 1000;
 
                 CurrentDateTimer.Enabled = true;
                 CurrentDateTimer.Interval = 1000;
+
+                VerifyTimer.Interval = 2000;
+                VerifyTimer.Tick += new EventHandler(VerifyTimer_Tick);
+
+                ClearGridTimer.Interval = 30000;
+                ClearGridTimer.Tick += new EventHandler(ClearGridTimer_Tick);
 
                 reader = new Reader.ReaderMethod();
                 ////Callback
@@ -211,11 +223,43 @@ namespace RFID_FEATHER_ASSETS
         {
             try
             {
+                grdViewRFIDTag.Refresh();
+
+                //Validate if RFID Tag exist on the table
+                if (IsStopComparing || grdViewRFIDTag.Rows.Count > 0)
+                {
+                    for (int i = startRowComparing; i < grdViewRFIDTag.Rows.Count; i++)
+                    {
+                        if (grdViewRFIDTag.Rows[i].Cells["colRFIDTag"].Value.ToString() == txtRFIDTag.Text && grdViewRFIDTag.Rows[i].Cells["colIsCompared"].Value == null)
+                        {
+                            IsRFIDTagExist = true;
+                            //txtRFIDTag.Text = string.Empty;
+                            return;
+                        }
+                        else
+                            IsRFIDTagExist = false;
+                    }
+                }
+                //else if (grdViewRFIDTag.Rows.Count > 0)
+                //{
+                //    for (int i = 0; i < grdViewRFIDTag.Rows.Count; i++)
+                //    {
+                //        if (grdViewRFIDTag.Rows[i].Cells["colRFIDTag"].Value.ToString() == txtRFIDTag.Text)
+                //        {
+                //            IsRFIDTagExist = true;
+                //            //txtRFIDTag.Text = string.Empty;
+                //            return;
+                //        }
+                //        else
+                //            IsRFIDTagExist = false;
+                //    }
+                //}
+
                 //btnVerifyAsset.Text = "Verifying Tag. Please wait ...";
                 //btnVerifyAsset.BackColor = Color.GreenYellow;
                 //btnVerifyAsset.Refresh();
-                lblLoadingInformation.Visible = true;
-                lblLoadingInformation.Refresh();
+                //lblLoadingInformation.Visible = true;
+                //lblLoadingInformation.Refresh();
 
                 GlobalClass.GetSetClass verifyRequest = new GlobalClass.GetSetClass();
                 verifyRequest.tag = txtRFIDTag.Text;
@@ -224,7 +268,7 @@ namespace RFID_FEATHER_ASSETS
 
                 //initialize web service
                 RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");
-                RestRequest verify = new RestRequest("/api/asset/verify", Method.POST);
+                RestRequest verify = new RestRequest("/api/asset/company-tag"/*"/api/asset/verify"*/, Method.POST);
                 var authToken = tokenvalue;
 
                 verify.AddHeader("X-Auth-Token", authToken);
@@ -238,174 +282,184 @@ namespace RFID_FEATHER_ASSETS
 
                 //btnVerifyAsset.Text = "Click to verify RFID Tag";
                 //btnVerifyAsset.BackColor = Color.Orange;
-                lblLoadingInformation.Visible = false;
+                //lblLoadingInformation.Visible = false;
 
                 if (response.StatusCode == HttpStatusCode.OK)
                 {
                     //deserialize JSON -> Object
                     JsonDeserializer deserial = new JsonDeserializer();
-                    VerifyResult verifyResult = deserial.Deserialize<VerifyResult>(response);
+                    GlobalClass.GetSetClass verifyResult = deserial.Deserialize<GlobalClass.GetSetClass>(response);
 
-                    if (verifyResult.result == "OK")
-                    {
-                        AssetIdValue = verifyResult.assetId;
-                        //txtAssetName.Text = verifyResult.name;
-                        txtDescription.Text = verifyResult.description;
-                        //if (Boolean.Parse(verifyResult.takOutAllowed.ToString()))
-                        //{
-                        //    txtTakeOutAvailability.Text = "Allowed to take-out.";
-                        //}
-                        //else
-                        //{
-                        //    txtTakeOutAvailability.Text = "Not allowed to take-out.";
-                        //}
-                        txtTakeOutNote.Text = verifyResult.takeOutInfo;
-                        //if (File.Exists(verifyResult.imageUrls))
-                        //{
-                            //picOwner.Image = Image.FromFile(verifyResult.imageUrls);
+                    //if (verifyResult.result == "OK")
+                    //{
 
-                            string Urls = verifyResult.imageUrls;
-                            string[] ReadUrls = Urls.Split(',');
-
-                            if (ReadUrls.Length > 1)
-                            {
-                                imgCapture1.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[1]);
-                                lblOwnerPhoto.Visible = false;
-                            }
-                            if (ReadUrls.Length > 2)
-                            {
-                                imgCapture2.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[2]);
-                                lblValidIDPhoto.Visible = false;
-                            }
-                            if (ReadUrls.Length > 3)
-                            {
-                                imgCapture3.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[3]);
-                                lblAssetPhoto1.Visible = false;
-                            }
-                            if (ReadUrls.Length > 4)
-                            {
-                                imgCapture4.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[4]);
-                                lblAssetPhoto2.Visible = false;
-                            }
-                            if (ReadUrls.Length > 5)
-                            {
-                                imgCapture5.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[5]);
-                                lblAssetPhoto3.Visible = false;
-                            }
-
-                            //foreach (string GetUrls in ReadUrls)
-                            //{
-                            //    if (ReadUrls.Length > 1 && File.Exists(ReadUrls[1]))
-                            //    {
-                            //        imgCapture1.Image = Image.FromFile(ReadUrls[1]);
-                            //        lblOwnerPhoto.Visible = false;
-                            //    }
-                            //    if (ReadUrls.Length > 2 && File.Exists(ReadUrls[2]))
-                            //    {
-                            //        imgCapture2.Image = Image.FromFile(ReadUrls[2]);
-                            //        lblValidIDPhoto.Visible = false;
-                            //    }
-                            //    if (ReadUrls.Length > 3 && File.Exists(ReadUrls[3]))
-                            //    {
-                            //        imgCapture3.Image = Image.FromFile(ReadUrls[3]);
-                            //        lblAssetPhoto1.Visible = false;
-                            //    }
-                            //    if (ReadUrls.Length > 4 && File.Exists(ReadUrls[4]))
-                            //    {
-                            //        imgCapture4.Image = Image.FromFile(ReadUrls[4]);
-                            //        lblAssetPhoto2.Visible = false;
-                            //    }
-                            //    if (ReadUrls.Length > 5 && File.Exists(ReadUrls[5]))
-                            //    {
-                            //        imgCapture5.Image = Image.FromFile(ReadUrls[5]);
-                            //        lblAssetPhoto3.Visible = false;
-                            //    }
-                            //}
-                        //}
-                        //else
-                        //{
-                        //    MessageBox.Show("Image not found for this path: " + verifyResult.imageUrls, "Asset Verification", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        //    //btnVerifyAsset.Focus();
-                        //    //return;
-                        //}
-
-                        //Display User's Information
-                        //if (File.Exists(verifyResult.owner.imageUrl)) picOwner.Image =  Image.FromFile(verifyResult.owner.imageUrl);
-                        //txtOwnerName.Text = verifyResult.owner.lastName + " " + verifyResult.owner.firstName;
-                        //txtOwnerPosition.Text = verifyResult.owner.position;
-                        //txtOwnerDescription.Text = verifyResult.owner.description;
-
-                        //VerifyTimer.Stop();
-                        //VerifyTimer.Start();
-
-                        //ClearTimer.Stop();
-                        //ClearTimer.Start();
-
-                        txtValidUntil.Text = verifyResult.validUntil != DateTime.MinValue ? verifyResult.validUntil.ToString("g") : "No Expiration";
-
-                        //Validate Asset Validity Expiration
-                        if (verifyResult.validUntil < Convert.ToDateTime(DateTime.Now.ToString("g")) && verifyResult.validUntil != DateTime.MinValue)
+                        if (grdViewRFIDTag.Rows.Count == 0 || !IsRFIDTagExist)
                         {
-                            if (roleValue == "ROLE_ADMIN")
-                            {
-                                if (language == "English")
-                                {
-                                    DialogResult result = MessageBox.Show("Asset is already expired." + "\n" + "Do you want to renew the asset?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-                                    if (result == DialogResult.Yes)
-                                    {
-                                        IsCallingMainMenu = true;
-                                        reader.CloseCom();
-
-                                        using (AssetRenewal RenewalForm = new AssetRenewal())
-                                        {
-                                            if (RenewalForm.ShowDialog() == DialogResult.OK)
-                                            {
-                                                btnSubmit.Text = "Renewed";
-                                            }
-
-                                            IsCallingMainMenu = false;
-                                            ReaderMethodProc();
-                                            VerifyAssetProc();
-                                        }
-                                    }
-                                }
-                                else
-                                {
-                                    DialogResult result = MessageBox.Show("アセットはすでに有効期限が切れています." + "\n" + "あなたは資産を更新したいですか？", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-                                    if (result == DialogResult.Yes)
-                                    {
-                                        IsCallingMainMenu = true;
-                                        reader.CloseCom();
-
-                                        using (AssetRenewal RenewalForm = new AssetRenewal())
-                                        {
-                                            if (RenewalForm.ShowDialog() == DialogResult.OK)
-                                            {
-                                                btnSubmit.Text = "新たな";
-                                            }
-
-                                            IsCallingMainMenu = false;
-                                            ReaderMethodProc();
-                                            VerifyAssetProc();
-                                        }
-                                    }
-                                }
-                            }
-                            else if (roleValue == "ROLE_GUARD")
-                            {
-                                if (language == "English") MessageBox.Show("Asset is already expired." + "\n" + "Please go to admin for renewal.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                                else MessageBox.Show("アセットはすでに有効期限が切れています." + "\n" + "更新のため、管理者にいきますください.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                            }
+                            displayDataOnTable(verifyResult.validUntil, verifyResult.description, verifyResult.ownerUserId);
+                            SaveTransaction(verifyResult.assetId);
+                            ClearGridTimer.Stop();
+                            //txtRFIDTag.Text = string.Empty;
                         }
 
-                        btnBack.Focus();
+                        
+                        //AssetIdValue = verifyResult.assetId;
+                        ////txtAssetName.Text = verifyResult.name;
+                        //txtDescription.Text = verifyResult.description;
+                        ////if (Boolean.Parse(verifyResult.takOutAllowed.ToString()))
+                        ////{
+                        ////    txtTakeOutAvailability.Text = "Allowed to take-out.";
+                        ////}
+                        ////else
+                        ////{
+                        ////    txtTakeOutAvailability.Text = "Not allowed to take-out.";
+                        ////}
+                        //txtTakeOutNote.Text = verifyResult.takeOutInfo;
+                        ////if (File.Exists(verifyResult.imageUrls))
+                        ////{
+                        //    //picOwner.Image = Image.FromFile(verifyResult.imageUrls);
+
+                        //    string Urls = verifyResult.imageUrls;
+                        //    string[] ReadUrls = Urls.Split(',');
+
+                        //    if (ReadUrls.Length > 1)
+                        //    {
+                        //        imgCapture1.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[1]);
+                        //        lblOwnerPhoto.Visible = false;
+                        //    }
+                        //    if (ReadUrls.Length > 2)
+                        //    {
+                        //        imgCapture2.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[2]);
+                        //        lblValidIDPhoto.Visible = false;
+                        //    }
+                        //    if (ReadUrls.Length > 3)
+                        //    {
+                        //        imgCapture3.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[3]);
+                        //        lblAssetPhoto1.Visible = false;
+                        //    }
+                        //    if (ReadUrls.Length > 4)
+                        //    {
+                        //        imgCapture4.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[4]);
+                        //        lblAssetPhoto2.Visible = false;
+                        //    }
+                        //    if (ReadUrls.Length > 5)
+                        //    {
+                        //        imgCapture5.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[5]);
+                        //        lblAssetPhoto3.Visible = false;
+                        //    }
+
+                        //    //foreach (string GetUrls in ReadUrls)
+                        //    //{
+                        //    //    if (ReadUrls.Length > 1 && File.Exists(ReadUrls[1]))
+                        //    //    {
+                        //    //        imgCapture1.Image = Image.FromFile(ReadUrls[1]);
+                        //    //        lblOwnerPhoto.Visible = false;
+                        //    //    }
+                        //    //    if (ReadUrls.Length > 2 && File.Exists(ReadUrls[2]))
+                        //    //    {
+                        //    //        imgCapture2.Image = Image.FromFile(ReadUrls[2]);
+                        //    //        lblValidIDPhoto.Visible = false;
+                        //    //    }
+                        //    //    if (ReadUrls.Length > 3 && File.Exists(ReadUrls[3]))
+                        //    //    {
+                        //    //        imgCapture3.Image = Image.FromFile(ReadUrls[3]);
+                        //    //        lblAssetPhoto1.Visible = false;
+                        //    //    }
+                        //    //    if (ReadUrls.Length > 4 && File.Exists(ReadUrls[4]))
+                        //    //    {
+                        //    //        imgCapture4.Image = Image.FromFile(ReadUrls[4]);
+                        //    //        lblAssetPhoto2.Visible = false;
+                        //    //    }
+                        //    //    if (ReadUrls.Length > 5 && File.Exists(ReadUrls[5]))
+                        //    //    {
+                        //    //        imgCapture5.Image = Image.FromFile(ReadUrls[5]);
+                        //    //        lblAssetPhoto3.Visible = false;
+                        //    //    }
+                        //    //}
+                        ////}
+                        ////else
+                        ////{
+                        ////    MessageBox.Show("Image not found for this path: " + verifyResult.imageUrls, "Asset Verification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ////    //btnVerifyAsset.Focus();
+                        ////    //return;
+                        ////}
+
+                        ////Display User's Information
+                        ////if (File.Exists(verifyResult.owner.imageUrl)) picOwner.Image =  Image.FromFile(verifyResult.owner.imageUrl);
+                        ////txtOwnerName.Text = verifyResult.owner.lastName + " " + verifyResult.owner.firstName;
+                        ////txtOwnerPosition.Text = verifyResult.owner.position;
+                        ////txtOwnerDescription.Text = verifyResult.owner.description;
+
+                        ////VerifyTimer.Stop();
+                        ////VerifyTimer.Start();
+
+                        ////ClearTimer.Stop();
+                        ////ClearTimer.Start();
+
+                        //txtValidUntil.Text = verifyResult.validUntil != DateTime.MinValue ? verifyResult.validUntil.Value.ToString("g") : "No Expiration";
+
+                        ////Validate Asset Validity Expiration
+                        //if (verifyResult.validUntil < Convert.ToDateTime(DateTime.Now.ToString("g")) && verifyResult.validUntil != DateTime.MinValue)
+                        //{
+                        //    if (roleValue == "ROLE_ADMIN")
+                        //    {
+                        //        if (language == "English")
+                        //        {
+                        //            DialogResult result = MessageBox.Show("Asset is already expired." + "\n" + "Do you want to renew the asset?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                        //            if (result == DialogResult.Yes)
+                        //            {
+                        //                IsCallingMainMenu = true;
+                        //                reader.CloseCom();
+
+                        //                using (AssetRenewal RenewalForm = new AssetRenewal())
+                        //                {
+                        //                    if (RenewalForm.ShowDialog() == DialogResult.OK)
+                        //                    {
+                        //                        btnSubmit.Text = "Renewed";
+                        //                    }
+
+                        //                    IsCallingMainMenu = false;
+                        //                    ReaderMethodProc();
+                        //                    VerifyAssetProc();
+                        //                }
+                        //            }
+                        //        }
+                        //        else
+                        //        {
+                        //            DialogResult result = MessageBox.Show("アセットはすでに有効期限が切れています." + "\n" + "あなたは資産を更新したいですか？", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                        //            if (result == DialogResult.Yes)
+                        //            {
+                        //                IsCallingMainMenu = true;
+                        //                reader.CloseCom();
+
+                        //                using (AssetRenewal RenewalForm = new AssetRenewal())
+                        //                {
+                        //                    if (RenewalForm.ShowDialog() == DialogResult.OK)
+                        //                    {
+                        //                        btnSubmit.Text = "新たな";
+                        //                    }
+
+                        //                    IsCallingMainMenu = false;
+                        //                    ReaderMethodProc();
+                        //                    VerifyAssetProc();
+                        //                }
+                        //            }
+                        //        }
+                        //    }
+                        //    else if (roleValue == "ROLE_GUARD")
+                        //    {
+                        //        if (language == "English") MessageBox.Show("Asset is already expired." + "\n" + "Please go to admin for renewal.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        //        else MessageBox.Show("アセットはすでに有効期限が切れています." + "\n" + "更新のため、管理者にいきますください.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        //    }
+                        //}
+
+                        //btnBack.Focus();
                         return;
-                    }
-                    else
-                    {
-                        MessageBox.Show(verifyResult.result + " " + verifyResult.message);
-                        //MessageBox.Show("RFID Tag: " + txtRFIDTag.Text + " " + verifyResult.message);
-                    }
+                    //}
+                    //else
+                    //{
+                    //    MessageBox.Show(verifyResult.result + " " + verifyResult.message);
+                    //    //MessageBox.Show("RFID Tag: " + txtRFIDTag.Text + " " + verifyResult.message);
+                    //}
                 }
                 else if (response.StatusCode == HttpStatusCode.NotFound)
                 {
@@ -420,13 +474,138 @@ namespace RFID_FEATHER_ASSETS
                     MessageBox.Show("Error" + numericStatusCode);
                 }
 
-                ClearFields();
+                //ClearFields();
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void displayDataOnTable(DateTime? expiration, string description, int ownerUserId)
+        {
+            int idx = grdViewRFIDTag.Rows.Add();
+            DataGridViewRow row = grdViewRFIDTag.Rows[idx];
+
+
+            if (description == "ID_CARD")
+            {
+                row.Cells["colIDTag"].Value = txtRFIDTag.Text;
+                row.Cells["colIDOwner"].Value = ownerUserId;
+                row.Cells["colStatus"].Value = "OK";
+                row.DefaultCellStyle.BackColor = Color.Green;
+                row.DefaultCellStyle.ForeColor = Color.White;
+                playAlarmSound("Ok");
+            }
+            else
+            {
+                row.Cells["colAssetTag"].Value = txtRFIDTag.Text;
+                row.Cells["colAssetOwner"].Value = ownerUserId;
+                row.DefaultCellStyle.BackColor = Color.Yellow;
+                row.DefaultCellStyle.ForeColor = Color.Black;
+            }
+
+            row.Cells["colRFIDTag"].Value = txtRFIDTag.Text;
+
+            //Check Validity Expiration
+            if (expiration < Convert.ToDateTime(DateTime.Now.ToString("g")) && expiration != DateTime.MinValue)
+            {
+                row.Cells["colStatus"].Value = "EXPIRED";
+                row.DefaultCellStyle.BackColor = Color.Orange;
+                row.DefaultCellStyle.ForeColor = Color.White;
+                playAlarmSound("Expired");
+            }
+            //else if (row.Cells["colIDTag"].Value != null)
+            //{
+            //    row.Cells["colStatus"].Value = "OK";
+            //    row.DefaultCellStyle.BackColor = Color.Green;
+            //    row.DefaultCellStyle.ForeColor = Color.White;
+            //    playAlarmSound("Ok");
+            //}
+            //else
+            //{
+            //    row.DefaultCellStyle.BackColor = Color.Yellow;
+            //    row.DefaultCellStyle.ForeColor = Color.Black;
+            //}
+
+            grdViewRFIDTag.FirstDisplayedScrollingRowIndex = grdViewRFIDTag.RowCount - 1;
+            //ClearGridTimer.Stop();
+            //IsStopComparing = false;
+        }
+
+        private void SaveTransaction(int assetId)
+        {
+            //Saving to transaction table
+            try
+            {
+                //For Web Service
+                GlobalClass.GetSetClass transactDet = new GlobalClass.GetSetClass();
+
+                transactDet.companyId = companyId;//1;
+                //transactDet.readerInfo = readerInfo;
+                transactDet.assetId = assetId;
+
+                RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");//("http://feather-assets.herokuapp.com/");
+                RestRequest transact = new RestRequest("/api/asset/transact", Method.POST);
+
+                var authToken = tokenvalue;
+                transact.AddHeader("X-Auth-Token", authToken);
+                transact.AddHeader("Content-Type", "application/json; charset=utf-8");
+                transact.RequestFormat = DataFormat.Json;
+                transact.AddBody(transactDet);
+
+
+                IRestResponse response = client.Execute(transact);
+                lblSubmittingInformation.Visible = false;
+
+                var content = response.Content;
+
+                if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    JsonDeserializer deserial = new JsonDeserializer();
+                    GlobalClass.GetSetClass restResult = deserial.Deserialize<GlobalClass.GetSetClass>(response);
+
+                    if (restResult.result != "OK")
+                    {
+                        if (language == "English") MessageBox.Show("Saving transaction..." + "\n" + restResult.result + " " + restResult.message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        else MessageBox.Show("取引を保存します。。。" + "\n" + restResult.result + " " + restResult.message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                }
+                else
+                {
+                    if (language == "English") MessageBox.Show("Saving transaction..." + "\n" + "Error Code " + response.StatusCode /*+ " : Message - " + response.ErrorMessage*/);
+                    else MessageBox.Show("取引を保存します。。。" + "\n" + "Error Code " + response.StatusCode /*+ " : Message - " + response.ErrorMessage*/);
+                    return;
+                }
+
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }  
+        }
+
+        private void playAlarmSound(string status)
+        {
+            SoundPlayer alarm;
+            switch (status)
+            {
+                case "Ok":
+                    //SoundPlayer audioOk = new SoundPlayer(RFID_FEATHER_ASSETS.Properties.Resources.Ok);
+                    alarm = new SoundPlayer(RFID_FEATHER_ASSETS.Properties.Resources.Ok);
+                    alarm.Play();
+                    break;
+                case "Expired":
+                    alarm = new SoundPlayer(RFID_FEATHER_ASSETS.Properties.Resources.Expired);
+                    alarm.Play();
+                    break;
+                case "Mismatch":
+                    alarm = new SoundPlayer(RFID_FEATHER_ASSETS.Properties.Resources.Mismatch);
+                    alarm.Play();
+                    break;
+            }  
         }
 
         #region Reader Procedure
@@ -640,6 +819,7 @@ namespace RFID_FEATHER_ASSETS
             imgCapture4.Image = null;
             imgCapture5.Image = null;
 
+            txtValidFrom.Text = string.Empty;
             txtValidUntil.Text = string.Empty;
             txtRFIDTag.Text = string.Empty;
             txtAssetName.Text = string.Empty;
@@ -714,7 +894,7 @@ namespace RFID_FEATHER_ASSETS
 
                     if (nReturnValue == 1)
                     {
-                        ClearFields();
+                        //ClearFields();
 
                         for (int i = 0; i < RealTimeTagDataList.Count; i++)
                         {
@@ -752,6 +932,15 @@ namespace RFID_FEATHER_ASSETS
                     }
                     ReaderMethodProc();
                     VerifyAssetProc();
+
+                    //if (!string.IsNullOrEmpty(txtRFIDTag.Text.Trim()) /*!IsRFIDTagExist*/)
+                    //{
+                    //VerifyTimer.Interval = 100;
+                    //VerifyTimer.Tick += new EventHandler(VerifyTimer_Tick);
+                    if (totalAssetRead < grdViewRFIDTag.Rows.Count)
+                    {
+                        VerifyTimer.Start();
+                    }
                 }
             }
             catch (Exception ex)
@@ -829,7 +1018,8 @@ namespace RFID_FEATHER_ASSETS
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            ValidateRule();
+            grdViewRFIDTag.Visible = true; ;//ValidateRule();
+            ClearFields();
         }
 
         #region Timer Procedure
@@ -853,18 +1043,72 @@ namespace RFID_FEATHER_ASSETS
         private void VerifyTimer_Tick(object sender, EventArgs e)
         {
             ////ClearFields();
-            //VerifyTimer.Stop();
             //LoopVerification();
+            VerifyTimer.Stop();
+  
+            if (!string.IsNullOrEmpty(txtRFIDTag.Text.Trim()) /*&& totalAssetRead < grdViewRFIDTag.Rows.Count*/)
+            {
+                for (int a = startRowComparing; a < grdViewRFIDTag.Rows.Count; a++)
+                {
+                    //For Asset Row (aRow)
+                    DataGridViewRow aRow = grdViewRFIDTag.Rows[a];
+                    if (aRow.Cells["colAssetOwner"].Value != null && Convert.ToString(aRow.Cells["colStatus"].Value).ToString() != "OK" && Convert.ToString(aRow.Cells["colStatus"].Value).ToString() != "EXPIRED")
+                    {
+                        for (int o = startRowComparing; o < grdViewRFIDTag.Rows.Count; o++)
+                        {
+                            //For ID Row (iRow)
+                            DataGridViewRow iRow = grdViewRFIDTag.Rows[o];
+                            if (Convert.ToString(aRow.Cells["colAssetOwner"].Value).ToString() == Convert.ToString(iRow.Cells["colIDOwner"].Value).ToString())
+                            {
+                                aRow.Cells["colIDTag"].Value = iRow.Cells["colIDTag"].Value;
+                                aRow.Cells["colStatus"].Value = "OK";
+                                aRow.DefaultCellStyle.BackColor = Color.Green;
+                                aRow.DefaultCellStyle.ForeColor = Color.White;
+                                aRow.Cells["colIsCompared"].Value = "YES";
+                                if (Convert.ToString(iRow.Cells["colStatus"].Value).ToString() != "EXPIRED")
+                                    iRow.DataGridView.Rows[o].Visible = false;
+                                //playAlarmSound("Ok");
+                                break;
+                            }
+                            else if (o == grdViewRFIDTag.Rows.Count - 1)
+                            {
+                                aRow.Cells["colStatus"].Value = "MISMATCH";
+                                aRow.DefaultCellStyle.BackColor = Color.Red;
+                                aRow.DefaultCellStyle.ForeColor = Color.White;
+                                aRow.Cells["colIsCompared"].Value = "YES";
+                                playAlarmSound("Mismatch");
+                                //break;
+                            }
+                        }
+                    }
+                   
+                    if (a == grdViewRFIDTag.Rows.Count - 1)
+                    {
+                        txtRFIDTag.Text = string.Empty;
+                        totalAssetRead = a + 1;
+                        grdViewRFIDTag.ClearSelection();
+
+                        IsStopComparing = true;
+                        startRowComparing = grdViewRFIDTag.Rows.Count;
+                        IsRFIDTagExist = false;
+
+                        ClearGridTimer.Start();
+                    }
+                }
+            }
         }
 
-        private void ClearTimer_Tick(object sender, EventArgs e)
+        private void ClearGridTimer_Tick(object sender, EventArgs e)
         {
-            //ClearFields();
-            //ClearTimer.Stop();
+            ClearGridTimer.Stop();
+
+            grdViewRFIDTag.Rows.Clear();
+            totalAssetRead = 0;
+            startRowComparing = 0;
         }
         #endregion
 
-        private void btnCreateReport_Click(object sender, EventArgs e)
+        private void btnReport_Click(object sender, EventArgs e)
         {
             try
             {
@@ -886,6 +1130,7 @@ namespace RFID_FEATHER_ASSETS
                         //// Read the contents of PortSelectionForm's.
                         //picPersonBroughtOut.Image = ReportCreationForm.PersonPhoto;
                         //txtReportedNote.Text = " " + ReportCreationForm.ExplanationNote;
+                        btnBack.PerformClick();
                     }
                     //else
                     //{
@@ -894,6 +1139,7 @@ namespace RFID_FEATHER_ASSETS
                     //}
 
                     IsCallingMainMenu = false;
+
                     ReaderMethodProc();
                     VerifyAssetProc();
                     //ReportCreationForm.Dispose();   
@@ -1016,12 +1262,12 @@ namespace RFID_FEATHER_ASSETS
                     IsCallingMainMenu = false;
                 }
 
-                if (txtRFIDTag.Text.Length == 0)
-                {
-                    MessageBox.Show("RFID Tag is required. Please scan...", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                    btnSubmit.Focus();
-                    IsCallingMainMenu = false;
-                }
+                //if (txtRFIDTag.Text.Length == 0)
+                //{
+                //    MessageBox.Show("RFID Tag is required. Please scan...", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                //    btnSubmit.Focus();
+                //    IsCallingMainMenu = false;
+                //}
             }
             else
             {
@@ -1058,6 +1304,234 @@ namespace RFID_FEATHER_ASSETS
             //return;
         }
 
+        private void getownerInfo(int id, DateTime? validity)
+        {
+            RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");
+            RestRequest ownerInfo = new RestRequest("/api/user/" + id, Method.GET);
+
+            var authToken = tokenvalue;
+
+            //add needed headers
+            ownerInfo.RequestFormat = DataFormat.Json;
+            ownerInfo.AddHeader("Content-Type", "application/json; charset=utf-8");
+            ownerInfo.AddHeader("X-Auth-Token", authToken);
+
+            //execute request
+            var response = client.Execute<GlobalClass.GetSetClass>(ownerInfo);
+            var content = response.Content;
+
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                //deserialize json response into object
+                JsonDeserializer deserial = new JsonDeserializer();
+                GlobalClass.GetSetClass info = deserial.Deserialize<GlobalClass.GetSetClass>(response);
+
+                string urls = info.imageUrl;
+
+                if (string.IsNullOrEmpty(urls))
+                {
+                    lblOwnerPhoto.Text = "NO" + "\n" + "Owner Photo";
+                    lblValidIDPhoto.Text = "NO" + "\n" + "Valid ID Photo";
+                }
+
+                if (urls != null)
+                {
+                    string[] ReadUrls = urls.Split(',');
+
+                    if (ReadUrls.Length > 1)
+                    {
+                        imgCapture1.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[1]);
+                        lblOwnerPhoto.Visible = false;
+                    }
+                    if (ReadUrls.Length > 2)
+                    {
+                        imgCapture2.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[2]);
+                        lblValidIDPhoto.Visible = false;
+                    }
+                }
+                txtOwnerName.Text = info.lastName + ", " + info.firstName;
+                ValidateExpiration(validity);
+            }
+            else
+            {
+                MessageBox.Show("Unable to reach server.. please try again later", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ValidateExpiration(DateTime? validity)
+        {
+            if (validity < Convert.ToDateTime(DateTime.Now.ToString("g")) && validity != DateTime.MinValue)
+            {
+                if (roleValue == "ROLE_ADMIN")
+                {
+                    DialogResult result;
+                    if (language == "English")
+                    {
+                        if (txtDescription.Text.Trim() == "ID_CARD")
+                            result = MessageBox.Show("ID is already expired." + "\n" + "Do you want to renew the ID?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Error, MessageBoxDefaultButton.Button2);
+                        else
+                            result = MessageBox.Show("Asset is already expired." + "\n" + "Do you want to renew the Asset?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Error, MessageBoxDefaultButton.Button2);
+                    }
+                    else
+                    {
+                        //if (txtDescription.Text.Trim() == "ID_CARD")
+                        //    result = MessageBox.Show("ID is already expired." + "\n" + "Do you want to renew the ID?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Error, MessageBoxDefaultButton.Button2);
+                        //else
+                            result = MessageBox.Show("アセットはすでに有効期限が切れています." + "\n" + "あなたは資産を更新したいですか？", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Error, MessageBoxDefaultButton.Button2);
+                    }
+
+                    if (result == DialogResult.Yes)
+                    {
+                        IsCallingMainMenu = true;
+                        reader.CloseCom();
+
+                        using (AssetRenewal RenewalForm = new AssetRenewal())
+                        {
+                            if (RenewalForm.ShowDialog() == DialogResult.OK)
+                            {
+                                btnSubmit.Text = "Renewed";
+                                btnBack.PerformClick();
+                            }
+
+                            IsCallingMainMenu = false;
+                            ReaderMethodProc();
+                            VerifyAssetProc();
+                        }
+                    }
+                    else btnBack.PerformClick();
+                }
+                else if (roleValue == "ROLE_GUARD")
+                {
+                    if (language == "English") MessageBox.Show("Asset is already expired." + "\n" + "Please go to admin for the renewal.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    else MessageBox.Show("アセットはすでに有効期限が切れています." + "\n" + "更新のため、管理者にいきますください.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                }
+            }
+            btnBack.Focus();
+            return;
+        }
+
+        private void grdViewRFIDTag_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex < 0) return;
+
+                grdViewRFIDTag.Visible = false;
+                if (grdViewRFIDTag.Rows[e.RowIndex].Cells["colStatus"].Value.ToString() == "MISMATCH")
+                {
+                    btnBack.Width = 145;
+                    btnReport.Visible = true;
+                    //btnReport.PerformClick();
+                }
+                else
+                {
+                    btnBack.Width = 292;
+                    btnReport.Visible = false;
+                }
+                //this.Refresh();
+
+                lblLoadingInformation.Visible = true;
+                this.Refresh();//lblLoadingInformation.Refresh();
+
+                GlobalClass.GetSetClass getAsset = new GlobalClass.GetSetClass();
+
+                getAsset.companyId = companyId;
+                getAsset.tagType = 1;
+                getAsset.tag = grdViewRFIDTag.Rows[e.RowIndex].Cells["colRFIDTag"].Value.ToString(); //txtRFIDTag.Text;
+
+                RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");
+                RestRequest assetinfo = new RestRequest("/api/asset/company-tag", Method.POST);
+
+                assetinfo.RequestFormat = DataFormat.Json;
+                assetinfo.AddHeader("Content-Type", "application/json; charset=utf-8");
+                assetinfo.AddHeader("X-Auth-Token", tokenvalue);
+                assetinfo.AddBody(getAsset);
+
+                IRestResponse response = client.Execute(assetinfo);
+                var content = response.Content;
+
+                lblLoadingInformation.Visible = false;
+
+                if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    JsonDeserializer deserial = new JsonDeserializer();
+                    GlobalClass.GetSetClass assetInfo = deserial.Deserialize<GlobalClass.GetSetClass>(response);
+
+                    string urls = assetInfo.imageUrls;
+
+                    if (string.IsNullOrEmpty(urls))
+                    {
+                        lblAssetPhoto1.Text = "NO" + "\n" + "Asset Photo 1";
+                        lblAssetPhoto2.Text = "NO" + "\n" + "Asset Photo 2";
+                        lblAssetPhoto3.Text = "NO" + "\n" + "Asset Photo 3";
+                    }
+
+                    if (urls != null && assetInfo.description != "ID_CARD")
+                    {
+                        string[] ReadUrls = urls.Split(',');
+
+                        if (ReadUrls.Length > 1)
+                        {
+                            imgCapture3.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[1]);
+                            lblAssetPhoto1.Visible = false;
+                        }
+                        if (ReadUrls.Length > 2)
+                        {
+                            imgCapture4.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[2]);
+                            lblAssetPhoto2.Visible = false;
+                        }
+                        if (ReadUrls.Length > 3)
+                        {
+                            imgCapture5.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[3]);
+                            lblAssetPhoto3.Visible = false;
+                        }
+                    }
+
+                    txtRFIDTag.Text = getAsset.tag;
+                    AssetIdValue = assetInfo.assetId;
+                    //updatedImgFileNames = assetInfo.imageUrls;
+                    txtDescription.Text = assetInfo.description;
+                    //assetName = assetInfo.name;
+
+                    //if (assetInfo.description == "ID_CARD")
+                    //    txtDescription.ReadOnly = true;
+                    //else txtDescription.ReadOnly = false;
+
+                    txtTakeOutNote.Text = assetInfo.takeOutInfo;
+
+                    if (assetInfo.validUntil == null)
+                    {
+                        txtValidFrom.Text = "Unlimited";
+                        txtValidUntil.Text = "Unlimited";
+                    }
+                    else
+                    {
+                        txtValidFrom.Text = string.Empty;//assetInfo.validUntil.Value.ToString("g");
+                        txtValidUntil.Text = assetInfo.validUntil.Value.ToString("g");
+                    }
+
+                    getownerInfo(assetInfo.ownerUserId, assetInfo.validUntil);
+
+                }
+                else if (response.StatusCode == HttpStatusCode.NotFound)
+                {
+                    if (language == "English") MessageBox.Show("Error connecting to server.. please try again later");
+                    else MessageBox.Show("サーバーへの接続エラー.. 後でもう一度試してみてください");
+                }
+                else
+                {
+                    HttpStatusCode statusCode = response.StatusCode;
+                    int numericStatusCode = (int)statusCode;
+                    //show error code
+                    MessageBox.Show("Error" + numericStatusCode);
+                }
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }  
+        }
+
     }
 
     //public class VerifyRequest
@@ -1067,31 +1541,31 @@ namespace RFID_FEATHER_ASSETS
     //    public int tagType{get; set;}
     //}
 
-    public class VerifyResult
-    {
-        public int assetId { get; set; }
-        public string name { get; set; }
-        public string description { get; set; }
-        public string imageUrls { get; set; }
-        public bool takOutAllowed { get; set; }
-        public string takeOutInfo { get; set; }
-        public DateTime validUntil { get; set; }
-        public string result { get; set; }
-        public string message { get; set; }
-        public OwnerList owner { get; set; }
-    }
+    //public class VerifyResult
+    //{
+    //    public int assetId { get; set; }
+    //    public string name { get; set; }
+    //    public string description { get; set; }
+    //    public string imageUrls { get; set; }
+    //    public bool takOutAllowed { get; set; }
+    //    public string takeOutInfo { get; set; }
+    //    public DateTime validUntil { get; set; }
+    //    public string result { get; set; }
+    //    public string message { get; set; }
+    //    public OwnerList owner { get; set; }
+    //}
 
-    public class OwnerList
-    {
-        public int userId { get; set; }
-        public int companyId { get; set; }
-        public string firstName { get; set; }
-        public string lastName { get; set; }
-        public string position { get; set; }
-        public string description { get; set; }
-        public string imageUrl { get; set; }
-        public string email { get; set; }
-        public string authorities { get; set; }
-    }
+    //public class OwnerList
+    //{
+    //    public int userId { get; set; }
+    //    public int companyId { get; set; }
+    //    public string firstName { get; set; }
+    //    public string lastName { get; set; }
+    //    public string position { get; set; }
+    //    public string description { get; set; }
+    //    public string imageUrl { get; set; }
+    //    public string email { get; set; }
+    //    public string authorities { get; set; }
+    //}
 }
 

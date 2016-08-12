@@ -210,7 +210,7 @@ namespace RFID_FEATHER_ASSETS
                 GlobalClass.GetSetClass transactDet = new GlobalClass.GetSetClass();
 
                 transactDet.companyId = companyId;//1;
-                transactDet.readerInfo = readerInfo;
+                //transactDet.readerInfo = readerInfo;
                 //transactDet.readerId = 1;
                 transactDet.assetId = Verification.AssetIdValue;
                 transactDet.notes = txtExplanationNotes.Text.Trim();

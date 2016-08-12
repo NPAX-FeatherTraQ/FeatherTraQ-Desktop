@@ -142,7 +142,7 @@ namespace RFID_FEATHER_ASSETS
                     JsonDeserializer deserial = new JsonDeserializer();
                     GlobalClass.GetSetClass info = deserial.Deserialize<GlobalClass.GetSetClass>(response);
 
-                    name = info.lastName + " " + info.lastName;
+                    name = info.firstName + " " + info.lastName;
                     
                 }
                 else
@@ -193,8 +193,6 @@ namespace RFID_FEATHER_ASSETS
                 var response = client.Execute<List<GlobalClass.GetSetClass>>(transactionInfo);
                 var content = response.Content;
 
-                lblLoadingInformation.Visible = false;
-
                 if (response.StatusCode == HttpStatusCode.OK)
                 {
                     //deserialize json response into object
@@ -205,7 +203,7 @@ namespace RFID_FEATHER_ASSETS
 
                     if (generateResult.Count != 0)
                     {
-                        grdViewTransactions.ColumnHeadersVisible = true;
+                        //grdViewTransactions.ColumnHeadersVisible = true;
 
                         for (int i = 0; i < generateResult.Count; i++)
                         {                         
@@ -224,18 +222,21 @@ namespace RFID_FEATHER_ASSETS
                             row.Cells["ColRFIDTag"].Value = generateResult[i].asset.tag;
                             row.Cells["ColTakeOutNote"].Value = generateResult[i].asset.takeOutInfo;
 
-                            ValidUntil = generateResult[i].asset.validUntil == null ? "No Expiration" : generateResult[i].asset.validUntil.ToString(); //!= DateTime.MinValue ? generateResult[i].asset.validUntil.ToString("g") : "No Expiration";
+                            ValidUntil = generateResult[i].asset.validUntil == null ? "Unlimited" : generateResult[i].asset.validUntil.ToString(); //!= DateTime.MinValue ? generateResult[i].asset.validUntil.ToString("g") : "No Expiration";
                             row.Cells["ColValidUntil"].Value = ValidUntil;
 
                             row.Cells["ColNotes"].Value = generateResult[i].notes;
                             row.Cells["ColPersonImgUrl"].Value = generateResult[i].imageUrls;
-                            row.Cells["ColCreatedAt"].Value = generateResult[i].createdAt.ToString("g");
-                            row.Cells["ColUpdatedAt"].Value = generateResult[i].asset.updatedAt.ToString("s");
+                            row.Cells["ColCreatedAt"].Value = generateResult[i].createdAt.ToString();//generateResult[i].createdAt.ToString("g");
+                            row.Cells["ColUpdatedAt"].Value = generateResult[i].asset.updatedAt.ToString("yyyy-MM-dd HH:mm:ss");//generateResult[i].asset.updatedAt.ToString("s");
                             row.Cells["ColReaderInfo"].Value = generateResult[i].readerInfo;
 
                             //grdViewTransactions.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.Fill);
                             //return;
                         }
+                        grdViewTransactions.ColumnHeadersVisible = true;
+                        grdViewTransactions.Sort(grdViewTransactions.Columns["ColCreatedAt"], ListSortDirection.Descending);
+                        lblLoadingInformation.Visible = false;
                     }
                     else
                     {

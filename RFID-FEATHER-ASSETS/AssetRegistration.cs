@@ -42,7 +42,6 @@ namespace RFID_FEATHER_ASSETS
         bool IsCameraConnected = false;
         string newImgFileNames;
         string ImgFileName;
-       // string startDateValue;
         string validUntilValue;
         public static int assetId; //int assetId;
         string updatedImgFileNames;
@@ -63,9 +62,8 @@ namespace RFID_FEATHER_ASSETS
             //portname = portnamesource;
             //tokenvalue = tokenvaluesource;
             //roleValue = roleSource;
-            getLanguage();
             GetAssetSystemInfo();
-            
+            getLanguage();
             languageHandler();
             //InitializeOwner();
             InitializeCamera();
@@ -91,7 +89,6 @@ namespace RFID_FEATHER_ASSETS
             }
         }
 
-        
         private void languageHandler()
         {
             if (language == "Japanese")
@@ -113,10 +110,6 @@ namespace RFID_FEATHER_ASSETS
                 rbtnNoExpiration.Text = rm.GetString("rbtnNoExpiration");
                 grpExpiration.Text = rm.GetString("grpExpiration");
                 btnGetRFIDTag.Text = rm.GetString("btnGetRFIDTag");
-                rbtnLblUntil.Text = rm.GetString("rbtnLblUntil");
-                chkBoxChangeCamera.Text = rm.GetString("chkBoxChangeCamera");
-                lblOwnerName.Text = rm.GetString("lblOwnerName");
-                btnReadIDTag.Text = rm.GetString("btnReadIDTag");
                 //shorter
                 btnGetAssetInfo.Text = rm.GetString("btnGetAssetInfo");
                 //shorter
@@ -133,7 +126,16 @@ namespace RFID_FEATHER_ASSETS
         }
         private void InitializePhotoLabel()
         {
-            if (language == "English")
+            if (language == "Japanese")
+            {
+                lblOwnerPhoto.Text = "第一ステップ" + "\n" + lblOwnerPhoto.Text;
+                lblValidIDPhoto.Text = "第二ステップ" + "\n" + lblValidIDPhoto.Text;
+                lblAssetPhoto1.Text = "第三ステップ" + "\n" + lblAssetPhoto1.Text;
+                lblAssetPhoto2.Text = "第四ステップ" + "\n" + lblAssetPhoto2.Text;
+                lblAssetPhoto3.Text = "第五ステップ" + "\n" + lblAssetPhoto3.Text;
+
+            }
+            else
             {
                 lblOwnerPhoto.Text = "Step 1" + "\n" + lblOwnerPhoto.Text;
                 lblValidIDPhoto.Text = "Step 2" + "\n" + lblValidIDPhoto.Text;
@@ -141,20 +143,10 @@ namespace RFID_FEATHER_ASSETS
                 lblAssetPhoto2.Text = "Step 4" + "\n" + lblAssetPhoto2.Text;
                 lblAssetPhoto3.Text = "Step 5" + "\n" + lblAssetPhoto3.Text;
             }
-            else
-            {
-                ResourceManager rm = new ResourceManager("RFID_FEATHER_ASSETS.Languages.AssetRegistration", Assembly.GetExecutingAssembly());
-                lblOwnerPhoto.Text = rm.GetString("stepOne") + "\n" + lblOwnerPhoto.Text;
-                lblValidIDPhoto.Text = rm.GetString("stepTwo") + "\n" + lblValidIDPhoto.Text;
-                lblAssetPhoto1.Text = rm.GetString("stepThree") + "\n" + lblAssetPhoto1.Text;
-                lblAssetPhoto2.Text = rm.GetString("stepFour") + "\n" + lblAssetPhoto2.Text;
-                lblAssetPhoto3.Text = rm.GetString("stepFive") + "\n" + lblAssetPhoto3.Text;
-            }
         }
 
         private void GetAssetSystemInfo()
         {
-            ResourceManager rm = new ResourceManager("RFID_FEATHER_ASSETS.Languages.AssetRegistration", Assembly.GetExecutingAssembly());
             try
             {
                 //opening the subkey  
@@ -169,8 +161,7 @@ namespace RFID_FEATHER_ASSETS
                     txtSaveImageDir.Text = (string)(key.GetValue("AssetsImagePath"));
                     companyId = (int)(key.GetValue("companyId"));
                     userId = (int)(key.GetValue("UserId"));
-                    if(language == "English") lblLoginUserName.Text = "Username: " + (string)(key.GetValue("UserName")).ToString();//.ToUpper();
-                    else lblLoginUserName.Text = rm.GetString("lblLoginUserName") + (string)(key.GetValue("UserName")).ToString();
+                    lblLoginUserName.Text = "Username: " + (string)(key.GetValue("UserName")).ToString();//.ToUpper();
                     readerInfo = (string)(key.GetValue("readerInfo"));
                     key.Close();
                 }
@@ -181,11 +172,52 @@ namespace RFID_FEATHER_ASSETS
             }  
         }
 
+        private void InitializeOwner()
+        {
+            //try
+            //{
+            //    //var company = 1;
+
+            //    RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");
+            //    RestRequest ownerName = new RestRequest("/api/user/list/" + companyId, Method.GET);
+
+            //    var authToken = tokenvalue;
+
+            //    ownerName.RequestFormat = DataFormat.Json;
+            //    ownerName.AddHeader("Content-Type", "application/json; charset=utf-8");
+            //    ownerName.AddHeader("X-Auth-Token", authToken);
+
+            //    var response = client.Execute<List<Owner>>(ownerName);
+            //    var content = response.Content;
+
+            //    if (response.StatusCode == HttpStatusCode.OK)
+            //    {
+            //        JsonDeserializer deserial = new JsonDeserializer();
+            //        List<Owner> owner = deserial.Deserialize<List<Owner>>(response);
+
+            //        this.comboOwner.DataSource = owner;
+            //        this.comboOwner.ValueMember = "userId";
+            //        this.comboOwner.DisplayMember = "fullName";
+            //    }
+            //    else
+            //    {
+            //        if (response.StatusCode == HttpStatusCode.InternalServerError)
+            //        {
+            //            MessageBox.Show("Unable to reach server. please try again later.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        }                    
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
+        }
+
         private void btnCancel_Click(object sender, EventArgs e)
         {
             newImgFileNames = string.Empty;
-            ResourceManager rm = new ResourceManager("RFID_FEATHER_ASSETS.Languages.AssetRegistration", Assembly.GetExecutingAssembly());
-            if (btnCancel.Text.ToUpper() == "BACK" || btnCancel.Text == rm.GetString("btnCancel"))
+
+            if (btnCancel.Text.ToUpper() == "BACK" || btnCancel.Text == "戻る")
             {
                 CallMainMenu();
                 return;
@@ -195,15 +227,15 @@ namespace RFID_FEATHER_ASSETS
             {
                 string cancelMsg;
 
-                if (btnSubmit.Text.ToUpper() == "SUBMIT" || btnSubmit.Text == rm.GetString("btnSubmit"))
+                if (btnSubmit.Text.ToUpper() == "SUBMIT" || btnSubmit.Text == "提出する")
                 {
                     if (language == "English") cancelMsg = "Are you sure you want to cancel the registration?";
-                    else cancelMsg = rm.GetString("cancelRegistration");
+                    else cancelMsg = "登録を取り消すにしてもよろしいですか？";
                 }
                 else
                 {
                     if (language == "English") cancelMsg = "Are you sure you want to cancel the update?";
-                    else cancelMsg = rm.GetString("cancelUpdate");
+                    else cancelMsg = "更新を取り消すにしてもよろしいですか？";
                 }
 
                 DialogResult result = MessageBox.Show(cancelMsg, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
@@ -223,7 +255,6 @@ namespace RFID_FEATHER_ASSETS
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            ResourceManager rm = new ResourceManager("RFID_FEATHER_ASSETS.Languages.AssetRegistration", Assembly.GetExecutingAssembly());
             try
             {
                 //if (txtDescription.Text == "ID_CARD")
@@ -233,12 +264,7 @@ namespace RFID_FEATHER_ASSETS
                         if ((txtDescription.Text != "ID_CARD" && imgCapture3.Image == null) || txtDescription.Text == "ID_CARD")
                         {
                             if (language == "English") MessageBox.Show("Complete information is required.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                            else if (language == "Japanese")
-                            {
-                                
-                                MessageBox.Show(rm.GetString("infoRequired"), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
-
-                            }
+                            else if (language == "Japanese") MessageBox.Show("完全な情報は、必要とされます.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
                             //btnBrowseImage.Focus();
                             btnGetRFIDTag.Focus();
                             return;
@@ -258,7 +284,7 @@ namespace RFID_FEATHER_ASSETS
                 //    }
                 //}
 
-                if (btnSubmit.Text.ToUpper() == "UPDATE" || btnSubmit.Text == rm.GetString("update"))
+                if (btnSubmit.Text.ToUpper() == "UPDATE" || btnSubmit.Text == "更新する")
                 {
                     updateAssetInfo();
                 }
@@ -293,34 +319,20 @@ namespace RFID_FEATHER_ASSETS
                     //For Validity Expiration
                     if (rbtnValidToday.Checked)
                     {
-                        //startDateValue = DateTime.UtcNow.ToString("yyyy-MM-dd T") + "00:01";
                         validUntilValue = DateTime.UtcNow.ToString("yyyy-MM-dd T") + "17:00";
                     }
                     else if (rbtnValidUntil.Checked)
                     {
-                        if (dtTimePicker.Checked)
-                        {
-                            //startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd T") + "00:01";
-                            validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd") + dtTimePicker.Value.ToString("THH:mm");
-                        }
-                        else
-                        {
-                            //startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd T") + "00:01";
-                            validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd T") + "17:00";
-                        }
+                        if (dtTimePicker.Checked) validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd") + dtTimePicker.Value.ToString("THH:mm");
+                        else validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd T") + "17:00";
                     }
-                    else
-                    {
-                       // startDateValue = null;
-                        validUntilValue = null;
-                    }
+                    else validUntilValue = null;
 
                     DateTime? dt = null;
-                    //asset.startDate = startDateValue != null ? Convert.ToDateTime(startDateValue) : dt;
                     asset.validUntil = validUntilValue != null ? Convert.ToDateTime(validUntilValue) : dt;
 
 
-                    RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");//("http://127.0.0.1:8080/");//("http://feather-assets.herokuapp.com/");
+                    RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");//("http://feather-assets.herokuapp.com/");
                     RestRequest register = new RestRequest("/api/asset/add", Method.POST);
 
                     var authToken = tokenvalue;
@@ -373,7 +385,6 @@ namespace RFID_FEATHER_ASSETS
 
         private void SaveTransaction()
         {
-            ResourceManager rm = new ResourceManager("RFID_FEATHER_ASSETS.Languages.AssetRegistration", Assembly.GetExecutingAssembly());
             //Saving to transaction table
             try
             {
@@ -381,13 +392,13 @@ namespace RFID_FEATHER_ASSETS
                 GlobalClass.GetSetClass transactDet = new GlobalClass.GetSetClass();
 
                 transactDet.companyId = companyId;//1;
-                transactDet.readerInfo = readerInfo;
+                //transactDet.readerInfo = readerInfo;
                 //transactDet.readerId = 1;
                 //transactDet.notes = txtExplanationNotes.Text.Trim();
                 //transactDet.imageUrl = newImgFileNames;//txtCapturedImagePath.Text;//txtImagePath.Text;
 
                 //Gettting the assetId
-                if (btnSubmit.Text.ToUpper() == "SUBMIT" || btnSubmit.Text == rm.GetString("btnSubmit"))
+                if (btnSubmit.Text.ToUpper() == "SUBMIT" || btnSubmit.Text == "提出する")
                 {
                     GlobalClass.GetSetClass getAsset = new GlobalClass.GetSetClass();
 
@@ -395,7 +406,7 @@ namespace RFID_FEATHER_ASSETS
                     getAsset.tag = txtRFIDTag.Text;
                     getAsset.tagType = 1;
 
-                    RestClient clientinfo = new RestClient("http://52.163.93.95:8080/FeatherAssets/");// ("http://127.0.0.1:8080/");
+                    RestClient clientinfo = new RestClient("http://52.163.93.95:8080/FeatherAssets/");
                     RestRequest assetinfo = new RestRequest("/api/asset/company-tag", Method.POST);
 
                     assetinfo.RequestFormat = DataFormat.Json;
@@ -417,7 +428,7 @@ namespace RFID_FEATHER_ASSETS
                 transactDet.assetId = assetId;
                 //end-Getting assetId
 
-                RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/"); //("http://127.0.0.1:8080/");//("http://feather-assets.herokuapp.com/");
+                RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");//("http://feather-assets.herokuapp.com/");
                 RestRequest transact = new RestRequest("/api/asset/transact", Method.POST);
 
                 var authToken = tokenvalue;
@@ -442,14 +453,14 @@ namespace RFID_FEATHER_ASSETS
                     if (restResult.result != "OK")
                     {
                         if (language == "English") MessageBox.Show("Saving transaction..." + "\n" + restResult.result + " " + restResult.message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        else MessageBox.Show(rm.GetString("saveTrans") + "\n" + restResult.result + " " + restResult.message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        else MessageBox.Show("取引を保存します。。。" + "\n" + restResult.result + " " + restResult.message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
                 }
                 else
                 {
                     if (language == "English") MessageBox.Show("Saving transaction..." + "\n" + "Error Code " + response.StatusCode /*+ " : Message - " + response.ErrorMessage*/);
-                    else MessageBox.Show(rm.GetString("saveTrans") + "\n" + "Error Code " + response.StatusCode /*+ " : Message - " + response.ErrorMessage*/);
+                    else MessageBox.Show("取引を保存します。。。" + "\n" + "Error Code " + response.StatusCode /*+ " : Message - " + response.ErrorMessage*/);
                     return;
                 }
 
@@ -462,7 +473,6 @@ namespace RFID_FEATHER_ASSETS
 
         private void updateAssetInfo()
         {
-            ResourceManager rm = new ResourceManager("RFID_FEATHER_ASSETS.Languages.AssetRegistration", Assembly.GetExecutingAssembly());
             GlobalClass.GetSetClass updateInfo = new GlobalClass.GetSetClass();
 
             updateInfo.companyId = companyId;//1;
@@ -484,33 +494,20 @@ namespace RFID_FEATHER_ASSETS
 
             if (rbtnValidToday.Checked)
             {
-                //startDateValue = DateTime.UtcNow.ToString("yyyy-MM-dd T") + "00:01";
                 validUntilValue = DateTime.UtcNow.ToString("yyyy-MM-dd T") + "17:00";
             }
             else if (rbtnValidUntil.Checked)
             {
-                if (dtTimePicker.Checked)
-                {
-                    //startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd T") + "00:01";
-                    validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd") + dtTimePicker.Value.ToString("THH:mm");
-                }
-                else
-                {
-                    //startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd T") + "00:01";
-                    validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd T") + "17:00";
-                }
+                if (dtTimePicker.Checked) validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd") + dtTimePicker.Value.ToString("THH:mm");
+                else validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd T") + "17:00";
             }
-            else
-            {
-               // startDateValue = null;
-                validUntilValue = null;
-            }
+            else validUntilValue = null;
             DateTime? dt = null;
-           // updateInfo.startDate =  startDateValue != null ? Convert.ToDateTime(startDateValue) : dt;
+
             updateInfo.validUntil = validUntilValue != null ? Convert.ToDateTime(validUntilValue) : dt;
 
 
-            RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");//("http://127.0.0.1:8080/");
+            RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");
             RestRequest updateAssetInfo = new RestRequest("/api/asset/update", Method.POST);
 
             updateAssetInfo.AddHeader("X-Auth-Token", tokenvalue);
@@ -520,14 +517,14 @@ namespace RFID_FEATHER_ASSETS
 
             lblSubmittingInformation.Visible = true;
             if (language == "English") lblSubmittingInformation.Text = "Updating Information. Please wait...";
-            else lblSubmittingInformation.Text = rm.GetString("updateInfo");
+            else lblSubmittingInformation.Text = "情報を更新します. お待ちください...";
             this.Refresh();
 
 
             IRestResponse response = client.Execute(updateAssetInfo);
             lblSubmittingInformation.Visible = false;
             if (language == "English") lblSubmittingInformation.Text = "Submitting Information. Please wait...";
-            else lblSubmittingInformation.Text = rm.GetString("submitInfo");
+            else lblSubmittingInformation.Text = "情報を提出します. お待ちください...";
 
             var content = response.Content;
 
@@ -541,7 +538,7 @@ namespace RFID_FEATHER_ASSETS
                     SaveTransaction();
 
                     if (language == "English") MessageBox.Show("Record successfully updated.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    else MessageBox.Show(rm.GetString("updateSuccess"), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else MessageBox.Show("レコードが正常に更新します.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ClearFields();
                 }
                 else
@@ -561,7 +558,6 @@ namespace RFID_FEATHER_ASSETS
 
         private void SubmitImage()
         {
-            ResourceManager rm = new ResourceManager("RFID_FEATHER_ASSETS.Languages.AssetRegistration", Assembly.GetExecutingAssembly());
             Bitmap Image = (Bitmap)cameraBox.Image;
             Image.Save("img.jpg", ImageFormat.Jpeg);
 
@@ -579,7 +575,7 @@ namespace RFID_FEATHER_ASSETS
             IRestResponse response = client.Execute(upload);
             getCaptureButtonText();
             if (language == "English") btnCancel.Text = "Cancel";
-            else btnCancel.Text = rm.GetString("cancel");
+            else btnCancel.Text = "キャンセル";
 
             var content = response.Content;
 
@@ -600,7 +596,6 @@ namespace RFID_FEATHER_ASSETS
 
         private void ClearFields()
         {
-            ResourceManager rm = new ResourceManager("RFID_FEATHER_ASSETS.Languages.AssetRegistration", Assembly.GetExecutingAssembly());
             txtRFIDTag.Text = string.Empty;
             txtOwnerName.Text = string.Empty;
             //comboOwner.Items.Clear();
@@ -639,12 +634,16 @@ namespace RFID_FEATHER_ASSETS
             else
             {
                 //btnCapturePhoto.Text = "所有者の写真";
-                btnSubmit.Text = rm.GetString("btnSubmit");
-                btnCancel.Text = rm.GetString("btnCancel");
+                btnSubmit.Text = "提出する";
+                btnCancel.Text = "戻る";
             }
 
             lblOwnerPhoto.Text = "Step 1" + "\n" + "Owner Photo";
             lblValidIDPhoto.Text = "Step 2" + "\n" + "Valid ID Photo";
+            lblAssetPhoto1.Text = "Step 3" + "\n" + "Asset Photo1";
+            lblAssetPhoto2.Text = "Step 4" + "\n" + "Asset Photo 2";
+            lblAssetPhoto3.Text = "Step 5" + "\n" + "Asset Photo 3";
+
             txtDescription.ReadOnly = false;
 
             this.Refresh();
@@ -714,10 +713,9 @@ namespace RFID_FEATHER_ASSETS
         {
             //ReaderMethodProc();
             //ClearFields();
-            ResourceManager rm = new ResourceManager("RFID_FEATHER_ASSETS.Languages.AssetRegistration", Assembly.GetExecutingAssembly());
             try
             {
-                if ((ReadIDTagWasClicked && txtDescription.Text.Trim() == "ID_CARD") || (!ReadIDTagWasClicked && !GetAssetInfoWasClicked && btnSubmit.Text == "Update" || btnSubmit.Text == rm.GetString("update")))
+                if ((ReadIDTagWasClicked && txtDescription.Text.Trim() == "ID_CARD") || (!ReadIDTagWasClicked && !GetAssetInfoWasClicked && btnSubmit.Text == "Update"))
                 {
                     btnCancel.PerformClick();
                     return;
@@ -793,7 +791,7 @@ namespace RFID_FEATHER_ASSETS
                         //txtDescription.Focus();//txtAssetName.Focus();
 
                         if (language == "English") btnCancel.Text = "Cancel";
-                        else btnCancel.Text = rm.GetString("cancel");
+                        else btnCancel.Text = "キャンセル";
                     }
                     if ((!string.IsNullOrEmpty(ownerRFIDTag) || !string.IsNullOrEmpty(txtRFIDTag.Text.Trim())) && nReturnValue == 1) getAssetInfo();
                 }
@@ -824,7 +822,7 @@ namespace RFID_FEATHER_ASSETS
             catch (Exception ex)
             {
                 if (language == "English") MessageBox.Show(ex.Message + "\n" + "Reader is not connected.");
-                else MessageBox.Show(ex.Message + "\n" + rm.GetString("readerNotConnected"));
+                else MessageBox.Show(ex.Message + "\n" + "リーダーが接続されていません.");
             }
         }
 
@@ -907,40 +905,16 @@ namespace RFID_FEATHER_ASSETS
             //For Valid Until Date
             if (!rbtnValidUntil.Checked)
             {
-                if (language == "English")
-                {
-                    dtStartDate.CustomFormat = "'Date'";
-                    dtStartDate.Format = DateTimePickerFormat.Custom;
+                dtDatePicker.CustomFormat = "'Date'";
+                dtDatePicker.Format = DateTimePickerFormat.Custom;
 
-                    dtDatePicker.CustomFormat = "'Date'";
-                    dtDatePicker.Format = DateTimePickerFormat.Custom;
-
-                    dtTimePicker.CustomFormat = "'Time'";
-                    dtTimePicker.Format = DateTimePickerFormat.Custom;
-                    dtTimePicker.Checked = false;
-                }
-                else
-                {
-                    ResourceManager rm = new ResourceManager("RFID_FEATHER_ASSETS.Languages.AssetRegistration", Assembly.GetExecutingAssembly());
-
-                    dtStartDate.CustomFormat = rm.GetString("date");
-                    dtStartDate.Format = DateTimePickerFormat.Custom;
-
-                    dtDatePicker.CustomFormat = rm.GetString("date");
-                    dtDatePicker.Format = DateTimePickerFormat.Custom;
-
-                    dtTimePicker.CustomFormat = rm.GetString("time");
-                    dtTimePicker.Format = DateTimePickerFormat.Custom;
-                    dtTimePicker.Checked = false;
-                }
+                dtTimePicker.CustomFormat = "'Time'";
+                dtTimePicker.Format = DateTimePickerFormat.Custom;
+                dtTimePicker.Checked = false;
             }
             else
             {
                 //For Valid Until Date
-                dtStartDate.CustomFormat = "MM/dd/yyyy";
-                dtStartDate.Format = DateTimePickerFormat.Custom;
-                dtStartDate.Value = DateTime.Now;
-
                 dtDatePicker.CustomFormat = "MM/dd/yyyy";
                 dtDatePicker.Format = DateTimePickerFormat.Custom;
                 dtDatePicker.Value = DateTime.Now;
@@ -1009,8 +983,6 @@ namespace RFID_FEATHER_ASSETS
 
         private void InitializeCamera()
         {
-            ResourceManager rm = new ResourceManager("RFID_FEATHER_ASSETS.Languages.AssetRegistration", Assembly.GetExecutingAssembly());
-            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ja-JP");
             try
             {
                 //comVideoDeviceBox.SelectedIndex = 0;
@@ -1032,7 +1004,7 @@ namespace RFID_FEATHER_ASSETS
                     cameraBox.BackColor = Color.Black;
                     lblNoCameraAvailable.Visible = true;
                     if (language == "English") btnCapturePhoto.Text = "Refresh Camera";
-                    else if (language == "Japanese") btnCapturePhoto.Text = rm.GetString("refreshCamera");
+                    else if (language == "Japanese") btnCapturePhoto.Text = "リフレッシュカメラ";
                 }
                 else
                 {
@@ -1047,8 +1019,7 @@ namespace RFID_FEATHER_ASSETS
                     cameraBox.BackColor = Color.White;
                     lblNoCameraAvailable.Visible = false;
 
-                    //getCaptureButtonText();
-                    if (btnSubmit.Text.ToUpper() == "UPDATE" || btnSubmit.Text == rm.GetString("update")) getCaptureButtonText();
+                    if (btnSubmit.Text.ToUpper() == "UPDATE" || btnSubmit.Text == "更新する") getCaptureButtonText();
                 }
             }
             catch (Exception ex)
@@ -1073,13 +1044,12 @@ namespace RFID_FEATHER_ASSETS
                 }
                 else
                 {
-                    ResourceManager rm = new ResourceManager("RFID_FEATHER_ASSETS.Languages.AssetRegistration", Assembly.GetExecutingAssembly());
                     //if (imgCapture1.Image == null) btnCapturePhoto.Text = "所有者の写真";
                     //else if (imgCapture2.Image == null) btnCapturePhoto.Text = "有効なIDの写真";
-                    if (imgCapture3.Image == null) btnCapturePhoto.Text = rm.GetString("lblAssetPhoto1");
-                    else if (imgCapture4.Image == null) btnCapturePhoto.Text = rm.GetString("lblAssetPhoto2");
-                    else if (imgCapture5.Image == null) btnCapturePhoto.Text = rm.GetString("lblAssetPhoto3");
-                    else btnCapturePhoto.Text = rm.GetString("photoComplete");
+                    if (imgCapture3.Image == null) btnCapturePhoto.Text = "アセットの写真一";
+                    else if (imgCapture4.Image == null) btnCapturePhoto.Text = "アセットの写真二";
+                    else if (imgCapture5.Image == null) btnCapturePhoto.Text = "アセットの写真三";
+                    else btnCapturePhoto.Text = "完成しました";
                 }
                 btnCapturePhoto.Enabled = true;
             }
@@ -1087,8 +1057,6 @@ namespace RFID_FEATHER_ASSETS
 
         private void btnCapturePhoto_Click(object sender, EventArgs e)
         {
-            ResourceManager rm = new ResourceManager("RFID_FEATHER_ASSETS.Languages.AssetRegistration", Assembly.GetExecutingAssembly());
-
             try
             {
                 if (language == "English")
@@ -1149,7 +1117,7 @@ namespace RFID_FEATHER_ASSETS
                 }
                 else
                 {
-                    if (cam == null || btnCapturePhoto.Text == rm.GetString("refreshCamera"))
+                    if (cam == null || btnCapturePhoto.Text == "リフレッシュカメラ")
                     {
                         InitializeCamera();
                     }
@@ -1157,7 +1125,7 @@ namespace RFID_FEATHER_ASSETS
                     {
                         if (imgCapture5.Image == null)
                         {
-                            btnCapturePhoto.Text = rm.GetString("processing");
+                            btnCapturePhoto.Text = "処理. お待ちください...";
                             btnCapturePhoto.Refresh();
                         }
 
@@ -1194,7 +1162,7 @@ namespace RFID_FEATHER_ASSETS
                         }
                         else
                         {
-                            MessageBox.Show(rm.GetString("imageLimit"), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("撮影した写真は、最大限に超え.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
                         SubmitImage();
@@ -1499,8 +1467,6 @@ namespace RFID_FEATHER_ASSETS
 
         private void getAssetInfo()
         {
-            ResourceManager rm = new ResourceManager("RFID_FEATHER_ASSETS.Languages.AssetRegistration", Assembly.GetExecutingAssembly());
-
             try
             {
                 lblLoadingInformation.Visible = true;
@@ -1516,7 +1482,7 @@ namespace RFID_FEATHER_ASSETS
                 else
                     getAsset.tag = txtRFIDTag.Text;
 
-                RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");//("http://127.0.0.1:8080/");
+                RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");
                 RestRequest assetinfo = new RestRequest("/api/asset/company-tag", Method.POST);
 
                 assetinfo.RequestFormat = DataFormat.Json;
@@ -1657,8 +1623,8 @@ namespace RFID_FEATHER_ASSETS
                             }
                             else
                             {
-                                btnCancel.Text = rm.GetString("cancel");
-                                btnSubmit.Text = rm.GetString("update");
+                                btnCancel.Text = "キャンセル";
+                                btnSubmit.Text = "更新する";
                             }
 
                             //if (btnSubmit.Text == "Update")
@@ -1687,14 +1653,11 @@ namespace RFID_FEATHER_ASSETS
                             else
                             {
                                 rbtnValidUntil.Checked = true;
-                                //startDateValue = assetInfo.startDate.Value.ToString("yyyy-MM-dd");
-                                //dtStartDate.Value = Convert.ToDateTime(startDateValue);
                                 validUntilValue = assetInfo.validUntil.Value.ToString("yyyy-MM-dd");
                                 dtDatePicker.Value = Convert.ToDateTime(validUntilValue);
 
                                 //if (Convert.ToDateTime(assetInfo.validUntil).ToString("HH:mm") != "00:00")
                                 //{
-
                                 validUntilValue = assetInfo.validUntil.Value.ToString("HH:mm tt");
                                 dtTimePicker.Value = Convert.ToDateTime(validUntilValue);
                                 dtTimePicker.Checked = true;
@@ -1703,7 +1666,7 @@ namespace RFID_FEATHER_ASSETS
                             }
                         }
 
-                        getownerInfo(assetInfo.ownerUserId, /*assetInfo.startDate,*/ assetInfo.validUntil);
+                        getownerInfo(assetInfo.ownerUserId, assetInfo.validUntil);
                     
                     //string urls = assetInfo.imageUrls;
 
@@ -1838,7 +1801,7 @@ namespace RFID_FEATHER_ASSETS
                 else if (response.StatusCode == HttpStatusCode.NotFound)
                 {
                     if (language == "English") MessageBox.Show("Error connecting to server.. please try again later");
-                    else MessageBox.Show(rm.GetString("serverError"));
+                    else MessageBox.Show("サーバーへの接続エラー.. 後でもう一度試してみてください");
                 }
                 else
                 {
@@ -1876,8 +1839,8 @@ namespace RFID_FEATHER_ASSETS
             }
         }
 
-        private void getownerInfo(int id, /*DateTime? startValidity,*/ DateTime? idValidity)
-        {
+        private void getownerInfo(int id, DateTime? idValidity)
+        {  
             RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");
             RestRequest ownerInfo = new RestRequest("/api/user/" + id, Method.GET);
 
@@ -1925,7 +1888,7 @@ namespace RFID_FEATHER_ASSETS
                 ownerId = info.userId;//.ownerId;
                 //btnCapturePhoto.Enabled = true;
 
-                /*if (ReadIDTagWasClicked)*/ ValidateIDExpiration(/*startValidity,*/ idValidity);
+                /*if (ReadIDTagWasClicked)*/ ValidateIDExpiration(idValidity);
             }
             else
             {
@@ -1933,7 +1896,7 @@ namespace RFID_FEATHER_ASSETS
             }
         }
 
-        private void ValidateIDExpiration(/*DateTime? start,*/ DateTime? validity)
+        private void ValidateIDExpiration(DateTime? validity)
         {
             if (validity < Convert.ToDateTime(DateTime.Now.ToString("g")) && validity != DateTime.MinValue)
             {
@@ -1979,8 +1942,7 @@ namespace RFID_FEATHER_ASSETS
                     }
                     else
                     {
-
-                        DialogResult result = MessageBox.Show("すでに有効期限が切れています." + "\n" + "あなたは資産を更新したいですか？", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Error, MessageBoxDefaultButton.Button2);
+                        DialogResult result = MessageBox.Show("アセットはすでに有効期限が切れています." + "\n" + "あなたは資産を更新したいですか？", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Error, MessageBoxDefaultButton.Button2);
                         if (result == DialogResult.Yes)
                         {
                             //IsCallingMainMenu = true;

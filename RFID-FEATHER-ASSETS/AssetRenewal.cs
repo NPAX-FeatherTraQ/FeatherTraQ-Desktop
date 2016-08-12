@@ -20,7 +20,6 @@ namespace RFID_FEATHER_ASSETS
 {
     public partial class AssetRenewal : Form
     {
-        ResourceManager rm = new ResourceManager("RFID_FEATHER_ASSETS.Languages.AssetRenewal", Assembly.GetExecutingAssembly());
         string validUntilValue;
         string tokenvalue;
         string language;
@@ -61,7 +60,7 @@ namespace RFID_FEATHER_ASSETS
             if (language == "Japanese")
             {
                 //Console.WriteLine(Properties.mainmenu.btnScan);
-               
+                ResourceManager rm = new ResourceManager("RFID_FEATHER_ASSETS.Languages.mainmenu", Assembly.GetExecutingAssembly());
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ja-JP");
                 groupBox1.Text = rm.GetString("groupBox1");
                 rbtnValidToday.Text = rm.GetString("rbtnValidToday");
@@ -149,7 +148,7 @@ namespace RFID_FEATHER_ASSETS
                 }
                 else
                 {
-                    DialogResult result = MessageBox.Show(rm.GetString("cancelRenew"), this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                    DialogResult result = MessageBox.Show("アセットの更新を取り消すにしてもよろしいですか？", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
                     if (result == DialogResult.Yes)
                     {
                         DialogResult = DialogResult.Cancel;
@@ -222,8 +221,8 @@ namespace RFID_FEATHER_ASSETS
                     if (restResult.result == "OK")
                     {
                         SaveTransaction();
-                        if (language.ToLower() == "english") MessageBox.Show("Asset successfully renewed.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        else MessageBox.Show(rm.GetString("success"), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (language.ToLower() == "japanese") MessageBox.Show("アセットが正常に更新されました。", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        else MessageBox.Show("Asset successfully renewed.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         DialogResult = DialogResult.OK;
                         this.Dispose();
                     }
@@ -256,7 +255,7 @@ namespace RFID_FEATHER_ASSETS
                 GlobalClass.GetSetClass transactDet = new GlobalClass.GetSetClass();
 
                 transactDet.companyId = companyId;//1;
-                transactDet.readerInfo = readerInfo;
+                //transactDet.readerInfo = readerInfo;
                 //transactDet.readerId = 1;
                 //transactDet.notes = txtExplanationNotes.Text.Trim();
                 //transactDet.imageUrl = newImgFileNames;//txtCapturedImagePath.Text;//txtImagePath.Text;
@@ -286,8 +285,8 @@ namespace RFID_FEATHER_ASSETS
 
                     if (restResult.result != "OK")
                     {
-                        if (language.ToLower() == "english") MessageBox.Show("transaction saved..." + "\n" + restResult.result + " " + restResult.message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        else MessageBox.Show(rm.GetString("transSave")+ "\n" + restResult.result + " " + restResult.message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (language.ToLower() == "japanese") MessageBox.Show("取引が保存されました..." + "\n" + restResult.result + " " + restResult.message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        else MessageBox.Show("transaction saved..." + "\n" + restResult.result + " " + restResult.message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
                 }
