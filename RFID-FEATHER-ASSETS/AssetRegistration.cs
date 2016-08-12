@@ -905,6 +905,8 @@ namespace RFID_FEATHER_ASSETS
             //For Valid Until Date
             if (!rbtnValidUntil.Checked)
             {
+                dtStartDate.CustomFormat = "'Date'";
+                dtStartDate.Format = DateTimePickerFormat.Custom;
                 dtDatePicker.CustomFormat = "'Date'";
                 dtDatePicker.Format = DateTimePickerFormat.Custom;
 
@@ -914,6 +916,9 @@ namespace RFID_FEATHER_ASSETS
             }
             else
             {
+                dtStartDate.CustomFormat = "MM/dd/yyyy";
+                dtStartDate.Format = DateTimePickerFormat.Custom;
+                dtStartDate.Value = DateTime.Now;
                 //For Valid Until Date
                 dtDatePicker.CustomFormat = "MM/dd/yyyy";
                 dtDatePicker.Format = DateTimePickerFormat.Custom;
