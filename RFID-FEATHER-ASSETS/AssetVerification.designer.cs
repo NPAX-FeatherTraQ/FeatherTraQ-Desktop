@@ -42,10 +42,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtOwnerName = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtValidFrom = new System.Windows.Forms.TextBox();
-            this.txtValidUntil = new System.Windows.Forms.TextBox();
+            this.txtValidityPeriod = new System.Windows.Forms.TextBox();
             this.lblValidUntil = new System.Windows.Forms.Label();
             this.lblDesc = new System.Windows.Forms.Label();
             this.txtTakeOutNote = new System.Windows.Forms.TextBox();
@@ -84,14 +81,22 @@
             this.picOwner = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.grdViewRFIDTag = new System.Windows.Forms.DataGridView();
+            this.colDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colOwnerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAssetDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTakeOutNote = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colValidityPeriod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colViewerIcon = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colAssetID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colIDTag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colIDOwner = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAssetTag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAssetOwner = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colRFIDTag = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colIsCompared = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblLoginUserName = new System.Windows.Forms.Label();
+            this.ReadLoopTimer = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCapture5)).BeginInit();
@@ -167,10 +172,7 @@
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Controls.Add(this.txtOwnerName);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.txtValidFrom);
-            this.groupBox2.Controls.Add(this.txtValidUntil);
+            this.groupBox2.Controls.Add(this.txtValidityPeriod);
             this.groupBox2.Controls.Add(this.lblValidUntil);
             this.groupBox2.Controls.Add(this.lblDesc);
             this.groupBox2.Controls.Add(this.txtTakeOutNote);
@@ -195,31 +197,13 @@
             resources.ApplyResources(this.label9, "label9");
             this.label9.Name = "label9";
             // 
-            // label7
+            // txtValidityPeriod
             // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.Name = "label7";
-            // 
-            // label4
-            // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
-            // 
-            // txtValidFrom
-            // 
-            resources.ApplyResources(this.txtValidFrom, "txtValidFrom");
-            this.txtValidFrom.BackColor = System.Drawing.Color.White;
-            this.txtValidFrom.Name = "txtValidFrom";
-            this.txtValidFrom.ReadOnly = true;
-            this.txtValidFrom.TabStop = false;
-            // 
-            // txtValidUntil
-            // 
-            resources.ApplyResources(this.txtValidUntil, "txtValidUntil");
-            this.txtValidUntil.BackColor = System.Drawing.Color.White;
-            this.txtValidUntil.Name = "txtValidUntil";
-            this.txtValidUntil.ReadOnly = true;
-            this.txtValidUntil.TabStop = false;
+            resources.ApplyResources(this.txtValidityPeriod, "txtValidityPeriod");
+            this.txtValidityPeriod.BackColor = System.Drawing.Color.White;
+            this.txtValidityPeriod.Name = "txtValidityPeriod";
+            this.txtValidityPeriod.ReadOnly = true;
+            this.txtValidityPeriod.TabStop = false;
             // 
             // lblValidUntil
             // 
@@ -473,24 +457,32 @@
             this.grdViewRFIDTag.AllowUserToDeleteRows = false;
             this.grdViewRFIDTag.AllowUserToResizeColumns = false;
             this.grdViewRFIDTag.AllowUserToResizeRows = false;
-            this.grdViewRFIDTag.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grdViewRFIDTag.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.grdViewRFIDTag.BackgroundColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.grdViewRFIDTag.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.grdViewRFIDTag.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.grdViewRFIDTag, "grdViewRFIDTag");
+            this.grdViewRFIDTag.ColumnHeadersVisible = false;
             this.grdViewRFIDTag.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colDate,
+            this.colOwnerName,
+            this.colAssetDescription,
+            this.colTakeOutNote,
+            this.colValidityPeriod,
+            this.colStatus,
+            this.colViewerIcon,
+            this.colAssetID,
             this.colIDTag,
             this.colIDOwner,
             this.colAssetTag,
             this.colAssetOwner,
             this.colRFIDTag,
-            this.colStatus,
             this.colIsCompared});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -500,11 +492,73 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdViewRFIDTag.DefaultCellStyle = dataGridViewCellStyle2;
-            resources.ApplyResources(this.grdViewRFIDTag, "grdViewRFIDTag");
             this.grdViewRFIDTag.Name = "grdViewRFIDTag";
             this.grdViewRFIDTag.ReadOnly = true;
             this.grdViewRFIDTag.RowHeadersVisible = false;
             this.grdViewRFIDTag.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdViewRFIDTag_CellContentDoubleClick);
+            // 
+            // colDate
+            // 
+            this.colDate.FillWeight = 35.54648F;
+            resources.ApplyResources(this.colDate, "colDate");
+            this.colDate.Name = "colDate";
+            this.colDate.ReadOnly = true;
+            this.colDate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colOwnerName
+            // 
+            this.colOwnerName.FillWeight = 58.04291F;
+            resources.ApplyResources(this.colOwnerName, "colOwnerName");
+            this.colOwnerName.Name = "colOwnerName";
+            this.colOwnerName.ReadOnly = true;
+            this.colOwnerName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colAssetDescription
+            // 
+            this.colAssetDescription.FillWeight = 151.7326F;
+            resources.ApplyResources(this.colAssetDescription, "colAssetDescription");
+            this.colAssetDescription.Name = "colAssetDescription";
+            this.colAssetDescription.ReadOnly = true;
+            this.colAssetDescription.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colTakeOutNote
+            // 
+            this.colTakeOutNote.FillWeight = 130.6182F;
+            resources.ApplyResources(this.colTakeOutNote, "colTakeOutNote");
+            this.colTakeOutNote.Name = "colTakeOutNote";
+            this.colTakeOutNote.ReadOnly = true;
+            this.colTakeOutNote.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colValidityPeriod
+            // 
+            this.colValidityPeriod.FillWeight = 134.877F;
+            resources.ApplyResources(this.colValidityPeriod, "colValidityPeriod");
+            this.colValidityPeriod.Name = "colValidityPeriod";
+            this.colValidityPeriod.ReadOnly = true;
+            this.colValidityPeriod.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colStatus
+            // 
+            this.colStatus.FillWeight = 89.18285F;
+            resources.ApplyResources(this.colStatus, "colStatus");
+            this.colStatus.Name = "colStatus";
+            this.colStatus.ReadOnly = true;
+            this.colStatus.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colViewerIcon
+            // 
+            this.colViewerIcon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
+            resources.ApplyResources(this.colViewerIcon, "colViewerIcon");
+            this.colViewerIcon.Image = global::RFID_FEATHER_ASSETS.Properties.Resources.ViewDetailsIcon;
+            this.colViewerIcon.Name = "colViewerIcon";
+            this.colViewerIcon.ReadOnly = true;
+            this.colViewerIcon.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colAssetID
+            // 
+            resources.ApplyResources(this.colAssetID, "colAssetID");
+            this.colAssetID.Name = "colAssetID";
+            this.colAssetID.ReadOnly = true;
             // 
             // colIDTag
             // 
@@ -538,13 +592,6 @@
             this.colRFIDTag.Name = "colRFIDTag";
             this.colRFIDTag.ReadOnly = true;
             // 
-            // colStatus
-            // 
-            resources.ApplyResources(this.colStatus, "colStatus");
-            this.colStatus.Name = "colStatus";
-            this.colStatus.ReadOnly = true;
-            this.colStatus.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
             // colIsCompared
             // 
             resources.ApplyResources(this.colIsCompared, "colIsCompared");
@@ -557,6 +604,10 @@
             resources.ApplyResources(this.lblLoginUserName, "lblLoginUserName");
             this.lblLoginUserName.BackColor = System.Drawing.Color.White;
             this.lblLoginUserName.Name = "lblLoginUserName";
+            // 
+            // ReadLoopTimer
+            // 
+            this.ReadLoopTimer.Tick += new System.EventHandler(this.ReadLoopTimer_Tick);
             // 
             // Verification
             // 
@@ -630,10 +681,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtOwnerName;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtValidFrom;
-        private System.Windows.Forms.TextBox txtValidUntil;
+        private System.Windows.Forms.TextBox txtValidityPeriod;
         private System.Windows.Forms.Label lblValidUntil;
         private System.Windows.Forms.Label lblDesc;
         private System.Windows.Forms.TextBox txtTakeOutNote;
@@ -645,13 +693,21 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblLoginUserName;
         private System.Windows.Forms.Button btnReport;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colOwnerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAssetDescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTakeOutNote;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colValidityPeriod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
+        private System.Windows.Forms.DataGridViewImageColumn colViewerIcon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAssetID;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIDTag;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIDOwner;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAssetTag;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAssetOwner;
         private System.Windows.Forms.DataGridViewTextBoxColumn colRFIDTag;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIsCompared;
+        private System.Windows.Forms.Timer ReadLoopTimer;
 
 
     }

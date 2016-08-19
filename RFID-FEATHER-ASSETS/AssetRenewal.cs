@@ -1,4 +1,4 @@
-﻿using Microsoft.Win32;
+using Microsoft.Win32;
 using RestSharp;
 using RestSharp.Deserializers;
 using System;
@@ -21,19 +21,23 @@ namespace RFID_FEATHER_ASSETS
     public partial class AssetRenewal : Form
     {
         string validUntilValue;
+        string startDateValue;
         string tokenvalue;
         string language;
         int companyId;
         int userId;
         string readerInfo;
+        int assetId;
 
-        public AssetRenewal()
+        public AssetRenewal(int srcAssetId)
         {
             InitializeComponent();
+
             getLanguage();
             languageHandler();
             GetAssetSystemInfo();
             AssetValidUntilDateTime();
+            assetId = srcAssetId;
         }
         private void getLanguage()
         {
@@ -88,6 +92,8 @@ namespace RFID_FEATHER_ASSETS
             //For Valid Until Date
             if (!rbtnValidUntil.Checked)
             {
+                dtStartDate.CustomFormat = "'Date'";
+                dtStartDate.Format = DateTimePickerFormat.Custom;
                 dtDatePicker.CustomFormat = "'Date'";
                 dtDatePicker.Format = DateTimePickerFormat.Custom;
 
@@ -97,6 +103,9 @@ namespace RFID_FEATHER_ASSETS
             }
             else
             {
+                dtStartDate.CustomFormat = "MM/dd/yyyy";
+                dtStartDate.Format = DateTimePickerFormat.Custom;
+                dtStartDate.Value = DateTime.Now;
                 //For Valid Until Date
                 dtDatePicker.CustomFormat = "MM/dd/yyyy";
                 dtDatePicker.Format = DateTimePickerFormat.Custom;
@@ -133,7 +142,7 @@ namespace RFID_FEATHER_ASSETS
             {
                 if (language == "English")
                 {
-                    DialogResult result = MessageBox.Show("Are you sure you want to cancel the asset renewal?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                    DialogResult result = MessageBox.Show("Are you sure you want to cancel the ID renewal?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
                     if (result == DialogResult.Yes)
                     {
                         DialogResult = DialogResult.Cancel;
@@ -175,24 +184,32 @@ namespace RFID_FEATHER_ASSETS
                 //For Validity Expiration
                 if (rbtnValidToday.Checked)
                 {
+                    startDateValue = DateTime.UtcNow.ToString("yyyy-mm-dd T") + "00:01";
                     validUntilValue = DateTime.UtcNow.ToString("yyyy-MM-dd T") + "17:00";
                 }
                 else if (rbtnValidUntil.Checked)
                 {
+                    startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd T") + "00:01";
+
                     if (dtTimePicker.Checked) validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd") + dtTimePicker.Value.ToString("THH:mm");
                     else validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd T") + "17:00";
                 }
-                else validUntilValue = null;
+                else
+                {
+                    startDateValue = null;
+                    validUntilValue = null;
+                }
 
                 //For Web Service
                 GlobalClass.GetSetClass assetExtend = new GlobalClass.GetSetClass();
 
                 DateTime? dt = null;
+                assetExtend.startDate = startDateValue != null ? Convert.ToDateTime(startDateValue) : dt;
                 assetExtend.validUntil = validUntilValue != null ? Convert.ToDateTime(validUntilValue) : dt;
-                if (AssetRegistration.assetId != 0)
-                    assetExtend.assetId = AssetRegistration.assetId;
-                else
-                    assetExtend.assetId = Verification.AssetIdValue;
+                //if (AssetRegistration.assetId != 0)
+                //    assetExtend.assetId = AssetRegistration.assetId;
+                //else
+                    assetExtend.assetId = assetId;//Verification.AssetIdValue;
                 assetExtend.updateUserId = userId;
 
                 RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");//("http://feather-assets.herokuapp.com/");
@@ -222,7 +239,7 @@ namespace RFID_FEATHER_ASSETS
                     {
                         SaveTransaction();
                         if (language.ToLower() == "japanese") MessageBox.Show("アセットが正常に更新されました。", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        else MessageBox.Show("Asset successfully renewed.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        else MessageBox.Show("ID successfully renewed.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         DialogResult = DialogResult.OK;
                         this.Dispose();
                     }
@@ -255,11 +272,16 @@ namespace RFID_FEATHER_ASSETS
                 GlobalClass.GetSetClass transactDet = new GlobalClass.GetSetClass();
 
                 transactDet.companyId = companyId;//1;
-                //transactDet.readerInfo = readerInfo;
+                transactDet.readerInfo = readerInfo;
+                transactDet.type = "RENEW-Owner";
                 //transactDet.readerId = 1;
                 //transactDet.notes = txtExplanationNotes.Text.Trim();
                 //transactDet.imageUrl = newImgFileNames;//txtCapturedImagePath.Text;//txtImagePath.Text;
-                transactDet.assetId = Verification.AssetIdValue;
+                //transactDet.assetId = Verification.AssetIdValue;
+                //if (AssetRegistration.assetId != 0)
+                //    transactDet.assetId = AssetRegistration.assetId;
+                //else
+                    transactDet.assetId = assetId;//Verification.AssetIdValue;
 
                 RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");//("http://feather-assets.herokuapp.com/");
                 RestRequest transact = new RestRequest("/api/asset/transact", Method.POST);

@@ -565,7 +565,7 @@
     <value>Created Date</value>
   </data>
   <data name="ColCreatedAt.Width" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>142</value>
   </data>
   <metadata name="ColTransId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -610,7 +610,7 @@
     <value>RFID Tag</value>
   </data>
   <data name="ColRFIDTag.Width" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>112</value>
   </data>
   <metadata name="ColDescription.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -619,7 +619,7 @@
     <value>Description</value>
   </data>
   <data name="ColDescription.Width" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>125</value>
   </data>
   <metadata name="ColImgUrl.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -640,7 +640,7 @@
     <value>Take Out Note</value>
   </data>
   <data name="ColTakeOutNote.Width" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>150</value>
   </data>
   <metadata name="ColValidUntil.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -649,7 +649,7 @@
     <value>Valid Until</value>
   </data>
   <data name="ColValidUntil.Width" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>116</value>
   </data>
   <metadata name="ColNotes.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -658,7 +658,7 @@
     <value>Report Note</value>
   </data>
   <data name="ColNotes.Width" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>132</value>
   </data>
   <metadata name="ColPersonImgUrl.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -679,7 +679,7 @@
     <value>Reader Information</value>
   </data>
   <data name="ColReaderInfo.Width" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>190</value>
   </data>
   <metadata name="ColRegisterId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -688,7 +688,7 @@
     <value>Created By</value>
   </data>
   <data name="ColRegisterId.Width" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>123</value>
   </data>
   <metadata name="ColUpdateId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -697,7 +697,7 @@
     <value>Update By</value>
   </data>
   <data name="ColUpdateId.Width" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>118</value>
   </data>
   <metadata name="ColUpdatedAt.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -706,7 +706,7 @@
     <value>Updated Date</value>
   </data>
   <data name="ColUpdatedAt.Width" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>147</value>
   </data>
   <data name="grdViewTransactions.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -719,6 +719,9 @@
   </data>
   <data name="grdViewTransactions.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="grdViewTransactions.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;grdViewTransactions.Name" xml:space="preserve">
     <value>grdViewTransactions</value>

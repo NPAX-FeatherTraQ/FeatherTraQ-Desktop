@@ -38,11 +38,15 @@
             this.rbtnValidToday = new System.Windows.Forms.RadioButton();
             this.dtTimePicker = new System.Windows.Forms.DateTimePicker();
             this.dtDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.rbtnLblUntil = new System.Windows.Forms.Label();
+            this.dtStartDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.rbtnLblUntil);
+            this.groupBox1.Controls.Add(this.dtStartDate);
             this.groupBox1.Controls.Add(this.lblSubmittingInformation);
             this.groupBox1.Controls.Add(this.btnCancel);
             this.groupBox1.Controls.Add(this.btnSubmit);
@@ -117,6 +121,19 @@
             this.dtDatePicker.Name = "dtDatePicker";
             this.dtDatePicker.TabStop = false;
             // 
+            // rbtnLblUntil
+            // 
+            resources.ApplyResources(this.rbtnLblUntil, "rbtnLblUntil");
+            this.rbtnLblUntil.Name = "rbtnLblUntil";
+            // 
+            // dtStartDate
+            // 
+            resources.ApplyResources(this.dtStartDate, "dtStartDate");
+            this.dtStartDate.Checked = false;
+            this.dtStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtStartDate.Name = "dtStartDate";
+            this.dtStartDate.TabStop = false;
+            // 
             // AssetRenewal
             // 
             resources.ApplyResources(this, "$this");
@@ -142,5 +159,7 @@
         private System.Windows.Forms.Label lblSubmittingInformation;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Label rbtnLblUntil;
+        private System.Windows.Forms.DateTimePicker dtStartDate;
     }
 }

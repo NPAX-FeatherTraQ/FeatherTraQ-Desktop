@@ -80,7 +80,7 @@ namespace RFID_FEATHER_ASSETS
                                where nic.OperationalStatus == OperationalStatus.Up
                                select nic.GetPhysicalAddress().ToString()).FirstOrDefault();
                 //var macAddrs = NetworkInterface.GetAllNetworkInterfaces().Where(nic => nic.OperationalStatus == OperationalStatus.Up).Select(nic => nic.GetPhysicalAddress().ToString()).FirstOrDefault();
-                readerInfo = /*"Domain:" + Domain +*/ "Host:" + Host + " IP Address:" + LocalIp + " Mac Address:" + macAddr;
+                readerInfo = /*"Domain:" + Domain +*/ "Host:" + Host + /*" IP Address:" + LocalIp +*/ " Mac Address:" + macAddr;
             }
             catch (Exception ex)
             {
@@ -164,7 +164,7 @@ namespace RFID_FEATHER_ASSETS
                         loginResult = deserial.Deserialize<GlobalClass.GetSetClass>(response);
 
                         companyid = loginResult.companyId;
-                        SaveAssetSystemInfo(loginResult.authenticationToken, loginResult.roles, loginResult.userId, txtUserName.Text.Trim());
+                        SaveAssetSystemInfo(loginResult.authenticationToken, loginResult.roles, loginResult.userId, txtUserName.Text.Trim(), readerInfo);
 
 
                         //check authorities    
@@ -217,7 +217,7 @@ namespace RFID_FEATHER_ASSETS
              
         }
 
-        private void SaveAssetSystemInfo(string autoken, string roles, int userId, string loginid)
+        private void SaveAssetSystemInfo(string autoken, string roles, int userId, string loginid, string readerInfo)
         {
             try
             {
@@ -232,6 +232,7 @@ namespace RFID_FEATHER_ASSETS
                 key.SetValue("UserId", userId);
                 key.SetValue("Language", selectLanguage.Text.ToString());
                 if (!string.IsNullOrEmpty(loginid)) key.SetValue("UserName", loginid);
+                if (!string.IsNullOrEmpty(loginid)) key.SetValue("readerInfo", readerInfo);
                 key.Close();
             }
             catch (Exception ex)

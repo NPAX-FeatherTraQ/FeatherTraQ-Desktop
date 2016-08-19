@@ -23,6 +23,7 @@ namespace RFID_FEATHER_ASSETS
             public bool takeOutAllowed { get; set; }
             public string takeOutInfo { get; set; }
             public DateTime? validUntil { get; set; }
+            public DateTime? startDate { get; set; }
             public string response { get; set; }
             public string message { get; set; }
             public string result { get; set; }
@@ -51,6 +52,7 @@ namespace RFID_FEATHER_ASSETS
             public AssetList assetIdCard = new AssetList();
             public string roleName { get; set; }
             public string value { get; set; }
+            public string type { get; set; }
         }
 
         public class AssetList
@@ -67,6 +69,7 @@ namespace RFID_FEATHER_ASSETS
             public bool takeOutAllowed { get; set; }
             public DateTime updatedAt { get; set; }
             public DateTime? validUntil { get; set; }
+            public DateTime? startDate { get; set; }
             public int ownerId { get; set; }
             public int tagType { get; set; }            
         }

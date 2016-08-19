@@ -356,7 +356,7 @@
             this.btnEditInfo.Name = "btnEditInfo";
             this.btnEditInfo.Size = new System.Drawing.Size(111, 26);
             this.btnEditInfo.TabIndex = 63;
-            this.btnEditInfo.Text = "Get User Info";
+            this.btnEditInfo.Text = "Update User";
             this.btnEditInfo.UseVisualStyleBackColor = false;
             this.btnEditInfo.Click += new System.EventHandler(this.btnEditInfo_Click);
             // 
@@ -376,7 +376,7 @@
             this.grpExpiration.Size = new System.Drawing.Size(282, 128);
             this.grpExpiration.TabIndex = 62;
             this.grpExpiration.TabStop = false;
-            this.grpExpiration.Text = "Validity Expiration";
+            this.grpExpiration.Text = "Validity Period";
             // 
             // dtStartDate
             // 
@@ -492,11 +492,11 @@
             this.btnGetRFIDTag.BackColor = System.Drawing.Color.Orange;
             this.btnGetRFIDTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.6F);
             this.btnGetRFIDTag.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnGetRFIDTag.Location = new System.Drawing.Point(175, 227);
+            this.btnGetRFIDTag.Location = new System.Drawing.Point(169, 227);
             this.btnGetRFIDTag.Name = "btnGetRFIDTag";
-            this.btnGetRFIDTag.Size = new System.Drawing.Size(79, 26);
+            this.btnGetRFIDTag.Size = new System.Drawing.Size(91, 26);
             this.btnGetRFIDTag.TabIndex = 25;
-            this.btnGetRFIDTag.Text = "Get RFID";
+            this.btnGetRFIDTag.Text = "Scan RFID";
             this.btnGetRFIDTag.UseVisualStyleBackColor = false;
             this.btnGetRFIDTag.Click += new System.EventHandler(this.btnGetRFIDTag_Click);
             // 

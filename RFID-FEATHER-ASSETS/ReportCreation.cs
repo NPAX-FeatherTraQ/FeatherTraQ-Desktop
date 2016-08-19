@@ -38,8 +38,9 @@ namespace RFID_FEATHER_ASSETS
         string readerInfo;
         bool isCameraChanged = false;
         string cameraDeviceName;
+        int assetId;
 
-        public ReportCreation()
+        public ReportCreation(int srcAssetId)
         {
             InitializeComponent();
 
@@ -49,6 +50,8 @@ namespace RFID_FEATHER_ASSETS
             GetAssetSystemInfo();
             InitializeCamera();
             InitializePhotoLabel();
+            assetId = srcAssetId;
+            
         }
         private void getLanguage()
         {
@@ -210,11 +213,12 @@ namespace RFID_FEATHER_ASSETS
                 GlobalClass.GetSetClass transactDet = new GlobalClass.GetSetClass();
 
                 transactDet.companyId = companyId;//1;
-                //transactDet.readerInfo = readerInfo;
+                transactDet.readerInfo = readerInfo;
                 //transactDet.readerId = 1;
-                transactDet.assetId = Verification.AssetIdValue;
+                transactDet.assetId = assetId;//Verification.AssetIdValue;
                 transactDet.notes = txtExplanationNotes.Text.Trim();
                 transactDet.imageUrls = newImgFileNames;//txtCapturedImagePath.Text;//txtImagePath.Text;
+                transactDet.type = "CREATE-Report";
 
 
                 RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");//("http://feather-assets.herokuapp.com/");

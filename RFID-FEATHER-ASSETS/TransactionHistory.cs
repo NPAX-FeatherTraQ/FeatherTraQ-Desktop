@@ -234,7 +234,7 @@ namespace RFID_FEATHER_ASSETS
                             //grdViewTransactions.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.Fill);
                             //return;
                         }
-                        grdViewTransactions.ColumnHeadersVisible = true;
+                        grdViewTransactions.Visible = true;//grdViewTransactions.ColumnHeadersVisible = true;
                         grdViewTransactions.Sort(grdViewTransactions.Columns["ColCreatedAt"], ListSortDirection.Descending);
                         lblLoadingInformation.Visible = false;
                     }

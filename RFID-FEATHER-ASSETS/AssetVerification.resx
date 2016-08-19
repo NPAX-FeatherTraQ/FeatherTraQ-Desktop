@@ -125,14 +125,17 @@
   <data name="lblCurrentDateTime.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
+  <data name="lblCurrentDateTime.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="lblCurrentDateTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>905, 723</value>
+    <value>833, 733</value>
   </data>
   <data name="lblCurrentDateTime.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="lblCurrentDateTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 26</value>
+    <value>152, 16</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lblCurrentDateTime.TabIndex" type="System.Int32, mscorlib">
@@ -270,143 +273,35 @@
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="label7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="txtValidityPeriod.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9pt, style=Bold</value>
-  </data>
-  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>140, 59</value>
-  </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 15</value>
-  </data>
-  <data name="label7.TabIndex" type="System.Int32, mscorlib">
-    <value>81</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>To</value>
-  </data>
-  <data name="label7.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="&gt;&gt;label7.Name" xml:space="preserve">
-    <value>label7</value>
-  </data>
-  <data name="&gt;&gt;label7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="label4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9pt, style=Bold</value>
-  </data>
-  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 61</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 15</value>
-  </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>From</value>
-  </data>
-  <data name="label4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="txtValidFrom.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="txtValidFrom.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="txtValidityPeriod.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
-  <data name="txtValidFrom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 57</value>
+  <data name="txtValidityPeriod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 60</value>
   </data>
-  <data name="txtValidFrom.MaxLength" type="System.Int32, mscorlib">
+  <data name="txtValidityPeriod.MaxLength" type="System.Int32, mscorlib">
     <value>45</value>
   </data>
-  <data name="txtValidFrom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 21</value>
+  <data name="txtValidityPeriod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 21</value>
   </data>
-  <data name="txtValidFrom.TabIndex" type="System.Int32, mscorlib">
-    <value>79</value>
-  </data>
-  <data name="&gt;&gt;txtValidFrom.Name" xml:space="preserve">
-    <value>txtValidFrom</value>
-  </data>
-  <data name="&gt;&gt;txtValidFrom.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtValidFrom.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;txtValidFrom.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="txtValidUntil.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="txtValidUntil.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9pt</value>
-  </data>
-  <data name="txtValidUntil.Location" type="System.Drawing.Point, System.Drawing">
-    <value>164, 58</value>
-  </data>
-  <data name="txtValidUntil.MaxLength" type="System.Int32, mscorlib">
-    <value>45</value>
-  </data>
-  <data name="txtValidUntil.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 21</value>
-  </data>
-  <data name="txtValidUntil.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtValidityPeriod.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
   </data>
-  <data name="&gt;&gt;txtValidUntil.Name" xml:space="preserve">
-    <value>txtValidUntil</value>
+  <data name="&gt;&gt;txtValidityPeriod.Name" xml:space="preserve">
+    <value>txtValidityPeriod</value>
   </data>
-  <data name="&gt;&gt;txtValidUntil.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtValidityPeriod.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtValidUntil.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtValidityPeriod.Parent" xml:space="preserve">
     <value>groupBox2</value>
   </data>
-  <data name="&gt;&gt;txtValidUntil.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="&gt;&gt;txtValidityPeriod.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="lblValidUntil.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -421,16 +316,16 @@
     <value>NoControl</value>
   </data>
   <data name="lblValidUntil.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 29</value>
+    <value>16, 33</value>
   </data>
   <data name="lblValidUntil.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 24</value>
+    <value>129, 24</value>
   </data>
   <data name="lblValidUntil.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
   </data>
   <data name="lblValidUntil.Text" xml:space="preserve">
-    <value>Validity</value>
+    <value>Validity Period</value>
   </data>
   <data name="lblValidUntil.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
@@ -445,7 +340,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;lblValidUntil.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>3</value>
   </data>
   <data name="lblDesc.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -481,7 +376,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;lblDesc.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>4</value>
   </data>
   <data name="txtTakeOutNote.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -514,7 +409,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;txtTakeOutNote.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>5</value>
   </data>
   <data name="lblMemo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -550,7 +445,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;lblMemo.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>6</value>
   </data>
   <data name="txtAssetName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -583,7 +478,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;txtAssetName.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>7</value>
   </data>
   <data name="txtRFIDTag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -616,7 +511,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;txtRFIDTag.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>8</value>
   </data>
   <data name="lblTag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -658,7 +553,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;lblTag.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>9</value>
   </data>
   <data name="txtDescription.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -691,7 +586,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;txtDescription.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>10</value>
   </data>
   <data name="label8.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -733,7 +628,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>11</value>
   </data>
   <data name="groupBox2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14.25pt, style=Bold</value>
@@ -1692,11 +1587,95 @@
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="grdViewRFIDTag.ColumnHeadersHeight" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <metadata name="colDate.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colDate.HeaderText" xml:space="preserve">
+    <value>DATE</value>
+  </data>
+  <data name="colDate.Width" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <metadata name="colOwnerName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colOwnerName.HeaderText" xml:space="preserve">
+    <value>OWNER NAME</value>
+  </data>
+  <data name="colOwnerName.Width" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <metadata name="colAssetDescription.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colAssetDescription.HeaderText" xml:space="preserve">
+    <value>ASSET DESCRIPTION</value>
+  </data>
+  <data name="colAssetDescription.Width" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <metadata name="colTakeOutNote.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colTakeOutNote.HeaderText" xml:space="preserve">
+    <value>TAKE OUT NOTE</value>
+  </data>
+  <data name="colTakeOutNote.Width" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <metadata name="colValidityPeriod.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colValidityPeriod.HeaderText" xml:space="preserve">
+    <value>VALIDITY PERIOD</value>
+  </data>
+  <data name="colValidityPeriod.Width" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <metadata name="colStatus.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colStatus.HeaderText" xml:space="preserve">
+    <value>STATUS</value>
+  </data>
+  <data name="colStatus.Width" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <metadata name="colViewerIcon.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colViewerIcon.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="colViewerIcon.Width" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <metadata name="colAssetID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colAssetID.HeaderText" xml:space="preserve">
+    <value>Asset ID</value>
+  </data>
+  <data name="colAssetID.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="colAssetID.Width" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
   <metadata name="colIDTag.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="colIDTag.HeaderText" xml:space="preserve">
     <value>ID TAG</value>
+  </data>
+  <data name="colIDTag.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="colIDTag.Width" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <metadata name="colIDOwner.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1707,11 +1686,20 @@
   <data name="colIDOwner.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="colIDOwner.Width" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
   <metadata name="colAssetTag.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="colAssetTag.HeaderText" xml:space="preserve">
     <value>ASSET TAG</value>
+  </data>
+  <data name="colAssetTag.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="colAssetTag.Width" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <metadata name="colAssetOwner.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1722,6 +1710,9 @@
   <data name="colAssetOwner.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="colAssetOwner.Width" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
   <metadata name="colRFIDTag.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1731,17 +1722,17 @@
   <data name="colRFIDTag.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <metadata name="colStatus.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="colStatus.HeaderText" xml:space="preserve">
-    <value>STATUS</value>
+  <data name="colRFIDTag.Width" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="colIsCompared.HeaderText" xml:space="preserve">
     <value>Is Compared</value>
   </data>
   <data name="colIsCompared.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="colIsCompared.Width" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="grdViewRFIDTag.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1777,13 +1768,13 @@
     <value>NoControl</value>
   </data>
   <data name="lblLoginUserName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 736</value>
+    <value>5, 733</value>
   </data>
   <data name="lblLoginUserName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="lblLoginUserName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>223, 14</value>
+    <value>143, 16</value>
   </data>
   <data name="lblLoginUserName.TabIndex" type="System.Int32, mscorlib">
     <value>86</value>
@@ -1800,6 +1791,9 @@
   <data name="&gt;&gt;lblLoginUserName.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="ReadLoopTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>538, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1845,6 +1839,54 @@
   <data name="&gt;&gt;ClearGridTimer.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;colDate.Name" xml:space="preserve">
+    <value>colDate</value>
+  </data>
+  <data name="&gt;&gt;colDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colOwnerName.Name" xml:space="preserve">
+    <value>colOwnerName</value>
+  </data>
+  <data name="&gt;&gt;colOwnerName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colAssetDescription.Name" xml:space="preserve">
+    <value>colAssetDescription</value>
+  </data>
+  <data name="&gt;&gt;colAssetDescription.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colTakeOutNote.Name" xml:space="preserve">
+    <value>colTakeOutNote</value>
+  </data>
+  <data name="&gt;&gt;colTakeOutNote.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colValidityPeriod.Name" xml:space="preserve">
+    <value>colValidityPeriod</value>
+  </data>
+  <data name="&gt;&gt;colValidityPeriod.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colStatus.Name" xml:space="preserve">
+    <value>colStatus</value>
+  </data>
+  <data name="&gt;&gt;colStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colViewerIcon.Name" xml:space="preserve">
+    <value>colViewerIcon</value>
+  </data>
+  <data name="&gt;&gt;colViewerIcon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewImageColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colAssetID.Name" xml:space="preserve">
+    <value>colAssetID</value>
+  </data>
+  <data name="&gt;&gt;colAssetID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;colIDTag.Name" xml:space="preserve">
     <value>colIDTag</value>
   </data>
@@ -1875,17 +1917,17 @@
   <data name="&gt;&gt;colRFIDTag.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;colStatus.Name" xml:space="preserve">
-    <value>colStatus</value>
-  </data>
-  <data name="&gt;&gt;colStatus.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;colIsCompared.Name" xml:space="preserve">
     <value>colIsCompared</value>
   </data>
   <data name="&gt;&gt;colIsCompared.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ReadLoopTimer.Name" xml:space="preserve">
+    <value>ReadLoopTimer</value>
+  </data>
+  <data name="&gt;&gt;ReadLoopTimer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Verification</value>

@@ -48,7 +48,7 @@ namespace RFID_FEATHER_ASSETS
         bool IsCameraConnected = false;
         string cameraDeviceName;
         string validUntilValue;
-        //string startDateValue;
+        string startDateValue;
         bool isCameraChanged = false;
 
         public RegisterUser(string tokenvaluesource)
@@ -498,23 +498,23 @@ namespace RFID_FEATHER_ASSETS
 
                 if (dtTimePicker.Checked)
                 {
-                  //  startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd T") + "00:01";
+                    startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd T") + "00:01";
                     validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd") + dtTimePicker.Value.ToString("THH:mm");
                 }
                 else
                 {
-                   // startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd T") + "00:01";
+                    startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd T") + "00:01";
                     validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd T") + "17:00";
                 }
             }
             else
             {
-                //startDateValue = null;
+                startDateValue = null;
                 validUntilValue = null; 
             }
 
             DateTime? dt = null;
-            //userinfo.assetIdCard.startDate = startDateValue != null ? Convert.ToDateTime(startDateValue) : dt;
+            userinfo.assetIdCard.startDate = startDateValue != null ? Convert.ToDateTime(startDateValue) : dt;
             userinfo.assetIdCard.validUntil = validUntilValue != null ? Convert.ToDateTime(validUntilValue) : dt;
 
             //use rest service
@@ -543,6 +543,7 @@ namespace RFID_FEATHER_ASSETS
 
                         return;
                     }
+                    SaveTransaction();
                     if (language == "English") MessageBox.Show("User successfully saved.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
                     {
@@ -739,6 +740,7 @@ namespace RFID_FEATHER_ASSETS
 
                 transactDet.companyId = companyId;//1;
                 transactDet.readerInfo = readerInfo;
+                transactDet.type = "ADD-Owner";
                 //transactDet.readerId = 1;
                 //transactDet.notes = txtExplanationNotes.Text.Trim();
                 //transactDet.imageUrl = newImgFileNames;//txtCapturedImagePath.Text;//txtImagePath.Text;

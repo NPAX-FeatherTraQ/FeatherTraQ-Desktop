@@ -360,7 +360,9 @@
             // rbtnNoExpiration
             // 
             resources.ApplyResources(this.rbtnNoExpiration, "rbtnNoExpiration");
+            this.rbtnNoExpiration.Checked = true;
             this.rbtnNoExpiration.Name = "rbtnNoExpiration";
+            this.rbtnNoExpiration.TabStop = true;
             this.rbtnNoExpiration.UseVisualStyleBackColor = true;
             // 
             // rbtnValidUntil
@@ -373,9 +375,7 @@
             // rbtnValidToday
             // 
             resources.ApplyResources(this.rbtnValidToday, "rbtnValidToday");
-            this.rbtnValidToday.Checked = true;
             this.rbtnValidToday.Name = "rbtnValidToday";
-            this.rbtnValidToday.TabStop = true;
             this.rbtnValidToday.UseVisualStyleBackColor = true;
             // 
             // dtTimePicker
