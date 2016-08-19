@@ -132,13 +132,13 @@
     <value>None</value>
   </data>
   <data name="btnExport.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="btnExport.Location" type="System.Drawing.Point, System.Drawing">
-    <value>559, 24</value>
+    <value>594, 22</value>
   </data>
   <data name="btnExport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 29</value>
+    <value>139, 33</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnExport.TabIndex" type="System.Int32, mscorlib">
@@ -163,13 +163,13 @@
     <value>None</value>
   </data>
   <data name="btnCancel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>468, 24</value>
+    <value>480, 21</value>
   </data>
   <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 30</value>
+    <value>97, 34</value>
   </data>
   <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
     <value>69</value>
@@ -193,13 +193,13 @@
     <value>None</value>
   </data>
   <data name="btnGenerate.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="btnGenerate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>377, 24</value>
+    <value>377, 21</value>
   </data>
   <data name="btnGenerate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 30</value>
+    <value>97, 34</value>
   </data>
   <data name="btnGenerate.TabIndex" type="System.Int32, mscorlib">
     <value>68</value>
@@ -567,6 +567,15 @@
   <data name="ColCreatedAt.Width" type="System.Int32, mscorlib">
     <value>142</value>
   </data>
+  <metadata name="colOwnerName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colOwnerName.HeaderText" xml:space="preserve">
+    <value>Owner Name</value>
+  </data>
+  <data name="colOwnerName.Width" type="System.Int32, mscorlib">
+    <value>136</value>
+  </data>
   <metadata name="ColTransId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -577,7 +586,7 @@
     <value>False</value>
   </data>
   <data name="ColTransId.Width" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>103</value>
   </data>
   <metadata name="ColCompanyId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -589,7 +598,7 @@
     <value>False</value>
   </data>
   <data name="ColCompanyId.Width" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>132</value>
   </data>
   <metadata name="ColAssetId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -601,13 +610,16 @@
     <value>False</value>
   </data>
   <data name="ColAssetId.Width" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>104</value>
   </data>
   <metadata name="ColRFIDTag.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="ColRFIDTag.HeaderText" xml:space="preserve">
     <value>RFID Tag</value>
+  </data>
+  <data name="ColRFIDTag.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="ColRFIDTag.Width" type="System.Int32, mscorlib">
     <value>112</value>
@@ -616,10 +628,10 @@
     <value>True</value>
   </metadata>
   <data name="ColDescription.HeaderText" xml:space="preserve">
-    <value>Description</value>
+    <value>Asset Description</value>
   </data>
   <data name="ColDescription.Width" type="System.Int32, mscorlib">
-    <value>125</value>
+    <value>176</value>
   </data>
   <metadata name="ColImgUrl.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -631,7 +643,7 @@
     <value>False</value>
   </data>
   <data name="ColImgUrl.Width" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>125</value>
   </data>
   <metadata name="ColTakeOutNote.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -646,10 +658,10 @@
     <value>True</value>
   </metadata>
   <data name="ColValidUntil.HeaderText" xml:space="preserve">
-    <value>Valid Until</value>
+    <value>Validity Period</value>
   </data>
   <data name="ColValidUntil.Width" type="System.Int32, mscorlib">
-    <value>116</value>
+    <value>148</value>
   </data>
   <metadata name="ColNotes.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -659,6 +671,15 @@
   </data>
   <data name="ColNotes.Width" type="System.Int32, mscorlib">
     <value>132</value>
+  </data>
+  <metadata name="colType.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colType.HeaderText" xml:space="preserve">
+    <value>Transaction Type</value>
+  </data>
+  <data name="colType.Width" type="System.Int32, mscorlib">
+    <value>171</value>
   </data>
   <metadata name="ColPersonImgUrl.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -670,7 +691,7 @@
     <value>False</value>
   </data>
   <data name="ColPersonImgUrl.Width" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>186</value>
   </data>
   <metadata name="ColReaderInfo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -819,6 +840,12 @@
   <data name="&gt;&gt;ColCreatedAt.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;colOwnerName.Name" xml:space="preserve">
+    <value>colOwnerName</value>
+  </data>
+  <data name="&gt;&gt;colOwnerName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;ColTransId.Name" xml:space="preserve">
     <value>ColTransId</value>
   </data>
@@ -871,6 +898,12 @@
     <value>ColNotes</value>
   </data>
   <data name="&gt;&gt;ColNotes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colType.Name" xml:space="preserve">
+    <value>colType</value>
+  </data>
+  <data name="&gt;&gt;colType.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ColPersonImgUrl.Name" xml:space="preserve">

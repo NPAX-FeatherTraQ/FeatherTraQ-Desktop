@@ -498,12 +498,12 @@ namespace RFID_FEATHER_ASSETS
 
                 if (dtTimePicker.Checked)
                 {
-                    startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd T") + "00:01";
+                    startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd"); //+ "00:01";
                     validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd") + dtTimePicker.Value.ToString("THH:mm");
                 }
                 else
                 {
-                    startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd T") + "00:01";
+                    startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd"); //+ "00:01";
                     validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd T") + "17:00";
                 }
             }
@@ -526,7 +526,12 @@ namespace RFID_FEATHER_ASSETS
             user.RequestFormat = DataFormat.Json;
             user.AddBody(userinfo);
 
+            lblSubmittingInformation.Visible = true;
+            this.Refresh();
+
             IRestResponse response = client.Execute(user);
+            lblSubmittingInformation.Visible = false;
+
             var content = response.Content;
 
             if (response.StatusCode == HttpStatusCode.OK)

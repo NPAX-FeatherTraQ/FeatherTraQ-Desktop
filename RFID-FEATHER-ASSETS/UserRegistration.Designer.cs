@@ -33,10 +33,10 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.CaptureImg = new System.Windows.Forms.Button();
             this.chkBoxChangeCamera = new System.Windows.Forms.CheckBox();
             this.lblNoCameraAvailable = new System.Windows.Forms.Label();
             this.comVideoDeviceBox = new System.Windows.Forms.ComboBox();
-            this.CaptureImg = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.txtSaveImageDir = new System.Windows.Forms.TextBox();
             this.btnBrowseImageDir = new System.Windows.Forms.Button();
@@ -47,6 +47,8 @@
             this.imgCapture2 = new System.Windows.Forms.PictureBox();
             this.imgCapture1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblSubmittingInformation = new System.Windows.Forms.Label();
+            this.lblLoadingInformation = new System.Windows.Forms.Label();
             this.btnEditInfo = new System.Windows.Forms.Button();
             this.grpExpiration = new System.Windows.Forms.GroupBox();
             this.dtStartDate = new System.Windows.Forms.DateTimePicker();
@@ -111,7 +113,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
-            this.splitContainer1.Size = new System.Drawing.Size(959, 865);
+            this.splitContainer1.Size = new System.Drawing.Size(959, 750);
             this.splitContainer1.SplitterDistance = 511;
             this.splitContainer1.TabIndex = 39;
             // 
@@ -129,16 +131,16 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.capturedPhotos);
-            this.splitContainer2.Size = new System.Drawing.Size(511, 865);
-            this.splitContainer2.SplitterDistance = 485;
+            this.splitContainer2.Size = new System.Drawing.Size(511, 750);
+            this.splitContainer2.SplitterDistance = 460;
             this.splitContainer2.TabIndex = 63;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.CaptureImg);
             this.groupBox1.Controls.Add(this.chkBoxChangeCamera);
             this.groupBox1.Controls.Add(this.lblNoCameraAvailable);
             this.groupBox1.Controls.Add(this.comVideoDeviceBox);
-            this.groupBox1.Controls.Add(this.CaptureImg);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtSaveImageDir);
             this.groupBox1.Controls.Add(this.btnBrowseImageDir);
@@ -147,10 +149,23 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(511, 485);
+            this.groupBox1.Size = new System.Drawing.Size(511, 460);
             this.groupBox1.TabIndex = 41;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Camera Preview";
+            // 
+            // CaptureImg
+            // 
+            this.CaptureImg.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CaptureImg.BackColor = System.Drawing.Color.Orange;
+            this.CaptureImg.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CaptureImg.Location = new System.Drawing.Point(79, 403);
+            this.CaptureImg.Name = "CaptureImg";
+            this.CaptureImg.Size = new System.Drawing.Size(350, 39);
+            this.CaptureImg.TabIndex = 38;
+            this.CaptureImg.Text = "Take Photo";
+            this.CaptureImg.UseVisualStyleBackColor = false;
+            this.CaptureImg.Click += new System.EventHandler(this.CaptureImg_Click);
             // 
             // chkBoxChangeCamera
             // 
@@ -158,7 +173,7 @@
             this.chkBoxChangeCamera.AutoSize = true;
             this.chkBoxChangeCamera.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.chkBoxChangeCamera.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.chkBoxChangeCamera.Location = new System.Drawing.Point(302, 49);
+            this.chkBoxChangeCamera.Location = new System.Drawing.Point(313, 36);
             this.chkBoxChangeCamera.Name = "chkBoxChangeCamera";
             this.chkBoxChangeCamera.Size = new System.Drawing.Size(116, 20);
             this.chkBoxChangeCamera.TabIndex = 37;
@@ -170,7 +185,7 @@
             // 
             this.lblNoCameraAvailable.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNoCameraAvailable.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoCameraAvailable.Location = new System.Drawing.Point(62, 231);
+            this.lblNoCameraAvailable.Location = new System.Drawing.Point(64, 216);
             this.lblNoCameraAvailable.Name = "lblNoCameraAvailable";
             this.lblNoCameraAvailable.Size = new System.Drawing.Size(382, 33);
             this.lblNoCameraAvailable.TabIndex = 17;
@@ -183,24 +198,11 @@
             this.comVideoDeviceBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comVideoDeviceBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comVideoDeviceBox.FormattingEnabled = true;
-            this.comVideoDeviceBox.Location = new System.Drawing.Point(77, 43);
+            this.comVideoDeviceBox.Location = new System.Drawing.Point(79, 32);
             this.comVideoDeviceBox.Name = "comVideoDeviceBox";
-            this.comVideoDeviceBox.Size = new System.Drawing.Size(219, 24);
+            this.comVideoDeviceBox.Size = new System.Drawing.Size(228, 24);
             this.comVideoDeviceBox.TabIndex = 2;
             this.comVideoDeviceBox.Visible = false;
-            // 
-            // CaptureImg
-            // 
-            this.CaptureImg.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.CaptureImg.BackColor = System.Drawing.Color.Orange;
-            this.CaptureImg.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CaptureImg.Location = new System.Drawing.Point(77, 423);
-            this.CaptureImg.Name = "CaptureImg";
-            this.CaptureImg.Size = new System.Drawing.Size(350, 39);
-            this.CaptureImg.TabIndex = 3;
-            this.CaptureImg.Text = "Take Photo";
-            this.CaptureImg.UseVisualStyleBackColor = false;
-            this.CaptureImg.Click += new System.EventHandler(this.CaptureImg_Click);
             // 
             // label9
             // 
@@ -209,7 +211,7 @@
             this.label9.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Gray;
-            this.label9.Location = new System.Drawing.Point(103, 419);
+            this.label9.Location = new System.Drawing.Point(103, 406);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(96, 15);
             this.label9.TabIndex = 34;
@@ -221,7 +223,7 @@
             this.txtSaveImageDir.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtSaveImageDir.Enabled = false;
             this.txtSaveImageDir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSaveImageDir.Location = new System.Drawing.Point(77, 386);
+            this.txtSaveImageDir.Location = new System.Drawing.Point(77, 402);
             this.txtSaveImageDir.MaxLength = 45;
             this.txtSaveImageDir.Name = "txtSaveImageDir";
             this.txtSaveImageDir.Size = new System.Drawing.Size(222, 21);
@@ -233,7 +235,7 @@
             this.btnBrowseImageDir.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnBrowseImageDir.BackColor = System.Drawing.Color.Wheat;
             this.btnBrowseImageDir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBrowseImageDir.Location = new System.Drawing.Point(414, 420);
+            this.btnBrowseImageDir.Location = new System.Drawing.Point(385, 406);
             this.btnBrowseImageDir.Name = "btnBrowseImageDir";
             this.btnBrowseImageDir.Size = new System.Drawing.Size(42, 22);
             this.btnBrowseImageDir.TabIndex = 1;
@@ -244,9 +246,9 @@
             // cameraBox
             // 
             this.cameraBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cameraBox.Location = new System.Drawing.Point(77, 73);
+            this.cameraBox.Location = new System.Drawing.Point(79, 58);
             this.cameraBox.Name = "cameraBox";
-            this.cameraBox.Size = new System.Drawing.Size(350, 350);
+            this.cameraBox.Size = new System.Drawing.Size(350, 345);
             this.cameraBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cameraBox.TabIndex = 13;
             this.cameraBox.TabStop = false;
@@ -261,7 +263,7 @@
             this.capturedPhotos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.capturedPhotos.Location = new System.Drawing.Point(0, 0);
             this.capturedPhotos.Name = "capturedPhotos";
-            this.capturedPhotos.Size = new System.Drawing.Size(511, 376);
+            this.capturedPhotos.Size = new System.Drawing.Size(511, 286);
             this.capturedPhotos.TabIndex = 43;
             this.capturedPhotos.TabStop = false;
             this.capturedPhotos.Text = "Captured Photos";
@@ -271,7 +273,7 @@
             this.lblValidIDPhoto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblValidIDPhoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.lblValidIDPhoto.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblValidIDPhoto.Location = new System.Drawing.Point(253, 159);
+            this.lblValidIDPhoto.Location = new System.Drawing.Point(254, 131);
             this.lblValidIDPhoto.Name = "lblValidIDPhoto";
             this.lblValidIDPhoto.Size = new System.Drawing.Size(200, 18);
             this.lblValidIDPhoto.TabIndex = 59;
@@ -283,7 +285,7 @@
             this.lblOwnerPhoto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblOwnerPhoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.lblOwnerPhoto.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblOwnerPhoto.Location = new System.Drawing.Point(52, 159);
+            this.lblOwnerPhoto.Location = new System.Drawing.Point(53, 131);
             this.lblOwnerPhoto.Name = "lblOwnerPhoto";
             this.lblOwnerPhoto.Size = new System.Drawing.Size(200, 18);
             this.lblOwnerPhoto.TabIndex = 58;
@@ -294,7 +296,7 @@
             // 
             this.imgCapture2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.imgCapture2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.imgCapture2.Location = new System.Drawing.Point(253, 75);
+            this.imgCapture2.Location = new System.Drawing.Point(254, 47);
             this.imgCapture2.Name = "imgCapture2";
             this.imgCapture2.Size = new System.Drawing.Size(200, 200);
             this.imgCapture2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -305,7 +307,7 @@
             // 
             this.imgCapture1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.imgCapture1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.imgCapture1.Location = new System.Drawing.Point(52, 75);
+            this.imgCapture1.Location = new System.Drawing.Point(53, 47);
             this.imgCapture1.Name = "imgCapture1";
             this.imgCapture1.Size = new System.Drawing.Size(200, 200);
             this.imgCapture1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -314,6 +316,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lblSubmittingInformation);
+            this.groupBox2.Controls.Add(this.lblLoadingInformation);
             this.groupBox2.Controls.Add(this.btnEditInfo);
             this.groupBox2.Controls.Add(this.grpExpiration);
             this.groupBox2.Controls.Add(this.btnCancel);
@@ -341,10 +345,38 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(444, 865);
+            this.groupBox2.Size = new System.Drawing.Size(444, 750);
             this.groupBox2.TabIndex = 38;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Owner Information";
+            // 
+            // lblSubmittingInformation
+            // 
+            this.lblSubmittingInformation.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblSubmittingInformation.AutoSize = true;
+            this.lblSubmittingInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubmittingInformation.ForeColor = System.Drawing.Color.Green;
+            this.lblSubmittingInformation.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblSubmittingInformation.Location = new System.Drawing.Point(3, 561);
+            this.lblSubmittingInformation.Name = "lblSubmittingInformation";
+            this.lblSubmittingInformation.Size = new System.Drawing.Size(444, 29);
+            this.lblSubmittingInformation.TabIndex = 66;
+            this.lblSubmittingInformation.Text = "Submitting Information. Please wait...";
+            this.lblSubmittingInformation.Visible = false;
+            // 
+            // lblLoadingInformation
+            // 
+            this.lblLoadingInformation.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblLoadingInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoadingInformation.ForeColor = System.Drawing.Color.Green;
+            this.lblLoadingInformation.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblLoadingInformation.Location = new System.Drawing.Point(15, 561);
+            this.lblLoadingInformation.Name = "lblLoadingInformation";
+            this.lblLoadingInformation.Size = new System.Drawing.Size(407, 33);
+            this.lblLoadingInformation.TabIndex = 67;
+            this.lblLoadingInformation.Text = "Getting Information. Please wait...";
+            this.lblLoadingInformation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLoadingInformation.Visible = false;
             // 
             // btnEditInfo
             // 
@@ -352,7 +384,7 @@
             this.btnEditInfo.BackColor = System.Drawing.Color.Orange;
             this.btnEditInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.6F);
             this.btnEditInfo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnEditInfo.Location = new System.Drawing.Point(260, 227);
+            this.btnEditInfo.Location = new System.Drawing.Point(260, 169);
             this.btnEditInfo.Name = "btnEditInfo";
             this.btnEditInfo.Size = new System.Drawing.Size(111, 26);
             this.btnEditInfo.TabIndex = 63;
@@ -371,7 +403,7 @@
             this.grpExpiration.Controls.Add(this.dtTimePicker);
             this.grpExpiration.Controls.Add(this.dtDatePicker);
             this.grpExpiration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.grpExpiration.Location = new System.Drawing.Point(88, 94);
+            this.grpExpiration.Location = new System.Drawing.Point(88, 36);
             this.grpExpiration.Name = "grpExpiration";
             this.grpExpiration.Size = new System.Drawing.Size(282, 128);
             this.grpExpiration.TabIndex = 62;
@@ -478,7 +510,7 @@
             this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCancel.BackColor = System.Drawing.Color.Orange;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(235, 672);
+            this.btnCancel.Location = new System.Drawing.Point(235, 600);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(136, 39);
             this.btnCancel.TabIndex = 12;
@@ -492,7 +524,7 @@
             this.btnGetRFIDTag.BackColor = System.Drawing.Color.Orange;
             this.btnGetRFIDTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.6F);
             this.btnGetRFIDTag.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnGetRFIDTag.Location = new System.Drawing.Point(169, 227);
+            this.btnGetRFIDTag.Location = new System.Drawing.Point(169, 169);
             this.btnGetRFIDTag.Name = "btnGetRFIDTag";
             this.btnGetRFIDTag.Size = new System.Drawing.Size(91, 26);
             this.btnGetRFIDTag.TabIndex = 25;
@@ -506,7 +538,7 @@
             this.txtRFIDTag.BackColor = System.Drawing.SystemColors.Control;
             this.txtRFIDTag.Enabled = false;
             this.txtRFIDTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.txtRFIDTag.Location = new System.Drawing.Point(87, 254);
+            this.txtRFIDTag.Location = new System.Drawing.Point(87, 196);
             this.txtRFIDTag.MaxLength = 45;
             this.txtRFIDTag.Name = "txtRFIDTag";
             this.txtRFIDTag.Size = new System.Drawing.Size(283, 21);
@@ -518,7 +550,7 @@
             this.lblTag.AutoSize = true;
             this.lblTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblTag.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblTag.Location = new System.Drawing.Point(84, 230);
+            this.lblTag.Location = new System.Drawing.Point(84, 172);
             this.lblTag.Name = "lblTag";
             this.lblTag.Size = new System.Drawing.Size(79, 20);
             this.lblTag.TabIndex = 26;
@@ -531,7 +563,7 @@
             this.authorities.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.authorities.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.authorities.FormattingEnabled = true;
-            this.authorities.Location = new System.Drawing.Point(88, 591);
+            this.authorities.Location = new System.Drawing.Point(88, 533);
             this.authorities.Name = "authorities";
             this.authorities.Size = new System.Drawing.Size(282, 24);
             this.authorities.TabIndex = 10;
@@ -542,7 +574,7 @@
             this.lblAuthorities.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblAuthorities.AutoSize = true;
             this.lblAuthorities.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAuthorities.Location = new System.Drawing.Point(84, 568);
+            this.lblAuthorities.Location = new System.Drawing.Point(84, 510);
             this.lblAuthorities.Name = "lblAuthorities";
             this.lblAuthorities.Size = new System.Drawing.Size(89, 20);
             this.lblAuthorities.TabIndex = 24;
@@ -552,7 +584,7 @@
             // 
             this.cpassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpassword.Location = new System.Drawing.Point(88, 542);
+            this.cpassword.Location = new System.Drawing.Point(88, 484);
             this.cpassword.Name = "cpassword";
             this.cpassword.PasswordChar = '•';
             this.cpassword.Size = new System.Drawing.Size(282, 22);
@@ -563,7 +595,7 @@
             this.lblCpassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCpassword.AutoSize = true;
             this.lblCpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCpassword.Location = new System.Drawing.Point(84, 519);
+            this.lblCpassword.Location = new System.Drawing.Point(84, 461);
             this.lblCpassword.Name = "lblCpassword";
             this.lblCpassword.Size = new System.Drawing.Size(141, 20);
             this.lblCpassword.TabIndex = 22;
@@ -573,7 +605,7 @@
             // 
             this.password.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.password.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.password.Location = new System.Drawing.Point(88, 494);
+            this.password.Location = new System.Drawing.Point(88, 436);
             this.password.Name = "password";
             this.password.PasswordChar = '•';
             this.password.Size = new System.Drawing.Size(282, 22);
@@ -584,7 +616,7 @@
             this.lblPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(84, 471);
+            this.lblPassword.Location = new System.Drawing.Point(84, 413);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(86, 20);
             this.lblPassword.TabIndex = 20;
@@ -595,7 +627,7 @@
             this.btnSubmit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSubmit.BackColor = System.Drawing.Color.Orange;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(89, 672);
+            this.btnSubmit.Location = new System.Drawing.Point(89, 600);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(136, 39);
             this.btnSubmit.TabIndex = 11;
@@ -607,7 +639,7 @@
             // 
             this.email.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.email.Location = new System.Drawing.Point(88, 446);
+            this.email.Location = new System.Drawing.Point(88, 388);
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(282, 22);
             this.email.TabIndex = 7;
@@ -616,7 +648,7 @@
             // 
             this.lastName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastName.Location = new System.Drawing.Point(88, 350);
+            this.lastName.Location = new System.Drawing.Point(88, 292);
             this.lastName.Name = "lastName";
             this.lastName.Size = new System.Drawing.Size(282, 22);
             this.lastName.TabIndex = 5;
@@ -625,7 +657,7 @@
             // 
             this.position.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.position.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.position.Location = new System.Drawing.Point(88, 398);
+            this.position.Location = new System.Drawing.Point(88, 340);
             this.position.Name = "position";
             this.position.Size = new System.Drawing.Size(282, 22);
             this.position.TabIndex = 6;
@@ -634,7 +666,7 @@
             // 
             this.description.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.description.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.description.Location = new System.Drawing.Point(268, 696);
+            this.description.Location = new System.Drawing.Point(268, 624);
             this.description.Multiline = true;
             this.description.Name = "description";
             this.description.Size = new System.Drawing.Size(53, 17);
@@ -645,7 +677,7 @@
             // 
             this.firstName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.firstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstName.Location = new System.Drawing.Point(88, 302);
+            this.firstName.Location = new System.Drawing.Point(88, 244);
             this.firstName.Name = "firstName";
             this.firstName.Size = new System.Drawing.Size(282, 22);
             this.firstName.TabIndex = 4;
@@ -655,7 +687,7 @@
             this.lblLname.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblLname.AutoSize = true;
             this.lblLname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLname.Location = new System.Drawing.Point(84, 327);
+            this.lblLname.Location = new System.Drawing.Point(84, 269);
             this.lblLname.Name = "lblLname";
             this.lblLname.Size = new System.Drawing.Size(94, 20);
             this.lblLname.TabIndex = 16;
@@ -666,7 +698,7 @@
             this.lblPosition.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPosition.AutoSize = true;
             this.lblPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPosition.Location = new System.Drawing.Point(84, 375);
+            this.lblPosition.Location = new System.Drawing.Point(84, 317);
             this.lblPosition.Name = "lblPosition";
             this.lblPosition.Size = new System.Drawing.Size(69, 20);
             this.lblPosition.TabIndex = 14;
@@ -677,7 +709,7 @@
             this.lblDesc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDesc.AutoSize = true;
             this.lblDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDesc.Location = new System.Drawing.Point(264, 673);
+            this.lblDesc.Location = new System.Drawing.Point(264, 601);
             this.lblDesc.Name = "lblDesc";
             this.lblDesc.Size = new System.Drawing.Size(93, 20);
             this.lblDesc.TabIndex = 12;
@@ -689,7 +721,7 @@
             this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(84, 423);
+            this.lblEmail.Location = new System.Drawing.Point(84, 365);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(57, 20);
             this.lblEmail.TabIndex = 10;
@@ -700,7 +732,7 @@
             this.lblFname.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFname.AutoSize = true;
             this.lblFname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFname.Location = new System.Drawing.Point(84, 279);
+            this.lblFname.Location = new System.Drawing.Point(84, 221);
             this.lblFname.Name = "lblFname";
             this.lblFname.Size = new System.Drawing.Size(94, 20);
             this.lblFname.TabIndex = 8;
@@ -712,7 +744,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(959, 865);
+            this.ClientSize = new System.Drawing.Size(959, 750);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "RegisterUser";
@@ -781,7 +813,6 @@
         private System.Windows.Forms.CheckBox chkBoxChangeCamera;
         private System.Windows.Forms.Label lblNoCameraAvailable;
         private System.Windows.Forms.ComboBox comVideoDeviceBox;
-        private System.Windows.Forms.Button CaptureImg;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtSaveImageDir;
         private System.Windows.Forms.Button btnBrowseImageDir;
@@ -794,5 +825,8 @@
         private System.Windows.Forms.Button btnEditInfo;
         private System.Windows.Forms.DateTimePicker dtStartDate;
         private System.Windows.Forms.Label rbtnValidUntil;
+        private System.Windows.Forms.Button CaptureImg;
+        private System.Windows.Forms.Label lblSubmittingInformation;
+        private System.Windows.Forms.Label lblLoadingInformation;
     }
 }

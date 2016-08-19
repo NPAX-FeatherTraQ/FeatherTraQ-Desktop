@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AssetRenewal));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbtnLblUntil = new System.Windows.Forms.Label();
+            this.dtStartDate = new System.Windows.Forms.DateTimePicker();
             this.lblSubmittingInformation = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
@@ -38,8 +40,6 @@
             this.rbtnValidToday = new System.Windows.Forms.RadioButton();
             this.dtTimePicker = new System.Windows.Forms.DateTimePicker();
             this.dtDatePicker = new System.Windows.Forms.DateTimePicker();
-            this.rbtnLblUntil = new System.Windows.Forms.Label();
-            this.dtStartDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +58,19 @@
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            // 
+            // rbtnLblUntil
+            // 
+            resources.ApplyResources(this.rbtnLblUntil, "rbtnLblUntil");
+            this.rbtnLblUntil.Name = "rbtnLblUntil";
+            // 
+            // dtStartDate
+            // 
+            resources.ApplyResources(this.dtStartDate, "dtStartDate");
+            this.dtStartDate.Checked = false;
+            this.dtStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtStartDate.Name = "dtStartDate";
+            this.dtStartDate.TabStop = false;
             // 
             // lblSubmittingInformation
             // 
@@ -120,19 +133,6 @@
             this.dtDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtDatePicker.Name = "dtDatePicker";
             this.dtDatePicker.TabStop = false;
-            // 
-            // rbtnLblUntil
-            // 
-            resources.ApplyResources(this.rbtnLblUntil, "rbtnLblUntil");
-            this.rbtnLblUntil.Name = "rbtnLblUntil";
-            // 
-            // dtStartDate
-            // 
-            resources.ApplyResources(this.dtStartDate, "dtStartDate");
-            this.dtStartDate.Checked = false;
-            this.dtStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtStartDate.Name = "dtStartDate";
-            this.dtStartDate.TabStop = false;
             // 
             // AssetRenewal
             // 

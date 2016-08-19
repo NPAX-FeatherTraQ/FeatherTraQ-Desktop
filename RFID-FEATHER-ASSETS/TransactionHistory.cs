@@ -165,13 +165,14 @@ namespace RFID_FEATHER_ASSETS
         {
             try
             {
+                grdViewTransactions.Visible = false;
                 grdViewTransactions.Rows.Clear();
-                grdViewTransactions.Refresh();
+                //grdViewTransactions.Refresh();
 
                 if (language == "English") lblLoadingInformation.Text = "Getting Information. Please wait...";
                 else lblLoadingInformation.Text = "情報の取得. お待ちください...";
                 lblLoadingInformation.Visible = true;
-                lblLoadingInformation.Refresh();
+                this.Refresh();//lblLoadingInformation.Refresh();
 
                 startDate = dtDateFromPicker.Value.ToString("yyyy-MM-ddT00:01");
                 endDate = dtDateToPicker.Value.ToString("yyyy-MM-ddT23:59");
@@ -204,29 +205,32 @@ namespace RFID_FEATHER_ASSETS
                     if (generateResult.Count != 0)
                     {
                         //grdViewTransactions.ColumnHeadersVisible = true;
+                        DateTime? dt;
 
                         for (int i = 0; i < generateResult.Count; i++)
                         {                         
                             int idx = grdViewTransactions.Rows.Add();
                             DataGridViewRow row = grdViewTransactions.Rows[idx];
 
-                            row.Cells["ColTransId"].Value = generateResult[i].transactionId;
-                            row.Cells["ColAssetId"].Value = generateResult[i].asset.assetId ?? null;
-                            row.Cells["ColCompanyId"].Value = generateResult[i].asset.companyId ?? null;
+                            //row.Cells["ColTransId"].Value = generateResult[i].transactionId;
+                            //row.Cells["ColAssetId"].Value = generateResult[i].asset.assetId ?? null;
+                            //row.Cells["ColCompanyId"].Value = generateResult[i].asset.companyId ?? null;
                             getOwnerInfo(generateResult[i].asset.registerUserId);
                             row.Cells["ColRegisterId"].Value = name;
                             getOwnerInfo(generateResult[i].asset.updateUserId);
                             row.Cells["ColUpdateId"].Value = name;
+                            row.Cells["ColOwnerName"].Value = generateResult[i].asset.name;
                             row.Cells["ColDescription"].Value = generateResult[i].asset.description;
-                            row.Cells["ColImgUrl"].Value = generateResult[i].asset.imageUrls;
-                            row.Cells["ColRFIDTag"].Value = generateResult[i].asset.tag;
+                            //row.Cells["ColImgUrl"].Value = generateResult[i].asset.imageUrls;
+                            //row.Cells["ColRFIDTag"].Value = generateResult[i].asset.tag;
                             row.Cells["ColTakeOutNote"].Value = generateResult[i].asset.takeOutInfo;
 
-                            ValidUntil = generateResult[i].asset.validUntil == null ? "Unlimited" : generateResult[i].asset.validUntil.ToString(); //!= DateTime.MinValue ? generateResult[i].asset.validUntil.ToString("g") : "No Expiration";
+                            ValidUntil = generateResult[i].asset.validUntil == null ? "Unlimited" : "Start " + generateResult[i].asset.startDate.Value.ToString("g") + " Until " + generateResult[i].asset.validUntil.Value.ToString("g"); //!= DateTime.MinValue ? generateResult[i].asset.validUntil.ToString("g") : "No Expiration";
                             row.Cells["ColValidUntil"].Value = ValidUntil;
 
-                            row.Cells["ColNotes"].Value = generateResult[i].notes;
-                            row.Cells["ColPersonImgUrl"].Value = generateResult[i].imageUrls;
+                            row.Cells["ColNotes"].Value = generateResult[i].type;
+                            row.Cells["ColType"].Value = generateResult[i].notes;
+                            //row.Cells["ColPersonImgUrl"].Value = generateResult[i].imageUrls;
                             row.Cells["ColCreatedAt"].Value = generateResult[i].createdAt.ToString();//generateResult[i].createdAt.ToString("g");
                             row.Cells["ColUpdatedAt"].Value = generateResult[i].asset.updatedAt.ToString("yyyy-MM-dd HH:mm:ss");//generateResult[i].asset.updatedAt.ToString("s");
                             row.Cells["ColReaderInfo"].Value = generateResult[i].readerInfo;
@@ -240,10 +244,10 @@ namespace RFID_FEATHER_ASSETS
                     }
                     else
                     {
-                        grdViewTransactions.ColumnHeadersVisible = false;
+                        //grdViewTransactions.ColumnHeadersVisible = false;
                         if (language == "English") lblLoadingInformation.Text = "Transaction not found.";
                         else lblLoadingInformation.Text = "トランザクションが見つかりません.";
-                        lblLoadingInformation.Visible = true;
+                        //lblLoadingInformation.Visible = true;
                         //lblLoadingInformation.Refresh();
                     }
 

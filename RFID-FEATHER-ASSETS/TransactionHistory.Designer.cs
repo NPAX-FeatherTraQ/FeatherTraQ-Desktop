@@ -47,6 +47,7 @@
             this.lblLoadingInformation = new System.Windows.Forms.Label();
             this.grdViewTransactions = new System.Windows.Forms.DataGridView();
             this.ColCreatedAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colOwnerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColTransId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCompanyId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColAssetId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +57,7 @@
             this.ColTakeOutNote = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColValidUntil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColNotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColPersonImgUrl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColReaderInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColRegisterId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -190,6 +192,7 @@
             resources.ApplyResources(this.grdViewTransactions, "grdViewTransactions");
             this.grdViewTransactions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColCreatedAt,
+            this.colOwnerName,
             this.ColTransId,
             this.ColCompanyId,
             this.ColAssetId,
@@ -199,6 +202,7 @@
             this.ColTakeOutNote,
             this.ColValidUntil,
             this.ColNotes,
+            this.colType,
             this.ColPersonImgUrl,
             this.ColReaderInfo,
             this.ColRegisterId,
@@ -221,6 +225,12 @@
             resources.ApplyResources(this.ColCreatedAt, "ColCreatedAt");
             this.ColCreatedAt.Name = "ColCreatedAt";
             this.ColCreatedAt.ReadOnly = true;
+            // 
+            // colOwnerName
+            // 
+            resources.ApplyResources(this.colOwnerName, "colOwnerName");
+            this.colOwnerName.Name = "colOwnerName";
+            this.colOwnerName.ReadOnly = true;
             // 
             // ColTransId
             // 
@@ -276,6 +286,12 @@
             resources.ApplyResources(this.ColNotes, "ColNotes");
             this.ColNotes.Name = "ColNotes";
             this.ColNotes.ReadOnly = true;
+            // 
+            // colType
+            // 
+            resources.ApplyResources(this.colType, "colType");
+            this.colType.Name = "colType";
+            this.colType.ReadOnly = true;
             // 
             // ColPersonImgUrl
             // 
@@ -346,6 +362,7 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCreatedAt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colOwnerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColTransId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCompanyId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColAssetId;
@@ -355,6 +372,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColTakeOutNote;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColValidUntil;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNotes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colType;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPersonImgUrl;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColReaderInfo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColRegisterId;
