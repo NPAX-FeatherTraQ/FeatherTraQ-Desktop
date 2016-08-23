@@ -184,7 +184,7 @@ namespace RFID_FEATHER_ASSETS
                 //For Validity Expiration
                 if (rbtnValidToday.Checked)
                 {
-                    startDateValue = DateTime.UtcNow.ToString("yyyy-mm-dd"); //+ "00:01";
+                    startDateValue = DateTime.UtcNow.ToString("yyyy-MM-dd"); //+ "00:01";
                     validUntilValue = DateTime.UtcNow.ToString("yyyy-MM-dd T") + "17:00";
                 }
                 else if (rbtnValidUntil.Checked)

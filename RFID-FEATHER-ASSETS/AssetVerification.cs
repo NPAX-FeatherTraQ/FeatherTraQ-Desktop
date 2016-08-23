@@ -44,7 +44,6 @@ namespace RFID_FEATHER_ASSETS
         //string assetName;
         bool IsStopComparing = false;
         int startRowComparing;
-        Thread thread;
 
         public Verification()//string tokenvaluesource, string roleSource) //(string tokenvaluesource, string portnamesource, string roleSource)
         {
@@ -321,7 +320,7 @@ namespace RFID_FEATHER_ASSETS
                                         //row.Cells["colIDTag"].Value = txtRFIDTag.Text;
                                         row.Cells["colIDOwner"].Value = verifyResult.ownerUserId;
                                         row.Cells["colOwnerName"].Value = verifyResult.name;
-                                        row.Cells["colValidityPeriod"].Value = verifyResult.validUntil == null ? "Unlimited" : "Start " + verifyResult.validUntil.Value.ToString("g") + " Until " + verifyResult.validUntil.Value.ToString("g");
+                                        row.Cells["colValidityPeriod"].Value = verifyResult.validUntil == null ? "Unlimited" : "Start " + verifyResult.startDate.Value.ToString("g") + " Until " + verifyResult.validUntil.Value.ToString("g");
                                         //row.Cells["colAssetID"].Value = verifyResult.assetId;
 
                                         //Check Validity Expiration
@@ -1234,10 +1233,10 @@ namespace RFID_FEATHER_ASSETS
         {
             try
             {
-                ValidationMessage();
-                if (!IsCallingMainMenu) return;
+                //ValidationMessage();
+                //if (!IsCallingMainMenu) return;
 
-                IsCallingMainMenu = true;
+                //IsCallingMainMenu = true;
                 //reader.CloseCom();
 
                 using (ReportCreation ReportCreationForm = new ReportCreation(AssetIdValue))
@@ -1252,7 +1251,7 @@ namespace RFID_FEATHER_ASSETS
                         //// Read the contents of PortSelectionForm's.
                         //picPersonBroughtOut.Image = ReportCreationForm.PersonPhoto;
                         //txtReportedNote.Text = " " + ReportCreationForm.ExplanationNote;
-                        btnBack.PerformClick();
+                        //btnBack.PerformClick();
                     }
                     //else
                     //{
@@ -1260,11 +1259,12 @@ namespace RFID_FEATHER_ASSETS
                     //    LoopVerification();
                     //}
 
-                    IsCallingMainMenu = false;
+                    //IsCallingMainMenu = false;
 
-                    ReaderMethodProc();
+                    //ReaderMethodProc();
                     //VerifyAssetProc();
-                    //ReportCreationForm.Dispose();   
+                    //ReportCreationForm.Dispose();  
+                    btnBack.PerformClick();
                 }
             }
             catch (Exception ex)
@@ -1359,7 +1359,7 @@ namespace RFID_FEATHER_ASSETS
 
         private void ValidationMessage()
         {
-            IsCallingMainMenu = true;
+            //IsCallingMainMenu = true;
             //reader.CloseCom();
             if (language == "English")
             {
@@ -1367,21 +1367,21 @@ namespace RFID_FEATHER_ASSETS
                 {
                     MessageBox.Show("Record is already submitted.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     btnSubmit.Focus();
-                    IsCallingMainMenu = false;
+                    //IsCallingMainMenu = false;
                 }
 
                 if (btnSubmit.Text.Trim().ToUpper() == "RENEWED")
                 {
                     MessageBox.Show("ID is already renewed.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     btnSubmit.Focus();
-                    IsCallingMainMenu = false;
+                    //IsCallingMainMenu = false;
                 }
 
                 if (btnReport.Text.Trim().ToUpper() == "REPORTED")
                 {
                     MessageBox.Show("Record is already reported.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     btnReport.Focus();
-                    IsCallingMainMenu = false;
+                    //IsCallingMainMenu = false;
                 }
 
                 //if (txtRFIDTag.Text.Length == 0)
@@ -1397,31 +1397,31 @@ namespace RFID_FEATHER_ASSETS
                 {
                     MessageBox.Show("レコードが既に提出されています.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     btnSubmit.Focus();
-                    IsCallingMainMenu = false;
+                    //IsCallingMainMenu = false;
                 }
 
                 if (btnSubmit.Text.Trim().ToUpper() == "新たな")
                 {
                     MessageBox.Show("資産はすでに更新されます.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     btnSubmit.Focus();
-                    IsCallingMainMenu = false;
+                    //IsCallingMainMenu = false;
                 }
 
                 if (btnReport.Text.Trim().ToUpper() == "報告しました")
                 {
                     MessageBox.Show("レコードが既に報告されています.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     btnReport.Focus();
-                    IsCallingMainMenu = false;
+                    //IsCallingMainMenu = false;
                 }
 
                 if (txtRFIDTag.Text.Length == 0)
                 {
                     MessageBox.Show("RFIDタグが必要とされます. スキャンしてください...", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     btnSubmit.Focus();
-                    IsCallingMainMenu = false;
+                    //IsCallingMainMenu = false;
                 }
             }
-            ReaderMethodProc();
+            //ReaderMethodProc();
             //VerifyAssetProc();
             //return;
         }
@@ -1504,7 +1504,7 @@ namespace RFID_FEATHER_ASSETS
 
                     if (result == DialogResult.Yes)
                     {
-                        IsCallingMainMenu = true;
+                        //IsCallingMainMenu = true;
                         //reader.CloseCom();
 
                         using (AssetRenewal RenewalForm = new AssetRenewal(AssetIdValue))
@@ -1512,11 +1512,11 @@ namespace RFID_FEATHER_ASSETS
                             if (RenewalForm.ShowDialog() == DialogResult.OK)
                             {
                                 btnSubmit.Text = "Renewed";
-                                btnBack.PerformClick();
+                                //btnBack.PerformClick();
                             }
 
-                            IsCallingMainMenu = false;
-                            ReaderMethodProc();
+                            //IsCallingMainMenu = false;
+                            //ReaderMethodProc();
                             //VerifyAssetProc();
                         }
                     }
@@ -1528,8 +1528,9 @@ namespace RFID_FEATHER_ASSETS
                     else MessageBox.Show("アセットはすでに有効期限が切れています." + "\n" + "更新のため、管理者にいきますください.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
             //}
-            btnBack.Focus();
-            return;
+            //btnBack.Focus();
+            //return;
+            //btnBack.PerformClick();
         }
 
         private void grdViewRFIDTag_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -1572,94 +1573,97 @@ namespace RFID_FEATHER_ASSETS
                     assetinfo.AddBody(getAsset);
 
                     IRestResponse response = client.Execute(assetinfo);
-                    var content = response.Content;
+                    //client.ExecuteAsync(assetinfo, (response, handle) =>
+                    //{
+                       var content = response.Content;
 
-                    lblLoadingInformation.Visible = false;
+                       lblLoadingInformation.Visible = false;
 
-                    if (response.StatusCode == HttpStatusCode.OK)
-                    {
-                        JsonDeserializer deserial = new JsonDeserializer();
-                        GlobalClass.GetSetClass assetInfo = deserial.Deserialize<GlobalClass.GetSetClass>(response);
+                       if (response.StatusCode == HttpStatusCode.OK)
+                       {
+                           JsonDeserializer deserial = new JsonDeserializer();
+                           GlobalClass.GetSetClass assetInfo = deserial.Deserialize<GlobalClass.GetSetClass>(response);
 
-                        string urls = assetInfo.imageUrls;
+                           string urls = assetInfo.imageUrls;
 
-                        if (string.IsNullOrEmpty(urls))
-                        {
-                            lblAssetPhoto1.Text = "NO" + "\n" + "Asset Photo 1";
-                            lblAssetPhoto2.Text = "NO" + "\n" + "Asset Photo 2";
-                            lblAssetPhoto3.Text = "NO" + "\n" + "Asset Photo 3";
-                        }
+                           if (string.IsNullOrEmpty(urls))
+                           {
+                               lblAssetPhoto1.Text = "NO" + "\n" + "Asset Photo 1";
+                               lblAssetPhoto2.Text = "NO" + "\n" + "Asset Photo 2";
+                               lblAssetPhoto3.Text = "NO" + "\n" + "Asset Photo 3";
+                           }
 
-                        if (urls != null && assetInfo.description != "ID_CARD")
-                        {
-                            string[] ReadUrls = urls.Split(',');
+                           if (urls != null && assetInfo.description != "ID_CARD")
+                           {
+                               string[] ReadUrls = urls.Split(',');
 
-                            if (ReadUrls.Length > 1)
-                            {
-                                imgCapture3.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[1]);
-                                lblAssetPhoto1.Visible = false;
-                            }
-                            if (ReadUrls.Length > 2)
-                            {
-                                imgCapture4.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[2]);
-                                lblAssetPhoto2.Visible = false;
-                            }
-                            if (ReadUrls.Length > 3)
-                            {
-                                imgCapture5.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[3]);
-                                lblAssetPhoto3.Visible = false;
-                            }
-                        }
+                               if (ReadUrls.Length > 1)
+                               {
+                                   imgCapture3.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[1]);
+                                   lblAssetPhoto1.Visible = false;
+                               }
+                               if (ReadUrls.Length > 2)
+                               {
+                                   imgCapture4.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[2]);
+                                   lblAssetPhoto2.Visible = false;
+                               }
+                               if (ReadUrls.Length > 3)
+                               {
+                                   imgCapture5.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[3]);
+                                   lblAssetPhoto3.Visible = false;
+                               }
+                           }
 
-                        txtValidityPeriod.Text = Convert.ToString(grdViewRFIDTag.Rows[e.RowIndex].Cells["colValidityPeriod"].Value).ToString();
-                        txtRFIDTag.Text = getAsset.tag;
-                        //AssetIdValue = assetInfo.assetId;
-                        //updatedImgFileNames = assetInfo.imageUrls;
-                        txtDescription.Text = assetInfo.description;
-                        //assetName = assetInfo.name;
+                           txtValidityPeriod.Text = Convert.ToString(grdViewRFIDTag.Rows[e.RowIndex].Cells["colValidityPeriod"].Value).ToString();
+                           txtRFIDTag.Text = getAsset.tag;
+                           //AssetIdValue = assetInfo.assetId;
+                           //updatedImgFileNames = assetInfo.imageUrls;
+                           txtDescription.Text = assetInfo.description;
+                           //assetName = assetInfo.name;
 
-                        //if (assetInfo.description == "ID_CARD")
-                        //    txtDescription.ReadOnly = true;
-                        //else txtDescription.ReadOnly = false;
+                           //if (assetInfo.description == "ID_CARD")
+                           //    txtDescription.ReadOnly = true;
+                           //else txtDescription.ReadOnly = false;
 
-                        txtTakeOutNote.Text = assetInfo.takeOutInfo;
+                           txtTakeOutNote.Text = assetInfo.takeOutInfo;
 
-                        //if (assetInfo.validUntil == null)
-                        //{
-                        //    txtValidFrom.Text = "Unlimited";
-                        //    txtValidUntil.Text = "Unlimited";
-                        //}
-                        //else
-                        //{
-                        //    txtValidFrom.Text = string.Empty;//assetInfo.validUntil.Value.ToString("g");
-                        //    txtValidUntil.Text = assetInfo.validUntil.Value.ToString("g");
-                        //}
+                           //if (assetInfo.validUntil == null)
+                           //{
+                           //    txtValidFrom.Text = "Unlimited";
+                           //    txtValidUntil.Text = "Unlimited";
+                           //}
+                           //else
+                           //{
+                           //    txtValidFrom.Text = string.Empty;//assetInfo.validUntil.Value.ToString("g");
+                           //    txtValidUntil.Text = assetInfo.validUntil.Value.ToString("g");
+                           //}
 
-                        getownerInfo(assetInfo.ownerUserId /*, assetInfo.validUntil*/);
-                        if (Convert.ToString(grdViewRFIDTag.Rows[e.RowIndex].Cells["colStatus"].Value).ToString() == "INVALID")
-                        {
-                            MessageBox.Show("ID is not yet valid." + "\n" + "Please check the validity start date.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                            btnBack.PerformClick();
-                        }
-                        if (Convert.ToString(grdViewRFIDTag.Rows[e.RowIndex].Cells["colStatus"].Value).ToString() == "EXPIRED")
-                        {
-                            AssetIdValue = Convert.ToInt32(grdViewRFIDTag.Rows[e.RowIndex].Cells["colAssetID"].Value.ToString());//assetInfo.assetId;
-                            ValidateExpiration();
-                        }
-                        else AssetIdValue = assetInfo.assetId;
-                    }
-                    else if (response.StatusCode == HttpStatusCode.NotFound)
-                    {
-                        if (language == "English") MessageBox.Show("Error connecting to server.. please try again later");
-                        else MessageBox.Show("サーバーへの接続エラー.. 後でもう一度試してみてください");
-                    }
-                    else
-                    {
-                        HttpStatusCode statusCode = response.StatusCode;
-                        int numericStatusCode = (int)statusCode;
-                        //show error code
-                        MessageBox.Show("Error" + numericStatusCode);
-                    }
+                           getownerInfo(assetInfo.ownerUserId /*, assetInfo.validUntil*/);
+                           if (Convert.ToString(grdViewRFIDTag.Rows[e.RowIndex].Cells["colStatus"].Value).ToString() == "INVALID")
+                           {
+                               MessageBox.Show("ID is not yet valid." + "\n" + "Please check the start date of validity.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                               btnBack.PerformClick();
+                           }
+                           if (Convert.ToString(grdViewRFIDTag.Rows[e.RowIndex].Cells["colStatus"].Value).ToString() == "EXPIRED")
+                           {
+                               AssetIdValue = Convert.ToInt32(grdViewRFIDTag.Rows[e.RowIndex].Cells["colAssetID"].Value.ToString());//assetInfo.assetId;
+                               ValidateExpiration();
+                           }
+                           else AssetIdValue = assetInfo.assetId;
+                       }
+                       else if (response.StatusCode == HttpStatusCode.NotFound)
+                       {
+                           if (language == "English") MessageBox.Show("Error connecting to server.. please try again later");
+                           else MessageBox.Show("サーバーへの接続エラー.. 後でもう一度試してみてください");
+                       }
+                       else
+                       {
+                           HttpStatusCode statusCode = response.StatusCode;
+                           int numericStatusCode = (int)statusCode;
+                           //show error code
+                           MessageBox.Show("Error" + numericStatusCode);
+                       }
+                   //});
                 } 
                 
             }
@@ -1672,7 +1676,7 @@ namespace RFID_FEATHER_ASSETS
         private void ReadLoopTimer_Tick(object sender, EventArgs e)
         {
             if (!IsCallingMainMenu)
-            VerifyAssetProc();
+                VerifyAssetProc();
         }
 
     }

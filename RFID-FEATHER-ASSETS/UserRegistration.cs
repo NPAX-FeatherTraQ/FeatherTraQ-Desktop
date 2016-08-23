@@ -491,6 +491,7 @@ namespace RFID_FEATHER_ASSETS
 
             if (rbtnValidToday.Checked)
             {
+                startDateValue = DateTime.UtcNow.ToString("yyyy-MM-dd");
                 validUntilValue = DateTime.UtcNow.ToString("yyyy-MM-dd T") + "17:00";
             }
             else if (rbtnValidStart.Checked)
