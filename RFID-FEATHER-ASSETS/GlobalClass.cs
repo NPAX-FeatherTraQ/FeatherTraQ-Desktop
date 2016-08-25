@@ -71,7 +71,8 @@ namespace RFID_FEATHER_ASSETS
             public DateTime? validUntil { get; set; }
             public DateTime? startDate { get; set; }
             public int ownerId { get; set; }
-            public int tagType { get; set; }            
+            public int tagType { get; set; }
+            public int ownerUserId { get; set; }
         }
 
     }

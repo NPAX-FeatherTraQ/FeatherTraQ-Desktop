@@ -314,6 +314,8 @@ namespace RFID_FEATHER_ASSETS
                                     row.Cells["colViewerIcon"].ToolTipText = "Double click to view the details.";
                                     row.Cells["colViewerIcon"].Value = Properties.Resources.ViewDetailsIcon;
                                     row.Cells["colAssetID"].Value = verifyResult.assetId;
+                                    row.Cells["colAssetDescription"].Value = verifyResult.description;
+                                    row.Cells["colTakeOutNote"].Value = verifyResult.takeOutInfo;
 
                                     if (verifyResult.description == "ID_CARD")
                                     {
@@ -350,8 +352,8 @@ namespace RFID_FEATHER_ASSETS
                                     {
                                         //row.Cells["colAssetTag"].Value = txtRFIDTag.Text;
                                         row.Cells["colAssetOwner"].Value = verifyResult.ownerUserId;
-                                        row.Cells["colAssetDescription"].Value = verifyResult.description;
-                                        row.Cells["colTakeOutNote"].Value = verifyResult.takeOutInfo;
+                                        //row.Cells["colAssetDescription"].Value = verifyResult.description;
+                                        //row.Cells["colTakeOutNote"].Value = verifyResult.takeOutInfo;
                                         row.DefaultCellStyle.BackColor = Color.Yellow;
                                         row.DefaultCellStyle.ForeColor = Color.Black;
                                     }
@@ -551,6 +553,7 @@ namespace RFID_FEATHER_ASSETS
                             int numericStatusCode = (int)statusCode;
                             //show error code
                             MessageBox.Show("Error" + numericStatusCode);
+                            //SendKeys.Send("{ESC}");
                         }
 
                         //ClearFields();
@@ -1573,10 +1576,14 @@ namespace RFID_FEATHER_ASSETS
                     assetinfo.AddBody(getAsset);
 
                     IRestResponse response = client.Execute(assetinfo);
-                    //client.ExecuteAsync(assetinfo, (response, handle) =>
-                    //{
-                       var content = response.Content;
+                    var content = response.Content;
 
+                    //client.ExecuteAsync(assetinfo, response =>
+                    //{
+ 
+                       //var content = response.Content;
+                    //   this.Invoke(new MethodInvoker(delegate
+                    //{
                        lblLoadingInformation.Visible = false;
 
                        if (response.StatusCode == HttpStatusCode.OK)
@@ -1663,7 +1670,8 @@ namespace RFID_FEATHER_ASSETS
                            //show error code
                            MessageBox.Show("Error" + numericStatusCode);
                        }
-                   //});
+                    //}));
+                    //});
                 } 
                 
             }

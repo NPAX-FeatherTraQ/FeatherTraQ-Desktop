@@ -457,7 +457,7 @@
             this.grdViewRFIDTag.AllowUserToDeleteRows = false;
             this.grdViewRFIDTag.AllowUserToResizeColumns = false;
             this.grdViewRFIDTag.AllowUserToResizeRows = false;
-            this.grdViewRFIDTag.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.grdViewRFIDTag.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.grdViewRFIDTag.BackgroundColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;

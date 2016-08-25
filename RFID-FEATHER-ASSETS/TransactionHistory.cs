@@ -211,15 +211,21 @@ namespace RFID_FEATHER_ASSETS
                         {                         
                             int idx = grdViewTransactions.Rows.Add();
                             DataGridViewRow row = grdViewTransactions.Rows[idx];
+                            lblLoadingInformation.Text = "Getting Information. Please wait... " + "\n" + "Processing record " + (i+1) + " of " + generateResult.Count + "...";
+                            lblLoadingInformation.Refresh();
 
                             //row.Cells["ColTransId"].Value = generateResult[i].transactionId;
                             //row.Cells["ColAssetId"].Value = generateResult[i].asset.assetId ?? null;
                             //row.Cells["ColCompanyId"].Value = generateResult[i].asset.companyId ?? null;
                             getOwnerInfo(generateResult[i].asset.registerUserId);
                             row.Cells["ColRegisterId"].Value = name;
+
                             getOwnerInfo(generateResult[i].asset.updateUserId);
                             row.Cells["ColUpdateId"].Value = name;
-                            row.Cells["ColOwnerName"].Value = generateResult[i].asset.name;
+
+                            getOwnerInfo(generateResult[i].asset.ownerUserId);
+                            row.Cells["ColOwnerName"].Value = name;//generateResult[i].asset.name;
+
                             row.Cells["ColDescription"].Value = generateResult[i].asset.description;
                             //row.Cells["ColImgUrl"].Value = generateResult[i].asset.imageUrls;
                             //row.Cells["ColRFIDTag"].Value = generateResult[i].asset.tag;
@@ -231,7 +237,7 @@ namespace RFID_FEATHER_ASSETS
                             row.Cells["ColNotes"].Value = generateResult[i].type;
                             row.Cells["ColType"].Value = generateResult[i].notes;
                             //row.Cells["ColPersonImgUrl"].Value = generateResult[i].imageUrls;
-                            row.Cells["ColCreatedAt"].Value = generateResult[i].createdAt.ToString();//generateResult[i].createdAt.ToString("g");
+                            row.Cells["ColCreatedAt"].Value = DateTime.Parse(generateResult[i].createdAt.ToString());//("MM/dd/yyyy hh:mm:ss tt"));//generateResult[i].createdAt.ToString("g");
                             row.Cells["ColUpdatedAt"].Value = generateResult[i].asset.updatedAt.ToString("yyyy-MM-dd HH:mm:ss");//generateResult[i].asset.updatedAt.ToString("s");
                             row.Cells["ColReaderInfo"].Value = generateResult[i].readerInfo;
 

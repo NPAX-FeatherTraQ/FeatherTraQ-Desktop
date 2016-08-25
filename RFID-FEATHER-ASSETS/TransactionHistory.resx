@@ -526,10 +526,10 @@
     <value>Microsoft Sans Serif, 32.25pt, style=Bold</value>
   </data>
   <data name="lblLoadingInformation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 136</value>
+    <value>6, 124</value>
   </data>
   <data name="lblLoadingInformation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1328, 51</value>
+    <value>1328, 102</value>
   </data>
   <data name="lblLoadingInformation.TabIndex" type="System.Int32, mscorlib">
     <value>68</value>
@@ -586,7 +586,7 @@
     <value>False</value>
   </data>
   <data name="ColTransId.Width" type="System.Int32, mscorlib">
-    <value>103</value>
+    <value>73</value>
   </data>
   <metadata name="ColCompanyId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -598,7 +598,7 @@
     <value>False</value>
   </data>
   <data name="ColCompanyId.Width" type="System.Int32, mscorlib">
-    <value>132</value>
+    <value>90</value>
   </data>
   <metadata name="ColAssetId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -610,7 +610,7 @@
     <value>False</value>
   </data>
   <data name="ColAssetId.Width" type="System.Int32, mscorlib">
-    <value>104</value>
+    <value>72</value>
   </data>
   <metadata name="ColRFIDTag.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -622,7 +622,7 @@
     <value>False</value>
   </data>
   <data name="ColRFIDTag.Width" type="System.Int32, mscorlib">
-    <value>112</value>
+    <value>79</value>
   </data>
   <metadata name="ColDescription.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -643,7 +643,7 @@
     <value>False</value>
   </data>
   <data name="ColImgUrl.Width" type="System.Int32, mscorlib">
-    <value>125</value>
+    <value>86</value>
   </data>
   <metadata name="ColTakeOutNote.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -691,7 +691,7 @@
     <value>False</value>
   </data>
   <data name="ColPersonImgUrl.Width" type="System.Int32, mscorlib">
-    <value>186</value>
+    <value>122</value>
   </data>
   <metadata name="ColReaderInfo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

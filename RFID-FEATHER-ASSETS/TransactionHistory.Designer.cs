@@ -187,7 +187,7 @@
             // 
             this.grdViewTransactions.AllowUserToAddRows = false;
             this.grdViewTransactions.AllowUserToDeleteRows = false;
-            this.grdViewTransactions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.grdViewTransactions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.grdViewTransactions.BackgroundColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.grdViewTransactions, "grdViewTransactions");
             this.grdViewTransactions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
