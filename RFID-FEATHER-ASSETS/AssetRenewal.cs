@@ -186,6 +186,12 @@ namespace RFID_FEATHER_ASSETS
                 {
                     startDateValue = DateTime.UtcNow.ToString("yyyy-MM-dd"); //+ "00:01";
                     validUntilValue = DateTime.UtcNow.ToString("yyyy-MM-dd T") + "17:00";
+
+                    if (Convert.ToDateTime(validUntilValue) < Convert.ToDateTime(DateTime.Now.ToString("g")))
+                    {
+                        MessageBox.Show("ID Validity Period is already expired.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
                 }
                 else if (rbtnValidUntil.Checked)
                 {
@@ -193,6 +199,17 @@ namespace RFID_FEATHER_ASSETS
 
                     if (dtTimePicker.Checked) validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd") + dtTimePicker.Value.ToString("THH:mm");
                     else validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd T") + "17:00";
+
+                    if (Convert.ToDateTime(startDateValue) > Convert.ToDateTime(validUntilValue))
+                    {
+                        MessageBox.Show("Start date must not greater than Until date.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    else if (Convert.ToDateTime(startDateValue) < Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd")) || Convert.ToDateTime(validUntilValue) < Convert.ToDateTime(DateTime.Now.ToString("g")))
+                    {
+                        MessageBox.Show("Validity Period must not less than to current date and time.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
                 }
                 else
                 {
@@ -273,7 +290,7 @@ namespace RFID_FEATHER_ASSETS
 
                 transactDet.companyId = companyId;//1;
                 transactDet.readerInfo = readerInfo;
-                transactDet.type = "RENEW-Owner";
+                transactDet.type = "RENEW-ID";
                 //transactDet.readerId = 1;
                 //transactDet.notes = txtExplanationNotes.Text.Trim();
                 //transactDet.imageUrl = newImgFileNames;//txtCapturedImagePath.Text;//txtImagePath.Text;

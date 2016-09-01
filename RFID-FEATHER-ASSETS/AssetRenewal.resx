@@ -478,7 +478,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Owner Renewal</value>
+    <value>ID Renewal</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>AssetRenewal</value>

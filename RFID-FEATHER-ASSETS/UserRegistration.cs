@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,6 +32,7 @@ namespace RFID_FEATHER_ASSETS
         private List<RealTimeTagData> RealTimeTagDataList = new List<RealTimeTagData>();
         string readerInfo;
         int assetId;
+        //int idCard;
         private bool m_bDisplayLog = false;
         private int m_nTotal = 0;
         string portname;// = "COM3";
@@ -50,6 +51,7 @@ namespace RFID_FEATHER_ASSETS
         string validUntilValue;
         string startDateValue;
         bool isCameraChanged = false;
+        bool btnEditInfoWasClicked = false;
 
         public RegisterUser(string tokenvaluesource)
         {
@@ -300,13 +302,12 @@ namespace RFID_FEATHER_ASSETS
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (btnSubmit.Text == "Update")
+            /*if (btnSubmit.Text == "Update")
             {
-                edit();
+                register();
             }
             else
-            {
-
+            {*/
                 if (firstName.Text.Length == 0 || lastName.Text.Length == 0 || position.Text.Length == 0 || email.Text.Length == 0 || string.IsNullOrEmpty(password.Text) || string.IsNullOrEmpty(cpassword.Text))
                 {
                     if (language == "English") MessageBox.Show("Complete information is required.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
@@ -319,6 +320,35 @@ namespace RFID_FEATHER_ASSETS
                 }
                 else
                 {
+                    //Validity Validation
+                    if (rbtnValidToday.Checked)
+                    {
+                        if (Convert.ToDateTime(DateTime.UtcNow.ToString("yyyy-MM-dd T") + "17:00") < Convert.ToDateTime(DateTime.Now.ToString("g")))
+                        {
+                            MessageBox.Show("ID Validity Period is already expired.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+                    else if (rbtnValidStart.Checked)
+                    {
+                        startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd"); //+ "00:01";
+
+                        if (dtTimePicker.Checked) validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd") + dtTimePicker.Value.ToString("THH:mm");
+                        else validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd T") + "17:00";
+                        
+                        if (Convert.ToDateTime(startDateValue) > Convert.ToDateTime(validUntilValue))
+                        {
+                            MessageBox.Show("Start date must not greater than Until date.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        else if (Convert.ToDateTime(startDateValue) < Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd")) || Convert.ToDateTime(validUntilValue) < Convert.ToDateTime(DateTime.Now.ToString("g")))
+                        {
+                            MessageBox.Show("Validity Period must not less than to current date and time.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        
+                    }//end-Validity Validation                   
+
                     if (imgCapture1.Image == null || imgCapture2.Image == null)
                     {
                         if (language == "English")
@@ -396,7 +426,7 @@ namespace RFID_FEATHER_ASSETS
                         }
                     }
                 }
-            }
+            /*}*/
         }
 
         private void edit()
@@ -417,19 +447,20 @@ namespace RFID_FEATHER_ASSETS
             userinfo.email = email.Text;
 
             //save id card information
-            //userinfo.assetIdCard.companyId = companyId;
-            //userinfo.assetIdCard.description = "ID_CARD";
-            //userinfo.assetIdCard.imageUrls = newImgFileNames;
-            //userinfo.assetIdCard.name = lastName.Text + ", " + firstName.Text;
-            //userinfo.assetIdCard.tag = txtRFIDTag.Text;
-            //userinfo.assetIdCard.tagType = 1;
-            //userinfo.assetIdCard.takeOutAllowed = false;
-            //userinfo.assetIdCard.takeOutInfo = lastName.Text + " only";
-            //userinfo.assetIdCard.ownerId = 1;
+            userinfo.assetIdCard.assetId = assetId;
+            userinfo.assetIdCard.companyId = companyId;
+            userinfo.assetIdCard.description = "ID_CARD";
+            userinfo.assetIdCard.imageUrls = newImgFileNames;
+            userinfo.assetIdCard.name = lastName.Text + ", " + firstName.Text;
+            userinfo.assetIdCard.tag = txtRFIDTag.Text;
+            userinfo.assetIdCard.tagType = 1;
+            userinfo.assetIdCard.takeOutAllowed = false;
+            userinfo.assetIdCard.takeOutInfo = lastName.Text + " only";
+            userinfo.assetIdCard.ownerId = 1;
 
 
             RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");//("http://127.0.0.1:8080/");
-            RestRequest user = new RestRequest("/api/user/edit", Method.POST);
+            RestRequest user = new RestRequest("/api/user/edit/" + userId, Method.POST);
             var authToken = tokenvalue;
             user.AddHeader("X-Auth-Token", authToken);
             user.AddHeader("Content-Type", "application/json; charset=utf-8");
@@ -446,7 +477,7 @@ namespace RFID_FEATHER_ASSETS
 
                 if (restResult.result == "OK")
                 {
-
+                    MessageBox.Show("Update Successful");
                 }
                 else
                 {
@@ -465,6 +496,11 @@ namespace RFID_FEATHER_ASSETS
         private void register()
         {
             GlobalClass.GetSetClass userinfo = new GlobalClass.GetSetClass();
+            String transType;
+            if (btnSubmit.Text.ToLower() == "update")
+                transType = "UPDATE-Owner";
+            else
+                transType = "ADD-Owner";
 
             //save user Information
             userinfo.companyId = companyId;
@@ -489,10 +525,21 @@ namespace RFID_FEATHER_ASSETS
             userinfo.assetIdCard.takeOutInfo = lastName.Text + " only";
             userinfo.assetIdCard.ownerId = 1;
 
+            if (btnSubmit.Text.ToLower() == "update")
+            {
+                userinfo.userId = userId;
+                userinfo.assetIdCard.assetId = assetId;
+            }
+
             if (rbtnValidToday.Checked)
             {
-                startDateValue = DateTime.UtcNow.ToString("yyyy-MM-dd");
-                validUntilValue = DateTime.UtcNow.ToString("yyyy-MM-dd T") + "17:00";
+                //if (btnSubmit.Text.ToLower() == "update")
+                //    validUntilValue = DateTime.UtcNow.ToString("yyyy-MM-dd T") + "17:00";
+                //else
+                //{
+                    startDateValue = DateTime.UtcNow.ToString("yyyy-MM-dd");
+                    validUntilValue = DateTime.UtcNow.ToString("yyyy-MM-dd T") + "17:00";
+                //}
             }
             else if (rbtnValidStart.Checked)
             {
@@ -520,7 +567,13 @@ namespace RFID_FEATHER_ASSETS
 
             //use rest service
             RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");//("http://127.0.0.1:8080/");
-            RestRequest user = new RestRequest("/api/user/add", Method.POST);
+            RestRequest user;
+
+            if(btnSubmit.Text.ToLower() == "update")
+                user = new RestRequest("/api/user/edit", Method.POST);
+            else
+                user = new RestRequest("/api/user/add", Method.POST);
+
             var authToken = tokenvalue;
             user.AddHeader("X-Auth-Token", authToken);
             user.AddHeader("Content-Type", "application/json; charset=utf-8");
@@ -549,7 +602,7 @@ namespace RFID_FEATHER_ASSETS
 
                         return;
                     }
-                    SaveTransaction();
+                    SaveTransaction(transType);
                     if (language == "English") MessageBox.Show("User successfully saved.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
                     {
@@ -661,28 +714,55 @@ namespace RFID_FEATHER_ASSETS
                 CallMainMenu();
                 return;
             }
-            else
+            //else
+            //{
+            //    if (btnSubmit.Text.ToLower() == "update")
+            //    {
+            //        DialogResult result = MessageBox.Show("Are you sure you want to cancel update?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            //        if (result == DialogResult.Yes)
+            //        {
+            //            //CallMainMenu();
+            //            ClearFields();
+            //        }
+            //    }
+            //    else if (txtRFIDTag.Text.Length != 0 || imgCapture1.Image != null)
+            //    {
+            //        DialogResult result = MessageBox.Show("Are you sure you want to exit the user registration?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            //        if (result == DialogResult.Yes)
+            //        {
+            //            //CallMainMenu();
+            //            ClearFields();
+            //        }
+            //    }
+            //}
+            //cam.Stop();
+            if (firstName.Text.Length != 0 || txtRFIDTag.Text.Length != 0 || imgCapture1.Image != null)
             {
-                if (btnSubmit.Text.ToLower() == "update")
+                string cancelMsg;
+
+                if (btnSubmit.Text.ToUpper() == "SUBMIT" || btnSubmit.Text == "提出する")
                 {
-                    DialogResult result = MessageBox.Show("Are you sure you want to cancel update?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-                    if (result == DialogResult.Yes)
-                    {
-                        //CallMainMenu();
-                        ClearFields();
-                    }
+                    if (language == "English") cancelMsg = "Are you sure you want to cancel the registration?";
+                    else cancelMsg = "登録を取り消すにしてもよろしいですか？";
                 }
-                else if (txtRFIDTag.Text.Length != 0 || imgCapture1.Image != null)
+                else
                 {
-                    DialogResult result = MessageBox.Show("Are you sure you want to exit the user registration?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-                    if (result == DialogResult.Yes)
-                    {
-                        //CallMainMenu();
-                        ClearFields();
-                    }
+                    if (language == "English") cancelMsg = "Are you sure you want to cancel the update?";
+                    else cancelMsg = "更新を取り消すにしてもよろしいですか？";
+                }
+
+                DialogResult result = MessageBox.Show(cancelMsg, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                if (result == DialogResult.Yes)
+                {
+                    //CallMainMenu();
+                    ClearFields();
+                }
+                else
+                {
+                    btnGetRFIDTag.Focus();
+                    return;
                 }
             }
-            //cam.Stop();
         }
         private void CallMainMenu()
         {
@@ -720,6 +800,8 @@ namespace RFID_FEATHER_ASSETS
             email.Enabled = true;
 
             rbtnValidToday.Checked = true;
+            //dtStartDate.Enabled = true;
+
             if (language == "English")
             {
                 CaptureImg.Text = "Capture Owner Photo";
@@ -736,7 +818,7 @@ namespace RFID_FEATHER_ASSETS
             this.Refresh();
         }
 
-        private void SaveTransaction()
+        private void SaveTransaction(string type)
         {
             //Saving to transaction table
             try
@@ -746,7 +828,7 @@ namespace RFID_FEATHER_ASSETS
 
                 transactDet.companyId = companyId;//1;
                 transactDet.readerInfo = readerInfo;
-                transactDet.type = "ADD-Owner";
+                transactDet.type = type;
                 //transactDet.readerId = 1;
                 //transactDet.notes = txtExplanationNotes.Text.Trim();
                 //transactDet.imageUrl = newImgFileNames;//txtCapturedImagePath.Text;//txtImagePath.Text;
@@ -845,7 +927,7 @@ namespace RFID_FEATHER_ASSETS
             }
         }
 
-        private void getOwnerInfo(int id)
+        private void getOwnerInfo(int id, DateTime? validity)
         {
             try
             {
@@ -893,7 +975,14 @@ namespace RFID_FEATHER_ASSETS
                         lblValidIDPhoto.Visible = false;
                         
                     }
-                  
+
+                   getCaptureButtonText();
+                   if (validity < Convert.ToDateTime(DateTime.Now.ToString("g")) && validity != DateTime.MinValue)
+                   {
+                       MessageBox.Show("ID is already expired.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                       return;
+                   }
+                                     
                     if (info.authorities == "ROLE_ADMIN")
                     {
 
@@ -906,7 +995,6 @@ namespace RFID_FEATHER_ASSETS
                     {
 
                     }
-
 
                     //name = info.lastName + " " + info.lastName;
 
@@ -929,6 +1017,9 @@ namespace RFID_FEATHER_ASSETS
 
         private void getOwnerId()
         {
+            lblLoadingInformation.Visible = true;
+            lblLoadingInformation.Refresh();
+
             GlobalClass.GetSetClass getAsset = new GlobalClass.GetSetClass();
 
             getAsset.companyId = companyId;
@@ -946,7 +1037,7 @@ namespace RFID_FEATHER_ASSETS
             IRestResponse response = client.Execute(assetinfo);
             var content = response.Content;
 
-            //lblLoadingInformation.Visible = false;
+            lblLoadingInformation.Visible = false;
 
             if (response.StatusCode == HttpStatusCode.OK)
             {
@@ -960,7 +1051,28 @@ namespace RFID_FEATHER_ASSETS
                 }
                 else
                 {
-                    getOwnerInfo(assetInfo.ownerUserId);
+                    assetId = assetInfo.assetId;
+
+                    if (assetInfo.validUntil == null) rbtnNoExpiration.Checked = true;
+                    else
+                    {
+                        //dtStartDate.Enabled = false;
+                        rbtnValidStart.Checked = true;
+                        startDateValue = assetInfo.startDate.Value.ToString("yyyy-MM-dd");
+                        validUntilValue = assetInfo.validUntil.Value.ToString("yyyy-MM-dd");
+                        dtStartDate.Value = Convert.ToDateTime(startDateValue);
+                        dtDatePicker.Value = Convert.ToDateTime(validUntilValue);
+
+                        //if (Convert.ToDateTime(assetInfo.validUntil).ToString("HH:mm") != "00:00")
+                        //{
+                        validUntilValue = assetInfo.validUntil.Value.ToString("HH:mm tt");
+                        dtTimePicker.Value = Convert.ToDateTime(validUntilValue);
+                        dtTimePicker.Checked = true;
+                        AssetValidUntilTime();
+                        //}
+                    }
+                    
+                    getOwnerInfo(assetInfo.ownerUserId, assetInfo.validUntil);
                 }
             }
         }
@@ -1326,6 +1438,12 @@ namespace RFID_FEATHER_ASSETS
             //ClearFields();
             try
             {
+                if (btnSubmit.Text.ToLower() == "update" || ((!string.IsNullOrEmpty(firstName.Text) || imgCapture1.Image != null) && btnCancel.Text.ToLower() == "cancel"))
+                {
+                    btnCancel.PerformClick();
+                    return;
+                }
+
                 int nReturnValue = 0;
                 string tagInfo = "";
                 //listBox1.Items.Clear();
@@ -1342,6 +1460,15 @@ namespace RFID_FEATHER_ASSETS
                         firstName.Focus();//txtAssetName.Focus();
                         if (language == "English") btnCancel.Text = "Cancel";
                         else btnCancel.Text = "キャンセル";
+                        if (btnEditInfoWasClicked)
+                        {
+                            btnSubmit.Text = "Update";
+                            getOwnerId();
+                            //getCaptureButtonText();
+                            //email.Enabled = false;
+                            //btnCancel.Text = "Cancel";
+                            //btnSubmit.Text = "Update";
+                        }
                     }
                 }
                 //else if (nReturnValue == 0)
@@ -1364,6 +1491,7 @@ namespace RFID_FEATHER_ASSETS
                 }
                 else
                 {
+                    MessageBox.Show("No ID tag scan.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 ReaderMethodProc();
@@ -1464,12 +1592,22 @@ namespace RFID_FEATHER_ASSETS
 
         private void btnEditInfo_Click(object sender, EventArgs e)
         {
+            btnEditInfoWasClicked = true;
+
             btnGetRFIDTag.PerformClick();
-            getOwnerId();
-            getCaptureButtonText();
-            email.Enabled = false;
-            btnCancel.Text = "Cancel";
-            btnSubmit.Text = "Update";
+            //if (!string.IsNullOrEmpty(txtRFIDTag.Text))
+            //{
+            //    getOwnerId();
+            //    getCaptureButtonText();
+            //    //email.Enabled = false;
+            //    btnCancel.Text = "Cancel";
+            //    btnSubmit.Text = "Update";
+            //}
+            //else
+            //{
+            //    MessageBox.Show("ID not found");
+            //}
+            btnEditInfoWasClicked = false;
         }
     }
 

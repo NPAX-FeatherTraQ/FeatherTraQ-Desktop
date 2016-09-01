@@ -285,6 +285,37 @@ namespace RFID_FEATHER_ASSETS
                 //        return;
                 //    }
                 //}
+                if (grpExpiration.Enabled)
+                {
+                    //Validity Validation
+                    if (rbtnValidToday.Checked)
+                    {
+                        if (Convert.ToDateTime(DateTime.UtcNow.ToString("yyyy-MM-dd T") + "17:00") < Convert.ToDateTime(DateTime.Now.ToString("g")))
+                        {
+                            MessageBox.Show("ID Validity Period is already expired.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+                    else if (rbtnValidUntil.Checked)
+                    {
+                        startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd"); //+ "00:01";
+
+                        if (dtTimePicker.Checked) validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd") + dtTimePicker.Value.ToString("THH:mm");
+                        else validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd T") + "17:00";
+
+                        if (Convert.ToDateTime(startDateValue) > Convert.ToDateTime(validUntilValue))
+                        {
+                            MessageBox.Show("Start date must not greater than Until date.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        else if (Convert.ToDateTime(startDateValue) < Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd")) || Convert.ToDateTime(validUntilValue) < Convert.ToDateTime(DateTime.Now.ToString("g")))
+                        {
+                            MessageBox.Show("Validity Period must not less than to current date and time.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+
+                    }//end-Validity Validation    
+                }
 
                 if (btnSubmit.Text.ToUpper() == "UPDATE" || btnSubmit.Text == "更新する")
                 {
@@ -835,6 +866,11 @@ namespace RFID_FEATHER_ASSETS
                 }
                 else
                 {
+                    if (ReadIDTagWasClicked) 
+                        MessageBox.Show("No ID tag scan.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                        MessageBox.Show("No Asset tag scan.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                     return;
                 }
                 ReaderMethodProc();
