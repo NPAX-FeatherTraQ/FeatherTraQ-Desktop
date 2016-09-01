@@ -529,6 +529,7 @@ namespace RFID_FEATHER_ASSETS
             {
                 userinfo.userId = userId;
                 userinfo.assetIdCard.assetId = assetId;
+                userinfo.assetIdCard.ownerUserId = userId;
             }
 
             if (rbtnValidToday.Checked)
