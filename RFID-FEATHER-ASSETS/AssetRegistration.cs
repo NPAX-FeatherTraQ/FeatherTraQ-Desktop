@@ -288,6 +288,15 @@ namespace RFID_FEATHER_ASSETS
                 if (grpExpiration.Enabled)
                 {
                     //Validity Validation
+                    if (dtStartTimePicker.Checked) startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd") + dtStartTimePicker.Value.ToString("THH:mm");
+                    else startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd"); //+ "17:00";
+
+                    if (Convert.ToDateTime(startDateValue) < Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd THH:mm")))
+                    {
+                        MessageBox.Show("Start Date must not less than to current Date and Time.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
                     if (rbtnValidToday.Checked)
                     {
                         if (Convert.ToDateTime(DateTime.UtcNow.ToString("yyyy-MM-dd T") + "17:00") < Convert.ToDateTime(DateTime.Now.ToString("g")))
@@ -298,19 +307,22 @@ namespace RFID_FEATHER_ASSETS
                     }
                     else if (rbtnValidUntil.Checked)
                     {
-                        startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd"); //+ "00:01";
+                        //startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd"); //+ "00:01";
+
+                        //if (dtStartTimePicker.Checked) startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd") + dtStartTimePicker.Value.ToString("THH:mm");
+                        //else startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd"); //+ "17:00";
 
                         if (dtTimePicker.Checked) validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd") + dtTimePicker.Value.ToString("THH:mm");
                         else validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd T") + "17:00";
 
                         if (Convert.ToDateTime(startDateValue) > Convert.ToDateTime(validUntilValue))
                         {
-                            MessageBox.Show("Start date must not greater than Until date.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Start Date must not greater than Until Date.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
-                        else if (Convert.ToDateTime(startDateValue) < Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd")) || Convert.ToDateTime(validUntilValue) < Convert.ToDateTime(DateTime.Now.ToString("g")))
+                        else if (Convert.ToDateTime(validUntilValue) < Convert.ToDateTime(DateTime.Now.ToString("g")))
                         {
-                            MessageBox.Show("Validity Period must not less than to current date and time.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Until Date must not less than to current Date and Time.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
 
@@ -350,7 +362,13 @@ namespace RFID_FEATHER_ASSETS
                     asset.imageUrls = newImgFileNames; //txtCapturedImagePath.Text;//txtImagePath.Text;
                     asset.registerUserId = userId;//lblLoginUserName.Text.Substring(lblLoginUserName.Text.IndexOf(":") + 2);
                     asset.updateUserId = userId;
+
                     //For Validity Expiration
+                    if (dtStartTimePicker.Checked)
+                        startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd") + dtStartTimePicker.Value.ToString("THH:mm");
+                    else
+                        startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd"); //+ "00:01";
+
                     if (rbtnValidToday.Checked)
                     {
                         startDateValue = DateTime.UtcNow.ToString("yyyy-MM-dd"); //+ "00:01";
@@ -358,14 +376,16 @@ namespace RFID_FEATHER_ASSETS
                     }
                     else if (rbtnValidUntil.Checked)
                     {
-                        startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd"); //+ "00:01";
+                        //startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd"); //+ "00:01";
+                        //if (dtStartTimePicker.Checked) startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd") + dtStartTimePicker.Value.ToString("THH:mm");
+                        //else startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd"); //+ "17:00";
 
                         if (dtTimePicker.Checked) validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd") + dtTimePicker.Value.ToString("THH:mm");
                         else validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd T") + "17:00";
                     }
                     else
                     {
-                        startDateValue = null;
+                        //startDateValue = null;
                         validUntilValue = null;
                     }
                     DateTime? dt = null;
@@ -535,6 +555,12 @@ namespace RFID_FEATHER_ASSETS
             updateInfo.tagType = 1;
             //updateInfo.takeOutAllowed = false;
             updateInfo.takeOutInfo = txtTakeOutNote.Text.Trim();
+
+            if (dtStartTimePicker.Checked)
+                startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd") + dtStartTimePicker.Value.ToString("THH:mm");
+            else
+                startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd"); //+ "00:01";
+
             if (rbtnValidToday.Checked)
             {
                 startDateValue = DateTime.UtcNow.ToString("yyyy-MM-dd"); //+ "00:01";
@@ -542,14 +568,16 @@ namespace RFID_FEATHER_ASSETS
             }
             else if (rbtnValidUntil.Checked)
             {
-                startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd"); //+ "00:01";
+                //startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd"); //+ "00:01";
+                //if (dtStartTimePicker.Checked) startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd") + dtStartTimePicker.Value.ToString("THH:mm");
+                //else startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd"); //+ "17:00";
 
                 if (dtTimePicker.Checked) validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd") + dtTimePicker.Value.ToString("THH:mm");
                 else validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd T") + "17:00";
             }
             else
             {
-                startDateValue = null;
+                //startDateValue = null;
                 validUntilValue = null;
             }
             DateTime? dt = null;
@@ -675,6 +703,9 @@ namespace RFID_FEATHER_ASSETS
             //btnGetRFIDTag.Enabled = true;
 
             rbtnNoExpiration.Checked = true;
+            StartValidUntilDateTime();
+            AssetValidUntilDateTime();
+
             if (language == "English")
             {
                 btnCapturePhoto.Text = "";//"Capture Owner Photo";
@@ -699,6 +730,17 @@ namespace RFID_FEATHER_ASSETS
 
             this.Refresh();
             //btnGetRFIDTag.Focus();
+        }
+
+        private void StartValidUntilDateTime()
+        {
+            dtStartDate.CustomFormat = "'Date'"; //"MM/dd/yyyy";
+            dtStartDate.Format = DateTimePickerFormat.Custom;
+            dtStartDate.Value = DateTime.Now;
+
+            dtStartTimePicker.CustomFormat = "'Time'";
+            dtStartTimePicker.Format = DateTimePickerFormat.Custom;
+            dtStartTimePicker.Checked = false;
         }
 
         #region old code
@@ -961,26 +1003,50 @@ namespace RFID_FEATHER_ASSETS
             //For Valid Until Date
             if (!rbtnValidUntil.Checked)
             {
-                dtStartDate.CustomFormat = "'Date'";
-                dtStartDate.Format = DateTimePickerFormat.Custom;
+                //dtStartDate.CustomFormat = "'Date'";
+                //dtStartDate.Format = DateTimePickerFormat.Custom;
+                //dtDatePicker.CustomFormat = "'Date'";
+                //dtDatePicker.Format = DateTimePickerFormat.Custom;
+
+                //dtTimePicker.CustomFormat = "'Time'";
+                //dtTimePicker.Format = DateTimePickerFormat.Custom;
+                //dtTimePicker.Checked = false;
+
                 dtDatePicker.CustomFormat = "'Date'";
                 dtDatePicker.Format = DateTimePickerFormat.Custom;
 
                 dtTimePicker.CustomFormat = "'Time'";
                 dtTimePicker.Format = DateTimePickerFormat.Custom;
                 dtTimePicker.Checked = false;
+                dtTimePicker.Enabled = false;
             }
             else
             {
-                dtStartDate.CustomFormat = "MM/dd/yyyy";
-                dtStartDate.Format = DateTimePickerFormat.Custom;
-                dtStartDate.Value = DateTime.Now;
-                //For Valid Until Date
+                //dtStartDate.CustomFormat = "MM/dd/yyyy";
+                //dtStartDate.Format = DateTimePickerFormat.Custom;
+                //dtStartDate.Value = DateTime.Now;
+                ////For Valid Until Date
+                //dtDatePicker.CustomFormat = "MM/dd/yyyy";
+                //dtDatePicker.Format = DateTimePickerFormat.Custom;
+                //dtDatePicker.Value = DateTime.Now;
+                
                 dtDatePicker.CustomFormat = "MM/dd/yyyy";
                 dtDatePicker.Format = DateTimePickerFormat.Custom;
                 dtDatePicker.Value = DateTime.Now;
+
+                dtTimePicker.CustomFormat = "'Time'";
+                dtTimePicker.Format = DateTimePickerFormat.Custom;
+                dtTimePicker.Checked = false;
+                dtTimePicker.Enabled = true;
             }
 
+            ////dtStartTimePicker.CustomFormat = "'Time'";
+            ////dtStartTimePicker.Format = DateTimePickerFormat.Custom;
+            ////dtStartTimePicker.Checked = false;
+
+            ////dtTimePicker.CustomFormat = "'Time'";
+            ////dtTimePicker.Format = DateTimePickerFormat.Custom;
+            ////dtTimePicker.Checked = false;
             ////For Valid Until Date
             //if (!dtDatePicker.Checked)
             //{
@@ -1496,6 +1562,19 @@ namespace RFID_FEATHER_ASSETS
                 dtTimePicker.Format = DateTimePickerFormat.Custom;
                 //dtTimePicker.Value = DateTime.Now;
             }
+
+            if (!dtStartTimePicker.Checked)
+            {
+                dtStartTimePicker.CustomFormat = "'Time'";
+                dtStartTimePicker.Format = DateTimePickerFormat.Custom;
+            }
+            else
+            {
+                //dtTimePicker.CustomFormat = "hh:mm tt";
+                dtStartTimePicker.CustomFormat = "h:mm tt";
+                dtStartTimePicker.Format = DateTimePickerFormat.Custom;
+                //dtTimePicker.Value = DateTime.Now;
+            }
         }
 
         private void rbtnValidUntil_CheckedChanged(object sender, EventArgs e)
@@ -1714,25 +1793,37 @@ namespace RFID_FEATHER_ASSETS
                         //{
                         if (!ReadIDTagWasClicked)
                         {
+                            startDateValue = assetInfo.startDate.Value.ToString("yyyy-MM-dd");
+                            dtStartDate.Value = Convert.ToDateTime(startDateValue);
+                            dtStartDate.CustomFormat = "MM/dd/yyyy";
+                            dtStartDate.Format = DateTimePickerFormat.Custom;
+
+                            startDateValue = assetInfo.startDate.Value.ToString("HH:mm tt");
+                            dtStartTimePicker.Value = Convert.ToDateTime(startDateValue);
+                            dtStartTimePicker.Checked = true;
+
                             if (assetInfo.validUntil == null) rbtnNoExpiration.Checked = true;
                             else
                             {
                                 rbtnValidUntil.Checked = true;
-                                startDateValue = assetInfo.startDate.Value.ToString("yyyy-MM-dd");
+                                //startDateValue = assetInfo.startDate.Value.ToString("yyyy-MM-dd");
                                 validUntilValue = assetInfo.validUntil.Value.ToString("yyyy-MM-dd");
-                                dtStartDate.Value = Convert.ToDateTime(startDateValue);
+                                //dtStartDate.Value = Convert.ToDateTime(startDateValue);
                                 dtDatePicker.Value = Convert.ToDateTime(validUntilValue);
 
                                 //if (Convert.ToDateTime(assetInfo.validUntil).ToString("HH:mm") != "00:00")
                                 //{
+                                //startDateValue = assetInfo.startDate.Value.ToString("HH:mm tt");
+                                //dtStartTimePicker.Value = Convert.ToDateTime(startDateValue);
+                                //dtStartTimePicker.Checked = true;
                                 validUntilValue = assetInfo.validUntil.Value.ToString("HH:mm tt");
                                 dtTimePicker.Value = Convert.ToDateTime(validUntilValue);
                                 dtTimePicker.Checked = true;
-                                AssetValidUntilTime();
+                                //AssetValidUntilTime();
                                 //}
                             }
                         }
-
+                        AssetValidUntilTime();
                         getownerInfo(assetInfo.ownerUserId, assetInfo.validUntil);
                     
                     //string urls = assetInfo.imageUrls;
@@ -2109,6 +2200,11 @@ namespace RFID_FEATHER_ASSETS
             //}
             ReadIDTagWasClicked = false;
             btnReadIDTag.Focus();
+        }
+
+        private void dtStartTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            AssetValidUntilTime();
         }
     }
 

@@ -19,6 +19,8 @@ namespace RFID_FEATHER_ASSETS
         string tokenvalue;
         string roleValue;
         string language;
+        string companyName;
+        string location;
         public MainMenu(string tokenvaluesource, /*string portnamesource,*/ string roleSource)
         {
             InitializeComponent();
@@ -26,6 +28,8 @@ namespace RFID_FEATHER_ASSETS
             tokenvalue = tokenvaluesource;
             roleValue = roleSource;
             getLanguage();
+            company.Text = companyName;
+            locationTxt.Text = location;
             languageHandler();
         }
 
@@ -40,7 +44,8 @@ namespace RFID_FEATHER_ASSETS
                 if (key != null)
                 {
                     language = (string)(key.GetValue("Language"));
-
+                    companyName = (string)(key.GetValue("companyName"));
+                    location = (string)(key.GetValue("readerInfo"));
                     key.Close();
                 }
             }

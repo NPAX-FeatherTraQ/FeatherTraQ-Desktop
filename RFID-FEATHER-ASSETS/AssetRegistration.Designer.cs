@@ -54,8 +54,9 @@
             this.lblOwnerName = new System.Windows.Forms.Label();
             this.btnGetAssetInfo = new System.Windows.Forms.Button();
             this.grpExpiration = new System.Windows.Forms.GroupBox();
+            this.dtStartTimePicker = new System.Windows.Forms.DateTimePicker();
             this.dtStartDate = new System.Windows.Forms.DateTimePicker();
-            this.rbtnLblUntil = new System.Windows.Forms.Label();
+            this.lblStart = new System.Windows.Forms.Label();
             this.rbtnNoExpiration = new System.Windows.Forms.RadioButton();
             this.rbtnValidUntil = new System.Windows.Forms.RadioButton();
             this.rbtnValidToday = new System.Windows.Forms.RadioButton();
@@ -334,8 +335,9 @@
             // grpExpiration
             // 
             resources.ApplyResources(this.grpExpiration, "grpExpiration");
+            this.grpExpiration.Controls.Add(this.dtStartTimePicker);
             this.grpExpiration.Controls.Add(this.dtStartDate);
-            this.grpExpiration.Controls.Add(this.rbtnLblUntil);
+            this.grpExpiration.Controls.Add(this.lblStart);
             this.grpExpiration.Controls.Add(this.rbtnNoExpiration);
             this.grpExpiration.Controls.Add(this.rbtnValidUntil);
             this.grpExpiration.Controls.Add(this.rbtnValidToday);
@@ -344,18 +346,29 @@
             this.grpExpiration.Name = "grpExpiration";
             this.grpExpiration.TabStop = false;
             // 
+            // dtStartTimePicker
+            // 
+            resources.ApplyResources(this.dtStartTimePicker, "dtStartTimePicker");
+            this.dtStartTimePicker.Checked = false;
+            this.dtStartTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtStartTimePicker.Name = "dtStartTimePicker";
+            this.dtStartTimePicker.ShowCheckBox = true;
+            this.dtStartTimePicker.ShowUpDown = true;
+            this.dtStartTimePicker.TabStop = false;
+            this.dtStartTimePicker.ValueChanged += new System.EventHandler(this.dtStartTimePicker_ValueChanged);
+            // 
             // dtStartDate
             // 
             resources.ApplyResources(this.dtStartDate, "dtStartDate");
             this.dtStartDate.Checked = false;
-            this.dtStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtStartDate.Name = "dtStartDate";
             this.dtStartDate.TabStop = false;
             // 
-            // rbtnLblUntil
+            // lblStart
             // 
-            resources.ApplyResources(this.rbtnLblUntil, "rbtnLblUntil");
-            this.rbtnLblUntil.Name = "rbtnLblUntil";
+            resources.ApplyResources(this.lblStart, "lblStart");
+            this.lblStart.Name = "lblStart";
             // 
             // rbtnNoExpiration
             // 
@@ -768,8 +781,9 @@
         private System.Windows.Forms.Button btnReadIDTag;
         private System.Windows.Forms.TextBox txtOwnerName;
         private System.Windows.Forms.Label lblOwnerName;
-        private System.Windows.Forms.Label rbtnLblUntil;
+        private System.Windows.Forms.Label lblStart;
         private System.Windows.Forms.DateTimePicker dtStartDate;
+        private System.Windows.Forms.DateTimePicker dtStartTimePicker;
 
     }
 }

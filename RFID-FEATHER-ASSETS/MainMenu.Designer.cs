@@ -36,6 +36,10 @@
             this.btnMyAssets = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnTransactionHistory = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.company = new System.Windows.Forms.Label();
+            this.locationTxt = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnScan
@@ -149,12 +153,64 @@
             this.btnTransactionHistory.UseVisualStyleBackColor = false;
             this.btnTransactionHistory.Click += new System.EventHandler(this.btnTransactionHistory_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label2.Location = new System.Drawing.Point(12, 260);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 13);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Company:";
+            // 
+            // company
+            // 
+            this.company.AutoSize = true;
+            this.company.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.company.ForeColor = System.Drawing.Color.Black;
+            this.company.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.company.Location = new System.Drawing.Point(74, 260);
+            this.company.Name = "company";
+            this.company.Size = new System.Drawing.Size(56, 13);
+            this.company.TabIndex = 23;
+            this.company.Text = "Location";
+            // 
+            // locationTxt
+            // 
+            this.locationTxt.AutoSize = true;
+            this.locationTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.locationTxt.ForeColor = System.Drawing.Color.Black;
+            this.locationTxt.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.locationTxt.Location = new System.Drawing.Point(198, 260);
+            this.locationTxt.Name = "locationTxt";
+            this.locationTxt.Size = new System.Drawing.Size(56, 13);
+            this.locationTxt.TabIndex = 25;
+            this.locationTxt.Text = "Location";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label4.Location = new System.Drawing.Point(136, 260);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 13);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Location:";
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(281, 274);
+            this.Controls.Add(this.locationTxt);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.company);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnTransactionHistory);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnMyAssets);
@@ -184,5 +240,9 @@
         private System.Windows.Forms.Button btnMyAssets;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnTransactionHistory;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label company;
+        private System.Windows.Forms.Label locationTxt;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -24,33 +24,50 @@ namespace RFID_FEATHER_ASSETS
     public partial class LoginActivity : Form
     {
         int companyid;
+        string companyName;
 		string readerInfo;
+        string locationInfo;
+        bool save;
         public LoginActivity()//string portnamesource)
         {
             InitializeComponent();
             getLanguageInfo();
-			GetReaderInfo();
+			//GetReaderInfo();
+            if (locationInfo != null)
+            {
+                populateLocation();
+            }
             //populateLanguage();
         }
 
-        private void populateLanguage()
+        private void populateLocation()
         {
-            List<Language> lang = new List<Language>();
-            /*if (language == "Japanese")
+            List<Location> loc = new List<Location>();
+
+            if (locationInfo != null)
             {
-                roles.Add(new GlobalClass.GetSetClass() { roleName = rm.GetString("Administrator"), value = "ROLE_ADMIN" });
-                roles.Add(new GlobalClass.GetSetClass() { roleName = rm.GetString("Security"), value = "ROLE_GUARD" });
+                string[] locInfo = locationInfo.Split(',');
+
+                /*if (language == "Japanese")
+                {
+                    roles.Add(new GlobalClass.GetSetClass() { roleName = rm.GetString("Administrator"), value = "ROLE_ADMIN" });
+                    roles.Add(new GlobalClass.GetSetClass() { roleName = rm.GetString("Security"), value = "ROLE_GUARD" });
+                    //roles.Add(new Role() { roleName = "User", value = "ROLE_USER" });
+                }
+                else
+                {*/
+
+                for (int i = 0; i < locInfo.Length; i++)
+                {
+            
+                        loc.Add(new Location() { location = locInfo[i], value = "location_" + locInfo[i] });
+                }
                 //roles.Add(new Role() { roleName = "User", value = "ROLE_USER" });
+                /*}*/
+                this.location.DataSource = loc;
+                this.location.ValueMember = "value";
+                this.location.DisplayMember = "location";
             }
-            else
-            {*/
-                lang.Add(new Language() { language = "English", value = "English" });
-                lang.Add(new Language() { language = "Japanese", value = "Japanese" });
-                //roles.Add(new Role() { roleName = "User", value = "ROLE_USER" });
-            /*}*/
-                this.selectLanguage.DataSource = lang;
-                this.selectLanguage.ValueMember = "value";
-                this.selectLanguage.DisplayMember = "roleName"; 
         }
 
 		private void GetReaderInfo()
@@ -99,6 +116,7 @@ namespace RFID_FEATHER_ASSETS
                 if (key != null)
                 {
                     selectLanguage.Text = (string)(key.GetValue("Language"));
+                    locationInfo = (string)(key.GetValue("LocInfo"));
                     key.Close();
                 }
             }
@@ -162,9 +180,30 @@ namespace RFID_FEATHER_ASSETS
 
                         JsonDeserializer deserial = new JsonDeserializer();
                         loginResult = deserial.Deserialize<GlobalClass.GetSetClass>(response);
+                        readerInfo = location.Text;
+                       
+                        if (locationInfo == null)
+                            locationInfo = location.Text;
+                        else
+                        {
+                            string[] loc = locationInfo.Split(',');
+                            for (int i = 0; i < loc.Length; i++)
+                            {
+                                if (loc[i].ToLower() == location.Text.ToLower())
+                                {
+                                    save = false;
+                                    break;
+                                }
+                                else
+                                    save = true;
 
+                            }
+                                if(save == true)
+                                    locationInfo = locationInfo + ',' + location.Text;
+                        }
                         companyid = loginResult.companyId;
-                        SaveAssetSystemInfo(loginResult.authenticationToken, loginResult.roles, loginResult.userId, txtUserName.Text.Trim(), readerInfo);
+                        companyName = loginResult.companyName;
+                        SaveAssetSystemInfo(loginResult.authenticationToken, loginResult.roles, loginResult.userId, txtUserName.Text.Trim(), readerInfo, companyName, locationInfo);
 
 
                         //check authorities    
@@ -217,7 +256,7 @@ namespace RFID_FEATHER_ASSETS
              
         }
 
-        private void SaveAssetSystemInfo(string autoken, string roles, int userId, string loginid, string readerInfo)
+        private void SaveAssetSystemInfo(string autoken, string roles, int userId, string loginid, string readerInfo, string companyName, string locationInfo)
         {
             try
             {
@@ -231,6 +270,8 @@ namespace RFID_FEATHER_ASSETS
                 key.SetValue("companyId", companyid);
                 key.SetValue("UserId", userId);
                 key.SetValue("Language", selectLanguage.Text.ToString());
+                key.SetValue("LocInfo", locationInfo);
+                key.SetValue("companyName", companyName);
                 if (!string.IsNullOrEmpty(loginid)) key.SetValue("UserName", loginid);
                 if (!string.IsNullOrEmpty(loginid)) key.SetValue("readerInfo", readerInfo);
                 key.Close();
@@ -293,13 +334,18 @@ namespace RFID_FEATHER_ASSETS
                 lblSigningIn.Text = rm.GetString("lblSigningIn");
             }
         }
+
+        private void lblLogin_Click(object sender, EventArgs e)
+        {
+
+        }
      }
 
     //Getters and Setters
 
-    public class Language
+    public class Location
     {
-        public string language { get; set; }
+        public string location { get; set; }
         public string value { get; set; }
     }
     //public class LoginInfo

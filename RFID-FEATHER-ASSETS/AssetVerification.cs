@@ -315,14 +315,14 @@ namespace RFID_FEATHER_ASSETS
                                     row.Cells["colViewerIcon"].Value = Properties.Resources.ViewDetailsIcon;
                                     row.Cells["colAssetID"].Value = verifyResult.assetId;
                                     row.Cells["colAssetDescription"].Value = verifyResult.description;
-                                    row.Cells["colTakeOutNote"].Value = verifyResult.takeOutInfo;
+                                    //row.Cells["colTakeOutNote"].Value = verifyResult.takeOutInfo;
 
                                     if (verifyResult.description == "ID_CARD")
                                     {
                                         //row.Cells["colIDTag"].Value = txtRFIDTag.Text;
                                         row.Cells["colIDOwner"].Value = verifyResult.ownerUserId;
                                         row.Cells["colOwnerName"].Value = verifyResult.name;
-                                        row.Cells["colValidityPeriod"].Value = verifyResult.validUntil == null ? "Unlimited" : "Start " + verifyResult.startDate.Value.ToString("g") + " Until " + verifyResult.validUntil.Value.ToString("g");
+                                        row.Cells["colValidityPeriod"].Value = verifyResult.validUntil == null ? "Start " + verifyResult.startDate.Value.ToString("g") + " - No End Date" : "Start " + verifyResult.startDate.Value.ToString("g") + " Until " + verifyResult.validUntil.Value.ToString("g");
                                         //row.Cells["colAssetID"].Value = verifyResult.assetId;
 
                                         //Check Validity Expiration
@@ -359,7 +359,7 @@ namespace RFID_FEATHER_ASSETS
                                     }
 
                                     row.Cells["colRFIDTag"].Value = txtRFIDTag.Text;
-                                    //row.Cells["colValidityPeriod"].Value = verifyResult.validUntil == null ? "Unlimited" : "Start " + verifyResult.validUntil + " Until " + verifyResult.validUntil;
+                                    //row.Cells["colValidityPeriod"].Value = verifyResult.validUntil == null ? "No End Date" : "Start " + verifyResult.validUntil + " Until " + verifyResult.validUntil;
 
                                     ////Check Validity Expiration
                                     //if (verifyResult.validUntil < Convert.ToDateTime(DateTime.Now.ToString("g")) && verifyResult.validUntil != DateTime.MinValue)
@@ -1189,6 +1189,7 @@ namespace RFID_FEATHER_ASSETS
                                     //aRow.Cells["colAssetID"].Value = iRow.Cells["colAssetID"].Value;
                                     //aRow.DefaultCellStyle.BackColor = Color.Orange;
                                     //aRow.DefaultCellStyle.ForeColor = Color.White;
+                                    aRow.Cells["colStatus"].ToolTipText = aRow.Cells["colValidityPeriod"].Value.ToString();
                                 }
                                 //playAlarmSound("Ok");
                                 break;
@@ -1636,8 +1637,8 @@ namespace RFID_FEATHER_ASSETS
 
                            //if (assetInfo.validUntil == null)
                            //{
-                           //    txtValidFrom.Text = "Unlimited";
-                           //    txtValidUntil.Text = "Unlimited";
+                           //    txtValidFrom.Text = "No End Date";
+                           //    txtValidUntil.Text = "No End Date";
                            //}
                            //else
                            //{

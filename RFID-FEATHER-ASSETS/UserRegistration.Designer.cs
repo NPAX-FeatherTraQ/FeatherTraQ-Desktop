@@ -51,10 +51,11 @@
             this.lblLoadingInformation = new System.Windows.Forms.Label();
             this.btnEditInfo = new System.Windows.Forms.Button();
             this.grpExpiration = new System.Windows.Forms.GroupBox();
+            this.dtStartTimePicker = new System.Windows.Forms.DateTimePicker();
             this.dtStartDate = new System.Windows.Forms.DateTimePicker();
-            this.rbtnValidUntil = new System.Windows.Forms.Label();
+            this.lblStart = new System.Windows.Forms.Label();
             this.rbtnNoExpiration = new System.Windows.Forms.RadioButton();
-            this.rbtnValidStart = new System.Windows.Forms.RadioButton();
+            this.rbtnValidUntil = new System.Windows.Forms.RadioButton();
             this.rbtnValidToday = new System.Windows.Forms.RadioButton();
             this.dtTimePicker = new System.Windows.Forms.DateTimePicker();
             this.dtDatePicker = new System.Windows.Forms.DateTimePicker();
@@ -395,45 +396,62 @@
             // grpExpiration
             // 
             this.grpExpiration.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.grpExpiration.Controls.Add(this.dtStartTimePicker);
             this.grpExpiration.Controls.Add(this.dtStartDate);
-            this.grpExpiration.Controls.Add(this.rbtnValidUntil);
+            this.grpExpiration.Controls.Add(this.lblStart);
             this.grpExpiration.Controls.Add(this.rbtnNoExpiration);
-            this.grpExpiration.Controls.Add(this.rbtnValidStart);
+            this.grpExpiration.Controls.Add(this.rbtnValidUntil);
             this.grpExpiration.Controls.Add(this.rbtnValidToday);
             this.grpExpiration.Controls.Add(this.dtTimePicker);
             this.grpExpiration.Controls.Add(this.dtDatePicker);
             this.grpExpiration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.grpExpiration.Location = new System.Drawing.Point(88, 36);
             this.grpExpiration.Name = "grpExpiration";
-            this.grpExpiration.Size = new System.Drawing.Size(282, 128);
+            this.grpExpiration.Size = new System.Drawing.Size(282, 116);
             this.grpExpiration.TabIndex = 62;
             this.grpExpiration.TabStop = false;
             this.grpExpiration.Text = "Validity Period";
+            // 
+            // dtStartTimePicker
+            // 
+            this.dtStartTimePicker.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtStartTimePicker.Checked = false;
+            this.dtStartTimePicker.CustomFormat = "\'Time\'";
+            this.dtStartTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.dtStartTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtStartTimePicker.Location = new System.Drawing.Point(158, 31);
+            this.dtStartTimePicker.Name = "dtStartTimePicker";
+            this.dtStartTimePicker.ShowCheckBox = true;
+            this.dtStartTimePicker.ShowUpDown = true;
+            this.dtStartTimePicker.Size = new System.Drawing.Size(113, 22);
+            this.dtStartTimePicker.TabIndex = 66;
+            this.dtStartTimePicker.TabStop = false;
+            this.dtStartTimePicker.ValueChanged += new System.EventHandler(this.dtStartTimePicker_ValueChanged);
             // 
             // dtStartDate
             // 
             this.dtStartDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtStartDate.Checked = false;
-            this.dtStartDate.CustomFormat = "";
+            this.dtStartDate.CustomFormat = "MM/dd/yyyy";
             this.dtStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.dtStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtStartDate.Location = new System.Drawing.Point(81, 49);
+            this.dtStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtStartDate.Location = new System.Drawing.Point(72, 31);
             this.dtStartDate.Name = "dtStartDate";
             this.dtStartDate.Size = new System.Drawing.Size(85, 22);
             this.dtStartDate.TabIndex = 65;
             this.dtStartDate.TabStop = false;
             // 
-            // rbtnValidUntil
+            // lblStart
             // 
-            this.rbtnValidUntil.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.rbtnValidUntil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnValidUntil.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.rbtnValidUntil.Location = new System.Drawing.Point(31, 76);
-            this.rbtnValidUntil.Name = "rbtnValidUntil";
-            this.rbtnValidUntil.Size = new System.Drawing.Size(44, 14);
-            this.rbtnValidUntil.TabIndex = 64;
-            this.rbtnValidUntil.Text = "Until";
-            this.rbtnValidUntil.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblStart.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblStart.Location = new System.Drawing.Point(24, 37);
+            this.lblStart.Name = "lblStart";
+            this.lblStart.Size = new System.Drawing.Size(44, 14);
+            this.lblStart.TabIndex = 64;
+            this.lblStart.Text = "Start";
+            this.lblStart.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // rbtnNoExpiration
             // 
@@ -441,41 +459,42 @@
             this.rbtnNoExpiration.AutoSize = true;
             this.rbtnNoExpiration.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.rbtnNoExpiration.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.rbtnNoExpiration.Location = new System.Drawing.Point(20, 99);
+            this.rbtnNoExpiration.Location = new System.Drawing.Point(13, 80);
             this.rbtnNoExpiration.Name = "rbtnNoExpiration";
             this.rbtnNoExpiration.Size = new System.Drawing.Size(82, 20);
             this.rbtnNoExpiration.TabIndex = 8;
             this.rbtnNoExpiration.Text = "Unlimited";
             this.rbtnNoExpiration.UseVisualStyleBackColor = true;
             // 
-            // rbtnValidStart
+            // rbtnValidUntil
             // 
-            this.rbtnValidStart.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.rbtnValidStart.AutoSize = true;
-            this.rbtnValidStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.rbtnValidStart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.rbtnValidStart.Location = new System.Drawing.Point(20, 53);
-            this.rbtnValidStart.Name = "rbtnValidStart";
-            this.rbtnValidStart.Size = new System.Drawing.Size(53, 20);
-            this.rbtnValidStart.TabIndex = 7;
-            this.rbtnValidStart.Text = "Start";
-            this.rbtnValidStart.UseVisualStyleBackColor = true;
-            this.rbtnValidStart.CheckedChanged += new System.EventHandler(this.rbtnValidUntil_CheckedChanged);
+            this.rbtnValidUntil.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rbtnValidUntil.AutoSize = true;
+            this.rbtnValidUntil.Checked = true;
+            this.rbtnValidUntil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.rbtnValidUntil.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.rbtnValidUntil.Location = new System.Drawing.Point(13, 57);
+            this.rbtnValidUntil.Name = "rbtnValidUntil";
+            this.rbtnValidUntil.Size = new System.Drawing.Size(52, 20);
+            this.rbtnValidUntil.TabIndex = 7;
+            this.rbtnValidUntil.TabStop = true;
+            this.rbtnValidUntil.Text = "Until";
+            this.rbtnValidUntil.UseVisualStyleBackColor = true;
+            this.rbtnValidUntil.CheckedChanged += new System.EventHandler(this.rbtnValidUntil_CheckedChanged);
             // 
             // rbtnValidToday
             // 
             this.rbtnValidToday.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rbtnValidToday.AutoSize = true;
-            this.rbtnValidToday.Checked = true;
             this.rbtnValidToday.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.rbtnValidToday.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.rbtnValidToday.Location = new System.Drawing.Point(20, 27);
+            this.rbtnValidToday.Location = new System.Drawing.Point(13, 34);
             this.rbtnValidToday.Name = "rbtnValidToday";
             this.rbtnValidToday.Size = new System.Drawing.Size(66, 20);
             this.rbtnValidToday.TabIndex = 6;
-            this.rbtnValidToday.TabStop = true;
             this.rbtnValidToday.Text = "Today";
             this.rbtnValidToday.UseVisualStyleBackColor = true;
+            this.rbtnValidToday.Visible = false;
             // 
             // dtTimePicker
             // 
@@ -483,7 +502,7 @@
             this.dtTimePicker.Checked = false;
             this.dtTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.dtTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtTimePicker.Location = new System.Drawing.Point(167, 71);
+            this.dtTimePicker.Location = new System.Drawing.Point(158, 54);
             this.dtTimePicker.Name = "dtTimePicker";
             this.dtTimePicker.ShowCheckBox = true;
             this.dtTimePicker.ShowUpDown = true;
@@ -499,7 +518,7 @@
             this.dtDatePicker.CustomFormat = "";
             this.dtDatePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.dtDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtDatePicker.Location = new System.Drawing.Point(81, 71);
+            this.dtDatePicker.Location = new System.Drawing.Point(72, 54);
             this.dtDatePicker.Name = "dtDatePicker";
             this.dtDatePicker.Size = new System.Drawing.Size(85, 22);
             this.dtDatePicker.TabIndex = 9;
@@ -563,64 +582,69 @@
             this.authorities.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.authorities.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.authorities.FormattingEnabled = true;
-            this.authorities.Location = new System.Drawing.Point(88, 533);
+            this.authorities.Location = new System.Drawing.Point(88, 440);
             this.authorities.Name = "authorities";
             this.authorities.Size = new System.Drawing.Size(282, 24);
             this.authorities.TabIndex = 10;
             this.authorities.Tag = "";
+            this.authorities.SelectedIndexChanged += new System.EventHandler(this.authorities_SelectedIndexChanged);
             // 
             // lblAuthorities
             // 
             this.lblAuthorities.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblAuthorities.AutoSize = true;
             this.lblAuthorities.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAuthorities.Location = new System.Drawing.Point(84, 510);
+            this.lblAuthorities.Location = new System.Drawing.Point(84, 417);
             this.lblAuthorities.Name = "lblAuthorities";
-            this.lblAuthorities.Size = new System.Drawing.Size(89, 20);
+            this.lblAuthorities.Size = new System.Drawing.Size(85, 20);
             this.lblAuthorities.TabIndex = 24;
-            this.lblAuthorities.Text = "Authorities:";
+            this.lblAuthorities.Text = "User Type:";
             // 
             // cpassword
             // 
             this.cpassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpassword.Location = new System.Drawing.Point(88, 484);
+            this.cpassword.Location = new System.Drawing.Point(88, 539);
             this.cpassword.Name = "cpassword";
             this.cpassword.PasswordChar = '•';
             this.cpassword.Size = new System.Drawing.Size(282, 22);
             this.cpassword.TabIndex = 9;
+            this.cpassword.Visible = false;
             // 
             // lblCpassword
             // 
             this.lblCpassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCpassword.AutoSize = true;
             this.lblCpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCpassword.Location = new System.Drawing.Point(84, 461);
+            this.lblCpassword.Location = new System.Drawing.Point(84, 516);
             this.lblCpassword.Name = "lblCpassword";
             this.lblCpassword.Size = new System.Drawing.Size(141, 20);
             this.lblCpassword.TabIndex = 22;
             this.lblCpassword.Text = "Confirm Password:";
+            this.lblCpassword.Visible = false;
             // 
             // password
             // 
             this.password.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.password.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.password.Location = new System.Drawing.Point(88, 436);
+            this.password.Location = new System.Drawing.Point(88, 491);
             this.password.Name = "password";
             this.password.PasswordChar = '•';
             this.password.Size = new System.Drawing.Size(282, 22);
             this.password.TabIndex = 8;
+            this.password.Visible = false;
             // 
             // lblPassword
             // 
             this.lblPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(84, 413);
+            this.lblPassword.Location = new System.Drawing.Point(84, 468);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(86, 20);
             this.lblPassword.TabIndex = 20;
             this.lblPassword.Text = "Password: ";
+            this.lblPassword.Visible = false;
             // 
             // btnSubmit
             // 
@@ -783,7 +807,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox grpExpiration;
         private System.Windows.Forms.RadioButton rbtnNoExpiration;
-        private System.Windows.Forms.RadioButton rbtnValidStart;
+        private System.Windows.Forms.RadioButton rbtnValidUntil;
         private System.Windows.Forms.RadioButton rbtnValidToday;
         private System.Windows.Forms.DateTimePicker dtTimePicker;
         private System.Windows.Forms.DateTimePicker dtDatePicker;
@@ -824,9 +848,10 @@
         private System.Windows.Forms.Label lblOwnerPhoto;
         private System.Windows.Forms.Button btnEditInfo;
         private System.Windows.Forms.DateTimePicker dtStartDate;
-        private System.Windows.Forms.Label rbtnValidUntil;
         private System.Windows.Forms.Button CaptureImg;
         private System.Windows.Forms.Label lblSubmittingInformation;
         private System.Windows.Forms.Label lblLoadingInformation;
+        private System.Windows.Forms.DateTimePicker dtStartTimePicker;
+        private System.Windows.Forms.Label lblStart;
     }
 }

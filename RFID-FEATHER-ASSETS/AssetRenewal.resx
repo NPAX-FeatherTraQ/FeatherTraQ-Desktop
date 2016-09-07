@@ -118,55 +118,85 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="rbtnLblUntil.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="dtStartTimePicker.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
+  <data name="dtStartTimePicker.CustomFormat" xml:space="preserve">
+    <value>'Time'</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="rbtnLblUntil.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="dtStartTimePicker.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
-  <data name="rbtnLblUntil.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="dtStartTimePicker.Location" type="System.Drawing.Point, System.Drawing">
+    <value>161, 31</value>
   </data>
-  <data name="rbtnLblUntil.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 72</value>
-  </data>
-  <data name="rbtnLblUntil.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 19</value>
+  <data name="dtStartTimePicker.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 22</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="rbtnLblUntil.TabIndex" type="System.Int32, mscorlib">
-    <value>84</value>
+  <data name="dtStartTimePicker.TabIndex" type="System.Int32, mscorlib">
+    <value>85</value>
   </data>
-  <data name="rbtnLblUntil.Text" xml:space="preserve">
-    <value>Until</value>
+  <data name="&gt;&gt;dtStartTimePicker.Name" xml:space="preserve">
+    <value>dtStartTimePicker</value>
   </data>
-  <data name="rbtnLblUntil.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
+  <data name="&gt;&gt;dtStartTimePicker.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;rbtnLblUntil.Name" xml:space="preserve">
-    <value>rbtnLblUntil</value>
-  </data>
-  <data name="&gt;&gt;rbtnLblUntil.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rbtnLblUntil.Parent" xml:space="preserve">
+  <data name="&gt;&gt;dtStartTimePicker.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;rbtnLblUntil.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;dtStartTimePicker.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="lblStart.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lblStart.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="lblStart.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 36</value>
+  </data>
+  <data name="lblStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 19</value>
+  </data>
+  <data name="lblStart.TabIndex" type="System.Int32, mscorlib">
+    <value>84</value>
+  </data>
+  <data name="lblStart.Text" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="lblStart.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;lblStart.Name" xml:space="preserve">
+    <value>lblStart</value>
+  </data>
+  <data name="&gt;&gt;lblStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblStart.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;lblStart.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="dtStartDate.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="dtStartDate.CustomFormat" xml:space="preserve">
-    <value />
+    <value>MM/dd/yyyy</value>
   </data>
   <data name="dtStartDate.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="dtStartDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 45</value>
+    <value>75, 31</value>
   </data>
   <data name="dtStartDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 22</value>
@@ -184,7 +214,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;dtStartDate.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="lblSubmittingInformation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -196,7 +226,7 @@
     <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
   </data>
   <data name="lblSubmittingInformation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 109</value>
+    <value>5, 108</value>
   </data>
   <data name="lblSubmittingInformation.Size" type="System.Drawing.Size, System.Drawing">
     <value>260, 16</value>
@@ -220,7 +250,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblSubmittingInformation.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="btnCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -229,7 +259,7 @@
     <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>141, 133</value>
+    <value>140, 133</value>
   </data>
   <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 39</value>
@@ -250,7 +280,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="btnSubmit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -259,7 +289,7 @@
     <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="btnSubmit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 133</value>
+    <value>28, 133</value>
   </data>
   <data name="btnSubmit.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 39</value>
@@ -280,7 +310,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;btnSubmit.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="rbtnValidUnlimited.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -292,16 +322,16 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="rbtnValidUnlimited.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 89</value>
+    <value>14, 80</value>
   </data>
   <data name="rbtnValidUnlimited.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 20</value>
+    <value>103, 20</value>
   </data>
   <data name="rbtnValidUnlimited.TabIndex" type="System.Int32, mscorlib">
     <value>61</value>
   </data>
   <data name="rbtnValidUnlimited.Text" xml:space="preserve">
-    <value>Unlimited</value>
+    <value>No End Date</value>
   </data>
   <data name="&gt;&gt;rbtnValidUnlimited.Name" xml:space="preserve">
     <value>rbtnValidUnlimited</value>
@@ -313,7 +343,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;rbtnValidUnlimited.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="rbtnValidUntil.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -325,16 +355,16 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="rbtnValidUntil.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 51</value>
+    <value>14, 57</value>
   </data>
   <data name="rbtnValidUntil.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 20</value>
+    <value>52, 20</value>
   </data>
   <data name="rbtnValidUntil.TabIndex" type="System.Int32, mscorlib">
     <value>60</value>
   </data>
   <data name="rbtnValidUntil.Text" xml:space="preserve">
-    <value>Start</value>
+    <value>Until</value>
   </data>
   <data name="&gt;&gt;rbtnValidUntil.Name" xml:space="preserve">
     <value>rbtnValidUntil</value>
@@ -346,7 +376,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;rbtnValidUntil.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="rbtnValidToday.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -358,7 +388,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="rbtnValidToday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 25</value>
+    <value>14, 34</value>
   </data>
   <data name="rbtnValidToday.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 20</value>
@@ -368,6 +398,9 @@
   </data>
   <data name="rbtnValidToday.Text" xml:space="preserve">
     <value>Today</value>
+  </data>
+  <data name="rbtnValidToday.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;rbtnValidToday.Name" xml:space="preserve">
     <value>rbtnValidToday</value>
@@ -379,7 +412,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;rbtnValidToday.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="dtTimePicker.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -388,7 +421,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="dtTimePicker.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 67</value>
+    <value>161, 55</value>
   </data>
   <data name="dtTimePicker.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 22</value>
@@ -406,7 +439,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;dtTimePicker.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="dtDatePicker.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -418,7 +451,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="dtDatePicker.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 67</value>
+    <value>75, 55</value>
   </data>
   <data name="dtDatePicker.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 22</value>
@@ -436,7 +469,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;dtDatePicker.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="groupBox1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>

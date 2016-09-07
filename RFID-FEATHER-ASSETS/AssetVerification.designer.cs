@@ -81,6 +81,8 @@
             this.picOwner = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.grdViewRFIDTag = new System.Windows.Forms.DataGridView();
+            this.lblLoginUserName = new System.Windows.Forms.Label();
+            this.ReadLoopTimer = new System.Windows.Forms.Timer(this.components);
             this.colDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colOwnerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAssetDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -95,8 +97,6 @@
             this.colAssetOwner = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colRFIDTag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colIsCompared = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblLoginUserName = new System.Windows.Forms.Label();
-            this.ReadLoopTimer = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCapture5)).BeginInit();
@@ -457,7 +457,7 @@
             this.grdViewRFIDTag.AllowUserToDeleteRows = false;
             this.grdViewRFIDTag.AllowUserToResizeColumns = false;
             this.grdViewRFIDTag.AllowUserToResizeRows = false;
-            this.grdViewRFIDTag.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.grdViewRFIDTag.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdViewRFIDTag.BackgroundColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -497,9 +497,19 @@
             this.grdViewRFIDTag.RowHeadersVisible = false;
             this.grdViewRFIDTag.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdViewRFIDTag_CellContentDoubleClick);
             // 
+            // lblLoginUserName
+            // 
+            resources.ApplyResources(this.lblLoginUserName, "lblLoginUserName");
+            this.lblLoginUserName.BackColor = System.Drawing.Color.White;
+            this.lblLoginUserName.Name = "lblLoginUserName";
+            // 
+            // ReadLoopTimer
+            // 
+            this.ReadLoopTimer.Tick += new System.EventHandler(this.ReadLoopTimer_Tick);
+            // 
             // colDate
             // 
-            this.colDate.FillWeight = 35.54648F;
+            this.colDate.FillWeight = 120F;
             resources.ApplyResources(this.colDate, "colDate");
             this.colDate.Name = "colDate";
             this.colDate.ReadOnly = true;
@@ -507,7 +517,7 @@
             // 
             // colOwnerName
             // 
-            this.colOwnerName.FillWeight = 58.04291F;
+            this.colOwnerName.FillWeight = 130F;
             resources.ApplyResources(this.colOwnerName, "colOwnerName");
             this.colOwnerName.Name = "colOwnerName";
             this.colOwnerName.ReadOnly = true;
@@ -515,7 +525,7 @@
             // 
             // colAssetDescription
             // 
-            this.colAssetDescription.FillWeight = 151.7326F;
+            this.colAssetDescription.FillWeight = 130F;
             resources.ApplyResources(this.colAssetDescription, "colAssetDescription");
             this.colAssetDescription.Name = "colAssetDescription";
             this.colAssetDescription.ReadOnly = true;
@@ -531,7 +541,7 @@
             // 
             // colValidityPeriod
             // 
-            this.colValidityPeriod.FillWeight = 134.877F;
+            this.colValidityPeriod.FillWeight = 180F;
             resources.ApplyResources(this.colValidityPeriod, "colValidityPeriod");
             this.colValidityPeriod.Name = "colValidityPeriod";
             this.colValidityPeriod.ReadOnly = true;
@@ -539,7 +549,7 @@
             // 
             // colStatus
             // 
-            this.colStatus.FillWeight = 89.18285F;
+            this.colStatus.FillWeight = 120F;
             resources.ApplyResources(this.colStatus, "colStatus");
             this.colStatus.Name = "colStatus";
             this.colStatus.ReadOnly = true;
@@ -548,6 +558,7 @@
             // colViewerIcon
             // 
             this.colViewerIcon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
+            this.colViewerIcon.FillWeight = 120F;
             resources.ApplyResources(this.colViewerIcon, "colViewerIcon");
             this.colViewerIcon.Image = global::RFID_FEATHER_ASSETS.Properties.Resources.ViewDetailsIcon;
             this.colViewerIcon.Name = "colViewerIcon";
@@ -598,16 +609,6 @@
             this.colIsCompared.Name = "colIsCompared";
             this.colIsCompared.ReadOnly = true;
             this.colIsCompared.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // lblLoginUserName
-            // 
-            resources.ApplyResources(this.lblLoginUserName, "lblLoginUserName");
-            this.lblLoginUserName.BackColor = System.Drawing.Color.White;
-            this.lblLoginUserName.Name = "lblLoginUserName";
-            // 
-            // ReadLoopTimer
-            // 
-            this.ReadLoopTimer.Tick += new System.EventHandler(this.ReadLoopTimer_Tick);
             // 
             // Verification
             // 
@@ -693,6 +694,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblLoginUserName;
         private System.Windows.Forms.Button btnReport;
+        private System.Windows.Forms.Timer ReadLoopTimer;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colOwnerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAssetDescription;
@@ -707,7 +709,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colAssetOwner;
         private System.Windows.Forms.DataGridViewTextBoxColumn colRFIDTag;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIsCompared;
-        private System.Windows.Forms.Timer ReadLoopTimer;
 
 
     }

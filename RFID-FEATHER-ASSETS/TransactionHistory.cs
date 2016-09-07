@@ -231,7 +231,7 @@ namespace RFID_FEATHER_ASSETS
                             //row.Cells["ColRFIDTag"].Value = generateResult[i].asset.tag;
                             row.Cells["ColTakeOutNote"].Value = generateResult[i].asset.takeOutInfo;
 
-                            ValidUntil = generateResult[i].asset.validUntil == null ? "Unlimited" : "Start " + generateResult[i].asset.startDate.Value.ToString("g") + " Until " + generateResult[i].asset.validUntil.Value.ToString("g"); //!= DateTime.MinValue ? generateResult[i].asset.validUntil.ToString("g") : "No Expiration";
+                            ValidUntil = generateResult[i].asset.validUntil == null ? "Start " + generateResult[i].asset.startDate.Value.ToString("g") + " - No End Date" : "Start " + generateResult[i].asset.startDate.Value.ToString("g") + " Until " + generateResult[i].asset.validUntil.Value.ToString("g"); //!= DateTime.MinValue ? generateResult[i].asset.validUntil.ToString("g") : "No Expiration";
                             row.Cells["ColValidUntil"].Value = ValidUntil;
 
                             row.Cells["ColNotes"].Value = generateResult[i].type;

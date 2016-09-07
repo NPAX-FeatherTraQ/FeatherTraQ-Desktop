@@ -75,13 +75,33 @@ namespace RFID_FEATHER_ASSETS
             }
             else
             {
+                roles.Add(new GlobalClass.GetSetClass() { roleName = "Owner", value = "ROLE_OWNER" });
                 roles.Add(new GlobalClass.GetSetClass() { roleName = "Administrator", value = "ROLE_ADMIN" });
                 roles.Add(new GlobalClass.GetSetClass() { roleName = "Security", value = "ROLE_GUARD" });
                 //roles.Add(new Role() { roleName = "User", value = "ROLE_USER" });
             }
             this.authorities.DataSource = roles;
             this.authorities.ValueMember = "value";
-            this.authorities.DisplayMember = "roleName";                   
+            this.authorities.DisplayMember = "roleName";
+            
+        }
+
+        private void hidePassword()
+        {
+            if (authorities.Text.ToLower() == "owner")
+            {
+                lblPassword.Visible = false;
+                lblCpassword.Visible = false;
+                password.Visible = false;
+                cpassword.Visible = false;
+            }
+            else
+            {
+                lblPassword.Visible = true;
+                lblCpassword.Visible = true;
+                password.Visible = true;
+                cpassword.Visible = true;
+            }
         }
         private void GetCompanyPath()
         {
@@ -147,8 +167,8 @@ namespace RFID_FEATHER_ASSETS
                 lblPosition.Text = rm.GetString("lblPosition");
                 chkBoxChangeCamera.Text = rm.GetString("chkBoxChangeCamera");
                 rbtnValidToday.Text = rm.GetString("rbtnValidToday");
-                rbtnValidUntil.Text = rm.GetString("rbtnValidUntil");
-                rbtnValidStart.Text = rm.GetString("rbtnValidStart");
+                lblStart.Text = rm.GetString("rbtnValidUntil");
+                rbtnValidUntil.Text = rm.GetString("rbtnValidStart");
                 rbtnNoExpiration.Text = rm.GetString("rbtnNoExpiration");
                 lblTag.Text = rm.GetString("lblTag");
                 btnGetRFIDTag.Text = rm.GetString("btnGetRFIDTag");
@@ -308,7 +328,7 @@ namespace RFID_FEATHER_ASSETS
             }
             else
             {*/
-                if (firstName.Text.Length == 0 || lastName.Text.Length == 0 || position.Text.Length == 0 || email.Text.Length == 0 || string.IsNullOrEmpty(password.Text) || string.IsNullOrEmpty(cpassword.Text))
+                if (firstName.Text.Length == 0 || lastName.Text.Length == 0 || position.Text.Length == 0 || email.Text.Length == 0 /*|| string.IsNullOrEmpty(password.Text) || string.IsNullOrEmpty(cpassword.Text)*/)
                 {
                     if (language == "English") MessageBox.Show("Complete information is required.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     else
@@ -321,6 +341,15 @@ namespace RFID_FEATHER_ASSETS
                 else
                 {
                     //Validity Validation
+                    if (dtStartTimePicker.Checked) startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd") + dtStartTimePicker.Value.ToString("THH:mm");
+                    else startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd"); //+ "17:00";
+
+                    if (Convert.ToDateTime(startDateValue) < Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd THH:mm")))
+                    {
+                        MessageBox.Show("Start Date must not less than to current Date and Time.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
                     if (rbtnValidToday.Checked)
                     {
                         if (Convert.ToDateTime(DateTime.UtcNow.ToString("yyyy-MM-dd T") + "17:00") < Convert.ToDateTime(DateTime.Now.ToString("g")))
@@ -329,21 +358,24 @@ namespace RFID_FEATHER_ASSETS
                             return;
                         }
                     }
-                    else if (rbtnValidStart.Checked)
+                    else if (rbtnValidUntil.Checked)
                     {
-                        startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd"); //+ "00:01";
+                        //startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd"); //+ "00:01";
+
+                        //if (dtStartTimePicker.Checked) startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd") + dtStartTimePicker.Value.ToString("THH:mm");
+                        //else startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd"); //+ "17:00";
 
                         if (dtTimePicker.Checked) validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd") + dtTimePicker.Value.ToString("THH:mm");
                         else validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd T") + "17:00";
                         
                         if (Convert.ToDateTime(startDateValue) > Convert.ToDateTime(validUntilValue))
                         {
-                            MessageBox.Show("Start date must not greater than Until date.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Start Date must not greater than Until Date.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
-                        else if (Convert.ToDateTime(startDateValue) < Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd")) || Convert.ToDateTime(validUntilValue) < Convert.ToDateTime(DateTime.Now.ToString("g")))
+                        else if (Convert.ToDateTime(validUntilValue) < Convert.ToDateTime(DateTime.Now.ToString("g")))
                         {
-                            MessageBox.Show("Validity Period must not less than to current date and time.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Until Date must not less than to current Date and Time.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
                         
@@ -356,12 +388,13 @@ namespace RFID_FEATHER_ASSETS
                             DialogResult result = MessageBox.Show("Are you sure you want to register without pictures?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
                             if (result == DialogResult.Yes)
                             {
-                                if (password.Text.Length < 5)
+                                register();
+                                /*if (password.Text.Length < 5)
                                 {
                                     MessageBox.Show("Password must have 6 or more characters");                                    
                                     return;
-                                }
-                                else
+                                }*/
+                                /*else
                                 {
                                     if (password.Text != cpassword.Text)
                                     {
@@ -372,7 +405,7 @@ namespace RFID_FEATHER_ASSETS
                                     {
                                         register();
                                     }
-                                }
+                                }*/
                             }
                         }
                         else
@@ -532,6 +565,11 @@ namespace RFID_FEATHER_ASSETS
                 userinfo.assetIdCard.ownerUserId = userId;
             }
 
+            if (dtStartTimePicker.Checked)
+                startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd") + dtStartTimePicker.Value.ToString("THH:mm");
+            else
+                startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd"); //+ "00:01";
+
             if (rbtnValidToday.Checked)
             {
                 //if (btnSubmit.Text.ToLower() == "update")
@@ -542,23 +580,32 @@ namespace RFID_FEATHER_ASSETS
                     validUntilValue = DateTime.UtcNow.ToString("yyyy-MM-dd T") + "17:00";
                 //}
             }
-            else if (rbtnValidStart.Checked)
+            else if (rbtnValidUntil.Checked)
             {
+                //if (dtTimePicker.Checked)
+                //{
+                //    startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd"); //+ "00:01";
+                //    validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd") + dtTimePicker.Value.ToString("THH:mm");
+                //}
+                //else
+                //{
+                //    startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd"); //+ "00:01";
+                //    validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd T") + "17:00";
+                //}
+
+                //if (dtStartTimePicker.Checked)
+                //    startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd") + dtStartTimePicker.Value.ToString("THH:mm");
+                //else
+                //    startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd"); //+ "00:01";
 
                 if (dtTimePicker.Checked)
-                {
-                    startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd"); //+ "00:01";
                     validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd") + dtTimePicker.Value.ToString("THH:mm");
-                }
                 else
-                {
-                    startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd"); //+ "00:01";
                     validUntilValue = dtDatePicker.Value.ToString("yyyy-MM-dd T") + "17:00";
-                }
             }
             else
             {
-                startDateValue = null;
+                //startDateValue = null;
                 validUntilValue = null; 
             }
 
@@ -604,7 +651,7 @@ namespace RFID_FEATHER_ASSETS
                         return;
                     }
                     SaveTransaction(transType);
-                    if (language == "English") MessageBox.Show("User successfully saved.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (language == "English") MessageBox.Show("Record successfully saved.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
                     {
                         ResourceManager rm = new ResourceManager("RFID_FEATHER_ASSETS.Languages.UserRegistration", Assembly.GetExecutingAssembly());
@@ -638,12 +685,16 @@ namespace RFID_FEATHER_ASSETS
         private void AssetValidUntilDateTime()
         {
             //For Valid Until Date
-            if (!rbtnValidStart.Checked)
+            if (!rbtnValidUntil.Checked)
             {
                 if (language == "English")
                 {
-                    dtStartDate.CustomFormat = "'Date'";
-                    dtStartDate.Format = DateTimePickerFormat.Custom;
+                    //dtStartDate.CustomFormat = "'Date'";
+                    //dtStartDate.Format = DateTimePickerFormat.Custom;
+
+                    //dtStartTimePicker.CustomFormat = "'Time'";
+                    //dtStartTimePicker.Format = DateTimePickerFormat.Custom;
+                    //dtStartTimePicker.Checked = false;
 
                     dtDatePicker.CustomFormat = "'Date'";
                     dtDatePicker.Format = DateTimePickerFormat.Custom;
@@ -651,12 +702,13 @@ namespace RFID_FEATHER_ASSETS
                     dtTimePicker.CustomFormat = "'Time'";
                     dtTimePicker.Format = DateTimePickerFormat.Custom;
                     dtTimePicker.Checked = false;
+                    dtTimePicker.Enabled = false;
                 }
                 else
                 {
                     ResourceManager rm = new ResourceManager("RFID_FEATHER_ASSETS.Languages.UserRegistration", Assembly.GetExecutingAssembly());
-                    dtStartDate.CustomFormat = rm.GetString("dtDate");
-                    dtStartDate.Format = DateTimePickerFormat.Custom;
+                    //dtStartDate.CustomFormat = rm.GetString("dtDate");
+                    //dtStartDate.Format = DateTimePickerFormat.Custom;
 
                     dtDatePicker.CustomFormat = rm.GetString("dtDate");
                     dtDatePicker.Format = DateTimePickerFormat.Custom;
@@ -669,13 +721,22 @@ namespace RFID_FEATHER_ASSETS
             else
             {
                 //For Valid Until Date
-                dtStartDate.CustomFormat = "MM/dd/yyyy";
-                dtStartDate.Format = DateTimePickerFormat.Custom;
-                dtStartDate.Value = DateTime.Now;
+                //dtStartDate.CustomFormat = "MM/dd/yyyy";
+                //dtStartDate.Format = DateTimePickerFormat.Custom;
+                //dtStartDate.Value = DateTime.Now;
 
                 dtDatePicker.CustomFormat = "MM/dd/yyyy";
                 dtDatePicker.Format = DateTimePickerFormat.Custom;
                 dtDatePicker.Value = DateTime.Now;
+
+                //dtStartTimePicker.CustomFormat = "'Time'";
+                //dtStartTimePicker.Format = DateTimePickerFormat.Custom;
+                //dtStartTimePicker.Checked = false;
+
+                dtTimePicker.CustomFormat = "'Time'";
+                dtTimePicker.Format = DateTimePickerFormat.Custom;
+                dtTimePicker.Checked = false;
+                dtTimePicker.Enabled = true;
             }
 
             ////For Valid Until Date
@@ -800,7 +861,10 @@ namespace RFID_FEATHER_ASSETS
             lblOwnerPhoto.Visible = true;
             email.Enabled = true;
 
-            rbtnValidToday.Checked = true;
+            //rbtnValidToday.Checked = true;
+            rbtnValidUntil.Checked = true;
+            StartValidUntilDateTime();
+            AssetValidUntilDateTime();
             //dtStartDate.Enabled = true;
 
             if (language == "English")
@@ -817,6 +881,17 @@ namespace RFID_FEATHER_ASSETS
                 btnCancel.Text = rm.GetString("btnCancel");
             }
             this.Refresh();
+        }
+
+        private void StartValidUntilDateTime()
+        {
+            dtStartDate.CustomFormat = "MM/dd/yyyy";
+            dtStartDate.Format = DateTimePickerFormat.Custom;
+            dtStartDate.Value = DateTime.Now;
+
+            dtStartTimePicker.CustomFormat = "'Time'";
+            dtStartTimePicker.Format = DateTimePickerFormat.Custom;
+            dtStartTimePicker.Checked = false;
         }
 
         private void SaveTransaction(string type)
@@ -921,6 +996,7 @@ namespace RFID_FEATHER_ASSETS
                 //reader.SendCallback = SendData;
                 //auto_connect();
                 ReaderMethodProc();
+                hidePassword();
             }
             catch (Exception ex)
             {
@@ -964,19 +1040,21 @@ namespace RFID_FEATHER_ASSETS
                     newImgFileNames = info.imageUrl;
 
                     string urls = info.imageUrl;
-                    string[] ReadUrls = urls.Split(',');
-                    if (ReadUrls.Length > 1)
+                    if (urls != null)
                     {
-                        imgCapture1.Load("http://52.163.93.95:8080/FeatherAssets/api/images/"+ companyId +"/asset/" + ReadUrls[1]);
-                        lblOwnerPhoto.Visible = false;
-                    }
-                    if (ReadUrls.Length > 2)
-                    {
-                        imgCapture2.Load("http://52.163.93.95:8080/FeatherAssets/api/images/" + companyId + "/asset/" + ReadUrls[2]);
-                        lblValidIDPhoto.Visible = false;
-                        
-                    }
+                        string[] ReadUrls = urls.Split(',');
+                        if (ReadUrls.Length > 1)
+                        {
+                            imgCapture1.Load("http://52.163.93.95:8080/FeatherAssets/api/images/" + companyId + "/asset/" + ReadUrls[1]);
+                            lblOwnerPhoto.Visible = false;
+                        }
+                        if (ReadUrls.Length > 2)
+                        {
+                            imgCapture2.Load("http://52.163.93.95:8080/FeatherAssets/api/images/" + companyId + "/asset/" + ReadUrls[2]);
+                            lblValidIDPhoto.Visible = false;
 
+                        }
+                    }
                    getCaptureButtonText();
                    if (validity < Convert.ToDateTime(DateTime.Now.ToString("g")) && validity != DateTime.MinValue)
                    {
@@ -1053,26 +1131,36 @@ namespace RFID_FEATHER_ASSETS
                 else
                 {
                     assetId = assetInfo.assetId;
+                    
+                    startDateValue = assetInfo.startDate.Value.ToString("yyyy-MM-dd");
+                    dtStartDate.Value = Convert.ToDateTime(startDateValue);
+                    startDateValue = assetInfo.startDate.Value.ToString("HH:mm tt");
+                    dtStartTimePicker.Value = Convert.ToDateTime(startDateValue);
+                    dtStartTimePicker.Checked = true;
 
-                    if (assetInfo.validUntil == null) rbtnNoExpiration.Checked = true;
+                    if (assetInfo.validUntil == null) 
+                        rbtnNoExpiration.Checked = true;
                     else
                     {
                         //dtStartDate.Enabled = false;
-                        rbtnValidStart.Checked = true;
-                        startDateValue = assetInfo.startDate.Value.ToString("yyyy-MM-dd");
+                        rbtnValidUntil.Checked = true;
+                        //startDateValue = assetInfo.startDate.Value.ToString("yyyy-MM-dd");
                         validUntilValue = assetInfo.validUntil.Value.ToString("yyyy-MM-dd");
-                        dtStartDate.Value = Convert.ToDateTime(startDateValue);
+                        //dtStartDate.Value = Convert.ToDateTime(startDateValue);
                         dtDatePicker.Value = Convert.ToDateTime(validUntilValue);
 
                         //if (Convert.ToDateTime(assetInfo.validUntil).ToString("HH:mm") != "00:00")
                         //{
+                        //startDateValue = assetInfo.startDate.Value.ToString("HH:mm tt");
+                        //dtStartTimePicker.Value = Convert.ToDateTime(startDateValue);
+                        //dtStartTimePicker.Checked = true;
                         validUntilValue = assetInfo.validUntil.Value.ToString("HH:mm tt");
                         dtTimePicker.Value = Convert.ToDateTime(validUntilValue);
                         dtTimePicker.Checked = true;
-                        AssetValidUntilTime();
+                        //AssetValidUntilTime();
                         //}
                     }
-                    
+                    AssetValidUntilTime();
                     getOwnerInfo(assetInfo.ownerUserId, assetInfo.validUntil);
                 }
             }
@@ -1439,11 +1527,11 @@ namespace RFID_FEATHER_ASSETS
             //ClearFields();
             try
             {
-                if (btnSubmit.Text.ToLower() == "update" || ((!string.IsNullOrEmpty(firstName.Text) || imgCapture1.Image != null) && btnCancel.Text.ToLower() == "cancel"))
+                /*if (btnSubmit.Text.ToLower() == "update" || ((!string.IsNullOrEmpty(firstName.Text) || imgCapture1.Image != null) && btnCancel.Text.ToLower() == "cancel"))
                 {
                     btnCancel.PerformClick();
                     return;
-                }
+                }*/
 
                 int nReturnValue = 0;
                 string tagInfo = "";
@@ -1589,10 +1677,29 @@ namespace RFID_FEATHER_ASSETS
                 dtTimePicker.Format = DateTimePickerFormat.Custom;
                 //dtTimePicker.Value = DateTime.Now;
             }
+
+            if (!dtStartTimePicker.Checked)
+            {
+                dtStartTimePicker.CustomFormat = "'Time'";
+                dtStartTimePicker.Format = DateTimePickerFormat.Custom;
+            }
+            else
+            {
+                //dtTimePicker.CustomFormat = "hh:mm tt";
+                dtStartTimePicker.CustomFormat = "h:mm tt";
+                dtStartTimePicker.Format = DateTimePickerFormat.Custom;
+                //dtTimePicker.Value = DateTime.Now;
+            }
         }
 
         private void btnEditInfo_Click(object sender, EventArgs e)
         {
+            if (btnSubmit.Text.ToLower() == "update" || ((!string.IsNullOrEmpty(firstName.Text) || imgCapture1.Image != null) && btnCancel.Text.ToLower() == "cancel"))
+            {
+                btnCancel.PerformClick();
+                return;
+            }
+
             btnEditInfoWasClicked = true;
 
             btnGetRFIDTag.PerformClick();
@@ -1609,6 +1716,16 @@ namespace RFID_FEATHER_ASSETS
             //    MessageBox.Show("ID not found");
             //}
             btnEditInfoWasClicked = false;
+        }
+
+        private void dtStartTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            AssetValidUntilTime();
+        }
+
+        private void authorities_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            hidePassword();
         }
     }
 

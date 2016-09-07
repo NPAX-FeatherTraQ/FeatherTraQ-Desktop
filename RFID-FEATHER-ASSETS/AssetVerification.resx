@@ -1596,17 +1596,11 @@
   <data name="colDate.HeaderText" xml:space="preserve">
     <value>DATE</value>
   </data>
-  <data name="colDate.Width" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
   <metadata name="colOwnerName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="colOwnerName.HeaderText" xml:space="preserve">
     <value>OWNER NAME</value>
-  </data>
-  <data name="colOwnerName.Width" type="System.Int32, mscorlib">
-    <value>5</value>
   </data>
   <metadata name="colAssetDescription.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1614,17 +1608,14 @@
   <data name="colAssetDescription.HeaderText" xml:space="preserve">
     <value>ASSET DESCRIPTION</value>
   </data>
-  <data name="colAssetDescription.Width" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
   <metadata name="colTakeOutNote.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="colTakeOutNote.HeaderText" xml:space="preserve">
     <value>TAKE OUT NOTE</value>
   </data>
-  <data name="colTakeOutNote.Width" type="System.Int32, mscorlib">
-    <value>5</value>
+  <data name="colTakeOutNote.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <metadata name="colValidityPeriod.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1632,17 +1623,14 @@
   <data name="colValidityPeriod.HeaderText" xml:space="preserve">
     <value>VALIDITY PERIOD</value>
   </data>
-  <data name="colValidityPeriod.Width" type="System.Int32, mscorlib">
-    <value>5</value>
+  <data name="colValidityPeriod.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <metadata name="colStatus.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="colStatus.HeaderText" xml:space="preserve">
     <value>STATUS</value>
-  </data>
-  <data name="colStatus.Width" type="System.Int32, mscorlib">
-    <value>5</value>
   </data>
   <metadata name="colViewerIcon.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1662,9 +1650,6 @@
   <data name="colAssetID.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="colAssetID.Width" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
   <metadata name="colIDTag.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1673,9 +1658,6 @@
   </data>
   <data name="colIDTag.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="colIDTag.Width" type="System.Int32, mscorlib">
-    <value>5</value>
   </data>
   <metadata name="colIDOwner.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1686,9 +1668,6 @@
   <data name="colIDOwner.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="colIDOwner.Width" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
   <metadata name="colAssetTag.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1697,9 +1676,6 @@
   </data>
   <data name="colAssetTag.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="colAssetTag.Width" type="System.Int32, mscorlib">
-    <value>5</value>
   </data>
   <metadata name="colAssetOwner.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1710,9 +1686,6 @@
   <data name="colAssetOwner.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="colAssetOwner.Width" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
   <metadata name="colRFIDTag.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1722,17 +1695,11 @@
   <data name="colRFIDTag.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="colRFIDTag.Width" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
   <data name="colIsCompared.HeaderText" xml:space="preserve">
     <value>Is Compared</value>
   </data>
   <data name="colIsCompared.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="colIsCompared.Width" type="System.Int32, mscorlib">
-    <value>5</value>
   </data>
   <data name="grdViewRFIDTag.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1839,6 +1806,12 @@
   <data name="&gt;&gt;ClearGridTimer.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;ReadLoopTimer.Name" xml:space="preserve">
+    <value>ReadLoopTimer</value>
+  </data>
+  <data name="&gt;&gt;ReadLoopTimer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;colDate.Name" xml:space="preserve">
     <value>colDate</value>
   </data>
@@ -1922,12 +1895,6 @@
   </data>
   <data name="&gt;&gt;colIsCompared.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ReadLoopTimer.Name" xml:space="preserve">
-    <value>ReadLoopTimer</value>
-  </data>
-  <data name="&gt;&gt;ReadLoopTimer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Verification</value>
