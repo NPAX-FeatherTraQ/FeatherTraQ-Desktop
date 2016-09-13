@@ -546,6 +546,12 @@ namespace RFID_FEATHER_ASSETS
                 comVideoDeviceBox.Items.Add(VideoCaptureDevice.Name);
             }
         }
+
+        private void ReportCreation_Leave(object sender, EventArgs e)
+        {
+            if (IsCameraConnected)
+                cam.Stop();            
+        }
     }
 
     //public class Transaction

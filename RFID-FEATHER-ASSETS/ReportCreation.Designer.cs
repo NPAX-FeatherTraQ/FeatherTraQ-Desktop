@@ -207,6 +207,7 @@
             this.MaximizeBox = false;
             this.Name = "ReportCreation";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ReportCreation_FormClosed);
+            this.Leave += new System.EventHandler(this.ReportCreation_Leave);
             this.grpInformation.ResumeLayout(false);
             this.grpInformation.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cameraBox)).EndInit();

@@ -182,6 +182,7 @@
             // 
             // grpCameraPreview
             // 
+            resources.ApplyResources(this.grpCameraPreview, "grpCameraPreview");
             this.grpCameraPreview.Controls.Add(this.chkBoxChangeCamera);
             this.grpCameraPreview.Controls.Add(this.comVideoDeviceBox);
             this.grpCameraPreview.Controls.Add(this.lblNoCameraAvailable);
@@ -194,7 +195,6 @@
             this.grpCameraPreview.Controls.Add(this.label8);
             this.grpCameraPreview.Controls.Add(this.txtSaveImageDir);
             this.grpCameraPreview.Controls.Add(this.btnBrowseImagePath);
-            resources.ApplyResources(this.grpCameraPreview, "grpCameraPreview");
             this.grpCameraPreview.ForeColor = System.Drawing.SystemColors.ControlText;
             this.grpCameraPreview.Name = "grpCameraPreview";
             this.grpCameraPreview.TabStop = false;
@@ -225,6 +225,7 @@
             resources.ApplyResources(this.btnCapturePhoto, "btnCapturePhoto");
             this.btnCapturePhoto.BackColor = System.Drawing.Color.Orange;
             this.btnCapturePhoto.Name = "btnCapturePhoto";
+            this.btnCapturePhoto.TabStop = false;
             this.btnCapturePhoto.UseVisualStyleBackColor = false;
             this.btnCapturePhoto.Click += new System.EventHandler(this.btnCapturePhoto_Click);
             // 
@@ -282,6 +283,7 @@
             // 
             // grpAssetInfo
             // 
+            resources.ApplyResources(this.grpAssetInfo, "grpAssetInfo");
             this.grpAssetInfo.Controls.Add(this.btnReadIDTag);
             this.grpAssetInfo.Controls.Add(this.txtOwnerName);
             this.grpAssetInfo.Controls.Add(this.lblOwnerName);
@@ -301,7 +303,6 @@
             this.grpAssetInfo.Controls.Add(this.lblTag);
             this.grpAssetInfo.Controls.Add(this.lblSubmittingInformation);
             this.grpAssetInfo.Controls.Add(this.lblLoadingInformation);
-            resources.ApplyResources(this.grpAssetInfo, "grpAssetInfo");
             this.grpAssetInfo.Name = "grpAssetInfo";
             this.grpAssetInfo.TabStop = false;
             // 
@@ -499,9 +500,9 @@
             // 
             // grpCaptured
             // 
+            resources.ApplyResources(this.grpCaptured, "grpCaptured");
             this.grpCaptured.Controls.Add(this.lblLoginUserName);
             this.grpCaptured.Controls.Add(this.splitContainer3);
-            resources.ApplyResources(this.grpCaptured, "grpCaptured");
             this.grpCaptured.Name = "grpCaptured";
             this.grpCaptured.TabStop = false;
             // 
@@ -540,6 +541,7 @@
             this.splitContainer3.Panel2.Controls.Add(this.imgCapture5);
             this.splitContainer3.Panel2.Controls.Add(this.imgCapture4);
             this.splitContainer3.Panel2.Controls.Add(this.imgCapture3);
+            this.splitContainer3.TabStop = false;
             // 
             // checkBox2
             // 
@@ -678,6 +680,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RegisterAsset_FormClosed);
             this.Load += new System.EventHandler(this.RegisterAsset_Load);
+            this.Leave += new System.EventHandler(this.AssetRegistration_Leave);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();

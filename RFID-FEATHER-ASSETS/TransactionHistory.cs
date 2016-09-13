@@ -283,8 +283,9 @@ namespace RFID_FEATHER_ASSETS
         private void CallMainMenu()
         {
             this.Hide();
-            MainMenu MenuForm = new MainMenu(tokenValue, roleValue);
-            MenuForm.Show();
+            //MainMenu MenuForm = new MainMenu(tokenValue, roleValue);
+            //MenuForm.Show();
+            //this.Dispose();
         }
 
         private void btnExport_Click(object sender, EventArgs e)

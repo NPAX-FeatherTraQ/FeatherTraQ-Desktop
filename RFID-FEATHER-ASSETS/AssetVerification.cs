@@ -144,8 +144,8 @@ namespace RFID_FEATHER_ASSETS
 
                 //BackgroundTimer.Interval = 1000;
 
-                CurrentDateTimer.Enabled = true;
-                CurrentDateTimer.Interval = 1000;
+                //CurrentDateTimer.Enabled = true;
+                //CurrentDateTimer.Interval = 1000;
 
                 VerifyTimer.Interval = 2000;
                 VerifyTimer.Tick += new EventHandler(VerifyTimer_Tick);
@@ -1107,8 +1107,9 @@ namespace RFID_FEATHER_ASSETS
 
             this.Hide();
             reader.CloseCom();
-            MainMenu MenuForm = new MainMenu(tokenvalue, roleValue);
-            MenuForm.Show();
+            //MainMenu MenuForm = new MainMenu(tokenvalue, roleValue);
+            //MenuForm.Show();
+            //this.Dispose();
         }
 
         private void btnBack_Click(object sender, EventArgs e)

@@ -80,27 +80,27 @@ namespace RFID_FEATHER_ASSETS
                 roles.Add(new GlobalClass.GetSetClass() { roleName = "Security", value = "ROLE_GUARD" });
                 //roles.Add(new Role() { roleName = "User", value = "ROLE_USER" });
             }
-            this.authorities.DataSource = roles;
-            this.authorities.ValueMember = "value";
-            this.authorities.DisplayMember = "roleName";
+            this.cmbauthorities.DataSource = roles;
+            this.cmbauthorities.ValueMember = "value";
+            this.cmbauthorities.DisplayMember = "roleName";
             
         }
 
         private void hidePassword()
         {
-            if (authorities.Text.ToLower() == "owner")
+            if (cmbauthorities.Text.ToLower() == "owner")
             {
                 lblPassword.Visible = false;
                 lblCpassword.Visible = false;
-                password.Visible = false;
-                cpassword.Visible = false;
+                txtpassword.Visible = false;
+                txtcpassword.Visible = false;
             }
             else
             {
                 lblPassword.Visible = true;
                 lblCpassword.Visible = true;
-                password.Visible = true;
-                cpassword.Visible = true;
+                txtpassword.Visible = true;
+                txtcpassword.Visible = true;
             }
         }
         private void GetCompanyPath()
@@ -240,7 +240,7 @@ namespace RFID_FEATHER_ASSETS
                 MessageBox.Show(ex.Message);
             }
         }
-        private void StartCamera()
+        public void StartCamera()
         {
             try
             {
@@ -328,7 +328,7 @@ namespace RFID_FEATHER_ASSETS
             }
             else
             {*/
-                if (firstName.Text.Length == 0 || lastName.Text.Length == 0 || position.Text.Length == 0 || email.Text.Length == 0 /*|| string.IsNullOrEmpty(password.Text) || string.IsNullOrEmpty(cpassword.Text)*/)
+                if (txtfirstName.Text.Length == 0 || txtlastName.Text.Length == 0 || txtposition.Text.Length == 0 || txtemail.Text.Length == 0 /*|| string.IsNullOrEmpty(password.Text) || string.IsNullOrEmpty(cpassword.Text)*/)
                 {
                     if (language == "English") MessageBox.Show("Complete information is required.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     else
@@ -346,7 +346,7 @@ namespace RFID_FEATHER_ASSETS
 
                     if (Convert.ToDateTime(startDateValue) < Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd THH:mm")))
                     {
-                        MessageBox.Show("Start Date must not less than to current Date and Time.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Start Date must not be less than to current Date and Time.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
 
@@ -370,18 +370,41 @@ namespace RFID_FEATHER_ASSETS
                         
                         if (Convert.ToDateTime(startDateValue) > Convert.ToDateTime(validUntilValue))
                         {
-                            MessageBox.Show("Start Date must not greater than Until Date.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Start Date must not be greater than Until Date.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
                         else if (Convert.ToDateTime(validUntilValue) < Convert.ToDateTime(DateTime.Now.ToString("g")))
                         {
-                            MessageBox.Show("Until Date must not less than to current Date and Time.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Until Date must not be less than to current Date and Time.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
                         
                     }//end-Validity Validation                   
 
-                    if (imgCapture1.Image == null || imgCapture2.Image == null)
+                    if (cmbauthorities.Text.ToLower() == "administrator" || cmbauthorities.Text.ToLower() == "security")
+                    {
+                        if (txtpassword.Text.Length < 5)
+                        {
+                            MessageBox.Show("Password must have 6 or more characters.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                            txtpassword.Focus();
+                            return;
+                        }
+                        else
+                        {
+                            if (txtpassword.Text != txtcpassword.Text)
+                            {
+                                MessageBox.Show("Password does not match.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                                txtcpassword.Focus();
+                                return;
+                            }
+                            //else
+                            //{
+                            //    register();
+                            //}
+                        }
+                    }
+
+                    if (btnSubmit.Text.ToUpper() == "SUBMIT" && (imgCapture1.Image == null || imgCapture2.Image == null))
                     {
                         if (language == "English")
                         {
@@ -414,14 +437,14 @@ namespace RFID_FEATHER_ASSETS
                             DialogResult result = MessageBox.Show(rm.GetString("noPics"), this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
                             if (result == DialogResult.Yes)
                             {
-                                if (password.Text.Length < 5)
+                                if (txtpassword.Text.Length < 5)
                                 {
                                     MessageBox.Show(rm.GetString("sixChars"));
                                     return;
                                 }
                                 else
                                 {
-                                    if (password.Text != cpassword.Text)
+                                    if (txtpassword.Text != txtcpassword.Text)
                                     {
                                         MessageBox.Show(rm.GetString("invalidConfirm"));
                                         return;
@@ -436,27 +459,27 @@ namespace RFID_FEATHER_ASSETS
                     }
                     else
                     {
-                        if (password.Text.Length < 5)
-                        {
-                            ResourceManager rm = new ResourceManager("RFID_FEATHER_ASSETS.Languages.UserRegistration", Assembly.GetExecutingAssembly());
-                            if (language == "English") MessageBox.Show("Password must have 6 or more characters");
-                            else MessageBox.Show(rm.GetString("sixChars"));
-                            return;
-                        }
-                        else
-                        {
-                            if (password.Text != cpassword.Text)
-                            {
-                                ResourceManager rm = new ResourceManager("RFID_FEATHER_ASSETS.Languages.UserRegistration", Assembly.GetExecutingAssembly());
-                                if (language == "English") MessageBox.Show("Password do not match");
-                                else MessageBox.Show(rm.GetString("invalidConfirm"));
-                                return;
-                            }
-                            else
-                            {
-                                register();
-                            }
-                        }
+                    //    if (txtpassword.Text.Length < 5)
+                    //    {
+                    //        ResourceManager rm = new ResourceManager("RFID_FEATHER_ASSETS.Languages.UserRegistration", Assembly.GetExecutingAssembly());
+                    //        if (language == "English") MessageBox.Show("Password must have 6 or more characters");
+                    //        else MessageBox.Show(rm.GetString("sixChars"));
+                    //        return;
+                    //    }
+                    //    else
+                    //    {
+                    //        if (txtpassword.Text != txtcpassword.Text)
+                    //        {
+                    //            ResourceManager rm = new ResourceManager("RFID_FEATHER_ASSETS.Languages.UserRegistration", Assembly.GetExecutingAssembly());
+                    //            if (language == "English") MessageBox.Show("Password do not match");
+                    //            else MessageBox.Show(rm.GetString("invalidConfirm"));
+                    //            return;
+                    //        }
+                    //        else
+                    //        {
+                        register();
+                    //        }
+                    //    }
                     }
                 }
             /*}*/
@@ -470,25 +493,25 @@ namespace RFID_FEATHER_ASSETS
             userinfo.userId = userId;
             userinfo.companyId = companyId;
             userinfo.imageUrl = newImgFileNames;
-            userinfo.password = password.Text;
-            userinfo.confirmPassword = cpassword.Text;
-            userinfo.authorities = authorities.SelectedValue.ToString();
-            userinfo.firstName = firstName.Text;
-            userinfo.lastName = lastName.Text;
+            userinfo.password = txtpassword.Text;
+            userinfo.confirmPassword = txtcpassword.Text;
+            userinfo.authorities = cmbauthorities.SelectedValue.ToString();
+            userinfo.firstName = txtfirstName.Text;
+            userinfo.lastName = txtlastName.Text;
             userinfo.description = description.Text;
-            userinfo.position = position.Text;
-            userinfo.email = email.Text;
+            userinfo.position = txtposition.Text;
+            userinfo.email = txtemail.Text;
 
             //save id card information
             userinfo.assetIdCard.assetId = assetId;
             userinfo.assetIdCard.companyId = companyId;
             userinfo.assetIdCard.description = "ID_CARD";
             userinfo.assetIdCard.imageUrls = newImgFileNames;
-            userinfo.assetIdCard.name = lastName.Text + ", " + firstName.Text;
+            userinfo.assetIdCard.name = txtlastName.Text + ", " + txtfirstName.Text;
             userinfo.assetIdCard.tag = txtRFIDTag.Text;
             userinfo.assetIdCard.tagType = 1;
             userinfo.assetIdCard.takeOutAllowed = false;
-            userinfo.assetIdCard.takeOutInfo = lastName.Text + " only";
+            userinfo.assetIdCard.takeOutInfo = txtlastName.Text + " only";
             userinfo.assetIdCard.ownerId = 1;
 
 
@@ -538,24 +561,24 @@ namespace RFID_FEATHER_ASSETS
             //save user Information
             userinfo.companyId = companyId;
             userinfo.imageUrl = newImgFileNames;
-            userinfo.password = password.Text;
-            userinfo.confirmPassword = cpassword.Text;
-            userinfo.authorities = authorities.SelectedValue.ToString();
-            userinfo.firstName = firstName.Text;
-            userinfo.lastName = lastName.Text;
+            userinfo.password = txtpassword.Text;
+            userinfo.confirmPassword = txtcpassword.Text;
+            userinfo.authorities = cmbauthorities.SelectedValue.ToString();
+            userinfo.firstName = txtfirstName.Text;
+            userinfo.lastName = txtlastName.Text;
             userinfo.description = description.Text;
-            userinfo.position = position.Text;
-            userinfo.email = email.Text;
+            userinfo.position = txtposition.Text;
+            userinfo.email = txtemail.Text;
 
             //save id card information
             userinfo.assetIdCard.companyId = companyId;
             userinfo.assetIdCard.description = "ID_CARD";
             userinfo.assetIdCard.imageUrls = newImgFileNames;
-            userinfo.assetIdCard.name = lastName.Text + ", " + firstName.Text;
+            userinfo.assetIdCard.name = txtlastName.Text + ", " + txtfirstName.Text;
             userinfo.assetIdCard.tag = txtRFIDTag.Text;
             userinfo.assetIdCard.tagType = 1;
             userinfo.assetIdCard.takeOutAllowed = false;
-            userinfo.assetIdCard.takeOutInfo = lastName.Text + " only";
+            userinfo.assetIdCard.takeOutInfo = txtlastName.Text + " only";
             userinfo.assetIdCard.ownerId = 1;
 
             if (btnSubmit.Text.ToLower() == "update")
@@ -643,7 +666,7 @@ namespace RFID_FEATHER_ASSETS
 
                 if (restResult.result == "OK")
                 {
-                    if (password.Text != cpassword.Text)
+                    if (txtpassword.Text != txtcpassword.Text)
                     {
                         if (language == "English") MessageBox.Show("Password do not match");
                         else MessageBox.Show("パスワードが一致しません");
@@ -798,7 +821,7 @@ namespace RFID_FEATHER_ASSETS
             //    }
             //}
             //cam.Stop();
-            if (firstName.Text.Length != 0 || txtRFIDTag.Text.Length != 0 || imgCapture1.Image != null)
+            if (txtfirstName.Text.Length != 0 || txtRFIDTag.Text.Length != 0 || imgCapture1.Image != null)
             {
                 string cancelMsg;
 
@@ -833,11 +856,12 @@ namespace RFID_FEATHER_ASSETS
                 //Back to Main Menu 
                 if (IsCameraConnected)
                     cam.Stop();
-                
+
                 this.Hide();
                 reader.CloseCom();
-                MainMenu MenuForm = new MainMenu(tokenvalue, string.Empty);
-                MenuForm.Show();
+                //MainMenu MenuForm = new MainMenu(tokenvalue, string.Empty);
+                //MenuForm.Show();
+                //this.Dispose();
             }
             catch (Exception ex)
             {
@@ -848,18 +872,19 @@ namespace RFID_FEATHER_ASSETS
         private void ClearFields()
         {
             txtRFIDTag.Text = string.Empty;
-            firstName.Text = string.Empty;
-            lastName.Text = string.Empty;
-            position.Text = string.Empty;
+            txtfirstName.Text = string.Empty;
+            txtlastName.Text = string.Empty;
+            txtposition.Text = string.Empty;
             description.Text = string.Empty;
-            email.Text = string.Empty;
+            txtemail.Text = string.Empty;
             imgCapture1.Image = null;
             imgCapture2.Image = null;
-            password.Text = string.Empty;
-            cpassword.Text = string.Empty;
+            txtpassword.Text = string.Empty;
+            txtcpassword.Text = string.Empty;
             lblValidIDPhoto.Visible = true;
             lblOwnerPhoto.Visible = true;
-            email.Enabled = true;
+            txtemail.Enabled = true;
+            cmbauthorities.Text = "Owner";
 
             //rbtnValidToday.Checked = true;
             rbtnValidUntil.Checked = true;
@@ -880,6 +905,7 @@ namespace RFID_FEATHER_ASSETS
                 btnSubmit.Text = rm.GetString("btnSubmit");
                 btnCancel.Text = rm.GetString("btnCancel");
             }
+            btnGetRFIDTag.Focus();
             this.Refresh();
         }
 
@@ -1032,13 +1058,13 @@ namespace RFID_FEATHER_ASSETS
                     GlobalClass.GetSetClass info = deserial.Deserialize<GlobalClass.GetSetClass>(response);
                     
                     userId = id;
-                    firstName.Text = info.firstName;
-                    lastName.Text = info.lastName;
-                    position.Text = info.position;
-                    email.Text = info.email;
-                    password.Text = info.password;
+                    txtfirstName.Text = info.firstName;
+                    txtlastName.Text = info.lastName;
+                    txtposition.Text = info.position;
+                    txtemail.Text = info.email;
+                    txtpassword.Text = info.password;
                     newImgFileNames = info.imageUrl;
-
+                    
                     string urls = info.imageUrl;
                     if (urls != null)
                     {
@@ -1064,15 +1090,15 @@ namespace RFID_FEATHER_ASSETS
                                      
                     if (info.authorities == "ROLE_ADMIN")
                     {
-
+                        cmbauthorities.Text = "Administrator";
                     }
                     else if (info.authorities == "ROLE_GUARD")
                     {
-
+                        cmbauthorities.Text = "Security";
                     }
                     else
                     {
-
+                        cmbauthorities.Text = "Owner";
                     }
 
                     //name = info.lastName + " " + info.lastName;
@@ -1546,7 +1572,7 @@ namespace RFID_FEATHER_ASSETS
                         tagInfo = RealTimeTagDataList[i].strEpc;//tagInfo = RealTimeTagDataList[i].btAntId.ToString() + "    " + RealTimeTagDataList[i].strEpc + "    ";// tagInfo = "antenna" + RealTimeTagDataList[i].btAntId.ToString() + "    " + RealTimeTagDataList[i].strEpc + "    " + RealTimeTagDataList[i].strCarrierFrequency + "    " + RealTimeTagDataList[i].strRssi;
                         //listBox1.Items.Add(tagInfo);
                         txtRFIDTag.Text = tagInfo.ToString();
-                        firstName.Focus();//txtAssetName.Focus();
+                        txtfirstName.Focus();//txtAssetName.Focus();
                         if (language == "English") btnCancel.Text = "Cancel";
                         else btnCancel.Text = "キャンセル";
                         if (btnEditInfoWasClicked)
@@ -1557,6 +1583,7 @@ namespace RFID_FEATHER_ASSETS
                             //email.Enabled = false;
                             //btnCancel.Text = "Cancel";
                             //btnSubmit.Text = "Update";
+                            //txtemail.Enabled = false;
                         }
                     }
                 }
@@ -1694,7 +1721,7 @@ namespace RFID_FEATHER_ASSETS
 
         private void btnEditInfo_Click(object sender, EventArgs e)
         {
-            if (btnSubmit.Text.ToLower() == "update" || ((!string.IsNullOrEmpty(firstName.Text) || imgCapture1.Image != null) && btnCancel.Text.ToLower() == "cancel"))
+            if (btnSubmit.Text.ToLower() == "update" || ((!string.IsNullOrEmpty(txtfirstName.Text) || imgCapture1.Image != null) && btnCancel.Text.ToLower() == "cancel"))
             {
                 btnCancel.PerformClick();
                 return;
@@ -1726,6 +1753,17 @@ namespace RFID_FEATHER_ASSETS
         private void authorities_SelectedIndexChanged(object sender, EventArgs e)
         {
             hidePassword();
+            txtpassword.Text = string.Empty;
+            txtcpassword.Text = string.Empty;
+        }
+
+        private void RegisterUser_Leave(object sender, EventArgs e)
+        {
+            if (IsCameraConnected)
+                cam.Stop();
+
+            //this.Hide();
+            reader.CloseCom();
         }
     }
 

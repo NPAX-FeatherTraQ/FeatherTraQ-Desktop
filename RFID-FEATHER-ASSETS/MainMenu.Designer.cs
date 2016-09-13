@@ -28,203 +28,260 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnScan = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
+            this.CurrentDateTimer = new System.Windows.Forms.Timer(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerOwnerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerAssetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verificationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verifyAssetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.transactionHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.btnRegisterAsset = new System.Windows.Forms.Button();
             this.btnRegisterUser = new System.Windows.Forms.Button();
-            this.cmbComPort = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnMyAssets = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnScan = new System.Windows.Forms.Button();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblSystemInfo = new System.Windows.Forms.ToolStripStatusLabel();
             this.btnTransactionHistory = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.company = new System.Windows.Forms.Label();
-            this.locationTxt = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.imagebtnClose = new System.Windows.Forms.ImageList(this.components);
+            this.menuStrip1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnScan
+            // CurrentDateTimer
             // 
-            this.btnScan.BackColor = System.Drawing.Color.Orange;
-            this.btnScan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnScan.Location = new System.Drawing.Point(52, 137);
-            this.btnScan.Name = "btnScan";
-            this.btnScan.Size = new System.Drawing.Size(178, 32);
-            this.btnScan.TabIndex = 2;
-            this.btnScan.Text = "SCAN";
-            this.btnScan.UseVisualStyleBackColor = false;
-            this.btnScan.Click += new System.EventHandler(this.btnScan_Click);
+            this.CurrentDateTimer.Enabled = true;
+            this.CurrentDateTimer.Tick += new System.EventHandler(this.CurrentDateTimer_Tick);
             // 
-            // btnRegisterAsset
+            // menuStrip1
             // 
-            this.btnRegisterAsset.BackColor = System.Drawing.Color.Orange;
-            this.btnRegisterAsset.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegisterAsset.Location = new System.Drawing.Point(51, 96);
-            this.btnRegisterAsset.Name = "btnRegisterAsset";
-            this.btnRegisterAsset.Size = new System.Drawing.Size(178, 35);
-            this.btnRegisterAsset.TabIndex = 1;
-            this.btnRegisterAsset.Text = "REGISTER ASSET";
-            this.btnRegisterAsset.UseVisualStyleBackColor = false;
-            this.btnRegisterAsset.Click += new System.EventHandler(this.btnRegisterAsset_Click);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.registrationToolStripMenuItem,
+            this.verificationToolStripMenuItem,
+            this.reportsToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(393, 24);
+            this.menuStrip1.TabIndex = 31;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // btnRegisterUser
+            // fileToolStripMenuItem
             // 
-            this.btnRegisterUser.BackColor = System.Drawing.Color.Orange;
-            this.btnRegisterUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegisterUser.Location = new System.Drawing.Point(52, 12);
-            this.btnRegisterUser.Name = "btnRegisterUser";
-            this.btnRegisterUser.Size = new System.Drawing.Size(178, 37);
-            this.btnRegisterUser.TabIndex = 0;
-            this.btnRegisterUser.Text = "REGISTER OWNER";
-            this.btnRegisterUser.UseVisualStyleBackColor = false;
-            this.btnRegisterUser.Click += new System.EventHandler(this.btnRegisterUser_Click);
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.logOutToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
             // 
-            // cmbComPort
+            // logOutToolStripMenuItem
             // 
-            this.cmbComPort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbComPort.FormattingEnabled = true;
-            this.cmbComPort.Items.AddRange(new object[] {
-            "COM1",
-            "COM2",
-            "COM3",
-            "COM4",
-            "COM5",
-            "COM6",
-            "COM7",
-            "COM8",
-            "COM9",
-            "COM10",
-            "COM11",
-            "COM12",
-            "COM13",
-            "COM14",
-            "COM15",
-            "COM16"});
-            this.cmbComPort.Location = new System.Drawing.Point(112, 241);
-            this.cmbComPort.Name = "cmbComPort";
-            this.cmbComPort.Size = new System.Drawing.Size(77, 21);
-            this.cmbComPort.TabIndex = 20;
-            this.cmbComPort.Visible = false;
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.logOutToolStripMenuItem.Text = "Log Out";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
-            // label1
+            // toolStripMenuItem1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 244);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Serial Port:";
-            this.label1.Visible = false;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(114, 6);
             // 
-            // btnMyAssets
+            // exitToolStripMenuItem
             // 
-            this.btnMyAssets.BackColor = System.Drawing.Color.Orange;
-            this.btnMyAssets.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMyAssets.Location = new System.Drawing.Point(52, 224);
-            this.btnMyAssets.Name = "btnMyAssets";
-            this.btnMyAssets.Size = new System.Drawing.Size(178, 32);
-            this.btnMyAssets.TabIndex = 21;
-            this.btnMyAssets.Text = "MY ASSETS";
-            this.btnMyAssets.UseVisualStyleBackColor = false;
-            this.btnMyAssets.Visible = false;
-            this.btnMyAssets.Click += new System.EventHandler(this.btnMyAssets_Click);
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // registrationToolStripMenuItem
+            // 
+            this.registrationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registerOwnerToolStripMenuItem,
+            this.registerAssetToolStripMenuItem});
+            this.registrationToolStripMenuItem.Name = "registrationToolStripMenuItem";
+            this.registrationToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
+            this.registrationToolStripMenuItem.Text = "Registration";
+            // 
+            // registerOwnerToolStripMenuItem
+            // 
+            this.registerOwnerToolStripMenuItem.Name = "registerOwnerToolStripMenuItem";
+            this.registerOwnerToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.registerOwnerToolStripMenuItem.Text = "Register Owner";
+            this.registerOwnerToolStripMenuItem.Click += new System.EventHandler(this.registerOwnerToolStripMenuItem_Click);
+            // 
+            // registerAssetToolStripMenuItem
+            // 
+            this.registerAssetToolStripMenuItem.Name = "registerAssetToolStripMenuItem";
+            this.registerAssetToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.registerAssetToolStripMenuItem.Text = "Register Asset";
+            this.registerAssetToolStripMenuItem.Click += new System.EventHandler(this.registerAssetToolStripMenuItem_Click);
+            // 
+            // verificationToolStripMenuItem
+            // 
+            this.verificationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.verifyAssetToolStripMenuItem});
+            this.verificationToolStripMenuItem.Name = "verificationToolStripMenuItem";
+            this.verificationToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.verificationToolStripMenuItem.Text = "Verification";
+            // 
+            // verifyAssetToolStripMenuItem
+            // 
+            this.verifyAssetToolStripMenuItem.Name = "verifyAssetToolStripMenuItem";
+            this.verifyAssetToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.verifyAssetToolStripMenuItem.Text = "Verify Asset";
+            this.verifyAssetToolStripMenuItem.Click += new System.EventHandler(this.verifyAssetToolStripMenuItem_Click);
+            // 
+            // reportsToolStripMenuItem
+            // 
+            this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.transactionHistoryToolStripMenuItem});
+            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.reportsToolStripMenuItem.Text = "Reports";
+            // 
+            // transactionHistoryToolStripMenuItem
+            // 
+            this.transactionHistoryToolStripMenuItem.Name = "transactionHistoryToolStripMenuItem";
+            this.transactionHistoryToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.transactionHistoryToolStripMenuItem.Text = "Transaction History";
+            this.transactionHistoryToolStripMenuItem.Click += new System.EventHandler(this.transactionHistoryToolStripMenuItem_Click);
             // 
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.Red;
-            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnLogout.Location = new System.Drawing.Point(52, 225);
+            this.btnLogout.Location = new System.Drawing.Point(119, 233);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(178, 32);
-            this.btnLogout.TabIndex = 4;
-            this.btnLogout.Text = "Log Out";
+            this.btnLogout.Size = new System.Drawing.Size(143, 32);
+            this.btnLogout.TabIndex = 33;
+            this.btnLogout.Text = "LOG OUT";
             this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            this.btnLogout.Visible = false;
+            // 
+            // btnRegisterAsset
+            // 
+            this.btnRegisterAsset.BackColor = System.Drawing.Color.Orange;
+            this.btnRegisterAsset.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegisterAsset.Location = new System.Drawing.Point(119, 96);
+            this.btnRegisterAsset.Name = "btnRegisterAsset";
+            this.btnRegisterAsset.Size = new System.Drawing.Size(143, 35);
+            this.btnRegisterAsset.TabIndex = 40;
+            this.btnRegisterAsset.Text = "REGISTER ASSET";
+            this.btnRegisterAsset.UseVisualStyleBackColor = false;
+            this.btnRegisterAsset.Visible = false;
+            // 
+            // btnRegisterUser
+            // 
+            this.btnRegisterUser.BackColor = System.Drawing.Color.Orange;
+            this.btnRegisterUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegisterUser.Location = new System.Drawing.Point(119, 55);
+            this.btnRegisterUser.Name = "btnRegisterUser";
+            this.btnRegisterUser.Size = new System.Drawing.Size(143, 35);
+            this.btnRegisterUser.TabIndex = 39;
+            this.btnRegisterUser.Text = "REGISTER OWNER";
+            this.btnRegisterUser.UseVisualStyleBackColor = false;
+            this.btnRegisterUser.Visible = false;
+            // 
+            // btnScan
+            // 
+            this.btnScan.BackColor = System.Drawing.Color.Orange;
+            this.btnScan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScan.Location = new System.Drawing.Point(119, 137);
+            this.btnScan.Name = "btnScan";
+            this.btnScan.Size = new System.Drawing.Size(143, 32);
+            this.btnScan.TabIndex = 41;
+            this.btnScan.Text = "VERIFY ASSET";
+            this.btnScan.UseVisualStyleBackColor = false;
+            this.btnScan.Visible = false;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblSystemInfo});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 284);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(393, 22);
+            this.statusStrip1.TabIndex = 42;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // lblSystemInfo
+            // 
+            this.lblSystemInfo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSystemInfo.Name = "lblSystemInfo";
+            this.lblSystemInfo.Size = new System.Drawing.Size(378, 17);
+            this.lblSystemInfo.Spring = true;
+            this.lblSystemInfo.Text = "Display System Information";
+            this.lblSystemInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnTransactionHistory
             // 
             this.btnTransactionHistory.BackColor = System.Drawing.Color.Orange;
-            this.btnTransactionHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTransactionHistory.Location = new System.Drawing.Point(52, 172);
+            this.btnTransactionHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTransactionHistory.Location = new System.Drawing.Point(119, 190);
             this.btnTransactionHistory.Name = "btnTransactionHistory";
-            this.btnTransactionHistory.Size = new System.Drawing.Size(178, 37);
-            this.btnTransactionHistory.TabIndex = 3;
+            this.btnTransactionHistory.Size = new System.Drawing.Size(143, 37);
+            this.btnTransactionHistory.TabIndex = 43;
             this.btnTransactionHistory.Text = "TRANSACTION HISTORY";
             this.btnTransactionHistory.UseVisualStyleBackColor = false;
-            this.btnTransactionHistory.Click += new System.EventHandler(this.btnTransactionHistory_Click);
+            this.btnTransactionHistory.Visible = false;
             // 
-            // label2
+            // tabControl1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(12, 260);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 13);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Company:";
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.ImageList = this.imagebtnClose;
+            this.tabControl1.Location = new System.Drawing.Point(0, 24);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(393, 260);
+            this.tabControl1.TabIndex = 45;
+            this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl1_DrawItem);
+            this.tabControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabControl1_MouseDown);
             // 
-            // company
+            // imagebtnClose
             // 
-            this.company.AutoSize = true;
-            this.company.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.company.ForeColor = System.Drawing.Color.Black;
-            this.company.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.company.Location = new System.Drawing.Point(74, 260);
-            this.company.Name = "company";
-            this.company.Size = new System.Drawing.Size(56, 13);
-            this.company.TabIndex = 23;
-            this.company.Text = "Location";
-            // 
-            // locationTxt
-            // 
-            this.locationTxt.AutoSize = true;
-            this.locationTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.locationTxt.ForeColor = System.Drawing.Color.Black;
-            this.locationTxt.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.locationTxt.Location = new System.Drawing.Point(198, 260);
-            this.locationTxt.Name = "locationTxt";
-            this.locationTxt.Size = new System.Drawing.Size(56, 13);
-            this.locationTxt.TabIndex = 25;
-            this.locationTxt.Text = "Location";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(136, 260);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 13);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "Location:";
+            this.imagebtnClose.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imagebtnClose.ImageStream")));
+            this.imagebtnClose.TransparentColor = System.Drawing.Color.Transparent;
+            this.imagebtnClose.Images.SetKeyName(0, "XMark.png");
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(281, 274);
-            this.Controls.Add(this.locationTxt);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.company);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(393, 306);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnTransactionHistory);
-            this.Controls.Add(this.btnLogout);
-            this.Controls.Add(this.btnMyAssets);
-            this.Controls.Add(this.cmbComPort);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnRegisterUser);
-            this.Controls.Add(this.btnRegisterAsset);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnScan);
+            this.Controls.Add(this.btnRegisterAsset);
+            this.Controls.Add(this.btnRegisterUser);
+            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
+            this.IsMdiContainer = true;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Main Menu";
+            this.Text = "Feather TraQ - Asset Management Solution";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainMenu_FormClosed);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,17 +289,28 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnScan;
+        private System.Windows.Forms.Timer CurrentDateTimer;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registerOwnerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registerAssetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verificationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verifyAssetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem transactionHistoryToolStripMenuItem;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnRegisterAsset;
         private System.Windows.Forms.Button btnRegisterUser;
-        private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.ComboBox cmbComPort;
-        private System.Windows.Forms.Button btnMyAssets;
-        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnScan;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel lblSystemInfo;
         private System.Windows.Forms.Button btnTransactionHistory;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label company;
-        private System.Windows.Forms.Label locationTxt;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.ImageList imagebtnClose;
+
     }
 }

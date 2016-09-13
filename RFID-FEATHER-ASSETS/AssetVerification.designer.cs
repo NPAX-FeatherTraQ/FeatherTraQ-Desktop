@@ -81,8 +81,6 @@
             this.picOwner = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.grdViewRFIDTag = new System.Windows.Forms.DataGridView();
-            this.lblLoginUserName = new System.Windows.Forms.Label();
-            this.ReadLoopTimer = new System.Windows.Forms.Timer(this.components);
             this.colDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colOwnerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAssetDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -97,6 +95,8 @@
             this.colAssetOwner = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colRFIDTag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colIsCompared = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblLoginUserName = new System.Windows.Forms.Label();
+            this.ReadLoopTimer = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCapture5)).BeginInit();
@@ -134,6 +134,7 @@
             // 
             // groupBox1
             // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.btnReport);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.lblLoadingInformation);
@@ -155,7 +156,6 @@
             this.groupBox1.Controls.Add(this.imgCapture2);
             this.groupBox1.Controls.Add(this.imgCapture1);
             this.groupBox1.Controls.Add(this.grpBoxReportedInfo);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
@@ -497,16 +497,6 @@
             this.grdViewRFIDTag.RowHeadersVisible = false;
             this.grdViewRFIDTag.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdViewRFIDTag_CellContentDoubleClick);
             // 
-            // lblLoginUserName
-            // 
-            resources.ApplyResources(this.lblLoginUserName, "lblLoginUserName");
-            this.lblLoginUserName.BackColor = System.Drawing.Color.White;
-            this.lblLoginUserName.Name = "lblLoginUserName";
-            // 
-            // ReadLoopTimer
-            // 
-            this.ReadLoopTimer.Tick += new System.EventHandler(this.ReadLoopTimer_Tick);
-            // 
             // colDate
             // 
             this.colDate.FillWeight = 120F;
@@ -609,6 +599,16 @@
             this.colIsCompared.Name = "colIsCompared";
             this.colIsCompared.ReadOnly = true;
             this.colIsCompared.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // lblLoginUserName
+            // 
+            resources.ApplyResources(this.lblLoginUserName, "lblLoginUserName");
+            this.lblLoginUserName.BackColor = System.Drawing.Color.White;
+            this.lblLoginUserName.Name = "lblLoginUserName";
+            // 
+            // ReadLoopTimer
+            // 
+            this.ReadLoopTimer.Tick += new System.EventHandler(this.ReadLoopTimer_Tick);
             // 
             // Verification
             // 

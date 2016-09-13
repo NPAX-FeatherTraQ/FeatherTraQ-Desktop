@@ -41,8 +41,9 @@
             this.lblLanguage = new System.Windows.Forms.Label();
             this.selectLanguage = new System.Windows.Forms.ComboBox();
             this.lblCompanyRequired = new System.Windows.Forms.Label();
-            this.location = new System.Windows.Forms.ComboBox();
+            this.cmbLocation = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblLocation = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtUserName
@@ -127,11 +128,14 @@
             this.lblCompanyRequired.ForeColor = System.Drawing.Color.Red;
             this.lblCompanyRequired.Name = "lblCompanyRequired";
             // 
-            // location
+            // cmbLocation
             // 
-            resources.ApplyResources(this.location, "location");
-            this.location.FormattingEnabled = true;
-            this.location.Name = "location";
+            this.cmbLocation.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbLocation.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            resources.ApplyResources(this.cmbLocation, "cmbLocation");
+            this.cmbLocation.FormattingEnabled = true;
+            this.cmbLocation.Name = "cmbLocation";
+            this.cmbLocation.Leave += new System.EventHandler(this.cmbLocation_Leave);
             // 
             // label1
             // 
@@ -139,12 +143,20 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Name = "label1";
             // 
+            // lblLocation
+            // 
+            this.lblLocation.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblLocation.ForeColor = System.Drawing.Color.Red;
+            resources.ApplyResources(this.lblLocation, "lblLocation");
+            this.lblLocation.Name = "lblLocation";
+            // 
             // LoginActivity
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Controls.Add(this.location);
+            this.Controls.Add(this.lblLocation);
+            this.Controls.Add(this.cmbLocation);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblCompanyRequired);
             this.Controls.Add(this.selectLanguage);
@@ -181,8 +193,9 @@
         private System.Windows.Forms.Label lblLanguage;
         private System.Windows.Forms.ComboBox selectLanguage;
         private System.Windows.Forms.Label lblCompanyRequired;
-        private System.Windows.Forms.ComboBox location;
+        private System.Windows.Forms.ComboBox cmbLocation;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblLocation;
     }
 }
 

@@ -122,14 +122,14 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="txtUserName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 94</value>
+    <value>32, 128</value>
   </data>
   <data name="txtUserName.Size" type="System.Drawing.Size, System.Drawing">
     <value>178, 22</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txtUserName.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;txtUserName.Name" xml:space="preserve">
     <value>txtUserName</value>
@@ -141,13 +141,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtUserName.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="txtPassword.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="txtPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 145</value>
+    <value>32, 171</value>
   </data>
   <data name="txtPassword.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
     <value>*</value>
@@ -156,7 +156,7 @@
     <value>178, 22</value>
   </data>
   <data name="txtPassword.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;txtPassword.Name" xml:space="preserve">
     <value>txtPassword</value>
@@ -168,7 +168,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtPassword.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="lblUsername.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -177,7 +177,7 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="lblUsername.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 75</value>
+    <value>29, 112</value>
   </data>
   <data name="lblUsername.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 13</value>
@@ -198,7 +198,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblUsername.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="lblPassword.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -207,7 +207,7 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="lblPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 126</value>
+    <value>29, 155</value>
   </data>
   <data name="lblPassword.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 13</value>
@@ -228,7 +228,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblPassword.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="btnLogin.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
@@ -240,7 +240,7 @@
     <value>85, 35</value>
   </data>
   <data name="btnLogin.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="btnLogin.Text" xml:space="preserve">
     <value>Log In</value>
@@ -255,7 +255,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnLogin.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="btnCancel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
@@ -267,7 +267,7 @@
     <value>85, 35</value>
   </data>
   <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="btnCancel.Text" xml:space="preserve">
     <value>Cancel</value>
@@ -282,7 +282,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="lblUserPasswordRequired.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 199</value>
@@ -312,16 +312,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblUserPasswordRequired.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="lblLogin.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 15.75pt</value>
   </data>
   <data name="lblLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 41</value>
+    <value>220, 41</value>
   </data>
   <data name="lblLogin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>238, 25</value>
+    <value>22, 25</value>
   </data>
   <data name="lblLogin.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -331,6 +331,9 @@
   </data>
   <data name="lblLogin.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
+  </data>
+  <data name="lblLogin.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;lblLogin.Name" xml:space="preserve">
     <value>lblLogin</value>
@@ -342,13 +345,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblLogin.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="lblSigningIn.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
   </data>
   <data name="lblSigningIn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 264</value>
+    <value>1, 260</value>
   </data>
   <data name="lblSigningIn.Size" type="System.Drawing.Size, System.Drawing">
     <value>241, 16</value>
@@ -375,7 +378,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblSigningIn.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="lblLanguage.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -384,7 +387,7 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="lblLanguage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 17</value>
+    <value>29, 17</value>
   </data>
   <data name="lblLanguage.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 13</value>
@@ -405,7 +408,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblLanguage.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="selectLanguage.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -417,7 +420,7 @@
     <value>Japanese</value>
   </data>
   <data name="selectLanguage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>118, 12</value>
+    <value>97, 12</value>
   </data>
   <data name="selectLanguage.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 24</value>
@@ -435,7 +438,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;selectLanguage.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="lblCompanyRequired.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -465,31 +468,31 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblCompanyRequired.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
-  <data name="location.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="cmbLocation.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
-  <data name="location.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 170</value>
+  <data name="cmbLocation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 84</value>
   </data>
-  <data name="location.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 24</value>
+  <data name="cmbLocation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 24</value>
   </data>
-  <data name="location.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+  <data name="cmbLocation.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;location.Name" xml:space="preserve">
-    <value>location</value>
+  <data name="&gt;&gt;cmbLocation.Name" xml:space="preserve">
+    <value>cmbLocation</value>
   </data>
-  <data name="&gt;&gt;location.Type" xml:space="preserve">
+  <data name="&gt;&gt;cmbLocation.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;location.Parent" xml:space="preserve">
+  <data name="&gt;&gt;cmbLocation.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;location.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;cmbLocation.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -502,16 +505,16 @@
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 175</value>
+    <value>29, 68</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 13</value>
+    <value>69, 13</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Location</value>
+    <value>LOCATION</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -523,7 +526,40 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
+  </data>
+  <data name="lblLocation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblLocation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 65</value>
+  </data>
+  <data name="lblLocation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 18</value>
+  </data>
+  <data name="lblLocation.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="lblLocation.Text" xml:space="preserve">
+    <value>Location is required</value>
+  </data>
+  <data name="lblLocation.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="lblLocation.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lblLocation.Name" xml:space="preserve">
+    <value>lblLocation</value>
+  </data>
+  <data name="&gt;&gt;lblLocation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblLocation.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblLocation.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -532,13 +568,13 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>243, 293</value>
+    <value>239, 283</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>FeatherTraq</value>
+    <value>Login FeatherTraq</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>LoginActivity</value>

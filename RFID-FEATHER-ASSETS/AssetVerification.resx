@@ -129,7 +129,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblCurrentDateTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>833, 733</value>
+    <value>833, 671</value>
   </data>
   <data name="lblCurrentDateTime.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -140,6 +140,9 @@
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lblCurrentDateTime.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
+  </data>
+  <data name="lblCurrentDateTime.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;lblCurrentDateTime.Name" xml:space="preserve">
     <value>lblCurrentDateTime</value>
@@ -165,6 +168,9 @@
   <metadata name="ClearGridTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="groupBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <data name="btnReport.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -175,7 +181,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnReport.Location" type="System.Drawing.Point, System.Drawing">
-    <value>816, 331</value>
+    <value>816, 300</value>
   </data>
   <data name="btnReport.Size" type="System.Drawing.Size, System.Drawing">
     <value>145, 35</value>
@@ -634,7 +640,7 @@
     <value>Microsoft Sans Serif, 14.25pt, style=Bold</value>
   </data>
   <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>669, 17</value>
+    <value>669, -14</value>
   </data>
   <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>292, 308</value>
@@ -664,7 +670,7 @@
     <value>Microsoft Sans Serif, 27.75pt, style=Bold</value>
   </data>
   <data name="lblLoadingInformation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 207</value>
+    <value>29, 176</value>
   </data>
   <data name="lblLoadingInformation.Size" type="System.Drawing.Size, System.Drawing">
     <value>621, 42</value>
@@ -700,7 +706,7 @@
     <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
   </data>
   <data name="lblSubmittingInformation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>651, 267</value>
+    <value>651, 236</value>
   </data>
   <data name="lblSubmittingInformation.Size" type="System.Drawing.Size, System.Drawing">
     <value>336, 18</value>
@@ -739,7 +745,7 @@
     <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="lblAssetPhoto3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>749, 524</value>
+    <value>749, 493</value>
   </data>
   <data name="lblAssetPhoto3.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 24</value>
@@ -775,7 +781,7 @@
     <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="lblAssetPhoto2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>426, 524</value>
+    <value>426, 493</value>
   </data>
   <data name="lblAssetPhoto2.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 24</value>
@@ -811,7 +817,7 @@
     <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="lblAssetPhoto1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 524</value>
+    <value>120, 493</value>
   </data>
   <data name="lblAssetPhoto1.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 24</value>
@@ -847,7 +853,7 @@
     <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="lblValidIDPhoto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>426, 153</value>
+    <value>426, 122</value>
   </data>
   <data name="lblValidIDPhoto.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 24</value>
@@ -883,7 +889,7 @@
     <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="lblOwnerPhoto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 153</value>
+    <value>120, 122</value>
   </data>
   <data name="lblOwnerPhoto.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 24</value>
@@ -913,7 +919,7 @@
     <value>None</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 720</value>
+    <value>29, 689</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>934, 10</value>
@@ -943,7 +949,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnBack.Location" type="System.Drawing.Point, System.Drawing">
-    <value>669, 331</value>
+    <value>669, 300</value>
   </data>
   <data name="btnBack.Size" type="System.Drawing.Size, System.Drawing">
     <value>145, 35</value>
@@ -973,7 +979,7 @@
     <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="btnSubmit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>669, 290</value>
+    <value>669, 259</value>
   </data>
   <data name="btnSubmit.Size" type="System.Drawing.Size, System.Drawing">
     <value>145, 35</value>
@@ -1006,7 +1012,7 @@
     <value>Microsoft Sans Serif, 14.25pt, style=Bold, Underline</value>
   </data>
   <data name="lblOwnerPic.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 17</value>
+    <value>25, -14</value>
   </data>
   <data name="lblOwnerPic.Size" type="System.Drawing.Size, System.Drawing">
     <value>153, 24</value>
@@ -1042,7 +1048,7 @@
     <value>Microsoft Sans Serif, 14.25pt, style=Bold, Underline</value>
   </data>
   <data name="lblAssetPic.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 381</value>
+    <value>25, 350</value>
   </data>
   <data name="lblAssetPic.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 24</value>
@@ -1072,7 +1078,7 @@
     <value>None</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 356</value>
+    <value>29, 325</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>622, 10</value>
@@ -1099,7 +1105,7 @@
     <value>Stretch</value>
   </data>
   <data name="imgCapture5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>651, 410</value>
+    <value>651, 379</value>
   </data>
   <data name="imgCapture5.Size" type="System.Drawing.Size, System.Drawing">
     <value>310, 310</value>
@@ -1129,7 +1135,7 @@
     <value>Stretch</value>
   </data>
   <data name="imgCapture4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 410</value>
+    <value>340, 379</value>
   </data>
   <data name="imgCapture4.Size" type="System.Drawing.Size, System.Drawing">
     <value>310, 310</value>
@@ -1159,7 +1165,7 @@
     <value>Stretch</value>
   </data>
   <data name="imgCapture3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 410</value>
+    <value>29, 379</value>
   </data>
   <data name="imgCapture3.Size" type="System.Drawing.Size, System.Drawing">
     <value>310, 310</value>
@@ -1189,7 +1195,7 @@
     <value>Stretch</value>
   </data>
   <data name="imgCapture2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 46</value>
+    <value>340, 15</value>
   </data>
   <data name="imgCapture2.Size" type="System.Drawing.Size, System.Drawing">
     <value>310, 310</value>
@@ -1219,7 +1225,7 @@
     <value>Stretch</value>
   </data>
   <data name="imgCapture1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 46</value>
+    <value>29, 15</value>
   </data>
   <data name="imgCapture1.Size" type="System.Drawing.Size, System.Drawing">
     <value>310, 310</value>
@@ -1534,7 +1540,7 @@
     <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
   </data>
   <data name="grpBoxReportedInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>901, 381</value>
+    <value>901, 350</value>
   </data>
   <data name="grpBoxReportedInfo.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 24</value>
@@ -1560,9 +1566,6 @@
   <data name="&gt;&gt;grpBoxReportedInfo.ZOrder" xml:space="preserve">
     <value>20</value>
   </data>
-  <data name="groupBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
   <data name="groupBox1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
@@ -1570,7 +1573,7 @@
     <value>0, 0</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>987, 750</value>
+    <value>987, 688</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
@@ -1708,7 +1711,7 @@
     <value>0, 0</value>
   </data>
   <data name="grdViewRFIDTag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>987, 750</value>
+    <value>987, 688</value>
   </data>
   <data name="grdViewRFIDTag.TabIndex" type="System.Int32, mscorlib">
     <value>85</value>
@@ -1735,7 +1738,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblLoginUserName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 733</value>
+    <value>5, 671</value>
   </data>
   <data name="lblLoginUserName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -1745,6 +1748,9 @@
   </data>
   <data name="lblLoginUserName.TabIndex" type="System.Int32, mscorlib">
     <value>86</value>
+  </data>
+  <data name="lblLoginUserName.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;lblLoginUserName.Name" xml:space="preserve">
     <value>lblLoginUserName</value>
@@ -1774,7 +1780,10 @@
     <value>True</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>987, 750</value>
+    <value>987, 688</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1003, 726</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
@@ -1804,12 +1813,6 @@
     <value>ClearGridTimer</value>
   </data>
   <data name="&gt;&gt;ClearGridTimer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ReadLoopTimer.Name" xml:space="preserve">
-    <value>ReadLoopTimer</value>
-  </data>
-  <data name="&gt;&gt;ReadLoopTimer.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;colDate.Name" xml:space="preserve">
@@ -1895,6 +1898,12 @@
   </data>
   <data name="&gt;&gt;colIsCompared.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ReadLoopTimer.Name" xml:space="preserve">
+    <value>ReadLoopTimer</value>
+  </data>
+  <data name="&gt;&gt;ReadLoopTimer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Verification</value>

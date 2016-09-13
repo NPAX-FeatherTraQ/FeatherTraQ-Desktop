@@ -36,6 +36,7 @@ namespace RFID_FEATHER_ASSETS
             if (locationInfo != null)
             {
                 populateLocation();
+                txtUserName.Focus();
             }
             //populateLanguage();
         }
@@ -64,9 +65,10 @@ namespace RFID_FEATHER_ASSETS
                 }
                 //roles.Add(new Role() { roleName = "User", value = "ROLE_USER" });
                 /*}*/
-                this.location.DataSource = loc;
-                this.location.ValueMember = "value";
-                this.location.DisplayMember = "location";
+                this.cmbLocation.DataSource = loc;
+                this.cmbLocation.ValueMember = "value";
+                this.cmbLocation.DisplayMember = "location";
+                this.cmbLocation.Text = readerInfo;
             }
         }
 
@@ -117,6 +119,7 @@ namespace RFID_FEATHER_ASSETS
                 {
                     selectLanguage.Text = (string)(key.GetValue("Language"));
                     locationInfo = (string)(key.GetValue("LocInfo"));
+                    readerInfo = (string)(key.GetValue("readerInfo"));
                     key.Close();
                 }
             }
@@ -135,7 +138,13 @@ namespace RFID_FEATHER_ASSETS
         {
             try
             {
-                if (txtUserName.TextLength == 0 || txtPassword.TextLength == 0)
+                if (string.IsNullOrEmpty(cmbLocation.Text))
+                {
+                    lblLocation.Visible = true;
+                    cmbLocation.Focus();
+                    return;
+                }
+                else if (txtUserName.TextLength == 0 || txtPassword.TextLength == 0)
                 {
                     lblUserPasswordRequired.Visible = true;
                     txtUserName.Focus();
@@ -180,16 +189,16 @@ namespace RFID_FEATHER_ASSETS
 
                         JsonDeserializer deserial = new JsonDeserializer();
                         loginResult = deserial.Deserialize<GlobalClass.GetSetClass>(response);
-                        readerInfo = location.Text;
+                        readerInfo = cmbLocation.Text;
                        
                         if (locationInfo == null)
-                            locationInfo = location.Text;
+                            locationInfo = cmbLocation.Text;
                         else
                         {
                             string[] loc = locationInfo.Split(',');
                             for (int i = 0; i < loc.Length; i++)
                             {
-                                if (loc[i].ToLower() == location.Text.ToLower())
+                                if (loc[i].ToLower() == cmbLocation.Text.ToLower())
                                 {
                                     save = false;
                                     break;
@@ -199,7 +208,7 @@ namespace RFID_FEATHER_ASSETS
 
                             }
                                 if(save == true)
-                                    locationInfo = locationInfo + ',' + location.Text;
+                                    locationInfo = locationInfo + ',' + cmbLocation.Text;
                         }
                         companyid = loginResult.companyId;
                         companyName = loginResult.companyName;
@@ -338,6 +347,14 @@ namespace RFID_FEATHER_ASSETS
         private void lblLogin_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cmbLocation_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(cmbLocation.Text))
+                lblLocation.Visible = true;
+            else
+                lblLocation.Visible = false;
         }
      }
 

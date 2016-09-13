@@ -293,7 +293,7 @@ namespace RFID_FEATHER_ASSETS
 
                     if (Convert.ToDateTime(startDateValue) < Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd THH:mm")))
                     {
-                        MessageBox.Show("Start Date must not less than to current Date and Time.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Start Date must not be less than to current Date and Time.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
 
@@ -317,12 +317,12 @@ namespace RFID_FEATHER_ASSETS
 
                         if (Convert.ToDateTime(startDateValue) > Convert.ToDateTime(validUntilValue))
                         {
-                            MessageBox.Show("Start Date must not greater than Until Date.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Start Date must not be greater than Until Date.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
                         else if (Convert.ToDateTime(validUntilValue) < Convert.ToDateTime(DateTime.Now.ToString("g")))
                         {
-                            MessageBox.Show("Until Date must not less than to current Date and Time.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Until Date must not be less than to current Date and Time.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
 
@@ -966,8 +966,9 @@ namespace RFID_FEATHER_ASSETS
 
                 this.Hide();
                 reader.CloseCom();
-                MainMenu MenuForm = new MainMenu(tokenvalue, roleValue);
-                MenuForm.Show();
+                //MainMenu MenuForm = new MainMenu(tokenvalue, roleValue);
+                //MenuForm.Show();
+                //this.Dispose();
             }
             catch (Exception ex)
             {
@@ -981,8 +982,8 @@ namespace RFID_FEATHER_ASSETS
             {
                 AssetValidUntilDateTime();
 
-                CurrentTimer.Enabled = true;
-                CurrentTimer.Interval = 1000;
+                //CurrentTimer.Enabled = true;
+                //CurrentTimer.Interval = 1000;
 
                 reader = new Reader.ReaderMethod();
                 ////Callback
@@ -2205,6 +2206,15 @@ namespace RFID_FEATHER_ASSETS
         private void dtStartTimePicker_ValueChanged(object sender, EventArgs e)
         {
             AssetValidUntilTime();
+        }
+
+        private void AssetRegistration_Leave(object sender, EventArgs e)
+        {
+            if (IsCameraConnected)
+                cam.Stop();
+
+            //this.Hide();
+            reader.CloseCom();
         }
     }
 
