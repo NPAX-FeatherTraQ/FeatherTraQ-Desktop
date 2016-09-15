@@ -23,7 +23,7 @@ namespace RFID_FEATHER_ASSETS
         public int companyId;
         string readerInfo;
 
-        private Reader.ReaderMethod reader;
+        public static Reader.ReaderMethod reader;
         private ReaderSetting m_curSetting = new ReaderSetting();
         private InventoryBuffer m_curInventoryBuffer = new InventoryBuffer();
         private List<RealTimeTagData> RealTimeTagDataList = new List<RealTimeTagData>();
@@ -883,6 +883,14 @@ namespace RFID_FEATHER_ASSETS
             try // Await the task in a try block
             {
                 string strException = string.Empty; // 
+                //opening the subkey  
+                RegistryKey key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\AssetSystemInfo");
+
+                //if it does exist, retrieve the stored values  
+                if (key != null)
+                {
+                    portname = (string)(key.GetValue("DefaultPortName"));
+                }
                 string strComPort = portname;
                 int nBaudrate = Convert.ToInt32(baudrate);////Convert.ToInt32(BaudBox.Text);
 
@@ -1070,6 +1078,7 @@ namespace RFID_FEATHER_ASSETS
                 else ValidateRule();//CallMainMenu();
 
                 PortSelectionForm.Dispose();
+                //this.Dispose();
             }
             catch (Exception ex)
             {
@@ -1080,6 +1089,12 @@ namespace RFID_FEATHER_ASSETS
         private void Verification_FormClosed(object sender, FormClosedEventArgs e)
         {
             ValidateRule();
+
+            if (RegisterUser.regOwnerCon) RegisterUser.reader.CloseCom();
+            if (RegisterUser.cam != null) RegisterUser.cam.Stop();
+
+            if (AssetRegistration.regAssetCon) AssetRegistration.reader.CloseCom();
+            if (AssetRegistration.cam != null) AssetRegistration.cam.Stop();
         }
 
         private void ValidateRule()
@@ -1107,9 +1122,8 @@ namespace RFID_FEATHER_ASSETS
 
             this.Hide();
             reader.CloseCom();
-            //MainMenu MenuForm = new MainMenu(tokenvalue, roleValue);
-            //MenuForm.Show();
-            //this.Dispose();
+            MainMenu MenuForm = new MainMenu(tokenvalue, roleValue);
+            MenuForm.Show();
         }
 
         private void btnBack_Click(object sender, EventArgs e)

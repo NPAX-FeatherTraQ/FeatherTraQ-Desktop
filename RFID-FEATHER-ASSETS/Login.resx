@@ -129,7 +129,7 @@
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txtUserName.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;txtUserName.Name" xml:space="preserve">
     <value>txtUserName</value>
@@ -156,7 +156,7 @@
     <value>178, 22</value>
   </data>
   <data name="txtPassword.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;txtPassword.Name" xml:space="preserve">
     <value>txtPassword</value>
@@ -240,7 +240,7 @@
     <value>85, 35</value>
   </data>
   <data name="btnLogin.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="btnLogin.Text" xml:space="preserve">
     <value>Log In</value>
@@ -267,7 +267,7 @@
     <value>85, 35</value>
   </data>
   <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="btnCancel.Text" xml:space="preserve">
     <value>Cancel</value>
@@ -480,7 +480,7 @@
     <value>178, 24</value>
   </data>
   <data name="cmbLocation.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;cmbLocation.Name" xml:space="preserve">
     <value>cmbLocation</value>

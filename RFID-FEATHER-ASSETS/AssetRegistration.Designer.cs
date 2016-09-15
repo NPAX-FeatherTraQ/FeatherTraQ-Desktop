@@ -49,6 +49,7 @@
             this.txtSaveImageDir = new System.Windows.Forms.TextBox();
             this.btnBrowseImagePath = new System.Windows.Forms.Button();
             this.grpAssetInfo = new System.Windows.Forms.GroupBox();
+            this.btnSubmit = new System.Windows.Forms.Button();
             this.btnReadIDTag = new System.Windows.Forms.Button();
             this.txtOwnerName = new System.Windows.Forms.TextBox();
             this.lblOwnerName = new System.Windows.Forms.Label();
@@ -66,7 +67,6 @@
             this.lblDesc = new System.Windows.Forms.Label();
             this.btnGetRFIDTag = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.btnSubmit = new System.Windows.Forms.Button();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.txtTakeOutNote = new System.Windows.Forms.TextBox();
             this.lblMemo = new System.Windows.Forms.Label();
@@ -182,7 +182,6 @@
             // 
             // grpCameraPreview
             // 
-            resources.ApplyResources(this.grpCameraPreview, "grpCameraPreview");
             this.grpCameraPreview.Controls.Add(this.chkBoxChangeCamera);
             this.grpCameraPreview.Controls.Add(this.comVideoDeviceBox);
             this.grpCameraPreview.Controls.Add(this.lblNoCameraAvailable);
@@ -195,6 +194,7 @@
             this.grpCameraPreview.Controls.Add(this.label8);
             this.grpCameraPreview.Controls.Add(this.txtSaveImageDir);
             this.grpCameraPreview.Controls.Add(this.btnBrowseImagePath);
+            resources.ApplyResources(this.grpCameraPreview, "grpCameraPreview");
             this.grpCameraPreview.ForeColor = System.Drawing.SystemColors.ControlText;
             this.grpCameraPreview.Name = "grpCameraPreview";
             this.grpCameraPreview.TabStop = false;
@@ -283,7 +283,7 @@
             // 
             // grpAssetInfo
             // 
-            resources.ApplyResources(this.grpAssetInfo, "grpAssetInfo");
+            this.grpAssetInfo.Controls.Add(this.btnSubmit);
             this.grpAssetInfo.Controls.Add(this.btnReadIDTag);
             this.grpAssetInfo.Controls.Add(this.txtOwnerName);
             this.grpAssetInfo.Controls.Add(this.lblOwnerName);
@@ -293,7 +293,6 @@
             this.grpAssetInfo.Controls.Add(this.lblDesc);
             this.grpAssetInfo.Controls.Add(this.btnGetRFIDTag);
             this.grpAssetInfo.Controls.Add(this.btnCancel);
-            this.grpAssetInfo.Controls.Add(this.btnSubmit);
             this.grpAssetInfo.Controls.Add(this.txtDescription);
             this.grpAssetInfo.Controls.Add(this.txtTakeOutNote);
             this.grpAssetInfo.Controls.Add(this.lblMemo);
@@ -303,8 +302,17 @@
             this.grpAssetInfo.Controls.Add(this.lblTag);
             this.grpAssetInfo.Controls.Add(this.lblSubmittingInformation);
             this.grpAssetInfo.Controls.Add(this.lblLoadingInformation);
+            resources.ApplyResources(this.grpAssetInfo, "grpAssetInfo");
             this.grpAssetInfo.Name = "grpAssetInfo";
             this.grpAssetInfo.TabStop = false;
+            // 
+            // btnSubmit
+            // 
+            resources.ApplyResources(this.btnSubmit, "btnSubmit");
+            this.btnSubmit.BackColor = System.Drawing.Color.Orange;
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // btnReadIDTag
             // 
@@ -357,6 +365,7 @@
             this.dtStartTimePicker.ShowUpDown = true;
             this.dtStartTimePicker.TabStop = false;
             this.dtStartTimePicker.ValueChanged += new System.EventHandler(this.dtStartTimePicker_ValueChanged);
+            this.dtStartTimePicker.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dtStartTimePicker_MouseDown);
             // 
             // dtStartDate
             // 
@@ -365,6 +374,7 @@
             this.dtStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtStartDate.Name = "dtStartDate";
             this.dtStartDate.TabStop = false;
+            this.dtStartDate.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dtStartDate_MouseDown);
             // 
             // lblStart
             // 
@@ -441,14 +451,6 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // btnSubmit
-            // 
-            resources.ApplyResources(this.btnSubmit, "btnSubmit");
-            this.btnSubmit.BackColor = System.Drawing.Color.Orange;
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.UseVisualStyleBackColor = false;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
-            // 
             // txtDescription
             // 
             resources.ApplyResources(this.txtDescription, "txtDescription");
@@ -500,9 +502,9 @@
             // 
             // grpCaptured
             // 
-            resources.ApplyResources(this.grpCaptured, "grpCaptured");
             this.grpCaptured.Controls.Add(this.lblLoginUserName);
             this.grpCaptured.Controls.Add(this.splitContainer3);
+            resources.ApplyResources(this.grpCaptured, "grpCaptured");
             this.grpCaptured.Name = "grpCaptured";
             this.grpCaptured.TabStop = false;
             // 

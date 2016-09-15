@@ -88,9 +88,9 @@
             // 
             // grpSearchCriteria
             // 
+            this.grpSearchCriteria.Controls.Add(this.btnGenerate);
             this.grpSearchCriteria.Controls.Add(this.btnExport);
             this.grpSearchCriteria.Controls.Add(this.btnCancel);
-            this.grpSearchCriteria.Controls.Add(this.btnGenerate);
             this.grpSearchCriteria.Controls.Add(this.label4);
             this.grpSearchCriteria.Controls.Add(this.label3);
             this.grpSearchCriteria.Controls.Add(this.txtUserID);

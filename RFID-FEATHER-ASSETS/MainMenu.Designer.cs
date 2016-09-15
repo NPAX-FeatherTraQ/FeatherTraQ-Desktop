@@ -50,8 +50,10 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblSystemInfo = new System.Windows.Forms.ToolStripStatusLabel();
             this.btnTransactionHistory = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabCtrlMainMenu = new System.Windows.Forms.TabControl();
             this.imagebtnClose = new System.Windows.Forms.ImageList(this.components);
+            this.maintenanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.serialPortToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +69,8 @@
             this.fileToolStripMenuItem,
             this.registrationToolStripMenuItem,
             this.verificationToolStripMenuItem,
-            this.reportsToolStripMenuItem});
+            this.reportsToolStripMenuItem,
+            this.maintenanceToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(393, 24);
@@ -137,7 +140,7 @@
             // verifyAssetToolStripMenuItem
             // 
             this.verifyAssetToolStripMenuItem.Name = "verifyAssetToolStripMenuItem";
-            this.verifyAssetToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.verifyAssetToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.verifyAssetToolStripMenuItem.Text = "Verify Asset";
             this.verifyAssetToolStripMenuItem.Click += new System.EventHandler(this.verifyAssetToolStripMenuItem_Click);
             // 
@@ -236,24 +239,40 @@
             this.btnTransactionHistory.UseVisualStyleBackColor = false;
             this.btnTransactionHistory.Visible = false;
             // 
-            // tabControl1
+            // tabCtrlMainMenu
             // 
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.ImageList = this.imagebtnClose;
-            this.tabControl1.Location = new System.Drawing.Point(0, 24);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(393, 260);
-            this.tabControl1.TabIndex = 45;
-            this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl1_DrawItem);
-            this.tabControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabControl1_MouseDown);
+            this.tabCtrlMainMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabCtrlMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabCtrlMainMenu.ImageList = this.imagebtnClose;
+            this.tabCtrlMainMenu.Location = new System.Drawing.Point(0, 24);
+            this.tabCtrlMainMenu.Name = "tabCtrlMainMenu";
+            this.tabCtrlMainMenu.SelectedIndex = 0;
+            this.tabCtrlMainMenu.Size = new System.Drawing.Size(393, 260);
+            this.tabCtrlMainMenu.TabIndex = 45;
+            this.tabCtrlMainMenu.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl1_DrawItem);
+            this.tabCtrlMainMenu.SelectedIndexChanged += new System.EventHandler(this.tabCtrlMainMenu_SelectedIndexChanged);
+            this.tabCtrlMainMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabControl1_MouseDown);
             // 
             // imagebtnClose
             // 
             this.imagebtnClose.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imagebtnClose.ImageStream")));
             this.imagebtnClose.TransparentColor = System.Drawing.Color.Transparent;
             this.imagebtnClose.Images.SetKeyName(0, "XMark.png");
+            // 
+            // maintenanceToolStripMenuItem
+            // 
+            this.maintenanceToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.serialPortToolStripMenuItem});
+            this.maintenanceToolStripMenuItem.Name = "maintenanceToolStripMenuItem";
+            this.maintenanceToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.maintenanceToolStripMenuItem.Text = "Maintenance";
+            // 
+            // serialPortToolStripMenuItem
+            // 
+            this.serialPortToolStripMenuItem.Name = "serialPortToolStripMenuItem";
+            this.serialPortToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.serialPortToolStripMenuItem.Text = "Serial Port";
+            this.serialPortToolStripMenuItem.Click += new System.EventHandler(this.serialPortToolStripMenuItem_Click);
             // 
             // MainMenu
             // 
@@ -262,7 +281,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(393, 306);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabCtrlMainMenu);
             this.Controls.Add(this.btnTransactionHistory);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnScan);
@@ -309,8 +328,10 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblSystemInfo;
         private System.Windows.Forms.Button btnTransactionHistory;
-        private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.ImageList imagebtnClose;
+        public System.Windows.Forms.TabControl tabCtrlMainMenu;
+        private System.Windows.Forms.ToolStripMenuItem maintenanceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem serialPortToolStripMenuItem;
 
     }
 }

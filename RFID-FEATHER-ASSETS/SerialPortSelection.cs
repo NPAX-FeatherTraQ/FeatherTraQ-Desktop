@@ -95,8 +95,8 @@ namespace RFID_FEATHER_ASSETS
                     key.SetValue("DefaultPortName", cmbComPortList.Text);
                     key.Close();
 
-                    DialogResult = DialogResult.OK;                    
-                    //this.Dispose();
+                    DialogResult = DialogResult.OK;
+                    this.Dispose();
                 }
                 else
                 {

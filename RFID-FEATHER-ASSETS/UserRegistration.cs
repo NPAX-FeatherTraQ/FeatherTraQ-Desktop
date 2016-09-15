@@ -26,7 +26,7 @@ namespace RFID_FEATHER_ASSETS
 
     public partial class RegisterUser : Form
     {
-        private Reader.ReaderMethod reader;
+        public static Reader.ReaderMethod reader;
         private ReaderSetting m_curSetting = new ReaderSetting();
         private InventoryBuffer m_curInventoryBuffer = new InventoryBuffer();
         private List<RealTimeTagData> RealTimeTagDataList = new List<RealTimeTagData>();
@@ -35,7 +35,7 @@ namespace RFID_FEATHER_ASSETS
         //int idCard;
         private bool m_bDisplayLog = false;
         private int m_nTotal = 0;
-        string portname;// = "COM3";
+        public static string portname;// = "COM3";
         string baudrate = "115200";
         string tokenvalue;
         string ImgFileName;
@@ -45,13 +45,15 @@ namespace RFID_FEATHER_ASSETS
         int companyId;
         int userId;
         private FilterInfoCollection webcam;
-        private VideoCaptureDevice cam;
-        bool IsCameraConnected = false;
+        public static VideoCaptureDevice cam;
+        public static bool IsCameraConnected = false;
         string cameraDeviceName;
         string validUntilValue;
         string startDateValue;
         bool isCameraChanged = false;
         bool btnEditInfoWasClicked = false;
+        public static bool regOwnerCon = false;
+        bool isStartDateTimeChanged = false;
 
         public RegisterUser(string tokenvaluesource)
         {
@@ -63,6 +65,7 @@ namespace RFID_FEATHER_ASSETS
             InitializeCamera();          
             GetRegDefaultImagePath();            
             //CCT.Completed += new EventHandler<PhotoResult>(capture_completed);
+            regOwnerCon = true;
 
             List<GlobalClass.GetSetClass> roles = new List<GlobalClass.GetSetClass>();
             if (language == "Japanese")
@@ -259,7 +262,7 @@ namespace RFID_FEATHER_ASSETS
             Bitmap bit = (Bitmap)eventArgs.Frame.Clone();
             cameraBox.Image = bit;
         }
-        private void InitializeCamera()
+        public void InitializeCamera()
         {
             try
             {
@@ -344,7 +347,7 @@ namespace RFID_FEATHER_ASSETS
                     if (dtStartTimePicker.Checked) startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd") + dtStartTimePicker.Value.ToString("THH:mm");
                     else startDateValue = dtStartDate.Value.ToString("yyyy-MM-dd"); //+ "17:00";
 
-                    if (Convert.ToDateTime(startDateValue) < Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd THH:mm")))
+                    if (isStartDateTimeChanged && Convert.ToDateTime(startDateValue) < Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd THH:mm")))
                     {
                         MessageBox.Show("Start Date must not be less than to current Date and Time.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
@@ -892,11 +895,12 @@ namespace RFID_FEATHER_ASSETS
             AssetValidUntilDateTime();
             //dtStartDate.Enabled = true;
 
+            btnSubmit.Width = 282;
             if (language == "English")
             {
                 CaptureImg.Text = "Capture Owner Photo";
                 btnSubmit.Text = "Submit";
-                btnCancel.Text = "Back";
+                //btnCancel.Text = "Back"; 
             }
             else
             {
@@ -906,6 +910,7 @@ namespace RFID_FEATHER_ASSETS
                 btnCancel.Text = rm.GetString("btnCancel");
             }
             btnGetRFIDTag.Focus();
+            isStartDateTimeChanged = false;
             this.Refresh();
         }
 
@@ -1506,7 +1511,17 @@ namespace RFID_FEATHER_ASSETS
             try // Await the task in a try block
             {
                 string strException = string.Empty; // 
+
+                //opening the subkey  
+                RegistryKey key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\AssetSystemInfo");
+
+                //if it does exist, retrieve the stored values  
+                if (key != null)
+                {
+                    portname = (string)(key.GetValue("DefaultPortName"));
+                }
                 string strComPort = portname;
+
                 int nBaudrate = Convert.ToInt32(baudrate);////Convert.ToInt32(BaudBox.Text);
 
                 int nRet = reader.OpenCom(strComPort, nBaudrate, out strException);
@@ -1536,7 +1551,7 @@ namespace RFID_FEATHER_ASSETS
                     // Read the contents of PortSelectionForm's cmbComPortList.
                     portname = PortSelectionForm.cmbComPortList.Text;
                 }
-                else CallMainMenu();
+                //else CallMainMenu();
 
                 PortSelectionForm.Dispose();
                 //ReaderMethodProc();
@@ -1573,7 +1588,11 @@ namespace RFID_FEATHER_ASSETS
                         //listBox1.Items.Add(tagInfo);
                         txtRFIDTag.Text = tagInfo.ToString();
                         txtfirstName.Focus();//txtAssetName.Focus();
-                        if (language == "English") btnCancel.Text = "Cancel";
+                        if (language == "English")
+                        {
+                            btnCancel.Text = "Cancel";
+                            btnSubmit.Width = 136;
+                        }
                         else btnCancel.Text = "キャンセル";
                         if (btnEditInfoWasClicked)
                         {
@@ -1603,7 +1622,7 @@ namespace RFID_FEATHER_ASSETS
                     //MessageBox.Show("Reader Com Port Error", "Asset Registration", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     //cam.Stop();
                     //CallMainMenu();
-                    CallSerialPortSelection();
+                    //CallSerialPortSelection();
                 }
                 else
                 {
@@ -1622,7 +1641,7 @@ namespace RFID_FEATHER_ASSETS
             else btnCancel.Text = "キャンセル";
         }
 
-        private void ReaderMethodProc()
+        public void ReaderMethodProc()
         {
             reader.AnalyCallback = AnalyData;
             reader.ReceiveCallback = ReceiveData;
@@ -1759,11 +1778,25 @@ namespace RFID_FEATHER_ASSETS
 
         private void RegisterUser_Leave(object sender, EventArgs e)
         {
-            if (IsCameraConnected)
-                cam.Stop();
+            //if (IsCameraConnected)
+            //    cam.Stop();
 
-            //this.Hide();
-            reader.CloseCom();
+            ////this.Hide();
+            //reader.CloseCom();
+            //if (AssetRegistration.IsCameraConnected && !RegisterUser.IsCameraConnected)
+            //    AssetRegistration.cam.Stop();
+
+            //StartCamera();
+        }
+
+        private void dtStartDate_MouseDown(object sender, MouseEventArgs e)
+        {
+            isStartDateTimeChanged = true;
+        }
+
+        private void dtStartTimePicker_MouseDown(object sender, MouseEventArgs e)
+        {
+            isStartDateTimeChanged = true;
         }
     }
 

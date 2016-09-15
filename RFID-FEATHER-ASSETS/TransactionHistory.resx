@@ -128,6 +128,37 @@
   <data name="splitContainer1.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
+  <data name="btnGenerate.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btnGenerate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="btnGenerate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>377, 21</value>
+  </data>
+  <data name="btnGenerate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 34</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnGenerate.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
+  </data>
+  <data name="btnGenerate.Text" xml:space="preserve">
+    <value>Generate</value>
+  </data>
+  <data name="&gt;&gt;btnGenerate.Name" xml:space="preserve">
+    <value>btnGenerate</value>
+  </data>
+  <data name="&gt;&gt;btnGenerate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGenerate.Parent" xml:space="preserve">
+    <value>grpSearchCriteria</value>
+  </data>
+  <data name="&gt;&gt;btnGenerate.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="btnExport.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -135,12 +166,11 @@
     <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="btnExport.Location" type="System.Drawing.Point, System.Drawing">
-    <value>594, 22</value>
+    <value>522, 22</value>
   </data>
   <data name="btnExport.Size" type="System.Drawing.Size, System.Drawing">
     <value>139, 33</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnExport.TabIndex" type="System.Int32, mscorlib">
     <value>70</value>
   </data>
@@ -157,7 +187,7 @@
     <value>grpSearchCriteria</value>
   </data>
   <data name="&gt;&gt;btnExport.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="btnCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -166,7 +196,7 @@
     <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>480, 21</value>
+    <value>377, 21</value>
   </data>
   <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>97, 34</value>
@@ -187,36 +217,6 @@
     <value>grpSearchCriteria</value>
   </data>
   <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="btnGenerate.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="btnGenerate.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="btnGenerate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>377, 21</value>
-  </data>
-  <data name="btnGenerate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 34</value>
-  </data>
-  <data name="btnGenerate.TabIndex" type="System.Int32, mscorlib">
-    <value>68</value>
-  </data>
-  <data name="btnGenerate.Text" xml:space="preserve">
-    <value>Generate</value>
-  </data>
-  <data name="&gt;&gt;btnGenerate.Name" xml:space="preserve">
-    <value>btnGenerate</value>
-  </data>
-  <data name="&gt;&gt;btnGenerate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnGenerate.Parent" xml:space="preserve">
-    <value>grpSearchCriteria</value>
-  </data>
-  <data name="&gt;&gt;btnGenerate.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="label4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
