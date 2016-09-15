@@ -1,4 +1,4 @@
-﻿using Microsoft.Win32;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -121,109 +121,141 @@ namespace RFID_FEATHER_ASSETS
 
         private void CurrentDateTimer_Tick(object sender, EventArgs e)
         {
-            lblSystemInfo.Text = displaySystemInfo + " | Date: " + DateTime.Now.ToString("MM/dd/yyyy h:mm:ss tt"); ;
+            lblSystemInfo.Text = displaySystemInfo + " | Date: " + DateTime.Now.ToString("MM/dd/yyyy h:mm:ss tt");
         }
 
         private void registerOwnerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ////this.IsMdiContainer = true;
-            //RegisterUser registerUser = new RegisterUser(tokenvalue);
-            //registerUser.MdiParent = this;
-            //registerUser.FormBorderStyle = FormBorderStyle.None;
-            ////registerUser.WindowState = FormWindowState.Maximized;
-            //registerUser.Dock = DockStyle.Fill; 
-            //registerUser.Show();
+           try
+           { 
+                ////this.IsMdiContainer = true;
+                //RegisterUser registerUser = new RegisterUser(tokenvalue);
+                //registerUser.MdiParent = this;
+                //registerUser.FormBorderStyle = FormBorderStyle.None;
+                ////registerUser.WindowState = FormWindowState.Maximized;
+                //registerUser.Dock = DockStyle.Fill; 
+                //registerUser.Show();
 
-            if (AssetRegistration.IsCameraConnected)
-            {
-                AssetRegistration.cam.Stop();
-                //AssetRegistration.cam = null;
-                //AssetRegistration.reader.CloseCom();
-            }
+                if (AssetRegistration.IsCameraConnected)
+                {
+                    AssetRegistration.cam.Stop();
+                    //AssetRegistration.cam = null;
+                    //AssetRegistration.reader.CloseCom();
+                }
 
-            RegisterUser registerUser = new RegisterUser(tokenvalue);
-            registerUser.TopLevel = false;
-            TabPage tp = new TabPage(registerOwnerToolStripMenuItem.Text);
-            tabCtrlMainMenu.TabPages.Add(tp);
-            tabCtrlMainMenu.SelectedTab = tp;
-            tp.ImageIndex = 0;
-            registerUser.Parent = tp;
-            registerUser.FormBorderStyle = FormBorderStyle.None;
-            registerUser.Dock = DockStyle.Fill;
-            RegisterUser.cam.Start();
-            registerUser.Show();
-            //if (!registerUser.IsCameraConnected)
-            //registerUser.InitializeCamera();
-            if (RegisterUser.portname == string.Empty)
-            {
-                serialPortToolStripMenuItem.PerformClick();
-            }
+                RegisterUser registerUser = new RegisterUser(tokenvalue);
+                registerUser.TopLevel = false;
+                TabPage tp = new TabPage(registerOwnerToolStripMenuItem.Text);
+                tabCtrlMainMenu.TabPages.Add(tp);
+                tabCtrlMainMenu.SelectedTab = tp;
+                tp.ImageIndex = 0;
+                registerUser.Parent = tp;
+                registerUser.FormBorderStyle = FormBorderStyle.None;
+                registerUser.Dock = DockStyle.Fill;
+
+                if (RegisterUser.IsCameraConnected)
+                    RegisterUser.cam.Start();
+
+                registerUser.Show();
+  
+                if (RegisterUser.portname == string.Empty)
+                {
+                    serialPortToolStripMenuItem.PerformClick();
+                }
+           }
+           catch (Exception ex)
+           {
+               MessageBox.Show(ex.Message);
+           }
         }
 
         private void registerAssetToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ////this.IsMdiContainer = true;
-            //AssetRegistration registerAsset = new AssetRegistration();
-            //registerAsset.MdiParent = this;
-            //registerAsset.FormBorderStyle = FormBorderStyle.None;
-            //registerAsset.Dock = DockStyle.Fill;
-            //registerAsset.Show();
+            try
+            { 
+                ////this.IsMdiContainer = true;
+                //AssetRegistration registerAsset = new AssetRegistration();
+                //registerAsset.MdiParent = this;
+                //registerAsset.FormBorderStyle = FormBorderStyle.None;
+                //registerAsset.Dock = DockStyle.Fill;
+                //registerAsset.Show();
 
-            if (RegisterUser.IsCameraConnected)
-            {
-                RegisterUser.cam.Stop();
-                //RegisterUser.cam = null;
-                //RegisterUser.reader.CloseCom();
+                if (RegisterUser.IsCameraConnected)
+                {
+                    RegisterUser.cam.Stop();
+                    //RegisterUser.cam = null;
+                    //RegisterUser.reader.CloseCom();
+                }
+
+                AssetRegistration registerAsset = new AssetRegistration();
+                registerAsset.TopLevel = false;
+                TabPage tp = new TabPage(registerAssetToolStripMenuItem.Text);
+                tabCtrlMainMenu.TabPages.Add(tp);
+                tabCtrlMainMenu.SelectedTab = tp;
+                tp.ImageIndex = 0;
+                registerAsset.Parent = tp;
+                registerAsset.FormBorderStyle = FormBorderStyle.None;
+                registerAsset.Dock = DockStyle.Fill;
+
+                if (AssetRegistration.IsCameraConnected)
+                    AssetRegistration.cam.Start();
+
+                registerAsset.Show();
+  
+                if (AssetRegistration.portname == string.Empty)
+                {
+                    serialPortToolStripMenuItem.PerformClick();
+                }
             }
-
-            AssetRegistration registerAsset = new AssetRegistration();
-            registerAsset.TopLevel = false;
-            TabPage tp = new TabPage(registerAssetToolStripMenuItem.Text);
-            tabCtrlMainMenu.TabPages.Add(tp);
-            tabCtrlMainMenu.SelectedTab = tp;
-            tp.ImageIndex = 0;
-            registerAsset.Parent = tp;
-            registerAsset.FormBorderStyle = FormBorderStyle.None;
-            registerAsset.Dock = DockStyle.Fill;
-            AssetRegistration.cam.Start();
-            registerAsset.Show();
-            //if (!registerAsset.IsCameraConnected)
-            //registerAsset.InitializeCamera();
-            if (AssetRegistration.portname == string.Empty)
+            catch (Exception ex)
             {
-                serialPortToolStripMenuItem.PerformClick();
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void verifyAssetToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Verification verifyAsset = new Verification();
-            //verifyAsset.TopLevel = false;
-            //TabPage tp = new TabPage(verifyAssetToolStripMenuItem.Text);
-            //tabCtrlMainMenu.TabPages.Add(tp);
-            //tabCtrlMainMenu.SelectedTab = tp;
-            //tp.ImageIndex = 0;
-            //verifyAsset.Parent = tp;
-            //verifyAsset.FormBorderStyle = FormBorderStyle.None;
-            //verifyAsset.Dock = DockStyle.Fill;
-            //verifyAsset.Show();
+            try
+            { 
+                //Verification verifyAsset = new Verification();
+                //verifyAsset.TopLevel = false;
+                //TabPage tp = new TabPage(verifyAssetToolStripMenuItem.Text);
+                //tabCtrlMainMenu.TabPages.Add(tp);
+                //tabCtrlMainMenu.SelectedTab = tp;
+                //tp.ImageIndex = 0;
+                //verifyAsset.Parent = tp;
+                //verifyAsset.FormBorderStyle = FormBorderStyle.None;
+                //verifyAsset.Dock = DockStyle.Fill;
+                //verifyAsset.Show();
 
-            if (RegisterUser.regOwnerCon) RegisterUser.reader.CloseCom();
-            if (RegisterUser.cam != null) RegisterUser.cam.Stop();
+                if (RegisterUser.regOwnerCon) RegisterUser.reader.CloseCom();
+                if (RegisterUser.cam != null) RegisterUser.cam.Stop();
 
-            if (AssetRegistration.regAssetCon) AssetRegistration.reader.CloseCom();
-            if (AssetRegistration.cam != null) AssetRegistration.cam.Stop();
+                if (AssetRegistration.regAssetCon) AssetRegistration.reader.CloseCom();
+                if (AssetRegistration.cam != null) AssetRegistration.cam.Stop();
 
-            this.Hide();
-            Verification verifyAsset = new Verification();
-            verifyAsset.Show();
+                this.Hide();
+                Verification verifyAsset = new Verification();
+                verifyAsset.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            LoginActivity LoginForm = new LoginActivity();
-            LoginForm.Show();
+            try 
+            {
+                this.Hide();
+                LoginActivity LoginForm = new LoginActivity();
+                LoginForm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -233,72 +265,71 @@ namespace RFID_FEATHER_ASSETS
 
         private void transactionHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //TransactionHistory transactionHistory = new TransactionHistory();
-            ////transactionHistory.MdiParent = this;
-            //transactionHistory.FormBorderStyle = FormBorderStyle.None;
-            //transactionHistory.Dock = DockStyle.Fill;
-            //transactionHistory.Show();
+            try
+            { 
+                //TransactionHistory transactionHistory = new TransactionHistory();
+                ////transactionHistory.MdiParent = this;
+                //transactionHistory.FormBorderStyle = FormBorderStyle.None;
+                //transactionHistory.Dock = DockStyle.Fill;
+                //transactionHistory.Show();
 
-            TransactionHistory transactionHistory = new TransactionHistory();
-            transactionHistory.TopLevel = false;
-            TabPage tp = new TabPage(transactionHistoryToolStripMenuItem.Text);
-            tabCtrlMainMenu.TabPages.Add(tp);
-            tabCtrlMainMenu.SelectedTab = tp;
-            tp.ImageIndex = 0;
-            transactionHistory.Parent = tp;
-            transactionHistory.FormBorderStyle = FormBorderStyle.None;
-            transactionHistory.Dock = DockStyle.Fill;
-            transactionHistory.Show();
+                TransactionHistory transactionHistory = new TransactionHistory();
+                transactionHistory.TopLevel = false;
+                TabPage tp = new TabPage(transactionHistoryToolStripMenuItem.Text);
+                tabCtrlMainMenu.TabPages.Add(tp);
+                tabCtrlMainMenu.SelectedTab = tp;
+                tp.ImageIndex = 0;
+                transactionHistory.Parent = tp;
+                transactionHistory.FormBorderStyle = FormBorderStyle.None;
+                transactionHistory.Dock = DockStyle.Fill;
+                transactionHistory.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
         {
-            //This code will render a "x" mark at the end of the Tab caption. 
-            e.Graphics.DrawString("x", e.Font, Brushes.Black, e.Bounds.Left, e.Bounds.Top + 10);
-            e.Graphics.DrawString(this.tabCtrlMainMenu.TabPages[e.Index].Text, e.Font, Brushes.Black, e.Bounds.Left + 10, e.Bounds.Top + 5);
-            e.DrawFocusRectangle();
+            try
+            { 
+                //This code will render a "x" mark at the end of the Tab caption. 
+                e.Graphics.DrawString("x", e.Font, Brushes.Black, e.Bounds.Left, e.Bounds.Top + 10);
+                e.Graphics.DrawString(this.tabCtrlMainMenu.TabPages[e.Index].Text, e.Font, Brushes.Black, e.Bounds.Left + 10, e.Bounds.Top + 5);
+                e.DrawFocusRectangle();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void tabControl1_MouseDown(object sender, MouseEventArgs e)
         {
-            Rectangle r = tabCtrlMainMenu.GetTabRect(this.tabCtrlMainMenu.SelectedIndex);
-            Rectangle closeButton = new Rectangle(r.Left + 15, r.Top + 7, 9, 7);
-            if (closeButton.Contains(e.Location))
-            {
-                if (MessageBox.Show("Close " + tabCtrlMainMenu.SelectedTab.Text + "?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            try
+            { 
+                Rectangle r = tabCtrlMainMenu.GetTabRect(this.tabCtrlMainMenu.SelectedIndex);
+                Rectangle closeButton = new Rectangle(r.Left + 15, r.Top + 7, 9, 7);
+                if (closeButton.Contains(e.Location))
                 {
-                    closeCameraAndReader();
-                    this.tabCtrlMainMenu.TabPages.Remove(this.tabCtrlMainMenu.SelectedTab);
+                    if (MessageBox.Show("Close " + tabCtrlMainMenu.SelectedTab.Text + "?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        closeCameraAndReader();
+                        this.tabCtrlMainMenu.TabPages.Remove(this.tabCtrlMainMenu.SelectedTab);
+                    }
                 }
             }
-            //RegisterUser _registerUser = new RegisterUser(tokenvalue);
-            //_registerUser.InitializeCamera();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            };
         }
 
         private void closeCameraAndReader()
         {
             if (tabCtrlMainMenu.SelectedTab != null)
             {
-                //if (tabCtrlMainMenu.SelectedTab.Text.ToLower() == "register owner" && AssetRegistration.IsCameraConnected)
-                //{
-                //    //if (AssetRegistration.cam != null) AssetRegistration.cam.Stop();
-                //    //AssetRegistration.reader.CloseCom();
-
-                //    ////RegisterUser.cam.Start();
-                //    if (RegisterUser.cam != null) RegisterUser.cam.Stop();
-                //    RegisterUser.reader.CloseCom();
-                //}
-
-                //if (tabCtrlMainMenu.SelectedTab.Text.ToLower() == "register asset" && RegisterUser.IsCameraConnected)
-                //{
-                //    //if (RegisterUser.cam != null) RegisterUser.cam.Stop();
-                //    //RegisterUser.reader.CloseCom();
-
-                //    ////AssetRegistration.cam.Start();
-                //    if (AssetRegistration.cam != null) AssetRegistration.cam.Stop();
-                //    AssetRegistration.reader.CloseCom();
-
-                //}
                 switch (tabCtrlMainMenu.SelectedTab.Text.ToLower())
                 {
                     case "register owner":
@@ -320,70 +351,41 @@ namespace RFID_FEATHER_ASSETS
 
         private void tabCtrlMainMenu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (tabCtrlMainMenu.SelectedTab != null)
-            {
-                //if (tabCtrlMainMenu.SelectedTab.Text.ToLower() == "register owner" && AssetRegistration.IsCameraConnected)
-                //{
-                //    if (AssetRegistration.cam != null) AssetRegistration.cam.Stop();
-                //    AssetRegistration.reader.CloseCom();
-
-                //    //if (RegisterUser.IsCameraConnected)
-                //    //    RegisterUser.cam.Start();
-
-                //    //RegisterUser.reader = new Reader.ReaderMethod();
-                //    //RegisterUser registerUser = new RegisterUser(tokenvalue);
-                //    if (RegisterUser.IsCameraConnected)
-                //        RegisterUser.cam.Start();
-                //    //registerUser.InitializeCamera();
-                //    //registerUser.ReaderMethodProc();
-                //    //RegisterUser f2 = new RegisterUser(tokenvalue);
-                //    //f2.ReaderMethodProc();
-                //    return;
-                //}
-
-                //if (tabCtrlMainMenu.SelectedTab.Text.ToLower() == "register asset" && RegisterUser.IsCameraConnected)
-                //{
-                //    if (RegisterUser.cam != null) RegisterUser.cam.Stop();
-                //    RegisterUser.reader.CloseCom();
-
-                //    //if (AssetRegistration.IsCameraConnected)
-                //    //    AssetRegistration.cam.Start();
-
-                //    //AssetRegistration.reader = new Reader.ReaderMethod();
-                //    //AssetRegistration registerAsset = new AssetRegistration();
-                //    if (AssetRegistration.IsCameraConnected)
-                //        AssetRegistration.cam.Start();
-                //    //registerAsset.InitializeCamera();
-                //    //registerAsset.ReaderMethodProc();
-                //    return;
-                //}
-
-                switch (tabCtrlMainMenu.SelectedTab.Text.ToLower())
+            try
+            { 
+                if (tabCtrlMainMenu.SelectedTab != null)
                 {
-                    case "register owner":
-                        if (AssetRegistration.cam != null) AssetRegistration.cam.Stop();
-                            AssetRegistration.reader.CloseCom();
+                    switch (tabCtrlMainMenu.SelectedTab.Text.ToLower())
+                    {
+                        case "register owner":
+                            if (AssetRegistration.cam != null) AssetRegistration.cam.Stop();
+                                AssetRegistration.reader.CloseCom();
 
-                        if (RegisterUser.IsCameraConnected)
-                            RegisterUser.cam.Start();
-                        break;
+                            if (RegisterUser.IsCameraConnected)
+                                RegisterUser.cam.Start();
+                            break;
 
-                    case "register asset":
-                        if (RegisterUser.cam != null) RegisterUser.cam.Stop();
-                            RegisterUser.reader.CloseCom();
+                        case "register asset":
+                            if (RegisterUser.cam != null) RegisterUser.cam.Stop();
+                                RegisterUser.reader.CloseCom();
 
-                        if (AssetRegistration.IsCameraConnected)
-                            AssetRegistration.cam.Start();
-                        break;
+                            if (AssetRegistration.IsCameraConnected)
+                                AssetRegistration.cam.Start();
+                            break;
 
-                    //case "verify asset":
-                    //    if (RegisterUser.cam != null) RegisterUser.cam.Stop();
-                    //    RegisterUser.reader.CloseCom();
+                        //case "verify asset":
+                        //    if (RegisterUser.cam != null) RegisterUser.cam.Stop();
+                        //    RegisterUser.reader.CloseCom();
 
-                    //    if (AssetRegistration.cam != null) AssetRegistration.cam.Stop();
-                    //    AssetRegistration.reader.CloseCom();
-                    //    break;
-                }  
+                        //    if (AssetRegistration.cam != null) AssetRegistration.cam.Stop();
+                        //    AssetRegistration.reader.CloseCom();
+                        //    break;
+                    }  
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 

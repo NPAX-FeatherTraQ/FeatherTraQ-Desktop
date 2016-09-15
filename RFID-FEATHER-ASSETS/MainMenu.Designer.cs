@@ -43,6 +43,8 @@
             this.verifyAssetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transactionHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.maintenanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.serialPortToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnRegisterAsset = new System.Windows.Forms.Button();
             this.btnRegisterUser = new System.Windows.Forms.Button();
@@ -52,8 +54,6 @@
             this.btnTransactionHistory = new System.Windows.Forms.Button();
             this.tabCtrlMainMenu = new System.Windows.Forms.TabControl();
             this.imagebtnClose = new System.Windows.Forms.ImageList(this.components);
-            this.maintenanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.serialPortToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -134,13 +134,13 @@
             this.verificationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.verifyAssetToolStripMenuItem});
             this.verificationToolStripMenuItem.Name = "verificationToolStripMenuItem";
-            this.verificationToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.verificationToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.verificationToolStripMenuItem.Text = "Verification";
             // 
             // verifyAssetToolStripMenuItem
             // 
             this.verifyAssetToolStripMenuItem.Name = "verifyAssetToolStripMenuItem";
-            this.verifyAssetToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.verifyAssetToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.verifyAssetToolStripMenuItem.Text = "Verify Asset";
             this.verifyAssetToolStripMenuItem.Click += new System.EventHandler(this.verifyAssetToolStripMenuItem_Click);
             // 
@@ -155,9 +155,24 @@
             // transactionHistoryToolStripMenuItem
             // 
             this.transactionHistoryToolStripMenuItem.Name = "transactionHistoryToolStripMenuItem";
-            this.transactionHistoryToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.transactionHistoryToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.transactionHistoryToolStripMenuItem.Text = "Transaction History";
             this.transactionHistoryToolStripMenuItem.Click += new System.EventHandler(this.transactionHistoryToolStripMenuItem_Click);
+            // 
+            // maintenanceToolStripMenuItem
+            // 
+            this.maintenanceToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.serialPortToolStripMenuItem});
+            this.maintenanceToolStripMenuItem.Name = "maintenanceToolStripMenuItem";
+            this.maintenanceToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.maintenanceToolStripMenuItem.Text = "Maintenance";
+            // 
+            // serialPortToolStripMenuItem
+            // 
+            this.serialPortToolStripMenuItem.Name = "serialPortToolStripMenuItem";
+            this.serialPortToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.serialPortToolStripMenuItem.Text = "Serial Port";
+            this.serialPortToolStripMenuItem.Click += new System.EventHandler(this.serialPortToolStripMenuItem_Click);
             // 
             // btnLogout
             // 
@@ -259,21 +274,6 @@
             this.imagebtnClose.TransparentColor = System.Drawing.Color.Transparent;
             this.imagebtnClose.Images.SetKeyName(0, "XMark.png");
             // 
-            // maintenanceToolStripMenuItem
-            // 
-            this.maintenanceToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.serialPortToolStripMenuItem});
-            this.maintenanceToolStripMenuItem.Name = "maintenanceToolStripMenuItem";
-            this.maintenanceToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
-            this.maintenanceToolStripMenuItem.Text = "Maintenance";
-            // 
-            // serialPortToolStripMenuItem
-            // 
-            this.serialPortToolStripMenuItem.Name = "serialPortToolStripMenuItem";
-            this.serialPortToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.serialPortToolStripMenuItem.Text = "Serial Port";
-            this.serialPortToolStripMenuItem.Click += new System.EventHandler(this.serialPortToolStripMenuItem_Click);
-            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,7 +294,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Feather TraQ - Asset Management Solution";
+            this.Text = "Feather TraQ - ASSET MANAGEMENT SOLUTIONS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainMenu_FormClosed);
             this.menuStrip1.ResumeLayout(false);

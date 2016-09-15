@@ -434,8 +434,17 @@ namespace RFID_FEATHER_ASSETS
                     }
                     else
                     {
-                        MessageBox.Show("Error Code " +
-                        response.StatusCode /*+ " : Message - " + response.ErrorMessage*/);
+                        HttpStatusCode statusCode = response.StatusCode;
+                        int numericStatusCode = (int)statusCode;
+
+                        if (numericStatusCode == 401)
+                        {
+                            MessageBox.Show("Unauthorized access!");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error connecting to server... Please try again later");
+                        }
                         return;
                     }
                 }
@@ -629,8 +638,7 @@ namespace RFID_FEATHER_ASSETS
             }
             else
             {
-                MessageBox.Show("Error Code " +
-                response.StatusCode /*+ " : Message - " + response.ErrorMessage*/);
+                MessageBox.Show("Error connecting to server... Please try again later");
                 return;
             }
 
@@ -668,8 +676,7 @@ namespace RFID_FEATHER_ASSETS
             }
             else
             {
-                MessageBox.Show("Error Code " +
-                response.StatusCode /*+ " : Message - " + response.ErrorMessage*/);
+                MessageBox.Show("Error connecting to server... Please try again later");
                 return;
             }
         }
@@ -1841,7 +1848,7 @@ namespace RFID_FEATHER_ASSETS
                         }
                         AssetValidUntilTime();
                         getownerInfo(assetInfo.ownerUserId, assetInfo.validUntil);
-                    
+                    #region comment
                     //string urls = assetInfo.imageUrls;
 
                     //if (ReadIDTagWasClicked && string.IsNullOrEmpty(urls))
@@ -1971,6 +1978,7 @@ namespace RFID_FEATHER_ASSETS
                     //    getCaptureButtonText();
                     //    return;
                     //}
+                    #endregion
                 }
                 else if (response.StatusCode == HttpStatusCode.NotFound)
                 {
@@ -2003,8 +2011,11 @@ namespace RFID_FEATHER_ASSETS
                         txtDescription.Focus();
                         return;
                     }
-                    //show error code
-                    MessageBox.Show("Error" + numericStatusCode);
+                    else
+                    {
+                        //show error code
+                        MessageBox.Show("Error connecting to server... Please try again later");
+                    }
                 }
             }
             catch (Exception ex)
@@ -2066,7 +2077,21 @@ namespace RFID_FEATHER_ASSETS
             }
             else
             {
-                MessageBox.Show("Unable to reach server.. please try again later", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                HttpStatusCode statusCode = response.StatusCode;
+                int numericStatusCode = (int)statusCode;
+
+                if (numericStatusCode == 401)
+                {
+                    MessageBox.Show("Unauthorized access!");
+                }
+                else if (numericStatusCode == 500)
+                {
+                    MessageBox.Show("Owner not registered. Please register in the owner registration form");
+                }
+                else
+                {
+                    MessageBox.Show("Error connecting to server... Please try again later");
+                }
             }
         }
 

@@ -44,6 +44,7 @@ namespace RFID_FEATHER_ASSETS
         //string assetName;
         bool IsStopComparing = false;
         int startRowComparing;
+        string displaySystemInfo;
 
         public Verification()//string tokenvaluesource, string roleSource) //(string tokenvaluesource, string portnamesource, string roleSource)
         {
@@ -119,6 +120,7 @@ namespace RFID_FEATHER_ASSETS
                     userId = (int)(key.GetValue("UserId"));
                     lblLoginUserName.Text = "Username: " + (string)(key.GetValue("UserName")).ToString();//.ToUpper();
                     readerInfo = (string)(key.GetValue("readerInfo"));
+                    displaySystemInfo = "User ID: " + (string)(key.GetValue("UserName")).ToString().ToUpper() + " | Company: " + (string)(key.GetValue("companyName").ToString().ToUpper()) + " | Location: " + (string)(key.GetValue("readerInfo")).ToString().ToUpper(); //+ " | " + DateTime.Now.ToString("MM/dd/yyyy h:mm:ss tt");
                     key.Close();
 
                     if (roleValue == "ROLE_GUARD")
@@ -144,8 +146,8 @@ namespace RFID_FEATHER_ASSETS
 
                 //BackgroundTimer.Interval = 1000;
 
-                //CurrentDateTimer.Enabled = true;
-                //CurrentDateTimer.Interval = 1000;
+                CurrentDateTimer.Enabled = true;
+                CurrentDateTimer.Interval = 1000;
 
                 VerifyTimer.Interval = 2000;
                 VerifyTimer.Tick += new EventHandler(VerifyTimer_Tick);
@@ -1144,12 +1146,6 @@ namespace RFID_FEATHER_ASSETS
             //}
         }
 
-        private void CurrentTimer_Tick(object sender, EventArgs e)
-        {
-            //Display the current date and time
-            lblCurrentDateTime.Text = DateTime.Now.ToString("MM/dd/yyyy h:mm:ss tt");//DateTime.Now.ToString("h:mm:ss tt") + "\n " + DateTime.Now.ToString("MM/dd/yyyy");//DateTime.Now.ToString("dddd, MMMM dd, yyyy");
-        }
-
         private void VerifyTimer_Tick(object sender, EventArgs e)
         {
             ////ClearFields();
@@ -1701,6 +1697,13 @@ namespace RFID_FEATHER_ASSETS
         {
             if (!IsCallingMainMenu)
                 VerifyAssetProc();
+        }
+
+        private void CurrentDateTimer_Tick(object sender, EventArgs e)
+        {
+            ////Display the current date and time
+            //lblCurrentDateTime.Text = DateTime.Now.ToString("MM/dd/yyyy h:mm:ss tt");//DateTime.Now.ToString("h:mm:ss tt") + "\n " + DateTime.Now.ToString("MM/dd/yyyy");//DateTime.Now.ToString("dddd, MMMM dd, yyyy");
+            lblSystemInfo.Text = displaySystemInfo + " | Date: " + DateTime.Now.ToString("MM/dd/yyyy h:mm:ss tt");
         }
 
     }

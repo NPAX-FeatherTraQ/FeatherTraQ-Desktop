@@ -1111,7 +1111,21 @@ namespace RFID_FEATHER_ASSETS
                 }
                 else
                 {
-                    MessageBox.Show("Unable to reach server.. please try again later", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    HttpStatusCode statusCode = response.StatusCode;
+                    int numericStatusCode = (int)statusCode;
+
+                    if (numericStatusCode == 401)
+                    {
+                        MessageBox.Show("Unauthorized Access");
+                    }
+                    else if (numericStatusCode == 500)
+                    {
+                        MessageBox.Show("User is not registered.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error connecting to server... Please try again later");
+                    }
 
                     Application.Restart();
                     /*this.Hide();                   
@@ -1157,6 +1171,7 @@ namespace RFID_FEATHER_ASSETS
                 if (assetInfo.description != "ID_CARD")
                 {
                     MessageBox.Show("Scanned RFID Tag is Asset. Please scan the ID Tag.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ClearFields();
                     return;
                 }
                 else
@@ -1194,6 +1209,27 @@ namespace RFID_FEATHER_ASSETS
                     AssetValidUntilTime();
                     getOwnerInfo(assetInfo.ownerUserId, assetInfo.validUntil);
                 }
+            }
+            else
+            {
+                HttpStatusCode statusCode = response.StatusCode;
+                int numericStatusCode = (int)statusCode;
+
+                if (numericStatusCode == 401)
+                {
+                    MessageBox.Show("Unauthorized Access");
+                }
+                else if (numericStatusCode == 500)
+                {
+                    MessageBox.Show("User is not registered.");
+                }
+                else
+                {
+                    MessageBox.Show("Error connecting to server... Please try again later");
+                }
+
+                ClearFields();
+                //return;
             }
         }
 

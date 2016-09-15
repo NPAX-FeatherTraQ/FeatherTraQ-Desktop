@@ -251,8 +251,19 @@ namespace RFID_FEATHER_ASSETS
                     {
                         HttpStatusCode statusCode = response.StatusCode;
                         int numericStatusCode = (int)statusCode;
-                        //show error code
-                        MessageBox.Show("Error: " + numericStatusCode + response.ErrorMessage);
+
+                        if (numericStatusCode == 401)
+                        {
+                            MessageBox.Show("Incorrect Username or Password, Please try again.");
+                        }
+                        else if (numericStatusCode == 500)
+                        {
+                            MessageBox.Show("Error connecting to server... please try again later");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error connecting to server... Please try again later");
+                        }
                     }
 
                     //picLoading.Visible = false;
