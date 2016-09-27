@@ -28,8 +28,12 @@ namespace RFID_FEATHER_ASSETS
         int userId;
         string readerInfo;
         int assetId;
+        string ownerName;
+        string description;
+        string takeOutNote;
+        string userName;
 
-        public AssetRenewal(int srcAssetId)
+        public AssetRenewal(int srcAssetId, string srcOwnerName, string srcDescription, string srcTakeOutNote)
         {
             InitializeComponent();
 
@@ -38,6 +42,9 @@ namespace RFID_FEATHER_ASSETS
             GetAssetSystemInfo();
             AssetValidUntilDateTime();
             assetId = srcAssetId;
+            ownerName = srcOwnerName;
+            description = srcDescription;
+            takeOutNote = srcTakeOutNote;
         }
         private void getLanguage()
         {
@@ -133,6 +140,7 @@ namespace RFID_FEATHER_ASSETS
                     companyId = (int)(key.GetValue("companyId"));
                     userId = (int)(key.GetValue("UserId"));
                     readerInfo = (string)(key.GetValue("readerInfo"));
+                    userName = (string)(key.GetValue("UserName")).ToString();
                     key.Close();
                 }
             }
@@ -269,7 +277,7 @@ namespace RFID_FEATHER_ASSETS
 
                     if (restResult.result == "OK")
                     {
-                        SaveTransaction();
+                        SaveTransaction(assetExtend.startDate, assetExtend.validUntil);
                         if (language.ToLower() == "japanese") MessageBox.Show("アセットが正常に更新されました。", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         else MessageBox.Show("ID successfully renewed.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         DialogResult = DialogResult.OK;
@@ -295,7 +303,7 @@ namespace RFID_FEATHER_ASSETS
             }
         }
 
-        private void SaveTransaction()
+        private void SaveTransaction(DateTime? startDate, DateTime? validUntil)
         {
             //Saving to transaction table
             try
@@ -303,17 +311,33 @@ namespace RFID_FEATHER_ASSETS
                 //For Web Service
                 GlobalClass.GetSetClass transactDet = new GlobalClass.GetSetClass();
 
+                //transactDet.companyId = companyId;//1;
+                //transactDet.readerInfo = readerInfo;
+                //transactDet.type = "RENEW-ID";
+                ////transactDet.readerId = 1;
+                ////transactDet.notes = txtExplanationNotes.Text.Trim();
+                ////transactDet.imageUrl = newImgFileNames;//txtCapturedImagePath.Text;//txtImagePath.Text;
+                ////transactDet.assetId = Verification.AssetIdValue;
+                ////if (AssetRegistration.assetId != 0)
+                ////    transactDet.assetId = AssetRegistration.assetId;
+                ////else
+                //    transactDet.assetId = assetId;//Verification.AssetIdValue;
+
                 transactDet.companyId = companyId;//1;
+                transactDet.validityPeriod = validUntil == null ? "Start " + startDate.Value.ToString("g") + " - No End Date" : "Start " + startDate.Value.ToString("g") + " Until " + validUntil.Value.ToString("g");
+                transactDet.ownerName = ownerName;
+                //transactDet.position = position;
+                //transactDet.email = email;
+                //transactDet.userType = userType;
+                transactDet.description = description;
+                transactDet.takeOutNote = takeOutNote;
+                //transactDet.ownerImageUrl = ownerImageUrl;
+                //transactDet.assetImageUrl = newImgFileNames;
+                transactDet.updatedBy = userName;
                 transactDet.readerInfo = readerInfo;
+                //transactDet.notes = notes;
                 transactDet.type = "RENEW-ID";
-                //transactDet.readerId = 1;
-                //transactDet.notes = txtExplanationNotes.Text.Trim();
-                //transactDet.imageUrl = newImgFileNames;//txtCapturedImagePath.Text;//txtImagePath.Text;
-                //transactDet.assetId = Verification.AssetIdValue;
-                //if (AssetRegistration.assetId != 0)
-                //    transactDet.assetId = AssetRegistration.assetId;
-                //else
-                    transactDet.assetId = assetId;//Verification.AssetIdValue;
+                transactDet.assetId = assetId;
 
                 RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");//("http://feather-assets.herokuapp.com/");
                 RestRequest transact = new RestRequest("/api/asset/transact", Method.POST);

@@ -41,7 +41,6 @@
             this.lblNoCameraAvailable = new System.Windows.Forms.Label();
             this.btnCapturePhoto = new System.Windows.Forms.Button();
             this.cameraBox = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.radbtnYes = new System.Windows.Forms.RadioButton();
             this.radbtnNo = new System.Windows.Forms.RadioButton();
             this.txtCapturedImagePath = new System.Windows.Forms.TextBox();
@@ -49,9 +48,10 @@
             this.txtSaveImageDir = new System.Windows.Forms.TextBox();
             this.btnBrowseImagePath = new System.Windows.Forms.Button();
             this.grpAssetInfo = new System.Windows.Forms.GroupBox();
+            this.lblLoadingInformation = new System.Windows.Forms.Label();
+            this.lblSubmittingInformation = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnReadIDTag = new System.Windows.Forms.Button();
-            this.txtOwnerName = new System.Windows.Forms.TextBox();
             this.lblOwnerName = new System.Windows.Forms.Label();
             this.btnGetAssetInfo = new System.Windows.Forms.Button();
             this.grpExpiration = new System.Windows.Forms.GroupBox();
@@ -74,10 +74,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtRFIDTag = new System.Windows.Forms.TextBox();
             this.lblTag = new System.Windows.Forms.Label();
-            this.lblSubmittingInformation = new System.Windows.Forms.Label();
-            this.lblLoadingInformation = new System.Windows.Forms.Label();
+            this.txtOwnerName = new System.Windows.Forms.TextBox();
             this.grpCaptured = new System.Windows.Forms.GroupBox();
-            this.lblLoginUserName = new System.Windows.Forms.Label();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -98,6 +96,7 @@
             this.imgCapture5 = new System.Windows.Forms.PictureBox();
             this.imgCapture4 = new System.Windows.Forms.PictureBox();
             this.imgCapture3 = new System.Windows.Forms.PictureBox();
+            this.lblLoginUserName = new System.Windows.Forms.Label();
             this.picOwner = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -187,7 +186,6 @@
             this.grpCameraPreview.Controls.Add(this.lblNoCameraAvailable);
             this.grpCameraPreview.Controls.Add(this.btnCapturePhoto);
             this.grpCameraPreview.Controls.Add(this.cameraBox);
-            this.grpCameraPreview.Controls.Add(this.label4);
             this.grpCameraPreview.Controls.Add(this.radbtnYes);
             this.grpCameraPreview.Controls.Add(this.radbtnNo);
             this.grpCameraPreview.Controls.Add(this.txtCapturedImagePath);
@@ -236,11 +234,6 @@
             this.cameraBox.Name = "cameraBox";
             this.cameraBox.TabStop = false;
             // 
-            // label4
-            // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
-            // 
             // radbtnYes
             // 
             resources.ApplyResources(this.radbtnYes, "radbtnYes");
@@ -283,9 +276,10 @@
             // 
             // grpAssetInfo
             // 
+            this.grpAssetInfo.Controls.Add(this.lblLoadingInformation);
+            this.grpAssetInfo.Controls.Add(this.lblSubmittingInformation);
             this.grpAssetInfo.Controls.Add(this.btnSubmit);
             this.grpAssetInfo.Controls.Add(this.btnReadIDTag);
-            this.grpAssetInfo.Controls.Add(this.txtOwnerName);
             this.grpAssetInfo.Controls.Add(this.lblOwnerName);
             this.grpAssetInfo.Controls.Add(this.btnGetAssetInfo);
             this.grpAssetInfo.Controls.Add(this.grpExpiration);
@@ -300,11 +294,22 @@
             this.grpAssetInfo.Controls.Add(this.label2);
             this.grpAssetInfo.Controls.Add(this.txtRFIDTag);
             this.grpAssetInfo.Controls.Add(this.lblTag);
-            this.grpAssetInfo.Controls.Add(this.lblSubmittingInformation);
-            this.grpAssetInfo.Controls.Add(this.lblLoadingInformation);
+            this.grpAssetInfo.Controls.Add(this.txtOwnerName);
             resources.ApplyResources(this.grpAssetInfo, "grpAssetInfo");
             this.grpAssetInfo.Name = "grpAssetInfo";
             this.grpAssetInfo.TabStop = false;
+            // 
+            // lblLoadingInformation
+            // 
+            resources.ApplyResources(this.lblLoadingInformation, "lblLoadingInformation");
+            this.lblLoadingInformation.ForeColor = System.Drawing.Color.Green;
+            this.lblLoadingInformation.Name = "lblLoadingInformation";
+            // 
+            // lblSubmittingInformation
+            // 
+            resources.ApplyResources(this.lblSubmittingInformation, "lblSubmittingInformation");
+            this.lblSubmittingInformation.ForeColor = System.Drawing.Color.Green;
+            this.lblSubmittingInformation.Name = "lblSubmittingInformation";
             // 
             // btnSubmit
             // 
@@ -321,12 +326,6 @@
             this.btnReadIDTag.Name = "btnReadIDTag";
             this.btnReadIDTag.UseVisualStyleBackColor = false;
             this.btnReadIDTag.Click += new System.EventHandler(this.btnReadIDTag_Click);
-            // 
-            // txtOwnerName
-            // 
-            resources.ApplyResources(this.txtOwnerName, "txtOwnerName");
-            this.txtOwnerName.BackColor = System.Drawing.SystemColors.Control;
-            this.txtOwnerName.Name = "txtOwnerName";
             // 
             // lblOwnerName
             // 
@@ -488,31 +487,19 @@
             resources.ApplyResources(this.lblTag, "lblTag");
             this.lblTag.Name = "lblTag";
             // 
-            // lblSubmittingInformation
+            // txtOwnerName
             // 
-            resources.ApplyResources(this.lblSubmittingInformation, "lblSubmittingInformation");
-            this.lblSubmittingInformation.ForeColor = System.Drawing.Color.Green;
-            this.lblSubmittingInformation.Name = "lblSubmittingInformation";
-            // 
-            // lblLoadingInformation
-            // 
-            resources.ApplyResources(this.lblLoadingInformation, "lblLoadingInformation");
-            this.lblLoadingInformation.ForeColor = System.Drawing.Color.Green;
-            this.lblLoadingInformation.Name = "lblLoadingInformation";
+            resources.ApplyResources(this.txtOwnerName, "txtOwnerName");
+            this.txtOwnerName.BackColor = System.Drawing.SystemColors.Control;
+            this.txtOwnerName.Name = "txtOwnerName";
             // 
             // grpCaptured
             // 
-            this.grpCaptured.Controls.Add(this.lblLoginUserName);
             this.grpCaptured.Controls.Add(this.splitContainer3);
+            this.grpCaptured.Controls.Add(this.lblLoginUserName);
             resources.ApplyResources(this.grpCaptured, "grpCaptured");
             this.grpCaptured.Name = "grpCaptured";
             this.grpCaptured.TabStop = false;
-            // 
-            // lblLoginUserName
-            // 
-            resources.ApplyResources(this.lblLoginUserName, "lblLoginUserName");
-            this.lblLoginUserName.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblLoginUserName.Name = "lblLoginUserName";
             // 
             // splitContainer3
             // 
@@ -660,6 +647,12 @@
             this.imgCapture3.Name = "imgCapture3";
             this.imgCapture3.TabStop = false;
             // 
+            // lblLoginUserName
+            // 
+            resources.ApplyResources(this.lblLoginUserName, "lblLoginUserName");
+            this.lblLoginUserName.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblLoginUserName.Name = "lblLoginUserName";
+            // 
             // picOwner
             // 
             resources.ApplyResources(this.picOwner, "picOwner");
@@ -675,8 +668,8 @@
             this.Controls.Add(this.picOwner);
             this.Controls.Add(this.btnBrowseImage);
             this.Controls.Add(this.btnRegisterUser);
-            this.Controls.Add(this.lblCurrentDateTime);
             this.Controls.Add(this.splitContainer1);
+            this.Controls.Add(this.lblCurrentDateTime);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AssetRegistration";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -734,7 +727,6 @@
         private System.Windows.Forms.Button btnCapturePhoto;
         private System.Windows.Forms.PictureBox cameraBox;
         private System.Windows.Forms.ComboBox comVideoDeviceBox;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RadioButton radbtnYes;
         private System.Windows.Forms.RadioButton radbtnNo;
         private System.Windows.Forms.TextBox txtCapturedImagePath;

@@ -53,6 +53,13 @@ namespace RFID_FEATHER_ASSETS
             public string roleName { get; set; }
             public string value { get; set; }
             public string type { get; set; }
+            public string ownerName { get; set; }
+            public string updatedBy { get; set; }
+            public string userType { get; set; }
+            public string takeOutNote { get; set; }
+            public string validityPeriod { get; set; }
+            public string ownerImageUrl { get; set; }
+            public string assetImageUrl { get; set; }
         }
 
         public class AssetList

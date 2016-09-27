@@ -39,8 +39,12 @@ namespace RFID_FEATHER_ASSETS
         bool isCameraChanged = false;
         string cameraDeviceName;
         int assetId;
+        string ownerName;
+        string description;
+        string takeOutNote;
+        string userName;
 
-        public ReportCreation(int srcAssetId)
+        public ReportCreation(int srcAssetId, string srcOwnerName, string srcDescription, string srcTakeOutNote)
         {
             InitializeComponent();
 
@@ -51,6 +55,9 @@ namespace RFID_FEATHER_ASSETS
             InitializeCamera();
             InitializePhotoLabel();
             assetId = srcAssetId;
+            ownerName = srcOwnerName;
+            description = srcDescription;
+            takeOutNote = srcTakeOutNote;
             
         }
         private void getLanguage()
@@ -188,6 +195,7 @@ namespace RFID_FEATHER_ASSETS
                     //txtSaveImageDir.Text = (string)(key.GetValue("PersonImagePath"));
                     companyId = (int)(key.GetValue("companyId"));
                     readerInfo = (string)(key.GetValue("readerInfo"));
+                    userName = (string)(key.GetValue("UserName")).ToString();
                     key.Close();
                 }
             }
@@ -212,14 +220,30 @@ namespace RFID_FEATHER_ASSETS
                 //For Web Service
                 GlobalClass.GetSetClass transactDet = new GlobalClass.GetSetClass();
 
-                transactDet.companyId = companyId;//1;
-                transactDet.readerInfo = readerInfo;
-                //transactDet.readerId = 1;
-                transactDet.assetId = assetId;//Verification.AssetIdValue;
-                transactDet.notes = txtExplanationNotes.Text.Trim();
-                transactDet.imageUrls = newImgFileNames;//txtCapturedImagePath.Text;//txtImagePath.Text;
-                transactDet.type = "CREATE-Report";
+                //transactDet.companyId = companyId;//1;
+                //transactDet.readerInfo = readerInfo;
+                ////transactDet.readerId = 1;
+                //transactDet.assetId = assetId;//Verification.AssetIdValue;
+                //transactDet.notes = txtExplanationNotes.Text.Trim();
+                //transactDet.imageUrls = newImgFileNames;//txtCapturedImagePath.Text;//txtImagePath.Text;
+                //transactDet.type = "CREATE-Report";
 
+                transactDet.companyId = companyId;//1;
+                transactDet.validityPeriod = "";
+                transactDet.ownerName = ownerName;
+                //transactDet.position = position;
+                //transactDet.email = email;
+                //transactDet.userType = userType;
+                transactDet.description = description;
+                transactDet.takeOutNote = takeOutNote;
+                transactDet.imageUrls = newImgFileNames;
+                //transactDet.ownerImageUrl = ownerImageUrl;
+                //transactDet.assetImageUrl = newImgFileNames;
+                transactDet.updatedBy = userName;
+                transactDet.readerInfo = readerInfo;
+                transactDet.notes = txtExplanationNotes.Text.Trim();
+                transactDet.type = "CREATE-Report";
+                transactDet.assetId = assetId;
 
                 RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");//("http://feather-assets.herokuapp.com/");
                 RestRequest transact = new RestRequest("/api/asset/transact", Method.POST);

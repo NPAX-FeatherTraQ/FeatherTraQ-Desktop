@@ -212,7 +212,7 @@ namespace RFID_FEATHER_ASSETS
                         }
                         companyid = loginResult.companyId;
                         companyName = loginResult.companyName;
-                        SaveAssetSystemInfo(loginResult.authenticationToken, loginResult.roles, loginResult.userId, txtUserName.Text.Trim(), readerInfo, companyName, locationInfo);
+                        SaveAssetSystemInfo(loginResult.authenticationToken, loginResult.roles, loginResult.userId, loginResult.firstName + " " + loginResult.lastName/*txtUserName.Text.Trim()*/, readerInfo, companyName, locationInfo);
 
 
                         //check authorities    
@@ -254,6 +254,8 @@ namespace RFID_FEATHER_ASSETS
 
                         if (numericStatusCode == 401)
                         {
+                            txtPassword.Text = string.Empty;
+                            txtPassword.Focus();
                             MessageBox.Show("Incorrect Username or Password, Please try again.");
                         }
                         else if (numericStatusCode == 500)

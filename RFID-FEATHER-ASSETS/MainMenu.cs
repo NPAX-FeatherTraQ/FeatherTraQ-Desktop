@@ -1,4 +1,4 @@
-using Microsoft.Win32;
+﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +22,7 @@ namespace RFID_FEATHER_ASSETS
         string companyName;
         string location;
         string displaySystemInfo;
+        bool isTabExist = false;
 
         public MainMenu(string tokenvaluesource, /*string portnamesource,*/ string roleSource)
         {
@@ -33,6 +34,8 @@ namespace RFID_FEATHER_ASSETS
             //company.Text = companyName;
             //locationTxt.Text = location;
             languageHandler();
+            //tabControl1.SelectedIndex = 1;
+            picboxLogo.BringToFront();
         }
 
         private void getSystemInfo()
@@ -136,37 +139,59 @@ namespace RFID_FEATHER_ASSETS
                 //registerUser.Dock = DockStyle.Fill; 
                 //registerUser.Show();
 
-                if (AssetRegistration.IsCameraConnected)
-                {
-                    AssetRegistration.cam.Stop();
-                    //AssetRegistration.cam = null;
-                    //AssetRegistration.reader.CloseCom();
-                }
+               checkIfTabExist(registerOwnerToolStripMenuItem.Text);
 
-                RegisterUser registerUser = new RegisterUser(tokenvalue);
-                registerUser.TopLevel = false;
-                TabPage tp = new TabPage(registerOwnerToolStripMenuItem.Text);
-                tabCtrlMainMenu.TabPages.Add(tp);
-                tabCtrlMainMenu.SelectedTab = tp;
-                tp.ImageIndex = 0;
-                registerUser.Parent = tp;
-                registerUser.FormBorderStyle = FormBorderStyle.None;
-                registerUser.Dock = DockStyle.Fill;
+               if (!isTabExist)
+               {
+                   if (AssetRegistration.IsCameraConnected)
+                   {
+                       AssetRegistration.cam.Stop();
+                       //AssetRegistration.cam = null;
+                       //AssetRegistration.reader.CloseCom();
+                   }
 
-                if (RegisterUser.IsCameraConnected)
-                    RegisterUser.cam.Start();
+                   RegisterUser registerUser = new RegisterUser(tokenvalue);
+                   registerUser.TopLevel = false;
+                   TabPage tp = new TabPage(registerOwnerToolStripMenuItem.Text);
+                   tabCtrlMainMenu.TabPages.Add(tp);
+                   tabCtrlMainMenu.SelectedTab = tp;
+                   tp.ImageIndex = 0;
+                   registerUser.Parent = tp;
+                   registerUser.FormBorderStyle = FormBorderStyle.None;
+                   registerUser.Dock = DockStyle.Fill;
 
-                registerUser.Show();
-  
-                if (RegisterUser.portname == string.Empty)
-                {
-                    serialPortToolStripMenuItem.PerformClick();
-                }
+                   if (RegisterUser.IsCameraConnected)
+                       RegisterUser.cam.Start();
+
+                   registerUser.Show();
+
+                   if (RegisterUser.portname == string.Empty)
+                   {
+                       serialPortToolStripMenuItem.PerformClick();
+                   }
+               }
+               
            }
            catch (Exception ex)
            {
                MessageBox.Show(ex.Message);
            }
+        }
+
+        private void checkIfTabExist(string tabText)
+        {
+            picboxLogo.SendToBack();
+
+            foreach (TabPage tab in tabCtrlMainMenu.TabPages)
+            {
+                if (tabText.Equals(tab.Text))
+                {
+                    tabCtrlMainMenu.SelectedTab = tab;
+                    isTabExist = true;
+                    break;
+                }
+                else isTabExist = false;
+            }
         }
 
         private void registerAssetToolStripMenuItem_Click(object sender, EventArgs e)
@@ -180,31 +205,36 @@ namespace RFID_FEATHER_ASSETS
                 //registerAsset.Dock = DockStyle.Fill;
                 //registerAsset.Show();
 
-                if (RegisterUser.IsCameraConnected)
+                checkIfTabExist(registerAssetToolStripMenuItem.Text);
+
+                if (!isTabExist)
                 {
-                    RegisterUser.cam.Stop();
-                    //RegisterUser.cam = null;
-                    //RegisterUser.reader.CloseCom();
-                }
+                    if (RegisterUser.IsCameraConnected)
+                    {
+                        RegisterUser.cam.Stop();
+                        //RegisterUser.cam = null;
+                        //RegisterUser.reader.CloseCom();
+                    }
 
-                AssetRegistration registerAsset = new AssetRegistration();
-                registerAsset.TopLevel = false;
-                TabPage tp = new TabPage(registerAssetToolStripMenuItem.Text);
-                tabCtrlMainMenu.TabPages.Add(tp);
-                tabCtrlMainMenu.SelectedTab = tp;
-                tp.ImageIndex = 0;
-                registerAsset.Parent = tp;
-                registerAsset.FormBorderStyle = FormBorderStyle.None;
-                registerAsset.Dock = DockStyle.Fill;
+                    AssetRegistration registerAsset = new AssetRegistration();
+                    registerAsset.TopLevel = false;
+                    TabPage tp = new TabPage(registerAssetToolStripMenuItem.Text);
+                    tabCtrlMainMenu.TabPages.Add(tp);
+                    tabCtrlMainMenu.SelectedTab = tp;
+                    tp.ImageIndex = 0;
+                    registerAsset.Parent = tp;
+                    registerAsset.FormBorderStyle = FormBorderStyle.None;
+                    registerAsset.Dock = DockStyle.Fill;
 
-                if (AssetRegistration.IsCameraConnected)
-                    AssetRegistration.cam.Start();
+                    if (AssetRegistration.IsCameraConnected)
+                        AssetRegistration.cam.Start();
 
-                registerAsset.Show();
-  
-                if (AssetRegistration.portname == string.Empty)
-                {
-                    serialPortToolStripMenuItem.PerformClick();
+                    registerAsset.Show();
+
+                    if (AssetRegistration.portname == string.Empty)
+                    {
+                        serialPortToolStripMenuItem.PerformClick();
+                    }
                 }
             }
             catch (Exception ex)
@@ -228,11 +258,7 @@ namespace RFID_FEATHER_ASSETS
                 //verifyAsset.Dock = DockStyle.Fill;
                 //verifyAsset.Show();
 
-                if (RegisterUser.regOwnerCon) RegisterUser.reader.CloseCom();
-                if (RegisterUser.cam != null) RegisterUser.cam.Stop();
-
-                if (AssetRegistration.regAssetCon) AssetRegistration.reader.CloseCom();
-                if (AssetRegistration.cam != null) AssetRegistration.cam.Stop();
+                logoutCloseCameraReader();
 
                 this.Hide();
                 Verification verifyAsset = new Verification();
@@ -244,13 +270,27 @@ namespace RFID_FEATHER_ASSETS
             }
         }
 
+        private void logoutCloseCameraReader()
+        {
+            if (RegisterUser.regOwnerCon) RegisterUser.reader.CloseCom();
+            if (RegisterUser.cam != null) RegisterUser.cam.Stop();
+
+            if (AssetRegistration.regAssetCon) AssetRegistration.reader.CloseCom();
+            if (AssetRegistration.cam != null) AssetRegistration.cam.Stop();
+        }
+
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try 
             {
-                this.Hide();
-                LoginActivity LoginForm = new LoginActivity();
-                LoginForm.Show();
+                if (tabCtrlMainMenu.TabCount == 0 || (tabCtrlMainMenu.TabCount != 0 && MessageBox.Show("Are you sure you want logout?" + "\n" + "There are active form(s) open.", "Confirm...", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes))
+                {
+                    logoutCloseCameraReader();
+
+                    this.Hide();
+                    LoginActivity LoginForm = new LoginActivity();
+                    LoginForm.Show();
+                }
             }
             catch (Exception ex)
             {
@@ -260,7 +300,10 @@ namespace RFID_FEATHER_ASSETS
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            if (tabCtrlMainMenu.TabCount == 0 || (tabCtrlMainMenu.TabCount != 0 && MessageBox.Show("Are you sure you want exit the application?" + "\n" + "There are active form(s) open.", "Confirm...", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes))
+            {
+                Environment.Exit(0);
+            }
         }
 
         private void transactionHistoryToolStripMenuItem_Click(object sender, EventArgs e)
@@ -273,16 +316,21 @@ namespace RFID_FEATHER_ASSETS
                 //transactionHistory.Dock = DockStyle.Fill;
                 //transactionHistory.Show();
 
-                TransactionHistory transactionHistory = new TransactionHistory();
-                transactionHistory.TopLevel = false;
-                TabPage tp = new TabPage(transactionHistoryToolStripMenuItem.Text);
-                tabCtrlMainMenu.TabPages.Add(tp);
-                tabCtrlMainMenu.SelectedTab = tp;
-                tp.ImageIndex = 0;
-                transactionHistory.Parent = tp;
-                transactionHistory.FormBorderStyle = FormBorderStyle.None;
-                transactionHistory.Dock = DockStyle.Fill;
-                transactionHistory.Show();
+                checkIfTabExist(transactionHistoryToolStripMenuItem.Text);
+
+                if (!isTabExist)
+                {
+                    TransactionHistory transactionHistory = new TransactionHistory();
+                    transactionHistory.TopLevel = false;
+                    TabPage tp = new TabPage(transactionHistoryToolStripMenuItem.Text);
+                    tabCtrlMainMenu.TabPages.Add(tp);
+                    tabCtrlMainMenu.SelectedTab = tp;
+                    tp.ImageIndex = 0;
+                    transactionHistory.Parent = tp;
+                    transactionHistory.FormBorderStyle = FormBorderStyle.None;
+                    transactionHistory.Dock = DockStyle.Fill;
+                    transactionHistory.Show();
+                }
             }
             catch (Exception ex)
             {
@@ -303,27 +351,6 @@ namespace RFID_FEATHER_ASSETS
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void tabControl1_MouseDown(object sender, MouseEventArgs e)
-        {
-            try
-            { 
-                Rectangle r = tabCtrlMainMenu.GetTabRect(this.tabCtrlMainMenu.SelectedIndex);
-                Rectangle closeButton = new Rectangle(r.Left + 15, r.Top + 7, 9, 7);
-                if (closeButton.Contains(e.Location))
-                {
-                    if (MessageBox.Show("Close " + tabCtrlMainMenu.SelectedTab.Text + "?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        closeCameraAndReader();
-                        this.tabCtrlMainMenu.TabPages.Remove(this.tabCtrlMainMenu.SelectedTab);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            };
         }
 
         private void closeCameraAndReader()
@@ -358,16 +385,20 @@ namespace RFID_FEATHER_ASSETS
                     switch (tabCtrlMainMenu.SelectedTab.Text.ToLower())
                     {
                         case "register owner":
+                            //if (AssetRegistration.cam != null) AssetRegistration.cam.Stop();
+                            //    AssetRegistration.reader.CloseCom();
+                            if (AssetRegistration.regAssetCon) AssetRegistration.reader.CloseCom();
                             if (AssetRegistration.cam != null) AssetRegistration.cam.Stop();
-                                AssetRegistration.reader.CloseCom();
 
                             if (RegisterUser.IsCameraConnected)
                                 RegisterUser.cam.Start();
                             break;
 
                         case "register asset":
+                            //if (RegisterUser.cam != null) RegisterUser.cam.Stop();
+                            //    RegisterUser.reader.CloseCom();
+                            if (RegisterUser.regOwnerCon) RegisterUser.reader.CloseCom();
                             if (RegisterUser.cam != null) RegisterUser.cam.Stop();
-                                RegisterUser.reader.CloseCom();
 
                             if (AssetRegistration.IsCameraConnected)
                                 AssetRegistration.cam.Start();
@@ -405,6 +436,44 @@ namespace RFID_FEATHER_ASSETS
             //    //    this.tabCtrlMainMenu.TabPages.Remove(this.tabCtrlMainMenu.SelectedTab);
             //    //}
             //}
+        }
+
+        private void trackAssetsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            { 
+                logoutCloseCameraReader();
+
+                this.Hide();
+                Tracking trackingAsset = new Tracking();
+                trackingAsset.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void tabCtrlMainMenu_MouseDown(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                Rectangle r = tabCtrlMainMenu.GetTabRect(this.tabCtrlMainMenu.SelectedIndex);
+                Rectangle closeButton = new Rectangle(r.Left + 15, r.Top + 7, 9, 7);
+                if (closeButton.Contains(e.Location))
+                {
+                    if (MessageBox.Show("Close " + tabCtrlMainMenu.SelectedTab.Text + "?", "Confirm...", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        logoutCloseCameraReader();//closeCameraAndReader();
+                        this.tabCtrlMainMenu.TabPages.Remove(this.tabCtrlMainMenu.SelectedTab);
+                        if (tabCtrlMainMenu.TabCount == 0) picboxLogo.BringToFront();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            };
         }
     }
 }

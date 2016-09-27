@@ -54,6 +54,7 @@ namespace RFID_FEATHER_ASSETS
         bool btnEditInfoWasClicked = false;
         public static bool regOwnerCon = false;
         bool isStartDateTimeChanged = false;
+        string userName;
 
         public RegisterUser(string tokenvaluesource)
         {
@@ -62,7 +63,8 @@ namespace RFID_FEATHER_ASSETS
             languageHandler();
             GetCompanyPath();
             //tokenvalue = tokenvaluesource;
-            InitializeCamera();          
+            InitializeCamera();
+            InitializePhotoLabel();
             GetRegDefaultImagePath();            
             //CCT.Completed += new EventHandler<PhotoResult>(capture_completed);
             regOwnerCon = true;
@@ -87,6 +89,12 @@ namespace RFID_FEATHER_ASSETS
             this.cmbauthorities.ValueMember = "value";
             this.cmbauthorities.DisplayMember = "roleName";
             
+        }
+
+        private void InitializePhotoLabel()
+        {
+            lblOwnerPhoto.Text = "Step 1" + "\n" + lblOwnerPhoto.Text;
+            lblValidIDPhoto.Text = "Step 2" + "\n" + lblValidIDPhoto.Text;
         }
 
         private void hidePassword()
@@ -120,7 +128,7 @@ namespace RFID_FEATHER_ASSETS
                     roleValue = (string)(key.GetValue("roles"));
                     portname = (string)(key.GetValue("DefaultPortName"));
                     tokenvalue = (string)(key.GetValue("authenticationToken"));
-                    
+                    userName = (string)(key.GetValue("UserName")).ToString();
                     key.Close();
                 }
             }
@@ -676,7 +684,7 @@ namespace RFID_FEATHER_ASSETS
 
                         return;
                     }
-                    SaveTransaction(transType);
+                    SaveTransaction(userinfo.assetIdCard.startDate, userinfo.assetIdCard.validUntil, transType);
                     if (language == "English") MessageBox.Show("Record successfully saved.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
                     {
@@ -925,7 +933,7 @@ namespace RFID_FEATHER_ASSETS
             dtStartTimePicker.Checked = false;
         }
 
-        private void SaveTransaction(string type)
+        private void SaveTransaction(DateTime? startDate, DateTime? validUntil, string type)
         {
             //Saving to transaction table
             try
@@ -933,16 +941,32 @@ namespace RFID_FEATHER_ASSETS
                 //For Web Service
                 GlobalClass.GetSetClass transactDet = new GlobalClass.GetSetClass();
 
+                //transactDet.companyId = companyId;//1;
+                //transactDet.readerInfo = readerInfo;
+                //transactDet.type = type;
+                ////transactDet.readerId = 1;
+                ////transactDet.notes = txtExplanationNotes.Text.Trim();
+                ////transactDet.imageUrl = newImgFileNames;//txtCapturedImagePath.Text;//txtImagePath.Text;
+
                 transactDet.companyId = companyId;//1;
+                transactDet.validityPeriod = validUntil == null ? "Start " + startDate.Value.ToString("g") + " - No End Date" : "Start " + startDate.Value.ToString("g") + " Until " + validUntil.Value.ToString("g");
+                transactDet.ownerName = txtlastName.Text + " " + txtfirstName.Text;
+                transactDet.position = txtposition.Text;
+                transactDet.email = txtemail.Text;
+                transactDet.userType = cmbauthorities.SelectedValue.ToString();//cmbauthorities.Text;
+                transactDet.description = "ID_CARD";
+                transactDet.takeOutNote = txtlastName.Text + " Only";
+                transactDet.ownerImageUrl = newImgFileNames;
+                //transactDet.assetImageUrl = newImgFileNames;
+                transactDet.updatedBy = userName;
                 transactDet.readerInfo = readerInfo;
+                //transactDet.notes = notes;
                 transactDet.type = type;
-                //transactDet.readerId = 1;
-                //transactDet.notes = txtExplanationNotes.Text.Trim();
-                //transactDet.imageUrl = newImgFileNames;//txtCapturedImagePath.Text;//txtImagePath.Text;
+                //transactDet.assetId = assetId;
 
                 //Gettting the assetId
-                ResourceManager rm = new ResourceManager("RFID_FEATHER_ASSETS.Languages.UserRegistration", Assembly.GetExecutingAssembly());
-                if (btnSubmit.Text.ToUpper() == "SUBMIT" || btnSubmit.Text == rm.GetString("btnSubmit"))
+                //ResourceManager rm = new ResourceManager("RFID_FEATHER_ASSETS.Languages.UserRegistration", Assembly.GetExecutingAssembly());
+                if (btnSubmit.Text.ToUpper() == "SUBMIT" /*|| btnSubmit.Text == rm.GetString("btnSubmit")*/)
                 {
                     GlobalClass.GetSetClass getAsset = new GlobalClass.GetSetClass();
 
@@ -997,14 +1021,14 @@ namespace RFID_FEATHER_ASSETS
                     if (restResult.result != "OK")
                     {
                         if (language == "English") MessageBox.Show("Saving transaction..." + "\n" + restResult.result + " " + restResult.message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        else MessageBox.Show(rm.GetString("saveTrans") + "\n" + restResult.result + " " + restResult.message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                       //else MessageBox.Show(rm.GetString("saveTrans") + "\n" + restResult.result + " " + restResult.message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
                 }
                 else
                 {
                     if (language == "English") MessageBox.Show("Saving transaction..." + "\n" + "Error Code " + response.StatusCode /*+ " : Message - " + response.ErrorMessage*/);
-                    else MessageBox.Show(rm.GetString("saveTrans") + "\n" + "Error Code " + response.StatusCode /*+ " : Message - " + response.ErrorMessage*/);
+                    //else MessageBox.Show(rm.GetString("saveTrans") + "\n" + "Error Code " + response.StatusCode /*+ " : Message - " + response.ErrorMessage*/);
                     return;
                 }
 
@@ -1127,7 +1151,7 @@ namespace RFID_FEATHER_ASSETS
                         MessageBox.Show("Error connecting to server... Please try again later");
                     }
 
-                    Application.Restart();
+                    //Application.Restart();
                     /*this.Hide();                   
                     LoginActivity loginActivity = new LoginActivity();
                     loginActivity.Show();*/
@@ -1269,7 +1293,7 @@ namespace RFID_FEATHER_ASSETS
                     }
                     else
                     {
-                        if (language == "English") MessageBox.Show("You can save only 2 images.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (language == "English") MessageBox.Show("Captured images are already completed.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);//("You can save only 2 images.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         else MessageBox.Show(rm.GetString("maxImages"), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }

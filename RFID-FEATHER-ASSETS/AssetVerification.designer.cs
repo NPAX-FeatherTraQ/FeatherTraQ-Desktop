@@ -30,14 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Verification));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblCurrentDateTime = new System.Windows.Forms.Label();
             this.VerifyTimer = new System.Windows.Forms.Timer(this.components);
             this.BackgroundTimer = new System.Windows.Forms.Timer(this.components);
             this.CurrentDateTimer = new System.Windows.Forms.Timer(this.components);
             this.ClearGridTimer = new System.Windows.Forms.Timer(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnReport = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtOwnerName = new System.Windows.Forms.TextBox();
@@ -59,7 +60,6 @@
             this.lblAssetPhoto1 = new System.Windows.Forms.Label();
             this.lblValidIDPhoto = new System.Windows.Forms.Label();
             this.lblOwnerPhoto = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.lblOwnerPic = new System.Windows.Forms.Label();
@@ -98,6 +98,7 @@
             this.lblLoginUserName = new System.Windows.Forms.Label();
             this.ReadLoopTimer = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblMsgAssetNotRegister = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblSystemInfo = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -137,7 +138,7 @@
             // 
             // groupBox1
             // 
-            resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btnReport);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.lblLoadingInformation);
@@ -147,7 +148,6 @@
             this.groupBox1.Controls.Add(this.lblAssetPhoto1);
             this.groupBox1.Controls.Add(this.lblValidIDPhoto);
             this.groupBox1.Controls.Add(this.lblOwnerPhoto);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btnBack);
             this.groupBox1.Controls.Add(this.btnSubmit);
             this.groupBox1.Controls.Add(this.lblOwnerPic);
@@ -159,8 +159,16 @@
             this.groupBox1.Controls.Add(this.imgCapture2);
             this.groupBox1.Controls.Add(this.imgCapture1);
             this.groupBox1.Controls.Add(this.grpBoxReportedInfo);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.BackColor = System.Drawing.Color.Orange;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label3.Name = "label3";
             // 
             // btnReport
             // 
@@ -301,13 +309,6 @@
             // 
             resources.ApplyResources(this.lblOwnerPhoto, "lblOwnerPhoto");
             this.lblOwnerPhoto.Name = "lblOwnerPhoto";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.BackColor = System.Drawing.Color.Orange;
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.Name = "label3";
             // 
             // btnBack
             // 
@@ -462,14 +463,14 @@
             this.grdViewRFIDTag.AllowUserToResizeRows = false;
             this.grdViewRFIDTag.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdViewRFIDTag.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdViewRFIDTag.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdViewRFIDTag.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(this.grdViewRFIDTag, "grdViewRFIDTag");
             this.grdViewRFIDTag.ColumnHeadersVisible = false;
             this.grdViewRFIDTag.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -487,14 +488,14 @@
             this.colAssetOwner,
             this.colRFIDTag,
             this.colIsCompared});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdViewRFIDTag.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdViewRFIDTag.DefaultCellStyle = dataGridViewCellStyle2;
             this.grdViewRFIDTag.Name = "grdViewRFIDTag";
             this.grdViewRFIDTag.ReadOnly = true;
             this.grdViewRFIDTag.RowHeadersVisible = false;
@@ -616,9 +617,16 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblMsgAssetNotRegister,
             this.lblSystemInfo});
             resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.Name = "statusStrip1";
+            // 
+            // lblMsgAssetNotRegister
+            // 
+            resources.ApplyResources(this.lblMsgAssetNotRegister, "lblMsgAssetNotRegister");
+            this.lblMsgAssetNotRegister.ForeColor = System.Drawing.Color.Red;
+            this.lblMsgAssetNotRegister.Name = "lblMsgAssetNotRegister";
             // 
             // lblSystemInfo
             // 
@@ -731,6 +739,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colIsCompared;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblSystemInfo;
+        private System.Windows.Forms.ToolStripStatusLabel lblMsgAssetNotRegister;
 
 
     }

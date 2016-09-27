@@ -34,6 +34,8 @@ namespace RFID_FEATHER_ASSETS
         int updateId;
         int registerUserId;*/
         string name;
+        int searchUserId;
+        int searchAssetId;
         
         public TransactionHistory()
         {
@@ -41,6 +43,44 @@ namespace RFID_FEATHER_ASSETS
             getLanguage();
             languageHandler();
             GetAssetSystemInfo();
+            ownerList();
+        }
+
+        private void ownerList()
+        {
+            try
+            {
+                RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");
+                RestRequest listUser = new RestRequest("/api/user/list/" /*+ companyId */, Method.GET);
+
+                listUser.RequestFormat = DataFormat.Json;
+                listUser.AddHeader("Content-Type", "application/json; charset=utf-8");
+                listUser.AddHeader("X-Auth-Token", tokenValue);
+
+                var response = client.Execute<List<GlobalClass.GetSetClass>>(listUser);
+                var content = response.Content;
+
+                if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    JsonDeserializer deserial = new JsonDeserializer();
+                    List<GlobalClass.GetSetClass> generateUsers = deserial.Deserialize<List<GlobalClass.GetSetClass>>(response);
+
+                    List<OwnerList> userList = new List<OwnerList>();
+
+                    for (int i = 0; i < generateUsers.Count; i++)
+                    {
+                        userList.Add(new OwnerList() { userId = generateUsers[i].userId, name = generateUsers[i].lastName + ", " + generateUsers[i].firstName });
+                    }
+
+                    this.cmbOwnerList.DataSource = userList;
+                    this.cmbOwnerList.ValueMember = "userId";
+                    this.cmbOwnerList.DisplayMember = "name";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void getLanguage()
         {
@@ -134,26 +174,30 @@ namespace RFID_FEATHER_ASSETS
 
                 //execute request
                 var response = client.Execute<GlobalClass.GetSetClass>(ownerInfo);
-                var content = response.Content;
+                //client.ExecuteAsync<GlobalClass.GetSetClass>(ownerInfo, response =>
+                //{
+                    var content = response.Content;
 
-                if (response.StatusCode == HttpStatusCode.OK)
-                {
-                    //deserialize json response into object
-                    JsonDeserializer deserial = new JsonDeserializer();
-                    GlobalClass.GetSetClass info = deserial.Deserialize<GlobalClass.GetSetClass>(response);
+                    if (response.StatusCode == HttpStatusCode.OK)
+                    {
+                        //deserialize json response into object
+                        JsonDeserializer deserial = new JsonDeserializer();
+                        GlobalClass.GetSetClass info = deserial.Deserialize<GlobalClass.GetSetClass>(response);
 
-                    name = info.firstName + " " + info.lastName;
-                    
-                }
-                else
-                {
-                    MessageBox.Show("Unable to reach server.. please try again later", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        name = info.firstName + " " + info.lastName;
 
-                    Application.Restart();
-                    /*this.Hide();                   
-                    LoginActivity loginActivity = new LoginActivity();
-                    loginActivity.Show();*/
-                }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Unable to reach server.. please try again later", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        //Application.Restart();
+                        /*this.Hide();                   
+                        LoginActivity loginActivity = new LoginActivity();
+                        loginActivity.Show();*/
+                    }
+
+                //});
             }
             catch (Exception ex)
             {
@@ -165,6 +209,7 @@ namespace RFID_FEATHER_ASSETS
         {
             try
             {
+                //btnGenerate.Enabled = false;
                 grdViewTransactions.Visible = false;
                 grdViewTransactions.Rows.Clear();
                 //grdViewTransactions.Refresh();
@@ -176,12 +221,11 @@ namespace RFID_FEATHER_ASSETS
 
                 startDate = dtDateFromPicker.Value.ToString("yyyy-MM-ddT00:01");
                 endDate = dtDateToPicker.Value.ToString("yyyy-MM-ddT23:59");
-                if (!string.IsNullOrEmpty(txtAssetID.Text.Trim())) assetId = int.Parse(txtAssetID.Text.Trim());
-                if (!string.IsNullOrEmpty(txtUserID.Text.Trim())) userId = int.Parse(txtUserID.Text.Trim());
 
                 //initialize Rest Client
                 RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");
-                RestRequest transactionInfo = new RestRequest("/api/transaction/search?startDate=" + startDate + "&endDate=" + endDate /*+ "&assetId=" + assetId*/, Method.GET);
+                //RestRequest transactionInfo = new RestRequest("/api/transaction/search?startDate=" + startDate + "&endDate=" + endDate + "&userId=" + searchUserId + "&assetId=" + searchAssetId, Method.GET);
+                RestRequest transactionInfo = new RestRequest("/api/transaction/search?startDate=" + startDate + "&endDate=" + endDate + (searchUserId != 0 ? "&userId=" + searchUserId : "") + (searchAssetId != 0 ? "&assetId=" + searchAssetId : ""), Method.GET);
 
                 var authToken = tokenValue;
 
@@ -191,78 +235,122 @@ namespace RFID_FEATHER_ASSETS
                 transactionInfo.AddHeader("X-Auth-Token", authToken);
 
                 //execute request
-                var response = client.Execute<List<GlobalClass.GetSetClass>>(transactionInfo);
-                var content = response.Content;
-
-                if (response.StatusCode == HttpStatusCode.OK)
+                //var response = client.Execute<List<GlobalClass.GetSetClass>>(transactionInfo);
+                //var content = response.Content;
+                client.ExecuteAsync<List<GlobalClass.GetSetClass>>(transactionInfo, response =>
                 {
-                    //deserialize json response into object
-                    JsonDeserializer deserial = new JsonDeserializer();
-                    List<GlobalClass.GetSetClass> generateResult = deserial.Deserialize<List<GlobalClass.GetSetClass>>(response);
-
-                    string ValidUntil;
-
-                    if (generateResult.Count != 0)
+                    if (response.StatusCode == HttpStatusCode.OK)
                     {
-                        //grdViewTransactions.ColumnHeadersVisible = true;
-                        DateTime? dt;
+                        //deserialize json response into object
+                        JsonDeserializer deserial = new JsonDeserializer();
+                        List<GlobalClass.GetSetClass> generateResult = deserial.Deserialize<List<GlobalClass.GetSetClass>>(response);
 
-                        for (int i = 0; i < generateResult.Count; i++)
-                        {                         
-                            int idx = grdViewTransactions.Rows.Add();
-                            DataGridViewRow row = grdViewTransactions.Rows[idx];
-                            lblLoadingInformation.Text = "Getting Information. Please wait... " + "\n" + "Processing record " + (i+1) + " of " + generateResult.Count + "...";
-                            lblLoadingInformation.Refresh();
+                        int idx;
+                        grdViewTransactions.Invoke(new MethodInvoker(delegate
+                        {
+                            string ValidUntil;
 
-                            //row.Cells["ColTransId"].Value = generateResult[i].transactionId;
-                            //row.Cells["ColAssetId"].Value = generateResult[i].asset.assetId ?? null;
-                            //row.Cells["ColCompanyId"].Value = generateResult[i].asset.companyId ?? null;
-                            getOwnerInfo(generateResult[i].asset.registerUserId);
-                            row.Cells["ColRegisterId"].Value = name;
+                            if (generateResult.Count != 0)
+                            {
+                                //grdViewTransactions.ColumnHeadersVisible = true;
+                                DateTime? dt;
 
-                            getOwnerInfo(generateResult[i].asset.updateUserId);
-                            row.Cells["ColUpdateId"].Value = name;
+                                for (int i = 0; i < generateResult.Count; i++)
+                                {
+                                    //int idx;
+                                    //grdViewTransactions.Invoke(new MethodInvoker(delegate
+                                    //{
+                                        idx = grdViewTransactions.Rows.Add();
+                                        DataGridViewRow row = grdViewTransactions.Rows[idx];
 
-                            getOwnerInfo(generateResult[i].asset.ownerUserId);
-                            row.Cells["ColOwnerName"].Value = name;//generateResult[i].asset.name;
 
-                            row.Cells["ColDescription"].Value = generateResult[i].asset.description;
-                            //row.Cells["ColImgUrl"].Value = generateResult[i].asset.imageUrls;
-                            //row.Cells["ColRFIDTag"].Value = generateResult[i].asset.tag;
-                            row.Cells["ColTakeOutNote"].Value = generateResult[i].asset.takeOutInfo;
+                                        //int idx;
+                                        //DataGridViewRow row = grdViewTransactions.Rows[idx];
+                                        lblLoadingInformation.Text = "Getting Information. Please wait... " + "\n" + "Processing record " + (i + 1) + " of " + generateResult.Count + "...";
+                                        lblLoadingInformation.Refresh();
 
-                            ValidUntil = generateResult[i].asset.validUntil == null ? "Start " + generateResult[i].asset.startDate.Value.ToString("g") + " - No End Date" : "Start " + generateResult[i].asset.startDate.Value.ToString("g") + " Until " + generateResult[i].asset.validUntil.Value.ToString("g"); //!= DateTime.MinValue ? generateResult[i].asset.validUntil.ToString("g") : "No Expiration";
-                            row.Cells["ColValidUntil"].Value = ValidUntil;
+                                        ////row.Cells["ColTransId"].Value = generateResult[i].transactionId;
+                                        ////row.Cells["ColAssetId"].Value = generateResult[i].asset.assetId ?? null;
+                                        ////row.Cells["ColCompanyId"].Value = generateResult[i].asset.companyId ?? null;
+                                        //getOwnerInfo(generateResult[i].asset.registerUserId);
+                                        //row.Cells["ColRegisterId"].Value = name;
 
-                            row.Cells["ColNotes"].Value = generateResult[i].type;
-                            row.Cells["ColType"].Value = generateResult[i].notes;
-                            //row.Cells["ColPersonImgUrl"].Value = generateResult[i].imageUrls;
-                            row.Cells["ColCreatedAt"].Value = DateTime.Parse(generateResult[i].createdAt.ToString());//("MM/dd/yyyy hh:mm:ss tt"));//generateResult[i].createdAt.ToString("g");
-                            row.Cells["ColUpdatedAt"].Value = generateResult[i].asset.updatedAt.ToString("yyyy-MM-dd HH:mm:ss");//generateResult[i].asset.updatedAt.ToString("s");
-                            row.Cells["ColReaderInfo"].Value = generateResult[i].readerInfo;
+                                        //getOwnerInfo(generateResult[i].asset.updateUserId);
+                                        //row.Cells["ColUpdateId"].Value = name;
 
-                            //grdViewTransactions.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.Fill);
-                            //return;
-                        }
-                        grdViewTransactions.Visible = true;//grdViewTransactions.ColumnHeadersVisible = true;
-                        grdViewTransactions.Sort(grdViewTransactions.Columns["ColCreatedAt"], ListSortDirection.Descending);
-                        lblLoadingInformation.Visible = false;
+                                        //getOwnerInfo(generateResult[i].asset.ownerUserId);
+                                        //row.Cells["ColOwnerName"].Value = name;//generateResult[i].asset.name;
+
+                                        //row.Cells["ColDescription"].Value = generateResult[i].asset.description;
+                                        ////row.Cells["ColImgUrl"].Value = generateResult[i].asset.imageUrls;
+                                        ////row.Cells["ColRFIDTag"].Value = generateResult[i].asset.tag;
+                                        //row.Cells["ColTakeOutNote"].Value = generateResult[i].asset.takeOutInfo;
+
+                                        //ValidUntil = generateResult[i].asset.validUntil == null ? "Start " + generateResult[i].asset.startDate.Value.ToString("g") + " - No End Date" : "Start " + generateResult[i].asset.startDate.Value.ToString("g") + " Until " + generateResult[i].asset.validUntil.Value.ToString("g"); //!= DateTime.MinValue ? generateResult[i].asset.validUntil.ToString("g") : "No Expiration";
+                                        //row.Cells["ColValidUntil"].Value = ValidUntil;
+
+                                        //row.Cells["ColNotes"].Value = generateResult[i].type;
+                                        //row.Cells["ColType"].Value = generateResult[i].notes;
+                                        ////row.Cells["ColPersonImgUrl"].Value = generateResult[i].imageUrls;
+                                        //row.Cells["ColCreatedAt"].Value = DateTime.Parse(generateResult[i].createdAt.ToString());//("MM/dd/yyyy hh:mm:ss tt"));//generateResult[i].createdAt.ToString("g");
+                                        //row.Cells["ColUpdatedAt"].Value = generateResult[i].asset.updatedAt.ToString("yyyy-MM-dd HH:mm:ss");//generateResult[i].asset.updatedAt.ToString("s");
+                                        //row.Cells["ColReaderInfo"].Value = generateResult[i].readerInfo;
+                                        
+                                        //row.Cells["ColRegisterId"].Value = generateResult[i].ownerName;
+
+                                        if (generateResult[i].type.Contains("VERIFY") || generateResult[i].type.Contains("TRACK") || generateResult[i].type.Contains("CREATE") || generateResult[i].type.Contains("RENEW"))
+                                            row.Cells["ColRegisterId"].Value = generateResult[i].updatedBy;
+                                        else
+                                        {
+                                            getOwnerInfo(generateResult[i].asset.registerUserId);
+                                            row.Cells["ColRegisterId"].Value = name;
+                                        }
+                                        row.Cells["ColUpdateId"].Value = generateResult[i].updatedBy;
+                                        row.Cells["ColOwnerName"].Value = generateResult[i].ownerName;
+                                        row.Cells["ColDescription"].Value = generateResult[i].description;
+                                        row.Cells["ColTakeOutNote"].Value = generateResult[i].takeOutNote;
+                                        row.Cells["ColValidUntil"].Value = generateResult[i].validityPeriod;
+                                        row.Cells["ColNotes"].Value = generateResult[i].notes;
+                                        row.Cells["ColType"].Value = generateResult[i].type;
+                                        row.Cells["ColCreatedAt"].Value = DateTime.Parse(generateResult[i].createdAt.ToString());//("MM/dd/yyyy hh:mm:ss tt"));//generateResult[i].createdAt.ToString("g");
+                                        row.Cells["ColUpdatedAt"].Value = generateResult[i].asset.updatedAt.ToString("yyyy-MM-dd HH:mm:ss");//generateResult[i].asset.updatedAt.ToString("s");
+                                        row.Cells["ColReaderInfo"].Value = generateResult[i].readerInfo;
+                                    //}));
+                                    //grdViewTransactions.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.Fill);
+                                    //return;
+                                }
+                                //grdViewTransactions.Invoke(new MethodInvoker(delegate
+                                //    {
+                                        grdViewTransactions.Visible = true;//grdViewTransactions.ColumnHeadersVisible = true;
+                                        grdViewTransactions.Sort(grdViewTransactions.Columns["ColCreatedAt"], ListSortDirection.Descending);
+                                        lblLoadingInformation.Visible = false;
+                                    //}));
+                               
+                            }
+                            else
+                            {
+                                //grdViewTransactions.ColumnHeadersVisible = false;
+                                if (language == "English")
+                                {
+                                    //lblLoadingInformation.Invoke(new MethodInvoker(delegate
+                                    //{
+                                        lblLoadingInformation.Text = "Transaction not found.";
+                                    //}));
+                                }
+                                else lblLoadingInformation.Text = "トランザクションが見つかりません.";
+                                //lblLoadingInformation.Visible = true;
+                                //lblLoadingInformation.Refresh();
+                            }
+                            //btnGenerate.Enabled = true;
+                        }));
                     }
                     else
                     {
-                        //grdViewTransactions.ColumnHeadersVisible = false;
-                        if (language == "English") lblLoadingInformation.Text = "Transaction not found.";
-                        else lblLoadingInformation.Text = "トランザクションが見つかりません.";
-                        //lblLoadingInformation.Visible = true;
-                        //lblLoadingInformation.Refresh();
+                        if (language == "English") MessageBox.Show("Error connecting to server.. Please try again later");
+                        else MessageBox.Show("サーバーへの接続エラー.. 後でもう一度試してください");
                     }
 
-                }
-                else 
-                {
-                    if (language == "English") MessageBox.Show("Error connecting to server.. Please try again later");
-                    else MessageBox.Show("サーバーへの接続エラー.. 後でもう一度試してください");
-                }  
+                });
             }
             catch (Exception ex)
             {
@@ -372,7 +460,94 @@ namespace RFID_FEATHER_ASSETS
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void cmbAssetList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            bool parseOK = Int32.TryParse(cmbAssetList.SelectedValue.ToString(), out searchAssetId);
+        }
+
+        private void cmbOwnerList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            bool parseOK = Int32.TryParse(cmbOwnerList.SelectedValue.ToString(), out searchUserId);
+            if (parseOK) assetList();
+        }
+
+        private void assetList()
+        {
+            try
+            {
+                //initialize Rest Client
+                RestClient client = new RestClient(/*"http://feather-assets.herokuapp.com/");*/"http://52.163.93.95:8080/FeatherAssets/");
+                RestRequest assetInfo = new RestRequest("/api/user/" + searchUserId + "/assets/list/", Method.GET);
+                //RestRequest assetInfo = new RestRequest("/api/company/" + companyId + "/assets/list/", Method.GET);
+                var authToken = tokenValue;
+
+                //add needed headers
+                assetInfo.RequestFormat = DataFormat.Json;
+                assetInfo.AddHeader("Content-Type", "application/json; charset=utf-8");
+                assetInfo.AddHeader("X-Auth-Token", authToken);
+
+                //execute request
+                var response = client.Execute<List<AssetInformation>>(assetInfo);
+                var content = response.Content;
+
+                if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    //deserialize json response into object
+                    JsonDeserializer deserial = new JsonDeserializer();
+                    List<GlobalClass.GetSetClass> generateAssets = deserial.Deserialize<List<GlobalClass.GetSetClass>>(response);
+
+                    //add combobox information
+                    //if (generateAssets.Count == 0)
+                    //{
+                    //    MessageBox.Show("Not yet registered an asset... Please visit your administrator to register your asset", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //    return;
+                    //}
+                    //else
+                    //{
+                        cmbAssetList.Text = string.Empty;
+
+                        List<AssetList> assetList = new List<AssetList>();
+                        for (int i = 0; i < generateAssets.Count; i++)
+                        {
+                            assetList.Add(new AssetList() { assetId = generateAssets[i].assetId, assetName = generateAssets[i].description });
+                        }
+                        if (generateAssets.Count != 0)
+                        {
+                            this.cmbAssetList.DataSource = assetList;
+                            this.cmbAssetList.ValueMember = "assetId";
+                            this.cmbAssetList.DisplayMember = "assetName";
+                        }
+                    //}
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cmbOwnerList_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(cmbOwnerList.Text)) searchUserId = 0;
+        }
+
+        private void cmbAssetList_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(cmbAssetList.Text)) searchAssetId = 0;
+        }
       
+    }
+    public class OwnerList
+    {
+        public int userId { get; set; }
+        public string name { get; set; }
+    }
+
+    public class AssetList
+    {
+        public int assetId { get; set; }
+        public string assetName { get; set; }
     }
 
     //public class GenerateResult

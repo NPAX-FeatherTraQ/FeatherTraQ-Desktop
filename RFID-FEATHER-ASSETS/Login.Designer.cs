@@ -40,10 +40,11 @@
             this.lblSigningIn = new System.Windows.Forms.Label();
             this.lblLanguage = new System.Windows.Forms.Label();
             this.selectLanguage = new System.Windows.Forms.ComboBox();
-            this.lblCompanyRequired = new System.Windows.Forms.Label();
             this.cmbLocation = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblLocation = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUserName
@@ -119,14 +120,8 @@
             resources.GetString("selectLanguage.Items"),
             resources.GetString("selectLanguage.Items1")});
             this.selectLanguage.Name = "selectLanguage";
+            this.selectLanguage.TabStop = false;
             this.selectLanguage.SelectedIndexChanged += new System.EventHandler(this.selectLanguage_SelectedIndexChanged_1);
-            // 
-            // lblCompanyRequired
-            // 
-            resources.ApplyResources(this.lblCompanyRequired, "lblCompanyRequired");
-            this.lblCompanyRequired.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblCompanyRequired.ForeColor = System.Drawing.Color.Red;
-            this.lblCompanyRequired.Name = "lblCompanyRequired";
             // 
             // cmbLocation
             // 
@@ -150,15 +145,23 @@
             resources.ApplyResources(this.lblLocation, "lblLocation");
             this.lblLocation.Name = "lblLocation";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::RFID_FEATHER_ASSETS.Properties.Resources.logo;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
             // LoginActivity
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ControlBox = false;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblLocation);
             this.Controls.Add(this.cmbLocation);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblCompanyRequired);
             this.Controls.Add(this.selectLanguage);
             this.Controls.Add(this.lblLanguage);
             this.Controls.Add(this.lblSigningIn);
@@ -171,9 +174,9 @@
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.btnCancel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
             this.Name = "LoginActivity";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LoginActivity_FormClosed);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,10 +195,10 @@
         private System.Windows.Forms.Label lblSigningIn;
         private System.Windows.Forms.Label lblLanguage;
         private System.Windows.Forms.ComboBox selectLanguage;
-        private System.Windows.Forms.Label lblCompanyRequired;
         private System.Windows.Forms.ComboBox cmbLocation;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblLocation;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

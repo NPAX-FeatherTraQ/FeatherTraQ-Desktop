@@ -49,6 +49,7 @@
             this.btnBrowseImagePath = new System.Windows.Forms.Button();
             this.txtCapturedImagePath = new System.Windows.Forms.TextBox();
             this.imagePathDialog = new System.Windows.Forms.FolderBrowserDialog();
+            this.label6 = new System.Windows.Forms.Label();
             this.grpInformation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cameraBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCapture1)).BeginInit();
@@ -57,6 +58,7 @@
             // 
             // grpInformation
             // 
+            this.grpInformation.Controls.Add(this.label6);
             this.grpInformation.Controls.Add(this.chkBoxChangeCamera);
             this.grpInformation.Controls.Add(this.comVideoDeviceBox);
             this.grpInformation.Controls.Add(this.lblNoCameraAvailable);
@@ -198,6 +200,13 @@
             resources.ApplyResources(this.txtCapturedImagePath, "txtCapturedImagePath");
             this.txtCapturedImagePath.Name = "txtCapturedImagePath";
             // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.BackColor = System.Drawing.Color.Orange;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label6.Name = "label6";
+            // 
             // ReportCreation
             // 
             resources.ApplyResources(this, "$this");
@@ -239,6 +248,7 @@
         protected System.Windows.Forms.TextBox txtExplanationNotes;
         private System.Windows.Forms.CheckBox chkBoxChangeCamera;
         private System.Windows.Forms.ComboBox comVideoDeviceBox;
+        private System.Windows.Forms.Label label6;
 
 
     }

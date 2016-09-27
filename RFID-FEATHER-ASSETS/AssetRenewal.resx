@@ -129,7 +129,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="dtStartTimePicker.Location" type="System.Drawing.Point, System.Drawing">
-    <value>161, 31</value>
+    <value>163, 27</value>
   </data>
   <data name="dtStartTimePicker.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 22</value>
@@ -160,7 +160,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblStart.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 36</value>
+    <value>27, 32</value>
   </data>
   <data name="lblStart.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 19</value>
@@ -196,7 +196,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="dtStartDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 31</value>
+    <value>77, 27</value>
   </data>
   <data name="dtStartDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 22</value>
@@ -226,7 +226,7 @@
     <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
   </data>
   <data name="lblSubmittingInformation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 108</value>
+    <value>7, 105</value>
   </data>
   <data name="lblSubmittingInformation.Size" type="System.Drawing.Size, System.Drawing">
     <value>260, 16</value>
@@ -256,13 +256,13 @@
     <value>None</value>
   </data>
   <data name="btnCancel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>140, 133</value>
+    <value>142, 125</value>
   </data>
   <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 39</value>
+    <value>119, 29</value>
   </data>
   <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
     <value>80</value>
@@ -286,13 +286,13 @@
     <value>None</value>
   </data>
   <data name="btnSubmit.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="btnSubmit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 133</value>
+    <value>16, 125</value>
   </data>
   <data name="btnSubmit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 39</value>
+    <value>119, 29</value>
   </data>
   <data name="btnSubmit.TabIndex" type="System.Int32, mscorlib">
     <value>79</value>
@@ -322,7 +322,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="rbtnValidUnlimited.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 80</value>
+    <value>16, 76</value>
   </data>
   <data name="rbtnValidUnlimited.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 20</value>
@@ -355,7 +355,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="rbtnValidUntil.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 57</value>
+    <value>16, 53</value>
   </data>
   <data name="rbtnValidUntil.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 20</value>
@@ -388,7 +388,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="rbtnValidToday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 34</value>
+    <value>16, 30</value>
   </data>
   <data name="rbtnValidToday.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 20</value>
@@ -421,7 +421,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="dtTimePicker.Location" type="System.Drawing.Point, System.Drawing">
-    <value>161, 55</value>
+    <value>163, 51</value>
   </data>
   <data name="dtTimePicker.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 22</value>
@@ -451,7 +451,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="dtDatePicker.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 55</value>
+    <value>77, 51</value>
   </data>
   <data name="dtDatePicker.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 22</value>
@@ -471,14 +471,17 @@
   <data name="&gt;&gt;dtDatePicker.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <data name="groupBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="groupBox1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+    <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 12</value>
+    <value>0, 0</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 188</value>
+    <value>275, 166</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>60</value>
@@ -505,7 +508,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>296, 212</value>
+    <value>275, 166</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
