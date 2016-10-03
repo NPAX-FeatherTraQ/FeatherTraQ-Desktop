@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="grpInformation.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="label6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -147,6 +153,9 @@
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="chkBoxChangeCamera.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="chkBoxChangeCamera.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -180,6 +189,9 @@
   <data name="&gt;&gt;chkBoxChangeCamera.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="comVideoDeviceBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="comVideoDeviceBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -210,6 +222,9 @@
   <data name="&gt;&gt;comVideoDeviceBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="lblNoCameraAvailable.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="lblNoCameraAvailable.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -246,6 +261,9 @@
   <data name="&gt;&gt;lblNoCameraAvailable.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="cameraBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="cameraBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -273,6 +291,9 @@
   <data name="&gt;&gt;cameraBox.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <metadata name="btnCapturePhoto.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnCapturePhoto.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -303,6 +324,9 @@
   <data name="&gt;&gt;btnCapturePhoto.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <metadata name="lblSubmittingInformation.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="lblSubmittingInformation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -339,6 +363,9 @@
   <data name="&gt;&gt;lblSubmittingInformation.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <metadata name="btnCancel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -369,6 +396,9 @@
   <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <metadata name="lblValidIDPhoto.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="lblValidIDPhoto.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -405,6 +435,9 @@
   <data name="&gt;&gt;lblValidIDPhoto.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <metadata name="lblPersonPhoto.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="lblPersonPhoto.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -441,6 +474,9 @@
   <data name="&gt;&gt;lblPersonPhoto.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <metadata name="btnSubmit.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnSubmit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -471,6 +507,9 @@
   <data name="&gt;&gt;btnSubmit.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <metadata name="txtExplanationNotes.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="txtExplanationNotes.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -504,6 +543,9 @@
   <data name="&gt;&gt;txtExplanationNotes.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
+  <metadata name="lblNotes.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="lblNotes.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -537,6 +579,9 @@
   <data name="&gt;&gt;lblNotes.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
+  <metadata name="imgCapture1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="imgCapture1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -567,6 +612,9 @@
   <data name="&gt;&gt;imgCapture1.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
+  <metadata name="imgCapture2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="imgCapture2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -597,6 +645,9 @@
   <data name="&gt;&gt;imgCapture2.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
+  <metadata name="label8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="label8.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -636,6 +687,9 @@
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
+  <metadata name="txtSaveImageDir.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="txtSaveImageDir.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -672,6 +726,9 @@
   <data name="&gt;&gt;txtSaveImageDir.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
+  <metadata name="btnBrowseImagePath.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnBrowseImagePath.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -705,6 +762,9 @@
   <data name="&gt;&gt;btnBrowseImagePath.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
+  <metadata name="txtCapturedImagePath.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="txtCapturedImagePath.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -772,6 +832,9 @@
     <value>17, 17</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

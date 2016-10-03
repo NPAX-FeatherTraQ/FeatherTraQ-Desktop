@@ -692,12 +692,12 @@ namespace RFID_FEATHER_ASSETS
                         MessageBox.Show(rm.GetString("userSave"), this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     ClearFields();
-                    if (language == "English") btnCancel.Text = "Back";
-                    else
-                    {
-                        ResourceManager rm = new ResourceManager("RFID_FEATHER_ASSETS.Languages.UserRegistration", Assembly.GetExecutingAssembly());
-                        btnCancel.Text = rm.GetString("btnCancel");
-                    }
+                    //if (language == "English") btnCancel.Text = "Back";
+                    //else
+                    //{
+                    //    ResourceManager rm = new ResourceManager("RFID_FEATHER_ASSETS.Languages.UserRegistration", Assembly.GetExecutingAssembly());
+                    //    btnCancel.Text = rm.GetString("btnCancel");
+                    //}
                     //this.Hide();
                     //MainMenu MenuForm = new MainMenu(tokenvalue, string.Empty);
                     //MenuForm.ShowDialog();
@@ -805,11 +805,11 @@ namespace RFID_FEATHER_ASSETS
         {
             ResourceManager rm = new ResourceManager("RFID_FEATHER_ASSETS.Languages.UserRegistration", Assembly.GetExecutingAssembly());
             Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ja-JP");
-            if (btnCancel.Text.ToLower() == "back" || btnCancel.Text == rm.GetString("btnCancel"))
-            {
-                CallMainMenu();
-                return;
-            }
+            //if (btnCancel.Text.ToLower() == "back" || btnCancel.Text == rm.GetString("btnCancel"))
+            //{
+            //    CallMainMenu();
+            //    return;
+            //}
             //else
             //{
             //    if (btnSubmit.Text.ToLower() == "update")
@@ -903,7 +903,7 @@ namespace RFID_FEATHER_ASSETS
             AssetValidUntilDateTime();
             //dtStartDate.Enabled = true;
 
-            btnSubmit.Width = 282;
+            //btnSubmit.Width = 265;
             if (language == "English")
             {
                 CaptureImg.Text = "Capture Owner Photo";
@@ -950,11 +950,11 @@ namespace RFID_FEATHER_ASSETS
 
                 transactDet.companyId = companyId;//1;
                 transactDet.validityPeriod = validUntil == null ? "Start " + startDate.Value.ToString("g") + " - No End Date" : "Start " + startDate.Value.ToString("g") + " Until " + validUntil.Value.ToString("g");
-                transactDet.ownerName = txtlastName.Text + " " + txtfirstName.Text;
+                transactDet.ownerName = txtlastName.Text + ", " + txtfirstName.Text;
                 transactDet.position = txtposition.Text;
                 transactDet.email = txtemail.Text;
                 transactDet.userType = cmbauthorities.SelectedValue.ToString();//cmbauthorities.Text;
-                transactDet.description = "ID_CARD";
+                transactDet.description = transactDet.ownerName + "-" + "ID_CARD";
                 transactDet.takeOutNote = txtlastName.Text + " Only";
                 transactDet.ownerImageUrl = newImgFileNames;
                 //transactDet.assetImageUrl = newImgFileNames;
@@ -1192,7 +1192,7 @@ namespace RFID_FEATHER_ASSETS
                 JsonDeserializer deserial = new JsonDeserializer();
                 GlobalClass.GetSetClass assetInfo = deserial.Deserialize<GlobalClass.GetSetClass>(response);
 
-                if (assetInfo.description != "ID_CARD")
+                if (!assetInfo.description.Contains("ID_CARD"))
                 {
                     MessageBox.Show("Scanned RFID Tag is Asset. Please scan the ID Tag.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     ClearFields();
@@ -1650,8 +1650,8 @@ namespace RFID_FEATHER_ASSETS
                         txtfirstName.Focus();//txtAssetName.Focus();
                         if (language == "English")
                         {
-                            btnCancel.Text = "Cancel";
-                            btnSubmit.Width = 136;
+                            //btnCancel.Text = "Cancel";
+                            //btnSubmit.Width = 136;
                         }
                         else btnCancel.Text = "キャンセル";
                         if (btnEditInfoWasClicked)

@@ -321,7 +321,7 @@ namespace RFID_FEATHER_ASSETS
 
                                         row.Cells["colDate"].Value = DateTime.Now.ToString();
                                         row.Cells["colViewerIcon"].ToolTipText = "Double click to view the details.";
-                                        row.Cells["colViewerIcon"].Value = Properties.Resources.ViewDetailsIcon;
+                                        row.Cells["colViewerIcon"].Value = Properties.Resources.viewdetailsicon;
                                         row.Cells["colAssetID"].Value = verifyResult.assetId;
                                         row.Cells["colAssetDescription"].Value = verifyResult.description;
                                         //row.Cells["colTakeOutNote"].Value = verifyResult.takeOutInfo;
@@ -329,7 +329,7 @@ namespace RFID_FEATHER_ASSETS
 
                                         //getownerInfo(verifyResult.ownerUserId);
 
-                                        if (verifyResult.description == "ID_CARD")
+                                        if (verifyResult.description.Contains("ID_CARD"))
                                         {
                                             //row.Cells["colIDTag"].Value = txtRFIDTag.Text;
                                             //row.Cells["colIDOwner"].Value = verifyResult.ownerUserId;
@@ -602,7 +602,7 @@ namespace RFID_FEATHER_ASSETS
             int idx = grdViewRFIDTag.Rows.Add();
             DataGridViewRow row = grdViewRFIDTag.Rows[idx];
 
-            if (description == "ID_CARD")
+            if (description.Contains("ID_CARD"))
             {
                 //row.Cells["colIDTag"].Value = txtRFIDTag.Text;
                 row.Cells["colIDOwner"].Value = ownerUserId;
@@ -1575,14 +1575,14 @@ namespace RFID_FEATHER_ASSETS
                     DialogResult result;
                     if (language == "English")
                     {
-                        //if (txtDescription.Text.Trim() == "ID_CARD")
+                        //if (txtDescription.Text.Trim().Contains("ID_CARD"))
                             result = MessageBox.Show("ID is already expired." + "\n" + "Do you want to renew the ID?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Error, MessageBoxDefaultButton.Button2);
                         //else
                         //    result = MessageBox.Show("Asset is already expired." + "\n" + "Do you want to renew the Asset?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Error, MessageBoxDefaultButton.Button2);
                     }
                     else
                     {
-                        //if (txtDescription.Text.Trim() == "ID_CARD")
+                        //if (txtDescription.Text.Trim().Contains("ID_CARD"))
                         //    result = MessageBox.Show("ID is already expired." + "\n" + "Do you want to renew the ID?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Error, MessageBoxDefaultButton.Button2);
                         //else
                             result = MessageBox.Show("アセットはすでに有効期限が切れています." + "\n" + "あなたは資産を更新したいですか？", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Error, MessageBoxDefaultButton.Button2);
@@ -1691,7 +1691,7 @@ namespace RFID_FEATHER_ASSETS
                                         //}));
                                     }
 
-                                    if (urls != null && assetInfo.description != "ID_CARD")
+                                    if (urls != null && !assetInfo.description.Contains("ID_CARD"))
                                     {
                                         string[] ReadUrls = urls.Split(',');
                                         //this.Invoke(new MethodInvoker(delegate
@@ -1721,7 +1721,7 @@ namespace RFID_FEATHER_ASSETS
                                     txtDescription.Text = assetInfo.description;
                                     //assetName = assetInfo.name;
 
-                                    //if (assetInfo.description == "ID_CARD")
+                                    //if (assetInfo.description.Contains("ID_CARD"))
                                     //    txtDescription.ReadOnly = true;
                                     //else txtDescription.ReadOnly = false;
 

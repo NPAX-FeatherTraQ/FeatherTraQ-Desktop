@@ -278,7 +278,6 @@
             // 
             this.grpAssetInfo.Controls.Add(this.lblLoadingInformation);
             this.grpAssetInfo.Controls.Add(this.lblSubmittingInformation);
-            this.grpAssetInfo.Controls.Add(this.btnSubmit);
             this.grpAssetInfo.Controls.Add(this.btnReadIDTag);
             this.grpAssetInfo.Controls.Add(this.lblOwnerName);
             this.grpAssetInfo.Controls.Add(this.btnGetAssetInfo);
@@ -286,7 +285,6 @@
             this.grpAssetInfo.Controls.Add(this.comboOwner);
             this.grpAssetInfo.Controls.Add(this.lblDesc);
             this.grpAssetInfo.Controls.Add(this.btnGetRFIDTag);
-            this.grpAssetInfo.Controls.Add(this.btnCancel);
             this.grpAssetInfo.Controls.Add(this.txtDescription);
             this.grpAssetInfo.Controls.Add(this.txtTakeOutNote);
             this.grpAssetInfo.Controls.Add(this.lblMemo);
@@ -295,6 +293,8 @@
             this.grpAssetInfo.Controls.Add(this.txtRFIDTag);
             this.grpAssetInfo.Controls.Add(this.lblTag);
             this.grpAssetInfo.Controls.Add(this.txtOwnerName);
+            this.grpAssetInfo.Controls.Add(this.btnSubmit);
+            this.grpAssetInfo.Controls.Add(this.btnCancel);
             resources.ApplyResources(this.grpAssetInfo, "grpAssetInfo");
             this.grpAssetInfo.Name = "grpAssetInfo";
             this.grpAssetInfo.TabStop = false;

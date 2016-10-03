@@ -102,7 +102,7 @@
             // lblSigningIn
             // 
             resources.ApplyResources(this.lblSigningIn, "lblSigningIn");
-            this.lblSigningIn.ForeColor = System.Drawing.Color.Black;
+            this.lblSigningIn.ForeColor = System.Drawing.Color.OrangeRed;
             this.lblSigningIn.Name = "lblSigningIn";
             // 
             // lblLanguage
@@ -158,13 +158,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ControlBox = false;
+            this.Controls.Add(this.lblSigningIn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblLocation);
             this.Controls.Add(this.cmbLocation);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.selectLanguage);
             this.Controls.Add(this.lblLanguage);
-            this.Controls.Add(this.lblSigningIn);
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.lblUserPasswordRequired);
             this.Controls.Add(this.btnLogin);

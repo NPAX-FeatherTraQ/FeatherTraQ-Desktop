@@ -35,7 +35,7 @@ namespace RFID_FEATHER_ASSETS
             //locationTxt.Text = location;
             languageHandler();
             //tabControl1.SelectedIndex = 1;
-            picboxLogo.BringToFront();
+            picboxLogo.BringToFront(); 
         }
 
         private void getSystemInfo()
@@ -466,7 +466,11 @@ namespace RFID_FEATHER_ASSETS
                     {
                         logoutCloseCameraReader();//closeCameraAndReader();
                         this.tabCtrlMainMenu.TabPages.Remove(this.tabCtrlMainMenu.SelectedTab);
-                        if (tabCtrlMainMenu.TabCount == 0) picboxLogo.BringToFront();
+                        if (tabCtrlMainMenu.TabCount == 0)
+                        {
+                            picboxLogo.BringToFront();
+                            isTabExist = false;
+                        }
                     }
                 }
             }

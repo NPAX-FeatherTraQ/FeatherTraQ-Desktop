@@ -63,9 +63,9 @@ namespace RFID_FEATHER_ASSETS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap CloseButton {
+        internal static System.Drawing.Bitmap closebutton {
             get {
-                object obj = ResourceManager.GetObject("CloseButton", resourceCulture);
+                object obj = ResourceManager.GetObject("closebutton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -200,9 +200,9 @@ namespace RFID_FEATHER_ASSETS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ViewDetailsIcon {
+        internal static System.Drawing.Bitmap viewdetailsicon {
             get {
-                object obj = ResourceManager.GetObject("ViewDetailsIcon", resourceCulture);
+                object obj = ResourceManager.GetObject("viewdetailsicon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

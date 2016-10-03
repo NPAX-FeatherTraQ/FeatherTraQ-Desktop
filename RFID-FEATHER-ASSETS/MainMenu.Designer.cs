@@ -57,24 +57,24 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.menuStrip6 = new System.Windows.Forms.MenuStrip();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.menuStrip3 = new System.Windows.Forms.MenuStrip();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.menuStrip4 = new System.Windows.Forms.MenuStrip();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.menuStrip5 = new System.Windows.Forms.MenuStrip();
-            this.tabCtrlMainMenu = new System.Windows.Forms.TabControl();
-            this.picboxLogo = new System.Windows.Forms.PictureBox();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.registerOwnerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.registerAssetToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.menuStrip3 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.menuStrip4 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.menuStrip5 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabCtrlMainMenu = new System.Windows.Forms.TabControl();
+            this.picboxLogo = new System.Windows.Forms.PictureBox();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -316,19 +316,20 @@
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.ItemSize = new System.Drawing.Size(48, 20);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(621, 86);
+            this.tabControl1.Size = new System.Drawing.Size(621, 92);
             this.tabControl1.TabIndex = 50;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.menuStrip6);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(613, 57);
+            this.tabPage1.Size = new System.Drawing.Size(613, 64);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "File";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -336,23 +337,43 @@
             // menuStrip6
             // 
             this.menuStrip6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.menuStrip6.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.menuStrip6.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.menuStrip6.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem6,
             this.toolStripMenuItem7});
             this.menuStrip6.Location = new System.Drawing.Point(3, 3);
             this.menuStrip6.Name = "menuStrip6";
-            this.menuStrip6.Size = new System.Drawing.Size(607, 51);
+            this.menuStrip6.Size = new System.Drawing.Size(607, 58);
             this.menuStrip6.TabIndex = 2;
             this.menuStrip6.Text = "menuStrip6";
+            // 
+            // toolStripMenuItem6
+            // 
+            this.toolStripMenuItem6.Image = global::RFID_FEATHER_ASSETS.Properties.Resources.signout;
+            this.toolStripMenuItem6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(57, 54);
+            this.toolStripMenuItem6.Text = "Logout";
+            this.toolStripMenuItem6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripMenuItem6.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem7
+            // 
+            this.toolStripMenuItem7.Image = global::RFID_FEATHER_ASSETS.Properties.Resources.exit;
+            this.toolStripMenuItem7.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(47, 54);
+            this.toolStripMenuItem7.Text = "Exit";
+            this.toolStripMenuItem7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripMenuItem7.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.menuStrip2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(613, 57);
+            this.tabPage2.Size = new System.Drawing.Size(613, 64);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Registration";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -360,23 +381,43 @@
             // menuStrip2
             // 
             this.menuStrip2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.menuStrip2.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.menuStrip2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registerOwnerToolStripMenuItem1,
             this.registerAssetToolStripMenuItem1});
             this.menuStrip2.Location = new System.Drawing.Point(3, 3);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(607, 51);
+            this.menuStrip2.Size = new System.Drawing.Size(607, 58);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
+            // 
+            // registerOwnerToolStripMenuItem1
+            // 
+            this.registerOwnerToolStripMenuItem1.Image = global::RFID_FEATHER_ASSETS.Properties.Resources.register_owner;
+            this.registerOwnerToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.registerOwnerToolStripMenuItem1.Name = "registerOwnerToolStripMenuItem1";
+            this.registerOwnerToolStripMenuItem1.Size = new System.Drawing.Size(99, 54);
+            this.registerOwnerToolStripMenuItem1.Text = "Register Owner";
+            this.registerOwnerToolStripMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.registerOwnerToolStripMenuItem1.Click += new System.EventHandler(this.registerOwnerToolStripMenuItem_Click);
+            // 
+            // registerAssetToolStripMenuItem1
+            // 
+            this.registerAssetToolStripMenuItem1.Image = global::RFID_FEATHER_ASSETS.Properties.Resources.register_asset;
+            this.registerAssetToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.registerAssetToolStripMenuItem1.Name = "registerAssetToolStripMenuItem1";
+            this.registerAssetToolStripMenuItem1.Size = new System.Drawing.Size(92, 54);
+            this.registerAssetToolStripMenuItem1.Text = "Register Asset";
+            this.registerAssetToolStripMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.registerAssetToolStripMenuItem1.Click += new System.EventHandler(this.registerAssetToolStripMenuItem_Click);
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.menuStrip3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(613, 57);
+            this.tabPage3.Size = new System.Drawing.Size(613, 64);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Verification";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -384,23 +425,43 @@
             // menuStrip3
             // 
             this.menuStrip3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.menuStrip3.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.menuStrip3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem2,
             this.toolStripMenuItem3});
             this.menuStrip3.Location = new System.Drawing.Point(3, 3);
             this.menuStrip3.Name = "menuStrip3";
-            this.menuStrip3.Size = new System.Drawing.Size(607, 51);
+            this.menuStrip3.Size = new System.Drawing.Size(607, 58);
             this.menuStrip3.TabIndex = 1;
             this.menuStrip3.Text = "menuStrip3";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Image = global::RFID_FEATHER_ASSETS.Properties.Resources.verify_asset;
+            this.toolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(85, 54);
+            this.toolStripMenuItem2.Text = "Verify Assets";
+            this.toolStripMenuItem2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.verifyAssetToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Image = global::RFID_FEATHER_ASSETS.Properties.Resources.track_asset;
+            this.toolStripMenuItem3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(84, 54);
+            this.toolStripMenuItem3.Text = "Track Assets";
+            this.toolStripMenuItem3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.trackAssetsToolStripMenuItem_Click);
             // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.menuStrip4);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Location = new System.Drawing.Point(4, 24);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(613, 57);
+            this.tabPage4.Size = new System.Drawing.Size(613, 64);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Reports";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -408,22 +469,32 @@
             // menuStrip4
             // 
             this.menuStrip4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.menuStrip4.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.menuStrip4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.menuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem4});
             this.menuStrip4.Location = new System.Drawing.Point(3, 3);
             this.menuStrip4.Name = "menuStrip4";
-            this.menuStrip4.Size = new System.Drawing.Size(607, 51);
+            this.menuStrip4.Size = new System.Drawing.Size(607, 58);
             this.menuStrip4.TabIndex = 2;
             this.menuStrip4.Text = "menuStrip4";
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Image = global::RFID_FEATHER_ASSETS.Properties.Resources.transaction_history;
+            this.toolStripMenuItem4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(122, 54);
+            this.toolStripMenuItem4.Text = "Transaction History";
+            this.toolStripMenuItem4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripMenuItem4.Click += new System.EventHandler(this.transactionHistoryToolStripMenuItem_Click);
             // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.menuStrip5);
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Location = new System.Drawing.Point(4, 24);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(613, 57);
+            this.tabPage5.Size = new System.Drawing.Size(613, 64);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Maintenance";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -431,26 +502,36 @@
             // menuStrip5
             // 
             this.menuStrip5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.menuStrip5.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.menuStrip5.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.menuStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem5});
             this.menuStrip5.Location = new System.Drawing.Point(3, 3);
             this.menuStrip5.Name = "menuStrip5";
-            this.menuStrip5.Size = new System.Drawing.Size(607, 51);
+            this.menuStrip5.Size = new System.Drawing.Size(607, 58);
             this.menuStrip5.TabIndex = 3;
             this.menuStrip5.Text = "menuStrip5";
             this.menuStrip5.Click += new System.EventHandler(this.serialPortToolStripMenuItem_Click);
             // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Image = global::RFID_FEATHER_ASSETS.Properties.Resources.serial_port;
+            this.toolStripMenuItem5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(72, 54);
+            this.toolStripMenuItem5.Text = "Serial Port";
+            this.toolStripMenuItem5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
             // tabCtrlMainMenu
             // 
             this.tabCtrlMainMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabCtrlMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabCtrlMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabCtrlMainMenu.ImageList = this.imagebtnClose;
-            this.tabCtrlMainMenu.Location = new System.Drawing.Point(0, 86);
+            this.tabCtrlMainMenu.Location = new System.Drawing.Point(0, 92);
             this.tabCtrlMainMenu.Name = "tabCtrlMainMenu";
             this.tabCtrlMainMenu.SelectedIndex = 0;
-            this.tabCtrlMainMenu.Size = new System.Drawing.Size(621, 345);
+            this.tabCtrlMainMenu.Size = new System.Drawing.Size(621, 339);
             this.tabCtrlMainMenu.TabIndex = 58;
+            this.tabCtrlMainMenu.SelectedIndexChanged += new System.EventHandler(this.tabCtrlMainMenu_SelectedIndexChanged);
             this.tabCtrlMainMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabCtrlMainMenu_MouseDown);
             // 
             // picboxLogo
@@ -459,91 +540,12 @@
             this.picboxLogo.BackColor = System.Drawing.Color.White;
             this.picboxLogo.Image = global::RFID_FEATHER_ASSETS.Properties.Resources.logo_big;
             this.picboxLogo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.picboxLogo.Location = new System.Drawing.Point(317, 128);
+            this.picboxLogo.Location = new System.Drawing.Point(312, 123);
             this.picboxLogo.Name = "picboxLogo";
             this.picboxLogo.Size = new System.Drawing.Size(300, 300);
             this.picboxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picboxLogo.TabIndex = 60;
             this.picboxLogo.TabStop = false;
-            // 
-            // toolStripMenuItem6
-            // 
-            this.toolStripMenuItem6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem6.Image")));
-            this.toolStripMenuItem6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(56, 47);
-            this.toolStripMenuItem6.Text = "Logout";
-            this.toolStripMenuItem6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripMenuItem6.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem7
-            // 
-            this.toolStripMenuItem7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem7.Image")));
-            this.toolStripMenuItem7.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(42, 47);
-            this.toolStripMenuItem7.Text = "Exit";
-            this.toolStripMenuItem7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripMenuItem7.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // registerOwnerToolStripMenuItem1
-            // 
-            this.registerOwnerToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("registerOwnerToolStripMenuItem1.Image")));
-            this.registerOwnerToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.registerOwnerToolStripMenuItem1.Name = "registerOwnerToolStripMenuItem1";
-            this.registerOwnerToolStripMenuItem1.Size = new System.Drawing.Size(99, 47);
-            this.registerOwnerToolStripMenuItem1.Text = "Register Owner";
-            this.registerOwnerToolStripMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.registerOwnerToolStripMenuItem1.Click += new System.EventHandler(this.registerOwnerToolStripMenuItem_Click);
-            // 
-            // registerAssetToolStripMenuItem1
-            // 
-            this.registerAssetToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("registerAssetToolStripMenuItem1.Image")));
-            this.registerAssetToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.registerAssetToolStripMenuItem1.Name = "registerAssetToolStripMenuItem1";
-            this.registerAssetToolStripMenuItem1.Size = new System.Drawing.Size(91, 47);
-            this.registerAssetToolStripMenuItem1.Text = "Register Asset";
-            this.registerAssetToolStripMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.registerAssetToolStripMenuItem1.Click += new System.EventHandler(this.registerAssetToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem2.Image")));
-            this.toolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(83, 47);
-            this.toolStripMenuItem2.Text = "Verify Assets";
-            this.toolStripMenuItem2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.verifyAssetToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem3.Image")));
-            this.toolStripMenuItem3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(80, 47);
-            this.toolStripMenuItem3.Text = "Track Assets";
-            this.toolStripMenuItem3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.trackAssetsToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem4
-            // 
-            this.toolStripMenuItem4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem4.Image")));
-            this.toolStripMenuItem4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(117, 47);
-            this.toolStripMenuItem4.Text = "Transaction History";
-            this.toolStripMenuItem4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripMenuItem4.Click += new System.EventHandler(this.transactionHistoryToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem5
-            // 
-            this.toolStripMenuItem5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem5.Image")));
-            this.toolStripMenuItem5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(71, 47);
-            this.toolStripMenuItem5.Text = "Serial Port";
-            this.toolStripMenuItem5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // MainMenu
             // 
@@ -564,6 +566,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainMenu";

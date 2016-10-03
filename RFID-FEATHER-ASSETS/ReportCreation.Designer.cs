@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportCreation));
             this.grpInformation = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.chkBoxChangeCamera = new System.Windows.Forms.CheckBox();
             this.comVideoDeviceBox = new System.Windows.Forms.ComboBox();
             this.lblNoCameraAvailable = new System.Windows.Forms.Label();
@@ -49,7 +50,6 @@
             this.btnBrowseImagePath = new System.Windows.Forms.Button();
             this.txtCapturedImagePath = new System.Windows.Forms.TextBox();
             this.imagePathDialog = new System.Windows.Forms.FolderBrowserDialog();
-            this.label6 = new System.Windows.Forms.Label();
             this.grpInformation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cameraBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCapture1)).BeginInit();
@@ -80,6 +80,13 @@
             resources.ApplyResources(this.grpInformation, "grpInformation");
             this.grpInformation.Name = "grpInformation";
             this.grpInformation.TabStop = false;
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.BackColor = System.Drawing.Color.Orange;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label6.Name = "label6";
             // 
             // chkBoxChangeCamera
             // 
@@ -199,13 +206,6 @@
             // 
             resources.ApplyResources(this.txtCapturedImagePath, "txtCapturedImagePath");
             this.txtCapturedImagePath.Name = "txtCapturedImagePath";
-            // 
-            // label6
-            // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.BackColor = System.Drawing.Color.Orange;
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Name = "label6";
             // 
             // ReportCreation
             // 

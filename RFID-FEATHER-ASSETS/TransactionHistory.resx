@@ -117,19 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="grpSearchCriteria.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="cmbAssetList.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="cmbAssetList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 65</value>
+    <value>80, 42</value>
   </data>
   <data name="cmbAssetList.Size" type="System.Drawing.Size, System.Drawing">
     <value>247, 24</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="cmbAssetList.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;cmbAssetList.Name" xml:space="preserve">
     <value>cmbAssetList</value>
@@ -147,13 +151,13 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="cmbOwnerList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 42</value>
+    <value>80, 66</value>
   </data>
   <data name="cmbOwnerList.Size" type="System.Drawing.Size, System.Drawing">
     <value>247, 24</value>
   </data>
   <data name="cmbOwnerList.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;cmbOwnerList.Name" xml:space="preserve">
     <value>cmbOwnerList</value>
@@ -173,7 +177,6 @@
   <data name="lblDateFrom.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lblDateFrom.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -331,7 +334,7 @@
     <value>NoControl</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 50</value>
+    <value>6, 74</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 16</value>
@@ -364,7 +367,7 @@
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 73</value>
+    <value>6, 50</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 16</value>
@@ -454,7 +457,7 @@
     <value>0, 0</value>
   </data>
   <data name="grpSearchCriteria.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1281, 90</value>
+    <value>1281, 94</value>
   </data>
   <data name="grpSearchCriteria.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -476,6 +479,57 @@
   </data>
   <data name="grpDetails.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;lblLoadingInformation.Name" xml:space="preserve">
+    <value>lblLoadingInformation</value>
+  </data>
+  <data name="&gt;&gt;lblLoadingInformation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblLoadingInformation.Parent" xml:space="preserve">
+    <value>grpDetails</value>
+  </data>
+  <data name="&gt;&gt;lblLoadingInformation.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;grdViewTransactions.Name" xml:space="preserve">
+    <value>grdViewTransactions</value>
+  </data>
+  <data name="&gt;&gt;grdViewTransactions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grdViewTransactions.Parent" xml:space="preserve">
+    <value>grpDetails</value>
+  </data>
+  <data name="&gt;&gt;grdViewTransactions.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="grpDetails.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="grpDetails.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 96</value>
+  </data>
+  <data name="grpDetails.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1281, 405</value>
+  </data>
+  <data name="grpDetails.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="grpDetails.Text" xml:space="preserve">
+    <value>Transaction Details</value>
+  </data>
+  <data name="&gt;&gt;grpDetails.Name" xml:space="preserve">
+    <value>grpDetails</value>
+  </data>
+  <data name="&gt;&gt;grpDetails.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpDetails.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grpDetails.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="lblLoadingInformation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -715,33 +769,6 @@
     <value>grpDetails</value>
   </data>
   <data name="&gt;&gt;grdViewTransactions.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="grpDetails.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
-  </data>
-  <data name="grpDetails.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 96</value>
-  </data>
-  <data name="grpDetails.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1281, 405</value>
-  </data>
-  <data name="grpDetails.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="grpDetails.Text" xml:space="preserve">
-    <value>Transaction Details</value>
-  </data>
-  <data name="&gt;&gt;grpDetails.Name" xml:space="preserve">
-    <value>grpDetails</value>
-  </data>
-  <data name="&gt;&gt;grpDetails.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grpDetails.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;grpDetails.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

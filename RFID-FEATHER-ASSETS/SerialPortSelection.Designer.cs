@@ -117,7 +117,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "SerialPortSelection";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "COM Port Error";
+            this.Text = "COM Port Settings";
             this.ResumeLayout(false);
             this.PerformLayout();
 

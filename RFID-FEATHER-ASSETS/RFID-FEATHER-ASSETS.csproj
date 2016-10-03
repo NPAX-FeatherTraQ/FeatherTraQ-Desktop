@@ -14,6 +14,21 @@
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -35,6 +50,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AForge">
@@ -102,6 +121,12 @@
     </Compile>
     <Compile Include="AssetRenewal.Designer.cs">
       <DependentUpon>AssetRenewal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetTracking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssetTracking.designer.cs">
+      <DependentUpon>AssetTracking.cs</DependentUpon>
     </Compile>
     <Compile Include="CCommondMethod.cs" />
     <Compile Include="Assets.cs">
@@ -186,6 +211,9 @@
     <EmbeddedResource Include="Assets.resx">
       <DependentUpon>Assets.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AssetTracking.resx">
+      <DependentUpon>AssetTracking.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Languages\AssetRegistration.ja-JP.resx" />
     <EmbeddedResource Include="Languages\AssetRenewal.ja-JP.resx" />
     <EmbeddedResource Include="Languages\AssetVerification.ja-JP.resx" />
@@ -239,12 +267,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\circle-loader-black.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\circle-loader-small.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Expired.wav" />
   </ItemGroup>
   <ItemGroup>
@@ -254,10 +276,50 @@
     <None Include="Resources\Ok.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ViewDetailsIcon.png" />
+    <None Include="Resources\viewdetailsicon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\CloseButton.png" />
+    <None Include="Resources\closebutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_old1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_big.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\serial_port.png" />
+    <None Include="Resources\transaction_history.png" />
+    <None Include="Resources\track_asset.png" />
+    <None Include="Resources\verify_asset.png" />
+    <None Include="Resources\register_asset.png" />
+    <None Include="Resources\register_owner.png" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\signout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\register_owner_big.png" />
+    <None Include="Resources\logo_old2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

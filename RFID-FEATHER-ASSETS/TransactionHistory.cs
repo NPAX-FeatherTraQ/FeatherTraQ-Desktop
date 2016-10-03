@@ -34,8 +34,11 @@ namespace RFID_FEATHER_ASSETS
         int updateId;
         int registerUserId;*/
         string name;
-        int searchUserId;
+        int searchOwnerId;
         int searchAssetId;
+        bool isUserLoadingList = true;
+        bool isOwnerChanged = false;
+        bool isAssetChanged = false;
         
         public TransactionHistory()
         {
@@ -44,6 +47,15 @@ namespace RFID_FEATHER_ASSETS
             languageHandler();
             GetAssetSystemInfo();
             ownerList();
+            assetList(0);
+        }
+
+        private void clearOwnerAssetComboText()
+        {
+            cmbOwnerList.Text = string.Empty;
+            searchOwnerId = 0;
+            cmbAssetList.Text = string.Empty;
+            searchAssetId = 0;
         }
 
         private void ownerList()
@@ -51,7 +63,8 @@ namespace RFID_FEATHER_ASSETS
             try
             {
                 RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");
-                RestRequest listUser = new RestRequest("/api/user/list/" /*+ companyId */, Method.GET);
+                //RestRequest listUser = new RestRequest("/api/user/list/" /*+ companyId */, Method.GET);
+                RestRequest listUser = new RestRequest("/api/company/" + companyId + "/users/list", Method.GET);
 
                 listUser.RequestFormat = DataFormat.Json;
                 listUser.AddHeader("Content-Type", "application/json; charset=utf-8");
@@ -59,23 +72,28 @@ namespace RFID_FEATHER_ASSETS
 
                 var response = client.Execute<List<GlobalClass.GetSetClass>>(listUser);
                 var content = response.Content;
-
-                if (response.StatusCode == HttpStatusCode.OK)
-                {
-                    JsonDeserializer deserial = new JsonDeserializer();
-                    List<GlobalClass.GetSetClass> generateUsers = deserial.Deserialize<List<GlobalClass.GetSetClass>>(response);
-
-                    List<OwnerList> userList = new List<OwnerList>();
-
-                    for (int i = 0; i < generateUsers.Count; i++)
+                //client.ExecuteAsync<List<GlobalClass.GetSetClass>>(listUser, response =>
+                //{
+                    if (response.StatusCode == HttpStatusCode.OK)
                     {
-                        userList.Add(new OwnerList() { userId = generateUsers[i].userId, name = generateUsers[i].lastName + ", " + generateUsers[i].firstName });
-                    }
+                        JsonDeserializer deserial = new JsonDeserializer();
+                        List<GlobalClass.GetSetClass> generateUsers = deserial.Deserialize<List<GlobalClass.GetSetClass>>(response);
+                        //this.cmbOwnerList.Invoke(new MethodInvoker(delegate
+                        //{
+                            //isOwnerChanged = false;
 
-                    this.cmbOwnerList.DataSource = userList;
-                    this.cmbOwnerList.ValueMember = "userId";
-                    this.cmbOwnerList.DisplayMember = "name";
-                }
+                            List<OwnerList> userList = new List<OwnerList>();
+                            for (int i = 0; i < generateUsers.Count; i++)
+                            {
+                                userList.Add(new OwnerList() { userId = generateUsers[i].userId, name = generateUsers[i].lastName + ", " + generateUsers[i].firstName });
+                            }
+                        
+                            this.cmbOwnerList.DataSource = userList;
+                            this.cmbOwnerList.ValueMember = "userId";
+                            this.cmbOwnerList.DisplayMember = "name";
+                        //}));
+                    }
+                //});
             }
             catch (Exception ex)
             {
@@ -158,9 +176,7 @@ namespace RFID_FEATHER_ASSETS
         private void getOwnerInfo(int id)
         {
             try
-            {
-                //var company = 1;             
-
+            {      
                 //initialize Rest Client
                 RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");
                 RestRequest ownerInfo = new RestRequest("/api/user/" + id , Method.GET);
@@ -184,8 +200,7 @@ namespace RFID_FEATHER_ASSETS
                         JsonDeserializer deserial = new JsonDeserializer();
                         GlobalClass.GetSetClass info = deserial.Deserialize<GlobalClass.GetSetClass>(response);
 
-                        name = info.firstName + " " + info.lastName;
-
+                        name = info.lastName + ", " + info.firstName;
                     }
                     else
                     {
@@ -209,6 +224,18 @@ namespace RFID_FEATHER_ASSETS
         {
             try
             {
+                if (searchOwnerId == 0 || string.IsNullOrEmpty(cmbOwnerList.Text))
+                {
+                    searchOwnerId = 0;
+                    cmbOwnerList.Text = string.Empty;
+                }
+
+                if (searchAssetId == 0 || string.IsNullOrEmpty(cmbAssetList.Text))
+                {
+                    searchAssetId = 0;
+                    cmbAssetList.Text = string.Empty;
+                }
+
                 //btnGenerate.Enabled = false;
                 grdViewTransactions.Visible = false;
                 grdViewTransactions.Rows.Clear();
@@ -224,8 +251,8 @@ namespace RFID_FEATHER_ASSETS
 
                 //initialize Rest Client
                 RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");
-                //RestRequest transactionInfo = new RestRequest("/api/transaction/search?startDate=" + startDate + "&endDate=" + endDate + "&userId=" + searchUserId + "&assetId=" + searchAssetId, Method.GET);
-                RestRequest transactionInfo = new RestRequest("/api/transaction/search?startDate=" + startDate + "&endDate=" + endDate + (searchUserId != 0 ? "&userId=" + searchUserId : "") + (searchAssetId != 0 ? "&assetId=" + searchAssetId : ""), Method.GET);
+                //RestRequest transactionInfo = new RestRequest("/api/transaction/search?startDate=" + startDate + "&endDate=" + endDate + "&userId=" + searchOwnerId + "&assetId=" + searchAssetId, Method.GET);
+                RestRequest transactionInfo = new RestRequest("/api/transaction/search?startDate=" + startDate + "&endDate=" + endDate + (searchOwnerId != 0 ? "&userId=" + searchOwnerId : "") + (searchAssetId != 0 ? "&assetId=" + searchAssetId : ""), Method.GET);
 
                 var authToken = tokenValue;
 
@@ -325,7 +352,6 @@ namespace RFID_FEATHER_ASSETS
                                         grdViewTransactions.Sort(grdViewTransactions.Columns["ColCreatedAt"], ListSortDirection.Descending);
                                         lblLoadingInformation.Visible = false;
                                     //}));
-                               
                             }
                             else
                             {
@@ -463,23 +489,53 @@ namespace RFID_FEATHER_ASSETS
 
         private void cmbAssetList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            bool parseOK = Int32.TryParse(cmbAssetList.SelectedValue.ToString(), out searchAssetId);
+            ////bool parseOK = Int32.TryParse(cmbAssetList.SelectedValue.ToString(), out searchAssetId);
+            //if (Convert.ToInt32(((AssetList)cmbAssetList.SelectedItem).assetId) != null)
+            //{
+                int currentAssetId = Convert.ToInt32(((AssetList)cmbAssetList.SelectedItem).assetId);
+                searchAssetId = currentAssetId;
+            //}
+            //else
+            //{
+            //    searchAssetId = 0;
+            //    cmbAssetList.Text = string.Empty;
+            //}
+
+            //if ((!isAssetChanged && isUserLoadingList) || string.IsNullOrEmpty(cmbAssetList.Text))
+            //    searchAssetId = 0;
+            //else
+            //{
+            //    isAssetChanged = true;
+            //    searchAssetId = Convert.ToInt32(((AssetList)cmbAssetList.SelectedItem).assetId);
+            //}
         }
 
         private void cmbOwnerList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            bool parseOK = Int32.TryParse(cmbOwnerList.SelectedValue.ToString(), out searchUserId);
-            if (parseOK) assetList();
+            ////bool parseOK = Int32.TryParse(cmbOwnerList.SelectedValue.ToString(), out searchOwnerId);
+            //if (Convert.ToInt32(((OwnerList)cmbOwnerList.SelectedItem).userId) != null)
+            //{
+                int currentOwnerId = Convert.ToInt32(((OwnerList)cmbOwnerList.SelectedItem).userId);
+                searchOwnerId = currentOwnerId;
+            //}
+            //else
+            //{
+            //    searchOwnerId = 0;
+            //    cmbOwnerList.Text = string.Empty;
+            //}
         }
 
-        private void assetList()
+        private void assetList(int selectedUserId)
         {
             try
             {
                 //initialize Rest Client
                 RestClient client = new RestClient(/*"http://feather-assets.herokuapp.com/");*/"http://52.163.93.95:8080/FeatherAssets/");
-                RestRequest assetInfo = new RestRequest("/api/user/" + searchUserId + "/assets/list/", Method.GET);
-                //RestRequest assetInfo = new RestRequest("/api/company/" + companyId + "/assets/list/", Method.GET);
+                RestRequest assetInfo;
+                if (selectedUserId != 0)
+                    assetInfo = new RestRequest("/api/user/" + selectedUserId + "/assets/list/", Method.GET);
+                else
+                    assetInfo = new RestRequest("/api/company/" + companyId + "/assets/list/", Method.GET);
                 var authToken = tokenValue;
 
                 //add needed headers
@@ -491,35 +547,41 @@ namespace RFID_FEATHER_ASSETS
                 var response = client.Execute<List<AssetInformation>>(assetInfo);
                 var content = response.Content;
 
-                if (response.StatusCode == HttpStatusCode.OK)
-                {
-                    //deserialize json response into object
-                    JsonDeserializer deserial = new JsonDeserializer();
-                    List<GlobalClass.GetSetClass> generateAssets = deserial.Deserialize<List<GlobalClass.GetSetClass>>(response);
-
-                    //add combobox information
-                    //if (generateAssets.Count == 0)
-                    //{
-                    //    MessageBox.Show("Not yet registered an asset... Please visit your administrator to register your asset", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //    return;
-                    //}
-                    //else
-                    //{
-                        cmbAssetList.Text = string.Empty;
-
-                        List<AssetList> assetList = new List<AssetList>();
-                        for (int i = 0; i < generateAssets.Count; i++)
-                        {
-                            assetList.Add(new AssetList() { assetId = generateAssets[i].assetId, assetName = generateAssets[i].description });
-                        }
-                        if (generateAssets.Count != 0)
-                        {
-                            this.cmbAssetList.DataSource = assetList;
-                            this.cmbAssetList.ValueMember = "assetId";
-                            this.cmbAssetList.DisplayMember = "assetName";
-                        }
-                    //}
-                }
+                //client.ExecuteAsync<List<AssetInformation>>(assetInfo, response =>
+                //{
+                    if (response.StatusCode == HttpStatusCode.OK)
+                    {
+                        //deserialize json response into object
+                        JsonDeserializer deserial = new JsonDeserializer();
+                        List<GlobalClass.GetSetClass> generateAssets = deserial.Deserialize<List<GlobalClass.GetSetClass>>(response);
+                        //this.cmbAssetList.Invoke(new MethodInvoker(delegate
+                        //{
+                            //add combobox information
+                            //if (generateAssets.Count == 0)
+                            //{
+                            //    MessageBox.Show("Not yet registered an asset... Please visit your administrator to register your asset", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            //    return;
+                            //}
+                            //else
+                            //{
+                                //if (!isAssetChanged) isAssetChanged = true;
+                                //isUserLoadingList = false;
+                                //isOwnerChanged = false;
+                                List<AssetList> assetList = new List<AssetList>();
+                                for (int i = 0; i < generateAssets.Count; i++)
+                                {
+                                    assetList.Add(new AssetList() { assetId = generateAssets[i].assetId, assetName = generateAssets[i].description });
+                                }
+                                if (generateAssets.Count != 0)
+                                {
+                                    this.cmbAssetList.DataSource = assetList;
+                                    this.cmbAssetList.ValueMember = "assetId";
+                                    this.cmbAssetList.DisplayMember = "assetName";
+                                }
+                           //}));
+                        //}
+                    }
+                //});
             }
             catch (Exception ex)
             {
@@ -527,17 +589,12 @@ namespace RFID_FEATHER_ASSETS
             }
         }
 
-        private void cmbOwnerList_Leave(object sender, EventArgs e)
+        private void TransactionHistory_Load(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(cmbOwnerList.Text)) searchUserId = 0;
+            clearOwnerAssetComboText();
         }
-
-        private void cmbAssetList_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(cmbAssetList.Text)) searchAssetId = 0;
-        }
-      
     }
+
     public class OwnerList
     {
         public int userId { get; set; }

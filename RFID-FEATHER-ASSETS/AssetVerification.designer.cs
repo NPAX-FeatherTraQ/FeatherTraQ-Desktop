@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Verification));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblCurrentDateTime = new System.Windows.Forms.Label();
             this.VerifyTimer = new System.Windows.Forms.Timer(this.components);
             this.BackgroundTimer = new System.Windows.Forms.Timer(this.components);
@@ -100,6 +100,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblMsgAssetNotRegister = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblSystemInfo = new System.Windows.Forms.ToolStripStatusLabel();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCapture5)).BeginInit();
@@ -463,14 +464,14 @@
             this.grdViewRFIDTag.AllowUserToResizeRows = false;
             this.grdViewRFIDTag.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdViewRFIDTag.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdViewRFIDTag.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdViewRFIDTag.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             resources.ApplyResources(this.grdViewRFIDTag, "grdViewRFIDTag");
             this.grdViewRFIDTag.ColumnHeadersVisible = false;
             this.grdViewRFIDTag.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -488,14 +489,14 @@
             this.colAssetOwner,
             this.colRFIDTag,
             this.colIsCompared});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdViewRFIDTag.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdViewRFIDTag.DefaultCellStyle = dataGridViewCellStyle4;
             this.grdViewRFIDTag.Name = "grdViewRFIDTag";
             this.grdViewRFIDTag.ReadOnly = true;
             this.grdViewRFIDTag.RowHeadersVisible = false;
@@ -554,7 +555,6 @@
             this.colViewerIcon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
             this.colViewerIcon.FillWeight = 120F;
             resources.ApplyResources(this.colViewerIcon, "colViewerIcon");
-            this.colViewerIcon.Image = global::RFID_FEATHER_ASSETS.Properties.Resources.ViewDetailsIcon;
             this.colViewerIcon.Name = "colViewerIcon";
             this.colViewerIcon.ReadOnly = true;
             this.colViewerIcon.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -633,6 +633,14 @@
             resources.ApplyResources(this.lblSystemInfo, "lblSystemInfo");
             this.lblSystemInfo.Name = "lblSystemInfo";
             this.lblSystemInfo.Spring = true;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
+            this.dataGridViewImageColumn1.FillWeight = 120F;
+            resources.ApplyResources(this.dataGridViewImageColumn1, "dataGridViewImageColumn1");
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // Verification
             // 
@@ -740,6 +748,7 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblSystemInfo;
         private System.Windows.Forms.ToolStripStatusLabel lblMsgAssetNotRegister;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
 
 
     }

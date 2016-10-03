@@ -102,6 +102,7 @@
             this.lblAssetCount = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblMsgAssetNotRegister = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblSystemInfo = new System.Windows.Forms.ToolStripStatusLabel();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCapture5)).BeginInit();
@@ -565,7 +566,6 @@
             this.colViewerIcon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
             this.colViewerIcon.FillWeight = 120F;
             resources.ApplyResources(this.colViewerIcon, "colViewerIcon");
-            this.colViewerIcon.Image = global::RFID_FEATHER_ASSETS.Properties.Resources.ViewDetailsIcon;
             this.colViewerIcon.Name = "colViewerIcon";
             this.colViewerIcon.ReadOnly = true;
             this.colViewerIcon.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -650,6 +650,15 @@
             resources.ApplyResources(this.lblSystemInfo, "lblSystemInfo");
             this.lblSystemInfo.Name = "lblSystemInfo";
             this.lblSystemInfo.Spring = true;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
+            this.dataGridViewImageColumn1.FillWeight = 120F;
+            resources.ApplyResources(this.dataGridViewImageColumn1, "dataGridViewImageColumn1");
+            this.dataGridViewImageColumn1.Image = global::RFID_FEATHER_ASSETS.Properties.Resources.viewdetailsicon;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // Tracking
             // 
@@ -759,6 +768,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colAssetOwner;
         private System.Windows.Forms.DataGridViewTextBoxColumn colRFIDTag;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIsCompared;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
 
 
     }

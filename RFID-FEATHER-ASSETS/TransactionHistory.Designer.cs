@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransactionHistory));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grpSearchCriteria = new System.Windows.Forms.GroupBox();
             this.cmbAssetList = new System.Windows.Forms.ComboBox();
             this.cmbOwnerList = new System.Windows.Forms.ComboBox();
@@ -68,6 +69,7 @@
             // 
             // grpSearchCriteria
             // 
+            resources.ApplyResources(this.grpSearchCriteria, "grpSearchCriteria");
             this.grpSearchCriteria.Controls.Add(this.cmbAssetList);
             this.grpSearchCriteria.Controls.Add(this.cmbOwnerList);
             this.grpSearchCriteria.Controls.Add(this.lblDateFrom);
@@ -79,7 +81,6 @@
             this.grpSearchCriteria.Controls.Add(this.label3);
             this.grpSearchCriteria.Controls.Add(this.lblDateTo);
             this.grpSearchCriteria.Controls.Add(this.dtDateToPicker);
-            resources.ApplyResources(this.grpSearchCriteria, "grpSearchCriteria");
             this.grpSearchCriteria.Name = "grpSearchCriteria";
             this.grpSearchCriteria.TabStop = false;
             // 
@@ -90,8 +91,8 @@
             resources.ApplyResources(this.cmbAssetList, "cmbAssetList");
             this.cmbAssetList.FormattingEnabled = true;
             this.cmbAssetList.Name = "cmbAssetList";
+            this.cmbAssetList.Sorted = true;
             this.cmbAssetList.SelectedIndexChanged += new System.EventHandler(this.cmbAssetList_SelectedIndexChanged);
-            this.cmbAssetList.Leave += new System.EventHandler(this.cmbAssetList_Leave);
             // 
             // cmbOwnerList
             // 
@@ -100,8 +101,8 @@
             resources.ApplyResources(this.cmbOwnerList, "cmbOwnerList");
             this.cmbOwnerList.FormattingEnabled = true;
             this.cmbOwnerList.Name = "cmbOwnerList";
+            this.cmbOwnerList.Sorted = true;
             this.cmbOwnerList.SelectedIndexChanged += new System.EventHandler(this.cmbOwnerList_SelectedIndexChanged);
-            this.cmbOwnerList.Leave += new System.EventHandler(this.cmbOwnerList_Leave);
             // 
             // lblDateFrom
             // 
@@ -198,9 +199,18 @@
             this.ColRegisterId,
             this.ColUpdateId,
             this.ColUpdatedAt});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdViewTransactions.DefaultCellStyle = dataGridViewCellStyle2;
             this.grdViewTransactions.Name = "grdViewTransactions";
             this.grdViewTransactions.ReadOnly = true;
             this.grdViewTransactions.RowHeadersVisible = false;
+            this.grdViewTransactions.TabStop = false;
             // 
             // ColCreatedAt
             // 
@@ -314,6 +324,7 @@
             this.Name = "TransactionHistory";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TransactionHistory_FormClosed);
+            this.Load += new System.EventHandler(this.TransactionHistory_Load);
             this.grpSearchCriteria.ResumeLayout(false);
             this.grpSearchCriteria.PerformLayout();
             this.grpDetails.ResumeLayout(false);

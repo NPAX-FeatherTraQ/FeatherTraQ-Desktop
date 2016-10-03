@@ -124,8 +124,8 @@
   <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CloseButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CloseButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="closebutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\closebutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="serial_port" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\serial_port.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -6595,13 +6595,16 @@
 </value>
   </data>
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_big" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_big.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="register_owner" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\register_owner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ViewDetailsIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ViewDetailsIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="viewdetailsicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\viewdetailsicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="register_asset" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\register_asset.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -12858,8 +12861,5 @@
         Kv40A0D9SQI+/zAAJQEa/g4CBP77AvP/6QHi/toB1QHQ/tgD4vzpBPH99wL+/gIBCAEM/g8CE/4VARcA
         EQANAAn/BAECAAD//gL+/v0B/v/+Cw==
 </value>
-  </data>
-  <data name="logo_big" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo_big.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

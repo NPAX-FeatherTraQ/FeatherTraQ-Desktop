@@ -82,6 +82,8 @@
             this.lblDesc = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblFname = new System.Windows.Forms.Label();
+            this.chkUpdateValidIDPhoto = new System.Windows.Forms.CheckBox();
+            this.chkUpdateOwnerPhoto = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -262,6 +264,8 @@
             // 
             // capturedPhotos
             // 
+            this.capturedPhotos.Controls.Add(this.chkUpdateValidIDPhoto);
+            this.capturedPhotos.Controls.Add(this.chkUpdateOwnerPhoto);
             this.capturedPhotos.Controls.Add(this.lblOwnerPic);
             this.capturedPhotos.Controls.Add(this.label6);
             this.capturedPhotos.Controls.Add(this.lblValidIDPhoto);
@@ -407,7 +411,7 @@
             this.lblLoadingInformation.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lblLoadingInformation.Location = new System.Drawing.Point(29, 474);
             this.lblLoadingInformation.Name = "lblLoadingInformation";
-            this.lblLoadingInformation.Size = new System.Drawing.Size(352, 24);
+            this.lblLoadingInformation.Size = new System.Drawing.Size(352, 27);
             this.lblLoadingInformation.TabIndex = 67;
             this.lblLoadingInformation.Text = "Getting Information. Please wait...";
             this.lblLoadingInformation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -546,9 +550,9 @@
             this.btnSubmit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSubmit.BackColor = System.Drawing.Color.Orange;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(75, 472);
+            this.btnSubmit.Location = new System.Drawing.Point(74, 473);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(265, 29);
+            this.btnSubmit.Size = new System.Drawing.Size(131, 29);
             this.btnSubmit.TabIndex = 10;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
@@ -558,12 +562,12 @@
             // 
             this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCancel.BackColor = System.Drawing.Color.Orange;
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(214, 472);
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(208, 473);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(126, 29);
+            this.btnCancel.Size = new System.Drawing.Size(131, 29);
             this.btnCancel.TabIndex = 11;
-            this.btnCancel.Text = "Back";
+            this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -793,6 +797,34 @@
             this.lblFname.TabIndex = 8;
             this.lblFname.Text = "First Name: ";
             // 
+            // chkUpdateValidIDPhoto
+            // 
+            this.chkUpdateValidIDPhoto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chkUpdateValidIDPhoto.AutoSize = true;
+            this.chkUpdateValidIDPhoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F);
+            this.chkUpdateValidIDPhoto.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.chkUpdateValidIDPhoto.Location = new System.Drawing.Point(239, 27);
+            this.chkUpdateValidIDPhoto.Name = "chkUpdateValidIDPhoto";
+            this.chkUpdateValidIDPhoto.Size = new System.Drawing.Size(115, 16);
+            this.chkUpdateValidIDPhoto.TabIndex = 62;
+            this.chkUpdateValidIDPhoto.Text = "Update Valid ID Photo";
+            this.chkUpdateValidIDPhoto.UseVisualStyleBackColor = true;
+            this.chkUpdateValidIDPhoto.Visible = false;
+            // 
+            // chkUpdateOwnerPhoto
+            // 
+            this.chkUpdateOwnerPhoto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chkUpdateOwnerPhoto.AutoSize = true;
+            this.chkUpdateOwnerPhoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F);
+            this.chkUpdateOwnerPhoto.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.chkUpdateOwnerPhoto.Location = new System.Drawing.Point(78, 27);
+            this.chkUpdateOwnerPhoto.Name = "chkUpdateOwnerPhoto";
+            this.chkUpdateOwnerPhoto.Size = new System.Drawing.Size(110, 16);
+            this.chkUpdateOwnerPhoto.TabIndex = 61;
+            this.chkUpdateOwnerPhoto.Text = "Update Owner Photo";
+            this.chkUpdateOwnerPhoto.UseVisualStyleBackColor = true;
+            this.chkUpdateOwnerPhoto.Visible = false;
+            // 
             // RegisterUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -891,5 +923,7 @@
         private System.Windows.Forms.DateTimePicker dtTimePicker;
         private System.Windows.Forms.DateTimePicker dtDatePicker;
         private System.Windows.Forms.Label lblOwnerPic;
+        private System.Windows.Forms.CheckBox chkUpdateValidIDPhoto;
+        private System.Windows.Forms.CheckBox chkUpdateOwnerPhoto;
     }
 }

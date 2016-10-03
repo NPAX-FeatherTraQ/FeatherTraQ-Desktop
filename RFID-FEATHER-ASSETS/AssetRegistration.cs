@@ -224,13 +224,13 @@ namespace RFID_FEATHER_ASSETS
         {
             newImgFileNames = string.Empty;
 
-            if (btnCancel.Text.ToUpper() == "BACK" || btnCancel.Text == "戻る")
-            {
-                CallMainMenu();
-                return;
-            }
+            //if (btnCancel.Text.ToUpper() == "BACK" || btnCancel.Text == "戻る")
+            //{
+            //    CallMainMenu();
+            //    return;
+            //}
 
-            if (txtOwnerName.Text.Length !=0 || txtRFIDTag.Text.Length != 0 || imgCapture1.Image != null)
+            if (txtOwnerName.Text.Length != 0 || txtRFIDTag.Text.Length != 0 || imgCapture1.Image != null || txtDescription.Text.Length != 0)
             {
                 string cancelMsg;
 
@@ -264,11 +264,11 @@ namespace RFID_FEATHER_ASSETS
         {
             try
             {
-                //if (txtDescription.Text == "ID_CARD")
+                //if (txtDescription.Text.Contains("ID_CARD"))
                 //{
                     if (txtOwnerName.Text.Length == 0 || txtRFIDTag.Text.Length == 0 ||/* txtAssetName.Text.Length == 0 ||*/ txtDescription.Text.Length == 0 || txtTakeOutNote.Text.Length == 0)
                     {
-                        if ((txtDescription.Text != "ID_CARD" && imgCapture3.Image == null) || txtDescription.Text == "ID_CARD")
+                        if ((!txtDescription.Text.Contains("ID_CARD") && imgCapture3.Image == null) || txtDescription.Text.Contains("ID_CARD"))
                         {
                             if (language == "English") MessageBox.Show("Complete information is required.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
                             else if (language == "Japanese") MessageBox.Show("完全な情報は、必要とされます.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
@@ -585,7 +585,7 @@ namespace RFID_FEATHER_ASSETS
             updateInfo.updateUserId = userId;
             updateInfo.assetId = assetId;
             updateInfo.ownerUserId = ownerId;
-            if (txtDescription.Text.Trim() != "ID_CARD") updateInfo.name = txtDescription.Text.Trim();
+            if (!txtDescription.Text.Trim().Contains("ID_CARD")) updateInfo.name = txtDescription.Text.Trim();
             else updateInfo.name = assetName;
             updateInfo.description = txtDescription.Text.Trim();
 
@@ -748,7 +748,7 @@ namespace RFID_FEATHER_ASSETS
             StartValidUntilDateTime();
             AssetValidUntilDateTime();
 
-            btnSubmit.Width = 267;
+            //btnSubmit.Width = 264;
             if (language == "English")
             {
                 btnCapturePhoto.Text = "";//"Capture Owner Photo";
@@ -852,7 +852,7 @@ namespace RFID_FEATHER_ASSETS
             //ClearFields();
             try
             {
-                if ((ReadIDTagWasClicked && txtDescription.Text.Trim() == "ID_CARD") || (!ReadIDTagWasClicked && !GetAssetInfoWasClicked && btnSubmit.Text == "Update"))
+                if ((ReadIDTagWasClicked && txtDescription.Text.Trim().Contains("ID_CARD")) || (!ReadIDTagWasClicked && !GetAssetInfoWasClicked && btnSubmit.Text == "Update"))
                 {
                     btnCancel.PerformClick();
                     return;
@@ -927,7 +927,7 @@ namespace RFID_FEATHER_ASSETS
 
                         //txtDescription.Focus();//txtAssetName.Focus();
 
-                        btnSubmit.Width = 125;
+                        //btnSubmit.Width = 128;
                         if (language == "English") btnCancel.Text = "Cancel";
                         else btnCancel.Text = "キャンセル";
                     }
@@ -1203,7 +1203,7 @@ namespace RFID_FEATHER_ASSETS
 
         private void getCaptureButtonText()
         {
-            if (txtDescription.Text == "ID_CARD") btnCapturePhoto.Enabled = false;
+            if (txtDescription.Text.Contains("ID_CARD")) btnCapturePhoto.Enabled = false;
             else
             {
                 if (language == "English")
@@ -1710,7 +1710,7 @@ namespace RFID_FEATHER_ASSETS
 
                         //if (ReadIDTagWasClicked)
                         //{
-                            if (ReadIDTagWasClicked && assetInfo.description != "ID_CARD")
+                            if (ReadIDTagWasClicked && !assetInfo.description.Contains("ID_CARD"))
                             {
                                 MessageBox.Show("Scanned RFID Tag is Asset. Please scan the ID Tag.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 txtOwnerName.Text = string.Empty;
@@ -1735,8 +1735,8 @@ namespace RFID_FEATHER_ASSETS
                         //}
                         //else
                         //{
-                            //if ((!ReadIDTagWasClicked && !GetAssetInfoWasClicked) || (!ReadIDTagWasClicked && assetInfo.description == "ID_CARD"))
-                            if (!ReadIDTagWasClicked && (!GetAssetInfoWasClicked || assetInfo.description == "ID_CARD"))
+                            //if ((!ReadIDTagWasClicked && !GetAssetInfoWasClicked) || (!ReadIDTagWasClicked && assetInfo.description.Contains("ID_CARD")))
+                            if (!ReadIDTagWasClicked && (!GetAssetInfoWasClicked || assetInfo.description.Contains("ID_CARD")))
                             {
                                 MessageBox.Show("Scanned RFID Tag is ID. Please scan the Asset Tag.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 txtRFIDTag.Text = string.Empty;
@@ -1764,7 +1764,7 @@ namespace RFID_FEATHER_ASSETS
 
                             string urls = assetInfo.imageUrls;
 
-                            if (urls != null && assetInfo.description != "ID_CARD")
+                            if (urls != null && !assetInfo.description.Contains("ID_CARD"))
                             {
                                 string[] ReadUrls = urls.Split(',');
 
@@ -1789,7 +1789,7 @@ namespace RFID_FEATHER_ASSETS
                             txtDescription.Text = assetInfo.description;
                             assetName = assetInfo.name;
 
-                            if (assetInfo.description == "ID_CARD")
+                            if (assetInfo.description.Contains("ID_CARD"))
                             {
                                 txtDescription.ReadOnly = true;
                                 grpExpiration.Enabled = true;
@@ -1816,7 +1816,7 @@ namespace RFID_FEATHER_ASSETS
                             //}
 
                             //getownerInfo(assetInfo.ownerUserId);
-                            btnSubmit.Width = 125;
+                            //btnSubmit.Width = 128;
                             if (language == "English")
                             {
                                 btnCancel.Text = "Cancel";
@@ -2139,7 +2139,7 @@ namespace RFID_FEATHER_ASSETS
                     if (language == "English")
                     {
                         DialogResult result;
-                        if (ReadIDTagWasClicked || txtDescription.Text.Trim() == "ID_CARD")
+                        if (ReadIDTagWasClicked || txtDescription.Text.Trim().Contains("ID_CARD"))
                             result = MessageBox.Show("ID is already expired." + "\n" + "Do you want to renew the ID?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Error, MessageBoxDefaultButton.Button2);
                         else
                             result = MessageBox.Show("Asset is already expired." + "\n" + "Do you want to renew the Asset?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Error, MessageBoxDefaultButton.Button2);
@@ -2163,7 +2163,7 @@ namespace RFID_FEATHER_ASSETS
                         }
                         else
                         {
-                            btnSubmit.Width = 267;
+                            //btnSubmit.Width = 264;
                             if (ReadIDTagWasClicked)
                             {
                                 txtOwnerName.Text = string.Empty;
