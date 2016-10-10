@@ -125,7 +125,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="txtUserName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>42, 175</value>
+    <value>42, 173</value>
   </data>
   <data name="txtUserName.Size" type="System.Drawing.Size, System.Drawing">
     <value>178, 22</value>
@@ -153,7 +153,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="txtPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>42, 217</value>
+    <value>42, 215</value>
   </data>
   <data name="txtPassword.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
     <value>*</value>
@@ -183,17 +183,17 @@
     <value>True</value>
   </data>
   <data name="lblUsername.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+    <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lblUsername.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblUsername.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 160</value>
+    <value>39, 156</value>
   </data>
   <data name="lblUsername.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 13</value>
+    <value>76, 15</value>
   </data>
   <data name="lblUsername.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -220,16 +220,16 @@
     <value>True</value>
   </data>
   <data name="lblPassword.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+    <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="lblPassword.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 202</value>
+    <value>39, 198</value>
   </data>
   <data name="lblPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 13</value>
+    <value>76, 15</value>
   </data>
   <data name="lblPassword.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -249,72 +249,6 @@
   <data name="&gt;&gt;lblPassword.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <metadata name="btnLogin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="btnLogin.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
-  </data>
-  <data name="btnLogin.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>42, 254</value>
-  </data>
-  <data name="btnLogin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 30</value>
-  </data>
-  <data name="btnLogin.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="btnLogin.Text" xml:space="preserve">
-    <value>Log In</value>
-  </data>
-  <data name="&gt;&gt;btnLogin.Name" xml:space="preserve">
-    <value>btnLogin</value>
-  </data>
-  <data name="&gt;&gt;btnLogin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnLogin.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnLogin.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <metadata name="btnCancel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="btnCancel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
-  </data>
-  <data name="btnCancel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>135, 254</value>
-  </data>
-  <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 30</value>
-  </data>
-  <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="btnCancel.Text" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
-    <value>btnCancel</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
   <metadata name="lblUserPasswordRequired.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -322,7 +256,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblUserPasswordRequired.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 240</value>
+    <value>14, 238</value>
   </data>
   <data name="lblUserPasswordRequired.Size" type="System.Drawing.Size, System.Drawing">
     <value>238, 13</value>
@@ -361,7 +295,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>183, 24</value>
+    <value>183, 22</value>
   </data>
   <data name="lblLogin.Size" type="System.Drawing.Size, System.Drawing">
     <value>22, 25</value>
@@ -390,43 +324,43 @@
   <data name="&gt;&gt;lblLogin.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <metadata name="lblSigningIn.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="lblLoggingIn.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="lblSigningIn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  <data name="lblLoggingIn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
   </data>
-  <data name="lblSigningIn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lblLoggingIn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="lblSigningIn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 242</value>
+  <data name="lblLoggingIn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 240</value>
   </data>
-  <data name="lblSigningIn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 41</value>
+  <data name="lblLoggingIn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>254, 40</value>
   </data>
-  <data name="lblSigningIn.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblLoggingIn.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="lblSigningIn.Text" xml:space="preserve">
-    <value>Signing In...</value>
+  <data name="lblLoggingIn.Text" xml:space="preserve">
+    <value>Validiting User Info...</value>
   </data>
-  <data name="lblSigningIn.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="lblLoggingIn.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="lblSigningIn.Visible" type="System.Boolean, mscorlib">
+  <data name="lblLoggingIn.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;lblSigningIn.Name" xml:space="preserve">
-    <value>lblSigningIn</value>
+  <data name="&gt;&gt;lblLoggingIn.Name" xml:space="preserve">
+    <value>lblLoggingIn</value>
   </data>
-  <data name="&gt;&gt;lblSigningIn.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblLoggingIn.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblSigningIn.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblLoggingIn.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lblSigningIn.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblLoggingIn.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="lblLanguage.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -442,7 +376,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblLanguage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 8</value>
+    <value>29, 6</value>
   </data>
   <data name="lblLanguage.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 13</value>
@@ -481,7 +415,7 @@
     <value>Japanese</value>
   </data>
   <data name="selectLanguage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 6</value>
+    <value>97, 4</value>
   </data>
   <data name="selectLanguage.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 24</value>
@@ -508,13 +442,13 @@
     <value>True</value>
   </metadata>
   <data name="cmbLocation.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Microsoft Sans Serif, 9.25pt</value>
   </data>
   <data name="cmbLocation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>42, 132</value>
+    <value>42, 130</value>
   </data>
   <data name="cmbLocation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 24</value>
+    <value>178, 23</value>
   </data>
   <data name="cmbLocation.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -538,16 +472,16 @@
     <value>True</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+    <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 117</value>
+    <value>39, 113</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 13</value>
+    <value>66, 15</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -574,7 +508,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblLocation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 114</value>
+    <value>120, 112</value>
   </data>
   <data name="lblLocation.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 18</value>
@@ -610,7 +544,7 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>74, 3</value>
+    <value>74, 1</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 110</value>
@@ -633,6 +567,84 @@
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="btnCancel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="btnCancel.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btnCancel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="btnCancel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 252</value>
+  </data>
+  <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 24</value>
+  </data>
+  <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>CANCEL</value>
+  </data>
+  <data name="btnCancel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
+    <value>btnCancel</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <metadata name="btnLogin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="btnLogin.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btnLogin.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="btnLogin.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnLogin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>42, 252</value>
+  </data>
+  <data name="btnLogin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 24</value>
+  </data>
+  <data name="btnLogin.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnLogin.Text" xml:space="preserve">
+    <value>LOG IN</value>
+  </data>
+  <data name="btnLogin.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;btnLogin.Name" xml:space="preserve">
+    <value>btnLogin</value>
+  </data>
+  <data name="&gt;&gt;btnLogin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnLogin.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnLogin.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -643,7 +655,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>259, 292</value>
+    <value>259, 288</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2315,7 +2327,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Login FeatherTraq</value>
+    <value>Login FeatherTraQ</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>LoginActivity</value>

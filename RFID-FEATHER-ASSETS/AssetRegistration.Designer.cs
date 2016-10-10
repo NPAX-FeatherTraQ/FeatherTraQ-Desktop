@@ -48,12 +48,24 @@
             this.txtSaveImageDir = new System.Windows.Forms.TextBox();
             this.btnBrowseImagePath = new System.Windows.Forms.Button();
             this.grpAssetInfo = new System.Windows.Forms.GroupBox();
-            this.lblLoadingInformation = new System.Windows.Forms.Label();
             this.lblSubmittingInformation = new System.Windows.Forms.Label();
-            this.btnSubmit = new System.Windows.Forms.Button();
+            this.lblLoadingInformation = new System.Windows.Forms.Label();
             this.btnReadIDTag = new System.Windows.Forms.Button();
             this.lblOwnerName = new System.Windows.Forms.Label();
             this.btnGetAssetInfo = new System.Windows.Forms.Button();
+            this.comboOwner = new System.Windows.Forms.ComboBox();
+            this.lblDesc = new System.Windows.Forms.Label();
+            this.btnGetRFIDTag = new System.Windows.Forms.Button();
+            this.txtDescription = new System.Windows.Forms.TextBox();
+            this.txtTakeOutNote = new System.Windows.Forms.TextBox();
+            this.lblMemo = new System.Windows.Forms.Label();
+            this.txtAssetName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtRFIDTag = new System.Windows.Forms.TextBox();
+            this.lblTag = new System.Windows.Forms.Label();
+            this.txtOwnerName = new System.Windows.Forms.TextBox();
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.grpExpiration = new System.Windows.Forms.GroupBox();
             this.dtStartTimePicker = new System.Windows.Forms.DateTimePicker();
             this.dtStartDate = new System.Windows.Forms.DateTimePicker();
@@ -63,40 +75,30 @@
             this.rbtnValidToday = new System.Windows.Forms.RadioButton();
             this.dtTimePicker = new System.Windows.Forms.DateTimePicker();
             this.dtDatePicker = new System.Windows.Forms.DateTimePicker();
-            this.comboOwner = new System.Windows.Forms.ComboBox();
-            this.lblDesc = new System.Windows.Forms.Label();
-            this.btnGetRFIDTag = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.txtDescription = new System.Windows.Forms.TextBox();
-            this.txtTakeOutNote = new System.Windows.Forms.TextBox();
-            this.lblMemo = new System.Windows.Forms.Label();
-            this.txtAssetName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtRFIDTag = new System.Windows.Forms.TextBox();
-            this.lblTag = new System.Windows.Forms.Label();
-            this.txtOwnerName = new System.Windows.Forms.TextBox();
             this.grpCaptured = new System.Windows.Forms.GroupBox();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.lblValidIDPhoto = new System.Windows.Forms.Label();
             this.lblOwnerPhoto = new System.Windows.Forms.Label();
-            this.imgCapture1 = new System.Windows.Forms.PictureBox();
-            this.imgCapture2 = new System.Windows.Forms.PictureBox();
+            this.imgOwnerPhoto = new System.Windows.Forms.PictureBox();
+            this.imgValidIDPhoto = new System.Windows.Forms.PictureBox();
             this.lblOwnerPic = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.chkUpdateAssetPhoto3 = new System.Windows.Forms.CheckBox();
+            this.chkUpdateAssetPhoto2 = new System.Windows.Forms.CheckBox();
+            this.chkUpdateAssetPhoto1 = new System.Windows.Forms.CheckBox();
             this.lblAssetPhoto3 = new System.Windows.Forms.Label();
             this.lblAssetPhoto2 = new System.Windows.Forms.Label();
             this.lblAssetPhoto1 = new System.Windows.Forms.Label();
             this.lblAssetPic = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.imgCapture5 = new System.Windows.Forms.PictureBox();
-            this.imgCapture4 = new System.Windows.Forms.PictureBox();
-            this.imgCapture3 = new System.Windows.Forms.PictureBox();
+            this.imgAssetPhoto3Empty = new System.Windows.Forms.PictureBox();
+            this.imgAssetPhoto2Empty = new System.Windows.Forms.PictureBox();
+            this.imgAssetPhoto1Empty = new System.Windows.Forms.PictureBox();
+            this.imgAssetPhoto3 = new System.Windows.Forms.PictureBox();
+            this.imgAssetPhoto2 = new System.Windows.Forms.PictureBox();
+            this.imgAssetPhoto1 = new System.Windows.Forms.PictureBox();
             this.lblLoginUserName = new System.Windows.Forms.Label();
+            this.toolTipUpdatePhoto = new System.Windows.Forms.ToolTip(this.components);
             this.picOwner = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -115,11 +117,14 @@
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCapture1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCapture2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCapture5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCapture4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCapture3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgOwnerPhoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgValidIDPhoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAssetPhoto3Empty)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAssetPhoto2Empty)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAssetPhoto1Empty)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAssetPhoto3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAssetPhoto2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAssetPhoto1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOwner)).BeginInit();
             this.SuspendLayout();
             // 
@@ -222,6 +227,7 @@
             // 
             resources.ApplyResources(this.btnCapturePhoto, "btnCapturePhoto");
             this.btnCapturePhoto.BackColor = System.Drawing.Color.Orange;
+            this.btnCapturePhoto.BackgroundImage = global::RFID_FEATHER_ASSETS.Properties.Resources.camera;
             this.btnCapturePhoto.Name = "btnCapturePhoto";
             this.btnCapturePhoto.TabStop = false;
             this.btnCapturePhoto.UseVisualStyleBackColor = false;
@@ -276,12 +282,11 @@
             // 
             // grpAssetInfo
             // 
-            this.grpAssetInfo.Controls.Add(this.lblLoadingInformation);
             this.grpAssetInfo.Controls.Add(this.lblSubmittingInformation);
+            this.grpAssetInfo.Controls.Add(this.lblLoadingInformation);
             this.grpAssetInfo.Controls.Add(this.btnReadIDTag);
             this.grpAssetInfo.Controls.Add(this.lblOwnerName);
             this.grpAssetInfo.Controls.Add(this.btnGetAssetInfo);
-            this.grpAssetInfo.Controls.Add(this.grpExpiration);
             this.grpAssetInfo.Controls.Add(this.comboOwner);
             this.grpAssetInfo.Controls.Add(this.lblDesc);
             this.grpAssetInfo.Controls.Add(this.btnGetRFIDTag);
@@ -295,15 +300,10 @@
             this.grpAssetInfo.Controls.Add(this.txtOwnerName);
             this.grpAssetInfo.Controls.Add(this.btnSubmit);
             this.grpAssetInfo.Controls.Add(this.btnCancel);
+            this.grpAssetInfo.Controls.Add(this.grpExpiration);
             resources.ApplyResources(this.grpAssetInfo, "grpAssetInfo");
             this.grpAssetInfo.Name = "grpAssetInfo";
             this.grpAssetInfo.TabStop = false;
-            // 
-            // lblLoadingInformation
-            // 
-            resources.ApplyResources(this.lblLoadingInformation, "lblLoadingInformation");
-            this.lblLoadingInformation.ForeColor = System.Drawing.Color.Green;
-            this.lblLoadingInformation.Name = "lblLoadingInformation";
             // 
             // lblSubmittingInformation
             // 
@@ -311,13 +311,11 @@
             this.lblSubmittingInformation.ForeColor = System.Drawing.Color.Green;
             this.lblSubmittingInformation.Name = "lblSubmittingInformation";
             // 
-            // btnSubmit
+            // lblLoadingInformation
             // 
-            resources.ApplyResources(this.btnSubmit, "btnSubmit");
-            this.btnSubmit.BackColor = System.Drawing.Color.Orange;
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.UseVisualStyleBackColor = false;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            resources.ApplyResources(this.lblLoadingInformation, "lblLoadingInformation");
+            this.lblLoadingInformation.ForeColor = System.Drawing.Color.Green;
+            this.lblLoadingInformation.Name = "lblLoadingInformation";
             // 
             // btnReadIDTag
             // 
@@ -339,6 +337,89 @@
             this.btnGetAssetInfo.Name = "btnGetAssetInfo";
             this.btnGetAssetInfo.UseVisualStyleBackColor = false;
             this.btnGetAssetInfo.Click += new System.EventHandler(this.btnGetAssetInfo_Click);
+            // 
+            // comboOwner
+            // 
+            resources.ApplyResources(this.comboOwner, "comboOwner");
+            this.comboOwner.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboOwner.FormattingEnabled = true;
+            this.comboOwner.Name = "comboOwner";
+            this.comboOwner.Sorted = true;
+            this.comboOwner.TabStop = false;
+            // 
+            // lblDesc
+            // 
+            resources.ApplyResources(this.lblDesc, "lblDesc");
+            this.lblDesc.Name = "lblDesc";
+            // 
+            // btnGetRFIDTag
+            // 
+            resources.ApplyResources(this.btnGetRFIDTag, "btnGetRFIDTag");
+            this.btnGetRFIDTag.BackColor = System.Drawing.Color.Orange;
+            this.btnGetRFIDTag.Name = "btnGetRFIDTag";
+            this.btnGetRFIDTag.UseVisualStyleBackColor = false;
+            this.btnGetRFIDTag.Click += new System.EventHandler(this.btnGetRFIDTag_Click);
+            // 
+            // txtDescription
+            // 
+            resources.ApplyResources(this.txtDescription, "txtDescription");
+            this.txtDescription.Name = "txtDescription";
+            // 
+            // txtTakeOutNote
+            // 
+            resources.ApplyResources(this.txtTakeOutNote, "txtTakeOutNote");
+            this.txtTakeOutNote.Name = "txtTakeOutNote";
+            // 
+            // lblMemo
+            // 
+            resources.ApplyResources(this.lblMemo, "lblMemo");
+            this.lblMemo.Name = "lblMemo";
+            // 
+            // txtAssetName
+            // 
+            resources.ApplyResources(this.txtAssetName, "txtAssetName");
+            this.txtAssetName.Name = "txtAssetName";
+            this.txtAssetName.TabStop = false;
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // txtRFIDTag
+            // 
+            resources.ApplyResources(this.txtRFIDTag, "txtRFIDTag");
+            this.txtRFIDTag.BackColor = System.Drawing.SystemColors.Control;
+            this.txtRFIDTag.Name = "txtRFIDTag";
+            // 
+            // lblTag
+            // 
+            resources.ApplyResources(this.lblTag, "lblTag");
+            this.lblTag.Name = "lblTag";
+            // 
+            // txtOwnerName
+            // 
+            resources.ApplyResources(this.txtOwnerName, "txtOwnerName");
+            this.txtOwnerName.BackColor = System.Drawing.SystemColors.Control;
+            this.txtOwnerName.Name = "txtOwnerName";
+            // 
+            // btnSubmit
+            // 
+            resources.ApplyResources(this.btnSubmit, "btnSubmit");
+            this.btnSubmit.BackColor = System.Drawing.Color.Orange;
+            this.btnSubmit.BackgroundImage = global::RFID_FEATHER_ASSETS.Properties.Resources.save;
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // btnCancel
+            // 
+            resources.ApplyResources(this.btnCancel, "btnCancel");
+            this.btnCancel.BackColor = System.Drawing.Color.Orange;
+            this.btnCancel.BackgroundImage = global::RFID_FEATHER_ASSETS.Properties.Resources.cancel;
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // grpExpiration
             // 
@@ -420,79 +501,6 @@
             this.dtDatePicker.Name = "dtDatePicker";
             this.dtDatePicker.TabStop = false;
             // 
-            // comboOwner
-            // 
-            resources.ApplyResources(this.comboOwner, "comboOwner");
-            this.comboOwner.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboOwner.FormattingEnabled = true;
-            this.comboOwner.Name = "comboOwner";
-            this.comboOwner.Sorted = true;
-            this.comboOwner.TabStop = false;
-            // 
-            // lblDesc
-            // 
-            resources.ApplyResources(this.lblDesc, "lblDesc");
-            this.lblDesc.Name = "lblDesc";
-            // 
-            // btnGetRFIDTag
-            // 
-            resources.ApplyResources(this.btnGetRFIDTag, "btnGetRFIDTag");
-            this.btnGetRFIDTag.BackColor = System.Drawing.Color.Orange;
-            this.btnGetRFIDTag.Name = "btnGetRFIDTag";
-            this.btnGetRFIDTag.UseVisualStyleBackColor = false;
-            this.btnGetRFIDTag.Click += new System.EventHandler(this.btnGetRFIDTag_Click);
-            // 
-            // btnCancel
-            // 
-            resources.ApplyResources(this.btnCancel, "btnCancel");
-            this.btnCancel.BackColor = System.Drawing.Color.Orange;
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // txtDescription
-            // 
-            resources.ApplyResources(this.txtDescription, "txtDescription");
-            this.txtDescription.Name = "txtDescription";
-            // 
-            // txtTakeOutNote
-            // 
-            resources.ApplyResources(this.txtTakeOutNote, "txtTakeOutNote");
-            this.txtTakeOutNote.Name = "txtTakeOutNote";
-            // 
-            // lblMemo
-            // 
-            resources.ApplyResources(this.lblMemo, "lblMemo");
-            this.lblMemo.Name = "lblMemo";
-            // 
-            // txtAssetName
-            // 
-            resources.ApplyResources(this.txtAssetName, "txtAssetName");
-            this.txtAssetName.Name = "txtAssetName";
-            this.txtAssetName.TabStop = false;
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
-            // 
-            // txtRFIDTag
-            // 
-            resources.ApplyResources(this.txtRFIDTag, "txtRFIDTag");
-            this.txtRFIDTag.BackColor = System.Drawing.SystemColors.Control;
-            this.txtRFIDTag.Name = "txtRFIDTag";
-            // 
-            // lblTag
-            // 
-            resources.ApplyResources(this.lblTag, "lblTag");
-            this.lblTag.Name = "lblTag";
-            // 
-            // txtOwnerName
-            // 
-            resources.ApplyResources(this.txtOwnerName, "txtOwnerName");
-            this.txtOwnerName.BackColor = System.Drawing.SystemColors.Control;
-            this.txtOwnerName.Name = "txtOwnerName";
-            // 
             // grpCaptured
             // 
             this.grpCaptured.Controls.Add(this.splitContainer3);
@@ -508,41 +516,30 @@
             // 
             // splitContainer3.Panel1
             // 
-            this.splitContainer3.Panel1.Controls.Add(this.checkBox2);
-            this.splitContainer3.Panel1.Controls.Add(this.checkBox1);
             this.splitContainer3.Panel1.Controls.Add(this.lblValidIDPhoto);
             this.splitContainer3.Panel1.Controls.Add(this.lblOwnerPhoto);
-            this.splitContainer3.Panel1.Controls.Add(this.imgCapture1);
-            this.splitContainer3.Panel1.Controls.Add(this.imgCapture2);
+            this.splitContainer3.Panel1.Controls.Add(this.imgOwnerPhoto);
+            this.splitContainer3.Panel1.Controls.Add(this.imgValidIDPhoto);
             this.splitContainer3.Panel1.Controls.Add(this.lblOwnerPic);
             this.splitContainer3.Panel1.Controls.Add(this.label6);
             // 
             // splitContainer3.Panel2
             // 
-            this.splitContainer3.Panel2.Controls.Add(this.checkBox5);
-            this.splitContainer3.Panel2.Controls.Add(this.checkBox4);
-            this.splitContainer3.Panel2.Controls.Add(this.checkBox3);
+            this.splitContainer3.Panel2.Controls.Add(this.chkUpdateAssetPhoto3);
+            this.splitContainer3.Panel2.Controls.Add(this.chkUpdateAssetPhoto2);
+            this.splitContainer3.Panel2.Controls.Add(this.chkUpdateAssetPhoto1);
             this.splitContainer3.Panel2.Controls.Add(this.lblAssetPhoto3);
             this.splitContainer3.Panel2.Controls.Add(this.lblAssetPhoto2);
             this.splitContainer3.Panel2.Controls.Add(this.lblAssetPhoto1);
             this.splitContainer3.Panel2.Controls.Add(this.lblAssetPic);
             this.splitContainer3.Panel2.Controls.Add(this.label10);
-            this.splitContainer3.Panel2.Controls.Add(this.imgCapture5);
-            this.splitContainer3.Panel2.Controls.Add(this.imgCapture4);
-            this.splitContainer3.Panel2.Controls.Add(this.imgCapture3);
+            this.splitContainer3.Panel2.Controls.Add(this.imgAssetPhoto3Empty);
+            this.splitContainer3.Panel2.Controls.Add(this.imgAssetPhoto2Empty);
+            this.splitContainer3.Panel2.Controls.Add(this.imgAssetPhoto1Empty);
+            this.splitContainer3.Panel2.Controls.Add(this.imgAssetPhoto3);
+            this.splitContainer3.Panel2.Controls.Add(this.imgAssetPhoto2);
+            this.splitContainer3.Panel2.Controls.Add(this.imgAssetPhoto1);
             this.splitContainer3.TabStop = false;
-            // 
-            // checkBox2
-            // 
-            resources.ApplyResources(this.checkBox2, "checkBox2");
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            resources.ApplyResources(this.checkBox1, "checkBox1");
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // lblValidIDPhoto
             // 
@@ -554,20 +551,20 @@
             resources.ApplyResources(this.lblOwnerPhoto, "lblOwnerPhoto");
             this.lblOwnerPhoto.Name = "lblOwnerPhoto";
             // 
-            // imgCapture1
+            // imgOwnerPhoto
             // 
-            resources.ApplyResources(this.imgCapture1, "imgCapture1");
-            this.imgCapture1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.imgCapture1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.imgCapture1.Name = "imgCapture1";
-            this.imgCapture1.TabStop = false;
+            resources.ApplyResources(this.imgOwnerPhoto, "imgOwnerPhoto");
+            this.imgOwnerPhoto.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.imgOwnerPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imgOwnerPhoto.Name = "imgOwnerPhoto";
+            this.imgOwnerPhoto.TabStop = false;
             // 
-            // imgCapture2
+            // imgValidIDPhoto
             // 
-            resources.ApplyResources(this.imgCapture2, "imgCapture2");
-            this.imgCapture2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.imgCapture2.Name = "imgCapture2";
-            this.imgCapture2.TabStop = false;
+            resources.ApplyResources(this.imgValidIDPhoto, "imgValidIDPhoto");
+            this.imgValidIDPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imgValidIDPhoto.Name = "imgValidIDPhoto";
+            this.imgValidIDPhoto.TabStop = false;
             // 
             // lblOwnerPic
             // 
@@ -581,23 +578,29 @@
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label6.Name = "label6";
             // 
-            // checkBox5
+            // chkUpdateAssetPhoto3
             // 
-            resources.ApplyResources(this.checkBox5, "checkBox5");
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.chkUpdateAssetPhoto3, "chkUpdateAssetPhoto3");
+            this.chkUpdateAssetPhoto3.Name = "chkUpdateAssetPhoto3";
+            this.chkUpdateAssetPhoto3.UseVisualStyleBackColor = true;
+            this.chkUpdateAssetPhoto3.CheckedChanged += new System.EventHandler(this.chkUpdateAssetPhoto3_CheckedChanged);
+            this.chkUpdateAssetPhoto3.MouseHover += new System.EventHandler(this.chkUpdateAssetPhoto3_MouseHover);
             // 
-            // checkBox4
+            // chkUpdateAssetPhoto2
             // 
-            resources.ApplyResources(this.checkBox4, "checkBox4");
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.chkUpdateAssetPhoto2, "chkUpdateAssetPhoto2");
+            this.chkUpdateAssetPhoto2.Name = "chkUpdateAssetPhoto2";
+            this.chkUpdateAssetPhoto2.UseVisualStyleBackColor = true;
+            this.chkUpdateAssetPhoto2.CheckedChanged += new System.EventHandler(this.chkUpdateAssetPhoto2_CheckedChanged);
+            this.chkUpdateAssetPhoto2.MouseHover += new System.EventHandler(this.chkUpdateAssetPhoto2_MouseHover);
             // 
-            // checkBox3
+            // chkUpdateAssetPhoto1
             // 
-            resources.ApplyResources(this.checkBox3, "checkBox3");
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.chkUpdateAssetPhoto1, "chkUpdateAssetPhoto1");
+            this.chkUpdateAssetPhoto1.Name = "chkUpdateAssetPhoto1";
+            this.chkUpdateAssetPhoto1.UseVisualStyleBackColor = true;
+            this.chkUpdateAssetPhoto1.CheckedChanged += new System.EventHandler(this.chkUpdateAssetPhoto1_CheckedChanged);
+            this.chkUpdateAssetPhoto1.MouseHover += new System.EventHandler(this.chkUpdateAssetPhoto1_MouseHover);
             // 
             // lblAssetPhoto3
             // 
@@ -626,26 +629,47 @@
             this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label10.Name = "label10";
             // 
-            // imgCapture5
+            // imgAssetPhoto3Empty
             // 
-            resources.ApplyResources(this.imgCapture5, "imgCapture5");
-            this.imgCapture5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.imgCapture5.Name = "imgCapture5";
-            this.imgCapture5.TabStop = false;
+            resources.ApplyResources(this.imgAssetPhoto3Empty, "imgAssetPhoto3Empty");
+            this.imgAssetPhoto3Empty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imgAssetPhoto3Empty.Name = "imgAssetPhoto3Empty";
+            this.imgAssetPhoto3Empty.TabStop = false;
             // 
-            // imgCapture4
+            // imgAssetPhoto2Empty
             // 
-            resources.ApplyResources(this.imgCapture4, "imgCapture4");
-            this.imgCapture4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.imgCapture4.Name = "imgCapture4";
-            this.imgCapture4.TabStop = false;
+            resources.ApplyResources(this.imgAssetPhoto2Empty, "imgAssetPhoto2Empty");
+            this.imgAssetPhoto2Empty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imgAssetPhoto2Empty.Name = "imgAssetPhoto2Empty";
+            this.imgAssetPhoto2Empty.TabStop = false;
             // 
-            // imgCapture3
+            // imgAssetPhoto1Empty
             // 
-            resources.ApplyResources(this.imgCapture3, "imgCapture3");
-            this.imgCapture3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.imgCapture3.Name = "imgCapture3";
-            this.imgCapture3.TabStop = false;
+            resources.ApplyResources(this.imgAssetPhoto1Empty, "imgAssetPhoto1Empty");
+            this.imgAssetPhoto1Empty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imgAssetPhoto1Empty.Name = "imgAssetPhoto1Empty";
+            this.imgAssetPhoto1Empty.TabStop = false;
+            // 
+            // imgAssetPhoto3
+            // 
+            resources.ApplyResources(this.imgAssetPhoto3, "imgAssetPhoto3");
+            this.imgAssetPhoto3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imgAssetPhoto3.Name = "imgAssetPhoto3";
+            this.imgAssetPhoto3.TabStop = false;
+            // 
+            // imgAssetPhoto2
+            // 
+            resources.ApplyResources(this.imgAssetPhoto2, "imgAssetPhoto2");
+            this.imgAssetPhoto2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imgAssetPhoto2.Name = "imgAssetPhoto2";
+            this.imgAssetPhoto2.TabStop = false;
+            // 
+            // imgAssetPhoto1
+            // 
+            resources.ApplyResources(this.imgAssetPhoto1, "imgAssetPhoto1");
+            this.imgAssetPhoto1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imgAssetPhoto1.Name = "imgAssetPhoto1";
+            this.imgAssetPhoto1.TabStop = false;
             // 
             // lblLoginUserName
             // 
@@ -698,11 +722,14 @@
             this.splitContainer3.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.imgCapture1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCapture2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCapture5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCapture4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCapture3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgOwnerPhoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgValidIDPhoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAssetPhoto3Empty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAssetPhoto2Empty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAssetPhoto1Empty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAssetPhoto3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAssetPhoto2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAssetPhoto1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOwner)).EndInit();
             this.ResumeLayout(false);
 
@@ -749,13 +776,13 @@
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.Label lblOwnerPic;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox imgCapture2;
-        private System.Windows.Forms.PictureBox imgCapture1;
+        private System.Windows.Forms.PictureBox imgValidIDPhoto;
+        private System.Windows.Forms.PictureBox imgOwnerPhoto;
         private System.Windows.Forms.Label lblAssetPic;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.PictureBox imgCapture5;
-        private System.Windows.Forms.PictureBox imgCapture4;
-        private System.Windows.Forms.PictureBox imgCapture3;
+        private System.Windows.Forms.PictureBox imgAssetPhoto3;
+        private System.Windows.Forms.PictureBox imgAssetPhoto2;
+        private System.Windows.Forms.PictureBox imgAssetPhoto1;
         private System.Windows.Forms.Label lblOwnerPhoto;
         private System.Windows.Forms.Label lblAssetPhoto1;
         private System.Windows.Forms.Label lblValidIDPhoto;
@@ -769,11 +796,9 @@
         private System.Windows.Forms.DateTimePicker dtDatePicker;
         private System.Windows.Forms.Button btnGetAssetInfo;
         private System.Windows.Forms.Label lblLoadingInformation;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox chkUpdateAssetPhoto3;
+        private System.Windows.Forms.CheckBox chkUpdateAssetPhoto2;
+        private System.Windows.Forms.CheckBox chkUpdateAssetPhoto1;
         private System.Windows.Forms.CheckBox chkBoxChangeCamera;
         private System.Windows.Forms.Button btnReadIDTag;
         private System.Windows.Forms.TextBox txtOwnerName;
@@ -781,6 +806,10 @@
         private System.Windows.Forms.Label lblStart;
         private System.Windows.Forms.DateTimePicker dtStartDate;
         private System.Windows.Forms.DateTimePicker dtStartTimePicker;
+        private System.Windows.Forms.PictureBox imgAssetPhoto3Empty;
+        private System.Windows.Forms.PictureBox imgAssetPhoto2Empty;
+        private System.Windows.Forms.PictureBox imgAssetPhoto1Empty;
+        private System.Windows.Forms.ToolTip toolTipUpdatePhoto;
 
     }
 }

@@ -200,7 +200,7 @@ namespace RFID_FEATHER_ASSETS
                         JsonDeserializer deserial = new JsonDeserializer();
                         GlobalClass.GetSetClass info = deserial.Deserialize<GlobalClass.GetSetClass>(response);
 
-                        name = info.lastName + ", " + info.firstName;
+                        name = info.firstName + " " + info.lastName;//info.lastName + ", " + info.firstName;
                     }
                     else
                     {

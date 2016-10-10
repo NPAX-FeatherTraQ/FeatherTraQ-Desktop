@@ -117,10 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="grpSearchCriteria.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="grpSearchCriteria.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
+  <metadata name="cmbAssetList.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="cmbAssetList.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -147,6 +153,9 @@
   <data name="&gt;&gt;cmbAssetList.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="cmbOwnerList.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="cmbOwnerList.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
@@ -171,6 +180,9 @@
   <data name="&gt;&gt;cmbOwnerList.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="lblDateFrom.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="lblDateFrom.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -204,6 +216,9 @@
   <data name="&gt;&gt;lblDateFrom.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="dtDateFromPicker.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="dtDateFromPicker.CustomFormat" xml:space="preserve">
     <value>MM/dd/yyyy</value>
   </data>
@@ -231,8 +246,14 @@
   <data name="&gt;&gt;dtDateFromPicker.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="btnGenerate.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="btnGenerate.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="btnGenerate.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Microsoft Sans Serif, 11.25pt</value>
   </data>
   <data name="btnGenerate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -241,7 +262,7 @@
     <value>339, 61</value>
   </data>
   <data name="btnGenerate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 29</value>
+    <value>118, 28</value>
   </data>
   <data name="btnGenerate.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -261,8 +282,14 @@
   <data name="&gt;&gt;btnGenerate.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <metadata name="btnExport.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="btnExport.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="btnExport.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Microsoft Sans Serif, 11.25pt</value>
   </data>
   <data name="btnExport.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -271,13 +298,16 @@
     <value>463, 61</value>
   </data>
   <data name="btnExport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 29</value>
+    <value>118, 28</value>
   </data>
   <data name="btnExport.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
   <data name="btnExport.Text" xml:space="preserve">
-    <value>Export to CSV</value>
+    <value>Export CSV</value>
+  </data>
+  <data name="btnExport.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;btnExport.Name" xml:space="preserve">
     <value>btnExport</value>
@@ -291,6 +321,9 @@
   <data name="&gt;&gt;btnExport.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <metadata name="btnCancel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnCancel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
@@ -324,6 +357,9 @@
   <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <metadata name="label4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -357,6 +393,9 @@
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <metadata name="label3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -390,6 +429,9 @@
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <metadata name="lblDateTo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="lblDateTo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -423,6 +465,9 @@
   <data name="&gt;&gt;lblDateTo.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <metadata name="dtDateToPicker.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="dtDateToPicker.CustomFormat" xml:space="preserve">
     <value>MM/dd/yyyy</value>
   </data>
@@ -477,60 +522,15 @@
   <data name="&gt;&gt;grpSearchCriteria.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="grpDetails.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="grpDetails.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="&gt;&gt;lblLoadingInformation.Name" xml:space="preserve">
-    <value>lblLoadingInformation</value>
-  </data>
-  <data name="&gt;&gt;lblLoadingInformation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblLoadingInformation.Parent" xml:space="preserve">
-    <value>grpDetails</value>
-  </data>
-  <data name="&gt;&gt;lblLoadingInformation.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;grdViewTransactions.Name" xml:space="preserve">
-    <value>grdViewTransactions</value>
-  </data>
-  <data name="&gt;&gt;grdViewTransactions.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grdViewTransactions.Parent" xml:space="preserve">
-    <value>grpDetails</value>
-  </data>
-  <data name="&gt;&gt;grdViewTransactions.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="grpDetails.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
-  </data>
-  <data name="grpDetails.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 96</value>
-  </data>
-  <data name="grpDetails.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1281, 405</value>
-  </data>
-  <data name="grpDetails.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="grpDetails.Text" xml:space="preserve">
-    <value>Transaction Details</value>
-  </data>
-  <data name="&gt;&gt;grpDetails.Name" xml:space="preserve">
-    <value>grpDetails</value>
-  </data>
-  <data name="&gt;&gt;grpDetails.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grpDetails.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;grpDetails.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
+  <metadata name="lblLoadingInformation.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="lblLoadingInformation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -570,6 +570,9 @@
   <data name="&gt;&gt;lblLoadingInformation.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="grdViewTransactions.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="grdViewTransactions.ColumnHeadersHeight" type="System.Int32, mscorlib">
     <value>30</value>
   </data>
@@ -771,7 +774,37 @@
   <data name="&gt;&gt;grdViewTransactions.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="grpDetails.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="grpDetails.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 96</value>
+  </data>
+  <data name="grpDetails.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1281, 405</value>
+  </data>
+  <data name="grpDetails.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="grpDetails.Text" xml:space="preserve">
+    <value>Transaction Details</value>
+  </data>
+  <data name="&gt;&gt;grpDetails.Name" xml:space="preserve">
+    <value>grpDetails</value>
+  </data>
+  <data name="&gt;&gt;grpDetails.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpDetails.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grpDetails.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">

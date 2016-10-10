@@ -33,17 +33,17 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.lblUserPasswordRequired = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
-            this.lblSigningIn = new System.Windows.Forms.Label();
+            this.lblLoggingIn = new System.Windows.Forms.Label();
             this.lblLanguage = new System.Windows.Forms.Label();
             this.selectLanguage = new System.Windows.Forms.ComboBox();
             this.cmbLocation = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblLocation = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,22 +69,6 @@
             resources.ApplyResources(this.lblPassword, "lblPassword");
             this.lblPassword.Name = "lblPassword";
             // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.Orange;
-            resources.ApplyResources(this.btnLogin, "btnLogin");
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.Orange;
-            resources.ApplyResources(this.btnCancel, "btnCancel");
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
             // lblUserPasswordRequired
             // 
             this.lblUserPasswordRequired.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -99,11 +83,11 @@
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Click += new System.EventHandler(this.lblLogin_Click);
             // 
-            // lblSigningIn
+            // lblLoggingIn
             // 
-            resources.ApplyResources(this.lblSigningIn, "lblSigningIn");
-            this.lblSigningIn.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblSigningIn.Name = "lblSigningIn";
+            resources.ApplyResources(this.lblLoggingIn, "lblLoggingIn");
+            this.lblLoggingIn.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblLoggingIn.Name = "lblLoggingIn";
             // 
             // lblLanguage
             // 
@@ -152,13 +136,31 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.Orange;
+            this.btnCancel.BackgroundImage = global::RFID_FEATHER_ASSETS.Properties.Resources.login_cancel;
+            resources.ApplyResources(this.btnCancel, "btnCancel");
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.Color.Orange;
+            this.btnLogin.BackgroundImage = global::RFID_FEATHER_ASSETS.Properties.Resources.login;
+            resources.ApplyResources(this.btnLogin, "btnLogin");
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
             // LoginActivity
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ControlBox = false;
-            this.Controls.Add(this.lblSigningIn);
+            this.Controls.Add(this.lblLoggingIn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblLocation);
             this.Controls.Add(this.cmbLocation);
@@ -192,7 +194,7 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lblUserPasswordRequired;
         private System.Windows.Forms.Label lblLogin;
-        private System.Windows.Forms.Label lblSigningIn;
+        private System.Windows.Forms.Label lblLoggingIn;
         private System.Windows.Forms.Label lblLanguage;
         private System.Windows.Forms.ComboBox selectLanguage;
         private System.Windows.Forms.ComboBox cmbLocation;

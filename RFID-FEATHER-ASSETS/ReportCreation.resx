@@ -165,6 +165,9 @@
   <data name="chkBoxChangeCamera.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
+  <data name="chkBoxChangeCamera.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="chkBoxChangeCamera.Location" type="System.Drawing.Point, System.Drawing">
     <value>199, 36</value>
   </data>
@@ -231,6 +234,9 @@
   <data name="lblNoCameraAvailable.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
+  <data name="lblNoCameraAvailable.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="lblNoCameraAvailable.Location" type="System.Drawing.Point, System.Drawing">
     <value>46, 166</value>
   </data>
@@ -267,6 +273,9 @@
   <data name="cameraBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
+  <data name="cameraBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="cameraBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>35, 57</value>
   </data>
@@ -297,14 +306,20 @@
   <data name="btnCapturePhoto.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
+  <data name="btnCapturePhoto.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="btnCapturePhoto.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnCapturePhoto.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btnCapturePhoto.Location" type="System.Drawing.Point, System.Drawing">
     <value>35, 337</value>
   </data>
   <data name="btnCapturePhoto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 29</value>
+    <value>280, 30</value>
   </data>
   <data name="btnCapturePhoto.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
@@ -332,6 +347,9 @@
   </data>
   <data name="lblSubmittingInformation.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="lblSubmittingInformation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lblSubmittingInformation.Location" type="System.Drawing.Point, System.Drawing">
     <value>364, 313</value>
@@ -369,14 +387,20 @@
   <data name="btnCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
+  <data name="btnCancel.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="btnCancel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnCancel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
     <value>530, 336</value>
   </data>
   <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 29</value>
+    <value>155, 28</value>
   </data>
   <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
     <value>73</value>
@@ -407,6 +431,9 @@
   </data>
   <data name="lblValidIDPhoto.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="lblValidIDPhoto.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lblValidIDPhoto.Location" type="System.Drawing.Point, System.Drawing">
     <value>559, 90</value>
@@ -447,6 +474,9 @@
   <data name="lblPersonPhoto.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
+  <data name="lblPersonPhoto.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="lblPersonPhoto.Location" type="System.Drawing.Point, System.Drawing">
     <value>400, 90</value>
   </data>
@@ -480,14 +510,20 @@
   <data name="btnSubmit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
+  <data name="btnSubmit.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="btnSubmit.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnSubmit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btnSubmit.Location" type="System.Drawing.Point, System.Drawing">
     <value>364, 336</value>
   </data>
   <data name="btnSubmit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 29</value>
+    <value>155, 28</value>
   </data>
   <data name="btnSubmit.TabIndex" type="System.Int32, mscorlib">
     <value>69</value>
@@ -555,6 +591,9 @@
   <data name="lblNotes.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
+  <data name="lblNotes.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="lblNotes.Location" type="System.Drawing.Point, System.Drawing">
     <value>360, 217</value>
   </data>
@@ -588,6 +627,9 @@
   <data name="imgCapture1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
+  <data name="imgCapture1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="imgCapture1.Location" type="System.Drawing.Point, System.Drawing">
     <value>364, 36</value>
   </data>
@@ -620,6 +662,9 @@
   </data>
   <data name="imgCapture2.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
+  </data>
+  <data name="imgCapture2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="imgCapture2.Location" type="System.Drawing.Point, System.Drawing">
     <value>525, 36</value>
@@ -656,6 +701,9 @@
   </data>
   <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
     <value>47, 344</value>
@@ -734,6 +782,9 @@
   </data>
   <data name="btnBrowseImagePath.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="btnBrowseImagePath.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btnBrowseImagePath.Location" type="System.Drawing.Point, System.Drawing">
     <value>276, 340</value>

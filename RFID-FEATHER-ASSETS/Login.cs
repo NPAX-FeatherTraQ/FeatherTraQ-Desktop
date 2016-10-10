@@ -155,7 +155,7 @@ namespace RFID_FEATHER_ASSETS
                     lblUserPasswordRequired.Visible = false;
 
                     //picLoading.Visible = true;
-                    lblSigningIn.Visible = true;//btnLogin.Text = "Logging in...";
+                    lblLoggingIn.Visible = true;//btnLogin.Text = "Logging in...";
                     this.Refresh();
 
                     GlobalClass.GetSetClass loginInfo = new GlobalClass.GetSetClass();
@@ -176,7 +176,7 @@ namespace RFID_FEATHER_ASSETS
 
                     //retrieve response
                     IRestResponse response = client.Execute(login);
-                    lblSigningIn.Visible = false; 
+                    lblLoggingIn.Visible = false; 
 
                     var content = response.Content;
 
@@ -353,7 +353,7 @@ namespace RFID_FEATHER_ASSETS
                 btnLogin.Text = rm.GetString("btnLogin");
                 btnCancel.Text = rm.GetString("btnCancel");
                 lblLanguage.Text = rm.GetString("lblLanguage");
-                lblSigningIn.Text = rm.GetString("lblSigningIn");
+                lblLoggingIn.Text = rm.GetString("lblSigningIn");
             }
         }
 

@@ -38,7 +38,6 @@
             this.CurrentDateTimer = new System.Windows.Forms.Timer(this.components);
             this.ClearGridTimer = new System.Windows.Forms.Timer(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnReport = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtOwnerName = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -80,6 +79,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.picOwner = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnReport = new System.Windows.Forms.Button();
             this.grdViewRFIDTag = new System.Windows.Forms.DataGridView();
             this.colDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -141,7 +141,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnReport);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.lblLoadingInformation);
             this.groupBox1.Controls.Add(this.lblAssetPhoto3);
@@ -161,17 +160,10 @@
             this.groupBox1.Controls.Add(this.imgCapture2);
             this.groupBox1.Controls.Add(this.imgCapture1);
             this.groupBox1.Controls.Add(this.grpBoxReportedInfo);
+            this.groupBox1.Controls.Add(this.btnReport);
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
-            // 
-            // btnReport
-            // 
-            resources.ApplyResources(this.btnReport, "btnReport");
-            this.btnReport.BackColor = System.Drawing.Color.Orange;
-            this.btnReport.Name = "btnReport";
-            this.btnReport.UseVisualStyleBackColor = false;
-            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // groupBox2
             // 
@@ -458,6 +450,15 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
+            // btnReport
+            // 
+            resources.ApplyResources(this.btnReport, "btnReport");
+            this.btnReport.BackColor = System.Drawing.Color.Orange;
+            this.btnReport.BackgroundImage = global::RFID_FEATHER_ASSETS.Properties.Resources.create_report_big;
+            this.btnReport.Name = "btnReport";
+            this.btnReport.UseVisualStyleBackColor = false;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            // 
             // grdViewRFIDTag
             // 
             this.grdViewRFIDTag.AllowUserToAddRows = false;
@@ -664,10 +665,10 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.grdViewRFIDTag);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.lblLoginUserName);
             this.Controls.Add(this.lblCurrentDateTime);
-            this.Controls.Add(this.grdViewRFIDTag);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Tracking";

@@ -157,7 +157,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblCurrentDateTime.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <metadata name="VerifyTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>127, 17</value>
@@ -174,348 +174,6 @@
   <metadata name="groupBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="label3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="btnReport.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="groupBox2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblLoadingInformation.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblSubmittingInformation.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAssetPhoto3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAssetPhoto2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAssetPhoto1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblValidIDPhoto.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblOwnerPhoto.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="btnBack.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="btnSubmit.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblOwnerPic.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAssetPic.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="imgCapture5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="imgCapture4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="imgCapture3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="imgCapture2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="imgCapture1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="grpBoxReportedInfo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnReport.Name" xml:space="preserve">
-    <value>btnReport</value>
-  </data>
-  <data name="&gt;&gt;btnReport.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnReport.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;btnReport.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;lblLoadingInformation.Name" xml:space="preserve">
-    <value>lblLoadingInformation</value>
-  </data>
-  <data name="&gt;&gt;lblLoadingInformation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblLoadingInformation.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;lblLoadingInformation.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;lblSubmittingInformation.Name" xml:space="preserve">
-    <value>lblSubmittingInformation</value>
-  </data>
-  <data name="&gt;&gt;lblSubmittingInformation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblSubmittingInformation.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;lblSubmittingInformation.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;lblAssetPhoto3.Name" xml:space="preserve">
-    <value>lblAssetPhoto3</value>
-  </data>
-  <data name="&gt;&gt;lblAssetPhoto3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblAssetPhoto3.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;lblAssetPhoto3.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;lblAssetPhoto2.Name" xml:space="preserve">
-    <value>lblAssetPhoto2</value>
-  </data>
-  <data name="&gt;&gt;lblAssetPhoto2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblAssetPhoto2.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;lblAssetPhoto2.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;lblAssetPhoto1.Name" xml:space="preserve">
-    <value>lblAssetPhoto1</value>
-  </data>
-  <data name="&gt;&gt;lblAssetPhoto1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblAssetPhoto1.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;lblAssetPhoto1.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;lblValidIDPhoto.Name" xml:space="preserve">
-    <value>lblValidIDPhoto</value>
-  </data>
-  <data name="&gt;&gt;lblValidIDPhoto.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblValidIDPhoto.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;lblValidIDPhoto.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;lblOwnerPhoto.Name" xml:space="preserve">
-    <value>lblOwnerPhoto</value>
-  </data>
-  <data name="&gt;&gt;lblOwnerPhoto.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblOwnerPhoto.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;lblOwnerPhoto.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;btnBack.Name" xml:space="preserve">
-    <value>btnBack</value>
-  </data>
-  <data name="&gt;&gt;btnBack.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnBack.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;btnBack.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;btnSubmit.Name" xml:space="preserve">
-    <value>btnSubmit</value>
-  </data>
-  <data name="&gt;&gt;btnSubmit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSubmit.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;btnSubmit.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;lblOwnerPic.Name" xml:space="preserve">
-    <value>lblOwnerPic</value>
-  </data>
-  <data name="&gt;&gt;lblOwnerPic.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblOwnerPic.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;lblOwnerPic.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;lblAssetPic.Name" xml:space="preserve">
-    <value>lblAssetPic</value>
-  </data>
-  <data name="&gt;&gt;lblAssetPic.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblAssetPic.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;lblAssetPic.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
-  </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;imgCapture5.Name" xml:space="preserve">
-    <value>imgCapture5</value>
-  </data>
-  <data name="&gt;&gt;imgCapture5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;imgCapture5.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;imgCapture5.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;imgCapture4.Name" xml:space="preserve">
-    <value>imgCapture4</value>
-  </data>
-  <data name="&gt;&gt;imgCapture4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;imgCapture4.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;imgCapture4.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;imgCapture3.Name" xml:space="preserve">
-    <value>imgCapture3</value>
-  </data>
-  <data name="&gt;&gt;imgCapture3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;imgCapture3.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;imgCapture3.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;imgCapture2.Name" xml:space="preserve">
-    <value>imgCapture2</value>
-  </data>
-  <data name="&gt;&gt;imgCapture2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;imgCapture2.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;imgCapture2.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;imgCapture1.Name" xml:space="preserve">
-    <value>imgCapture1</value>
-  </data>
-  <data name="&gt;&gt;imgCapture1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;imgCapture1.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;imgCapture1.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;grpBoxReportedInfo.Name" xml:space="preserve">
-    <value>grpBoxReportedInfo</value>
-  </data>
-  <data name="&gt;&gt;grpBoxReportedInfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grpBoxReportedInfo.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;grpBoxReportedInfo.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="groupBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="groupBox1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>884, 688</value>
-  </data>
-  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>43</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <metadata name="label3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -546,257 +204,11 @@
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="btnReport.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="btnReport.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="btnReport.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
-  </data>
-  <data name="btnReport.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnReport.Location" type="System.Drawing.Point, System.Drawing">
-    <value>733, 301</value>
-  </data>
-  <data name="btnReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 35</value>
-  </data>
-  <data name="btnReport.TabIndex" type="System.Int32, mscorlib">
-    <value>77</value>
-  </data>
-  <data name="btnReport.Text" xml:space="preserve">
-    <value>Report</value>
-  </data>
-  <data name="btnReport.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;btnReport.Name" xml:space="preserve">
-    <value>btnReport</value>
-  </data>
-  <data name="&gt;&gt;btnReport.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnReport.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;btnReport.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <metadata name="groupBox2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="txtOwnerName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label9.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="txtValidityPeriod.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblValidUntil.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblDesc.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="txtTakeOutNote.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblMemo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="txtAssetName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="txtRFIDTag.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblTag.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="txtDescription.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="groupBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
-  </data>
-  <data name="&gt;&gt;txtOwnerName.Name" xml:space="preserve">
-    <value>txtOwnerName</value>
-  </data>
-  <data name="&gt;&gt;txtOwnerName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtOwnerName.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;txtOwnerName.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label9.Name" xml:space="preserve">
-    <value>label9</value>
-  </data>
-  <data name="&gt;&gt;label9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;txtValidityPeriod.Name" xml:space="preserve">
-    <value>txtValidityPeriod</value>
-  </data>
-  <data name="&gt;&gt;txtValidityPeriod.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtValidityPeriod.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;txtValidityPeriod.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;lblValidUntil.Name" xml:space="preserve">
-    <value>lblValidUntil</value>
-  </data>
-  <data name="&gt;&gt;lblValidUntil.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblValidUntil.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;lblValidUntil.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;lblDesc.Name" xml:space="preserve">
-    <value>lblDesc</value>
-  </data>
-  <data name="&gt;&gt;lblDesc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDesc.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;lblDesc.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;txtTakeOutNote.Name" xml:space="preserve">
-    <value>txtTakeOutNote</value>
-  </data>
-  <data name="&gt;&gt;txtTakeOutNote.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtTakeOutNote.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;txtTakeOutNote.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;lblMemo.Name" xml:space="preserve">
-    <value>lblMemo</value>
-  </data>
-  <data name="&gt;&gt;lblMemo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblMemo.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;lblMemo.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;txtAssetName.Name" xml:space="preserve">
-    <value>txtAssetName</value>
-  </data>
-  <data name="&gt;&gt;txtAssetName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtAssetName.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;txtAssetName.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;txtRFIDTag.Name" xml:space="preserve">
-    <value>txtRFIDTag</value>
-  </data>
-  <data name="&gt;&gt;txtRFIDTag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtRFIDTag.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;txtRFIDTag.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;lblTag.Name" xml:space="preserve">
-    <value>lblTag</value>
-  </data>
-  <data name="&gt;&gt;lblTag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblTag.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;lblTag.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;txtDescription.Name" xml:space="preserve">
-    <value>txtDescription</value>
-  </data>
-  <data name="&gt;&gt;txtDescription.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtDescription.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;txtDescription.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;label8.Name" xml:space="preserve">
-    <value>label8</value>
-  </data>
-  <data name="&gt;&gt;label8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="groupBox2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>594, 17</value>
-  </data>
-  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 282</value>
-  </data>
-  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>59</value>
-  </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>Asset Information</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <metadata name="txtOwnerName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1260,6 +672,33 @@
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
+  <data name="groupBox2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>594, 17</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 282</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Asset Information</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <metadata name="lblLoadingInformation.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1300,7 +739,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblLoadingInformation.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <metadata name="lblSubmittingInformation.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1342,7 +781,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblSubmittingInformation.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <metadata name="lblAssetPhoto3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1384,7 +823,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblAssetPhoto3.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <metadata name="lblAssetPhoto2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1426,7 +865,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblAssetPhoto2.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <metadata name="lblAssetPhoto1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1468,7 +907,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblAssetPhoto1.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <metadata name="lblValidIDPhoto.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1510,7 +949,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblValidIDPhoto.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <metadata name="lblOwnerPhoto.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1552,12 +991,37 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblOwnerPhoto.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <metadata name="btnBack.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="btnBack.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btnBack.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAABE
+        HQAARB0BbZYfiwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOFSURBVEhLrZZd
+        SNNRGMaditowK7VEUmY4rGTza24zvVCIaJR5Ea2boIgwQ7CkJIK60YyoKy2CiCAvgzS76MNuI6UV0QeJ
+        YKY3hlD4RS4lM/s9/6aImy6YBx7e834+55z3/M8WpVFaWrq+qKiotbCw8KfD4ZiPBNQZA03MU43iGuXl
+        5RudTudzjHNLgyPEdHFxcRvINEhgvYlxLQnmKS74QRUUMVEYZ8AcZN+RgziGIgW1RpGqWWu1WuNFMs9x
+        +enHLYyHmUcMat6DxI+ss1gsCQskExiPG+e3BoNaZ1QziMTlcp0IxEQ8IKkPRxJTUFCw2e12Z3HzEmSw
+        2+0Z+LetBuUY2YywJMxTgG7cYElJiQuTCb0b/xAyJFjQF3BD+Rr/RYKthcB+VufEZGL+Av8AvpDA1w9a
+        la8RlsTr9cYwz4AgF59Ztry8vBwSbcgVoRzFaoQloQ+x6DnYy7AlycbVRnWULQfHWYbPzfW3kpeoWA1s
+        J/GPgNAkubm5yazkKnhLcBEmHdcT8I7YRUgnr5OQavrh4HJsUr4Geh4xjfj2czJxQSToG9AvUOQxsGEy
+        YdM71AWeBdBFzH1wRPE2my1NC2JegdDOLOwyOXAS0SF7kp+fv5VC2/EZPSExm8Sd6DsEzYnJ0utN3EFs
+        7ciXyA9IH/U6mdcs7g5l+XHFEWjDtptCGwMx6sEeAV8h0qw4ZA1xn5H6iVh4ZP8QMwNGwDXj+5FjKQl6
+        Ks47yG+seBcm9UQ9GMU2QlwzR7GO+SFsA8hJcJZ5LxDJMPIueAXGQW0QiVbP8TSBHuwFIiHmIfob8BTi
+        A+oByQ+AH9tpYmKxe4jvw9aQnp5uJuco+jDwBZEwTB6PJx67+hEjg56XyspKs6R6RsFi/D3gN0U/kb+X
+        40uEMFvHg9QlaAfTYCIUSdhBTgV4r1xIlN8ngoAvFbQA46ecBc3KqGf+B4HniIlWYLhBwRJyfOSq2cMs
+        sEE7oEaKJLoXv3ryi1h/FExXUKYI7gbnmdevBIpUk2Qnx8L8EfEz6LeRZiTC2IGXjzENeZEcXZbehe21
+        gUmM2tHESsA/gmzUh0b8KenIbgiOITuAevAaXALtxOp2NRvbZ5LJ6qoIrsVZFwb7OI4kfWjMr4Mx8r8i
+        RaC/RLPooyIAHehGr4yhW6MffT1oq0EfIeFG73h9t1CwlmI+io2zUPVgCnzEfvkfQVT0Xx/8WnAbk382
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnBack.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="btnBack.Font" type="System.Drawing.Font, System.Drawing">
@@ -1567,16 +1031,16 @@
     <value>NoControl</value>
   </data>
   <data name="btnBack.Location" type="System.Drawing.Point, System.Drawing">
-    <value>594, 300</value>
+    <value>594, 301</value>
   </data>
   <data name="btnBack.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 35</value>
+    <value>130, 34</value>
   </data>
   <data name="btnBack.TabIndex" type="System.Int32, mscorlib">
     <value>69</value>
   </data>
   <data name="btnBack.Text" xml:space="preserve">
-    <value>Back</value>
+    <value>Cancel</value>
   </data>
   <data name="&gt;&gt;btnBack.Name" xml:space="preserve">
     <value>btnBack</value>
@@ -1588,7 +1052,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;btnBack.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>9</value>
   </data>
   <metadata name="btnSubmit.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1624,7 +1088,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;btnSubmit.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>10</value>
   </data>
   <metadata name="lblOwnerPic.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1666,7 +1130,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblOwnerPic.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>11</value>
   </data>
   <metadata name="lblAssetPic.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1708,7 +1172,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblAssetPic.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>12</value>
   </data>
   <metadata name="label6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1738,7 +1202,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>13</value>
   </data>
   <metadata name="imgCapture5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1774,7 +1238,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;imgCapture5.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>14</value>
   </data>
   <metadata name="imgCapture4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1810,7 +1274,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;imgCapture4.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>15</value>
   </data>
   <metadata name="imgCapture3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1846,7 +1310,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;imgCapture3.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>16</value>
   </data>
   <metadata name="imgCapture2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1882,7 +1346,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;imgCapture2.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>17</value>
   </data>
   <metadata name="imgCapture1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1918,178 +1382,13 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;imgCapture1.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>18</value>
   </data>
   <metadata name="grpBoxReportedInfo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="txtReportedNote.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="picPersonBroughtOut.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="txtOwnerDescription.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="btnVerifyAsset.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="txtOwnerPosition.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="picOwner.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="grpBoxReportedInfo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
-  </data>
-  <data name="&gt;&gt;txtReportedNote.Name" xml:space="preserve">
-    <value>txtReportedNote</value>
-  </data>
-  <data name="&gt;&gt;txtReportedNote.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtReportedNote.Parent" xml:space="preserve">
-    <value>grpBoxReportedInfo</value>
-  </data>
-  <data name="&gt;&gt;txtReportedNote.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;picPersonBroughtOut.Name" xml:space="preserve">
-    <value>picPersonBroughtOut</value>
-  </data>
-  <data name="&gt;&gt;picPersonBroughtOut.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;picPersonBroughtOut.Parent" xml:space="preserve">
-    <value>grpBoxReportedInfo</value>
-  </data>
-  <data name="&gt;&gt;picPersonBroughtOut.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>grpBoxReportedInfo</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;txtOwnerDescription.Name" xml:space="preserve">
-    <value>txtOwnerDescription</value>
-  </data>
-  <data name="&gt;&gt;txtOwnerDescription.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtOwnerDescription.Parent" xml:space="preserve">
-    <value>grpBoxReportedInfo</value>
-  </data>
-  <data name="&gt;&gt;txtOwnerDescription.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;btnVerifyAsset.Name" xml:space="preserve">
-    <value>btnVerifyAsset</value>
-  </data>
-  <data name="&gt;&gt;btnVerifyAsset.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnVerifyAsset.Parent" xml:space="preserve">
-    <value>grpBoxReportedInfo</value>
-  </data>
-  <data name="&gt;&gt;btnVerifyAsset.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;txtOwnerPosition.Name" xml:space="preserve">
-    <value>txtOwnerPosition</value>
-  </data>
-  <data name="&gt;&gt;txtOwnerPosition.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtOwnerPosition.Parent" xml:space="preserve">
-    <value>grpBoxReportedInfo</value>
-  </data>
-  <data name="&gt;&gt;txtOwnerPosition.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>grpBoxReportedInfo</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;picOwner.Name" xml:space="preserve">
-    <value>picOwner</value>
-  </data>
-  <data name="&gt;&gt;picOwner.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;picOwner.Parent" xml:space="preserve">
-    <value>grpBoxReportedInfo</value>
-  </data>
-  <data name="&gt;&gt;picOwner.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>grpBoxReportedInfo</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="grpBoxReportedInfo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
-  </data>
-  <data name="grpBoxReportedInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>899, 350</value>
-  </data>
-  <data name="grpBoxReportedInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 24</value>
-  </data>
-  <data name="grpBoxReportedInfo.TabIndex" type="System.Int32, mscorlib">
-    <value>48</value>
-  </data>
-  <data name="grpBoxReportedInfo.Text" xml:space="preserve">
-    <value>Reported Information</value>
-  </data>
-  <data name="grpBoxReportedInfo.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;grpBoxReportedInfo.Name" xml:space="preserve">
-    <value>grpBoxReportedInfo</value>
-  </data>
-  <data name="&gt;&gt;grpBoxReportedInfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grpBoxReportedInfo.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;grpBoxReportedInfo.ZOrder" xml:space="preserve">
-    <value>20</value>
   </data>
   <metadata name="txtReportedNote.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2421,6 +1720,105 @@
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="grpBoxReportedInfo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
+  </data>
+  <data name="grpBoxReportedInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>899, 350</value>
+  </data>
+  <data name="grpBoxReportedInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 24</value>
+  </data>
+  <data name="grpBoxReportedInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="grpBoxReportedInfo.Text" xml:space="preserve">
+    <value>Reported Information</value>
+  </data>
+  <data name="grpBoxReportedInfo.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;grpBoxReportedInfo.Name" xml:space="preserve">
+    <value>grpBoxReportedInfo</value>
+  </data>
+  <data name="&gt;&gt;grpBoxReportedInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpBoxReportedInfo.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;grpBoxReportedInfo.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <metadata name="btnReport.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="btnReport.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btnReport.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btnReport.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
+  </data>
+  <data name="btnReport.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnReport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>733, 301</value>
+  </data>
+  <data name="btnReport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 34</value>
+  </data>
+  <data name="btnReport.TabIndex" type="System.Int32, mscorlib">
+    <value>77</value>
+  </data>
+  <data name="btnReport.Text" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="btnReport.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btnReport.Name" xml:space="preserve">
+    <value>btnReport</value>
+  </data>
+  <data name="&gt;&gt;btnReport.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnReport.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;btnReport.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="groupBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="groupBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>884, 688</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <metadata name="grdViewRFIDTag.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -2545,7 +1943,7 @@
     <value>0, 0</value>
   </data>
   <data name="grdViewRFIDTag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>884, 688</value>
+    <value>884, 666</value>
   </data>
   <data name="grdViewRFIDTag.TabIndex" type="System.Int32, mscorlib">
     <value>85</value>
@@ -2560,7 +1958,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;grdViewRFIDTag.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>0</value>
   </data>
   <metadata name="lblLoginUserName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2599,7 +1997,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblLoginUserName.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <metadata name="ReadLoopTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>538, 17</value>
@@ -2610,11 +2008,35 @@
   <metadata name="statusStrip1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="lblMsgAssetNotRegister.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="lblMsgAssetNotRegister.Size" type="System.Drawing.Size, System.Drawing">
+    <value>468, 19</value>
+  </data>
+  <data name="lblMsgAssetNotRegister.Text" xml:space="preserve">
+    <value>Scanned RFID Tag is not registered. Please go to admin for the registration.</value>
+  </data>
+  <data name="lblMsgAssetNotRegister.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblSystemInfo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="lblSystemInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>869, 17</value>
+  </data>
+  <data name="lblSystemInfo.Text" xml:space="preserve">
+    <value>Display System Information</value>
+  </data>
+  <data name="lblSystemInfo.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 664</value>
+    <value>0, 666</value>
   </data>
   <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>884, 24</value>
+    <value>884, 22</value>
   </data>
   <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>87</value>
@@ -2632,31 +2054,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lblMsgAssetNotRegister.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10pt</value>
-  </data>
-  <data name="lblMsgAssetNotRegister.Size" type="System.Drawing.Size, System.Drawing">
-    <value>468, 19</value>
-  </data>
-  <data name="lblMsgAssetNotRegister.Text" xml:space="preserve">
-    <value>Scanned RFID Tag is not registered. Please go to admin for the registration.</value>
-  </data>
-  <data name="lblMsgAssetNotRegister.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblSystemInfo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10pt</value>
-  </data>
-  <data name="lblSystemInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>869, 19</value>
-  </data>
-  <data name="lblSystemInfo.Text" xml:space="preserve">
-    <value>Display System Information</value>
-  </data>
-  <data name="lblSystemInfo.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+    <value>1</value>
   </data>
   <data name="dataGridViewImageColumn1.HeaderText" xml:space="preserve">
     <value />

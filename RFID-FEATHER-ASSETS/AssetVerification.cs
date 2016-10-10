@@ -337,6 +337,7 @@ namespace RFID_FEATHER_ASSETS
                                             //Check Validity Expiration
                                             if (verifyResult.startDate > Convert.ToDateTime(DateTime.Now.ToString("g")) && verifyResult.startDate != DateTime.MinValue)
                                             {
+                                                row.Cells["colStatus"].ToolTipText = row.Cells["colValidityPeriod"].Value.ToString();
                                                 row.Cells["colStatus"].Value = "INVALID";
                                                 row.DefaultCellStyle.BackColor = Color.Black;
                                                 row.DefaultCellStyle.ForeColor = Color.White;
@@ -344,6 +345,7 @@ namespace RFID_FEATHER_ASSETS
                                             }
                                             else if (verifyResult.validUntil < Convert.ToDateTime(DateTime.Now.ToString("g")) && verifyResult.validUntil != DateTime.MinValue)
                                             {
+                                                row.Cells["colStatus"].ToolTipText = row.Cells["colValidityPeriod"].Value.ToString();
                                                 row.Cells["colStatus"].Value = "EXPIRED";
                                                 row.DefaultCellStyle.BackColor = Color.Orange;
                                                 row.DefaultCellStyle.ForeColor = Color.White;
@@ -1525,14 +1527,14 @@ namespace RFID_FEATHER_ASSETS
                         {
                             string[] ReadUrls = urls.Split(',');
 
-                            if (ReadUrls.Length > 1)
+                            if (ReadUrls.Length > 0)
                             {
-                                imgCapture1.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[1]);
+                                imgCapture1.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[0]);
                                 lblOwnerPhoto.Visible = false;
                             }
-                            if (ReadUrls.Length > 2)
+                            if (ReadUrls.Length > 1)
                             {
-                                imgCapture2.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[2]);
+                                imgCapture2.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[1]);
                                 lblValidIDPhoto.Visible = false;
                             }
                         }
@@ -1678,19 +1680,19 @@ namespace RFID_FEATHER_ASSETS
                                         string[] ReadUrls = urls.Split(',');
                                         //this.Invoke(new MethodInvoker(delegate
                                         //{
+                                        if (ReadUrls.Length > 0)
+                                        {
+                                            imgCapture3.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[0]);
+                                            lblAssetPhoto1.Visible = false;
+                                        }
                                         if (ReadUrls.Length > 1)
                                         {
-                                            imgCapture3.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[1]);
-                                            lblAssetPhoto1.Visible = false;
+                                            imgCapture4.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[1]);
+                                            lblAssetPhoto2.Visible = false;
                                         }
                                         if (ReadUrls.Length > 2)
                                         {
-                                            imgCapture4.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[2]);
-                                            lblAssetPhoto2.Visible = false;
-                                        }
-                                        if (ReadUrls.Length > 3)
-                                        {
-                                            imgCapture5.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[3]);
+                                            imgCapture5.Load("http://52.163.93.95:8080/FeatherAssets/api/images/1/asset/" + ReadUrls[2]);
                                             lblAssetPhoto3.Visible = false;
                                         }
                                         //}));
@@ -1723,7 +1725,7 @@ namespace RFID_FEATHER_ASSETS
                                     getownerInfo(assetInfo.ownerUserId /*, assetInfo.validUntil*/);
                                     if (Convert.ToString(grdViewRFIDTag.Rows[e.RowIndex].Cells["colStatus"].Value).ToString() == "INVALID")
                                     {
-                                        MessageBox.Show("ID is not yet valid." + "\n" + "Please check the start date of validity.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                                        MessageBox.Show("ID is not yet valid." + "\n" + "(Validity Period: " + txtValidityPeriod.Text + ")" + "\n" + "\n" + "Please check the start date of validity.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
                                         btnBack.PerformClick();
                                     }
                                     if (Convert.ToString(grdViewRFIDTag.Rows[e.RowIndex].Cells["colStatus"].Value).ToString() == "EXPIRED")

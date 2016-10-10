@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransactionHistory));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grpSearchCriteria = new System.Windows.Forms.GroupBox();
             this.cmbAssetList = new System.Windows.Forms.ComboBox();
             this.cmbOwnerList = new System.Windows.Forms.ComboBox();
@@ -118,6 +118,7 @@
             // btnGenerate
             // 
             this.btnGenerate.BackColor = System.Drawing.Color.Orange;
+            this.btnGenerate.BackgroundImage = global::RFID_FEATHER_ASSETS.Properties.Resources.generate;
             resources.ApplyResources(this.btnGenerate, "btnGenerate");
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.UseVisualStyleBackColor = false;
@@ -126,6 +127,7 @@
             // btnExport
             // 
             this.btnExport.BackColor = System.Drawing.Color.LightGreen;
+            this.btnExport.BackgroundImage = global::RFID_FEATHER_ASSETS.Properties.Resources.export;
             resources.ApplyResources(this.btnExport, "btnExport");
             this.btnExport.Name = "btnExport";
             this.btnExport.UseVisualStyleBackColor = false;
@@ -199,14 +201,14 @@
             this.ColRegisterId,
             this.ColUpdateId,
             this.ColUpdatedAt});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdViewTransactions.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdViewTransactions.DefaultCellStyle = dataGridViewCellStyle1;
             this.grdViewTransactions.Name = "grdViewTransactions";
             this.grdViewTransactions.ReadOnly = true;
             this.grdViewTransactions.RowHeadersVisible = false;

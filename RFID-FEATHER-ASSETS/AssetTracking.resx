@@ -157,7 +157,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblCurrentDateTime.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <metadata name="VerifyTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>127, 17</value>
@@ -174,45 +174,6 @@
   <metadata name="groupBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="btnReport.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="btnReport.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="btnReport.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
-  </data>
-  <data name="btnReport.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnReport.Location" type="System.Drawing.Point, System.Drawing">
-    <value>732, 300</value>
-  </data>
-  <data name="btnReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 35</value>
-  </data>
-  <data name="btnReport.TabIndex" type="System.Int32, mscorlib">
-    <value>77</value>
-  </data>
-  <data name="btnReport.Text" xml:space="preserve">
-    <value>Report</value>
-  </data>
-  <data name="btnReport.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;btnReport.Name" xml:space="preserve">
-    <value>btnReport</value>
-  </data>
-  <data name="&gt;&gt;btnReport.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnReport.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;btnReport.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="groupBox2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -727,7 +688,7 @@
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
   <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>593, 17</value>
+    <value>593, 29</value>
   </data>
   <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>269, 282</value>
@@ -748,7 +709,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <metadata name="lblLoadingInformation.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -763,7 +724,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblLoadingInformation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 152</value>
+    <value>38, 164</value>
   </data>
   <data name="lblLoadingInformation.Size" type="System.Drawing.Size, System.Drawing">
     <value>533, 42</value>
@@ -790,7 +751,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblLoadingInformation.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <metadata name="lblAssetPhoto3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -808,7 +769,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblAssetPhoto3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>683, 481</value>
+    <value>683, 493</value>
   </data>
   <data name="lblAssetPhoto3.Size" type="System.Drawing.Size, System.Drawing">
     <value>109, 20</value>
@@ -832,7 +793,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblAssetPhoto3.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <metadata name="lblAssetPhoto2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -850,7 +811,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblAssetPhoto2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>383, 481</value>
+    <value>383, 493</value>
   </data>
   <data name="lblAssetPhoto2.Size" type="System.Drawing.Size, System.Drawing">
     <value>109, 20</value>
@@ -874,7 +835,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblAssetPhoto2.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <metadata name="lblAssetPhoto1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -892,7 +853,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblAssetPhoto1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>114, 481</value>
+    <value>114, 493</value>
   </data>
   <data name="lblAssetPhoto1.Size" type="System.Drawing.Size, System.Drawing">
     <value>109, 20</value>
@@ -916,7 +877,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblAssetPhoto1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <metadata name="lblValidIDPhoto.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -934,7 +895,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblValidIDPhoto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>375, 152</value>
+    <value>375, 164</value>
   </data>
   <data name="lblValidIDPhoto.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 20</value>
@@ -958,7 +919,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblValidIDPhoto.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <metadata name="lblOwnerPhoto.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -976,7 +937,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblOwnerPhoto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>69, 152</value>
+    <value>69, 164</value>
   </data>
   <data name="lblOwnerPhoto.Size" type="System.Drawing.Size, System.Drawing">
     <value>101, 20</value>
@@ -1000,7 +961,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblOwnerPhoto.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <metadata name="label3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1012,7 +973,7 @@
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 654</value>
+    <value>20, 666</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>843, 10</value>
@@ -1030,12 +991,37 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <metadata name="btnBack.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="btnBack.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btnBack.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAABE
+        HwAARB8BEmjcAgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOFSURBVEhLrZZd
+        SNNRGMaditowK7VEUmY4rGTza24zvVCIaJR5Ea2boIgwQ7CkJIK60YyoKy2CiCAvgzS76MNuI6UV0QeJ
+        YKY3hlD4RS4lM/s9/6aImy6YBx7e834+55z3/M8WpVFaWrq+qKiotbCw8KfD4ZiPBNQZA03MU43iGuXl
+        5RudTudzjHNLgyPEdHFxcRvINEhgvYlxLQnmKS74QRUUMVEYZ8AcZN+RgziGIgW1RpGqWWu1WuNFMs9x
+        +enHLYyHmUcMat6DxI+ss1gsCQskExiPG+e3BoNaZ1QziMTlcp0IxEQ8IKkPRxJTUFCw2e12Z3HzEmSw
+        2+0Z+LetBuUY2YywJMxTgG7cYElJiQuTCb0b/xAyJFjQF3BD+Rr/RYKthcB+VufEZGL+Av8AvpDA1w9a
+        la8RlsTr9cYwz4AgF59Ztry8vBwSbcgVoRzFaoQloQ+x6DnYy7AlycbVRnWULQfHWYbPzfW3kpeoWA1s
+        J/GPgNAkubm5yazkKnhLcBEmHdcT8I7YRUgnr5OQavrh4HJsUr4Geh4xjfj2czJxQSToG9AvUOQxsGEy
+        YdM71AWeBdBFzH1wRPE2my1NC2JegdDOLOwyOXAS0SF7kp+fv5VC2/EZPSExm8Sd6DsEzYnJ0utN3EFs
+        7ciXyA9IH/U6mdcs7g5l+XHFEWjDtptCGwMx6sEeAV8h0qw4ZA1xn5H6iVh4ZP8QMwNGwDXj+5FjKQl6
+        Ks47yG+seBcm9UQ9GMU2QlwzR7GO+SFsA8hJcJZ5LxDJMPIueAXGQW0QiVbP8TSBHuwFIiHmIfob8BTi
+        A+oByQ+AH9tpYmKxe4jvw9aQnp5uJuco+jDwBZEwTB6PJx67+hEjg56XyspKs6R6RsFi/D3gN0U/kb+X
+        40uEMFvHg9QlaAfTYCIUSdhBTgV4r1xIlN8ngoAvFbQA46ecBc3KqGf+B4HniIlWYLhBwRJyfOSq2cMs
+        sEE7oEaKJLoXv3ryi1h/FExXUKYI7gbnmdevBIpUk2Qnx8L8EfEz6LeRZiTC2IGXjzENeZEcXZbehe21
+        gUmM2tHESsA/gmzUh0b8KenIbgiOITuAevAaXALtxOp2NRvbZ5LJ6qoIrsVZFwb7OI4kfWjMr4Mx8r8i
+        RaC/RLPooyIAHehGr4yhW6MffT1oq0EfIeFG73h9t1CwlmI+io2zUPVgCnzEfvkfQVT0Xx/8WnAbk382
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnBack.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="btnBack.Font" type="System.Drawing.Font, System.Drawing">
@@ -1045,16 +1031,16 @@
     <value>NoControl</value>
   </data>
   <data name="btnBack.Location" type="System.Drawing.Point, System.Drawing">
-    <value>593, 300</value>
+    <value>594, 312</value>
   </data>
   <data name="btnBack.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 35</value>
+    <value>130, 34</value>
   </data>
   <data name="btnBack.TabIndex" type="System.Int32, mscorlib">
     <value>69</value>
   </data>
   <data name="btnBack.Text" xml:space="preserve">
-    <value>Back</value>
+    <value>Cancel</value>
   </data>
   <data name="&gt;&gt;btnBack.Name" xml:space="preserve">
     <value>btnBack</value>
@@ -1066,7 +1052,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;btnBack.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <metadata name="btnSubmit.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1081,7 +1067,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnSubmit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>663, 259</value>
+    <value>663, 271</value>
   </data>
   <data name="btnSubmit.Size" type="System.Drawing.Size, System.Drawing">
     <value>145, 35</value>
@@ -1102,7 +1088,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;btnSubmit.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>9</value>
   </data>
   <metadata name="lblOwnerPic.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1120,7 +1106,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblOwnerPic.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 16</value>
+    <value>19, 28</value>
   </data>
   <data name="lblOwnerPic.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 20</value>
@@ -1144,7 +1130,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblOwnerPic.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>10</value>
   </data>
   <metadata name="lblAssetPic.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1162,7 +1148,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblAssetPic.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 346</value>
+    <value>19, 358</value>
   </data>
   <data name="lblAssetPic.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 20</value>
@@ -1186,7 +1172,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblAssetPic.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>11</value>
   </data>
   <metadata name="label6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1198,7 +1184,7 @@
     <value>NoControl</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 325</value>
+    <value>23, 337</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>562, 10</value>
@@ -1216,7 +1202,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>12</value>
   </data>
   <metadata name="imgCapture5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1231,7 +1217,7 @@
     <value>NoControl</value>
   </data>
   <data name="imgCapture5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>582, 374</value>
+    <value>582, 386</value>
   </data>
   <data name="imgCapture5.Size" type="System.Drawing.Size, System.Drawing">
     <value>280, 280</value>
@@ -1252,7 +1238,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;imgCapture5.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>13</value>
   </data>
   <metadata name="imgCapture4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1267,7 +1253,7 @@
     <value>NoControl</value>
   </data>
   <data name="imgCapture4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>301, 374</value>
+    <value>301, 386</value>
   </data>
   <data name="imgCapture4.Size" type="System.Drawing.Size, System.Drawing">
     <value>280, 280</value>
@@ -1288,7 +1274,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;imgCapture4.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>14</value>
   </data>
   <metadata name="imgCapture3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1303,7 +1289,7 @@
     <value>NoControl</value>
   </data>
   <data name="imgCapture3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 374</value>
+    <value>20, 386</value>
   </data>
   <data name="imgCapture3.Size" type="System.Drawing.Size, System.Drawing">
     <value>280, 280</value>
@@ -1324,7 +1310,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;imgCapture3.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>15</value>
   </data>
   <metadata name="imgCapture2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1339,7 +1325,7 @@
     <value>NoControl</value>
   </data>
   <data name="imgCapture2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>304, 45</value>
+    <value>304, 57</value>
   </data>
   <data name="imgCapture2.Size" type="System.Drawing.Size, System.Drawing">
     <value>280, 280</value>
@@ -1360,7 +1346,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;imgCapture2.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>16</value>
   </data>
   <metadata name="imgCapture1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1375,7 +1361,7 @@
     <value>NoControl</value>
   </data>
   <data name="imgCapture1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 45</value>
+    <value>23, 57</value>
   </data>
   <data name="imgCapture1.Size" type="System.Drawing.Size, System.Drawing">
     <value>280, 280</value>
@@ -1396,7 +1382,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;imgCapture1.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>17</value>
   </data>
   <metadata name="grpBoxReportedInfo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1738,7 +1724,7 @@
     <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
   </data>
   <data name="grpBoxReportedInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>850, 350</value>
+    <value>850, 362</value>
   </data>
   <data name="grpBoxReportedInfo.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 24</value>
@@ -1762,6 +1748,48 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;grpBoxReportedInfo.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <metadata name="btnReport.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="btnReport.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btnReport.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btnReport.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
+  </data>
+  <data name="btnReport.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnReport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>733, 312</value>
+  </data>
+  <data name="btnReport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 34</value>
+  </data>
+  <data name="btnReport.TabIndex" type="System.Int32, mscorlib">
+    <value>77</value>
+  </data>
+  <data name="btnReport.Text" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="btnReport.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btnReport.Name" xml:space="preserve">
+    <value>btnReport</value>
+  </data>
+  <data name="&gt;&gt;btnReport.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnReport.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;btnReport.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
   <data name="groupBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -1942,7 +1970,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;grdViewRFIDTag.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>0</value>
   </data>
   <metadata name="lblLoginUserName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1981,7 +2009,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblLoginUserName.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <metadata name="ReadLoopTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>538, 17</value>
@@ -2014,7 +2042,7 @@
     <value>False</value>
   </data>
   <data name="lblSystemInfo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10pt</value>
+    <value>Segoe UI, 9pt</value>
   </data>
   <data name="lblSystemInfo.Size" type="System.Drawing.Size, System.Drawing">
     <value>764, 20</value>
@@ -2047,7 +2075,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="dataGridViewImageColumn1.HeaderText" xml:space="preserve">
     <value />

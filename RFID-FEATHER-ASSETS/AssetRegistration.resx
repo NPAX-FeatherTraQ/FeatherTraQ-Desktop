@@ -387,6 +387,9 @@
   <data name="btnCapturePhoto.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
+  <data name="btnCapturePhoto.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="btnCapturePhoto.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -400,7 +403,7 @@
     <value>79, 331</value>
   </data>
   <data name="btnCapturePhoto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 29</value>
+    <value>282, 30</value>
   </data>
   <data name="btnCapturePhoto.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -738,48 +741,6 @@
   <metadata name="grpAssetInfo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="lblLoadingInformation.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblLoadingInformation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lblLoadingInformation.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt, style=Bold</value>
-  </data>
-  <data name="lblLoadingInformation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblLoadingInformation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 334</value>
-  </data>
-  <data name="lblLoadingInformation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>352, 27</value>
-  </data>
-  <data name="lblLoadingInformation.TabIndex" type="System.Int32, mscorlib">
-    <value>65</value>
-  </data>
-  <data name="lblLoadingInformation.Text" xml:space="preserve">
-    <value>Getting Information. Please wait...</value>
-  </data>
-  <data name="lblLoadingInformation.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="lblLoadingInformation.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;lblLoadingInformation.Name" xml:space="preserve">
-    <value>lblLoadingInformation</value>
-  </data>
-  <data name="&gt;&gt;lblLoadingInformation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblLoadingInformation.Parent" xml:space="preserve">
-    <value>grpAssetInfo</value>
-  </data>
-  <data name="&gt;&gt;lblLoadingInformation.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="lblSubmittingInformation.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -796,7 +757,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblSubmittingInformation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 334</value>
+    <value>41, 335</value>
   </data>
   <data name="lblSubmittingInformation.Size" type="System.Drawing.Size, System.Drawing">
     <value>352, 24</value>
@@ -820,6 +781,51 @@
     <value>grpAssetInfo</value>
   </data>
   <data name="&gt;&gt;lblSubmittingInformation.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="lblLoadingInformation.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lblLoadingInformation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lblLoadingInformation.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblLoadingInformation.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt, style=Bold</value>
+  </data>
+  <data name="lblLoadingInformation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblLoadingInformation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>56, 335</value>
+  </data>
+  <data name="lblLoadingInformation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>320, 24</value>
+  </data>
+  <data name="lblLoadingInformation.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="lblLoadingInformation.Text" xml:space="preserve">
+    <value>Getting Information. Please wait...</value>
+  </data>
+  <data name="lblLoadingInformation.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lblLoadingInformation.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lblLoadingInformation.Name" xml:space="preserve">
+    <value>lblLoadingInformation</value>
+  </data>
+  <data name="&gt;&gt;lblLoadingInformation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblLoadingInformation.Parent" xml:space="preserve">
+    <value>grpAssetInfo</value>
+  </data>
+  <data name="&gt;&gt;lblLoadingInformation.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <metadata name="btnReadIDTag.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -835,7 +841,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnReadIDTag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>247, 116</value>
+    <value>247, 55</value>
   </data>
   <data name="btnReadIDTag.Size" type="System.Drawing.Size, System.Drawing">
     <value>105, 24</value>
@@ -874,7 +880,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblOwnerName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 122</value>
+    <value>83, 60</value>
   </data>
   <data name="lblOwnerName.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 16</value>
@@ -913,7 +919,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnGetAssetInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>247, 161</value>
+    <value>247, 111</value>
   </data>
   <data name="btnGetAssetInfo.Size" type="System.Drawing.Size, System.Drawing">
     <value>105, 24</value>
@@ -935,6 +941,498 @@
   </data>
   <data name="&gt;&gt;btnGetAssetInfo.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <metadata name="comboOwner.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="comboOwner.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="comboOwner.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="comboOwner.Location" type="System.Drawing.Point, System.Drawing">
+    <value>358, 260</value>
+  </data>
+  <data name="comboOwner.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 24</value>
+  </data>
+  <data name="comboOwner.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="comboOwner.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;comboOwner.Name" xml:space="preserve">
+    <value>comboOwner</value>
+  </data>
+  <data name="&gt;&gt;comboOwner.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboOwner.Parent" xml:space="preserve">
+    <value>grpAssetInfo</value>
+  </data>
+  <data name="&gt;&gt;comboOwner.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="lblDesc.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lblDesc.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lblDesc.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblDesc.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="lblDesc.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDesc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 168</value>
+  </data>
+  <data name="lblDesc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 16</value>
+  </data>
+  <data name="lblDesc.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="lblDesc.Text" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="&gt;&gt;lblDesc.Name" xml:space="preserve">
+    <value>lblDesc</value>
+  </data>
+  <data name="&gt;&gt;lblDesc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblDesc.Parent" xml:space="preserve">
+    <value>grpAssetInfo</value>
+  </data>
+  <data name="&gt;&gt;lblDesc.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <metadata name="btnGetRFIDTag.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="btnGetRFIDTag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btnGetRFIDTag.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="btnGetRFIDTag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnGetRFIDTag.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 111</value>
+  </data>
+  <data name="btnGetRFIDTag.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 24</value>
+  </data>
+  <data name="btnGetRFIDTag.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnGetRFIDTag.Text" xml:space="preserve">
+    <value>Register Asset</value>
+  </data>
+  <data name="&gt;&gt;btnGetRFIDTag.Name" xml:space="preserve">
+    <value>btnGetRFIDTag</value>
+  </data>
+  <data name="&gt;&gt;btnGetRFIDTag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGetRFIDTag.Parent" xml:space="preserve">
+    <value>grpAssetInfo</value>
+  </data>
+  <data name="&gt;&gt;btnGetRFIDTag.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <metadata name="txtDescription.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="txtDescription.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="txtDescription.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="txtDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>88, 187</value>
+  </data>
+  <data name="txtDescription.MaxLength" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="txtDescription.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>265, 45</value>
+  </data>
+  <data name="txtDescription.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txtDescription.Name" xml:space="preserve">
+    <value>txtDescription</value>
+  </data>
+  <data name="&gt;&gt;txtDescription.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtDescription.Parent" xml:space="preserve">
+    <value>grpAssetInfo</value>
+  </data>
+  <data name="&gt;&gt;txtDescription.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <metadata name="txtTakeOutNote.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="txtTakeOutNote.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="txtTakeOutNote.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="txtTakeOutNote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>87, 262</value>
+  </data>
+  <data name="txtTakeOutNote.MaxLength" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="txtTakeOutNote.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtTakeOutNote.Size" type="System.Drawing.Size, System.Drawing">
+    <value>265, 67</value>
+  </data>
+  <data name="txtTakeOutNote.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txtTakeOutNote.Name" xml:space="preserve">
+    <value>txtTakeOutNote</value>
+  </data>
+  <data name="&gt;&gt;txtTakeOutNote.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtTakeOutNote.Parent" xml:space="preserve">
+    <value>grpAssetInfo</value>
+  </data>
+  <data name="&gt;&gt;txtTakeOutNote.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <metadata name="lblMemo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lblMemo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lblMemo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblMemo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="lblMemo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMemo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 243</value>
+  </data>
+  <data name="lblMemo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 16</value>
+  </data>
+  <data name="lblMemo.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="lblMemo.Text" xml:space="preserve">
+    <value>Take Out Note</value>
+  </data>
+  <data name="&gt;&gt;lblMemo.Name" xml:space="preserve">
+    <value>lblMemo</value>
+  </data>
+  <data name="&gt;&gt;lblMemo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMemo.Parent" xml:space="preserve">
+    <value>grpAssetInfo</value>
+  </data>
+  <data name="&gt;&gt;lblMemo.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <metadata name="txtAssetName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="txtAssetName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="txtAssetName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="txtAssetName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>399, 358</value>
+  </data>
+  <data name="txtAssetName.MaxLength" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="txtAssetName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 22</value>
+  </data>
+  <data name="txtAssetName.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="txtAssetName.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;txtAssetName.Name" xml:space="preserve">
+    <value>txtAssetName</value>
+  </data>
+  <data name="&gt;&gt;txtAssetName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtAssetName.Parent" xml:space="preserve">
+    <value>grpAssetInfo</value>
+  </data>
+  <data name="&gt;&gt;txtAssetName.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="label2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>353, 372</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 20</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Asset Name</value>
+  </data>
+  <data name="label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="label2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>grpAssetInfo</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <metadata name="txtRFIDTag.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="txtRFIDTag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="txtRFIDTag.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtRFIDTag.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt, style=Bold</value>
+  </data>
+  <data name="txtRFIDTag.Location" type="System.Drawing.Point, System.Drawing">
+    <value>87, 135</value>
+  </data>
+  <data name="txtRFIDTag.MaxLength" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="txtRFIDTag.Size" type="System.Drawing.Size, System.Drawing">
+    <value>265, 21</value>
+  </data>
+  <data name="txtRFIDTag.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;txtRFIDTag.Name" xml:space="preserve">
+    <value>txtRFIDTag</value>
+  </data>
+  <data name="&gt;&gt;txtRFIDTag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtRFIDTag.Parent" xml:space="preserve">
+    <value>grpAssetInfo</value>
+  </data>
+  <data name="&gt;&gt;txtRFIDTag.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <metadata name="lblTag.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lblTag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lblTag.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblTag.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="lblTag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblTag.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 116</value>
+  </data>
+  <data name="lblTag.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 16</value>
+  </data>
+  <data name="lblTag.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="lblTag.Text" xml:space="preserve">
+    <value>RFID</value>
+  </data>
+  <data name="lblTag.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;lblTag.Name" xml:space="preserve">
+    <value>lblTag</value>
+  </data>
+  <data name="&gt;&gt;lblTag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTag.Parent" xml:space="preserve">
+    <value>grpAssetInfo</value>
+  </data>
+  <data name="&gt;&gt;lblTag.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <metadata name="txtOwnerName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="txtOwnerName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="txtOwnerName.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtOwnerName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="txtOwnerName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>87, 79</value>
+  </data>
+  <data name="txtOwnerName.MaxLength" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="txtOwnerName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>265, 22</value>
+  </data>
+  <data name="txtOwnerName.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
+  </data>
+  <data name="&gt;&gt;txtOwnerName.Name" xml:space="preserve">
+    <value>txtOwnerName</value>
+  </data>
+  <data name="&gt;&gt;txtOwnerName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtOwnerName.Parent" xml:space="preserve">
+    <value>grpAssetInfo</value>
+  </data>
+  <data name="&gt;&gt;txtOwnerName.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <metadata name="btnSubmit.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="btnSubmit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btnSubmit.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btnSubmit.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnSubmit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnSubmit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>88, 333</value>
+  </data>
+  <data name="btnSubmit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 28</value>
+  </data>
+  <data name="btnSubmit.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btnSubmit.Text" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="&gt;&gt;btnSubmit.Name" xml:space="preserve">
+    <value>btnSubmit</value>
+  </data>
+  <data name="&gt;&gt;btnSubmit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSubmit.Parent" xml:space="preserve">
+    <value>grpAssetInfo</value>
+  </data>
+  <data name="&gt;&gt;btnSubmit.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <metadata name="btnCancel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="btnCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btnCancel.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btnCancel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnCancel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>222, 333</value>
+  </data>
+  <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 28</value>
+  </data>
+  <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
+    <value>btnCancel</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
+    <value>grpAssetInfo</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
+    <value>17</value>
   </data>
   <metadata name="grpExpiration.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1248,6 +1746,9 @@
   <data name="grpExpiration.Text" xml:space="preserve">
     <value>Validity Period</value>
   </data>
+  <data name="grpExpiration.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;grpExpiration.Name" xml:space="preserve">
     <value>grpExpiration</value>
   </data>
@@ -1258,492 +1759,6 @@
     <value>grpAssetInfo</value>
   </data>
   <data name="&gt;&gt;grpExpiration.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <metadata name="comboOwner.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="comboOwner.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="comboOwner.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="comboOwner.Location" type="System.Drawing.Point, System.Drawing">
-    <value>358, 260</value>
-  </data>
-  <data name="comboOwner.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 24</value>
-  </data>
-  <data name="comboOwner.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="comboOwner.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;comboOwner.Name" xml:space="preserve">
-    <value>comboOwner</value>
-  </data>
-  <data name="&gt;&gt;comboOwner.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboOwner.Parent" xml:space="preserve">
-    <value>grpAssetInfo</value>
-  </data>
-  <data name="&gt;&gt;comboOwner.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <metadata name="lblDesc.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblDesc.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lblDesc.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblDesc.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="lblDesc.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblDesc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 208</value>
-  </data>
-  <data name="lblDesc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 16</value>
-  </data>
-  <data name="lblDesc.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="lblDesc.Text" xml:space="preserve">
-    <value>Description</value>
-  </data>
-  <data name="&gt;&gt;lblDesc.Name" xml:space="preserve">
-    <value>lblDesc</value>
-  </data>
-  <data name="&gt;&gt;lblDesc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDesc.Parent" xml:space="preserve">
-    <value>grpAssetInfo</value>
-  </data>
-  <data name="&gt;&gt;lblDesc.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <metadata name="btnGetRFIDTag.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="btnGetRFIDTag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="btnGetRFIDTag.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="btnGetRFIDTag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnGetRFIDTag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 161</value>
-  </data>
-  <data name="btnGetRFIDTag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 24</value>
-  </data>
-  <data name="btnGetRFIDTag.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="btnGetRFIDTag.Text" xml:space="preserve">
-    <value>Register Asset</value>
-  </data>
-  <data name="&gt;&gt;btnGetRFIDTag.Name" xml:space="preserve">
-    <value>btnGetRFIDTag</value>
-  </data>
-  <data name="&gt;&gt;btnGetRFIDTag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnGetRFIDTag.Parent" xml:space="preserve">
-    <value>grpAssetInfo</value>
-  </data>
-  <data name="&gt;&gt;btnGetRFIDTag.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <metadata name="txtDescription.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="txtDescription.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="txtDescription.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="txtDescription.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 226</value>
-  </data>
-  <data name="txtDescription.MaxLength" type="System.Int32, mscorlib">
-    <value>45</value>
-  </data>
-  <data name="txtDescription.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtDescription.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 39</value>
-  </data>
-  <data name="txtDescription.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;txtDescription.Name" xml:space="preserve">
-    <value>txtDescription</value>
-  </data>
-  <data name="&gt;&gt;txtDescription.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtDescription.Parent" xml:space="preserve">
-    <value>grpAssetInfo</value>
-  </data>
-  <data name="&gt;&gt;txtDescription.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <metadata name="txtTakeOutNote.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="txtTakeOutNote.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="txtTakeOutNote.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="txtTakeOutNote.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 285</value>
-  </data>
-  <data name="txtTakeOutNote.MaxLength" type="System.Int32, mscorlib">
-    <value>100</value>
-  </data>
-  <data name="txtTakeOutNote.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtTakeOutNote.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 47</value>
-  </data>
-  <data name="txtTakeOutNote.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;txtTakeOutNote.Name" xml:space="preserve">
-    <value>txtTakeOutNote</value>
-  </data>
-  <data name="&gt;&gt;txtTakeOutNote.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtTakeOutNote.Parent" xml:space="preserve">
-    <value>grpAssetInfo</value>
-  </data>
-  <data name="&gt;&gt;txtTakeOutNote.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <metadata name="lblMemo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblMemo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lblMemo.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblMemo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="lblMemo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblMemo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 267</value>
-  </data>
-  <data name="lblMemo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 16</value>
-  </data>
-  <data name="lblMemo.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="lblMemo.Text" xml:space="preserve">
-    <value>Take Out Note</value>
-  </data>
-  <data name="&gt;&gt;lblMemo.Name" xml:space="preserve">
-    <value>lblMemo</value>
-  </data>
-  <data name="&gt;&gt;lblMemo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblMemo.Parent" xml:space="preserve">
-    <value>grpAssetInfo</value>
-  </data>
-  <data name="&gt;&gt;lblMemo.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <metadata name="txtAssetName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="txtAssetName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="txtAssetName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="txtAssetName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>399, 358</value>
-  </data>
-  <data name="txtAssetName.MaxLength" type="System.Int32, mscorlib">
-    <value>45</value>
-  </data>
-  <data name="txtAssetName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 22</value>
-  </data>
-  <data name="txtAssetName.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="txtAssetName.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;txtAssetName.Name" xml:space="preserve">
-    <value>txtAssetName</value>
-  </data>
-  <data name="&gt;&gt;txtAssetName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtAssetName.Parent" xml:space="preserve">
-    <value>grpAssetInfo</value>
-  </data>
-  <data name="&gt;&gt;txtAssetName.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="label2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>353, 372</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 20</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Asset Name</value>
-  </data>
-  <data name="label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="label2.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>grpAssetInfo</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <metadata name="txtRFIDTag.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="txtRFIDTag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="txtRFIDTag.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="txtRFIDTag.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9pt, style=Bold</value>
-  </data>
-  <data name="txtRFIDTag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 185</value>
-  </data>
-  <data name="txtRFIDTag.MaxLength" type="System.Int32, mscorlib">
-    <value>45</value>
-  </data>
-  <data name="txtRFIDTag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 21</value>
-  </data>
-  <data name="txtRFIDTag.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;txtRFIDTag.Name" xml:space="preserve">
-    <value>txtRFIDTag</value>
-  </data>
-  <data name="&gt;&gt;txtRFIDTag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtRFIDTag.Parent" xml:space="preserve">
-    <value>grpAssetInfo</value>
-  </data>
-  <data name="&gt;&gt;txtRFIDTag.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <metadata name="lblTag.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblTag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lblTag.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblTag.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="lblTag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblTag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 167</value>
-  </data>
-  <data name="lblTag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 16</value>
-  </data>
-  <data name="lblTag.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="lblTag.Text" xml:space="preserve">
-    <value>RFID</value>
-  </data>
-  <data name="lblTag.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="&gt;&gt;lblTag.Name" xml:space="preserve">
-    <value>lblTag</value>
-  </data>
-  <data name="&gt;&gt;lblTag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblTag.Parent" xml:space="preserve">
-    <value>grpAssetInfo</value>
-  </data>
-  <data name="&gt;&gt;lblTag.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <metadata name="txtOwnerName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="txtOwnerName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="txtOwnerName.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="txtOwnerName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9pt, style=Bold</value>
-  </data>
-  <data name="txtOwnerName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 140</value>
-  </data>
-  <data name="txtOwnerName.MaxLength" type="System.Int32, mscorlib">
-    <value>45</value>
-  </data>
-  <data name="txtOwnerName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 21</value>
-  </data>
-  <data name="txtOwnerName.TabIndex" type="System.Int32, mscorlib">
-    <value>68</value>
-  </data>
-  <data name="&gt;&gt;txtOwnerName.Name" xml:space="preserve">
-    <value>txtOwnerName</value>
-  </data>
-  <data name="&gt;&gt;txtOwnerName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtOwnerName.Parent" xml:space="preserve">
-    <value>grpAssetInfo</value>
-  </data>
-  <data name="&gt;&gt;txtOwnerName.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <metadata name="btnSubmit.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="btnSubmit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="btnSubmit.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="btnSubmit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnSubmit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 333</value>
-  </data>
-  <data name="btnSubmit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 29</value>
-  </data>
-  <data name="btnSubmit.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="btnSubmit.Text" xml:space="preserve">
-    <value>Submit</value>
-  </data>
-  <data name="&gt;&gt;btnSubmit.Name" xml:space="preserve">
-    <value>btnSubmit</value>
-  </data>
-  <data name="&gt;&gt;btnSubmit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSubmit.Parent" xml:space="preserve">
-    <value>grpAssetInfo</value>
-  </data>
-  <data name="&gt;&gt;btnSubmit.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <metadata name="btnCancel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="btnCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="btnCancel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="btnCancel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>222, 333</value>
-  </data>
-  <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 29</value>
-  </data>
-  <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="btnCancel.Text" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
-    <value>btnCancel</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
-    <value>grpAssetInfo</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
   <data name="grpAssetInfo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -1833,90 +1848,6 @@
   <data name="splitContainer3.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 18</value>
   </data>
-  <metadata name="checkBox2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="checkBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="checkBox2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBox2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 6.75pt</value>
-  </data>
-  <data name="checkBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="checkBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>182, 10</value>
-  </data>
-  <data name="checkBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 16</value>
-  </data>
-  <data name="checkBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
-  <data name="checkBox2.Text" xml:space="preserve">
-    <value>Update valid id photo</value>
-  </data>
-  <data name="checkBox2.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;checkBox2.Name" xml:space="preserve">
-    <value>checkBox2</value>
-  </data>
-  <data name="&gt;&gt;checkBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBox2.Parent" xml:space="preserve">
-    <value>splitContainer3.Panel1</value>
-  </data>
-  <data name="&gt;&gt;checkBox2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="checkBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="checkBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="checkBox1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBox1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 6.75pt</value>
-  </data>
-  <data name="checkBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="checkBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 10</value>
-  </data>
-  <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 16</value>
-  </data>
-  <data name="checkBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>57</value>
-  </data>
-  <data name="checkBox1.Text" xml:space="preserve">
-    <value>Update owner photo</value>
-  </data>
-  <data name="checkBox1.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;checkBox1.Name" xml:space="preserve">
-    <value>checkBox1</value>
-  </data>
-  <data name="&gt;&gt;checkBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBox1.Parent" xml:space="preserve">
-    <value>splitContainer3.Panel1</value>
-  </data>
-  <data name="&gt;&gt;checkBox1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <metadata name="lblValidIDPhoto.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1957,7 +1888,7 @@
     <value>splitContainer3.Panel1</value>
   </data>
   <data name="&gt;&gt;lblValidIDPhoto.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
   </data>
   <metadata name="lblOwnerPhoto.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1999,79 +1930,79 @@
     <value>splitContainer3.Panel1</value>
   </data>
   <data name="&gt;&gt;lblOwnerPhoto.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>1</value>
   </data>
-  <metadata name="imgCapture1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="imgOwnerPhoto.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="imgCapture1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="imgOwnerPhoto.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="imgCapture1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="imgOwnerPhoto.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
-  <data name="imgCapture1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="imgOwnerPhoto.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="imgCapture1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="imgOwnerPhoto.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 26</value>
   </data>
-  <data name="imgCapture1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="imgOwnerPhoto.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 160</value>
   </data>
-  <data name="imgCapture1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+  <data name="imgOwnerPhoto.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
   </data>
-  <data name="imgCapture1.TabIndex" type="System.Int32, mscorlib">
+  <data name="imgOwnerPhoto.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
   </data>
-  <data name="&gt;&gt;imgCapture1.Name" xml:space="preserve">
-    <value>imgCapture1</value>
+  <data name="&gt;&gt;imgOwnerPhoto.Name" xml:space="preserve">
+    <value>imgOwnerPhoto</value>
   </data>
-  <data name="&gt;&gt;imgCapture1.Type" xml:space="preserve">
+  <data name="&gt;&gt;imgOwnerPhoto.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;imgCapture1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;imgOwnerPhoto.Parent" xml:space="preserve">
     <value>splitContainer3.Panel1</value>
   </data>
-  <data name="&gt;&gt;imgCapture1.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;imgOwnerPhoto.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <metadata name="imgCapture2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="imgValidIDPhoto.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="imgCapture2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="imgValidIDPhoto.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="imgCapture2.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="imgValidIDPhoto.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
-  <data name="imgCapture2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="imgValidIDPhoto.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="imgCapture2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="imgValidIDPhoto.Location" type="System.Drawing.Point, System.Drawing">
     <value>179, 26</value>
   </data>
-  <data name="imgCapture2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="imgValidIDPhoto.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 160</value>
   </data>
-  <data name="imgCapture2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+  <data name="imgValidIDPhoto.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
   </data>
-  <data name="imgCapture2.TabIndex" type="System.Int32, mscorlib">
+  <data name="imgValidIDPhoto.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
   </data>
-  <data name="&gt;&gt;imgCapture2.Name" xml:space="preserve">
-    <value>imgCapture2</value>
+  <data name="&gt;&gt;imgValidIDPhoto.Name" xml:space="preserve">
+    <value>imgValidIDPhoto</value>
   </data>
-  <data name="&gt;&gt;imgCapture2.Type" xml:space="preserve">
+  <data name="&gt;&gt;imgValidIDPhoto.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;imgCapture2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;imgValidIDPhoto.Parent" xml:space="preserve">
     <value>splitContainer3.Panel1</value>
   </data>
-  <data name="&gt;&gt;imgCapture2.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="&gt;&gt;imgValidIDPhoto.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <metadata name="lblOwnerPic.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2113,7 +2044,7 @@
     <value>splitContainer3.Panel1</value>
   </data>
   <data name="&gt;&gt;lblOwnerPic.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>4</value>
   </data>
   <metadata name="label6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2143,7 +2074,7 @@
     <value>splitContainer3.Panel1</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;splitContainer3.Panel1.Name" xml:space="preserve">
     <value>splitContainer3.Panel1</value>
@@ -2157,130 +2088,121 @@
   <data name="&gt;&gt;splitContainer3.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="checkBox5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="chkUpdateAssetPhoto3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="checkBox5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="chkUpdateAssetPhoto3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="checkBox5.AutoSize" type="System.Boolean, mscorlib">
+  <data name="chkUpdateAssetPhoto3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="checkBox5.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="chkUpdateAssetPhoto3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 6.75pt</value>
   </data>
-  <data name="checkBox5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="chkUpdateAssetPhoto3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="checkBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>343, 10</value>
+  <data name="chkUpdateAssetPhoto3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>343, 11</value>
   </data>
-  <data name="checkBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 16</value>
+  <data name="chkUpdateAssetPhoto3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 14</value>
   </data>
-  <data name="checkBox5.TabIndex" type="System.Int32, mscorlib">
+  <data name="chkUpdateAssetPhoto3.TabIndex" type="System.Int32, mscorlib">
     <value>61</value>
   </data>
-  <data name="checkBox5.Text" xml:space="preserve">
-    <value>Update asset photo 3</value>
-  </data>
-  <data name="checkBox5.Visible" type="System.Boolean, mscorlib">
+  <data name="chkUpdateAssetPhoto3.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;checkBox5.Name" xml:space="preserve">
-    <value>checkBox5</value>
+  <data name="&gt;&gt;chkUpdateAssetPhoto3.Name" xml:space="preserve">
+    <value>chkUpdateAssetPhoto3</value>
   </data>
-  <data name="&gt;&gt;checkBox5.Type" xml:space="preserve">
+  <data name="&gt;&gt;chkUpdateAssetPhoto3.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;checkBox5.Parent" xml:space="preserve">
+  <data name="&gt;&gt;chkUpdateAssetPhoto3.Parent" xml:space="preserve">
     <value>splitContainer3.Panel2</value>
   </data>
-  <data name="&gt;&gt;checkBox5.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;chkUpdateAssetPhoto3.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="checkBox4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="chkUpdateAssetPhoto2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="checkBox4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="chkUpdateAssetPhoto2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="checkBox4.AutoSize" type="System.Boolean, mscorlib">
+  <data name="chkUpdateAssetPhoto2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="checkBox4.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="chkUpdateAssetPhoto2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 6.75pt</value>
   </data>
-  <data name="checkBox4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="chkUpdateAssetPhoto2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="checkBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>182, 10</value>
+  <data name="chkUpdateAssetPhoto2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>182, 11</value>
   </data>
-  <data name="checkBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 16</value>
+  <data name="chkUpdateAssetPhoto2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 14</value>
   </data>
-  <data name="checkBox4.TabIndex" type="System.Int32, mscorlib">
+  <data name="chkUpdateAssetPhoto2.TabIndex" type="System.Int32, mscorlib">
     <value>60</value>
   </data>
-  <data name="checkBox4.Text" xml:space="preserve">
-    <value>Update asset photo 2</value>
-  </data>
-  <data name="checkBox4.Visible" type="System.Boolean, mscorlib">
+  <data name="chkUpdateAssetPhoto2.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;checkBox4.Name" xml:space="preserve">
-    <value>checkBox4</value>
+  <data name="&gt;&gt;chkUpdateAssetPhoto2.Name" xml:space="preserve">
+    <value>chkUpdateAssetPhoto2</value>
   </data>
-  <data name="&gt;&gt;checkBox4.Type" xml:space="preserve">
+  <data name="&gt;&gt;chkUpdateAssetPhoto2.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;checkBox4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;chkUpdateAssetPhoto2.Parent" xml:space="preserve">
     <value>splitContainer3.Panel2</value>
   </data>
-  <data name="&gt;&gt;checkBox4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;chkUpdateAssetPhoto2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="checkBox3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="chkUpdateAssetPhoto1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="checkBox3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="chkUpdateAssetPhoto1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="checkBox3.AutoSize" type="System.Boolean, mscorlib">
+  <data name="chkUpdateAssetPhoto1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="checkBox3.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="chkUpdateAssetPhoto1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 6.75pt</value>
   </data>
-  <data name="checkBox3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="chkUpdateAssetPhoto1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="checkBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 10</value>
+  <data name="chkUpdateAssetPhoto1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 11</value>
   </data>
-  <data name="checkBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 16</value>
+  <data name="chkUpdateAssetPhoto1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 14</value>
   </data>
-  <data name="checkBox3.TabIndex" type="System.Int32, mscorlib">
+  <data name="chkUpdateAssetPhoto1.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
   </data>
-  <data name="checkBox3.Text" xml:space="preserve">
-    <value>Update asset photo 1</value>
-  </data>
-  <data name="checkBox3.Visible" type="System.Boolean, mscorlib">
+  <data name="chkUpdateAssetPhoto1.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;checkBox3.Name" xml:space="preserve">
-    <value>checkBox3</value>
+  <data name="&gt;&gt;chkUpdateAssetPhoto1.Name" xml:space="preserve">
+    <value>chkUpdateAssetPhoto1</value>
   </data>
-  <data name="&gt;&gt;checkBox3.Type" xml:space="preserve">
+  <data name="&gt;&gt;chkUpdateAssetPhoto1.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;checkBox3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;chkUpdateAssetPhoto1.Parent" xml:space="preserve">
     <value>splitContainer3.Panel2</value>
   </data>
-  <data name="&gt;&gt;checkBox3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;chkUpdateAssetPhoto1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <metadata name="lblAssetPhoto3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -2481,113 +2403,221 @@
   <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <metadata name="imgCapture5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="imgAssetPhoto3Empty.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="imgCapture5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="imgAssetPhoto3Empty.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="imgCapture5.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="imgAssetPhoto3Empty.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
-  <data name="imgCapture5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="imgAssetPhoto3Empty.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="imgCapture5.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="imgAssetPhoto3Empty.Location" type="System.Drawing.Point, System.Drawing">
     <value>340, 26</value>
   </data>
-  <data name="imgCapture5.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="imgAssetPhoto3Empty.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 160</value>
   </data>
-  <data name="imgCapture5.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+  <data name="imgAssetPhoto3Empty.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
   </data>
-  <data name="imgCapture5.TabIndex" type="System.Int32, mscorlib">
-    <value>50</value>
+  <data name="imgAssetPhoto3Empty.TabIndex" type="System.Int32, mscorlib">
+    <value>64</value>
   </data>
-  <data name="&gt;&gt;imgCapture5.Name" xml:space="preserve">
-    <value>imgCapture5</value>
+  <data name="&gt;&gt;imgAssetPhoto3Empty.Name" xml:space="preserve">
+    <value>imgAssetPhoto3Empty</value>
   </data>
-  <data name="&gt;&gt;imgCapture5.Type" xml:space="preserve">
+  <data name="&gt;&gt;imgAssetPhoto3Empty.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;imgCapture5.Parent" xml:space="preserve">
+  <data name="&gt;&gt;imgAssetPhoto3Empty.Parent" xml:space="preserve">
     <value>splitContainer3.Panel2</value>
   </data>
-  <data name="&gt;&gt;imgCapture5.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;imgAssetPhoto3Empty.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <metadata name="imgCapture4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="imgAssetPhoto2Empty.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="imgCapture4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="imgAssetPhoto2Empty.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="imgCapture4.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="imgAssetPhoto2Empty.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
-  <data name="imgCapture4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="imgAssetPhoto2Empty.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="imgCapture4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="imgAssetPhoto2Empty.Location" type="System.Drawing.Point, System.Drawing">
     <value>179, 26</value>
   </data>
-  <data name="imgCapture4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="imgAssetPhoto2Empty.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 160</value>
   </data>
-  <data name="imgCapture4.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+  <data name="imgAssetPhoto2Empty.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
   </data>
-  <data name="imgCapture4.TabIndex" type="System.Int32, mscorlib">
-    <value>49</value>
+  <data name="imgAssetPhoto2Empty.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
   </data>
-  <data name="&gt;&gt;imgCapture4.Name" xml:space="preserve">
-    <value>imgCapture4</value>
+  <data name="&gt;&gt;imgAssetPhoto2Empty.Name" xml:space="preserve">
+    <value>imgAssetPhoto2Empty</value>
   </data>
-  <data name="&gt;&gt;imgCapture4.Type" xml:space="preserve">
+  <data name="&gt;&gt;imgAssetPhoto2Empty.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;imgCapture4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;imgAssetPhoto2Empty.Parent" xml:space="preserve">
     <value>splitContainer3.Panel2</value>
   </data>
-  <data name="&gt;&gt;imgCapture4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;imgAssetPhoto2Empty.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <metadata name="imgCapture3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="imgAssetPhoto1Empty.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="imgCapture3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="imgAssetPhoto1Empty.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="imgCapture3.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="imgAssetPhoto1Empty.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
-  <data name="imgCapture3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="imgAssetPhoto1Empty.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="imgCapture3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="imgAssetPhoto1Empty.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 26</value>
   </data>
-  <data name="imgCapture3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="imgAssetPhoto1Empty.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 160</value>
   </data>
-  <data name="imgCapture3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+  <data name="imgAssetPhoto1Empty.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
   </data>
-  <data name="imgCapture3.TabIndex" type="System.Int32, mscorlib">
-    <value>48</value>
+  <data name="imgAssetPhoto1Empty.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
   </data>
-  <data name="&gt;&gt;imgCapture3.Name" xml:space="preserve">
-    <value>imgCapture3</value>
+  <data name="&gt;&gt;imgAssetPhoto1Empty.Name" xml:space="preserve">
+    <value>imgAssetPhoto1Empty</value>
   </data>
-  <data name="&gt;&gt;imgCapture3.Type" xml:space="preserve">
+  <data name="&gt;&gt;imgAssetPhoto1Empty.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;imgCapture3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;imgAssetPhoto1Empty.Parent" xml:space="preserve">
     <value>splitContainer3.Panel2</value>
   </data>
-  <data name="&gt;&gt;imgCapture3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;imgAssetPhoto1Empty.ZOrder" xml:space="preserve">
     <value>10</value>
+  </data>
+  <metadata name="imgAssetPhoto3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="imgAssetPhoto3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="imgAssetPhoto3.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="imgAssetPhoto3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="imgAssetPhoto3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 26</value>
+  </data>
+  <data name="imgAssetPhoto3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 160</value>
+  </data>
+  <data name="imgAssetPhoto3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="imgAssetPhoto3.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="&gt;&gt;imgAssetPhoto3.Name" xml:space="preserve">
+    <value>imgAssetPhoto3</value>
+  </data>
+  <data name="&gt;&gt;imgAssetPhoto3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;imgAssetPhoto3.Parent" xml:space="preserve">
+    <value>splitContainer3.Panel2</value>
+  </data>
+  <data name="&gt;&gt;imgAssetPhoto3.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <metadata name="imgAssetPhoto2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="imgAssetPhoto2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="imgAssetPhoto2.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="imgAssetPhoto2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="imgAssetPhoto2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>179, 26</value>
+  </data>
+  <data name="imgAssetPhoto2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 160</value>
+  </data>
+  <data name="imgAssetPhoto2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="imgAssetPhoto2.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="&gt;&gt;imgAssetPhoto2.Name" xml:space="preserve">
+    <value>imgAssetPhoto2</value>
+  </data>
+  <data name="&gt;&gt;imgAssetPhoto2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;imgAssetPhoto2.Parent" xml:space="preserve">
+    <value>splitContainer3.Panel2</value>
+  </data>
+  <data name="&gt;&gt;imgAssetPhoto2.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <metadata name="imgAssetPhoto1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="imgAssetPhoto1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="imgAssetPhoto1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="imgAssetPhoto1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="imgAssetPhoto1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 26</value>
+  </data>
+  <data name="imgAssetPhoto1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 160</value>
+  </data>
+  <data name="imgAssetPhoto1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="imgAssetPhoto1.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="&gt;&gt;imgAssetPhoto1.Name" xml:space="preserve">
+    <value>imgAssetPhoto1</value>
+  </data>
+  <data name="&gt;&gt;imgAssetPhoto1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;imgAssetPhoto1.Parent" xml:space="preserve">
+    <value>splitContainer3.Panel2</value>
+  </data>
+  <data name="&gt;&gt;imgAssetPhoto1.ZOrder" xml:space="preserve">
+    <value>13</value>
   </data>
   <data name="&gt;&gt;splitContainer3.Panel2.Name" xml:space="preserve">
     <value>splitContainer3.Panel2</value>
@@ -2724,6 +2754,9 @@
   <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="toolTipUpdatePhoto.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>421, 17</value>
+  </metadata>
   <metadata name="picOwner.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -2778,9 +2811,6 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>884, 592</value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>900, 630</value>
   </data>
@@ -2807,6 +2837,12 @@
   </data>
   <data name="&gt;&gt;imagePathDialog.Type" xml:space="preserve">
     <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolTipUpdatePhoto.Name" xml:space="preserve">
+    <value>toolTipUpdatePhoto</value>
+  </data>
+  <data name="&gt;&gt;toolTipUpdatePhoto.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>AssetRegistration</value>

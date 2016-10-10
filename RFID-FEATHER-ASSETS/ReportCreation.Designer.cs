@@ -120,6 +120,7 @@
             // 
             resources.ApplyResources(this.btnCapturePhoto, "btnCapturePhoto");
             this.btnCapturePhoto.BackColor = System.Drawing.Color.Orange;
+            this.btnCapturePhoto.BackgroundImage = global::RFID_FEATHER_ASSETS.Properties.Resources.camera;
             this.btnCapturePhoto.Name = "btnCapturePhoto";
             this.btnCapturePhoto.UseVisualStyleBackColor = false;
             this.btnCapturePhoto.Click += new System.EventHandler(this.btnCapturePhoto_Click);
@@ -134,6 +135,7 @@
             // 
             resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.BackColor = System.Drawing.Color.Orange;
+            this.btnCancel.BackgroundImage = global::RFID_FEATHER_ASSETS.Properties.Resources.cancel;
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -152,6 +154,7 @@
             // 
             resources.ApplyResources(this.btnSubmit, "btnSubmit");
             this.btnSubmit.BackColor = System.Drawing.Color.Orange;
+            this.btnSubmit.BackgroundImage = global::RFID_FEATHER_ASSETS.Properties.Resources.save;
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
