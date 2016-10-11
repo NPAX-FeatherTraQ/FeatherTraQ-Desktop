@@ -281,9 +281,6 @@
     <None Include="Resources\closebutton.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo_old1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\logo_big.png" />
   </ItemGroup>
   <ItemGroup>
@@ -314,7 +311,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\register_owner_big.png" />
     <None Include="Resources\logo_old2.png" />
   </ItemGroup>
   <ItemGroup>

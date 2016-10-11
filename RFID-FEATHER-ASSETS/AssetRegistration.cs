@@ -894,11 +894,11 @@ namespace RFID_FEATHER_ASSETS
                     }
                     else return;
                 }
-                else if ((ReadIDTagWasClicked && txtDescription.Text.Trim().Contains("ID_CARD")) || (!ReadIDTagWasClicked && !GetAssetInfoWasClicked && btnSubmit.Text.ToLower() == "update"))
-                {
-                    btnCancel.PerformClick();
-                    return;
-                }
+                //else if ((ReadIDTagWasClicked && txtDescription.Text.Trim().Contains("ID_CARD")) || (!ReadIDTagWasClicked && !GetAssetInfoWasClicked && btnSubmit.Text.ToLower() == "update"))
+                //{
+                //    btnCancel.PerformClick();
+                //    return;
+                //}
 
                 ownerRFIDTag = string.Empty;
                 //txtRFIDTag.Text = string.Empty;
@@ -906,6 +906,10 @@ namespace RFID_FEATHER_ASSETS
                 //int nReturnValue = 0;
                 string tagInfo = "";
                 //listBox1.Items.Clear();
+
+                //string strException = string.Empty;
+                //int nRet = reader.OpenCom(portname, Convert.ToInt32(baudrate), out strException); 
+                auto_connect();//ReaderMethodProc();
 
                 nReturnValue = realTimeInventory(255, 255, 1);  //Public address reader , fast inventory mode , 5 seconds timeout control
 
@@ -991,7 +995,7 @@ namespace RFID_FEATHER_ASSETS
                     ////MessageBox.Show("Reader Com Port Error", "Asset Registration", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     ////cam.Stop();
                     ////CallMainMenu();
-                    //CallSerialPortSelection();
+                    CallSerialPortSelection();
                 }
                 else
                 {
@@ -1002,7 +1006,7 @@ namespace RFID_FEATHER_ASSETS
 
                     return;
                 }
-                ReaderMethodProc();
+                //ReaderMethodProc();
             }
             catch (Exception ex)
             {
@@ -1025,7 +1029,7 @@ namespace RFID_FEATHER_ASSETS
                 if (PortSelectionForm.ShowDialog(this) == DialogResult.OK)
                 {
                     // Read the contents of PortSelectionForm's cmbComPortList.
-                    portname = PortSelectionForm.cmbComPortList.Text;
+                    portname = PortSelectionForm.cmbComPortList.SelectedItem.ToString();//.Text;
                 }
                 //else CallMainMenu();
 

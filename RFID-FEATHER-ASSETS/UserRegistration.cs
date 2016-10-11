@@ -421,7 +421,7 @@ namespace RFID_FEATHER_ASSETS
                     {
                         if (language == "English")
                         {
-                            DialogResult result = MessageBox.Show("Incomplete Owner Pictures." +"\n" + "Are you sure you want to register owner?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+                            DialogResult result = MessageBox.Show("Incomplete Owner Pictures." +"\n" + "Are you sure you want to register the owner?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
                             if (result == DialogResult.Yes)
                             {
                                 register();
@@ -1572,7 +1572,7 @@ namespace RFID_FEATHER_ASSETS
                 if (PortSelectionForm.ShowDialog(this) == DialogResult.OK)
                 {
                     // Read the contents of PortSelectionForm's cmbComPortList.
-                    portname = PortSelectionForm.cmbComPortList.Text;
+                    portname = PortSelectionForm.cmbComPortList.SelectedItem.ToString();//.Text;
                 }
                 //else CallMainMenu();
 
@@ -1598,7 +1598,7 @@ namespace RFID_FEATHER_ASSETS
                 }*/
                 if (btnSubmit.Text.ToLower() == "update")
                 {
-                    DialogResult result = MessageBox.Show("Are you sure you want to cancel update?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                    DialogResult result = MessageBox.Show("Are you sure you want to cancel the update?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
                     if (result == DialogResult.Yes)
                     {
                         //CallMainMenu();
@@ -1606,6 +1606,25 @@ namespace RFID_FEATHER_ASSETS
                     }
                     else return;
                 }
+                else if (/*txtfirstName.Text.Length != 0 ||*/ (txtRFIDTag.Text.Length != 0 || imgOwnerPhoto.Image != null) && btnEditInfoWasClicked)
+                {
+                    DialogResult result = MessageBox.Show("Are you sure you want to cancel the registration?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                    if (result == DialogResult.Yes)
+                    {
+                        //CallMainMenu();
+                        ClearFields();
+                    }
+                    else return;
+                }
+                //else if (btnSubmit.Text.ToLower() == "update" || ((!string.IsNullOrEmpty(txtfirstName.Text) || imgOwnerPhoto.Image != null) && btnCancel.Text.ToLower() == "cancel"))
+                //{
+                //    btnCancel.PerformClick();
+                //    return;
+                //}
+
+                //string strException = string.Empty;
+                //int nRet = reader.OpenCom(portname, Convert.ToInt32(baudrate), out strException); 
+                auto_connect();//ReaderMethodProc();
 
                 int nReturnValue = 0;
                 string tagInfo = "";
@@ -1657,14 +1676,14 @@ namespace RFID_FEATHER_ASSETS
                     //MessageBox.Show("Reader Com Port Error", "Asset Registration", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     //cam.Stop();
                     //CallMainMenu();
-                    //CallSerialPortSelection();
+                    CallSerialPortSelection();
                 }
                 else
                 {
                     MessageBox.Show("No ID tag scan.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                ReaderMethodProc();
+                //ReaderMethodProc();
             }
             catch (Exception ex)
             {
@@ -1775,11 +1794,11 @@ namespace RFID_FEATHER_ASSETS
 
         private void btnEditInfo_Click(object sender, EventArgs e)
         {
-            if (btnSubmit.Text.ToLower() == "update" || ((!string.IsNullOrEmpty(txtfirstName.Text) || imgOwnerPhoto.Image != null) && btnCancel.Text.ToLower() == "cancel"))
-            {
-                btnCancel.PerformClick();
-                return;
-            }
+            //if (btnSubmit.Text.ToLower() == "update" || ((!string.IsNullOrEmpty(txtfirstName.Text) || imgOwnerPhoto.Image != null) && btnCancel.Text.ToLower() == "cancel"))
+            //{
+            //    btnCancel.PerformClick();
+            //    return;
+            //}
 
             btnEditInfoWasClicked = true;
 
