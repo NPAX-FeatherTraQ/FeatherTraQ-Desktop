@@ -77,6 +77,95 @@ namespace RFID_FEATHER_ASSETS
             InitializeCamera();
             InitializePhotoLabel();
             regAssetCon = true;
+            LoadTypeList();
+        }
+
+        private void LoadTypeList()
+        {
+            try
+            {
+                //initialize Rest Client
+                RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");/*"http://127.0.0.1:8080/")*/;
+                RestRequest assetInfo;
+                //if (selectedUserId != 0)
+                //assetInfo = new RestRequest("/api/user/" + selectedUserId + "/assets/list/", Method.GET);
+                //else
+                assetInfo = new RestRequest("/api/company/" + companyId + "/assets/list/", Method.GET);
+                var authToken = tokenvalue;
+
+                //add needed headers
+                assetInfo.RequestFormat = DataFormat.Json;
+                assetInfo.AddHeader("Content-Type", "application/json; charset=utf-8");
+                assetInfo.AddHeader("X-Auth-Token", authToken);
+
+                //execute request
+                var response = client.Execute<List<AssetInformation>>(assetInfo);
+                var content = response.Content;
+
+                //client.ExecuteAsync<List<AssetInformation>>(assetInfo, response =>
+                //{
+                if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    //deserialize json response into object
+                    JsonDeserializer deserial = new JsonDeserializer();
+                    List<GlobalClass.GetSetClass> generateAssets = deserial.Deserialize<List<GlobalClass.GetSetClass>>(response);
+                    //this.cmbAssetList.Invoke(new MethodInvoker(delegate
+                    //{
+                    //add combobox information
+                    //if (generateAssets.Count == 0)
+                    //{
+                    //    MessageBox.Show("Not yet registered an asset... Please visit your administrator to register your asset", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //    return;
+                    //}
+                    //else
+                    //{
+                    //if (!isAssetChanged) isAssetChanged = true;
+                    //isUserLoadingList = false;
+                    //isOwnerChanged = false;
+
+                    List<GlobalClass.TypeList> typeList = new List<GlobalClass.TypeList>();
+                    List<GlobalClass.LocationList> LocationList = new List<GlobalClass.LocationList>();
+
+                    for (int i = 0; i < generateAssets.Count; i++)
+                    {
+                        if (!string.IsNullOrEmpty(generateAssets[i].assetType))
+                        {
+                            if (!typeList.Any(x => x.type == generateAssets[i].assetType))
+                                typeList.Add(new GlobalClass.TypeList() { type = generateAssets[i].assetType });
+                        }
+
+                        if (!string.IsNullOrEmpty(generateAssets[i].baseLocation))
+                        {
+                            if (!LocationList.Any(x => x.location == generateAssets[i].baseLocation))
+                                LocationList.Add(new GlobalClass.LocationList() { location = generateAssets[i].baseLocation });
+                        }
+                    }
+
+                    //if (generateAssets.Count != 0)
+                    //{
+                        if (typeList.Count() != 0)
+                        {
+                            this.cmbAssetClassification.DataSource = typeList;
+                            this.cmbAssetClassification.ValueMember = "type";
+                            this.cmbAssetClassification.DisplayMember = "type";
+                        }
+
+                        if (LocationList.Count() != 0)
+                        {
+                            this.cmbBaseLocation.DataSource = LocationList;
+                            this.cmbBaseLocation.ValueMember = "location";
+                            this.cmbBaseLocation.DisplayMember = "location";
+                        }
+                    //}
+                    //}));
+                    //}
+                }
+                //});
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void getLanguage()
         {
@@ -269,9 +358,9 @@ namespace RFID_FEATHER_ASSETS
             {
                 //if (txtDescription.Text.Contains("ID_CARD"))
                 //{
-                    if (txtOwnerName.Text.Length == 0 || txtRFIDTag.Text.Length == 0 ||/* txtAssetName.Text.Length == 0 ||*/ txtDescription.Text.Length == 0 || txtTakeOutNote.Text.Length == 0)
+                if (txtOwnerName.Text.Length == 0 || txtRFIDTag.Text.Length == 0 ||/* txtAssetName.Text.Length == 0 ||*/ txtDescription.Text.Length == 0 || txtTakeOutNote.Text.Length == 0 || cmbAssetClassification.Text.Length == 0)
                     {
-                        if ((!txtDescription.Text.Contains("ID_CARD") && imgAssetPhoto1.Image == null) || txtDescription.Text.Contains("ID_CARD") || txtOwnerName.Text.Length == 0)
+                        if ((!txtDescription.Text.Contains("ID_CARD") && imgAssetPhoto1.Image == null) || txtDescription.Text.Contains("ID_CARD") || txtOwnerName.Text.Length == 0 || cmbAssetClassification.Text.Length == 0)
                         {
                             if (language == "English") MessageBox.Show("Complete information is required.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
                             else if (language == "Japanese") MessageBox.Show("完全な情報は、必要とされます.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
@@ -377,6 +466,8 @@ namespace RFID_FEATHER_ASSETS
                     asset.imageUrls = newImgFileNames; //txtCapturedImagePath.Text;//txtImagePath.Text;
                     asset.registerUserId = userId;//lblLoginUserName.Text.Substring(lblLoginUserName.Text.IndexOf(":") + 2);
                     asset.updateUserId = userId;
+                    asset.assetType = cmbAssetClassification.Text.Trim();
+                    asset.baseLocation = cmbBaseLocation.Text.Trim();
 
                     if (grpExpiration.Enabled)
                     {
@@ -441,6 +532,8 @@ namespace RFID_FEATHER_ASSETS
                             if (language == "English") MessageBox.Show("Record successfully saved.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                             else MessageBox.Show("レコードが正常に保存され.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                             ClearFields();
+                            LoadTypeList();
+                            clearClassLocationComboText();
                         }
                         else
                         {
@@ -502,6 +595,8 @@ namespace RFID_FEATHER_ASSETS
                 //transactDet.notes = notes;
                 transactDet.type = transacType;
                 //transactDet.assetId = assetId;
+                transactDet.location = cmbBaseLocation.Text;
+                transactDet.classType = cmbAssetClassification.Text;
 
                 //Gettting the assetId
                 if (btnSubmit.Text.ToUpper() == "SUBMIT" || btnSubmit.Text == "提出する")
@@ -599,6 +694,8 @@ namespace RFID_FEATHER_ASSETS
             updateInfo.tagType = 1;
             //updateInfo.takeOutAllowed = false;
             updateInfo.takeOutInfo = txtTakeOutNote.Text.Trim();
+            updateInfo.assetType = cmbAssetClassification.Text.Trim();
+            updateInfo.baseLocation = cmbBaseLocation.Text.Trim();
 
             if (grpExpiration.Enabled)
             {
@@ -665,6 +762,8 @@ namespace RFID_FEATHER_ASSETS
                     if (language == "English") MessageBox.Show("Record successfully updated.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else MessageBox.Show("レコードが正常に更新します.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ClearFields();
+                    LoadTypeList();
+                    clearClassLocationComboText();
                 }
                 else
                 {
@@ -792,6 +891,9 @@ namespace RFID_FEATHER_ASSETS
             lblAssetPhoto3.Visible = true;
             lblOwnerPhoto.Visible = true;
             lblValidIDPhoto.Visible = true;
+
+            cmbAssetClassification.Text = string.Empty;
+            cmbBaseLocation.Text = string.Empty;
 
             this.Refresh();
             //btnGetRFIDTag.Focus();
@@ -943,6 +1045,8 @@ namespace RFID_FEATHER_ASSETS
                             {
                                 txtDescription.Text = string.Empty;
                                 txtTakeOutNote.Text = string.Empty;
+                                cmbAssetClassification.Text = string.Empty;
+                                cmbBaseLocation.Text = string.Empty;
                                 lblAssetPhoto1.Visible = true;
                                 lblAssetPhoto2.Visible = true;
                                 lblAssetPhoto3.Visible = true;
@@ -1083,11 +1187,18 @@ namespace RFID_FEATHER_ASSETS
                 //reader.SendCallback = SendData;
                 //auto_connect();
                 ReaderMethodProc();
+                clearClassLocationComboText();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void clearClassLocationComboText()
+        {
+            cmbBaseLocation.Text = string.Empty;
+            cmbAssetClassification.Text = string.Empty;
         }
 
         private void AssetValidUntilDateTime()
@@ -1288,6 +1399,7 @@ namespace RFID_FEATHER_ASSETS
                     {
                         if (imgAssetPhoto3.Image == null || imgAssetPhoto3Empty.Visible || btnCapturePhoto.Text.ToLower() != "captured completed"/*|| chkUpdateAssetPhoto1.Checked || chkUpdateAssetPhoto2.Checked*/)
                         {
+                            //btnCapturePhoto.Enabled = false;
                             btnCapturePhoto.Text = "Processing. Please wait...";
                             btnCapturePhoto.Refresh();
                         }
@@ -1340,6 +1452,7 @@ namespace RFID_FEATHER_ASSETS
                         //SubmitImage();
                         newImgFileNames = assetPhoto1FileName + (assetPhoto2FileName != string.Empty ? "," + assetPhoto2FileName : "") + (assetPhoto3FileName != string.Empty ? "," + assetPhoto3FileName : "");//+ "," + assetPhoto2FileName + "," + assetPhoto3FileName;//newImgFileNames + "," + ImgFileName;
                         cam.Stop();
+                        //btnCapturePhoto.Enabled = true;
                         InitializeCamera();
                     }
                 }
@@ -1867,6 +1980,8 @@ namespace RFID_FEATHER_ASSETS
                             else txtDescription.ReadOnly = false;
 
                             txtTakeOutNote.Text = assetInfo.takeOutInfo;
+                            cmbAssetClassification.Text = assetInfo.assetType;
+                            cmbBaseLocation.Text = assetInfo.baseLocation;
                             ////if (assetInfo.validUntil != Convert.ToDateTime(DateTime.Now.ToString("g")))
                             ////{
                             //if (assetInfo.validUntil == null) rbtnNoExpiration.Checked = true;
@@ -2184,7 +2299,7 @@ namespace RFID_FEATHER_ASSETS
                 //btnCapturePhoto.Enabled = true;
 
                 /*if (ReadIDTagWasClicked)*/
-                ValidateIDExpiration(idValidity, info.assetId, info.description, info.takeOutInfo);
+                ValidateIDExpiration(idValidity, info.assetId, info.description, info.takeOutInfo, info.assetType, info.baseLocation);
             }
             else
             {
@@ -2255,7 +2370,7 @@ namespace RFID_FEATHER_ASSETS
                 ownerId = info.userId;//.ownerId;
                 //btnCapturePhoto.Enabled = true;
 
-                /*if (ReadIDTagWasClicked)*/  if (grpExpiration.Enabled || ReadIDTagWasClicked) ValidateIDExpiration(idValidity, info.assetId, info.description, info.takeOutInfo);
+                /*if (ReadIDTagWasClicked)*/  if (grpExpiration.Enabled || ReadIDTagWasClicked) ValidateIDExpiration(idValidity, info.assetId, info.description, info.takeOutInfo, info.assetType, info.baseLocation);
             }
             else
             {
@@ -2277,7 +2392,7 @@ namespace RFID_FEATHER_ASSETS
             }
         }
 
-        private void ValidateIDExpiration(DateTime? validity, int assetOwnerId, string description, string takeOutInfo)
+        private void ValidateIDExpiration(DateTime? validity, int assetOwnerId, string description, string takeOutInfo, string classification, string baseLocation)
         {
             if (validity < Convert.ToDateTime(DateTime.Now.ToString("g")) && validity != DateTime.MinValue)
             {
@@ -2305,7 +2420,7 @@ namespace RFID_FEATHER_ASSETS
                             //IsCallingMainMenu = true;
                             //reader.CloseCom();
 
-                            using (AssetRenewal RenewalForm = new AssetRenewal(assetOwnerId, txtOwnerName.Text, description, takeOutInfo /*assetId, txtOwnerName.Text, txtDescription.Text, txtTakeOutNote.Text*/))
+                            using (AssetRenewal RenewalForm = new AssetRenewal(assetOwnerId, txtOwnerName.Text, description, takeOutInfo, classification, baseLocation /*assetId, txtOwnerName.Text, txtDescription.Text, txtTakeOutNote.Text*/))
                             {
                                 if (RenewalForm.ShowDialog() == DialogResult.OK)
                                 {
@@ -2341,7 +2456,7 @@ namespace RFID_FEATHER_ASSETS
                             //IsCallingMainMenu = true;
                             //reader.CloseCom();
 
-                            using (AssetRenewal RenewalForm = new AssetRenewal(assetId, txtOwnerName.Text, txtDescription.Text, txtTakeOutNote.Text))
+                            using (AssetRenewal RenewalForm = new AssetRenewal(assetId, txtOwnerName.Text, txtDescription.Text, txtTakeOutNote.Text, cmbAssetClassification.Text, cmbBaseLocation.Text))
                             {
                                 if (RenewalForm.ShowDialog() == DialogResult.OK)
                                 {

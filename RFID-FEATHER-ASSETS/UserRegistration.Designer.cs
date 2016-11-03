@@ -56,7 +56,6 @@
             this.imgOwnerPhoto = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblSubmittingInformation = new System.Windows.Forms.Label();
-            this.lblLoadingInformation = new System.Windows.Forms.Label();
             this.grpExpiration = new System.Windows.Forms.GroupBox();
             this.dtStartTimePicker = new System.Windows.Forms.DateTimePicker();
             this.dtStartDate = new System.Windows.Forms.DateTimePicker();
@@ -66,8 +65,6 @@
             this.rbtnValidToday = new System.Windows.Forms.RadioButton();
             this.dtTimePicker = new System.Windows.Forms.DateTimePicker();
             this.dtDatePicker = new System.Windows.Forms.DateTimePicker();
-            this.btnSubmit = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.btnEditInfo = new System.Windows.Forms.Button();
             this.btnGetRFIDTag = new System.Windows.Forms.Button();
             this.txtRFIDTag = new System.Windows.Forms.TextBox();
@@ -85,9 +82,12 @@
             this.txtfirstName = new System.Windows.Forms.TextBox();
             this.lblLname = new System.Windows.Forms.Label();
             this.lblPosition = new System.Windows.Forms.Label();
-            this.lblDesc = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblFname = new System.Windows.Forms.Label();
+            this.lblLoadingInformation = new System.Windows.Forms.Label();
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.lblDesc = new System.Windows.Forms.Label();
             this.toolTipUpdatePhoto = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -468,21 +468,6 @@
             this.lblSubmittingInformation.Text = "Submitting Information. Please wait...";
             this.lblSubmittingInformation.Visible = false;
             // 
-            // lblLoadingInformation
-            // 
-            this.lblLoadingInformation.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblLoadingInformation.AutoSize = true;
-            this.lblLoadingInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLoadingInformation.ForeColor = System.Drawing.Color.Green;
-            this.lblLoadingInformation.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblLoadingInformation.Location = new System.Drawing.Point(44, 489);
-            this.lblLoadingInformation.Name = "lblLoadingInformation";
-            this.lblLoadingInformation.Size = new System.Drawing.Size(320, 24);
-            this.lblLoadingInformation.TabIndex = 67;
-            this.lblLoadingInformation.Text = "Getting Information. Please wait...";
-            this.lblLoadingInformation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblLoadingInformation.Visible = false;
-            // 
             // grpExpiration
             // 
             this.grpExpiration.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -613,36 +598,6 @@
             this.dtDatePicker.Size = new System.Drawing.Size(85, 22);
             this.dtDatePicker.TabIndex = 9;
             this.dtDatePicker.TabStop = false;
-            // 
-            // btnSubmit
-            // 
-            this.btnSubmit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSubmit.BackColor = System.Drawing.Color.Orange;
-            this.btnSubmit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSubmit.BackgroundImage")));
-            this.btnSubmit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(74, 487);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(131, 28);
-            this.btnSubmit.TabIndex = 10;
-            this.btnSubmit.Text = "Submit";
-            this.btnSubmit.UseVisualStyleBackColor = false;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCancel.BackColor = System.Drawing.Color.Orange;
-            this.btnCancel.BackgroundImage = global::RFID_FEATHER_ASSETS.Properties.Resources.cancel;
-            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(208, 487);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(131, 28);
-            this.btnCancel.TabIndex = 11;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnEditInfo
             // 
@@ -836,18 +791,6 @@
             this.lblPosition.TabIndex = 14;
             this.lblPosition.Text = "Position:";
             // 
-            // lblDesc
-            // 
-            this.lblDesc.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblDesc.AutoSize = true;
-            this.lblDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDesc.Location = new System.Drawing.Point(243, 492);
-            this.lblDesc.Name = "lblDesc";
-            this.lblDesc.Size = new System.Drawing.Size(93, 20);
-            this.lblDesc.TabIndex = 12;
-            this.lblDesc.Text = "Description:";
-            this.lblDesc.Visible = false;
-            // 
             // lblEmail
             // 
             this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -870,6 +813,63 @@
             this.lblFname.TabIndex = 8;
             this.lblFname.Text = "First Name: ";
             // 
+            // lblLoadingInformation
+            // 
+            this.lblLoadingInformation.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblLoadingInformation.AutoSize = true;
+            this.lblLoadingInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoadingInformation.ForeColor = System.Drawing.Color.Green;
+            this.lblLoadingInformation.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblLoadingInformation.Location = new System.Drawing.Point(44, 489);
+            this.lblLoadingInformation.Name = "lblLoadingInformation";
+            this.lblLoadingInformation.Size = new System.Drawing.Size(320, 24);
+            this.lblLoadingInformation.TabIndex = 67;
+            this.lblLoadingInformation.Text = "Getting Information. Please wait...";
+            this.lblLoadingInformation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLoadingInformation.Visible = false;
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSubmit.BackColor = System.Drawing.Color.Orange;
+            this.btnSubmit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSubmit.BackgroundImage")));
+            this.btnSubmit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.Location = new System.Drawing.Point(74, 487);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(131, 28);
+            this.btnSubmit.TabIndex = 10;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCancel.BackColor = System.Drawing.Color.Orange;
+            this.btnCancel.BackgroundImage = global::RFID_FEATHER_ASSETS.Properties.Resources.cancel;
+            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(208, 487);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(131, 28);
+            this.btnCancel.TabIndex = 11;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // lblDesc
+            // 
+            this.lblDesc.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblDesc.AutoSize = true;
+            this.lblDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesc.Location = new System.Drawing.Point(243, 492);
+            this.lblDesc.Name = "lblDesc";
+            this.lblDesc.Size = new System.Drawing.Size(93, 20);
+            this.lblDesc.TabIndex = 12;
+            this.lblDesc.Text = "Description:";
+            this.lblDesc.Visible = false;
+            // 
             // RegisterUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -884,7 +884,7 @@
             this.MinimumSize = new System.Drawing.Size(900, 630);
             this.Name = "RegisterUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Owner Registration";
+            this.Text = "Register Owner";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RegisterUser_FormClosed);
             this.Load += new System.EventHandler(this.RegisterUser_Load);

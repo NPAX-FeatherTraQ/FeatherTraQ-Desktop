@@ -31,6 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransactionHistory));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grpSearchCriteria = new System.Windows.Forms.GroupBox();
+            this.chkMisLocation = new System.Windows.Forms.CheckBox();
+            this.cmbBaseLocation = new System.Windows.Forms.ComboBox();
+            this.cmbAssetClassification = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.cmbAssetList = new System.Windows.Forms.ComboBox();
             this.cmbOwnerList = new System.Windows.Forms.ComboBox();
             this.lblDateFrom = new System.Windows.Forms.Label();
@@ -50,6 +55,8 @@
             this.colType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colOwnerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColClassification = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColBaseLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColTransId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCompanyId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColAssetId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,6 +77,11 @@
             // grpSearchCriteria
             // 
             resources.ApplyResources(this.grpSearchCriteria, "grpSearchCriteria");
+            this.grpSearchCriteria.Controls.Add(this.chkMisLocation);
+            this.grpSearchCriteria.Controls.Add(this.cmbBaseLocation);
+            this.grpSearchCriteria.Controls.Add(this.cmbAssetClassification);
+            this.grpSearchCriteria.Controls.Add(this.label1);
+            this.grpSearchCriteria.Controls.Add(this.label2);
             this.grpSearchCriteria.Controls.Add(this.cmbAssetList);
             this.grpSearchCriteria.Controls.Add(this.cmbOwnerList);
             this.grpSearchCriteria.Controls.Add(this.lblDateFrom);
@@ -83,6 +95,40 @@
             this.grpSearchCriteria.Controls.Add(this.dtDateToPicker);
             this.grpSearchCriteria.Name = "grpSearchCriteria";
             this.grpSearchCriteria.TabStop = false;
+            // 
+            // chkMisLocation
+            // 
+            resources.ApplyResources(this.chkMisLocation, "chkMisLocation");
+            this.chkMisLocation.Name = "chkMisLocation";
+            this.chkMisLocation.UseVisualStyleBackColor = true;
+            // 
+            // cmbBaseLocation
+            // 
+            this.cmbBaseLocation.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbBaseLocation.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            resources.ApplyResources(this.cmbBaseLocation, "cmbBaseLocation");
+            this.cmbBaseLocation.FormattingEnabled = true;
+            this.cmbBaseLocation.Name = "cmbBaseLocation";
+            this.cmbBaseLocation.Sorted = true;
+            // 
+            // cmbAssetClassification
+            // 
+            this.cmbAssetClassification.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbAssetClassification.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            resources.ApplyResources(this.cmbAssetClassification, "cmbAssetClassification");
+            this.cmbAssetClassification.FormattingEnabled = true;
+            this.cmbAssetClassification.Name = "cmbAssetClassification";
+            this.cmbAssetClassification.Sorted = true;
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
             // 
             // cmbAssetList
             // 
@@ -189,6 +235,8 @@
             this.colType,
             this.ColDescription,
             this.colOwnerName,
+            this.ColClassification,
+            this.ColBaseLocation,
             this.ColTransId,
             this.ColCompanyId,
             this.ColAssetId,
@@ -243,6 +291,18 @@
             resources.ApplyResources(this.colOwnerName, "colOwnerName");
             this.colOwnerName.Name = "colOwnerName";
             this.colOwnerName.ReadOnly = true;
+            // 
+            // ColClassification
+            // 
+            resources.ApplyResources(this.ColClassification, "ColClassification");
+            this.ColClassification.Name = "ColClassification";
+            this.ColClassification.ReadOnly = true;
+            // 
+            // ColBaseLocation
+            // 
+            resources.ApplyResources(this.ColBaseLocation, "ColBaseLocation");
+            this.ColBaseLocation.Name = "ColBaseLocation";
+            this.ColBaseLocation.ReadOnly = true;
             // 
             // ColTransId
             // 
@@ -352,11 +412,18 @@
         private System.Windows.Forms.GroupBox grpDetails;
         private System.Windows.Forms.Label lblLoadingInformation;
         private System.Windows.Forms.DataGridView grdViewTransactions;
+        private System.Windows.Forms.CheckBox chkMisLocation;
+        private System.Windows.Forms.ComboBox cmbBaseLocation;
+        private System.Windows.Forms.ComboBox cmbAssetClassification;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCreatedAt;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColReaderInfo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colType;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDescription;
         private System.Windows.Forms.DataGridViewTextBoxColumn colOwnerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColClassification;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColBaseLocation;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColTransId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCompanyId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColAssetId;

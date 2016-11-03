@@ -32,8 +32,10 @@ namespace RFID_FEATHER_ASSETS
         string description;
         string takeOutNote;
         string userName;
+        string classification;
+        string baseLocation;
 
-        public AssetRenewal(int srcAssetId, string srcOwnerName, string srcDescription, string srcTakeOutNote)
+        public AssetRenewal(int srcAssetId, string srcOwnerName, string srcDescription, string srcTakeOutNote, string srcClassification, string srcBaseLocation)
         {
             InitializeComponent();
 
@@ -45,6 +47,8 @@ namespace RFID_FEATHER_ASSETS
             ownerName = srcOwnerName;
             description = srcDescription;
             takeOutNote = srcTakeOutNote;
+            classification = srcClassification;
+            baseLocation = srcBaseLocation;
         }
         private void getLanguage()
         {
@@ -338,6 +342,8 @@ namespace RFID_FEATHER_ASSETS
                 //transactDet.notes = notes;
                 transactDet.type = "RENEW-ID";
                 transactDet.assetId = assetId;
+                transactDet.location = baseLocation;
+                transactDet.classType = classification;
 
                 RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");//("http://feather-assets.herokuapp.com/");
                 RestRequest transact = new RestRequest("/api/asset/transact", Method.POST);

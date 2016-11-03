@@ -60,6 +60,10 @@ namespace RFID_FEATHER_ASSETS
             public string validityPeriod { get; set; }
             public string ownerImageUrl { get; set; }
             public string assetImageUrl { get; set; }
+            public string assetType { get; set; }
+            public string baseLocation { get; set; }
+            public string location { get; set; }
+            public string classType { get; set; }
         }
 
         public class AssetList
@@ -80,6 +84,17 @@ namespace RFID_FEATHER_ASSETS
             public int ownerId { get; set; }
             public int tagType { get; set; }
             public int ownerUserId { get; set; }
+            public string assetType { get; set; }
+            public string baseLocation { get; set; }
+        }
+
+        public class TypeList
+        {
+            public string type { get; set; }
+        }
+        public class LocationList
+        {
+            public string location { get; set; }
         }
 
     }

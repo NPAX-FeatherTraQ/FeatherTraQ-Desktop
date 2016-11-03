@@ -48,6 +48,96 @@ namespace RFID_FEATHER_ASSETS
             GetAssetSystemInfo();
             ownerList();
             assetList(0);
+            typeList();
+        }
+
+        private void typeList()
+        {
+            try
+            {
+                //initialize Rest Client
+                RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");
+                RestRequest assetInfo;
+                //if (selectedUserId != 0)
+                //assetInfo = new RestRequest("/api/user/" + selectedUserId + "/assets/list/", Method.GET);
+                //else
+                assetInfo = new RestRequest("/api/company/" + companyId + "/assets/list/", Method.GET);
+                var authToken = tokenValue;
+
+                //add needed headers
+                assetInfo.RequestFormat = DataFormat.Json;
+                assetInfo.AddHeader("Content-Type", "application/json; charset=utf-8");
+                assetInfo.AddHeader("X-Auth-Token", authToken);
+
+                //execute request
+                var response = client.Execute<List<AssetInformation>>(assetInfo);
+                var content = response.Content;
+
+                //client.ExecuteAsync<List<AssetInformation>>(assetInfo, response =>
+                //{
+                if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    //deserialize json response into object
+                    JsonDeserializer deserial = new JsonDeserializer();
+                    List<GlobalClass.GetSetClass> generateAssets = deserial.Deserialize<List<GlobalClass.GetSetClass>>(response);
+                    //this.cmbAssetList.Invoke(new MethodInvoker(delegate
+                    //{
+                    //add combobox information
+                    //if (generateAssets.Count == 0)
+                    //{
+                    //    MessageBox.Show("Not yet registered an asset... Please visit your administrator to register your asset", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //    return;
+                    //}
+                    //else
+                    //{
+                    //if (!isAssetChanged) isAssetChanged = true;
+                    //isUserLoadingList = false;
+                    //isOwnerChanged = false;
+
+                    List<GlobalClass.TypeList> typeList = new List<GlobalClass.TypeList>();
+                    List<GlobalClass.LocationList> LocationList = new List<GlobalClass.LocationList>();
+
+                    for (int i = 0; i < generateAssets.Count; i++)
+                    {
+                        if (!string.IsNullOrEmpty(generateAssets[i].assetType))
+                        {
+                            if (!typeList.Any(x => x.type == generateAssets[i].assetType))
+                                typeList.Add(new GlobalClass.TypeList() { type = generateAssets[i].assetType });
+                        }
+
+                        if (!string.IsNullOrEmpty(generateAssets[i].baseLocation))
+                        {
+                            if (!LocationList.Any(x => x.location == generateAssets[i].baseLocation))
+                                LocationList.Add(new GlobalClass.LocationList() { location = generateAssets[i].baseLocation });
+                        }
+                    }
+
+                    //if (generateAssets.Count != 0)
+                    //{
+                    if (typeList.Count() != 0)
+                    {
+                        this.cmbAssetClassification.DataSource = typeList;
+                        this.cmbAssetClassification.ValueMember = "type";
+                        this.cmbAssetClassification.DisplayMember = "type";
+                    }
+
+                    if (LocationList.Count() != 0)
+                    {
+                        this.cmbBaseLocation.DataSource = LocationList;
+                        this.cmbBaseLocation.ValueMember = "location";
+                        this.cmbBaseLocation.DisplayMember = "location";
+                    }
+                    //}
+
+                    //}));
+                    //}
+                }
+                //});
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void clearOwnerAssetComboText()
@@ -56,6 +146,8 @@ namespace RFID_FEATHER_ASSETS
             searchOwnerId = 0;
             cmbAssetList.Text = string.Empty;
             searchAssetId = 0;
+            cmbBaseLocation.Text = string.Empty;
+            cmbAssetClassification.Text = string.Empty;
         }
 
         private void ownerList()
@@ -236,6 +328,16 @@ namespace RFID_FEATHER_ASSETS
                     cmbAssetList.Text = string.Empty;
                 }
 
+                if (string.IsNullOrEmpty(cmbBaseLocation.Text))
+                {
+                    cmbBaseLocation.Text = string.Empty;
+                }
+
+                if (string.IsNullOrEmpty(cmbAssetClassification.Text))
+                {
+                    cmbAssetClassification.Text = string.Empty;
+                }
+
                 //btnGenerate.Enabled = false;
                 grdViewTransactions.Visible = false;
                 grdViewTransactions.Rows.Clear();
@@ -252,7 +354,8 @@ namespace RFID_FEATHER_ASSETS
                 //initialize Rest Client
                 RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");
                 //RestRequest transactionInfo = new RestRequest("/api/transaction/search?startDate=" + startDate + "&endDate=" + endDate + "&userId=" + searchOwnerId + "&assetId=" + searchAssetId, Method.GET);
-                RestRequest transactionInfo = new RestRequest("/api/transaction/search?startDate=" + startDate + "&endDate=" + endDate + (searchOwnerId != 0 ? "&userId=" + searchOwnerId : "") + (searchAssetId != 0 ? "&assetId=" + searchAssetId : ""), Method.GET);
+                //RestRequest transactionInfo = new RestRequest("/api/transaction/search?startDate=" + startDate + "&endDate=" + endDate + (searchOwnerId != 0 ? "&userId=" + searchOwnerId : "") + (searchAssetId != 0 ? "&assetId=" + searchAssetId : ""), Method.GET);
+                RestRequest transactionInfo = new RestRequest("/api/transaction/search?startDate=" + startDate + "&endDate=" + endDate + (searchOwnerId != 0 ? "&userId=" + searchOwnerId : "") + (searchAssetId != 0 ? "&assetId=" + searchAssetId : "") + (!string.IsNullOrEmpty(cmbAssetClassification.Text) ? "&classType=" + cmbAssetClassification.Text : "") + (!string.IsNullOrEmpty(cmbBaseLocation.Text) ? "&location=" + cmbBaseLocation.Text : ""), Method.GET);
 
                 var authToken = tokenValue;
 
@@ -287,8 +390,8 @@ namespace RFID_FEATHER_ASSETS
                                     //int idx;
                                     //grdViewTransactions.Invoke(new MethodInvoker(delegate
                                     //{
-                                        idx = grdViewTransactions.Rows.Add();
-                                        DataGridViewRow row = grdViewTransactions.Rows[idx];
+                                        //idx = grdViewTransactions.Rows.Add();
+                                        //DataGridViewRow row = grdViewTransactions.Rows[idx];
 
 
                                         //int idx;
@@ -325,23 +428,62 @@ namespace RFID_FEATHER_ASSETS
                                         
                                         //row.Cells["ColRegisterId"].Value = generateResult[i].ownerName;
 
-                                        if (generateResult[i].type.Contains("VERIFY") || generateResult[i].type.Contains("TRACK") || generateResult[i].type.Contains("CREATE") || generateResult[i].type.Contains("RENEW"))
-                                            row.Cells["ColRegisterId"].Value = generateResult[i].updatedBy;
+                                        if (chkMisLocation.Checked)
+                                        {
+                                            if (!string.IsNullOrEmpty(generateResult[i].location) && generateResult[i].readerInfo != generateResult[i].location && !generateResult[i].type.Contains("Owner") && !generateResult[i].type.Contains("ADD") && !generateResult[i].type.Contains("UPDATE") /*(generateResult[i].type.Contains("VERIFY") || generateResult[i].type.Contains("TRACK"))*/)
+                                            {
+                                                idx = grdViewTransactions.Rows.Add();
+                                                DataGridViewRow row = grdViewTransactions.Rows[idx];
+
+                                                if (generateResult[i].type.Contains("VERIFY") || generateResult[i].type.Contains("TRACK") || generateResult[i].type.Contains("CREATE") || generateResult[i].type.Contains("RENEW"))
+                                                    row.Cells["ColRegisterId"].Value = generateResult[i].updatedBy;
+                                                else
+                                                {
+                                                    getOwnerInfo(generateResult[i].asset.registerUserId);
+                                                    row.Cells["ColRegisterId"].Value = name;
+                                                }
+                                                row.Cells["ColUpdateId"].Value = generateResult[i].updatedBy;
+                                                row.Cells["ColOwnerName"].Value = generateResult[i].ownerName;
+                                                row.Cells["ColDescription"].Value = generateResult[i].description;
+                                                row.Cells["ColTakeOutNote"].Value = generateResult[i].takeOutNote;
+                                                row.Cells["ColValidUntil"].Value = generateResult[i].validityPeriod;
+                                                row.Cells["ColNotes"].Value = generateResult[i].notes;
+                                                row.Cells["ColType"].Value = generateResult[i].type;
+                                                row.Cells["ColCreatedAt"].Value = DateTime.Parse(generateResult[i].createdAt.ToString());//("MM/dd/yyyy hh:mm:ss tt"));//generateResult[i].createdAt.ToString("g");
+                                                row.Cells["ColUpdatedAt"].Value = generateResult[i].asset.updatedAt.ToString("yyyy-MM-dd HH:mm:ss");//generateResult[i].asset.updatedAt.ToString("s");
+                                                row.Cells["ColReaderInfo"].Value = generateResult[i].readerInfo;
+                                                row.Cells["ColClassification"].Value = generateResult[i].classType;/*.asset.assetType*/;
+                                                row.Cells["ColBaseLocation"].Value = generateResult[i].location;
+                                                //row.Cells["classType"].Value = generateResult[i].classType;
+                                            }
+                                        }
                                         else
                                         {
-                                            getOwnerInfo(generateResult[i].asset.registerUserId);
-                                            row.Cells["ColRegisterId"].Value = name;
+
+                                            idx = grdViewTransactions.Rows.Add();
+                                            DataGridViewRow row = grdViewTransactions.Rows[idx];
+
+                                            if (generateResult[i].type.Contains("VERIFY") || generateResult[i].type.Contains("TRACK") || generateResult[i].type.Contains("CREATE") || generateResult[i].type.Contains("RENEW"))
+                                                row.Cells["ColRegisterId"].Value = generateResult[i].updatedBy;
+                                            else
+                                            {
+                                                getOwnerInfo(generateResult[i].asset.registerUserId);
+                                                row.Cells["ColRegisterId"].Value = name;
+                                            }
+                                            row.Cells["ColUpdateId"].Value = generateResult[i].updatedBy;
+                                            row.Cells["ColOwnerName"].Value = generateResult[i].ownerName;
+                                            row.Cells["ColDescription"].Value = generateResult[i].description;
+                                            row.Cells["ColTakeOutNote"].Value = generateResult[i].takeOutNote;
+                                            row.Cells["ColValidUntil"].Value = generateResult[i].validityPeriod;
+                                            row.Cells["ColNotes"].Value = generateResult[i].notes;
+                                            row.Cells["ColType"].Value = generateResult[i].type;
+                                            row.Cells["ColCreatedAt"].Value = DateTime.Parse(generateResult[i].createdAt.ToString());//("MM/dd/yyyy hh:mm:ss tt"));//generateResult[i].createdAt.ToString("g");
+                                            row.Cells["ColUpdatedAt"].Value = generateResult[i].asset.updatedAt.ToString("yyyy-MM-dd HH:mm:ss");//generateResult[i].asset.updatedAt.ToString("s");
+                                            row.Cells["ColReaderInfo"].Value = generateResult[i].readerInfo;
+                                            row.Cells["ColClassification"].Value = generateResult[i].classType;/*.asset.assetType*/;
+                                            row.Cells["ColBaseLocation"].Value = generateResult[i].location;
+                                            //row.Cells["classType"].Value = generateResult[i].classType;
                                         }
-                                        row.Cells["ColUpdateId"].Value = generateResult[i].updatedBy;
-                                        row.Cells["ColOwnerName"].Value = generateResult[i].ownerName;
-                                        row.Cells["ColDescription"].Value = generateResult[i].description;
-                                        row.Cells["ColTakeOutNote"].Value = generateResult[i].takeOutNote;
-                                        row.Cells["ColValidUntil"].Value = generateResult[i].validityPeriod;
-                                        row.Cells["ColNotes"].Value = generateResult[i].notes;
-                                        row.Cells["ColType"].Value = generateResult[i].type;
-                                        row.Cells["ColCreatedAt"].Value = DateTime.Parse(generateResult[i].createdAt.ToString());//("MM/dd/yyyy hh:mm:ss tt"));//generateResult[i].createdAt.ToString("g");
-                                        row.Cells["ColUpdatedAt"].Value = generateResult[i].asset.updatedAt.ToString("yyyy-MM-dd HH:mm:ss");//generateResult[i].asset.updatedAt.ToString("s");
-                                        row.Cells["ColReaderInfo"].Value = generateResult[i].readerInfo;
                                     //}));
                                     //grdViewTransactions.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.Fill);
                                     //return;

@@ -34,12 +34,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblCurrentDateTime = new System.Windows.Forms.Label();
             this.VerifyTimer = new System.Windows.Forms.Timer(this.components);
-            this.BackgroundTimer = new System.Windows.Forms.Timer(this.components);
+            this.NoAssetReadTimer = new System.Windows.Forms.Timer(this.components);
             this.CurrentDateTimer = new System.Windows.Forms.Timer(this.components);
             this.ClearGridTimer = new System.Windows.Forms.Timer(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtBaseLocation = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtClassification = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtOwnerName = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtValidityPeriod = new System.Windows.Forms.TextBox();
@@ -84,6 +88,8 @@
             this.colDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colOwnerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAssetDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colClassification = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBaseLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTakeOutNote = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colValidityPeriod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -125,9 +131,9 @@
             // 
             this.VerifyTimer.Tick += new System.EventHandler(this.VerifyTimer_Tick);
             // 
-            // BackgroundTimer
+            // NoAssetReadTimer
             // 
-            this.BackgroundTimer.Tick += new System.EventHandler(this.BackgroundTimer_Tick);
+            this.NoAssetReadTimer.Tick += new System.EventHandler(this.BackgroundTimer_Tick);
             // 
             // CurrentDateTimer
             // 
@@ -174,6 +180,10 @@
             // groupBox2
             // 
             resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.Controls.Add(this.txtBaseLocation);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.txtClassification);
+            this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.txtOwnerName);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.txtValidityPeriod);
@@ -188,6 +198,30 @@
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
+            // 
+            // txtBaseLocation
+            // 
+            resources.ApplyResources(this.txtBaseLocation, "txtBaseLocation");
+            this.txtBaseLocation.BackColor = System.Drawing.Color.White;
+            this.txtBaseLocation.Name = "txtBaseLocation";
+            this.txtBaseLocation.ReadOnly = true;
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
+            // 
+            // txtClassification
+            // 
+            resources.ApplyResources(this.txtClassification, "txtClassification");
+            this.txtClassification.BackColor = System.Drawing.Color.White;
+            this.txtClassification.Name = "txtClassification";
+            this.txtClassification.ReadOnly = true;
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
             // 
             // txtOwnerName
             // 
@@ -479,6 +513,8 @@
             this.colDate,
             this.colOwnerName,
             this.colAssetDescription,
+            this.colClassification,
+            this.colBaseLocation,
             this.colTakeOutNote,
             this.colValidityPeriod,
             this.colStatus,
@@ -526,6 +562,18 @@
             this.colAssetDescription.Name = "colAssetDescription";
             this.colAssetDescription.ReadOnly = true;
             this.colAssetDescription.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colClassification
+            // 
+            resources.ApplyResources(this.colClassification, "colClassification");
+            this.colClassification.Name = "colClassification";
+            this.colClassification.ReadOnly = true;
+            // 
+            // colBaseLocation
+            // 
+            resources.ApplyResources(this.colBaseLocation, "colBaseLocation");
+            this.colBaseLocation.Name = "colBaseLocation";
+            this.colBaseLocation.ReadOnly = true;
             // 
             // colTakeOutNote
             // 
@@ -613,6 +661,7 @@
             // 
             // ReadLoopTimer
             // 
+            this.ReadLoopTimer.Interval = 1;
             this.ReadLoopTimer.Tick += new System.EventHandler(this.ReadLoopTimer_Tick);
             // 
             // statusStrip1
@@ -647,10 +696,10 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.grdViewRFIDTag);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.lblLoginUserName);
             this.Controls.Add(this.lblCurrentDateTime);
+            this.Controls.Add(this.grdViewRFIDTag);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Verification";
@@ -683,7 +732,7 @@
 
         private System.Windows.Forms.Label lblCurrentDateTime;
         private System.Windows.Forms.Timer VerifyTimer;
-        private System.Windows.Forms.Timer BackgroundTimer;
+        private System.Windows.Forms.Timer NoAssetReadTimer;
         private System.Windows.Forms.Timer CurrentDateTimer;
         private System.Windows.Forms.Timer ClearGridTimer;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -732,9 +781,19 @@
         private System.Windows.Forms.Label lblLoginUserName;
         private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Timer ReadLoopTimer;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel lblSystemInfo;
+        private System.Windows.Forms.ToolStripStatusLabel lblMsgAssetNotRegister;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.TextBox txtBaseLocation;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtClassification;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colOwnerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAssetDescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colClassification;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colBaseLocation;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTakeOutNote;
         private System.Windows.Forms.DataGridViewTextBoxColumn colValidityPeriod;
         private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
@@ -746,10 +805,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colAssetOwner;
         private System.Windows.Forms.DataGridViewTextBoxColumn colRFIDTag;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIsCompared;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel lblSystemInfo;
-        private System.Windows.Forms.ToolStripStatusLabel lblMsgAssetNotRegister;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
 
 
     }

@@ -529,6 +529,8 @@ namespace RFID_FEATHER_ASSETS
             userinfo.assetIdCard.takeOutAllowed = false;
             userinfo.assetIdCard.takeOutInfo = txtlastName.Text + " only";
             userinfo.assetIdCard.ownerId = 1;
+            userinfo.assetIdCard.assetType = "ID_CARD";
+            userinfo.assetIdCard.baseLocation = readerInfo;
 
             if (btnSubmit.Text.ToLower() == "update")
             {
@@ -909,6 +911,8 @@ namespace RFID_FEATHER_ASSETS
                 //transactDet.notes = notes;
                 transactDet.type = type;
                 //transactDet.assetId = assetId;
+                transactDet.location = readerInfo;
+                transactDet.classType = "ID_CARD";
 
                 //Gettting the assetId
                 //ResourceManager rm = new ResourceManager("RFID_FEATHER_ASSETS.Languages.UserRegistration", Assembly.GetExecutingAssembly());
@@ -1226,7 +1230,11 @@ namespace RFID_FEATHER_ASSETS
                 {
                     if (imgValidIDPhoto.Image == null || imgValidIDPhotoEmpty.Visible || chkUpdateOwnerPhoto.Checked)
                     {
-                        if (language == "English") CaptureImg.Text = "Processing. Please wait...";
+                        if (language == "English")
+                        {
+                            //CaptureImg.Enabled = false;
+                            CaptureImg.Text = "Processing. Please wait...";
+                        }
                         else
                         {
                             //ResourceManager rm = new ResourceManager("RFID_FEATHER_ASSETS.Languages.UserRegistration", Assembly.GetExecutingAssembly());
@@ -1263,6 +1271,7 @@ namespace RFID_FEATHER_ASSETS
                     //else
                     newImgFileNames = ownerPhotoFileName + (validIDPhotoFileName != string.Empty ? "," + validIDPhotoFileName : ""); //+ "," + validIDPhotoFileName;//newImgFileNames + "," + ImgFileName;
                     cam.Stop();
+                    //CaptureImg.Enabled = true;
                     InitializeCamera();
                     
                 }

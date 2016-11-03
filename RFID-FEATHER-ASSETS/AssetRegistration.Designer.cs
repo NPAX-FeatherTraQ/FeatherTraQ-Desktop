@@ -48,6 +48,10 @@
             this.txtSaveImageDir = new System.Windows.Forms.TextBox();
             this.btnBrowseImagePath = new System.Windows.Forms.Button();
             this.grpAssetInfo = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbBaseLocation = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbAssetClassification = new System.Windows.Forms.ComboBox();
             this.lblSubmittingInformation = new System.Windows.Forms.Label();
             this.lblLoadingInformation = new System.Windows.Forms.Label();
             this.btnReadIDTag = new System.Windows.Forms.Button();
@@ -282,6 +286,10 @@
             // 
             // grpAssetInfo
             // 
+            this.grpAssetInfo.Controls.Add(this.label3);
+            this.grpAssetInfo.Controls.Add(this.cmbBaseLocation);
+            this.grpAssetInfo.Controls.Add(this.label1);
+            this.grpAssetInfo.Controls.Add(this.cmbAssetClassification);
             this.grpAssetInfo.Controls.Add(this.lblSubmittingInformation);
             this.grpAssetInfo.Controls.Add(this.lblLoadingInformation);
             this.grpAssetInfo.Controls.Add(this.btnReadIDTag);
@@ -304,6 +312,34 @@
             resources.ApplyResources(this.grpAssetInfo, "grpAssetInfo");
             this.grpAssetInfo.Name = "grpAssetInfo";
             this.grpAssetInfo.TabStop = false;
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // cmbBaseLocation
+            // 
+            resources.ApplyResources(this.cmbBaseLocation, "cmbBaseLocation");
+            this.cmbBaseLocation.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbBaseLocation.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbBaseLocation.FormattingEnabled = true;
+            this.cmbBaseLocation.Name = "cmbBaseLocation";
+            this.cmbBaseLocation.Sorted = true;
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // cmbAssetClassification
+            // 
+            resources.ApplyResources(this.cmbAssetClassification, "cmbAssetClassification");
+            this.cmbAssetClassification.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbAssetClassification.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbAssetClassification.FormattingEnabled = true;
+            this.cmbAssetClassification.Name = "cmbAssetClassification";
+            this.cmbAssetClassification.Sorted = true;
             // 
             // lblSubmittingInformation
             // 
@@ -810,6 +846,10 @@
         private System.Windows.Forms.PictureBox imgAssetPhoto2Empty;
         private System.Windows.Forms.PictureBox imgAssetPhoto1Empty;
         private System.Windows.Forms.ToolTip toolTipUpdatePhoto;
+        private System.Windows.Forms.ComboBox cmbAssetClassification;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cmbBaseLocation;
+        private System.Windows.Forms.Label label1;
 
     }
 }

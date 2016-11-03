@@ -157,12 +157,12 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblCurrentDateTime.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <metadata name="VerifyTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>127, 17</value>
   </metadata>
-  <metadata name="BackgroundTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="NoAssetReadTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>241, 17</value>
   </metadata>
   <metadata name="CurrentDateTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -210,6 +210,156 @@
   <data name="groupBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
+  <metadata name="txtBaseLocation.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="txtBaseLocation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="txtBaseLocation.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="txtBaseLocation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 208</value>
+  </data>
+  <data name="txtBaseLocation.MaxLength" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="txtBaseLocation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 22</value>
+  </data>
+  <data name="txtBaseLocation.TabIndex" type="System.Int32, mscorlib">
+    <value>87</value>
+  </data>
+  <data name="&gt;&gt;txtBaseLocation.Name" xml:space="preserve">
+    <value>txtBaseLocation</value>
+  </data>
+  <data name="&gt;&gt;txtBaseLocation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtBaseLocation.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;txtBaseLocation.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="label7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="label7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 191</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 16</value>
+  </data>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>86</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Base Location</value>
+  </data>
+  <data name="label7.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="txtClassification.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="txtClassification.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="txtClassification.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="txtClassification.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 167</value>
+  </data>
+  <data name="txtClassification.MaxLength" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="txtClassification.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 22</value>
+  </data>
+  <data name="txtClassification.TabIndex" type="System.Int32, mscorlib">
+    <value>85</value>
+  </data>
+  <data name="&gt;&gt;txtClassification.Name" xml:space="preserve">
+    <value>txtClassification</value>
+  </data>
+  <data name="&gt;&gt;txtClassification.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtClassification.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;txtClassification.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="label4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="label4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 150</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 16</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>84</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Classification</value>
+  </data>
+  <data name="label4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <metadata name="txtOwnerName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -217,16 +367,16 @@
     <value>None</value>
   </data>
   <data name="txtOwnerName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="txtOwnerName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 100</value>
+    <value>7, 83</value>
   </data>
   <data name="txtOwnerName.MaxLength" type="System.Int32, mscorlib">
     <value>45</value>
   </data>
   <data name="txtOwnerName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 24</value>
+    <value>255, 22</value>
   </data>
   <data name="txtOwnerName.TabIndex" type="System.Int32, mscorlib">
     <value>83</value>
@@ -241,7 +391,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;txtOwnerName.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>4</value>
   </data>
   <metadata name="label9.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -253,16 +403,16 @@
     <value>True</value>
   </data>
   <data name="label9.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 78</value>
+    <value>3, 66</value>
   </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 20</value>
+    <value>86, 16</value>
   </data>
   <data name="label9.TabIndex" type="System.Int32, mscorlib">
     <value>82</value>
@@ -283,7 +433,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>5</value>
   </data>
   <metadata name="txtValidityPeriod.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -295,7 +445,7 @@
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="txtValidityPeriod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 51</value>
+    <value>6, 43</value>
   </data>
   <data name="txtValidityPeriod.MaxLength" type="System.Int32, mscorlib">
     <value>45</value>
@@ -316,7 +466,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;txtValidityPeriod.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>6</value>
   </data>
   <metadata name="lblValidUntil.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -328,16 +478,16 @@
     <value>True</value>
   </data>
   <data name="lblValidUntil.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="lblValidUntil.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblValidUntil.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 29</value>
+    <value>4, 26</value>
   </data>
   <data name="lblValidUntil.Size" type="System.Drawing.Size, System.Drawing">
-    <value>108, 20</value>
+    <value>95, 16</value>
   </data>
   <data name="lblValidUntil.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -358,7 +508,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;lblValidUntil.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>7</value>
   </data>
   <metadata name="lblDesc.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -370,16 +520,16 @@
     <value>True</value>
   </data>
   <data name="lblDesc.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="lblDesc.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblDesc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 129</value>
+    <value>2, 107</value>
   </data>
   <data name="lblDesc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 20</value>
+    <value>76, 16</value>
   </data>
   <data name="lblDesc.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -397,7 +547,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;lblDesc.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>8</value>
   </data>
   <metadata name="txtTakeOutNote.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -406,10 +556,10 @@
     <value>None</value>
   </data>
   <data name="txtTakeOutNote.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="txtTakeOutNote.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 217</value>
+    <value>7, 249</value>
   </data>
   <data name="txtTakeOutNote.MaxLength" type="System.Int32, mscorlib">
     <value>100</value>
@@ -418,7 +568,7 @@
     <value>True</value>
   </data>
   <data name="txtTakeOutNote.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 55</value>
+    <value>255, 30</value>
   </data>
   <data name="txtTakeOutNote.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -433,7 +583,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;txtTakeOutNote.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>9</value>
   </data>
   <metadata name="lblMemo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -445,16 +595,16 @@
     <value>True</value>
   </data>
   <data name="lblMemo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="lblMemo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblMemo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 195</value>
+    <value>3, 232</value>
   </data>
   <data name="lblMemo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 20</value>
+    <value>95, 16</value>
   </data>
   <data name="lblMemo.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -472,7 +622,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;lblMemo.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>10</value>
   </data>
   <metadata name="txtAssetName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -508,7 +658,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;txtAssetName.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>11</value>
   </data>
   <metadata name="txtRFIDTag.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -544,7 +694,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;txtRFIDTag.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>12</value>
   </data>
   <metadata name="lblTag.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -589,7 +739,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;lblTag.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>13</value>
   </data>
   <metadata name="txtDescription.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -598,10 +748,10 @@
     <value>None</value>
   </data>
   <data name="txtDescription.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="txtDescription.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 151</value>
+    <value>6, 124</value>
   </data>
   <data name="txtDescription.MaxLength" type="System.Int32, mscorlib">
     <value>45</value>
@@ -610,7 +760,7 @@
     <value>True</value>
   </data>
   <data name="txtDescription.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 39</value>
+    <value>257, 24</value>
   </data>
   <data name="txtDescription.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -625,7 +775,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;txtDescription.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>14</value>
   </data>
   <metadata name="label8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -670,7 +820,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>15</value>
   </data>
   <data name="groupBox2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
@@ -1843,6 +1993,24 @@
   <data name="colAssetDescription.HeaderText" xml:space="preserve">
     <value>ASSET DESCRIPTION</value>
   </data>
+  <metadata name="colClassification.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colClassification.HeaderText" xml:space="preserve">
+    <value>CLASSIFICATION</value>
+  </data>
+  <data name="colClassification.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <metadata name="colBaseLocation.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colBaseLocation.HeaderText" xml:space="preserve">
+    <value>BASE LOCATION</value>
+  </data>
+  <data name="colBaseLocation.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <metadata name="colTakeOutNote.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1943,7 +2111,7 @@
     <value>0, 0</value>
   </data>
   <data name="grdViewRFIDTag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>884, 666</value>
+    <value>884, 688</value>
   </data>
   <data name="grdViewRFIDTag.TabIndex" type="System.Int32, mscorlib">
     <value>85</value>
@@ -1958,7 +2126,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;grdViewRFIDTag.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <metadata name="lblLoginUserName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1997,7 +2165,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblLoginUserName.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <metadata name="ReadLoopTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>538, 17</value>
@@ -2009,10 +2177,10 @@
     <value>True</value>
   </metadata>
   <data name="lblMsgAssetNotRegister.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10pt</value>
+    <value>Segoe UI, 9pt</value>
   </data>
   <data name="lblMsgAssetNotRegister.Size" type="System.Drawing.Size, System.Drawing">
-    <value>468, 19</value>
+    <value>400, 17</value>
   </data>
   <data name="lblMsgAssetNotRegister.Text" xml:space="preserve">
     <value>Scanned RFID Tag is not registered. Please go to admin for the registration.</value>
@@ -2054,7 +2222,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="dataGridViewImageColumn1.HeaderText" xml:space="preserve">
     <value />
@@ -3758,10 +3926,10 @@
   <data name="&gt;&gt;VerifyTimer.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;BackgroundTimer.Name" xml:space="preserve">
-    <value>BackgroundTimer</value>
+  <data name="&gt;&gt;NoAssetReadTimer.Name" xml:space="preserve">
+    <value>NoAssetReadTimer</value>
   </data>
-  <data name="&gt;&gt;BackgroundTimer.Type" xml:space="preserve">
+  <data name="&gt;&gt;NoAssetReadTimer.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;CurrentDateTimer.Name" xml:space="preserve">
@@ -3792,6 +3960,18 @@
     <value>colAssetDescription</value>
   </data>
   <data name="&gt;&gt;colAssetDescription.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colClassification.Name" xml:space="preserve">
+    <value>colClassification</value>
+  </data>
+  <data name="&gt;&gt;colClassification.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colBaseLocation.Name" xml:space="preserve">
+    <value>colBaseLocation</value>
+  </data>
+  <data name="&gt;&gt;colBaseLocation.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;colTakeOutNote.Name" xml:space="preserve">

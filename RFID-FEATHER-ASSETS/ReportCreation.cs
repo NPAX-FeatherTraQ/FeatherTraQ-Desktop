@@ -43,8 +43,10 @@ namespace RFID_FEATHER_ASSETS
         string description;
         string takeOutNote;
         string userName;
+        string classification;
+        string baseLcoation;
 
-        public ReportCreation(int srcAssetId, string srcOwnerName, string srcDescription, string srcTakeOutNote)
+        public ReportCreation(int srcAssetId, string srcOwnerName, string srcDescription, string srcTakeOutNote, string srcClassification, string srcBaseLocation)
         {
             InitializeComponent();
 
@@ -58,6 +60,8 @@ namespace RFID_FEATHER_ASSETS
             ownerName = srcOwnerName;
             description = srcDescription;
             takeOutNote = srcTakeOutNote;
+            classification = srcClassification;
+            baseLcoation = srcBaseLocation;
             
         }
         private void getLanguage()
@@ -244,6 +248,8 @@ namespace RFID_FEATHER_ASSETS
                 transactDet.notes = txtExplanationNotes.Text.Trim();
                 transactDet.type = "CREATE-Report";
                 transactDet.assetId = assetId;
+                transactDet.location = baseLcoation;
+                transactDet.classType = classification;
 
                 RestClient client = new RestClient("http://52.163.93.95:8080/FeatherAssets/");//("http://feather-assets.herokuapp.com/");
                 RestRequest transact = new RestRequest("/api/asset/transact", Method.POST);
@@ -327,7 +333,11 @@ namespace RFID_FEATHER_ASSETS
                         if (imgCapture2.Image == null)
                         {
                             if (language.ToLower() == "japanese") btnCapturePhoto.Text = "処理. お待ちください...";
-                            else btnCapturePhoto.Text = "Processing. Please wait...";
+                            else
+                            {
+                                //btnCapturePhoto.Enabled = false;
+                                btnCapturePhoto.Text = "Processing. Please wait...";
+                            }
                             btnCapturePhoto.Refresh();
                         }                        
                         //Assigned captured image in each picture box
@@ -369,6 +379,7 @@ namespace RFID_FEATHER_ASSETS
                         //txtCapturedImagePath.Text = txtCapturedImagePath.Text + "," + dirPath + newFileName;
 
                         cam.Stop();
+                        //btnCapturePhoto.Enabled = true;
                         InitializeCamera();
                     }
                 }
@@ -383,7 +394,7 @@ namespace RFID_FEATHER_ASSETS
         {
             if (language == "English")
             {
-                if (imgCapture1.Image == null) btnCapturePhoto.Text = "Capture Owner Photo";
+                if (imgCapture1.Image == null) btnCapturePhoto.Text = "Capture Person Photo";
                 else if (imgCapture2.Image == null) btnCapturePhoto.Text = "Capture Valid ID Photo";
                 else btnCapturePhoto.Text = "Captured Completed";
             }

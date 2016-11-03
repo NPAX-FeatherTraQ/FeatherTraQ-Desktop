@@ -39,6 +39,10 @@
             this.ClearGridTimer = new System.Windows.Forms.Timer(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtBaseLocation = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtClassification = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtOwnerName = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtValidityPeriod = new System.Windows.Forms.TextBox();
@@ -81,6 +85,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnReport = new System.Windows.Forms.Button();
             this.grdViewRFIDTag = new System.Windows.Forms.DataGridView();
+            this.lblLoginUserName = new System.Windows.Forms.Label();
+            this.ReadLoopTimer = new System.Windows.Forms.Timer(this.components);
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblAssetCount = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblMsgAssetNotRegister = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblSystemInfo = new System.Windows.Forms.ToolStripStatusLabel();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.colDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colOwnerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -96,13 +107,6 @@
             this.colAssetOwner = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colRFIDTag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colIsCompared = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblLoginUserName = new System.Windows.Forms.Label();
-            this.ReadLoopTimer = new System.Windows.Forms.Timer(this.components);
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.lblAssetCount = new System.Windows.Forms.ToolStripStatusLabel();
-            this.lblMsgAssetNotRegister = new System.Windows.Forms.ToolStripStatusLabel();
-            this.lblSystemInfo = new System.Windows.Forms.ToolStripStatusLabel();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCapture5)).BeginInit();
@@ -168,6 +172,10 @@
             // groupBox2
             // 
             resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.Controls.Add(this.txtBaseLocation);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.txtClassification);
+            this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.txtOwnerName);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.txtValidityPeriod);
@@ -183,6 +191,30 @@
             this.groupBox2.Controls.Add(this.lblSubmittingInformation);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
+            // 
+            // txtBaseLocation
+            // 
+            resources.ApplyResources(this.txtBaseLocation, "txtBaseLocation");
+            this.txtBaseLocation.BackColor = System.Drawing.Color.White;
+            this.txtBaseLocation.Name = "txtBaseLocation";
+            this.txtBaseLocation.ReadOnly = true;
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
+            // 
+            // txtClassification
+            // 
+            resources.ApplyResources(this.txtClassification, "txtClassification");
+            this.txtClassification.BackColor = System.Drawing.Color.White;
+            this.txtClassification.Name = "txtClassification";
+            this.txtClassification.ReadOnly = true;
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
             // 
             // txtOwnerName
             // 
@@ -506,6 +538,52 @@
             this.grdViewRFIDTag.RowHeadersVisible = false;
             this.grdViewRFIDTag.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdViewRFIDTag_CellContentDoubleClick);
             // 
+            // lblLoginUserName
+            // 
+            resources.ApplyResources(this.lblLoginUserName, "lblLoginUserName");
+            this.lblLoginUserName.BackColor = System.Drawing.Color.White;
+            this.lblLoginUserName.Name = "lblLoginUserName";
+            // 
+            // ReadLoopTimer
+            // 
+            this.ReadLoopTimer.Interval = 1;
+            this.ReadLoopTimer.Tick += new System.EventHandler(this.ReadLoopTimer_Tick);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblAssetCount,
+            this.lblMsgAssetNotRegister,
+            this.lblSystemInfo});
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
+            this.statusStrip1.Name = "statusStrip1";
+            // 
+            // lblAssetCount
+            // 
+            resources.ApplyResources(this.lblAssetCount, "lblAssetCount");
+            this.lblAssetCount.Name = "lblAssetCount";
+            // 
+            // lblMsgAssetNotRegister
+            // 
+            resources.ApplyResources(this.lblMsgAssetNotRegister, "lblMsgAssetNotRegister");
+            this.lblMsgAssetNotRegister.ForeColor = System.Drawing.Color.Red;
+            this.lblMsgAssetNotRegister.Name = "lblMsgAssetNotRegister";
+            // 
+            // lblSystemInfo
+            // 
+            resources.ApplyResources(this.lblSystemInfo, "lblSystemInfo");
+            this.lblSystemInfo.Name = "lblSystemInfo";
+            this.lblSystemInfo.Spring = true;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
+            this.dataGridViewImageColumn1.FillWeight = 120F;
+            resources.ApplyResources(this.dataGridViewImageColumn1, "dataGridViewImageColumn1");
+            this.dataGridViewImageColumn1.Image = global::RFID_FEATHER_ASSETS.Properties.Resources.viewdetailsicon;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // colDate
             // 
             this.colDate.FillWeight = 120F;
@@ -616,59 +694,14 @@
             this.colIsCompared.ReadOnly = true;
             this.colIsCompared.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // lblLoginUserName
-            // 
-            resources.ApplyResources(this.lblLoginUserName, "lblLoginUserName");
-            this.lblLoginUserName.BackColor = System.Drawing.Color.White;
-            this.lblLoginUserName.Name = "lblLoginUserName";
-            // 
-            // ReadLoopTimer
-            // 
-            this.ReadLoopTimer.Tick += new System.EventHandler(this.ReadLoopTimer_Tick);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lblAssetCount,
-            this.lblMsgAssetNotRegister,
-            this.lblSystemInfo});
-            resources.ApplyResources(this.statusStrip1, "statusStrip1");
-            this.statusStrip1.Name = "statusStrip1";
-            // 
-            // lblAssetCount
-            // 
-            resources.ApplyResources(this.lblAssetCount, "lblAssetCount");
-            this.lblAssetCount.Name = "lblAssetCount";
-            // 
-            // lblMsgAssetNotRegister
-            // 
-            resources.ApplyResources(this.lblMsgAssetNotRegister, "lblMsgAssetNotRegister");
-            this.lblMsgAssetNotRegister.ForeColor = System.Drawing.Color.Red;
-            this.lblMsgAssetNotRegister.Name = "lblMsgAssetNotRegister";
-            // 
-            // lblSystemInfo
-            // 
-            resources.ApplyResources(this.lblSystemInfo, "lblSystemInfo");
-            this.lblSystemInfo.Name = "lblSystemInfo";
-            this.lblSystemInfo.Spring = true;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
-            this.dataGridViewImageColumn1.FillWeight = 120F;
-            resources.ApplyResources(this.dataGridViewImageColumn1, "dataGridViewImageColumn1");
-            this.dataGridViewImageColumn1.Image = global::RFID_FEATHER_ASSETS.Properties.Resources.viewdetailsicon;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
             // Tracking
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.grdViewRFIDTag);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.lblLoginUserName);
             this.Controls.Add(this.lblCurrentDateTime);
+            this.Controls.Add(this.grdViewRFIDTag);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Tracking";
@@ -754,6 +787,11 @@
         private System.Windows.Forms.ToolStripStatusLabel lblSystemInfo;
         private System.Windows.Forms.ToolStripStatusLabel lblMsgAssetNotRegister;
         private System.Windows.Forms.ToolStripStatusLabel lblAssetCount;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.TextBox txtBaseLocation;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtClassification;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colLocation;
         private System.Windows.Forms.DataGridViewTextBoxColumn colOwnerName;
@@ -769,7 +807,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colAssetOwner;
         private System.Windows.Forms.DataGridViewTextBoxColumn colRFIDTag;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIsCompared;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
 
 
     }
