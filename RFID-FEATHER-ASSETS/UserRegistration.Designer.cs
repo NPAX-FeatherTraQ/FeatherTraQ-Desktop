@@ -67,8 +67,6 @@
             this.dtDatePicker = new System.Windows.Forms.DateTimePicker();
             this.btnEditInfo = new System.Windows.Forms.Button();
             this.btnGetRFIDTag = new System.Windows.Forms.Button();
-            this.txtRFIDTag = new System.Windows.Forms.TextBox();
-            this.lblTag = new System.Windows.Forms.Label();
             this.cmbauthorities = new System.Windows.Forms.ComboBox();
             this.lblAuthorities = new System.Windows.Forms.Label();
             this.txtcpassword = new System.Windows.Forms.TextBox();
@@ -88,6 +86,8 @@
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblDesc = new System.Windows.Forms.Label();
+            this.lblTag = new System.Windows.Forms.Label();
+            this.txtRFIDTag = new System.Windows.Forms.TextBox();
             this.toolTipUpdatePhoto = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -424,8 +424,6 @@
             this.groupBox2.Controls.Add(this.grpExpiration);
             this.groupBox2.Controls.Add(this.btnEditInfo);
             this.groupBox2.Controls.Add(this.btnGetRFIDTag);
-            this.groupBox2.Controls.Add(this.txtRFIDTag);
-            this.groupBox2.Controls.Add(this.lblTag);
             this.groupBox2.Controls.Add(this.cmbauthorities);
             this.groupBox2.Controls.Add(this.lblAuthorities);
             this.groupBox2.Controls.Add(this.txtcpassword);
@@ -445,6 +443,8 @@
             this.groupBox2.Controls.Add(this.btnSubmit);
             this.groupBox2.Controls.Add(this.btnCancel);
             this.groupBox2.Controls.Add(this.lblDesc);
+            this.groupBox2.Controls.Add(this.lblTag);
+            this.groupBox2.Controls.Add(this.txtRFIDTag);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
@@ -461,7 +461,7 @@
             this.lblSubmittingInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubmittingInformation.ForeColor = System.Drawing.Color.Green;
             this.lblSubmittingInformation.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblSubmittingInformation.Location = new System.Drawing.Point(28, 489);
+            this.lblSubmittingInformation.Location = new System.Drawing.Point(28, 510);
             this.lblSubmittingInformation.Name = "lblSubmittingInformation";
             this.lblSubmittingInformation.Size = new System.Drawing.Size(352, 24);
             this.lblSubmittingInformation.TabIndex = 66;
@@ -480,7 +480,7 @@
             this.grpExpiration.Controls.Add(this.dtTimePicker);
             this.grpExpiration.Controls.Add(this.dtDatePicker);
             this.grpExpiration.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.grpExpiration.Location = new System.Drawing.Point(74, 29);
+            this.grpExpiration.Location = new System.Drawing.Point(74, 30);
             this.grpExpiration.Name = "grpExpiration";
             this.grpExpiration.Size = new System.Drawing.Size(264, 91);
             this.grpExpiration.TabIndex = 68;
@@ -605,11 +605,11 @@
             this.btnEditInfo.BackColor = System.Drawing.Color.Orange;
             this.btnEditInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditInfo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnEditInfo.Location = new System.Drawing.Point(243, 126);
+            this.btnEditInfo.Location = new System.Drawing.Point(230, 130);
             this.btnEditInfo.Name = "btnEditInfo";
-            this.btnEditInfo.Size = new System.Drawing.Size(95, 24);
+            this.btnEditInfo.Size = new System.Drawing.Size(110, 24);
             this.btnEditInfo.TabIndex = 12;
-            this.btnEditInfo.Text = "Update User";
+            this.btnEditInfo.Text = "Update Owner";
             this.btnEditInfo.UseVisualStyleBackColor = false;
             this.btnEditInfo.Click += new System.EventHandler(this.btnEditInfo_Click);
             // 
@@ -619,38 +619,13 @@
             this.btnGetRFIDTag.BackColor = System.Drawing.Color.Orange;
             this.btnGetRFIDTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGetRFIDTag.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnGetRFIDTag.Location = new System.Drawing.Point(144, 126);
+            this.btnGetRFIDTag.Location = new System.Drawing.Point(115, 130);
             this.btnGetRFIDTag.Name = "btnGetRFIDTag";
-            this.btnGetRFIDTag.Size = new System.Drawing.Size(95, 24);
+            this.btnGetRFIDTag.Size = new System.Drawing.Size(110, 24);
             this.btnGetRFIDTag.TabIndex = 2;
-            this.btnGetRFIDTag.Text = "Scan RFID";
+            this.btnGetRFIDTag.Text = "Scan RFID Tag";
             this.btnGetRFIDTag.UseVisualStyleBackColor = false;
             this.btnGetRFIDTag.Click += new System.EventHandler(this.btnGetRFIDTag_Click);
-            // 
-            // txtRFIDTag
-            // 
-            this.txtRFIDTag.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtRFIDTag.BackColor = System.Drawing.SystemColors.Control;
-            this.txtRFIDTag.Enabled = false;
-            this.txtRFIDTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.txtRFIDTag.Location = new System.Drawing.Point(74, 150);
-            this.txtRFIDTag.MaxLength = 45;
-            this.txtRFIDTag.Name = "txtRFIDTag";
-            this.txtRFIDTag.Size = new System.Drawing.Size(265, 21);
-            this.txtRFIDTag.TabIndex = 27;
-            // 
-            // lblTag
-            // 
-            this.lblTag.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTag.AutoSize = true;
-            this.lblTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTag.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblTag.Location = new System.Drawing.Point(71, 132);
-            this.lblTag.Name = "lblTag";
-            this.lblTag.Size = new System.Drawing.Size(67, 16);
-            this.lblTag.TabIndex = 26;
-            this.lblTag.Text = "RFID Tag";
-            this.lblTag.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // cmbauthorities
             // 
@@ -658,7 +633,7 @@
             this.cmbauthorities.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbauthorities.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbauthorities.FormattingEnabled = true;
-            this.cmbauthorities.Location = new System.Drawing.Point(75, 369);
+            this.cmbauthorities.Location = new System.Drawing.Point(75, 382);
             this.cmbauthorities.Name = "cmbauthorities";
             this.cmbauthorities.Size = new System.Drawing.Size(265, 24);
             this.cmbauthorities.TabIndex = 7;
@@ -670,17 +645,17 @@
             this.lblAuthorities.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblAuthorities.AutoSize = true;
             this.lblAuthorities.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAuthorities.Location = new System.Drawing.Point(71, 351);
+            this.lblAuthorities.Location = new System.Drawing.Point(71, 364);
             this.lblAuthorities.Name = "lblAuthorities";
-            this.lblAuthorities.Size = new System.Drawing.Size(75, 16);
+            this.lblAuthorities.Size = new System.Drawing.Size(72, 16);
             this.lblAuthorities.TabIndex = 24;
-            this.lblAuthorities.Text = "User Type:";
+            this.lblAuthorities.Text = "User Type";
             // 
             // txtcpassword
             // 
             this.txtcpassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtcpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcpassword.Location = new System.Drawing.Point(75, 460);
+            this.txtcpassword.Location = new System.Drawing.Point(75, 478);
             this.txtcpassword.Name = "txtcpassword";
             this.txtcpassword.PasswordChar = '•';
             this.txtcpassword.Size = new System.Drawing.Size(265, 22);
@@ -692,18 +667,18 @@
             this.lblCpassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCpassword.AutoSize = true;
             this.lblCpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCpassword.Location = new System.Drawing.Point(71, 442);
+            this.lblCpassword.Location = new System.Drawing.Point(71, 460);
             this.lblCpassword.Name = "lblCpassword";
-            this.lblCpassword.Size = new System.Drawing.Size(119, 16);
+            this.lblCpassword.Size = new System.Drawing.Size(116, 16);
             this.lblCpassword.TabIndex = 22;
-            this.lblCpassword.Text = "Confirm Password:";
+            this.lblCpassword.Text = "Confirm Password";
             this.lblCpassword.Visible = false;
             // 
             // txtpassword
             // 
             this.txtpassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpassword.Location = new System.Drawing.Point(75, 416);
+            this.txtpassword.Location = new System.Drawing.Point(75, 431);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '•';
             this.txtpassword.Size = new System.Drawing.Size(265, 22);
@@ -715,18 +690,18 @@
             this.lblPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(71, 398);
+            this.lblPassword.Location = new System.Drawing.Point(71, 413);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(74, 16);
+            this.lblPassword.Size = new System.Drawing.Size(71, 16);
             this.lblPassword.TabIndex = 20;
-            this.lblPassword.Text = "Password: ";
+            this.lblPassword.Text = "Password ";
             this.lblPassword.Visible = false;
             // 
             // txtemail
             // 
             this.txtemail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtemail.Location = new System.Drawing.Point(75, 325);
+            this.txtemail.Location = new System.Drawing.Point(75, 336);
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(265, 22);
             this.txtemail.TabIndex = 6;
@@ -735,7 +710,7 @@
             // 
             this.txtlastName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtlastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtlastName.Location = new System.Drawing.Point(75, 237);
+            this.txtlastName.Location = new System.Drawing.Point(75, 244);
             this.txtlastName.Name = "txtlastName";
             this.txtlastName.Size = new System.Drawing.Size(265, 22);
             this.txtlastName.TabIndex = 4;
@@ -744,7 +719,7 @@
             // 
             this.txtposition.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtposition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtposition.Location = new System.Drawing.Point(75, 281);
+            this.txtposition.Location = new System.Drawing.Point(75, 290);
             this.txtposition.Name = "txtposition";
             this.txtposition.Size = new System.Drawing.Size(265, 22);
             this.txtposition.TabIndex = 5;
@@ -753,7 +728,7 @@
             // 
             this.description.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.description.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.description.Location = new System.Drawing.Point(250, 534);
+            this.description.Location = new System.Drawing.Point(250, 530);
             this.description.Multiline = true;
             this.description.Name = "description";
             this.description.Size = new System.Drawing.Size(53, 17);
@@ -764,7 +739,7 @@
             // 
             this.txtfirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtfirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtfirstName.Location = new System.Drawing.Point(75, 193);
+            this.txtfirstName.Location = new System.Drawing.Point(75, 198);
             this.txtfirstName.Name = "txtfirstName";
             this.txtfirstName.Size = new System.Drawing.Size(265, 22);
             this.txtfirstName.TabIndex = 3;
@@ -774,44 +749,44 @@
             this.lblLname.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblLname.AutoSize = true;
             this.lblLname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLname.Location = new System.Drawing.Point(71, 219);
+            this.lblLname.Location = new System.Drawing.Point(71, 226);
             this.lblLname.Name = "lblLname";
-            this.lblLname.Size = new System.Drawing.Size(79, 16);
+            this.lblLname.Size = new System.Drawing.Size(73, 16);
             this.lblLname.TabIndex = 16;
-            this.lblLname.Text = "Last Name: ";
+            this.lblLname.Text = "Last Name";
             // 
             // lblPosition
             // 
             this.lblPosition.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPosition.AutoSize = true;
             this.lblPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPosition.Location = new System.Drawing.Point(71, 263);
+            this.lblPosition.Location = new System.Drawing.Point(71, 272);
             this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(59, 16);
+            this.lblPosition.Size = new System.Drawing.Size(56, 16);
             this.lblPosition.TabIndex = 14;
-            this.lblPosition.Text = "Position:";
+            this.lblPosition.Text = "Position";
             // 
             // lblEmail
             // 
             this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(71, 307);
+            this.lblEmail.Location = new System.Drawing.Point(71, 318);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(49, 16);
+            this.lblEmail.Size = new System.Drawing.Size(46, 16);
             this.lblEmail.TabIndex = 10;
-            this.lblEmail.Text = "E-Mail:";
+            this.lblEmail.Text = "E-Mail";
             // 
             // lblFname
             // 
             this.lblFname.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFname.AutoSize = true;
             this.lblFname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFname.Location = new System.Drawing.Point(71, 175);
+            this.lblFname.Location = new System.Drawing.Point(71, 180);
             this.lblFname.Name = "lblFname";
-            this.lblFname.Size = new System.Drawing.Size(79, 16);
+            this.lblFname.Size = new System.Drawing.Size(73, 16);
             this.lblFname.TabIndex = 8;
-            this.lblFname.Text = "First Name: ";
+            this.lblFname.Text = "First Name";
             // 
             // lblLoadingInformation
             // 
@@ -820,7 +795,7 @@
             this.lblLoadingInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoadingInformation.ForeColor = System.Drawing.Color.Green;
             this.lblLoadingInformation.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblLoadingInformation.Location = new System.Drawing.Point(44, 489);
+            this.lblLoadingInformation.Location = new System.Drawing.Point(44, 510);
             this.lblLoadingInformation.Name = "lblLoadingInformation";
             this.lblLoadingInformation.Size = new System.Drawing.Size(320, 24);
             this.lblLoadingInformation.TabIndex = 67;
@@ -835,7 +810,7 @@
             this.btnSubmit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSubmit.BackgroundImage")));
             this.btnSubmit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(74, 487);
+            this.btnSubmit.Location = new System.Drawing.Point(74, 508);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(131, 28);
             this.btnSubmit.TabIndex = 10;
@@ -850,7 +825,7 @@
             this.btnCancel.BackgroundImage = global::RFID_FEATHER_ASSETS.Properties.Resources.cancel;
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(208, 487);
+            this.btnCancel.Location = new System.Drawing.Point(208, 508);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(131, 28);
             this.btnCancel.TabIndex = 11;
@@ -863,12 +838,37 @@
             this.lblDesc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDesc.AutoSize = true;
             this.lblDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDesc.Location = new System.Drawing.Point(243, 492);
+            this.lblDesc.Location = new System.Drawing.Point(243, 513);
             this.lblDesc.Name = "lblDesc";
             this.lblDesc.Size = new System.Drawing.Size(93, 20);
             this.lblDesc.TabIndex = 12;
             this.lblDesc.Text = "Description:";
             this.lblDesc.Visible = false;
+            // 
+            // lblTag
+            // 
+            this.lblTag.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTag.AutoSize = true;
+            this.lblTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTag.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblTag.Location = new System.Drawing.Point(71, 136);
+            this.lblTag.Name = "lblTag";
+            this.lblTag.Size = new System.Drawing.Size(39, 16);
+            this.lblTag.TabIndex = 26;
+            this.lblTag.Text = "RFID";
+            this.lblTag.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txtRFIDTag
+            // 
+            this.txtRFIDTag.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtRFIDTag.BackColor = System.Drawing.SystemColors.Control;
+            this.txtRFIDTag.Enabled = false;
+            this.txtRFIDTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.txtRFIDTag.Location = new System.Drawing.Point(74, 154);
+            this.txtRFIDTag.MaxLength = 45;
+            this.txtRFIDTag.Name = "txtRFIDTag";
+            this.txtRFIDTag.Size = new System.Drawing.Size(265, 21);
+            this.txtRFIDTag.TabIndex = 27;
             // 
             // RegisterUser
             // 

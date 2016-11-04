@@ -684,8 +684,65 @@
   <metadata name="grpDetails.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="lblLoadingInformation.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="grdViewTransactions.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="grpDetails.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;lblLoadingInformation.Name" xml:space="preserve">
+    <value>lblLoadingInformation</value>
+  </data>
+  <data name="&gt;&gt;lblLoadingInformation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblLoadingInformation.Parent" xml:space="preserve">
+    <value>grpDetails</value>
+  </data>
+  <data name="&gt;&gt;lblLoadingInformation.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;grdViewTransactions.Name" xml:space="preserve">
+    <value>grdViewTransactions</value>
+  </data>
+  <data name="&gt;&gt;grdViewTransactions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grdViewTransactions.Parent" xml:space="preserve">
+    <value>grpDetails</value>
+  </data>
+  <data name="&gt;&gt;grdViewTransactions.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="grpDetails.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="grpDetails.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 144</value>
+  </data>
+  <data name="grpDetails.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1281, 357</value>
+  </data>
+  <data name="grpDetails.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="grpDetails.Text" xml:space="preserve">
+    <value>Transaction Details</value>
+  </data>
+  <data name="&gt;&gt;grpDetails.Name" xml:space="preserve">
+    <value>grpDetails</value>
+  </data>
+  <data name="&gt;&gt;grpDetails.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpDetails.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grpDetails.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <metadata name="lblLoadingInformation.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -744,6 +801,15 @@
   <data name="ColCreatedAt.Width" type="System.Int32, mscorlib">
     <value>125</value>
   </data>
+  <metadata name="colType.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colType.HeaderText" xml:space="preserve">
+    <value>Transaction Type</value>
+  </data>
+  <data name="colType.Width" type="System.Int32, mscorlib">
+    <value>155</value>
+  </data>
   <metadata name="ColReaderInfo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -753,14 +819,14 @@
   <data name="ColReaderInfo.Width" type="System.Int32, mscorlib">
     <value>148</value>
   </data>
-  <metadata name="colType.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="ColBaseLocation.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="colType.HeaderText" xml:space="preserve">
-    <value>Transaction Type</value>
+  <data name="ColBaseLocation.HeaderText" xml:space="preserve">
+    <value>Base Location</value>
   </data>
-  <data name="colType.Width" type="System.Int32, mscorlib">
-    <value>155</value>
+  <data name="ColBaseLocation.Width" type="System.Int32, mscorlib">
+    <value>132</value>
   </data>
   <metadata name="ColDescription.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -788,15 +854,6 @@
   </data>
   <data name="ColClassification.Width" type="System.Int32, mscorlib">
     <value>126</value>
-  </data>
-  <metadata name="ColBaseLocation.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="ColBaseLocation.HeaderText" xml:space="preserve">
-    <value>Base Location</value>
-  </data>
-  <data name="ColBaseLocation.Width" type="System.Int32, mscorlib">
-    <value>132</value>
   </data>
   <metadata name="ColTransId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -948,33 +1005,6 @@
   <data name="&gt;&gt;grdViewTransactions.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="grpDetails.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
-  </data>
-  <data name="grpDetails.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 144</value>
-  </data>
-  <data name="grpDetails.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1281, 357</value>
-  </data>
-  <data name="grpDetails.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="grpDetails.Text" xml:space="preserve">
-    <value>Transaction Details</value>
-  </data>
-  <data name="&gt;&gt;grpDetails.Name" xml:space="preserve">
-    <value>grpDetails</value>
-  </data>
-  <data name="&gt;&gt;grpDetails.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grpDetails.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;grpDetails.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -999,16 +1029,22 @@
   <data name="&gt;&gt;ColCreatedAt.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;colType.Name" xml:space="preserve">
+    <value>colType</value>
+  </data>
+  <data name="&gt;&gt;colType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;ColReaderInfo.Name" xml:space="preserve">
     <value>ColReaderInfo</value>
   </data>
   <data name="&gt;&gt;ColReaderInfo.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;colType.Name" xml:space="preserve">
-    <value>colType</value>
+  <data name="&gt;&gt;ColBaseLocation.Name" xml:space="preserve">
+    <value>ColBaseLocation</value>
   </data>
-  <data name="&gt;&gt;colType.Type" xml:space="preserve">
+  <data name="&gt;&gt;ColBaseLocation.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ColDescription.Name" xml:space="preserve">
@@ -1027,12 +1063,6 @@
     <value>ColClassification</value>
   </data>
   <data name="&gt;&gt;ColClassification.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ColBaseLocation.Name" xml:space="preserve">
-    <value>ColBaseLocation</value>
-  </data>
-  <data name="&gt;&gt;ColBaseLocation.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ColTransId.Name" xml:space="preserve">

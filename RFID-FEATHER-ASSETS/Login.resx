@@ -343,7 +343,7 @@
     <value>10</value>
   </data>
   <data name="lblLoggingIn.Text" xml:space="preserve">
-    <value>Validiting. Please wait...</value>
+    <value>Validating. Please wait...</value>
   </data>
   <data name="lblLoggingIn.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>

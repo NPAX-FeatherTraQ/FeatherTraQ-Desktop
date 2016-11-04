@@ -253,16 +253,16 @@
     <value>True</value>
   </data>
   <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Microsoft Sans Serif, 11.25pt</value>
   </data>
   <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 191</value>
+    <value>5, 190</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 16</value>
+    <value>103, 18</value>
   </data>
   <data name="label7.TabIndex" type="System.Int32, mscorlib">
     <value>86</value>
@@ -328,16 +328,16 @@
     <value>True</value>
   </data>
   <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Microsoft Sans Serif, 11.25pt</value>
   </data>
   <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 150</value>
+    <value>5, 149</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 16</value>
+    <value>96, 18</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>84</value>
@@ -403,16 +403,16 @@
     <value>True</value>
   </data>
   <data name="label9.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Microsoft Sans Serif, 11.25pt</value>
   </data>
   <data name="label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 66</value>
+    <value>3, 65</value>
   </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 16</value>
+    <value>96, 18</value>
   </data>
   <data name="label9.TabIndex" type="System.Int32, mscorlib">
     <value>82</value>
@@ -478,16 +478,16 @@
     <value>True</value>
   </data>
   <data name="lblValidUntil.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Microsoft Sans Serif, 11.25pt</value>
   </data>
   <data name="lblValidUntil.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblValidUntil.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
+    <value>4, 25</value>
   </data>
   <data name="lblValidUntil.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 16</value>
+    <value>100, 18</value>
   </data>
   <data name="lblValidUntil.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -520,16 +520,16 @@
     <value>True</value>
   </data>
   <data name="lblDesc.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Microsoft Sans Serif, 11.25pt</value>
   </data>
   <data name="lblDesc.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblDesc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 107</value>
+    <value>2, 106</value>
   </data>
   <data name="lblDesc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 16</value>
+    <value>83, 18</value>
   </data>
   <data name="lblDesc.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -595,16 +595,16 @@
     <value>True</value>
   </data>
   <data name="lblMemo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Microsoft Sans Serif, 11.25pt</value>
   </data>
   <data name="lblMemo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblMemo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 232</value>
+    <value>3, 231</value>
   </data>
   <data name="lblMemo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 16</value>
+    <value>105, 18</value>
   </data>
   <data name="lblMemo.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>

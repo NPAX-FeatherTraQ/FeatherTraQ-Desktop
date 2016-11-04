@@ -48,28 +48,19 @@
             this.txtSaveImageDir = new System.Windows.Forms.TextBox();
             this.btnBrowseImagePath = new System.Windows.Forms.Button();
             this.grpAssetInfo = new System.Windows.Forms.GroupBox();
+            this.btnReadIDTag = new System.Windows.Forms.Button();
+            this.btnGetAssetInfo = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbBaseLocation = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbAssetClassification = new System.Windows.Forms.ComboBox();
             this.lblSubmittingInformation = new System.Windows.Forms.Label();
             this.lblLoadingInformation = new System.Windows.Forms.Label();
-            this.btnReadIDTag = new System.Windows.Forms.Button();
             this.lblOwnerName = new System.Windows.Forms.Label();
-            this.btnGetAssetInfo = new System.Windows.Forms.Button();
             this.comboOwner = new System.Windows.Forms.ComboBox();
             this.lblDesc = new System.Windows.Forms.Label();
             this.btnGetRFIDTag = new System.Windows.Forms.Button();
             this.txtDescription = new System.Windows.Forms.TextBox();
-            this.txtTakeOutNote = new System.Windows.Forms.TextBox();
-            this.lblMemo = new System.Windows.Forms.Label();
-            this.txtAssetName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtRFIDTag = new System.Windows.Forms.TextBox();
-            this.lblTag = new System.Windows.Forms.Label();
-            this.txtOwnerName = new System.Windows.Forms.TextBox();
-            this.btnSubmit = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.grpExpiration = new System.Windows.Forms.GroupBox();
             this.dtStartTimePicker = new System.Windows.Forms.DateTimePicker();
             this.dtStartDate = new System.Windows.Forms.DateTimePicker();
@@ -79,6 +70,15 @@
             this.rbtnValidToday = new System.Windows.Forms.RadioButton();
             this.dtTimePicker = new System.Windows.Forms.DateTimePicker();
             this.dtDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.txtTakeOutNote = new System.Windows.Forms.TextBox();
+            this.lblMemo = new System.Windows.Forms.Label();
+            this.txtAssetName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtRFIDTag = new System.Windows.Forms.TextBox();
+            this.lblTag = new System.Windows.Forms.Label();
+            this.txtOwnerName = new System.Windows.Forms.TextBox();
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.grpCaptured = new System.Windows.Forms.GroupBox();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.lblValidIDPhoto = new System.Windows.Forms.Label();
@@ -286,19 +286,20 @@
             // 
             // grpAssetInfo
             // 
+            this.grpAssetInfo.Controls.Add(this.btnReadIDTag);
+            this.grpAssetInfo.Controls.Add(this.btnGetAssetInfo);
             this.grpAssetInfo.Controls.Add(this.label3);
             this.grpAssetInfo.Controls.Add(this.cmbBaseLocation);
             this.grpAssetInfo.Controls.Add(this.label1);
             this.grpAssetInfo.Controls.Add(this.cmbAssetClassification);
             this.grpAssetInfo.Controls.Add(this.lblSubmittingInformation);
             this.grpAssetInfo.Controls.Add(this.lblLoadingInformation);
-            this.grpAssetInfo.Controls.Add(this.btnReadIDTag);
             this.grpAssetInfo.Controls.Add(this.lblOwnerName);
-            this.grpAssetInfo.Controls.Add(this.btnGetAssetInfo);
             this.grpAssetInfo.Controls.Add(this.comboOwner);
             this.grpAssetInfo.Controls.Add(this.lblDesc);
             this.grpAssetInfo.Controls.Add(this.btnGetRFIDTag);
             this.grpAssetInfo.Controls.Add(this.txtDescription);
+            this.grpAssetInfo.Controls.Add(this.grpExpiration);
             this.grpAssetInfo.Controls.Add(this.txtTakeOutNote);
             this.grpAssetInfo.Controls.Add(this.lblMemo);
             this.grpAssetInfo.Controls.Add(this.txtAssetName);
@@ -308,10 +309,25 @@
             this.grpAssetInfo.Controls.Add(this.txtOwnerName);
             this.grpAssetInfo.Controls.Add(this.btnSubmit);
             this.grpAssetInfo.Controls.Add(this.btnCancel);
-            this.grpAssetInfo.Controls.Add(this.grpExpiration);
             resources.ApplyResources(this.grpAssetInfo, "grpAssetInfo");
             this.grpAssetInfo.Name = "grpAssetInfo";
             this.grpAssetInfo.TabStop = false;
+            // 
+            // btnReadIDTag
+            // 
+            resources.ApplyResources(this.btnReadIDTag, "btnReadIDTag");
+            this.btnReadIDTag.BackColor = System.Drawing.Color.Orange;
+            this.btnReadIDTag.Name = "btnReadIDTag";
+            this.btnReadIDTag.UseVisualStyleBackColor = false;
+            this.btnReadIDTag.Click += new System.EventHandler(this.btnReadIDTag_Click);
+            // 
+            // btnGetAssetInfo
+            // 
+            resources.ApplyResources(this.btnGetAssetInfo, "btnGetAssetInfo");
+            this.btnGetAssetInfo.BackColor = System.Drawing.Color.Orange;
+            this.btnGetAssetInfo.Name = "btnGetAssetInfo";
+            this.btnGetAssetInfo.UseVisualStyleBackColor = false;
+            this.btnGetAssetInfo.Click += new System.EventHandler(this.btnGetAssetInfo_Click);
             // 
             // label3
             // 
@@ -353,26 +369,10 @@
             this.lblLoadingInformation.ForeColor = System.Drawing.Color.Green;
             this.lblLoadingInformation.Name = "lblLoadingInformation";
             // 
-            // btnReadIDTag
-            // 
-            resources.ApplyResources(this.btnReadIDTag, "btnReadIDTag");
-            this.btnReadIDTag.BackColor = System.Drawing.Color.Orange;
-            this.btnReadIDTag.Name = "btnReadIDTag";
-            this.btnReadIDTag.UseVisualStyleBackColor = false;
-            this.btnReadIDTag.Click += new System.EventHandler(this.btnReadIDTag_Click);
-            // 
             // lblOwnerName
             // 
             resources.ApplyResources(this.lblOwnerName, "lblOwnerName");
             this.lblOwnerName.Name = "lblOwnerName";
-            // 
-            // btnGetAssetInfo
-            // 
-            resources.ApplyResources(this.btnGetAssetInfo, "btnGetAssetInfo");
-            this.btnGetAssetInfo.BackColor = System.Drawing.Color.Orange;
-            this.btnGetAssetInfo.Name = "btnGetAssetInfo";
-            this.btnGetAssetInfo.UseVisualStyleBackColor = false;
-            this.btnGetAssetInfo.Click += new System.EventHandler(this.btnGetAssetInfo_Click);
             // 
             // comboOwner
             // 
@@ -400,62 +400,6 @@
             // 
             resources.ApplyResources(this.txtDescription, "txtDescription");
             this.txtDescription.Name = "txtDescription";
-            // 
-            // txtTakeOutNote
-            // 
-            resources.ApplyResources(this.txtTakeOutNote, "txtTakeOutNote");
-            this.txtTakeOutNote.Name = "txtTakeOutNote";
-            // 
-            // lblMemo
-            // 
-            resources.ApplyResources(this.lblMemo, "lblMemo");
-            this.lblMemo.Name = "lblMemo";
-            // 
-            // txtAssetName
-            // 
-            resources.ApplyResources(this.txtAssetName, "txtAssetName");
-            this.txtAssetName.Name = "txtAssetName";
-            this.txtAssetName.TabStop = false;
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
-            // 
-            // txtRFIDTag
-            // 
-            resources.ApplyResources(this.txtRFIDTag, "txtRFIDTag");
-            this.txtRFIDTag.BackColor = System.Drawing.SystemColors.Control;
-            this.txtRFIDTag.Name = "txtRFIDTag";
-            // 
-            // lblTag
-            // 
-            resources.ApplyResources(this.lblTag, "lblTag");
-            this.lblTag.Name = "lblTag";
-            // 
-            // txtOwnerName
-            // 
-            resources.ApplyResources(this.txtOwnerName, "txtOwnerName");
-            this.txtOwnerName.BackColor = System.Drawing.SystemColors.Control;
-            this.txtOwnerName.Name = "txtOwnerName";
-            // 
-            // btnSubmit
-            // 
-            resources.ApplyResources(this.btnSubmit, "btnSubmit");
-            this.btnSubmit.BackColor = System.Drawing.Color.Orange;
-            this.btnSubmit.BackgroundImage = global::RFID_FEATHER_ASSETS.Properties.Resources.save;
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.UseVisualStyleBackColor = false;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
-            // 
-            // btnCancel
-            // 
-            resources.ApplyResources(this.btnCancel, "btnCancel");
-            this.btnCancel.BackColor = System.Drawing.Color.Orange;
-            this.btnCancel.BackgroundImage = global::RFID_FEATHER_ASSETS.Properties.Resources.cancel;
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // grpExpiration
             // 
@@ -536,6 +480,62 @@
             this.dtDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtDatePicker.Name = "dtDatePicker";
             this.dtDatePicker.TabStop = false;
+            // 
+            // txtTakeOutNote
+            // 
+            resources.ApplyResources(this.txtTakeOutNote, "txtTakeOutNote");
+            this.txtTakeOutNote.Name = "txtTakeOutNote";
+            // 
+            // lblMemo
+            // 
+            resources.ApplyResources(this.lblMemo, "lblMemo");
+            this.lblMemo.Name = "lblMemo";
+            // 
+            // txtAssetName
+            // 
+            resources.ApplyResources(this.txtAssetName, "txtAssetName");
+            this.txtAssetName.Name = "txtAssetName";
+            this.txtAssetName.TabStop = false;
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // txtRFIDTag
+            // 
+            resources.ApplyResources(this.txtRFIDTag, "txtRFIDTag");
+            this.txtRFIDTag.BackColor = System.Drawing.SystemColors.Control;
+            this.txtRFIDTag.Name = "txtRFIDTag";
+            // 
+            // lblTag
+            // 
+            resources.ApplyResources(this.lblTag, "lblTag");
+            this.lblTag.Name = "lblTag";
+            // 
+            // txtOwnerName
+            // 
+            resources.ApplyResources(this.txtOwnerName, "txtOwnerName");
+            this.txtOwnerName.BackColor = System.Drawing.SystemColors.Control;
+            this.txtOwnerName.Name = "txtOwnerName";
+            // 
+            // btnSubmit
+            // 
+            resources.ApplyResources(this.btnSubmit, "btnSubmit");
+            this.btnSubmit.BackColor = System.Drawing.Color.Orange;
+            this.btnSubmit.BackgroundImage = global::RFID_FEATHER_ASSETS.Properties.Resources.save;
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // btnCancel
+            // 
+            resources.ApplyResources(this.btnCancel, "btnCancel");
+            this.btnCancel.BackColor = System.Drawing.Color.Orange;
+            this.btnCancel.BackgroundImage = global::RFID_FEATHER_ASSETS.Properties.Resources.cancel;
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // grpCaptured
             // 
@@ -830,13 +830,11 @@
         private System.Windows.Forms.RadioButton rbtnValidToday;
         private System.Windows.Forms.DateTimePicker dtTimePicker;
         private System.Windows.Forms.DateTimePicker dtDatePicker;
-        private System.Windows.Forms.Button btnGetAssetInfo;
         private System.Windows.Forms.Label lblLoadingInformation;
         private System.Windows.Forms.CheckBox chkUpdateAssetPhoto3;
         private System.Windows.Forms.CheckBox chkUpdateAssetPhoto2;
         private System.Windows.Forms.CheckBox chkUpdateAssetPhoto1;
         private System.Windows.Forms.CheckBox chkBoxChangeCamera;
-        private System.Windows.Forms.Button btnReadIDTag;
         private System.Windows.Forms.TextBox txtOwnerName;
         private System.Windows.Forms.Label lblOwnerName;
         private System.Windows.Forms.Label lblStart;
@@ -850,6 +848,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbBaseLocation;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnReadIDTag;
+        private System.Windows.Forms.Button btnGetAssetInfo;
 
     }
 }

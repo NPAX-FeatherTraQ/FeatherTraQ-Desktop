@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransactionHistory));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grpSearchCriteria = new System.Windows.Forms.GroupBox();
             this.chkMisLocation = new System.Windows.Forms.CheckBox();
             this.cmbBaseLocation = new System.Windows.Forms.ComboBox();
@@ -51,12 +51,12 @@
             this.lblLoadingInformation = new System.Windows.Forms.Label();
             this.grdViewTransactions = new System.Windows.Forms.DataGridView();
             this.ColCreatedAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColReaderInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColReaderInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColBaseLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colOwnerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColClassification = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColBaseLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColTransId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCompanyId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColAssetId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -231,12 +231,12 @@
             resources.ApplyResources(this.grdViewTransactions, "grdViewTransactions");
             this.grdViewTransactions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColCreatedAt,
-            this.ColReaderInfo,
             this.colType,
+            this.ColReaderInfo,
+            this.ColBaseLocation,
             this.ColDescription,
             this.colOwnerName,
             this.ColClassification,
-            this.ColBaseLocation,
             this.ColTransId,
             this.ColCompanyId,
             this.ColAssetId,
@@ -249,14 +249,14 @@
             this.ColRegisterId,
             this.ColUpdateId,
             this.ColUpdatedAt});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdViewTransactions.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdViewTransactions.DefaultCellStyle = dataGridViewCellStyle2;
             this.grdViewTransactions.Name = "grdViewTransactions";
             this.grdViewTransactions.ReadOnly = true;
             this.grdViewTransactions.RowHeadersVisible = false;
@@ -268,17 +268,23 @@
             this.ColCreatedAt.Name = "ColCreatedAt";
             this.ColCreatedAt.ReadOnly = true;
             // 
+            // colType
+            // 
+            resources.ApplyResources(this.colType, "colType");
+            this.colType.Name = "colType";
+            this.colType.ReadOnly = true;
+            // 
             // ColReaderInfo
             // 
             resources.ApplyResources(this.ColReaderInfo, "ColReaderInfo");
             this.ColReaderInfo.Name = "ColReaderInfo";
             this.ColReaderInfo.ReadOnly = true;
             // 
-            // colType
+            // ColBaseLocation
             // 
-            resources.ApplyResources(this.colType, "colType");
-            this.colType.Name = "colType";
-            this.colType.ReadOnly = true;
+            resources.ApplyResources(this.ColBaseLocation, "ColBaseLocation");
+            this.ColBaseLocation.Name = "ColBaseLocation";
+            this.ColBaseLocation.ReadOnly = true;
             // 
             // ColDescription
             // 
@@ -297,12 +303,6 @@
             resources.ApplyResources(this.ColClassification, "ColClassification");
             this.ColClassification.Name = "ColClassification";
             this.ColClassification.ReadOnly = true;
-            // 
-            // ColBaseLocation
-            // 
-            resources.ApplyResources(this.ColBaseLocation, "ColBaseLocation");
-            this.ColBaseLocation.Name = "ColBaseLocation";
-            this.ColBaseLocation.ReadOnly = true;
             // 
             // ColTransId
             // 
@@ -381,6 +381,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.grpSearchCriteria);
             this.Controls.Add(this.grpDetails);
             this.Name = "TransactionHistory";
@@ -418,12 +419,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCreatedAt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColReaderInfo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColReaderInfo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColBaseLocation;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDescription;
         private System.Windows.Forms.DataGridViewTextBoxColumn colOwnerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColClassification;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColBaseLocation;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColTransId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCompanyId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColAssetId;

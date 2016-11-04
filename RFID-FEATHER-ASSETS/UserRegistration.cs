@@ -341,7 +341,7 @@ namespace RFID_FEATHER_ASSETS
             }
             else
             {*/
-                if (txtfirstName.Text.Length == 0 || txtlastName.Text.Length == 0 || txtposition.Text.Length == 0 || txtemail.Text.Length == 0 /*|| string.IsNullOrEmpty(password.Text) || string.IsNullOrEmpty(cpassword.Text)*/)
+                if (txtRFIDTag.Text.Length == 0 || txtfirstName.Text.Length == 0 || txtlastName.Text.Length == 0 || txtposition.Text.Length == 0 || txtemail.Text.Length == 0 /*|| string.IsNullOrEmpty(password.Text) || string.IsNullOrEmpty(cpassword.Text)*/)
                 {
                     if (language == "English") MessageBox.Show("Complete information is required.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     else

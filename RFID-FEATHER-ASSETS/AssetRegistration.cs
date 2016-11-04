@@ -128,7 +128,7 @@ namespace RFID_FEATHER_ASSETS
 
                     for (int i = 0; i < generateAssets.Count; i++)
                     {
-                        if (!string.IsNullOrEmpty(generateAssets[i].assetType))
+                        if (!string.IsNullOrEmpty(generateAssets[i].assetType) && generateAssets[i].assetType != "ID_CARD")
                         {
                             if (!typeList.Any(x => x.type == generateAssets[i].assetType))
                                 typeList.Add(new GlobalClass.TypeList() { type = generateAssets[i].assetType });
@@ -2639,6 +2639,7 @@ namespace RFID_FEATHER_ASSETS
             }
             getCaptureButtonText();
         }
+
     }
 
     //public class Asset

@@ -149,9 +149,9 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblSystemInfo});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 431);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 719);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(621, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(892, 22);
             this.statusStrip1.TabIndex = 42;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -159,7 +159,7 @@
             // 
             this.lblSystemInfo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSystemInfo.Name = "lblSystemInfo";
-            this.lblSystemInfo.Size = new System.Drawing.Size(606, 17);
+            this.lblSystemInfo.Size = new System.Drawing.Size(761, 17);
             this.lblSystemInfo.Spring = true;
             this.lblSystemInfo.Text = "Display System Information";
             this.lblSystemInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -320,7 +320,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(621, 92);
+            this.tabControl1.Size = new System.Drawing.Size(892, 92);
             this.tabControl1.TabIndex = 50;
             this.tabControl1.TabStop = false;
             // 
@@ -330,7 +330,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(613, 64);
+            this.tabPage1.Size = new System.Drawing.Size(884, 64);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "File";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -344,7 +344,7 @@
             this.toolStripMenuItem7});
             this.menuStrip6.Location = new System.Drawing.Point(3, 3);
             this.menuStrip6.Name = "menuStrip6";
-            this.menuStrip6.Size = new System.Drawing.Size(607, 58);
+            this.menuStrip6.Size = new System.Drawing.Size(878, 58);
             this.menuStrip6.TabIndex = 2;
             this.menuStrip6.Text = "menuStrip6";
             // 
@@ -530,7 +530,7 @@
             this.tabCtrlMainMenu.Location = new System.Drawing.Point(0, 92);
             this.tabCtrlMainMenu.Name = "tabCtrlMainMenu";
             this.tabCtrlMainMenu.SelectedIndex = 0;
-            this.tabCtrlMainMenu.Size = new System.Drawing.Size(621, 339);
+            this.tabCtrlMainMenu.Size = new System.Drawing.Size(892, 627);
             this.tabCtrlMainMenu.TabIndex = 58;
             this.tabCtrlMainMenu.SelectedIndexChanged += new System.EventHandler(this.tabCtrlMainMenu_SelectedIndexChanged);
             this.tabCtrlMainMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabCtrlMainMenu_MouseDown);
@@ -541,7 +541,7 @@
             this.picboxLogo.BackColor = System.Drawing.Color.White;
             this.picboxLogo.Image = global::RFID_FEATHER_ASSETS.Properties.Resources.logo_big;
             this.picboxLogo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.picboxLogo.Location = new System.Drawing.Point(312, 123);
+            this.picboxLogo.Location = new System.Drawing.Point(583, 411);
             this.picboxLogo.Name = "picboxLogo";
             this.picboxLogo.Size = new System.Drawing.Size(300, 300);
             this.picboxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -554,7 +554,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(621, 453);
+            this.ClientSize = new System.Drawing.Size(892, 741);
             this.Controls.Add(this.picboxLogo);
             this.Controls.Add(this.tabCtrlMainMenu);
             this.Controls.Add(this.tabControl1);

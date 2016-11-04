@@ -741,6 +741,78 @@
   <metadata name="grpAssetInfo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="btnReadIDTag.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="btnReadIDTag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btnReadIDTag.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="btnReadIDTag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnReadIDTag.Location" type="System.Drawing.Point, System.Drawing">
+    <value>241, 26</value>
+  </data>
+  <data name="btnReadIDTag.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 24</value>
+  </data>
+  <data name="btnReadIDTag.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <data name="btnReadIDTag.Text" xml:space="preserve">
+    <value>Scan ID Tag</value>
+  </data>
+  <data name="&gt;&gt;btnReadIDTag.Name" xml:space="preserve">
+    <value>btnReadIDTag</value>
+  </data>
+  <data name="&gt;&gt;btnReadIDTag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnReadIDTag.Parent" xml:space="preserve">
+    <value>grpAssetInfo</value>
+  </data>
+  <data name="&gt;&gt;btnReadIDTag.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="btnGetAssetInfo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="btnGetAssetInfo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btnGetAssetInfo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="btnGetAssetInfo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnGetAssetInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>241, 73</value>
+  </data>
+  <data name="btnGetAssetInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 24</value>
+  </data>
+  <data name="btnGetAssetInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>73</value>
+  </data>
+  <data name="btnGetAssetInfo.Text" xml:space="preserve">
+    <value>Update Asset</value>
+  </data>
+  <data name="&gt;&gt;btnGetAssetInfo.Name" xml:space="preserve">
+    <value>btnGetAssetInfo</value>
+  </data>
+  <data name="&gt;&gt;btnGetAssetInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGetAssetInfo.Parent" xml:space="preserve">
+    <value>grpAssetInfo</value>
+  </data>
+  <data name="&gt;&gt;btnGetAssetInfo.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <metadata name="label3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -757,7 +829,7 @@
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 226</value>
+    <value>84, 229</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 16</value>
@@ -778,7 +850,7 @@
     <value>grpAssetInfo</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <metadata name="cmbBaseLocation.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -790,7 +862,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="cmbBaseLocation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 243</value>
+    <value>87, 247</value>
   </data>
   <data name="cmbBaseLocation.Size" type="System.Drawing.Size, System.Drawing">
     <value>264, 24</value>
@@ -808,7 +880,7 @@
     <value>grpAssetInfo</value>
   </data>
   <data name="&gt;&gt;cmbBaseLocation.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -826,7 +898,7 @@
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 182</value>
+    <value>84, 183</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>87, 16</value>
@@ -847,7 +919,7 @@
     <value>grpAssetInfo</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <metadata name="cmbAssetClassification.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -859,7 +931,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="cmbAssetClassification.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 199</value>
+    <value>88, 201</value>
   </data>
   <data name="cmbAssetClassification.Size" type="System.Drawing.Size, System.Drawing">
     <value>264, 24</value>
@@ -877,7 +949,7 @@
     <value>grpAssetInfo</value>
   </data>
   <data name="&gt;&gt;cmbAssetClassification.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <metadata name="lblSubmittingInformation.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -895,7 +967,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblSubmittingInformation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 335</value>
+    <value>41, 336</value>
   </data>
   <data name="lblSubmittingInformation.Size" type="System.Drawing.Size, System.Drawing">
     <value>352, 24</value>
@@ -919,7 +991,7 @@
     <value>grpAssetInfo</value>
   </data>
   <data name="&gt;&gt;lblSubmittingInformation.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <metadata name="lblLoadingInformation.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -937,7 +1009,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblLoadingInformation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>56, 335</value>
+    <value>56, 336</value>
   </data>
   <data name="lblLoadingInformation.Size" type="System.Drawing.Size, System.Drawing">
     <value>320, 24</value>
@@ -964,43 +1036,7 @@
     <value>grpAssetInfo</value>
   </data>
   <data name="&gt;&gt;lblLoadingInformation.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <metadata name="btnReadIDTag.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="btnReadIDTag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="btnReadIDTag.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="btnReadIDTag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnReadIDTag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>247, 30</value>
-  </data>
-  <data name="btnReadIDTag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 24</value>
-  </data>
-  <data name="btnReadIDTag.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="btnReadIDTag.Text" xml:space="preserve">
-    <value>Scan ID Tag</value>
-  </data>
-  <data name="&gt;&gt;btnReadIDTag.Name" xml:space="preserve">
-    <value>btnReadIDTag</value>
-  </data>
-  <data name="&gt;&gt;btnReadIDTag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnReadIDTag.Parent" xml:space="preserve">
-    <value>grpAssetInfo</value>
-  </data>
-  <data name="&gt;&gt;btnReadIDTag.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <metadata name="lblOwnerName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1018,7 +1054,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblOwnerName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 37</value>
+    <value>84, 32</value>
   </data>
   <data name="lblOwnerName.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 16</value>
@@ -1042,42 +1078,6 @@
     <value>grpAssetInfo</value>
   </data>
   <data name="&gt;&gt;lblOwnerName.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <metadata name="btnGetAssetInfo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="btnGetAssetInfo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="btnGetAssetInfo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="btnGetAssetInfo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnGetAssetInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>247, 76</value>
-  </data>
-  <data name="btnGetAssetInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 24</value>
-  </data>
-  <data name="btnGetAssetInfo.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="btnGetAssetInfo.Text" xml:space="preserve">
-    <value>Update Asset</value>
-  </data>
-  <data name="&gt;&gt;btnGetAssetInfo.Name" xml:space="preserve">
-    <value>btnGetAssetInfo</value>
-  </data>
-  <data name="&gt;&gt;btnGetAssetInfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnGetAssetInfo.Parent" xml:space="preserve">
-    <value>grpAssetInfo</value>
-  </data>
-  <data name="&gt;&gt;btnGetAssetInfo.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
   <metadata name="comboOwner.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -1129,7 +1129,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblDesc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 123</value>
+    <value>84, 121</value>
   </data>
   <data name="lblDesc.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 16</value>
@@ -1165,16 +1165,16 @@
     <value>NoControl</value>
   </data>
   <data name="btnGetRFIDTag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 76</value>
+    <value>125, 73</value>
   </data>
   <data name="btnGetRFIDTag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 24</value>
+    <value>112, 24</value>
   </data>
   <data name="btnGetRFIDTag.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="btnGetRFIDTag.Text" xml:space="preserve">
-    <value>Register Asset</value>
+    <value>Scan Asset Tag</value>
   </data>
   <data name="&gt;&gt;btnGetRFIDTag.Name" xml:space="preserve">
     <value>btnGetRFIDTag</value>
@@ -1198,7 +1198,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="txtDescription.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 140</value>
+    <value>88, 139</value>
   </data>
   <data name="txtDescription.MaxLength" type="System.Int32, mscorlib">
     <value>45</value>
@@ -1224,6 +1224,333 @@
   <data name="&gt;&gt;txtDescription.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
+  <metadata name="grpExpiration.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="grpExpiration.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <metadata name="dtStartTimePicker.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dtStartTimePicker.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="dtStartTimePicker.CustomFormat" xml:space="preserve">
+    <value>'Time'</value>
+  </data>
+  <data name="dtStartTimePicker.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="dtStartTimePicker.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, -18</value>
+  </data>
+  <data name="dtStartTimePicker.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 22</value>
+  </data>
+  <data name="dtStartTimePicker.TabIndex" type="System.Int32, mscorlib">
+    <value>71</value>
+  </data>
+  <data name="&gt;&gt;dtStartTimePicker.Name" xml:space="preserve">
+    <value>dtStartTimePicker</value>
+  </data>
+  <data name="&gt;&gt;dtStartTimePicker.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtStartTimePicker.Parent" xml:space="preserve">
+    <value>grpExpiration</value>
+  </data>
+  <data name="&gt;&gt;dtStartTimePicker.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="dtStartDate.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dtStartDate.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="dtStartDate.CustomFormat" xml:space="preserve">
+    <value>'Date'</value>
+  </data>
+  <data name="dtStartDate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="dtStartDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-23, -18</value>
+  </data>
+  <data name="dtStartDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 22</value>
+  </data>
+  <data name="dtStartDate.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="&gt;&gt;dtStartDate.Name" xml:space="preserve">
+    <value>dtStartDate</value>
+  </data>
+  <data name="&gt;&gt;dtStartDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtStartDate.Parent" xml:space="preserve">
+    <value>grpExpiration</value>
+  </data>
+  <data name="&gt;&gt;dtStartDate.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="lblStart.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lblStart.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lblStart.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="lblStart.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-70, -13</value>
+  </data>
+  <data name="lblStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 19</value>
+  </data>
+  <data name="lblStart.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="lblStart.Text" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="lblStart.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;lblStart.Name" xml:space="preserve">
+    <value>lblStart</value>
+  </data>
+  <data name="&gt;&gt;lblStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblStart.Parent" xml:space="preserve">
+    <value>grpExpiration</value>
+  </data>
+  <data name="&gt;&gt;lblStart.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="rbtnNoExpiration.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="rbtnNoExpiration.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="rbtnNoExpiration.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rbtnNoExpiration.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="rbtnNoExpiration.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="rbtnNoExpiration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-81, 31</value>
+  </data>
+  <data name="rbtnNoExpiration.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 20</value>
+  </data>
+  <data name="rbtnNoExpiration.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="rbtnNoExpiration.Text" xml:space="preserve">
+    <value>No End Date</value>
+  </data>
+  <data name="&gt;&gt;rbtnNoExpiration.Name" xml:space="preserve">
+    <value>rbtnNoExpiration</value>
+  </data>
+  <data name="&gt;&gt;rbtnNoExpiration.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbtnNoExpiration.Parent" xml:space="preserve">
+    <value>grpExpiration</value>
+  </data>
+  <data name="&gt;&gt;rbtnNoExpiration.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="rbtnValidUntil.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="rbtnValidUntil.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="rbtnValidUntil.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rbtnValidUntil.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="rbtnValidUntil.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="rbtnValidUntil.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-81, 8</value>
+  </data>
+  <data name="rbtnValidUntil.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 20</value>
+  </data>
+  <data name="rbtnValidUntil.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="rbtnValidUntil.Text" xml:space="preserve">
+    <value>Until</value>
+  </data>
+  <data name="&gt;&gt;rbtnValidUntil.Name" xml:space="preserve">
+    <value>rbtnValidUntil</value>
+  </data>
+  <data name="&gt;&gt;rbtnValidUntil.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbtnValidUntil.Parent" xml:space="preserve">
+    <value>grpExpiration</value>
+  </data>
+  <data name="&gt;&gt;rbtnValidUntil.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <metadata name="rbtnValidToday.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="rbtnValidToday.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="rbtnValidToday.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rbtnValidToday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="rbtnValidToday.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="rbtnValidToday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-81, -13</value>
+  </data>
+  <data name="rbtnValidToday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 20</value>
+  </data>
+  <data name="rbtnValidToday.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="rbtnValidToday.Text" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="rbtnValidToday.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;rbtnValidToday.Name" xml:space="preserve">
+    <value>rbtnValidToday</value>
+  </data>
+  <data name="&gt;&gt;rbtnValidToday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbtnValidToday.Parent" xml:space="preserve">
+    <value>grpExpiration</value>
+  </data>
+  <data name="&gt;&gt;rbtnValidToday.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="dtTimePicker.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dtTimePicker.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="dtTimePicker.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="dtTimePicker.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 5</value>
+  </data>
+  <data name="dtTimePicker.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 22</value>
+  </data>
+  <data name="dtTimePicker.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;dtTimePicker.Name" xml:space="preserve">
+    <value>dtTimePicker</value>
+  </data>
+  <data name="&gt;&gt;dtTimePicker.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtTimePicker.Parent" xml:space="preserve">
+    <value>grpExpiration</value>
+  </data>
+  <data name="&gt;&gt;dtTimePicker.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <metadata name="dtDatePicker.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dtDatePicker.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="dtDatePicker.CustomFormat" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dtDatePicker.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="dtDatePicker.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-23, 5</value>
+  </data>
+  <data name="dtDatePicker.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 22</value>
+  </data>
+  <data name="dtDatePicker.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;dtDatePicker.Name" xml:space="preserve">
+    <value>dtDatePicker</value>
+  </data>
+  <data name="&gt;&gt;dtDatePicker.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtDatePicker.Parent" xml:space="preserve">
+    <value>grpExpiration</value>
+  </data>
+  <data name="&gt;&gt;dtDatePicker.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="grpExpiration.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="grpExpiration.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="grpExpiration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>359, 79</value>
+  </data>
+  <data name="grpExpiration.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 22</value>
+  </data>
+  <data name="grpExpiration.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="grpExpiration.Text" xml:space="preserve">
+    <value>Validity Period</value>
+  </data>
+  <data name="grpExpiration.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;grpExpiration.Name" xml:space="preserve">
+    <value>grpExpiration</value>
+  </data>
+  <data name="&gt;&gt;grpExpiration.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpExpiration.Parent" xml:space="preserve">
+    <value>grpAssetInfo</value>
+  </data>
+  <data name="&gt;&gt;grpExpiration.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
   <metadata name="txtTakeOutNote.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1234,7 +1561,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="txtTakeOutNote.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 287</value>
+    <value>87, 293</value>
   </data>
   <data name="txtTakeOutNote.MaxLength" type="System.Int32, mscorlib">
     <value>100</value>
@@ -1243,7 +1570,7 @@
     <value>True</value>
   </data>
   <data name="txtTakeOutNote.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 45</value>
+    <value>265, 40</value>
   </data>
   <data name="txtTakeOutNote.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -1258,7 +1585,7 @@
     <value>grpAssetInfo</value>
   </data>
   <data name="&gt;&gt;txtTakeOutNote.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <metadata name="lblMemo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1276,7 +1603,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblMemo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 270</value>
+    <value>84, 275</value>
   </data>
   <data name="lblMemo.Size" type="System.Drawing.Size, System.Drawing">
     <value>95, 16</value>
@@ -1297,7 +1624,7 @@
     <value>grpAssetInfo</value>
   </data>
   <data name="&gt;&gt;lblMemo.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <metadata name="txtAssetName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1333,7 +1660,7 @@
     <value>grpAssetInfo</value>
   </data>
   <data name="&gt;&gt;txtAssetName.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1378,7 +1705,7 @@
     <value>grpAssetInfo</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <metadata name="txtRFIDTag.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1393,7 +1720,7 @@
     <value>Microsoft Sans Serif, 9pt, style=Bold</value>
   </data>
   <data name="txtRFIDTag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 100</value>
+    <value>87, 97</value>
   </data>
   <data name="txtRFIDTag.MaxLength" type="System.Int32, mscorlib">
     <value>45</value>
@@ -1414,7 +1741,7 @@
     <value>grpAssetInfo</value>
   </data>
   <data name="&gt;&gt;txtRFIDTag.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <metadata name="lblTag.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1432,7 +1759,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblTag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 83</value>
+    <value>84, 79</value>
   </data>
   <data name="lblTag.Size" type="System.Drawing.Size, System.Drawing">
     <value>39, 16</value>
@@ -1456,7 +1783,7 @@
     <value>grpAssetInfo</value>
   </data>
   <data name="&gt;&gt;lblTag.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <metadata name="txtOwnerName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1471,7 +1798,7 @@
     <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
   </data>
   <data name="txtOwnerName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 54</value>
+    <value>88, 50</value>
   </data>
   <data name="txtOwnerName.MaxLength" type="System.Int32, mscorlib">
     <value>45</value>
@@ -1492,7 +1819,7 @@
     <value>grpAssetInfo</value>
   </data>
   <data name="&gt;&gt;txtOwnerName.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <metadata name="btnSubmit.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1510,7 +1837,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnSubmit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 333</value>
+    <value>88, 334</value>
   </data>
   <data name="btnSubmit.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 28</value>
@@ -1531,7 +1858,7 @@
     <value>grpAssetInfo</value>
   </data>
   <data name="&gt;&gt;btnSubmit.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <metadata name="btnCancel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1549,7 +1876,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>222, 333</value>
+    <value>222, 334</value>
   </data>
   <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 28</value>
@@ -1570,333 +1897,6 @@
     <value>grpAssetInfo</value>
   </data>
   <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <metadata name="grpExpiration.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="grpExpiration.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <metadata name="dtStartTimePicker.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dtStartTimePicker.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="dtStartTimePicker.CustomFormat" xml:space="preserve">
-    <value>'Time'</value>
-  </data>
-  <data name="dtStartTimePicker.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="dtStartTimePicker.Location" type="System.Drawing.Point, System.Drawing">
-    <value>155, 17</value>
-  </data>
-  <data name="dtStartTimePicker.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 22</value>
-  </data>
-  <data name="dtStartTimePicker.TabIndex" type="System.Int32, mscorlib">
-    <value>71</value>
-  </data>
-  <data name="&gt;&gt;dtStartTimePicker.Name" xml:space="preserve">
-    <value>dtStartTimePicker</value>
-  </data>
-  <data name="&gt;&gt;dtStartTimePicker.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dtStartTimePicker.Parent" xml:space="preserve">
-    <value>grpExpiration</value>
-  </data>
-  <data name="&gt;&gt;dtStartTimePicker.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="dtStartDate.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dtStartDate.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="dtStartDate.CustomFormat" xml:space="preserve">
-    <value>'Date'</value>
-  </data>
-  <data name="dtStartDate.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="dtStartDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>69, 17</value>
-  </data>
-  <data name="dtStartDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 22</value>
-  </data>
-  <data name="dtStartDate.TabIndex" type="System.Int32, mscorlib">
-    <value>70</value>
-  </data>
-  <data name="&gt;&gt;dtStartDate.Name" xml:space="preserve">
-    <value>dtStartDate</value>
-  </data>
-  <data name="&gt;&gt;dtStartDate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dtStartDate.Parent" xml:space="preserve">
-    <value>grpExpiration</value>
-  </data>
-  <data name="&gt;&gt;dtStartDate.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="lblStart.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblStart.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lblStart.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="lblStart.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblStart.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 22</value>
-  </data>
-  <data name="lblStart.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 19</value>
-  </data>
-  <data name="lblStart.TabIndex" type="System.Int32, mscorlib">
-    <value>69</value>
-  </data>
-  <data name="lblStart.Text" xml:space="preserve">
-    <value>Start</value>
-  </data>
-  <data name="lblStart.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="&gt;&gt;lblStart.Name" xml:space="preserve">
-    <value>lblStart</value>
-  </data>
-  <data name="&gt;&gt;lblStart.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblStart.Parent" xml:space="preserve">
-    <value>grpExpiration</value>
-  </data>
-  <data name="&gt;&gt;lblStart.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <metadata name="rbtnNoExpiration.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="rbtnNoExpiration.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="rbtnNoExpiration.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="rbtnNoExpiration.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="rbtnNoExpiration.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="rbtnNoExpiration.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 66</value>
-  </data>
-  <data name="rbtnNoExpiration.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 20</value>
-  </data>
-  <data name="rbtnNoExpiration.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="rbtnNoExpiration.Text" xml:space="preserve">
-    <value>No End Date</value>
-  </data>
-  <data name="&gt;&gt;rbtnNoExpiration.Name" xml:space="preserve">
-    <value>rbtnNoExpiration</value>
-  </data>
-  <data name="&gt;&gt;rbtnNoExpiration.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rbtnNoExpiration.Parent" xml:space="preserve">
-    <value>grpExpiration</value>
-  </data>
-  <data name="&gt;&gt;rbtnNoExpiration.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <metadata name="rbtnValidUntil.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="rbtnValidUntil.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="rbtnValidUntil.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="rbtnValidUntil.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="rbtnValidUntil.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="rbtnValidUntil.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 43</value>
-  </data>
-  <data name="rbtnValidUntil.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 20</value>
-  </data>
-  <data name="rbtnValidUntil.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="rbtnValidUntil.Text" xml:space="preserve">
-    <value>Until</value>
-  </data>
-  <data name="&gt;&gt;rbtnValidUntil.Name" xml:space="preserve">
-    <value>rbtnValidUntil</value>
-  </data>
-  <data name="&gt;&gt;rbtnValidUntil.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rbtnValidUntil.Parent" xml:space="preserve">
-    <value>grpExpiration</value>
-  </data>
-  <data name="&gt;&gt;rbtnValidUntil.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <metadata name="rbtnValidToday.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="rbtnValidToday.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="rbtnValidToday.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="rbtnValidToday.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="rbtnValidToday.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="rbtnValidToday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 22</value>
-  </data>
-  <data name="rbtnValidToday.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 20</value>
-  </data>
-  <data name="rbtnValidToday.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="rbtnValidToday.Text" xml:space="preserve">
-    <value>Today</value>
-  </data>
-  <data name="rbtnValidToday.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;rbtnValidToday.Name" xml:space="preserve">
-    <value>rbtnValidToday</value>
-  </data>
-  <data name="&gt;&gt;rbtnValidToday.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rbtnValidToday.Parent" xml:space="preserve">
-    <value>grpExpiration</value>
-  </data>
-  <data name="&gt;&gt;rbtnValidToday.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <metadata name="dtTimePicker.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dtTimePicker.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="dtTimePicker.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="dtTimePicker.Location" type="System.Drawing.Point, System.Drawing">
-    <value>155, 40</value>
-  </data>
-  <data name="dtTimePicker.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 22</value>
-  </data>
-  <data name="dtTimePicker.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;dtTimePicker.Name" xml:space="preserve">
-    <value>dtTimePicker</value>
-  </data>
-  <data name="&gt;&gt;dtTimePicker.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dtTimePicker.Parent" xml:space="preserve">
-    <value>grpExpiration</value>
-  </data>
-  <data name="&gt;&gt;dtTimePicker.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <metadata name="dtDatePicker.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dtDatePicker.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="dtDatePicker.CustomFormat" xml:space="preserve">
-    <value />
-  </data>
-  <data name="dtDatePicker.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="dtDatePicker.Location" type="System.Drawing.Point, System.Drawing">
-    <value>69, 40</value>
-  </data>
-  <data name="dtDatePicker.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 22</value>
-  </data>
-  <data name="dtDatePicker.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;dtDatePicker.Name" xml:space="preserve">
-    <value>dtDatePicker</value>
-  </data>
-  <data name="&gt;&gt;dtDatePicker.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dtDatePicker.Parent" xml:space="preserve">
-    <value>grpExpiration</value>
-  </data>
-  <data name="&gt;&gt;dtDatePicker.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="grpExpiration.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="grpExpiration.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="grpExpiration.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 25</value>
-  </data>
-  <data name="grpExpiration.Size" type="System.Drawing.Size, System.Drawing">
-    <value>264, 91</value>
-  </data>
-  <data name="grpExpiration.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="grpExpiration.Text" xml:space="preserve">
-    <value>Validity Period</value>
-  </data>
-  <data name="grpExpiration.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;grpExpiration.Name" xml:space="preserve">
-    <value>grpExpiration</value>
-  </data>
-  <data name="&gt;&gt;grpExpiration.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grpExpiration.Parent" xml:space="preserve">
-    <value>grpAssetInfo</value>
-  </data>
-  <data name="&gt;&gt;grpExpiration.ZOrder" xml:space="preserve">
     <value>22</value>
   </data>
   <data name="grpAssetInfo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
