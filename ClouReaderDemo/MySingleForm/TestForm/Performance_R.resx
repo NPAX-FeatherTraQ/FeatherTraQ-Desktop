@@ -1,0 +1,1181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&gt;&gt;gb_TagList.Parent" xml:space="preserve">
+    <value>gb_Read_Result</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="&gt;&gt;clm_ANT4.Name" xml:space="preserve">
+    <value>clm_ANT4</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tp_TagRead.Size" type="System.Drawing.Size, System.Drawing">
+    <value>862, 437</value>
+  </data>
+  <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="tc_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="clm_ReserveData.HeaderText" xml:space="preserve">
+    <value>ReserveData</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lb_AverageSpeed.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="pb_Read.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 231</value>
+  </data>
+  <data name="lb_TagCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>11, 12</value>
+  </data>
+  <data name="rb_ReadByCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 16</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;gb_TagList.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="clm_ANT3.Width" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="lb_ImmediateSpeed.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lb_SuccessReadTagsCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>11, 12</value>
+  </data>
+  <data name="&gt;&gt;tp_Test.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;clm_ANT2.Name" xml:space="preserve">
+    <value>clm_ANT2</value>
+  </data>
+  <data name="&gt;&gt;tb_Msg.Name" xml:space="preserve">
+    <value>tb_Msg</value>
+  </data>
+  <data name="clm_TID.Width" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="rb_ReadByCount.Text" xml:space="preserve">
+    <value>定量</value>
+  </data>
+  <data name="&gt;&gt;btn_StartReadTest.Name" xml:space="preserve">
+    <value>btn_StartReadTest</value>
+  </data>
+  <data name="&gt;&gt;tc_Main.Type" xml:space="preserve">
+    <value>ClouReaderDemo.MyFormTemplet.QQTabControl, ClouReaderDemo, Version=2.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="lb_TagCount.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;clm_ANT1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tc_Main.ItemSize" type="System.Drawing.Size, System.Drawing">
+    <value>80, 32</value>
+  </data>
+  <data name="&gt;&gt;rb_ReadByCount.Name" xml:space="preserve">
+    <value>rb_ReadByCount</value>
+  </data>
+  <data name="gb_Read_Control.Text" xml:space="preserve">
+    <value>参数控制：</value>
+  </data>
+  <data name="&gt;&gt;tp_TagRead.Parent" xml:space="preserve">
+    <value>tc_Main</value>
+  </data>
+  <data name="&gt;&gt;lb_AverageSpeed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tp_Debug.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label11.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="tp_Debug.Size" type="System.Drawing.Size, System.Drawing">
+    <value>834, 389</value>
+  </data>
+  <data name="lb_ReadTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 171</value>
+  </data>
+  <data name="&gt;&gt;tb_ReadMaxCount.Type" xml:space="preserve">
+    <value>ClouReaderDemo.MyFormTemplet.QQTextBoxEx, ClouReaderDemo, Version=2.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="lb_TagCount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 79</value>
+  </data>
+  <data name="rb_ReadByTime.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lb_ImmediateSpeed.Name" xml:space="preserve">
+    <value>lb_ImmediateSpeed</value>
+  </data>
+  <data name="tb_ReadMaxCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 24</value>
+  </data>
+  <data name="&gt;&gt;tb_ReadMaxCount.Name" xml:space="preserve">
+    <value>tb_ReadMaxCount</value>
+  </data>
+  <data name="&gt;&gt;clm_RSSI.Name" xml:space="preserve">
+    <value>clm_RSSI</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>gb_ImmediateMsg</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 125</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>进度：</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>成功读次数：</value>
+  </data>
+  <data name="gb_Read_Control.Size" type="System.Drawing.Size, System.Drawing">
+    <value>856, 66</value>
+  </data>
+  <data name="&gt;&gt;clm_EPC.Name" xml:space="preserve">
+    <value>clm_EPC</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>gb_ImmediateMsg</value>
+  </data>
+  <data name="&gt;&gt;pb_Read.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>张</value>
+  </data>
+  <data name="clm_ANT1.Width" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="&gt;&gt;clm_TotalCount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>读写器读性能测试</value>
+  </data>
+  <data name="&gt;&gt;lb_SuccessReadTagsCount.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;gb_Read_Control.Parent" xml:space="preserve">
+    <value>tp_TagRead</value>
+  </data>
+  <data name="lb_SuccessReadTagsCount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 148</value>
+  </data>
+  <data name="clm_RSSI.HeaderText" xml:space="preserve">
+    <value>RSSI</value>
+  </data>
+  <data name="&gt;&gt;label11.Name" xml:space="preserve">
+    <value>label11</value>
+  </data>
+  <data name="&gt;&gt;clm_TotalCount.Name" xml:space="preserve">
+    <value>clm_TotalCount</value>
+  </data>
+  <data name="&gt;&gt;tb_ReadMaxCount.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gb_TagList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>640, 345</value>
+  </data>
+  <data name="&gt;&gt;clm_ReserveData.Name" xml:space="preserve">
+    <value>clm_ReserveData</value>
+  </data>
+  <data name="gb_Read_Result.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>gb_ImmediateMsg</value>
+  </data>
+  <data name="clm_ReserveData.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btn_StartReadTest.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lb_ReadTime.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tb_Msg.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lb_AverageSpeed.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 12</value>
+  </data>
+  <data name="rb_ReadByTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 16</value>
+  </data>
+  <data name="tp_Debug.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 36</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 233</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lb_ImmediateSpeed.Text" xml:space="preserve">
+    <value>0 /s</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
+  </data>
+  <data name="&gt;&gt;lb_ProcessCount.Parent" xml:space="preserve">
+    <value>gb_ImmediateMsg</value>
+  </data>
+  <data name="clm_UserData.Width" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <data name="clm_ANT4.Width" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="&gt;&gt;gb_ImmediateMsg.Parent" xml:space="preserve">
+    <value>gb_Read_Result</value>
+  </data>
+  <data name="&gt;&gt;clm_RSSI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gb_Read_Control.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>460, 29</value>
+  </data>
+  <data name="tp_TagRead.Text" xml:space="preserve">
+    <value>读测试</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 12</value>
+  </data>
+  <data name="&gt;&gt;lb_TagCount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lb_ReadTime.Text" xml:space="preserve">
+    <value>0 ms</value>
+  </data>
+  <data name="rb_ReadByTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 27</value>
+  </data>
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;lb_AverageSpeed.Parent" xml:space="preserve">
+    <value>gb_ImmediateMsg</value>
+  </data>
+  <data name="&gt;&gt;gb_Read_Control.Name" xml:space="preserve">
+    <value>gb_Read_Control</value>
+  </data>
+  <data name="clm_EPC.Width" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 12</value>
+  </data>
+  <data name="lb_ReadTime.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;dgv_Tags.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="gb_Read_Control.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>ClouReaderDemo.MySingleForm.BaseOption, ClouReaderDemo, Version=2.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="gb_Read_Control.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="gb_Read_Result.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 69</value>
+  </data>
+  <data name="lb_ProcessCount.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lb_ReadTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_TagCount.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;tp_TagRead.Name" xml:space="preserve">
+    <value>tp_TagRead</value>
+  </data>
+  <data name="&gt;&gt;label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tb_Msg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>828, 383</value>
+  </data>
+  <data name="&gt;&gt;tp_TagRead.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btn_StartReadTest.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;clm_ReadTime.Name" xml:space="preserve">
+    <value>clm_ReadTime</value>
+  </data>
+  <data name="lb_ProcessCount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>166, 233</value>
+  </data>
+  <data name="&gt;&gt;gb_Read_Result.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;clm_UserData.Name" xml:space="preserve">
+    <value>clm_UserData</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>标签总张数：</value>
+  </data>
+  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tb_Msg.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="clm_TagType.HeaderText" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="rb_ReadByCount.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>gb_Read_Control</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clm_ANT3.Name" xml:space="preserve">
+    <value>clm_ANT3</value>
+  </data>
+  <data name="&gt;&gt;clm_UserData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gb_Read_Control.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pb_Read.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;lb_ReadTime.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lb_AverageSpeed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 12</value>
+  </data>
+  <data name="tb_Msg.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="btn_StartReadTest.Location" type="System.Drawing.Point, System.Drawing">
+    <value>540, 14</value>
+  </data>
+  <data name="lb_SuccessReadTagsCount.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tb_ReadMaxTime.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tp_Test.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tc_Main.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;lb_TagCount.Name" xml:space="preserve">
+    <value>lb_TagCount</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="tb_ReadMaxTime.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lb_SuccessReadTagsCount.Name" xml:space="preserve">
+    <value>lb_SuccessReadTagsCount</value>
+  </data>
+  <data name="tc_Main.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dgv_Tags.Name" xml:space="preserve">
+    <value>dgv_Tags</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="gb_Read_Result.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 12</value>
+  </data>
+  <data name="tp_TagRead.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>gb_ImmediateMsg</value>
+  </data>
+  <data name="lb_SuccessReadTagsCount.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="clm_TotalCount.HeaderText" xml:space="preserve">
+    <value>TotalCount</value>
+  </data>
+  <data name="tp_Test.Text" xml:space="preserve">
+    <value>测试</value>
+  </data>
+  <data name="gb_Read_Result.Text" xml:space="preserve">
+    <value>测试状态：</value>
+  </data>
+  <data name="clm_TotalCount.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lb_ImmediateSpeed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 102</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;tb_ReadMaxTime.Type" xml:space="preserve">
+    <value>ClouReaderDemo.MyFormTemplet.QQTextBoxEx, ClouReaderDemo, Version=2.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
+    <value>gb_ImmediateMsg</value>
+  </data>
+  <data name="&gt;&gt;pb_Read.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btn_StartReadTest.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 38</value>
+  </data>
+  <data name="lb_SuccessReadTagsCount.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="clm_TID.HeaderText" xml:space="preserve">
+    <value>TID</value>
+  </data>
+  <data name="&gt;&gt;clm_TagType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rb_ReadByTime.Parent" xml:space="preserve">
+    <value>gb_Read_Control</value>
+  </data>
+  <data name="&gt;&gt;btn_StartReadTest.Parent" xml:space="preserve">
+    <value>gb_Read_Control</value>
+  </data>
+  <data name="gb_Read_Result.Size" type="System.Drawing.Size, System.Drawing">
+    <value>856, 365</value>
+  </data>
+  <data name="&gt;&gt;gb_ImmediateMsg.Name" xml:space="preserve">
+    <value>gb_ImmediateMsg</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 102</value>
+  </data>
+  <data name="tc_Main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>870, 477</value>
+  </data>
+  <data name="lb_ImmediateSpeed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 12</value>
+  </data>
+  <data name="tp_Test.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 12</value>
+  </data>
+  <data name="&gt;&gt;dgv_Tags.Parent" xml:space="preserve">
+    <value>gb_TagList</value>
+  </data>
+  <data name="btn_StartReadTest.NormalImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABmElEQVRYR+XYO2vCUBjG8RdE
+        UMEqCA6CgyA4CIIgiNTLV2ipDudTOra6Fmc3nVtabzGJt+SYm6fv06/xBv7DMdPzI0QIGWNoNBpluWfu
+        hVMCw27sz8KDhsPhE/e2XC6nWmubfxR3YTf2w4ErUJ+v1Wr1/ngYkyQPsWH/er2eMceAer3eOAxDL44T
+        I70oijR7TKjb7So8IVEUiw8O8KBOp8MoiQnCUHxwgAe1220V80EHgfjgAA9qtVoqimPj67v44AAPajab
+        il8w5ub74oMDPKjRaKiQD5ebJz44wIPq9brCS/Z0vYoPDvCgWq2m7kFonPNFfHCAB1WrVUYJjO2exQcH
+        eFClUlH6HhjLccUHB3hQuVxW+DveHx3xwQEeVCqVlKe12VpH8cEBHlQsFpXna7PZW+KDAzwon8+rGx9+
+        dgfxwQEelMvlxs7p7P3uD+Z7uxMb9rvni2aPCWUymcHnYjG7ep7Bja/NVlzYjf1wgAel0+kC9/Yxn08t
+        23ZxU1rYjf1wgAfhQ20qlcpyfe6VUwLDbuz//3D9B7JDiN2k7OX5AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="&gt;&gt;lb_AverageSpeed.Name" xml:space="preserve">
+    <value>lb_AverageSpeed</value>
+  </data>
+  <data name="lb_AverageSpeed.Text" xml:space="preserve">
+    <value>0 /s</value>
+  </data>
+  <data name="gb_ImmediateMsg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 345</value>
+  </data>
+  <data name="dgv_Tags.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="rb_ReadByCount.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lb_ProcessCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 12</value>
+  </data>
+  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tb_ReadMaxTime.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>20, 24</value>
+  </data>
+  <data name="&gt;&gt;gb_Read_Result.Parent" xml:space="preserve">
+    <value>tp_TagRead</value>
+  </data>
+  <data name="rb_ReadByCount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>326, 26</value>
+  </data>
+  <data name="&gt;&gt;gb_Read_Control.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dgv_Tags.Size" type="System.Drawing.Size, System.Drawing">
+    <value>634, 325</value>
+  </data>
+  <data name="pb_Read.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 16</value>
+  </data>
+  <data name="&gt;&gt;pb_Read.Parent" xml:space="preserve">
+    <value>gb_ImmediateMsg</value>
+  </data>
+  <data name="label11.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btn_StartReadTest.Type" xml:space="preserve">
+    <value>ClouReaderDemo.MyFormTemplet.QQButton, ClouReaderDemo, Version=2.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>消耗时间：</value>
+  </data>
+  <data name="&gt;&gt;tp_Test.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 12</value>
+  </data>
+  <data name="tp_TagRead.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 36</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>gb_Read_Control</value>
+  </data>
+  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;tb_Msg.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tb_ReadMaxTime.Parent" xml:space="preserve">
+    <value>gb_Read_Control</value>
+  </data>
+  <data name="&gt;&gt;clm_ANT4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_TagCount.Parent" xml:space="preserve">
+    <value>gb_ImmediateMsg</value>
+  </data>
+  <data name="btn_StartReadTest.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>272, 29</value>
+  </data>
+  <data name="tp_Debug.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="&gt;&gt;dgv_Tags.Type" xml:space="preserve">
+    <value>ClouReaderDemo.DataGridViewPlus, ClouReaderDemo, Version=2.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="clm_ReadTime.HeaderText" xml:space="preserve">
+    <value>ReadTime</value>
+  </data>
+  <data name="clm_ANT2.Width" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="&gt;&gt;clm_ReadTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 12</value>
+  </data>
+  <data name="tb_ReadMaxCount.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>20, 24</value>
+  </data>
+  <data name="&gt;&gt;rb_ReadByCount.Parent" xml:space="preserve">
+    <value>gb_Read_Control</value>
+  </data>
+  <data name="clm_ANT2.HeaderText" xml:space="preserve">
+    <value>ANT2</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>瞬时速度：</value>
+  </data>
+  <data name="tp_TagRead.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Performance_R</value>
+  </data>
+  <data name="lb_ReadTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 12</value>
+  </data>
+  <data name="&gt;&gt;clm_ANT3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rb_ReadByTime.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="clm_ANT1.HeaderText" xml:space="preserve">
+    <value>ANT1</value>
+  </data>
+  <data name="&gt;&gt;lb_ProcessCount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 12</value>
+  </data>
+  <data name="tb_ReadMaxCount.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;tb_Msg.Parent" xml:space="preserve">
+    <value>tp_Debug</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;gb_Read_Result.Name" xml:space="preserve">
+    <value>gb_Read_Result</value>
+  </data>
+  <data name="&gt;&gt;lb_ReadTime.Name" xml:space="preserve">
+    <value>lb_ReadTime</value>
+  </data>
+  <data name="&gt;&gt;tp_Debug.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tp_Test.Size" type="System.Drawing.Size, System.Drawing">
+    <value>834, 389</value>
+  </data>
+  <data name="&gt;&gt;pb_Read.Name" xml:space="preserve">
+    <value>pb_Read</value>
+  </data>
+  <data name="&gt;&gt;tp_Debug.Parent" xml:space="preserve">
+    <value>tc_Main</value>
+  </data>
+  <data name="&gt;&gt;tc_Main.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="clm_RSSI.Width" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="gb_ImmediateMsg.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>平均速度：</value>
+  </data>
+  <data name="&gt;&gt;lb_SuccessReadTagsCount.Parent" xml:space="preserve">
+    <value>gb_ImmediateMsg</value>
+  </data>
+  <data name="lb_TagCount.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tb_ReadMaxCount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>386, 22</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="clm_ANT3.HeaderText" xml:space="preserve">
+    <value>ANT3</value>
+  </data>
+  <data name="lb_AverageSpeed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 125</value>
+  </data>
+  <data name="btn_StartReadTest.Text" xml:space="preserve">
+    <value>开始测试</value>
+  </data>
+  <data name="dgv_Tags.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 17</value>
+  </data>
+  <data name="lb_ImmediateSpeed.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;tp_TagRead.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="rb_ReadByTime.Text" xml:space="preserve">
+    <value>定时</value>
+  </data>
+  <data name="gb_TagList.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 171</value>
+  </data>
+  <data name="&gt;&gt;lb_ImmediateSpeed.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;tc_Main.Name" xml:space="preserve">
+    <value>tc_Main</value>
+  </data>
+  <data name="lb_ProcessCount.Text" xml:space="preserve">
+    <value>0 %</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;rb_ReadByTime.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lb_ProcessCount.Name" xml:space="preserve">
+    <value>lb_ProcessCount</value>
+  </data>
+  <data name="&gt;&gt;gb_Read_Result.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;tb_ReadMaxCount.Parent" xml:space="preserve">
+    <value>gb_Read_Control</value>
+  </data>
+  <data name="&gt;&gt;lb_ImmediateSpeed.Parent" xml:space="preserve">
+    <value>gb_ImmediateMsg</value>
+  </data>
+  <data name="tb_Msg.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="&gt;&gt;tp_Test.Name" xml:space="preserve">
+    <value>tp_Test</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dgv_Tags.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="clm_ANT4.HeaderText" xml:space="preserve">
+    <value>ANT4</value>
+  </data>
+  <data name="&gt;&gt;tb_ReadMaxTime.Name" xml:space="preserve">
+    <value>tb_ReadMaxTime</value>
+  </data>
+  <data name="clm_EPC.HeaderText" xml:space="preserve">
+    <value>EPC</value>
+  </data>
+  <data name="$this.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;rb_ReadByCount.Type" xml:space="preserve">
+    <value>ClouReaderDemo.MyFormTemplet.QQRadioButton, ClouReaderDemo, Version=2.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lb_AverageSpeed.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tp_Debug.Text" xml:space="preserve">
+    <value>调试信息</value>
+  </data>
+  <data name="&gt;&gt;gb_TagList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tb_Msg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lb_TagCount.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btn_StartReadTest.MoveImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABcElEQVRYR+XYy0pCURTGcR/D
+        eeAL9ITNG0dIBkWEBYIQBIEQCBWVpF21Dprm/e45e+s5x8zV+gRXvcMS/oOto+8HNVgRIopsbqWj3C73
+        wLUUht3YH4UHQDa4t8NrxwxMsOAv1X2wG/vhwMWAEj+9r1gvXFBx6FOuM1UXdmN/Kle17JEASqk28ZeF
+        3ozu2lO15bszqrvBkj0coLS602+6aVn1wQEeK5QOP66aVn1wEJS2nVO2YdQHB0Fp8uOy7qkPDoLSMHPK
+        1Dz1wUFQ6iaki6qrPjgIypcX0nlloj44CErNDemsPFYfHATlkx9pZ6w+OAhKZRJQ6mOkPjgISnkc0Elp
+        qD44CIrDj+PiUH1w+EMZ+XT0OlCfww6C8s6Pg5e++uCwRinl22aZ5D+f/ee+2rD/sWPldJDYyToWh5Yk
+        /7Pde+qpC7uxHw7rI1MMZ7jtTNHcNtwf/Kgt7MZ+OUf+O1zH+cuCwqM1DvXYjf2rw/Uv5D4U8toF5WIA
+        AAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="lb_ProcessCount.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="clm_ReadTime.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>876, 506</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;rb_ReadByTime.Name" xml:space="preserve">
+    <value>rb_ReadByTime</value>
+  </data>
+  <data name="&gt;&gt;clm_ReserveData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gb_TagList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;rb_ReadByTime.Type" xml:space="preserve">
+    <value>ClouReaderDemo.MyFormTemplet.QQRadioButton, ClouReaderDemo, Version=2.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="label11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <data name="gb_ImmediateMsg.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="&gt;&gt;lb_ImmediateSpeed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clm_TagType.Name" xml:space="preserve">
+    <value>clm_TagType</value>
+  </data>
+  <data name="btn_StartReadTest.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="tb_Msg.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tb_ReadMaxTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 24</value>
+  </data>
+  <data name="&gt;&gt;tp_Debug.Name" xml:space="preserve">
+    <value>tp_Debug</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>gb_ImmediateMsg</value>
+  </data>
+  <data name="&gt;&gt;gb_TagList.Name" xml:space="preserve">
+    <value>gb_TagList</value>
+  </data>
+  <data name="&gt;&gt;clm_EPC.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clm_TID.Name" xml:space="preserve">
+    <value>clm_TID</value>
+  </data>
+  <data name="clm_TagType.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="btn_StartReadTest.DownImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABY0lEQVRYR+WYvVLCUBBGaWn0
+        gYR30AELnpLSQRoKGcRORxEkQEIQEsj/zU2wWvdz4EaeYTNzik13zmRSfDUiqvFTZ26YW6YjEHjDv37q
+        UbviozUYDLpa65BfinvgDX90YK7xlTRGo+cHlRc0d1x6nVrigDf8x+OXHvdoIkrbD0L9uXDobbYQy2Rh
+        0z6MSu5xjyidKMno/WspHnQ4/U85SprRx3wlHnQwUeJU0cSyxYMOVZRM0XTpiCfmDiZKwsdstRYPOpgo
+        qcppbrviQYeLKNZ6Q9K5iJLlmpbut3jQwXwpig97sxMPOlRRdEHO1hOP4g4mSs6Hu/PFgw5VlKKkjbcX
+        T84dTBTNx9Y/iAcdqihlSbtDIB7NHc5R2mmm9D6KyQtCscA/U7mZDppPw2GvOB4piBPyw0gc8IY/OpxH
+        Jsxvrcd+vxvFSVwef0ga8Ia/mSP/DdcNfnkncLTGUA9v+P8N179NoWykW4CPsQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 79</value>
+  </data>
+  <data name="&gt;&gt;gb_ImmediateMsg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;lb_ProcessCount.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;clm_ANT1.Name" xml:space="preserve">
+    <value>clm_ANT1</value>
+  </data>
+  <data name="gb_TagList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>213, 17</value>
+  </data>
+  <data name="&gt;&gt;lb_SuccessReadTagsCount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tb_ReadMaxTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>198, 22</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_ReadTime.Parent" xml:space="preserve">
+    <value>gb_ImmediateMsg</value>
+  </data>
+  <data name="tp_Test.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 36</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>36, 148</value>
+  </data>
+  <data name="&gt;&gt;clm_ANT2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tc_Main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 26</value>
+  </data>
+  <data name="&gt;&gt;tp_Test.Parent" xml:space="preserve">
+    <value>tc_Main</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="tp_Debug.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;clm_TID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="clm_UserData.HeaderText" xml:space="preserve">
+    <value>UserData</value>
+  </data>
+  <data name="&gt;&gt;rb_ReadByCount.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;gb_ImmediateMsg.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gb_ImmediateMsg.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 17</value>
+  </data>
+  <metadata name="clm_ANT3.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clm_ReadTime.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clm_TotalCount.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clm_ANT2.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clm_UserData.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clm_ANT4.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clm_ANT1.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>en</value>
+  </metadata>
+  <metadata name="clm_ReserveData.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clm_TID.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clm_EPC.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clm_TagType.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clm_RSSI.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>

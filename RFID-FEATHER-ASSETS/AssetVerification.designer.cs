@@ -86,6 +86,7 @@
             this.btnReport = new System.Windows.Forms.Button();
             this.grdViewRFIDTag = new System.Windows.Forms.DataGridView();
             this.colDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colReaderLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colOwnerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAssetDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colClassification = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -107,6 +108,20 @@
             this.lblMsgAssetNotRegister = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblSystemInfo = new System.Windows.Forms.ToolStripStatusLabel();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.led_Tag_Count = new System.Windows.Forms.TextBox();
+            this.lb_ReceiveCount = new System.Windows.Forms.Label();
+            this.gb_ReadControl = new System.Windows.Forms.GroupBox();
+            this.cmbLocationAnt4 = new System.Windows.Forms.ComboBox();
+            this.cmbLocationAnt3 = new System.Windows.Forms.ComboBox();
+            this.cmbLocationAnt2 = new System.Windows.Forms.ComboBox();
+            this.cmbLocationAnt1 = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btnStartReading = new System.Windows.Forms.Button();
+            this.chkAnt4 = new System.Windows.Forms.CheckBox();
+            this.chkAnt3 = new System.Windows.Forms.CheckBox();
+            this.chkAnt2 = new System.Windows.Forms.CheckBox();
+            this.chkAnt1 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCapture5)).BeginInit();
@@ -119,6 +134,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picOwner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdViewRFIDTag)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            this.gb_ReadControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblCurrentDateTime
@@ -497,6 +513,7 @@
             this.grdViewRFIDTag.AllowUserToDeleteRows = false;
             this.grdViewRFIDTag.AllowUserToResizeColumns = false;
             this.grdViewRFIDTag.AllowUserToResizeRows = false;
+            resources.ApplyResources(this.grdViewRFIDTag, "grdViewRFIDTag");
             this.grdViewRFIDTag.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdViewRFIDTag.BackgroundColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -507,10 +524,10 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.grdViewRFIDTag.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            resources.ApplyResources(this.grdViewRFIDTag, "grdViewRFIDTag");
             this.grdViewRFIDTag.ColumnHeadersVisible = false;
             this.grdViewRFIDTag.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colDate,
+            this.colReaderLocation,
             this.colOwnerName,
             this.colAssetDescription,
             this.colClassification,
@@ -541,15 +558,22 @@
             // 
             // colDate
             // 
-            this.colDate.FillWeight = 120F;
+            this.colDate.FillWeight = 90F;
             resources.ApplyResources(this.colDate, "colDate");
             this.colDate.Name = "colDate";
             this.colDate.ReadOnly = true;
             this.colDate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
+            // colReaderLocation
+            // 
+            resources.ApplyResources(this.colReaderLocation, "colReaderLocation");
+            this.colReaderLocation.Name = "colReaderLocation";
+            this.colReaderLocation.ReadOnly = true;
+            this.colReaderLocation.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // colOwnerName
             // 
-            this.colOwnerName.FillWeight = 130F;
+            this.colOwnerName.FillWeight = 120F;
             resources.ApplyResources(this.colOwnerName, "colOwnerName");
             this.colOwnerName.Name = "colOwnerName";
             this.colOwnerName.ReadOnly = true;
@@ -557,7 +581,7 @@
             // 
             // colAssetDescription
             // 
-            this.colAssetDescription.FillWeight = 130F;
+            this.colAssetDescription.FillWeight = 140F;
             resources.ApplyResources(this.colAssetDescription, "colAssetDescription");
             this.colAssetDescription.Name = "colAssetDescription";
             this.colAssetDescription.ReadOnly = true;
@@ -593,7 +617,7 @@
             // 
             // colStatus
             // 
-            this.colStatus.FillWeight = 120F;
+            this.colStatus.FillWeight = 80F;
             resources.ApplyResources(this.colStatus, "colStatus");
             this.colStatus.Name = "colStatus";
             this.colStatus.ReadOnly = true;
@@ -692,10 +716,124 @@
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
+            // led_Tag_Count
+            // 
+            resources.ApplyResources(this.led_Tag_Count, "led_Tag_Count");
+            this.led_Tag_Count.BackColor = System.Drawing.Color.White;
+            this.led_Tag_Count.Name = "led_Tag_Count";
+            this.led_Tag_Count.ReadOnly = true;
+            // 
+            // lb_ReceiveCount
+            // 
+            resources.ApplyResources(this.lb_ReceiveCount, "lb_ReceiveCount");
+            this.lb_ReceiveCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lb_ReceiveCount.Name = "lb_ReceiveCount";
+            // 
+            // gb_ReadControl
+            // 
+            resources.ApplyResources(this.gb_ReadControl, "gb_ReadControl");
+            this.gb_ReadControl.Controls.Add(this.cmbLocationAnt4);
+            this.gb_ReadControl.Controls.Add(this.cmbLocationAnt3);
+            this.gb_ReadControl.Controls.Add(this.cmbLocationAnt2);
+            this.gb_ReadControl.Controls.Add(this.cmbLocationAnt1);
+            this.gb_ReadControl.Controls.Add(this.label11);
+            this.gb_ReadControl.Controls.Add(this.label10);
+            this.gb_ReadControl.Controls.Add(this.btnStartReading);
+            this.gb_ReadControl.Controls.Add(this.chkAnt4);
+            this.gb_ReadControl.Controls.Add(this.chkAnt3);
+            this.gb_ReadControl.Controls.Add(this.chkAnt2);
+            this.gb_ReadControl.Controls.Add(this.chkAnt1);
+            this.gb_ReadControl.Name = "gb_ReadControl";
+            this.gb_ReadControl.TabStop = false;
+            // 
+            // cmbLocationAnt4
+            // 
+            this.cmbLocationAnt4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbLocationAnt4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            resources.ApplyResources(this.cmbLocationAnt4, "cmbLocationAnt4");
+            this.cmbLocationAnt4.FormattingEnabled = true;
+            this.cmbLocationAnt4.Name = "cmbLocationAnt4";
+            // 
+            // cmbLocationAnt3
+            // 
+            this.cmbLocationAnt3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbLocationAnt3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            resources.ApplyResources(this.cmbLocationAnt3, "cmbLocationAnt3");
+            this.cmbLocationAnt3.FormattingEnabled = true;
+            this.cmbLocationAnt3.Name = "cmbLocationAnt3";
+            // 
+            // cmbLocationAnt2
+            // 
+            this.cmbLocationAnt2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbLocationAnt2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            resources.ApplyResources(this.cmbLocationAnt2, "cmbLocationAnt2");
+            this.cmbLocationAnt2.FormattingEnabled = true;
+            this.cmbLocationAnt2.Name = "cmbLocationAnt2";
+            // 
+            // cmbLocationAnt1
+            // 
+            this.cmbLocationAnt1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbLocationAnt1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            resources.ApplyResources(this.cmbLocationAnt1, "cmbLocationAnt1");
+            this.cmbLocationAnt1.FormattingEnabled = true;
+            this.cmbLocationAnt1.Name = "cmbLocationAnt1";
+            // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.Name = "label11";
+            // 
+            // label10
+            // 
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.Name = "label10";
+            // 
+            // btnStartReading
+            // 
+            resources.ApplyResources(this.btnStartReading, "btnStartReading");
+            this.btnStartReading.Name = "btnStartReading";
+            this.btnStartReading.UseVisualStyleBackColor = true;
+            this.btnStartReading.Click += new System.EventHandler(this.btnStartReading_Click);
+            // 
+            // chkAnt4
+            // 
+            resources.ApplyResources(this.chkAnt4, "chkAnt4");
+            this.chkAnt4.Name = "chkAnt4";
+            this.chkAnt4.Tag = "8";
+            this.chkAnt4.UseVisualStyleBackColor = true;
+            this.chkAnt4.CheckedChanged += new System.EventHandler(this.chkAnt4_CheckedChanged);
+            // 
+            // chkAnt3
+            // 
+            resources.ApplyResources(this.chkAnt3, "chkAnt3");
+            this.chkAnt3.Name = "chkAnt3";
+            this.chkAnt3.Tag = "4";
+            this.chkAnt3.UseVisualStyleBackColor = true;
+            this.chkAnt3.CheckedChanged += new System.EventHandler(this.chkAnt3_CheckedChanged);
+            // 
+            // chkAnt2
+            // 
+            resources.ApplyResources(this.chkAnt2, "chkAnt2");
+            this.chkAnt2.Name = "chkAnt2";
+            this.chkAnt2.Tag = "2";
+            this.chkAnt2.UseVisualStyleBackColor = true;
+            this.chkAnt2.CheckedChanged += new System.EventHandler(this.chkAnt2_CheckedChanged);
+            // 
+            // chkAnt1
+            // 
+            resources.ApplyResources(this.chkAnt1, "chkAnt1");
+            this.chkAnt1.Name = "chkAnt1";
+            this.chkAnt1.Tag = "1";
+            this.chkAnt1.UseVisualStyleBackColor = true;
+            this.chkAnt1.CheckedChanged += new System.EventHandler(this.chkAnt1_CheckedChanged);
+            // 
             // Verification
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.gb_ReadControl);
+            this.Controls.Add(this.led_Tag_Count);
+            this.Controls.Add(this.lb_ReceiveCount);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.lblLoginUserName);
             this.Controls.Add(this.lblCurrentDateTime);
@@ -704,6 +842,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Verification";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Verification_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Verification_FormClosed);
             this.Load += new System.EventHandler(this.Verification_Load);
             this.Shown += new System.EventHandler(this.Verification_Shown);
@@ -723,6 +862,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdViewRFIDTag)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.gb_ReadControl.ResumeLayout(false);
+            this.gb_ReadControl.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -789,7 +930,22 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtClassification;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox led_Tag_Count;
+        private System.Windows.Forms.Label lb_ReceiveCount;
+        private System.Windows.Forms.GroupBox gb_ReadControl;
+        private System.Windows.Forms.ComboBox cmbLocationAnt4;
+        private System.Windows.Forms.ComboBox cmbLocationAnt3;
+        private System.Windows.Forms.ComboBox cmbLocationAnt2;
+        private System.Windows.Forms.ComboBox cmbLocationAnt1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btnStartReading;
+        private System.Windows.Forms.CheckBox chkAnt4;
+        private System.Windows.Forms.CheckBox chkAnt3;
+        private System.Windows.Forms.CheckBox chkAnt2;
+        private System.Windows.Forms.CheckBox chkAnt1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colReaderLocation;
         private System.Windows.Forms.DataGridViewTextBoxColumn colOwnerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAssetDescription;
         private System.Windows.Forms.DataGridViewTextBoxColumn colClassification;

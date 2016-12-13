@@ -67,6 +67,10 @@
     <Reference Include="AForge.Video.DirectShow">
       <HintPath>..\..\..\Two Cameras Test\Two Cameras Test\AForge.Video.DirectShow.dll</HintPath>
     </Reference>
+    <Reference Include="ClouReaderAPI, Version=2.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ClouReaderAPI.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
@@ -81,7 +85,8 @@
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="RestSharp">
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\RestSharp.105.2.3\lib\net4-client\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -133,6 +138,18 @@
     </Compile>
     <Compile Include="Assets.Designer.cs">
       <DependentUpon>Assets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectDeviceT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConnectDeviceT.Designer.cs">
+      <DependentUpon>ConnectDeviceT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConnectDevice.Designer.cs">
+      <DependentUpon>ConnectDevice.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalClass.cs" />
     <Compile Include="Languages\AssetRegistration.ja-JP.Designer.cs" />
@@ -212,6 +229,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AssetTracking.resx">
       <DependentUpon>AssetTracking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConnectDeviceT.resx">
+      <DependentUpon>ConnectDeviceT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConnectDevice.resx">
+      <DependentUpon>ConnectDevice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Languages\AssetRegistration.ja-JP.resx" />
     <EmbeddedResource Include="Languages\AssetRenewal.ja-JP.resx" />

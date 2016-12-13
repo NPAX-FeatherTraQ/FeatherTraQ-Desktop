@@ -52,7 +52,7 @@ namespace RFID_FEATHER_ASSETS
 
             //label1.Text = Form1.SetValueForText1;
             getLanguage();
-            languageHandler();
+            //languageHandler();
             GetAssetSystemInfo();
             InitializeCamera();
             InitializePhotoLabel();
@@ -74,7 +74,7 @@ namespace RFID_FEATHER_ASSETS
                 //if it does exist, retrieve the stored values  
                 if (key != null)
                 {
-                    language = (string)(key.GetValue("Language"));
+                    language = "English";//(string)(key.GetValue("Language"));
                     key.Close();
                 }
             }

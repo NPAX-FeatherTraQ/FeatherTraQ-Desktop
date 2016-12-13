@@ -502,6 +502,8 @@ F:\Dranreb\RFID\App\Desktop\FeatherTraQ-Desktop\RFID-FEATHER-ASSETS\obj\x86\Debu
 F:\Dranreb\RFID\App\Desktop\FeatherTraQ-Desktop\RFID-FEATHER-ASSETS\obj\x86\Debug\RFID_FEATHER_ASSETS.AssetRenewal.resources
 F:\Dranreb\RFID\App\Desktop\FeatherTraQ-Desktop\RFID-FEATHER-ASSETS\obj\x86\Debug\RFID_FEATHER_ASSETS.Assets.resources
 F:\Dranreb\RFID\App\Desktop\FeatherTraQ-Desktop\RFID-FEATHER-ASSETS\obj\x86\Debug\RFID_FEATHER_ASSETS.Tracking.resources
+F:\Dranreb\RFID\App\Desktop\FeatherTraQ-Desktop\RFID-FEATHER-ASSETS\obj\x86\Debug\RFID_FEATHER_ASSETS.ConnectDeviceT.resources
+F:\Dranreb\RFID\App\Desktop\FeatherTraQ-Desktop\RFID-FEATHER-ASSETS\obj\x86\Debug\RFID_FEATHER_ASSETS.ConnectDevice.resources
 F:\Dranreb\RFID\App\Desktop\FeatherTraQ-Desktop\RFID-FEATHER-ASSETS\obj\x86\Debug\RFID_FEATHER_ASSETS.LoginActivity.resources
 F:\Dranreb\RFID\App\Desktop\FeatherTraQ-Desktop\RFID-FEATHER-ASSETS\obj\x86\Debug\RFID_FEATHER_ASSETS.Verification.resources
 F:\Dranreb\RFID\App\Desktop\FeatherTraQ-Desktop\RFID-FEATHER-ASSETS\obj\x86\Debug\RFID_FEATHER_ASSETS.AssetRegistration.resources

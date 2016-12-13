@@ -1,7 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RFID-FEATHER-ASSETS", "RFID-FEATHER-ASSETS\RFID-FEATHER-ASSETS.csproj", "{F8CC4009-4D5E-4348-850D-652682CCD90E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClouReaderDemo", "ClouReaderDemo\ClouReaderDemo.csproj", "{CCAF95B5-1D95-4BC5-9F6C-6775B5AF9891}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +17,10 @@ Global
 		{F8CC4009-4D5E-4348-850D-652682CCD90E}.Debug|x86.Build.0 = Debug|x86
 		{F8CC4009-4D5E-4348-850D-652682CCD90E}.Release|x86.ActiveCfg = Release|x86
 		{F8CC4009-4D5E-4348-850D-652682CCD90E}.Release|x86.Build.0 = Release|x86
+		{CCAF95B5-1D95-4BC5-9F6C-6775B5AF9891}.Debug|x86.ActiveCfg = Debug|x86
+		{CCAF95B5-1D95-4BC5-9F6C-6775B5AF9891}.Debug|x86.Build.0 = Debug|x86
+		{CCAF95B5-1D95-4BC5-9F6C-6775B5AF9891}.Release|x86.ActiveCfg = Release|x86
+		{CCAF95B5-1D95-4BC5-9F6C-6775B5AF9891}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

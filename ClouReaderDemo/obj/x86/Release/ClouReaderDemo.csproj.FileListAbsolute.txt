@@ -1,0 +1,398 @@
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\bin\Release\ClouReaderDemo.exe.config
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.BaseForm.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MainForm.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyFormTemplet._360Form.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyForm.BaseOption.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyForm.Dialog.AddSerial.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyForm.Dialog.BaseDialog.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyForm.Dialog.SoftUpdate.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyForm.RFID_Option.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyForm.Tag_Option.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.AddConnect.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.BaseDialog.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.SearchResult.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.SendCommand.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.FunctionForm.FunctionWriteEpc.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.FunctionForm.FunctionWriteUserData.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_R.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.ReadTag_Param.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.RFID_Option.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Tag_Option.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Tag_Option6B.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.TCP_Server.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_RW.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.Properties.Resources.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.SingleMainForm.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\bin\Release\Microsoft.Office.Interop.Excel.dll
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\bin\Release\ReaderConfig.xml
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\bin\Release\ClouReaderDemo.exe
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\bin\Release\ClouReaderDemo.pdb
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\bin\Release\CL7206B2.Resource.dll
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\bin\Release\ClouReaderAPI.dll
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\bin\Release\ClouReaderAPI.pdb
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\bin\Release\CL7206B2.Resource.pdb
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.exe
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.pdb
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\bin\Release\beep.wav
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.BaseOption.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.AddBlack_WriteList.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.AddConnectBy_R_List.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.AddCheckList.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingGetGPI.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingSetGPO.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingSetWG.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.APITest.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.BlacklistBeep.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingGPI_ReadParam.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingGPI.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingReader_485Port.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingReader_SerialPort.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingReader_TCPPort.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingReader_TCPServerOrClient.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingRFID_AutoFree.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingRFID_RF.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingRFID_TagFilter.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_R_List.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performmance_R_6B_6C.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.PowerCalibration.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.Test_Option.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.Tools.ToolsSetGPO.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.csprojResolveAssemblyReference.cache
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.CheckListTest.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.csproj.GenerateResource.Cache
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_R_List_Back.resources
+E:\项目\新项目\CL7206B2\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Tag_OptionGB.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\bin\Release\Microsoft.Office.Interop.Excel.dll
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\bin\Release\beep.wav
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\bin\Release\ReaderConfig.xml
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\bin\Release\ClouReaderDemo.exe.config
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\bin\Release\ClouReaderDemo.exe
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\bin\Release\ClouReaderDemo.pdb
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\bin\Release\CL7206B2.Resource.dll
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\bin\Release\ClouReaderAPI.dll
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\bin\Release\CL7206B2.Resource.pdb
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.csprojResolveAssemblyReference.cache
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.BaseForm.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.HubMainForm.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MainForm.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyFormTemplet._360Form.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyForm.BaseOption.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyForm.Dialog.AddSerial.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyForm.Dialog.BaseDialog.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyForm.Dialog.SoftUpdate.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyForm.RFID_Option.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyForm.Tag_Option.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.BaseOption.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.AddBlack_WriteList.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.AddConnect.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.AddConnectBy_R_List.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.BaseDialog.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.SearchResult.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.SendCommand.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.AddCheckList.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.FunctionForm.FunctionWriteEpc.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.FunctionForm.FunctionWriteUserData.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.FunctionForm.FunctionWriteEpc_GB.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.FunctionForm.FunctionWriteUserData_GB.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SearchDevice.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingGetGPI.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingSetGPO.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingSetWG.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.APITest.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.BlacklistBeep.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.CheckListTest.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_R.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.ReadTag_Param.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.RFID_Option.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingGPI_ReadParam.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingGPI.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingReader_485Port.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingReader_SerialPort.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingReader_TCPPort.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingReader_TCPServerOrClient.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingRFID_AutoFree.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingRFID_RF.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingRFID_TagFilter.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Tag_Option.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Tag_Option6B.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.TCP_Server.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_RW.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_R_List.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performmance_R_6B_6C.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.PowerCalibration.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_R_List_Back.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Tag_OptionGB.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_RW_GB.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.Test_Option.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.Tools.ToolsSetGPO.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.Properties.Resources.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.SingleMainForm.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.csproj.GenerateResource.Cache
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.exe
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.pdb
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.SingleMainForm.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.SingleMainForm.zh.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\bin\Release\en\ClouReaderDemo.resources.dll
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\bin\Release\zh\ClouReaderDemo.resources.dll
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\en\ClouReaderDemo.resources.dll
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\zh\ClouReaderDemo.resources.dll
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.AddConnect.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.FunctionForm.FunctionWriteEpc.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.FunctionForm.FunctionWriteEpc_GB.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.FunctionForm.FunctionWriteUserData.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.FunctionForm.FunctionWriteUserData_GB.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.ReadTag_Param.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.RFID_Option.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SearchDevice.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingGetGPI.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingGPI.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.TCP_Server.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Tag_Option.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingGPI_ReadParam.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingReader_485Port.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingReader_SerialPort.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingReader_TCPPort.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingReader_TCPServerOrClient.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingRFID_AutoFree.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingRFID_RF.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingRFID_TagFilter.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingSetGPO.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingSetWG.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.BlacklistBeep.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.CheckListTest.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_R.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_R_List.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.Test_Option.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.Tools.ToolsSetGPO.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_RW.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.AddBlack_WriteList.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.AddCheckList.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.AddConnectBy_R_List.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.SendCommand.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_RW_GB.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_R_List_Back.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.PowerCalibration.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Tag_Option6B.en.resources
+E:\Tao_Project\CLRFIDReader\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Tag_OptionGB.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\bin\Release\Microsoft.Office.Interop.Excel.dll
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\bin\Release\beep.wav
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\bin\Release\ReaderConfig.xml
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\bin\Release\ClouReaderAPI.dll
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\bin\Release\ClouReaderDemo.exe.config
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\bin\Release\ClouReaderDemo.exe
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\bin\Release\ClouReaderDemo.pdb
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\bin\Release\en\ClouReaderDemo.resources.dll
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\bin\Release\CL7206B2.Resource.dll
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.BaseForm.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.HubMainForm.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MainForm.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyFormTemplet._360Form.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyForm.BaseOption.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyForm.Dialog.AddSerial.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyForm.Dialog.BaseDialog.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyForm.Dialog.SoftUpdate.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyForm.RFID_Option.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyForm.Tag_Option.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.BaseOption.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.AddBlack_WriteList.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.AddConnect.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.AddConnectBy_R_List.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.BaseDialog.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.SearchResult.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.SendCommand.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.AddCheckList.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.FunctionForm.FunctionWriteEpc.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.FunctionForm.FunctionWriteUserData.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.FunctionForm.FunctionWriteEpc_GB.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.FunctionForm.FunctionWriteUserData_GB.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SearchDevice.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingGetGPI.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingSetGPO.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingSetWG.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.APITest.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.BlacklistBeep.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.CheckListTest.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_R.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.ReadTag_Param.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.RFID_Option.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingGPI_ReadParam.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingGPI.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingReader_485Port.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingReader_SerialPort.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingReader_TCPPort.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingReader_TCPServerOrClient.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingRFID_AutoFree.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingRFID_RF.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingRFID_TagFilter.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Tag_Option.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Tag_Option6B.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.TCP_Server.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_RW.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_R_List.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performmance_R_6B_6C.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.PowerCalibration.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_R_List_Back.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Tag_OptionGB.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_RW_GB.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.Test_Option.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.Tools.ToolsSetGPO.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.Properties.Resources.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.SingleMainForm.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyForm.Dialog.SoftUpdate.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.AddBlack_WriteList.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.AddCheckList.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.AddConnect.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.AddConnectBy_R_List.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.SearchResult.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.SendCommand.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.FunctionForm.FunctionWriteEpc.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.FunctionForm.FunctionWriteEpc_GB.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.FunctionForm.FunctionWriteUserData.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.FunctionForm.FunctionWriteUserData_GB.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.ReadTag_Param.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.RFID_Option.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SearchDevice.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingGetGPI.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingGPI.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingGPI_ReadParam.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingReader_485Port.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingReader_SerialPort.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingReader_TCPPort.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingReader_TCPServerOrClient.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingRFID_AutoFree.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingRFID_RF.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingRFID_TagFilter.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingSetGPO.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingSetWG.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.TCP_Server.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.BlacklistBeep.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.CheckListTest.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_R.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_RW.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_RW_GB.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_R_List.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_R_List_Back.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performmance_R_6B_6C.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.PowerCalibration.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Tag_Option.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Tag_Option6B.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Tag_OptionGB.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.Test_Option.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.Tools.ToolsSetGPO.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.SingleMainForm.en.resources
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.csproj.GenerateResource.Cache
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\en\ClouReaderDemo.resources.dll
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.exe
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.pdb
+E:\Tao_Project\CLOU_Reader_Demo\trunk\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.csprojResolveAssemblyReference.cache
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\bin\Release\Microsoft.Office.Interop.Excel.dll
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\bin\Release\beep.wav
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\bin\Release\ReaderConfig.xml
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\bin\Release\ClouReaderAPI.dll
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\bin\Release\ClouReaderDemo.exe.config
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\bin\Release\ClouReaderDemo.exe
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\bin\Release\ClouReaderDemo.pdb
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\bin\Release\en\ClouReaderDemo.resources.dll
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\bin\Release\CL7206B2.Resource.dll
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.csprojResolveAssemblyReference.cache
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.BaseForm.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.HubMainForm.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MainForm.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyFormTemplet._360Form.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyForm.BaseOption.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyForm.Dialog.AddSerial.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyForm.Dialog.BaseDialog.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyForm.Dialog.SoftUpdate.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyForm.RFID_Option.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyForm.Tag_Option.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.BaseOption.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.AddBlack_WriteList.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.AddConnect.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.AddConnectBy_R_List.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.BaseDialog.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.SearchResult.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.SendCommand.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.AddCheckList.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.FunctionForm.FunctionWriteEpc.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.FunctionForm.FunctionWriteUserData.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.FunctionForm.FunctionWriteEpc_GB.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.FunctionForm.FunctionWriteUserData_GB.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SearchDevice.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingGetGPI.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingSetGPO.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingSetWG.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.APITest.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.BlacklistBeep.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.CheckListTest.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_R.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.ReadTag_Param.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.RFID_Option.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingGPI_ReadParam.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingGPI.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingReader_485Port.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingReader_SerialPort.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingReader_TCPPort.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingReader_TCPServerOrClient.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingRFID_AutoFree.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingRFID_RF.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingRFID_TagFilter.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Tag_Option.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Tag_Option6B.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.TCP_Server.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_RW.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_R_List.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performmance_R_6B_6C.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.PowerCalibration.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_R_List_Back.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Tag_OptionGB.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_RW_GB.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.Test_Option.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.Tools.ToolsSetGPO.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.Properties.Resources.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.SingleMainForm.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MyForm.Dialog.SoftUpdate.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.AddBlack_WriteList.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.AddCheckList.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.AddConnect.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.AddConnectBy_R_List.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.SearchResult.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Dialog.SendCommand.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.FunctionForm.FunctionWriteEpc.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.FunctionForm.FunctionWriteEpc_GB.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.FunctionForm.FunctionWriteUserData.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.FunctionForm.FunctionWriteUserData_GB.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.ReadTag_Param.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.RFID_Option.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SearchDevice.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingGetGPI.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingGPI.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingGPI_ReadParam.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingReader_485Port.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingReader_SerialPort.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingReader_TCPPort.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingReader_TCPServerOrClient.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingRFID_AutoFree.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingRFID_RF.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingRFID_TagFilter.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingSetGPO.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.SettingForm.SettingSetWG.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.TCP_Server.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.BlacklistBeep.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.CheckListTest.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_R.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_RW.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_RW_GB.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_R_List.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performance_R_List_Back.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Performmance_R_6B_6C.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.PowerCalibration.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Tag_Option.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Tag_Option6B.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.TestForm.Tag_OptionGB.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.Test_Option.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.MySingleForm.Tools.ToolsSetGPO.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.SingleMainForm.en.resources
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.csproj.GenerateResource.Cache
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\en\ClouReaderDemo.resources.dll
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.exe
+F:\Dranreb\RFID\App\Desktop\_Docs\Supplier SDK\CLOU\SDK 2.0.2 20161008\Source Code\ClouReaderDemo\obj\x86\Release\ClouReaderDemo.pdb

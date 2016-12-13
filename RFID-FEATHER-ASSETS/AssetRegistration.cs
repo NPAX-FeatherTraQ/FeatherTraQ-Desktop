@@ -72,7 +72,7 @@ namespace RFID_FEATHER_ASSETS
             //roleValue = roleSource;
             GetAssetSystemInfo();
             getLanguage();
-            languageHandler();
+            //languageHandler();
             //InitializeOwner();
             InitializeCamera();
             InitializePhotoLabel();
@@ -177,7 +177,7 @@ namespace RFID_FEATHER_ASSETS
                 //if it does exist, retrieve the stored values  
                 if (key != null)
                 {
-                    language = (string)(key.GetValue("Language"));
+                    language = "English";//(string)(key.GetValue("Language"));
                     key.Close();
                 }
             }
@@ -1019,7 +1019,7 @@ namespace RFID_FEATHER_ASSETS
                 {
                     for (int i = 0; i < RealTimeTagDataList.Count; i++)
                     {
-                        tagInfo = RealTimeTagDataList[i].strEpc;//tagInfo = RealTimeTagDataList[i].btAntId.ToString() + "    " + RealTimeTagDataList[i].strEpc + "    ";// tagInfo = "antenna" + RealTimeTagDataList[i].btAntId.ToString() + "    " + RealTimeTagDataList[i].strEpc + "    " + RealTimeTagDataList[i].strCarrierFrequency + "    " + RealTimeTagDataList[i].strRssi;
+                        tagInfo = RealTimeTagDataList[i].strEpc.Replace(" ", string.Empty);//tagInfo = RealTimeTagDataList[i].btAntId.ToString() + "    " + RealTimeTagDataList[i].strEpc.Replace(" ", string.Empty); + "    ";// tagInfo = "antenna" + RealTimeTagDataList[i].btAntId.ToString() + "    " + RealTimeTagDataList[i].strEpc.Replace(" ", string.Empty); + "    " + RealTimeTagDataList[i].strCarrierFrequency + "    " + RealTimeTagDataList[i].strRssi;
                         //listBox1.Items.Add(tagInfo);
                         //txtRFIDTag.Text = tagInfo.ToString();
                         //ownerRFIDTag = tagInfo.ToString();

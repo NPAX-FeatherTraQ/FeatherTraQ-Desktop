@@ -1,0 +1,1540 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&gt;&gt;gb_TagList.Parent" xml:space="preserve">
+    <value>gb_Read_Result</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btn_GPO_up.NormalImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABmElEQVRYR+XYO2vCUBjG8RdE
+        UMEqCA6CgyA4CIIgiNTLV2ipDudTOra6Fmc3nVtabzGJt+SYm6fv06/xBv7DMdPzI0QIGWNoNBpluWfu
+        hVMCw27sz8KDhsPhE/e2XC6nWmubfxR3YTf2w4ErUJ+v1Wr1/ngYkyQPsWH/er2eMceAer3eOAxDL44T
+        I70oijR7TKjb7So8IVEUiw8O8KBOp8MoiQnCUHxwgAe1220V80EHgfjgAA9qtVoqimPj67v44AAPajab
+        il8w5ub74oMDPKjRaKiQD5ebJz44wIPq9brCS/Z0vYoPDvCgWq2m7kFonPNFfHCAB1WrVUYJjO2exQcH
+        eFClUlH6HhjLccUHB3hQuVxW+DveHx3xwQEeVCqVlKe12VpH8cEBHlQsFpXna7PZW+KDAzwon8+rGx9+
+        dgfxwQEelMvlxs7p7P3uD+Z7uxMb9rvni2aPCWUymcHnYjG7ep7Bja/NVlzYjf1wgAel0+kC9/Yxn08t
+        23ZxU1rYjf1wgAfhQ20qlcpyfe6VUwLDbuz//3D9B7JDiN2k7OX5AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="&gt;&gt;clm_ANT4.Name" xml:space="preserve">
+    <value>clm_ANT4</value>
+  </data>
+  <data name="tc_Main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 26</value>
+  </data>
+  <data name="tp_TagRead.Size" type="System.Drawing.Size, System.Drawing">
+    <value>762, 437</value>
+  </data>
+  <data name="btn_ClearCheckList.NormalImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABmElEQVRYR+XYO2vCUBjG8RdE
+        UMEqCA6CgyA4CIIgiNTLV2ipDudTOra6Fmc3nVtabzGJt+SYm6fv06/xBv7DMdPzI0QIGWNoNBpluWfu
+        hVMCw27sz8KDhsPhE/e2XC6nWmubfxR3YTf2w4ErUJ+v1Wr1/ngYkyQPsWH/er2eMceAer3eOAxDL44T
+        I70oijR7TKjb7So8IVEUiw8O8KBOp8MoiQnCUHxwgAe1220V80EHgfjgAA9qtVoqimPj67v44AAPajab
+        il8w5ub74oMDPKjRaKiQD5ebJz44wIPq9brCS/Z0vYoPDvCgWq2m7kFonPNFfHCAB1WrVUYJjO2exQcH
+        eFClUlH6HhjLccUHB3hQuVxW+DveHx3xwQEeVCqVlKe12VpH8cEBHlQsFpXna7PZW+KDAzwon8+rGx9+
+        dgfxwQEelMvlxs7p7P3uD+Z7uxMb9rvni2aPCWUymcHnYjG7ep7Bja/NVlzYjf1wgAel0+kC9/Yxn08t
+        23ZxU1rYjf1wgAfhQ20qlcpyfe6VUwLDbuz//3D9B7JDiN2k7OX5AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="tc_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="clm_ReserveData.HeaderText" xml:space="preserve">
+    <value>ReserveData</value>
+  </data>
+  <data name="btn_.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;btn_RemoveCheckList.Name" xml:space="preserve">
+    <value>btn_RemoveCheckList</value>
+  </data>
+  <data name="lb_TagCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 35</value>
+  </data>
+  <data name="cb_out_w_1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>185, 167</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>776, 506</value>
+  </data>
+  <data name="&gt;&gt;gb_TagList.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btn_GPO_down.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 38</value>
+  </data>
+  <data name="&gt;&gt;cb_out_w_1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lb_TagCount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>638, 17</value>
+  </data>
+  <data name="btn_Clear.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cb_out_w_1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;clm_ANT2.Name" xml:space="preserve">
+    <value>clm_ANT2</value>
+  </data>
+  <data name="&gt;&gt;tb_Msg.Name" xml:space="preserve">
+    <value>tb_Msg</value>
+  </data>
+  <data name="clm_TID.Width" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="&gt;&gt;btn_StartReadTest.Name" xml:space="preserve">
+    <value>btn_StartReadTest</value>
+  </data>
+  <data name="btn_GPO_down.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 78</value>
+  </data>
+  <data name="&gt;&gt;tc_Main.Type" xml:space="preserve">
+    <value>ClouReaderDemo.MyFormTemplet.QQTabControl, ClouReaderDemo, Version=2.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="lb_TagCount.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="&gt;&gt;tp_CheckList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clm_ANT1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tp_BeepTest.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tc_Main.ItemSize" type="System.Drawing.Size, System.Drawing">
+    <value>80, 32</value>
+  </data>
+  <data name="gb_TagList.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="gb_Read_Control.Text" xml:space="preserve">
+    <value>参数控制：</value>
+  </data>
+  <data name="&gt;&gt;tp_TagRead.Parent" xml:space="preserve">
+    <value>tc_Main</value>
+  </data>
+  <data name="clm_ANT2.Width" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="tp_Debug.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="&gt;&gt;tp_Debug.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cb_out_w_2.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="btn_StopTest.Text" xml:space="preserve">
+    <value>停止测试</value>
+  </data>
+  <data name="btn_AddCheckList.NormalImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABmElEQVRYR+XYO2vCUBjG8RdE
+        UMEqCA6CgyA4CIIgiNTLV2ipDudTOra6Fmc3nVtabzGJt+SYm6fv06/xBv7DMdPzI0QIGWNoNBpluWfu
+        hVMCw27sz8KDhsPhE/e2XC6nWmubfxR3YTf2w4ErUJ+v1Wr1/ngYkyQPsWH/er2eMceAer3eOAxDL44T
+        I70oijR7TKjb7So8IVEUiw8O8KBOp8MoiQnCUHxwgAe1220V80EHgfjgAA9qtVoqimPj67v44AAPajab
+        il8w5ub74oMDPKjRaKiQD5ebJz44wIPq9brCS/Z0vYoPDvCgWq2m7kFonPNFfHCAB1WrVUYJjO2exQcH
+        eFClUlH6HhjLccUHB3hQuVxW+DveHx3xwQEeVCqVlKe12VpH8cEBHlQsFpXna7PZW+KDAzwon8+rGx9+
+        dgfxwQEelMvlxs7p7P3uD+Z7uxMb9rvni2aPCWUymcHnYjG7ep7Bja/NVlzYjf1wgAel0+kC9/Yxn08t
+        23ZxU1rYjf1wgAfhQ20qlcpyfe6VUwLDbuz//3D9B7JDiN2k7OX5AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="&gt;&gt;btn_RemoveCheckList.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lb_CheckList.Name" xml:space="preserve">
+    <value>lb_CheckList</value>
+  </data>
+  <data name="btn_Reset.MoveImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABcElEQVRYR+XYy0pCURTGcR/D
+        eeAL9ITNG0dIBkWEBYIQBIEQCBWVpF21Dprm/e45e+s5x8zV+gRXvcMS/oOto+8HNVgRIopsbqWj3C73
+        wLUUht3YH4UHQDa4t8NrxwxMsOAv1X2wG/vhwMWAEj+9r1gvXFBx6FOuM1UXdmN/Kle17JEASqk28ZeF
+        3ozu2lO15bszqrvBkj0coLS602+6aVn1wQEeK5QOP66aVn1wEJS2nVO2YdQHB0Fp8uOy7qkPDoLSMHPK
+        1Dz1wUFQ6iaki6qrPjgIypcX0nlloj44CErNDemsPFYfHATlkx9pZ6w+OAhKZRJQ6mOkPjgISnkc0Elp
+        qD44CIrDj+PiUH1w+EMZ+XT0OlCfww6C8s6Pg5e++uCwRinl22aZ5D+f/ee+2rD/sWPldJDYyToWh5Yk
+        /7Pde+qpC7uxHw7rI1MMZ7jtTNHcNtwf/Kgt7MZ+OUf+O1zH+cuCwqM1DvXYjf2rw/Uv5D4U8toF5WIA
+        AAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="&gt;&gt;clm_RSSI.Name" xml:space="preserve">
+    <value>clm_RSSI</value>
+  </data>
+  <data name="btn_Reset.DownImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABY0lEQVRYR+WYvVLCUBBGaWn0
+        gYR30AELnpLSQRoKGcRORxEkQEIQEsj/zU2wWvdz4EaeYTNzik13zmRSfDUiqvFTZ26YW6YjEHjDv37q
+        UbviozUYDLpa65BfinvgDX90YK7xlTRGo+cHlRc0d1x6nVrigDf8x+OXHvdoIkrbD0L9uXDobbYQy2Rh
+        0z6MSu5xjyidKMno/WspHnQ4/U85SprRx3wlHnQwUeJU0cSyxYMOVZRM0XTpiCfmDiZKwsdstRYPOpgo
+        qcppbrviQYeLKNZ6Q9K5iJLlmpbut3jQwXwpig97sxMPOlRRdEHO1hOP4g4mSs6Hu/PFgw5VlKKkjbcX
+        T84dTBTNx9Y/iAcdqihlSbtDIB7NHc5R2mmm9D6KyQtCscA/U7mZDppPw2GvOB4piBPyw0gc8IY/OpxH
+        Jsxvrcd+vxvFSVwef0ga8Ia/mSP/DdcNfnkncLTGUA9v+P8N179NoWykW4CPsQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="cb_out_w_1.TabIndex" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="btn_RemoveCheckList.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;btn_Reset.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btn_AddCheckList.Type" xml:space="preserve">
+    <value>ClouReaderDemo.MyFormTemplet.QQButton, ClouReaderDemo, Version=2.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="gb_Read_Control.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="&gt;&gt;btn_StopTest.Parent" xml:space="preserve">
+    <value>gb_Read_Control</value>
+  </data>
+  <data name="btn_GPO_down.NormalImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABmElEQVRYR+XYO2vCUBjG8RdE
+        UMEqCA6CgyA4CIIgiNTLV2ipDudTOra6Fmc3nVtabzGJt+SYm6fv06/xBv7DMdPzI0QIGWNoNBpluWfu
+        hVMCw27sz8KDhsPhE/e2XC6nWmubfxR3YTf2w4ErUJ+v1Wr1/ngYkyQPsWH/er2eMceAer3eOAxDL44T
+        I70oijR7TKjb7So8IVEUiw8O8KBOp8MoiQnCUHxwgAe1220V80EHgfjgAA9qtVoqimPj67v44AAPajab
+        il8w5ub74oMDPKjRaKiQD5ebJz44wIPq9brCS/Z0vYoPDvCgWq2m7kFonPNFfHCAB1WrVUYJjO2exQcH
+        eFClUlH6HhjLccUHB3hQuVxW+DveHx3xwQEeVCqVlKe12VpH8cEBHlQsFpXna7PZW+KDAzwon8+rGx9+
+        dgfxwQEelMvlxs7p7P3uD+Z7uxMb9rvni2aPCWUymcHnYjG7ep7Bja/NVlzYjf1wgAel0+kC9/Yxn08t
+        23ZxU1rYjf1wgAfhQ20qlcpyfe6VUwLDbuz//3D9B7JDiN2k7OX5AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="&gt;&gt;btn_.Parent" xml:space="preserve">
+    <value>tp_CheckList</value>
+  </data>
+  <data name="clm_ANT1.Width" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="&gt;&gt;clm_TotalCount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_GPO_Stop.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btn_ClearCheckList.MoveImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABcElEQVRYR+XYy0pCURTGcR/D
+        eeAL9ITNG0dIBkWEBYIQBIEQCBWVpF21Dprm/e45e+s5x8zV+gRXvcMS/oOto+8HNVgRIopsbqWj3C73
+        wLUUht3YH4UHQDa4t8NrxwxMsOAv1X2wG/vhwMWAEj+9r1gvXFBx6FOuM1UXdmN/Kle17JEASqk28ZeF
+        3ozu2lO15bszqrvBkj0coLS602+6aVn1wQEeK5QOP66aVn1wEJS2nVO2YdQHB0Fp8uOy7qkPDoLSMHPK
+        1Dz1wUFQ6iaki6qrPjgIypcX0nlloj44CErNDemsPFYfHATlkx9pZ6w+OAhKZRJQ6mOkPjgISnkc0Elp
+        qD44CIrDj+PiUH1w+EMZ+XT0OlCfww6C8s6Pg5e++uCwRinl22aZ5D+f/ee+2rD/sWPldJDYyToWh5Yk
+        /7Pde+qpC7uxHw7rI1MMZ7jtTNHcNtwf/Kgt7MZ+OUf+O1zH+cuCwqM1DvXYjf2rw/Uv5D4U8toF5WIA
+        AAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="&gt;&gt;gb_Read_Control.Parent" xml:space="preserve">
+    <value>tp_TagRead</value>
+  </data>
+  <data name="tp_Debug.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btn_RemoveCheckList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>483, 86</value>
+  </data>
+  <data name="&gt;&gt;btn_GPO_Stop.Type" xml:space="preserve">
+    <value>ClouReaderDemo.MyFormTemplet.QQButton, ClouReaderDemo, Version=2.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="tp_CheckList.Text" xml:space="preserve">
+    <value>待检列表</value>
+  </data>
+  <data name="clm_ANT2.HeaderText" xml:space="preserve">
+    <value>ANT2</value>
+  </data>
+  <data name="&gt;&gt;btn_GPO_up.Parent" xml:space="preserve">
+    <value>tp_BeepTest</value>
+  </data>
+  <data name="clm_RSSI.HeaderText" xml:space="preserve">
+    <value>RSSI</value>
+  </data>
+  <data name="&gt;&gt;clm_TotalCount.Name" xml:space="preserve">
+    <value>clm_TotalCount</value>
+  </data>
+  <data name="&gt;&gt;btn_Reset.Type" xml:space="preserve">
+    <value>ClouReaderDemo.MyFormTemplet.QQButton, ClouReaderDemo, Version=2.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btn_GPO_Stop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>369, 77</value>
+  </data>
+  <data name="&gt;&gt;gb_Read_Result.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cb_out_w_4.Parent" xml:space="preserve">
+    <value>tp_BeepTest</value>
+  </data>
+  <data name="cb_out_w_4.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="&gt;&gt;clm_ReserveData.Name" xml:space="preserve">
+    <value>clm_ReserveData</value>
+  </data>
+  <data name="gb_Read_Result.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="btn_AddCheckList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 38</value>
+  </data>
+  <data name="btn_StopTest.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="clm_ReserveData.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btn_StartReadTest.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btn_RemoveCheckList.DownImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABY0lEQVRYR+WYvVLCUBBGaWn0
+        gYR30AELnpLSQRoKGcRORxEkQEIQEsj/zU2wWvdz4EaeYTNzik13zmRSfDUiqvFTZ26YW6YjEHjDv37q
+        UbviozUYDLpa65BfinvgDX90YK7xlTRGo+cHlRc0d1x6nVrigDf8x+OXHvdoIkrbD0L9uXDobbYQy2Rh
+        0z6MSu5xjyidKMno/WspHnQ4/U85SprRx3wlHnQwUeJU0cSyxYMOVZRM0XTpiCfmDiZKwsdstRYPOpgo
+        qcppbrviQYeLKNZ6Q9K5iJLlmpbut3jQwXwpig97sxMPOlRRdEHO1hOP4g4mSs6Hu/PFgw5VlKKkjbcX
+        T84dTBTNx9Y/iAcdqihlSbtDIB7NHc5R2mmm9D6KyQtCscA/U7mZDppPw2GvOB4piBPyw0gc8IY/OpxH
+        Jsxvrcd+vxvFSVwef0ga8Ia/mSP/DdcNfnkncLTGUA9v+P8N179NoWykW4CPsQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btn_GPO_Stop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 38</value>
+  </data>
+  <data name="cb_out_w_4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tb_Msg.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btn_StopTest.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btn_Reset.NormalImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABmElEQVRYR+XYO2vCUBjG8RdE
+        UMEqCA6CgyA4CIIgiNTLV2ipDudTOra6Fmc3nVtabzGJt+SYm6fv06/xBv7DMdPzI0QIGWNoNBpluWfu
+        hVMCw27sz8KDhsPhE/e2XC6nWmubfxR3YTf2w4ErUJ+v1Wr1/ngYkyQPsWH/er2eMceAer3eOAxDL44T
+        I70oijR7TKjb7So8IVEUiw8O8KBOp8MoiQnCUHxwgAe1220V80EHgfjgAA9qtVoqimPj67v44AAPajab
+        il8w5ub74oMDPKjRaKiQD5ebJz44wIPq9brCS/Z0vYoPDvCgWq2m7kFonPNFfHCAB1WrVUYJjO2exQcH
+        eFClUlH6HhjLccUHB3hQuVxW+DveHx3xwQEeVCqVlKe12VpH8cEBHlQsFpXna7PZW+KDAzwon8+rGx9+
+        dgfxwQEelMvlxs7p7P3uD+Z7uxMb9rvni2aPCWUymcHnYjG7ep7Bja/NVlzYjf1wgAel0+kC9/Yxn08t
+        23ZxU1rYjf1wgAfhQ20qlcpyfe6VUwLDbuz//3D9B7JDiN2k7OX5AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btn_.Text" xml:space="preserve">
+    <value>批量添加</value>
+  </data>
+  <data name="cb_out_w_3.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="btn_ClearCheckList.DownImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABY0lEQVRYR+WYvVLCUBBGaWn0
+        gYR30AELnpLSQRoKGcRORxEkQEIQEsj/zU2wWvdz4EaeYTNzik13zmRSfDUiqvFTZ26YW6YjEHjDv37q
+        UbviozUYDLpa65BfinvgDX90YK7xlTRGo+cHlRc0d1x6nVrigDf8x+OXHvdoIkrbD0L9uXDobbYQy2Rh
+        0z6MSu5xjyidKMno/WspHnQ4/U85SprRx3wlHnQwUeJU0cSyxYMOVZRM0XTpiCfmDiZKwsdstRYPOpgo
+        qcppbrviQYeLKNZ6Q9K5iJLlmpbut3jQwXwpig97sxMPOlRRdEHO1hOP4g4mSs6Hu/PFgw5VlKKkjbcX
+        T84dTBTNx9Y/iAcdqihlSbtDIB7NHc5R2mmm9D6KyQtCscA/U7mZDppPw2GvOB4piBPyw0gc8IY/OpxH
+        Jsxvrcd+vxvFSVwef0ga8Ia/mSP/DdcNfnkncLTGUA9v+P8N179NoWykW4CPsQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="tp_Debug.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 36</value>
+  </data>
+  <data name="&gt;&gt;cb_out_w_1.Name" xml:space="preserve">
+    <value>cb_out_w_1</value>
+  </data>
+  <data name="btn_ClearCheckList.Text" xml:space="preserve">
+    <value>清空所有</value>
+  </data>
+  <data name="&gt;&gt;btn_AddCheckList.Parent" xml:space="preserve">
+    <value>tp_CheckList</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
+  </data>
+  <data name="tp_Debug.Size" type="System.Drawing.Size, System.Drawing">
+    <value>753, 397</value>
+  </data>
+  <data name="cb_out_w_4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 16</value>
+  </data>
+  <data name="clm_UserData.Width" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <data name="&gt;&gt;btn_GPO_Stop.Parent" xml:space="preserve">
+    <value>tp_BeepTest</value>
+  </data>
+  <data name="gb_TagList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;clm_RSSI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tp_BeepTest.Text" xml:space="preserve">
+    <value>报警灯测试</value>
+  </data>
+  <data name="gb_Read_Control.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>检测到标签个数：</value>
+  </data>
+  <data name="btn_GPO_down.DownImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABY0lEQVRYR+WYvVLCUBBGaWn0
+        gYR30AELnpLSQRoKGcRORxEkQEIQEsj/zU2wWvdz4EaeYTNzik13zmRSfDUiqvFTZ26YW6YjEHjDv37q
+        UbviozUYDLpa65BfinvgDX90YK7xlTRGo+cHlRc0d1x6nVrigDf8x+OXHvdoIkrbD0L9uXDobbYQy2Rh
+        0z6MSu5xjyidKMno/WspHnQ4/U85SprRx3wlHnQwUeJU0cSyxYMOVZRM0XTpiCfmDiZKwsdstRYPOpgo
+        qcppbrviQYeLKNZ6Q9K5iJLlmpbut3jQwXwpig97sxMPOlRRdEHO1hOP4g4mSs6Hu/PFgw5VlKKkjbcX
+        T84dTBTNx9Y/iAcdqihlSbtDIB7NHc5R2mmm9D6KyQtCscA/U7mZDppPw2GvOB4piBPyw0gc8IY/OpxH
+        Jsxvrcd+vxvFSVwef0ga8Ia/mSP/DdcNfnkncLTGUA9v+P8N179NoWykW4CPsQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btn_GPO_down.MoveImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABcElEQVRYR+XYy0pCURTGcR/D
+        eeAL9ITNG0dIBkWEBYIQBIEQCBWVpF21Dprm/e45e+s5x8zV+gRXvcMS/oOto+8HNVgRIopsbqWj3C73
+        wLUUht3YH4UHQDa4t8NrxwxMsOAv1X2wG/vhwMWAEj+9r1gvXFBx6FOuM1UXdmN/Kle17JEASqk28ZeF
+        3ozu2lO15bszqrvBkj0coLS602+6aVn1wQEeK5QOP66aVn1wEJS2nVO2YdQHB0Fp8uOy7qkPDoLSMHPK
+        1Dz1wUFQ6iaki6qrPjgIypcX0nlloj44CErNDemsPFYfHATlkx9pZ6w+OAhKZRJQ6mOkPjgISnkc0Elp
+        qD44CIrDj+PiUH1w+EMZ+XT0OlCfww6C8s6Pg5e++uCwRinl22aZ5D+f/ee+2rD/sWPldJDYyToWh5Yk
+        /7Pde+qpC7uxHw7rI1MMZ7jtTNHcNtwf/Kgt7MZ+OUf+O1zH+cuCwqM1DvXYjf2rw/Uv5D4U8toF5WIA
+        AAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="clm_ANT3.HeaderText" xml:space="preserve">
+    <value>ANT3</value>
+  </data>
+  <data name="&gt;&gt;cb_out_w_2.Type" xml:space="preserve">
+    <value>ClouReaderDemo.MyFormTemplet.QQCheckBox, ClouReaderDemo, Version=2.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btn_GPO_up.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;btn_AddCheckList.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lb_TagCount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tp_BeepTest.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 36</value>
+  </data>
+  <data name="btn_StartReadTest.DownImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABY0lEQVRYR+WYvVLCUBBGaWn0
+        gYR30AELnpLSQRoKGcRORxEkQEIQEsj/zU2wWvdz4EaeYTNzik13zmRSfDUiqvFTZ26YW6YjEHjDv37q
+        UbviozUYDLpa65BfinvgDX90YK7xlTRGo+cHlRc0d1x6nVrigDf8x+OXHvdoIkrbD0L9uXDobbYQy2Rh
+        0z6MSu5xjyidKMno/WspHnQ4/U85SprRx3wlHnQwUeJU0cSyxYMOVZRM0XTpiCfmDiZKwsdstRYPOpgo
+        qcppbrviQYeLKNZ6Q9K5iJLlmpbut3jQwXwpig97sxMPOlRRdEHO1hOP4g4mSs6Hu/PFgw5VlKKkjbcX
+        T84dTBTNx9Y/iAcdqihlSbtDIB7NHc5R2mmm9D6KyQtCscA/U7mZDppPw2GvOB4piBPyw0gc8IY/OpxH
+        Jsxvrcd+vxvFSVwef0ga8Ia/mSP/DdcNfnkncLTGUA9v+P8N179NoWykW4CPsQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btn_Clear.DownImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABY0lEQVRYR+WYvVLCUBBGaWn0
+        gYR30AELnpLSQRoKGcRORxEkQEIQEsj/zU2wWvdz4EaeYTNzik13zmRSfDUiqvFTZ26YW6YjEHjDv37q
+        UbviozUYDLpa65BfinvgDX90YK7xlTRGo+cHlRc0d1x6nVrigDf8x+OXHvdoIkrbD0L9uXDobbYQy2Rh
+        0z6MSu5xjyidKMno/WspHnQ4/U85SprRx3wlHnQwUeJU0cSyxYMOVZRM0XTpiCfmDiZKwsdstRYPOpgo
+        qcppbrviQYeLKNZ6Q9K5iJLlmpbut3jQwXwpig97sxMPOlRRdEHO1hOP4g4mSs6Hu/PFgw5VlKKkjbcX
+        T84dTBTNx9Y/iAcdqihlSbtDIB7NHc5R2mmm9D6KyQtCscA/U7mZDppPw2GvOB4piBPyw0gc8IY/OpxH
+        Jsxvrcd+vxvFSVwef0ga8Ia/mSP/DdcNfnkncLTGUA9v+P8N179NoWykW4CPsQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="&gt;&gt;gb_Read_Control.Name" xml:space="preserve">
+    <value>gb_Read_Control</value>
+  </data>
+  <data name="clm_EPC.Width" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="btn_GPO_down.Text" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="tp_BeepTest.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="&gt;&gt;cb_out_w_2.Parent" xml:space="preserve">
+    <value>tp_BeepTest</value>
+  </data>
+  <data name="&gt;&gt;btn_GPO_down.Parent" xml:space="preserve">
+    <value>tp_BeepTest</value>
+  </data>
+  <data name="&gt;&gt;btn_GPO_up.Name" xml:space="preserve">
+    <value>btn_GPO_up</value>
+  </data>
+  <data name="&gt;&gt;btn_Clear.Parent" xml:space="preserve">
+    <value>gb_Read_Control</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>ClouReaderDemo.MySingleForm.BaseOption, ClouReaderDemo, Version=2.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btn_StartReadTest.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 17</value>
+  </data>
+  <data name="gb_Read_Result.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 69</value>
+  </data>
+  <data name="btn_GPO_down.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;tp_TagRead.Name" xml:space="preserve">
+    <value>tp_TagRead</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tb_Msg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>747, 391</value>
+  </data>
+  <data name="&gt;&gt;tp_TagRead.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btn_StartReadTest.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;clm_ReadTime.Name" xml:space="preserve">
+    <value>clm_ReadTime</value>
+  </data>
+  <data name="cb_out_w_2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>245, 167</value>
+  </data>
+  <data name="cb_out_w_3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 16</value>
+  </data>
+  <data name="&gt;&gt;gb_Read_Result.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;clm_UserData.Name" xml:space="preserve">
+    <value>clm_UserData</value>
+  </data>
+  <data name="&gt;&gt;cb_out_w_3.Name" xml:space="preserve">
+    <value>cb_out_w_3</value>
+  </data>
+  <data name="btn_GPO_up.DownImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABY0lEQVRYR+WYvVLCUBBGaWn0
+        gYR30AELnpLSQRoKGcRORxEkQEIQEsj/zU2wWvdz4EaeYTNzik13zmRSfDUiqvFTZ26YW6YjEHjDv37q
+        UbviozUYDLpa65BfinvgDX90YK7xlTRGo+cHlRc0d1x6nVrigDf8x+OXHvdoIkrbD0L9uXDobbYQy2Rh
+        0z6MSu5xjyidKMno/WspHnQ4/U85SprRx3wlHnQwUeJU0cSyxYMOVZRM0XTpiCfmDiZKwsdstRYPOpgo
+        qcppbrviQYeLKNZ6Q9K5iJLlmpbut3jQwXwpig97sxMPOlRRdEHO1hOP4g4mSs6Hu/PFgw5VlKKkjbcX
+        T84dTBTNx9Y/iAcdqihlSbtDIB7NHc5R2mmm9D6KyQtCscA/U7mZDppPw2GvOB4piBPyw0gc8IY/OpxH
+        Jsxvrcd+vxvFSVwef0ga8Ia/mSP/DdcNfnkncLTGUA9v+P8N179NoWykW4CPsQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="tb_Msg.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="clm_TagType.HeaderText" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="clm_ANT1.HeaderText" xml:space="preserve">
+    <value>ANT1</value>
+  </data>
+  <data name="btn_Reset.Text" xml:space="preserve">
+    <value>重置报警</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>gb_Read_Control</value>
+  </data>
+  <data name="btn_ClearCheckList.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <data name="cb_out_w_4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>365, 167</value>
+  </data>
+  <data name="&gt;&gt;clm_ANT3.Name" xml:space="preserve">
+    <value>clm_ANT3</value>
+  </data>
+  <data name="&gt;&gt;clm_UserData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gb_Read_Control.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btn_GPO_Stop.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="cb_out_w_3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>305, 167</value>
+  </data>
+  <data name="btn_Reset.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="btn_GPO_Stop.DownImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABY0lEQVRYR+WYvVLCUBBGaWn0
+        gYR30AELnpLSQRoKGcRORxEkQEIQEsj/zU2wWvdz4EaeYTNzik13zmRSfDUiqvFTZ26YW6YjEHjDv37q
+        UbviozUYDLpa65BfinvgDX90YK7xlTRGo+cHlRc0d1x6nVrigDf8x+OXHvdoIkrbD0L9uXDobbYQy2Rh
+        0z6MSu5xjyidKMno/WspHnQ4/U85SprRx3wlHnQwUeJU0cSyxYMOVZRM0XTpiCfmDiZKwsdstRYPOpgo
+        qcppbrviQYeLKNZ6Q9K5iJLlmpbut3jQwXwpig97sxMPOlRRdEHO1hOP4g4mSs6Hu/PFgw5VlKKkjbcX
+        T84dTBTNx9Y/iAcdqihlSbtDIB7NHc5R2mmm9D6KyQtCscA/U7mZDppPw2GvOB4piBPyw0gc8IY/OpxH
+        Jsxvrcd+vxvFSVwef0ga8Ia/mSP/DdcNfnkncLTGUA9v+P8N179NoWykW4CPsQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btn_.Location" type="System.Drawing.Point, System.Drawing">
+    <value>588, 22</value>
+  </data>
+  <data name="btn_GPO_down.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <data name="tb_Msg.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="&gt;&gt;btn_RemoveCheckList.Parent" xml:space="preserve">
+    <value>tp_CheckList</value>
+  </data>
+  <data name="&gt;&gt;cb_out_w_1.Type" xml:space="preserve">
+    <value>ClouReaderDemo.MyFormTemplet.QQCheckBox, ClouReaderDemo, Version=2.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btn_Clear.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="&gt;&gt;tc_Main.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btn_GPO_up.Text" xml:space="preserve">
+    <value>打开</value>
+  </data>
+  <data name="&gt;&gt;lb_TagCount.Name" xml:space="preserve">
+    <value>lb_TagCount</value>
+  </data>
+  <data name="btn_StopTest.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;tp_CheckList.Name" xml:space="preserve">
+    <value>tp_CheckList</value>
+  </data>
+  <data name="tc_Main.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;dgv_Tags.Name" xml:space="preserve">
+    <value>dgv_Tags</value>
+  </data>
+  <data name="lb_CheckList.ItemHeight" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="tp_TagRead.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="&gt;&gt;btn_StopTest.Name" xml:space="preserve">
+    <value>btn_StopTest</value>
+  </data>
+  <data name="&gt;&gt;gb_TagList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="clm_TotalCount.HeaderText" xml:space="preserve">
+    <value>TotalCount</value>
+  </data>
+  <data name="cb_out_w_2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btn_GPO_up.Location" type="System.Drawing.Point, System.Drawing">
+    <value>166, 78</value>
+  </data>
+  <data name="gb_Read_Result.Text" xml:space="preserve">
+    <value>测试状态：</value>
+  </data>
+  <data name="clm_TotalCount.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="&gt;&gt;btn_Clear.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btn_GPO_Stop.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;clm_EPC.Name" xml:space="preserve">
+    <value>clm_EPC</value>
+  </data>
+  <data name="&gt;&gt;btn_ClearCheckList.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btn_Clear.NormalImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABmElEQVRYR+XYO2vCUBjG8RdE
+        UMEqCA6CgyA4CIIgiNTLV2ipDudTOra6Fmc3nVtabzGJt+SYm6fv06/xBv7DMdPzI0QIGWNoNBpluWfu
+        hVMCw27sz8KDhsPhE/e2XC6nWmubfxR3YTf2w4ErUJ+v1Wr1/ngYkyQPsWH/er2eMceAer3eOAxDL44T
+        I70oijR7TKjb7So8IVEUiw8O8KBOp8MoiQnCUHxwgAe1220V80EHgfjgAA9qtVoqimPj67v44AAPajab
+        il8w5ub74oMDPKjRaKiQD5ebJz44wIPq9brCS/Z0vYoPDvCgWq2m7kFonPNFfHCAB1WrVUYJjO2exQcH
+        eFClUlH6HhjLccUHB3hQuVxW+DveHx3xwQEeVCqVlKe12VpH8cEBHlQsFpXna7PZW+KDAzwon8+rGx9+
+        dgfxwQEelMvlxs7p7P3uD+Z7uxMb9rvni2aPCWUymcHnYjG7ep7Bja/NVlzYjf1wgAel0+kC9/Yxn08t
+        23ZxU1rYjf1wgAfhQ20qlcpyfe6VUwLDbuz//3D9B7JDiN2k7OX5AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="cb_out_w_4.Text" xml:space="preserve">
+    <value>Out_4</value>
+  </data>
+  <data name="clm_TID.HeaderText" xml:space="preserve">
+    <value>TID</value>
+  </data>
+  <data name="&gt;&gt;clm_TagType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cb_out_w_3.Parent" xml:space="preserve">
+    <value>tp_BeepTest</value>
+  </data>
+  <data name="&gt;&gt;btn_StartReadTest.Parent" xml:space="preserve">
+    <value>gb_Read_Control</value>
+  </data>
+  <data name="gb_Read_Result.Size" type="System.Drawing.Size, System.Drawing">
+    <value>756, 365</value>
+  </data>
+  <data name="&gt;&gt;clm_ANT3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btn_GPO_Stop.NormalImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABmElEQVRYR+XYO2vCUBjG8RdE
+        UMEqCA6CgyA4CIIgiNTLV2ipDudTOra6Fmc3nVtabzGJt+SYm6fv06/xBv7DMdPzI0QIGWNoNBpluWfu
+        hVMCw27sz8KDhsPhE/e2XC6nWmubfxR3YTf2w4ErUJ+v1Wr1/ngYkyQPsWH/er2eMceAer3eOAxDL44T
+        I70oijR7TKjb7So8IVEUiw8O8KBOp8MoiQnCUHxwgAe1220V80EHgfjgAA9qtVoqimPj67v44AAPajab
+        il8w5ub74oMDPKjRaKiQD5ebJz44wIPq9brCS/Z0vYoPDvCgWq2m7kFonPNFfHCAB1WrVUYJjO2exQcH
+        eFClUlH6HhjLccUHB3hQuVxW+DveHx3xwQEeVCqVlKe12VpH8cEBHlQsFpXna7PZW+KDAzwon8+rGx9+
+        dgfxwQEelMvlxs7p7P3uD+Z7uxMb9rvni2aPCWUymcHnYjG7ep7Bja/NVlzYjf1wgAel0+kC9/Yxn08t
+        23ZxU1rYjf1wgAfhQ20qlcpyfe6VUwLDbuz//3D9B7JDiN2k7OX5AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="clm_ANT4.Width" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="btn_.DownImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABY0lEQVRYR+WYvVLCUBBGaWn0
+        gYR30AELnpLSQRoKGcRORxEkQEIQEsj/zU2wWvdz4EaeYTNzik13zmRSfDUiqvFTZ26YW6YjEHjDv37q
+        UbviozUYDLpa65BfinvgDX90YK7xlTRGo+cHlRc0d1x6nVrigDf8x+OXHvdoIkrbD0L9uXDobbYQy2Rh
+        0z6MSu5xjyidKMno/WspHnQ4/U85SprRx3wlHnQwUeJU0cSyxYMOVZRM0XTpiCfmDiZKwsdstRYPOpgo
+        qcppbrviQYeLKNZ6Q9K5iJLlmpbut3jQwXwpig97sxMPOlRRdEHO1hOP4g4mSs6Hu/PFgw5VlKKkjbcX
+        T84dTBTNx9Y/iAcdqihlSbtDIB7NHc5R2mmm9D6KyQtCscA/U7mZDppPw2GvOB4piBPyw0gc8IY/OpxH
+        Jsxvrcd+vxvFSVwef0ga8Ia/mSP/DdcNfnkncLTGUA9v+P8N179NoWykW4CPsQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="&gt;&gt;dgv_Tags.Parent" xml:space="preserve">
+    <value>gb_TagList</value>
+  </data>
+  <data name="&gt;&gt;btn_GPO_up.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="btn_.NormalImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABmElEQVRYR+XYO2vCUBjG8RdE
+        UMEqCA6CgyA4CIIgiNTLV2ipDudTOra6Fmc3nVtabzGJt+SYm6fv06/xBv7DMdPzI0QIGWNoNBpluWfu
+        hVMCw27sz8KDhsPhE/e2XC6nWmubfxR3YTf2w4ErUJ+v1Wr1/ngYkyQPsWH/er2eMceAer3eOAxDL44T
+        I70oijR7TKjb7So8IVEUiw8O8KBOp8MoiQnCUHxwgAe1220V80EHgfjgAA9qtVoqimPj67v44AAPajab
+        il8w5ub74oMDPKjRaKiQD5ebJz44wIPq9brCS/Z0vYoPDvCgWq2m7kFonPNFfHCAB1WrVUYJjO2exQcH
+        eFClUlH6HhjLccUHB3hQuVxW+DveHx3xwQEeVCqVlKe12VpH8cEBHlQsFpXna7PZW+KDAzwon8+rGx9+
+        dgfxwQEelMvlxs7p7P3uD+Z7uxMb9rvni2aPCWUymcHnYjG7ep7Bja/NVlzYjf1wgAel0+kC9/Yxn08t
+        23ZxU1rYjf1wgAfhQ20qlcpyfe6VUwLDbuz//3D9B7JDiN2k7OX5AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="&gt;&gt;btn_Clear.Type" xml:space="preserve">
+    <value>ClouReaderDemo.MyFormTemplet.QQButton, ClouReaderDemo, Version=2.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="dgv_Tags.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;btn_.Name" xml:space="preserve">
+    <value>btn_</value>
+  </data>
+  <data name="btn_RemoveCheckList.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;cb_out_w_1.Parent" xml:space="preserve">
+    <value>tp_BeepTest</value>
+  </data>
+  <data name="&gt;&gt;tc_Main.Name" xml:space="preserve">
+    <value>tc_Main</value>
+  </data>
+  <data name="&gt;&gt;lb_TagCount.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btn_GPO_down.Type" xml:space="preserve">
+    <value>ClouReaderDemo.MyFormTemplet.QQButton, ClouReaderDemo, Version=2.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;gb_Read_Result.Parent" xml:space="preserve">
+    <value>tp_TagRead</value>
+  </data>
+  <data name="&gt;&gt;gb_Read_Control.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_ClearCheckList.Parent" xml:space="preserve">
+    <value>tp_CheckList</value>
+  </data>
+  <data name="dgv_Tags.Size" type="System.Drawing.Size, System.Drawing">
+    <value>744, 325</value>
+  </data>
+  <data name="&gt;&gt;lb_CheckList.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btn_Reset.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;tp_BeepTest.Parent" xml:space="preserve">
+    <value>tc_Main</value>
+  </data>
+  <data name="btn_ClearCheckList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 38</value>
+  </data>
+  <data name="&gt;&gt;btn_StartReadTest.Type" xml:space="preserve">
+    <value>ClouReaderDemo.MyFormTemplet.QQButton, ClouReaderDemo, Version=2.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btn_ClearCheckList.Type" xml:space="preserve">
+    <value>ClouReaderDemo.MyFormTemplet.QQButton, ClouReaderDemo, Version=2.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="cb_out_w_3.Text" xml:space="preserve">
+    <value>Out_3</value>
+  </data>
+  <data name="&gt;&gt;cb_out_w_3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tp_BeepTest.Size" type="System.Drawing.Size, System.Drawing">
+    <value>753, 397</value>
+  </data>
+  <data name="&gt;&gt;btn_AddCheckList.Name" xml:space="preserve">
+    <value>btn_AddCheckList</value>
+  </data>
+  <data name="tc_Main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>770, 477</value>
+  </data>
+  <data name="tp_TagRead.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 36</value>
+  </data>
+  <data name="&gt;&gt;clm_ReserveData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btn_StopTest.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;tb_Msg.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;clm_ANT4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btn_Clear.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 38</value>
+  </data>
+  <data name="&gt;&gt;btn_GPO_down.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;btn_GPO_down.Name" xml:space="preserve">
+    <value>btn_GPO_down</value>
+  </data>
+  <data name="btn_StartReadTest.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>528, 30</value>
+  </data>
+  <data name="btn_AddCheckList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>483, 22</value>
+  </data>
+  <data name="clm_ReadTime.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="clm_ReadTime.HeaderText" xml:space="preserve">
+    <value>ReadTime</value>
+  </data>
+  <data name="&gt;&gt;clm_ReadTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 12</value>
+  </data>
+  <data name="&gt;&gt;tp_BeepTest.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btn_AddCheckList.Text" xml:space="preserve">
+    <value>添加标签</value>
+  </data>
+  <data name="&gt;&gt;cb_out_w_4.Type" xml:space="preserve">
+    <value>ClouReaderDemo.MyFormTemplet.QQCheckBox, ClouReaderDemo, Version=2.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btn_GPO_Stop.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="tp_CheckList.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="gb_Read_Result.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tp_TagRead.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>CheckListTest</value>
+  </data>
+  <data name="gb_Read_Control.Size" type="System.Drawing.Size, System.Drawing">
+    <value>756, 66</value>
+  </data>
+  <data name="btn_GPO_Stop.Text" xml:space="preserve">
+    <value>停止所有</value>
+  </data>
+  <data name="&gt;&gt;lb_CheckList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btn_GPO_up.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="tp_CheckList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>753, 397</value>
+  </data>
+  <data name="&gt;&gt;cb_out_w_3.Type" xml:space="preserve">
+    <value>ClouReaderDemo.MyFormTemplet.QQCheckBox, ClouReaderDemo, Version=2.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btn_GPO_Stop.Name" xml:space="preserve">
+    <value>btn_GPO_Stop</value>
+  </data>
+  <data name="&gt;&gt;tp_CheckList.Parent" xml:space="preserve">
+    <value>tc_Main</value>
+  </data>
+  <data name="&gt;&gt;btn_Reset.Name" xml:space="preserve">
+    <value>btn_Reset</value>
+  </data>
+  <data name="btn_.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btn_RemoveCheckList.MoveImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABcElEQVRYR+XYy0pCURTGcR/D
+        eeAL9ITNG0dIBkWEBYIQBIEQCBWVpF21Dprm/e45e+s5x8zV+gRXvcMS/oOto+8HNVgRIopsbqWj3C73
+        wLUUht3YH4UHQDa4t8NrxwxMsOAv1X2wG/vhwMWAEj+9r1gvXFBx6FOuM1UXdmN/Kle17JEASqk28ZeF
+        3ozu2lO15bszqrvBkj0coLS602+6aVn1wQEeK5QOP66aVn1wEJS2nVO2YdQHB0Fp8uOy7qkPDoLSMHPK
+        1Dz1wUFQ6iaki6qrPjgIypcX0nlloj44CErNDemsPFYfHATlkx9pZ6w+OAhKZRJQ6mOkPjgISnkc0Elp
+        qD44CIrDj+PiUH1w+EMZ+XT0OlCfww6C8s6Pg5e++uCwRinl22aZ5D+f/ee+2rD/sWPldJDYyToWh5Yk
+        /7Pde+qpC7uxHw7rI1MMZ7jtTNHcNtwf/Kgt7MZ+OUf+O1zH+cuCwqM1DvXYjf2rw/Uv5D4U8toF5WIA
+        AAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="&gt;&gt;btn_Reset.Parent" xml:space="preserve">
+    <value>gb_Read_Control</value>
+  </data>
+  <data name="btn_ClearCheckList.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;tb_Msg.Parent" xml:space="preserve">
+    <value>tp_Debug</value>
+  </data>
+  <data name="btn_StopTest.DownImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABY0lEQVRYR+WYvVLCUBBGaWn0
+        gYR30AELnpLSQRoKGcRORxEkQEIQEsj/zU2wWvdz4EaeYTNzik13zmRSfDUiqvFTZ26YW6YjEHjDv37q
+        UbviozUYDLpa65BfinvgDX90YK7xlTRGo+cHlRc0d1x6nVrigDf8x+OXHvdoIkrbD0L9uXDobbYQy2Rh
+        0z6MSu5xjyidKMno/WspHnQ4/U85SprRx3wlHnQwUeJU0cSyxYMOVZRM0XTpiCfmDiZKwsdstRYPOpgo
+        qcppbrviQYeLKNZ6Q9K5iJLlmpbut3jQwXwpig97sxMPOlRRdEHO1hOP4g4mSs6Hu/PFgw5VlKKkjbcX
+        T84dTBTNx9Y/iAcdqihlSbtDIB7NHc5R2mmm9D6KyQtCscA/U7mZDppPw2GvOB4piBPyw0gc8IY/OpxH
+        Jsxvrcd+vxvFSVwef0ga8Ia/mSP/DdcNfnkncLTGUA9v+P8N179NoWykW4CPsQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="&gt;&gt;gb_Read_Result.Name" xml:space="preserve">
+    <value>gb_Read_Result</value>
+  </data>
+  <data name="clm_ANT4.HeaderText" xml:space="preserve">
+    <value>ANT4</value>
+  </data>
+  <data name="&gt;&gt;tp_Debug.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tp_Debug.Parent" xml:space="preserve">
+    <value>tc_Main</value>
+  </data>
+  <data name="btn_GPO_up.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 38</value>
+  </data>
+  <data name="&gt;&gt;btn_Clear.Name" xml:space="preserve">
+    <value>btn_Clear</value>
+  </data>
+  <data name="btn_AddCheckList.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <data name="clm_RSSI.Width" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="btn_Reset.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lb_TagCount.Text" xml:space="preserve">
+    <value>9999</value>
+  </data>
+  <data name="&gt;&gt;btn_StopTest.Type" xml:space="preserve">
+    <value>ClouReaderDemo.MyFormTemplet.QQButton, ClouReaderDemo, Version=2.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btn_GPO_down.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="&gt;&gt;lb_TagCount.Parent" xml:space="preserve">
+    <value>gb_Read_Control</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="btn_StartReadTest.NormalImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABmElEQVRYR+XYO2vCUBjG8RdE
+        UMEqCA6CgyA4CIIgiNTLV2ipDudTOra6Fmc3nVtabzGJt+SYm6fv06/xBv7DMdPzI0QIGWNoNBpluWfu
+        hVMCw27sz8KDhsPhE/e2XC6nWmubfxR3YTf2w4ErUJ+v1Wr1/ngYkyQPsWH/er2eMceAer3eOAxDL44T
+        I70oijR7TKjb7So8IVEUiw8O8KBOp8MoiQnCUHxwgAe1220V80EHgfjgAA9qtVoqimPj67v44AAPajab
+        il8w5ub74oMDPKjRaKiQD5ebJz44wIPq9brCS/Z0vYoPDvCgWq2m7kFonPNFfHCAB1WrVUYJjO2exQcH
+        eFClUlH6HhjLccUHB3hQuVxW+DveHx3xwQEeVCqVlKe12VpH8cEBHlQsFpXna7PZW+KDAzwon8+rGx9+
+        dgfxwQEelMvlxs7p7P3uD+Z7uxMb9rvni2aPCWUymcHnYjG7ep7Bja/NVlzYjf1wgAel0+kC9/Yxn08t
+        23ZxU1rYjf1wgAfhQ20qlcpyfe6VUwLDbuz//3D9B7JDiN2k7OX5AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="&gt;&gt;lb_CheckList.Parent" xml:space="preserve">
+    <value>tp_CheckList</value>
+  </data>
+  <data name="btn_StartReadTest.Text" xml:space="preserve">
+    <value>开始测试</value>
+  </data>
+  <data name="btn_ClearCheckList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>483, 158</value>
+  </data>
+  <data name="dgv_Tags.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 17</value>
+  </data>
+  <data name="&gt;&gt;tp_TagRead.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lb_CheckList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>415, 172</value>
+  </data>
+  <data name="lb_TagCount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 26pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;btn_GPO_up.Type" xml:space="preserve">
+    <value>ClouReaderDemo.MyFormTemplet.QQButton, ClouReaderDemo, Version=2.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cb_out_w_4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dgv_Tags.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cb_out_w_2.Name" xml:space="preserve">
+    <value>cb_out_w_2</value>
+  </data>
+  <data name="btn_AddCheckList.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="btn_StopTest.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lb_CheckList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 22</value>
+  </data>
+  <data name="cb_out_w_3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;cb_out_w_2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="tb_Msg.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="btn_GPO_up.MoveImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABcElEQVRYR+XYy0pCURTGcR/D
+        eeAL9ITNG0dIBkWEBYIQBIEQCBWVpF21Dprm/e45e+s5x8zV+gRXvcMS/oOto+8HNVgRIopsbqWj3C73
+        wLUUht3YH4UHQDa4t8NrxwxMsOAv1X2wG/vhwMWAEj+9r1gvXFBx6FOuM1UXdmN/Kle17JEASqk28ZeF
+        3ozu2lO15bszqrvBkj0coLS602+6aVn1wQEeK5QOP66aVn1wEJS2nVO2YdQHB0Fp8uOy7qkPDoLSMHPK
+        1Dz1wUFQ6iaki6qrPjgIypcX0nlloj44CErNDemsPFYfHATlkx9pZ6w+OAhKZRJQ6mOkPjgISnkc0Elp
+        qD44CIrDj+PiUH1w+EMZ+XT0OlCfww6C8s6Pg5e++uCwRinl22aZ5D+f/ee+2rD/sWPldJDYyToWh5Yk
+        /7Pde+qpC7uxHw7rI1MMZ7jtTNHcNtwf/Kgt7MZ+OUf+O1zH+cuCwqM1DvXYjf2rw/Uv5D4U8toF5WIA
+        AAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="dgv_Tags.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;cb_out_w_4.Name" xml:space="preserve">
+    <value>cb_out_w_4</value>
+  </data>
+  <data name="btn_RemoveCheckList.Text" xml:space="preserve">
+    <value>移除标签</value>
+  </data>
+  <data name="btn_ClearCheckList.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="clm_EPC.HeaderText" xml:space="preserve">
+    <value>EPC</value>
+  </data>
+  <data name="$this.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="btn_RemoveCheckList.NormalImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABmElEQVRYR+XYO2vCUBjG8RdE
+        UMEqCA6CgyA4CIIgiNTLV2ipDudTOra6Fmc3nVtabzGJt+SYm6fv06/xBv7DMdPzI0QIGWNoNBpluWfu
+        hVMCw27sz8KDhsPhE/e2XC6nWmubfxR3YTf2w4ErUJ+v1Wr1/ngYkyQPsWH/er2eMceAer3eOAxDL44T
+        I70oijR7TKjb7So8IVEUiw8O8KBOp8MoiQnCUHxwgAe1220V80EHgfjgAA9qtVoqimPj67v44AAPajab
+        il8w5ub74oMDPKjRaKiQD5ebJz44wIPq9brCS/Z0vYoPDvCgWq2m7kFonPNFfHCAB1WrVUYJjO2exQcH
+        eFClUlH6HhjLccUHB3hQuVxW+DveHx3xwQEeVCqVlKe12VpH8cEBHlQsFpXna7PZW+KDAzwon8+rGx9+
+        dgfxwQEelMvlxs7p7P3uD+Z7uxMb9rvni2aPCWUymcHnYjG7ep7Bja/NVlzYjf1wgAel0+kC9/Yxn08t
+        23ZxU1rYjf1wgAfhQ20qlcpyfe6VUwLDbuz//3D9B7JDiN2k7OX5AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="&gt;&gt;dgv_Tags.Type" xml:space="preserve">
+    <value>ClouReaderDemo.DataGridViewPlus, ClouReaderDemo, Version=2.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="tp_Debug.Text" xml:space="preserve">
+    <value>调试信息</value>
+  </data>
+  <data name="btn_StopTest.MoveImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABcElEQVRYR+XYy0pCURTGcR/D
+        eeAL9ITNG0dIBkWEBYIQBIEQCBWVpF21Dprm/e45e+s5x8zV+gRXvcMS/oOto+8HNVgRIopsbqWj3C73
+        wLUUht3YH4UHQDa4t8NrxwxMsOAv1X2wG/vhwMWAEj+9r1gvXFBx6FOuM1UXdmN/Kle17JEASqk28ZeF
+        3ozu2lO15bszqrvBkj0coLS602+6aVn1wQEeK5QOP66aVn1wEJS2nVO2YdQHB0Fp8uOy7qkPDoLSMHPK
+        1Dz1wUFQ6iaki6qrPjgIypcX0nlloj44CErNDemsPFYfHATlkx9pZ6w+OAhKZRJQ6mOkPjgISnkc0Elp
+        qD44CIrDj+PiUH1w+EMZ+XT0OlCfww6C8s6Pg5e++uCwRinl22aZ5D+f/ee+2rD/sWPldJDYyToWh5Yk
+        /7Pde+qpC7uxHw7rI1MMZ7jtTNHcNtwf/Kgt7MZ+OUf+O1zH+cuCwqM1DvXYjf2rw/Uv5D4U8toF5WIA
+        AAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="&gt;&gt;tb_Msg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tp_CheckList.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lb_CheckList.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lb_TagCount.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btn_StartReadTest.MoveImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABcElEQVRYR+XYy0pCURTGcR/D
+        eeAL9ITNG0dIBkWEBYIQBIEQCBWVpF21Dprm/e45e+s5x8zV+gRXvcMS/oOto+8HNVgRIopsbqWj3C73
+        wLUUht3YH4UHQDa4t8NrxwxMsOAv1X2wG/vhwMWAEj+9r1gvXFBx6FOuM1UXdmN/Kle17JEASqk28ZeF
+        3ozu2lO15bszqrvBkj0coLS602+6aVn1wQEeK5QOP66aVn1wEJS2nVO2YdQHB0Fp8uOy7qkPDoLSMHPK
+        1Dz1wUFQ6iaki6qrPjgIypcX0nlloj44CErNDemsPFYfHATlkx9pZ6w+OAhKZRJQ6mOkPjgISnkc0Elp
+        qD44CIrDj+PiUH1w+EMZ+XT0OlCfww6C8s6Pg5e++uCwRinl22aZ5D+f/ee+2rD/sWPldJDYyToWh5Yk
+        /7Pde+qpC7uxHw7rI1MMZ7jtTNHcNtwf/Kgt7MZ+OUf+O1zH+cuCwqM1DvXYjf2rw/Uv5D4U8toF5WIA
+        AAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btn_GPO_Stop.MoveImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABcElEQVRYR+XYy0pCURTGcR/D
+        eeAL9ITNG0dIBkWEBYIQBIEQCBWVpF21Dprm/e45e+s5x8zV+gRXvcMS/oOto+8HNVgRIopsbqWj3C73
+        wLUUht3YH4UHQDa4t8NrxwxMsOAv1X2wG/vhwMWAEj+9r1gvXFBx6FOuM1UXdmN/Kle17JEASqk28ZeF
+        3ozu2lO15bszqrvBkj0coLS602+6aVn1wQEeK5QOP66aVn1wEJS2nVO2YdQHB0Fp8uOy7qkPDoLSMHPK
+        1Dz1wUFQ6iaki6qrPjgIypcX0nlloj44CErNDemsPFYfHATlkx9pZ6w+OAhKZRJQ6mOkPjgISnkc0Elp
+        qD44CIrDj+PiUH1w+EMZ+XT0OlCfww6C8s6Pg5e++uCwRinl22aZ5D+f/ee+2rD/sWPldJDYyToWh5Yk
+        /7Pde+qpC7uxHw7rI1MMZ7jtTNHcNtwf/Kgt7MZ+OUf+O1zH+cuCwqM1DvXYjf2rw/Uv5D4U8toF5WIA
+        AAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="&gt;&gt;tp_CheckList.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btn_.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 38</value>
+  </data>
+  <data name="tp_CheckList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 36</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt</value>
+  </data>
+  <data name="cb_out_w_2.Text" xml:space="preserve">
+    <value>Out_2</value>
+  </data>
+  <data name="tp_TagRead.Text" xml:space="preserve">
+    <value>待检测试</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>盘点测试</value>
+  </data>
+  <data name="btn_Clear.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;clm_TagType.Name" xml:space="preserve">
+    <value>clm_TagType</value>
+  </data>
+  <data name="btn_StartReadTest.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="cb_out_w_2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 16</value>
+  </data>
+  <data name="tb_Msg.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btn_RemoveCheckList.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;tp_BeepTest.Name" xml:space="preserve">
+    <value>tp_BeepTest</value>
+  </data>
+  <data name="&gt;&gt;tp_Debug.Name" xml:space="preserve">
+    <value>tp_Debug</value>
+  </data>
+  <data name="&gt;&gt;btn_RemoveCheckList.Type" xml:space="preserve">
+    <value>ClouReaderDemo.MyFormTemplet.QQButton, ClouReaderDemo, Version=2.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btn_StartReadTest.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 38</value>
+  </data>
+  <data name="&gt;&gt;gb_TagList.Name" xml:space="preserve">
+    <value>gb_TagList</value>
+  </data>
+  <data name="&gt;&gt;clm_EPC.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btn_Clear.MoveImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABcElEQVRYR+XYy0pCURTGcR/D
+        eeAL9ITNG0dIBkWEBYIQBIEQCBWVpF21Dprm/e45e+s5x8zV+gRXvcMS/oOto+8HNVgRIopsbqWj3C73
+        wLUUht3YH4UHQDa4t8NrxwxMsOAv1X2wG/vhwMWAEj+9r1gvXFBx6FOuM1UXdmN/Kle17JEASqk28ZeF
+        3ozu2lO15bszqrvBkj0coLS602+6aVn1wQEeK5QOP66aVn1wEJS2nVO2YdQHB0Fp8uOy7qkPDoLSMHPK
+        1Dz1wUFQ6iaki6qrPjgIypcX0nlloj44CErNDemsPFYfHATlkx9pZ6w+OAhKZRJQ6mOkPjgISnkc0Elp
+        qD44CIrDj+PiUH1w+EMZ+XT0OlCfww6C8s6Pg5e++uCwRinl22aZ5D+f/ee+2rD/sWPldJDYyToWh5Yk
+        /7Pde+qpC7uxHw7rI1MMZ7jtTNHcNtwf/Kgt7MZ+OUf+O1zH+cuCwqM1DvXYjf2rw/Uv5D4U8toF5WIA
+        AAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="&gt;&gt;clm_TID.Name" xml:space="preserve">
+    <value>clm_TID</value>
+  </data>
+  <data name="clm_TagType.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="btn_Clear.Text" xml:space="preserve">
+    <value>清空列表</value>
+  </data>
+  <data name="btn_Reset.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 38</value>
+  </data>
+  <data name="cb_out_w_1.Text" xml:space="preserve">
+    <value>Out_1</value>
+  </data>
+  <data name="btn_AddCheckList.DownImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABY0lEQVRYR+WYvVLCUBBGaWn0
+        gYR30AELnpLSQRoKGcRORxEkQEIQEsj/zU2wWvdz4EaeYTNzik13zmRSfDUiqvFTZ26YW6YjEHjDv37q
+        UbviozUYDLpa65BfinvgDX90YK7xlTRGo+cHlRc0d1x6nVrigDf8x+OXHvdoIkrbD0L9uXDobbYQy2Rh
+        0z6MSu5xjyidKMno/WspHnQ4/U85SprRx3wlHnQwUeJU0cSyxYMOVZRM0XTpiCfmDiZKwsdstRYPOpgo
+        qcppbrviQYeLKNZ6Q9K5iJLlmpbut3jQwXwpig97sxMPOlRRdEHO1hOP4g4mSs6Hu/PFgw5VlKKkjbcX
+        T84dTBTNx9Y/iAcdqihlSbtDIB7NHc5R2mmm9D6KyQtCscA/U7mZDppPw2GvOB4piBPyw0gc8IY/OpxH
+        Jsxvrcd+vxvFSVwef0ga8Ia/mSP/DdcNfnkncLTGUA9v+P8N179NoWykW4CPsQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="clm_ANT3.Width" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="&gt;&gt;tp_BeepTest.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;clm_ANT1.Name" xml:space="preserve">
+    <value>clm_ANT1</value>
+  </data>
+  <data name="btn_StopTest.Location" type="System.Drawing.Point, System.Drawing">
+    <value>105, 17</value>
+  </data>
+  <data name="btn_Clear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>203, 17</value>
+  </data>
+  <data name="&gt;&gt;btn_.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btn_Reset.Location" type="System.Drawing.Point, System.Drawing">
+    <value>300, 17</value>
+  </data>
+  <data name="&gt;&gt;clm_ANT2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btn_AddCheckList.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btn_ClearCheckList.Name" xml:space="preserve">
+    <value>btn_ClearCheckList</value>
+  </data>
+  <data name="gb_Read_Control.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btn_AddCheckList.MoveImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABcElEQVRYR+XYy0pCURTGcR/D
+        eeAL9ITNG0dIBkWEBYIQBIEQCBWVpF21Dprm/e45e+s5x8zV+gRXvcMS/oOto+8HNVgRIopsbqWj3C73
+        wLUUht3YH4UHQDa4t8NrxwxMsOAv1X2wG/vhwMWAEj+9r1gvXFBx6FOuM1UXdmN/Kle17JEASqk28ZeF
+        3ozu2lO15bszqrvBkj0coLS602+6aVn1wQEeK5QOP66aVn1wEJS2nVO2YdQHB0Fp8uOy7qkPDoLSMHPK
+        1Dz1wUFQ6iaki6qrPjgIypcX0nlloj44CErNDemsPFYfHATlkx9pZ6w+OAhKZRJQ6mOkPjgISnkc0Elp
+        qD44CIrDj+PiUH1w+EMZ+XT0OlCfww6C8s6Pg5e++uCwRinl22aZ5D+f/ee+2rD/sWPldJDYyToWh5Yk
+        /7Pde+qpC7uxHw7rI1MMZ7jtTNHcNtwf/Kgt7MZ+OUf+O1zH+cuCwqM1DvXYjf2rw/Uv5D4U8toF5WIA
+        AAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btn_.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;btn_.Type" xml:space="preserve">
+    <value>ClouReaderDemo.MyFormTemplet.QQButton, ClouReaderDemo, Version=2.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btn_.MoveImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABcElEQVRYR+XYy0pCURTGcR/D
+        eeAL9ITNG0dIBkWEBYIQBIEQCBWVpF21Dprm/e45e+s5x8zV+gRXvcMS/oOto+8HNVgRIopsbqWj3C73
+        wLUUht3YH4UHQDa4t8NrxwxMsOAv1X2wG/vhwMWAEj+9r1gvXFBx6FOuM1UXdmN/Kle17JEASqk28ZeF
+        3ozu2lO15bszqrvBkj0coLS602+6aVn1wQEeK5QOP66aVn1wEJS2nVO2YdQHB0Fp8uOy7qkPDoLSMHPK
+        1Dz1wUFQ6iaki6qrPjgIypcX0nlloj44CErNDemsPFYfHATlkx9pZ6w+OAhKZRJQ6mOkPjgISnkc0Elp
+        qD44CIrDj+PiUH1w+EMZ+XT0OlCfww6C8s6Pg5e++uCwRinl22aZ5D+f/ee+2rD/sWPldJDYyToWh5Yk
+        /7Pde+qpC7uxHw7rI1MMZ7jtTNHcNtwf/Kgt7MZ+OUf+O1zH+cuCwqM1DvXYjf2rw/Uv5D4U8toF5WIA
+        AAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="&gt;&gt;tc_Main.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="gb_TagList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>750, 345</value>
+  </data>
+  <data name="btn_RemoveCheckList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 38</value>
+  </data>
+  <data name="&gt;&gt;clm_TID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btn_StopTest.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 38</value>
+  </data>
+  <data name="clm_UserData.HeaderText" xml:space="preserve">
+    <value>UserData</value>
+  </data>
+  <data name="btn_StopTest.NormalImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAWCAYAAACWl1FwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABmElEQVRYR+XYO2vCUBjG8RdE
+        UMEqCA6CgyA4CIIgiNTLV2ipDudTOra6Fmc3nVtabzGJt+SYm6fv06/xBv7DMdPzI0QIGWNoNBpluWfu
+        hVMCw27sz8KDhsPhE/e2XC6nWmubfxR3YTf2w4ErUJ+v1Wr1/ngYkyQPsWH/er2eMceAer3eOAxDL44T
+        I70oijR7TKjb7So8IVEUiw8O8KBOp8MoiQnCUHxwgAe1220V80EHgfjgAA9qtVoqimPj67v44AAPajab
+        il8w5ub74oMDPKjRaKiQD5ebJz44wIPq9brCS/Z0vYoPDvCgWq2m7kFonPNFfHCAB1WrVUYJjO2exQcH
+        eFClUlH6HhjLccUHB3hQuVxW+DveHx3xwQEeVCqVlKe12VpH8cEBHlQsFpXna7PZW+KDAzwon8+rGx9+
+        dgfxwQEelMvlxs7p7P3uD+Z7uxMb9rvni2aPCWUymcHnYjG7ep7Bja/NVlzYjf1wgAel0+kC9/Yxn08t
+        23ZxU1rYjf1wgAfhQ20qlcpyfe6VUwLDbuz//3D9B7JDiN2k7OX5AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="gb_TagList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 17</value>
+  </data>
+  <data name="cb_out_w_1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 16</value>
+  </data>
+  <data name="btn_GPO_up.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <metadata name="clm_ANT3.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clm_ReadTime.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clm_TotalCount.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clm_ANT2.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clm_UserData.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clm_ANT4.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clm_ANT1.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>en</value>
+  </metadata>
+  <metadata name="clm_ReserveData.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clm_TID.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clm_EPC.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clm_TagType.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="clm_RSSI.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>

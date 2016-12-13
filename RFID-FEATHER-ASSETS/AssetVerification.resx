@@ -157,7 +157,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblCurrentDateTime.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <metadata name="VerifyTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>127, 17</value>
@@ -1967,11 +1967,14 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <metadata name="grdViewRFIDTag.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="grdViewRFIDTag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <data name="grdViewRFIDTag.ColumnHeadersHeight" type="System.Int32, mscorlib">
     <value>35</value>
   </data>
@@ -1980,6 +1983,12 @@
   </metadata>
   <data name="colDate.HeaderText" xml:space="preserve">
     <value>DATE</value>
+  </data>
+  <metadata name="colReaderLocation.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colReaderLocation.HeaderText" xml:space="preserve">
+    <value>READER LOCATION</value>
   </data>
   <metadata name="colOwnerName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2104,14 +2113,11 @@
   <data name="colIsCompared.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="grdViewRFIDTag.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
   <data name="grdViewRFIDTag.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <data name="grdViewRFIDTag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>884, 688</value>
+    <value>884, 667</value>
   </data>
   <data name="grdViewRFIDTag.TabIndex" type="System.Int32, mscorlib">
     <value>85</value>
@@ -2126,7 +2132,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;grdViewRFIDTag.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <metadata name="lblLoginUserName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2165,7 +2171,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblLoginUserName.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <metadata name="ReadLoopTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>538, 17</value>
@@ -2222,10 +2228,475 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="dataGridViewImageColumn1.HeaderText" xml:space="preserve">
     <value />
+  </data>
+  <metadata name="led_Tag_Count.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="led_Tag_Count.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="led_Tag_Count.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="led_Tag_Count.Location" type="System.Drawing.Point, System.Drawing">
+    <value>315, 367</value>
+  </data>
+  <data name="led_Tag_Count.MaxLength" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="led_Tag_Count.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 22</value>
+  </data>
+  <data name="led_Tag_Count.TabIndex" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="led_Tag_Count.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;led_Tag_Count.Name" xml:space="preserve">
+    <value>led_Tag_Count</value>
+  </data>
+  <data name="&gt;&gt;led_Tag_Count.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;led_Tag_Count.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;led_Tag_Count.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="lb_ReceiveCount.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lb_ReceiveCount.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lb_ReceiveCount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>SimSun, 12pt, style=Bold</value>
+  </data>
+  <data name="lb_ReceiveCount.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lb_ReceiveCount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>451, 299</value>
+  </data>
+  <data name="lb_ReceiveCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 16</value>
+  </data>
+  <data name="lb_ReceiveCount.TabIndex" type="System.Int32, mscorlib">
+    <value>91</value>
+  </data>
+  <data name="lb_ReceiveCount.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lb_ReceiveCount.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lb_ReceiveCount.Name" xml:space="preserve">
+    <value>lb_ReceiveCount</value>
+  </data>
+  <data name="&gt;&gt;lb_ReceiveCount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_ReceiveCount.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lb_ReceiveCount.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="gb_ReadControl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="gb_ReadControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <metadata name="cmbLocationAnt4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="cmbLocationAnt4.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cmbLocationAnt4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.25pt</value>
+  </data>
+  <data name="cmbLocationAnt4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 138</value>
+  </data>
+  <data name="cmbLocationAnt4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 23</value>
+  </data>
+  <data name="cmbLocationAnt4.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;cmbLocationAnt4.Name" xml:space="preserve">
+    <value>cmbLocationAnt4</value>
+  </data>
+  <data name="&gt;&gt;cmbLocationAnt4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbLocationAnt4.Parent" xml:space="preserve">
+    <value>gb_ReadControl</value>
+  </data>
+  <data name="&gt;&gt;cmbLocationAnt4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="cmbLocationAnt3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="cmbLocationAnt3.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cmbLocationAnt3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.25pt</value>
+  </data>
+  <data name="cmbLocationAnt3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 113</value>
+  </data>
+  <data name="cmbLocationAnt3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 23</value>
+  </data>
+  <data name="cmbLocationAnt3.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;cmbLocationAnt3.Name" xml:space="preserve">
+    <value>cmbLocationAnt3</value>
+  </data>
+  <data name="&gt;&gt;cmbLocationAnt3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbLocationAnt3.Parent" xml:space="preserve">
+    <value>gb_ReadControl</value>
+  </data>
+  <data name="&gt;&gt;cmbLocationAnt3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="cmbLocationAnt2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="cmbLocationAnt2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cmbLocationAnt2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.25pt</value>
+  </data>
+  <data name="cmbLocationAnt2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 88</value>
+  </data>
+  <data name="cmbLocationAnt2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 23</value>
+  </data>
+  <data name="cmbLocationAnt2.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;cmbLocationAnt2.Name" xml:space="preserve">
+    <value>cmbLocationAnt2</value>
+  </data>
+  <data name="&gt;&gt;cmbLocationAnt2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbLocationAnt2.Parent" xml:space="preserve">
+    <value>gb_ReadControl</value>
+  </data>
+  <data name="&gt;&gt;cmbLocationAnt2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="cmbLocationAnt1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="cmbLocationAnt1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cmbLocationAnt1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.25pt</value>
+  </data>
+  <data name="cmbLocationAnt1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 63</value>
+  </data>
+  <data name="cmbLocationAnt1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 23</value>
+  </data>
+  <data name="cmbLocationAnt1.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;cmbLocationAnt1.Name" xml:space="preserve">
+    <value>cmbLocationAnt1</value>
+  </data>
+  <data name="&gt;&gt;cmbLocationAnt1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbLocationAnt1.Parent" xml:space="preserve">
+    <value>gb_ReadControl</value>
+  </data>
+  <data name="&gt;&gt;cmbLocationAnt1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="label11.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="label11.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="label11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 34</value>
+  </data>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 15</value>
+  </data>
+  <data name="label11.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="&gt;&gt;label11.Name" xml:space="preserve">
+    <value>label11</value>
+  </data>
+  <data name="&gt;&gt;label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
+    <value>gb_ReadControl</value>
+  </data>
+  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <metadata name="label10.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="label10.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 34</value>
+  </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 15</value>
+  </data>
+  <data name="label10.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Antenna #</value>
+  </data>
+  <data name="&gt;&gt;label10.Name" xml:space="preserve">
+    <value>label10</value>
+  </data>
+  <data name="&gt;&gt;label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
+    <value>gb_ReadControl</value>
+  </data>
+  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="btnStartReading.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="btnStartReading.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="btnStartReading.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnStartReading.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 172</value>
+  </data>
+  <data name="btnStartReading.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 26</value>
+  </data>
+  <data name="btnStartReading.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btnStartReading.Text" xml:space="preserve">
+    <value>Start Reading</value>
+  </data>
+  <data name="&gt;&gt;btnStartReading.Name" xml:space="preserve">
+    <value>btnStartReading</value>
+  </data>
+  <data name="&gt;&gt;btnStartReading.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnStartReading.Parent" xml:space="preserve">
+    <value>gb_ReadControl</value>
+  </data>
+  <data name="&gt;&gt;btnStartReading.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <metadata name="chkAnt4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="chkAnt4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkAnt4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkAnt4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 143</value>
+  </data>
+  <data name="chkAnt4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 19</value>
+  </data>
+  <data name="chkAnt4.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="chkAnt4.Text" xml:space="preserve">
+    <value>Ant4</value>
+  </data>
+  <data name="&gt;&gt;chkAnt4.Name" xml:space="preserve">
+    <value>chkAnt4</value>
+  </data>
+  <data name="&gt;&gt;chkAnt4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkAnt4.Parent" xml:space="preserve">
+    <value>gb_ReadControl</value>
+  </data>
+  <data name="&gt;&gt;chkAnt4.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <metadata name="chkAnt3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="chkAnt3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkAnt3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkAnt3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 118</value>
+  </data>
+  <data name="chkAnt3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 19</value>
+  </data>
+  <data name="chkAnt3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="chkAnt3.Text" xml:space="preserve">
+    <value>Ant3</value>
+  </data>
+  <data name="&gt;&gt;chkAnt3.Name" xml:space="preserve">
+    <value>chkAnt3</value>
+  </data>
+  <data name="&gt;&gt;chkAnt3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkAnt3.Parent" xml:space="preserve">
+    <value>gb_ReadControl</value>
+  </data>
+  <data name="&gt;&gt;chkAnt3.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <metadata name="chkAnt2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="chkAnt2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkAnt2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkAnt2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 93</value>
+  </data>
+  <data name="chkAnt2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 19</value>
+  </data>
+  <data name="chkAnt2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="chkAnt2.Text" xml:space="preserve">
+    <value>Ant2</value>
+  </data>
+  <data name="&gt;&gt;chkAnt2.Name" xml:space="preserve">
+    <value>chkAnt2</value>
+  </data>
+  <data name="&gt;&gt;chkAnt2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkAnt2.Parent" xml:space="preserve">
+    <value>gb_ReadControl</value>
+  </data>
+  <data name="&gt;&gt;chkAnt2.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <metadata name="chkAnt1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="chkAnt1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkAnt1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkAnt1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 67</value>
+  </data>
+  <data name="chkAnt1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 19</value>
+  </data>
+  <data name="chkAnt1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="chkAnt1.Text" xml:space="preserve">
+    <value>Ant1</value>
+  </data>
+  <data name="&gt;&gt;chkAnt1.Name" xml:space="preserve">
+    <value>chkAnt1</value>
+  </data>
+  <data name="&gt;&gt;chkAnt1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkAnt1.Parent" xml:space="preserve">
+    <value>gb_ReadControl</value>
+  </data>
+  <data name="&gt;&gt;chkAnt1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="gb_ReadControl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="gb_ReadControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 227</value>
+  </data>
+  <data name="gb_ReadControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>272, 217</value>
+  </data>
+  <data name="gb_ReadControl.TabIndex" type="System.Int32, mscorlib">
+    <value>92</value>
+  </data>
+  <data name="gb_ReadControl.Text" xml:space="preserve">
+    <value>Antenna Setup：</value>
+  </data>
+  <data name="&gt;&gt;gb_ReadControl.Name" xml:space="preserve">
+    <value>gb_ReadControl</value>
+  </data>
+  <data name="&gt;&gt;gb_ReadControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gb_ReadControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gb_ReadControl.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -3948,6 +4419,12 @@
     <value>colDate</value>
   </data>
   <data name="&gt;&gt;colDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colReaderLocation.Name" xml:space="preserve">
+    <value>colReaderLocation</value>
+  </data>
+  <data name="&gt;&gt;colReaderLocation.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;colOwnerName.Name" xml:space="preserve">

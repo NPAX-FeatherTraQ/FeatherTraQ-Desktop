@@ -159,7 +159,7 @@
             // 
             this.lblSystemInfo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSystemInfo.Name = "lblSystemInfo";
-            this.lblSystemInfo.Size = new System.Drawing.Size(761, 17);
+            this.lblSystemInfo.Size = new System.Drawing.Size(877, 17);
             this.lblSystemInfo.Spring = true;
             this.lblSystemInfo.Text = "Display System Information";
             this.lblSystemInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -374,7 +374,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(613, 64);
+            this.tabPage2.Size = new System.Drawing.Size(884, 64);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Registration";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -388,7 +388,7 @@
             this.registerAssetToolStripMenuItem1});
             this.menuStrip2.Location = new System.Drawing.Point(3, 3);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(607, 58);
+            this.menuStrip2.Size = new System.Drawing.Size(878, 58);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -418,7 +418,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(613, 64);
+            this.tabPage3.Size = new System.Drawing.Size(884, 64);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Verification";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -432,7 +432,7 @@
             this.toolStripMenuItem3});
             this.menuStrip3.Location = new System.Drawing.Point(3, 3);
             this.menuStrip3.Name = "menuStrip3";
-            this.menuStrip3.Size = new System.Drawing.Size(607, 58);
+            this.menuStrip3.Size = new System.Drawing.Size(878, 58);
             this.menuStrip3.TabIndex = 1;
             this.menuStrip3.Text = "menuStrip3";
             // 
@@ -462,7 +462,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 24);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(613, 64);
+            this.tabPage4.Size = new System.Drawing.Size(884, 64);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Reports";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -475,7 +475,7 @@
             this.toolStripMenuItem4});
             this.menuStrip4.Location = new System.Drawing.Point(3, 3);
             this.menuStrip4.Name = "menuStrip4";
-            this.menuStrip4.Size = new System.Drawing.Size(607, 58);
+            this.menuStrip4.Size = new System.Drawing.Size(878, 58);
             this.menuStrip4.TabIndex = 2;
             this.menuStrip4.Text = "menuStrip4";
             // 
@@ -495,7 +495,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 24);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(613, 64);
+            this.tabPage5.Size = new System.Drawing.Size(884, 64);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Maintenance";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -508,7 +508,7 @@
             this.toolStripMenuItem5});
             this.menuStrip5.Location = new System.Drawing.Point(3, 3);
             this.menuStrip5.Name = "menuStrip5";
-            this.menuStrip5.Size = new System.Drawing.Size(607, 58);
+            this.menuStrip5.Size = new System.Drawing.Size(878, 58);
             this.menuStrip5.TabIndex = 3;
             this.menuStrip5.Text = "menuStrip5";
             this.menuStrip5.Click += new System.EventHandler(this.serialPortToolStripMenuItem_Click);
@@ -572,7 +572,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FeatherTraQ - ASSET MANAGEMENT SOLUTIONS";
+            this.Text = "FEATHERTRAQ - Asset Securitization Solution";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainMenu_FormClosed);
             this.statusStrip1.ResumeLayout(false);

@@ -24,7 +24,7 @@ namespace RFID_FEATHER_ASSETS
         {
             InitializeComponent();
             getLanguage();
-            languageHandler();
+            //languageHandler();
             GetSavedSerialPort();
             tokenvalue = tokenvaluesource;
             roleValue = roleSource;
@@ -39,7 +39,7 @@ namespace RFID_FEATHER_ASSETS
                 //if it does exist, retrieve the stored values  
                 if (key != null)
                 {
-                    language = (string)(key.GetValue("Language"));
+                    language = "English";//(string)(key.GetValue("Language"));
                     key.Close();
                 }
             }

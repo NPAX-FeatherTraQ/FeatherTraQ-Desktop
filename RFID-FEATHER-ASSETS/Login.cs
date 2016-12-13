@@ -117,7 +117,7 @@ namespace RFID_FEATHER_ASSETS
                 //if it does exist, retrieve the stored values  
                 if (key != null)
                 {
-                    selectLanguage.Text = (string)(key.GetValue("Language"));
+                    selectLanguage.Text = "English";//(string)(key.GetValue("Language"));
                     locationInfo = (string)(key.GetValue("LocInfo"));
                     readerInfo = (string)(key.GetValue("readerInfo"));
                     key.Close();
@@ -208,7 +208,7 @@ namespace RFID_FEATHER_ASSETS
 
                             }
                                 if(save == true)
-                                    locationInfo = locationInfo + ',' + cmbLocation.Text;
+                                    locationInfo = !string.IsNullOrEmpty(locationInfo) ? locationInfo + ',' + cmbLocation.Text : cmbLocation.Text;
                         }
                         companyid = loginResult.companyId;
                         companyName = loginResult.companyName;

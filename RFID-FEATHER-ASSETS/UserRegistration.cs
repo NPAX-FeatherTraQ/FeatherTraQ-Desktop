@@ -62,7 +62,7 @@ namespace RFID_FEATHER_ASSETS
         {
             InitializeComponent();
             getLanguage();
-            languageHandler();
+            //languageHandler();
             GetCompanyPath();
             //tokenvalue = tokenvaluesource;
             InitializeCamera();
@@ -149,7 +149,7 @@ namespace RFID_FEATHER_ASSETS
                 //if it does exist, retrieve the stored values  
                 if (key != null)
                 {
-                    language = (string)(key.GetValue("Language"));
+                    language = "English";//(string)(key.GetValue("Language"));
                     readerInfo = (string)(key.GetValue("readerInfo"));
                     key.Close();
                 }
@@ -530,7 +530,7 @@ namespace RFID_FEATHER_ASSETS
             userinfo.assetIdCard.takeOutInfo = txtlastName.Text + " only";
             userinfo.assetIdCard.ownerId = 1;
             userinfo.assetIdCard.assetType = "ID_CARD";
-            userinfo.assetIdCard.baseLocation = readerInfo;
+            //userinfo.assetIdCard.baseLocation = readerInfo;
 
             if (btnSubmit.Text.ToLower() == "update")
             {
@@ -911,7 +911,7 @@ namespace RFID_FEATHER_ASSETS
                 //transactDet.notes = notes;
                 transactDet.type = type;
                 //transactDet.assetId = assetId;
-                transactDet.location = readerInfo;
+                //transactDet.location = readerInfo;
                 transactDet.classType = "ID_CARD";
 
                 //Gettting the assetId
@@ -1645,7 +1645,7 @@ namespace RFID_FEATHER_ASSETS
                 {
                     for (int i = 0; i < RealTimeTagDataList.Count; i++)
                     {
-                        tagInfo = RealTimeTagDataList[i].strEpc;//tagInfo = RealTimeTagDataList[i].btAntId.ToString() + "    " + RealTimeTagDataList[i].strEpc + "    ";// tagInfo = "antenna" + RealTimeTagDataList[i].btAntId.ToString() + "    " + RealTimeTagDataList[i].strEpc + "    " + RealTimeTagDataList[i].strCarrierFrequency + "    " + RealTimeTagDataList[i].strRssi;
+                        tagInfo = RealTimeTagDataList[i].strEpc.Replace(" ", string.Empty); //RealTimeTagDataList[i].strEpc;//tagInfo = RealTimeTagDataList[i].btAntId.ToString() + "    " + RealTimeTagDataList[i].strEpc + "    ";// tagInfo = "antenna" + RealTimeTagDataList[i].btAntId.ToString() + "    " + RealTimeTagDataList[i].strEpc + "    " + RealTimeTagDataList[i].strCarrierFrequency + "    " + RealTimeTagDataList[i].strRssi;
                         //listBox1.Items.Add(tagInfo);
                         txtRFIDTag.Text = tagInfo.ToString();
                         txtfirstName.Focus();//txtAssetName.Focus();

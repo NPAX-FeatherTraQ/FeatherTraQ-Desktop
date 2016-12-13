@@ -33,7 +33,7 @@ namespace RFID_FEATHER_ASSETS
             getSystemInfo();
             //company.Text = companyName;
             //locationTxt.Text = location;
-            languageHandler();
+            //languageHandler();
             //tabControl1.SelectedIndex = 1;
             picboxLogo.BringToFront(); 
         }
@@ -48,10 +48,10 @@ namespace RFID_FEATHER_ASSETS
                 //if it does exist, retrieve the stored values  
                 if (key != null)
                 {
-                    language = (string)(key.GetValue("Language"));
+                    language = "English";//(string)(key.GetValue("Language"));
                     //companyName = (string)(key.GetValue("companyName"));
                     //location = (string)(key.GetValue("readerInfo"));
-                    displaySystemInfo = "User ID: " + (string)(key.GetValue("UserName")).ToString().ToUpper() + " | Company: " + (string)(key.GetValue("companyName").ToString().ToUpper()) + " | Location: " + (string)(key.GetValue("readerInfo")).ToString().ToUpper(); //+ " | " + DateTime.Now.ToString("MM/dd/yyyy h:mm:ss tt");
+                    displaySystemInfo = "User ID: " + (string)(key.GetValue("UserName")).ToString().ToUpper() + " | Company: " + (string)(key.GetValue("companyName").ToString().ToUpper()) + " | PC Location: " + (string)(key.GetValue("readerInfo")).ToString().ToUpper(); //+ " | " + DateTime.Now.ToString("MM/dd/yyyy h:mm:ss tt");
                     key.Close();
                 }
             }
@@ -260,9 +260,9 @@ namespace RFID_FEATHER_ASSETS
 
                 logoutCloseCameraReader();
 
-                this.Hide();
+                //this.Hide();
                 Verification verifyAsset = new Verification();
-                verifyAsset.Show();
+                verifyAsset.ShowDialog();//.Show();
             }
             catch (Exception ex)
             {
@@ -444,9 +444,9 @@ namespace RFID_FEATHER_ASSETS
             { 
                 logoutCloseCameraReader();
 
-                this.Hide();
+                //this.Hide();
                 Tracking trackingAsset = new Tracking();
-                trackingAsset.Show();
+                trackingAsset.ShowDialog();//.Show();
             }
             catch (Exception ex)
             {

@@ -13,10 +13,16 @@ using System.Resources;
 using System.Reflection;
 using System.Globalization;
 using System.Media;
+using ClouReaderAPI;
+using ClouReaderAPI.ClouInterface;
+using ClouReaderAPI.Models;
 
 namespace RFID_FEATHER_ASSETS
 {
-    public partial class Tracking : Form
+    public delegate void AddTagT(Tag_Model tag_6C, DataGridViewRow dgvr, Boolean isNew);      // 更新标签信息invoke
+    public delegate void FlushStateT();                                                       // 更新实时状态invoke
+
+    public partial class Tracking : Form, IAsynchronousMessage
     {
         //string connectionString = "server=128.199.83.107;port=3306;uid=root;pwd=aws123;database=feather_assets;";
         public static int AssetIdValue = 0;
@@ -49,17 +55,99 @@ namespace RFID_FEATHER_ASSETS
         string userName;
         bool getOwnerNameOnly = false;
 
+        //Clou
+        public string ConnID = "";
+        private bool IsStartRead = false;
+        private bool IsFlush = false;
+        Dictionary<String, DataGridViewRow> dic_Rows = new Dictionary<string, DataGridViewRow>(); // 在DataGridView中显示标签数据
+        //public String readVarParam_6C = "";      
+        string antReadLocation;
+        string AntLocationInfo;
+        bool save;
+        string ant1Location;
+        string ant2Location;
+        string ant3Location;
+        string ant4Location;
+
+        #region 读写器能力
+
+        private int minDB = 0;                                            // 最小功率
+        private int maxDB = 36;                                           // 最大功率
+        private int antCount = 2;                                         // 天线数目
+        private List<Int32> bandList = new List<Int32>();                 // 频段列表
+        private List<Int32> RFIDProtocolList = new List<Int32>();         // RFID协议列表
+
+        #endregion
+
+
         public Tracking()//string tokenvaluesource, string roleSource) //(string tokenvaluesource, string portnamesource, string roleSource)
         {
             InitializeComponent();
 
             getLanguage();
-            languageHandler();
+            //languageHandler();
             GetAssetSystemInfo();
             //tokenvalue = tokenvaluesource;
             //roleValue = roleSource;
-            try { ReadLoopTimer.Start(); }
-            catch (Exception) { }
+            //try { ReadLoopTimer.Start(); }
+            //catch (Exception) { }
+
+            if (AntLocationInfo != null) populateLocation();
+        }
+
+        private void populateLocation()
+        {
+            List<Ant1Location> loc1 = new List<Ant1Location>();
+            List<Ant2Location> loc2 = new List<Ant2Location>();
+            List<Ant3Location> loc3 = new List<Ant3Location>();
+            List<Ant4Location> loc4 = new List<Ant4Location>();
+
+            if (AntLocationInfo != null)
+            {
+                string[] locInfo = AntLocationInfo.Split(',');
+
+                /*if (language == "Japanese")
+                {
+                    roles.Add(new GlobalClass.GetSetClass() { roleName = rm.GetString("Administrator"), value = "ROLE_ADMIN" });
+                    roles.Add(new GlobalClass.GetSetClass() { roleName = rm.GetString("Security"), value = "ROLE_GUARD" });
+                    //roles.Add(new Role() { roleName = "User", value = "ROLE_USER" });
+                }
+                else
+                {*/
+
+                for (int i = 0; i < locInfo.Length; i++)
+                {
+
+                    loc1.Add(new Ant1Location() { location = locInfo[i], value = "location_" + locInfo[i] });
+                    loc2.Add(new Ant2Location() { location = locInfo[i], value = "location_" + locInfo[i] });
+                    loc3.Add(new Ant3Location() { location = locInfo[i], value = "location_" + locInfo[i] });
+                    loc4.Add(new Ant4Location() { location = locInfo[i], value = "location_" + locInfo[i] });
+                }
+                //roles.Add(new Role() { roleName = "User", value = "ROLE_USER" });
+                /*}*/
+                this.cmbLocationAnt1.DataSource = loc1;
+                this.cmbLocationAnt1.ValueMember = "value";
+                this.cmbLocationAnt1.DisplayMember = "location";
+
+                this.cmbLocationAnt2.DataSource = loc2;
+                this.cmbLocationAnt2.ValueMember = "value";
+                this.cmbLocationAnt2.DisplayMember = "location";
+
+                this.cmbLocationAnt3.DataSource = loc3;
+                this.cmbLocationAnt3.ValueMember = "value";
+                this.cmbLocationAnt3.DisplayMember = "location";
+
+                this.cmbLocationAnt4.DataSource = loc4;
+                this.cmbLocationAnt4.ValueMember = "value";
+                this.cmbLocationAnt4.DisplayMember = "location";
+
+                cmbLocationAnt1.Text = string.Empty;
+                cmbLocationAnt2.Text = string.Empty;
+                cmbLocationAnt3.Text = string.Empty;
+                cmbLocationAnt4.Text = string.Empty;
+
+                //this.cmbLocation.Text = readerInfo;
+            }
         }
         private void getLanguage()
         {
@@ -71,7 +159,7 @@ namespace RFID_FEATHER_ASSETS
                 //if it does exist, retrieve the stored values  
                 if (key != null)
                 {
-                    language = (string)(key.GetValue("Language"));
+                    language = "English";//(string)(key.GetValue("Language"));
                     key.Close();
                 }
             }
@@ -123,8 +211,9 @@ namespace RFID_FEATHER_ASSETS
                     userId = (int)(key.GetValue("UserId"));
                     lblLoginUserName.Text = "Username: " + (string)(key.GetValue("UserName")).ToString();//.ToUpper();
                     readerInfo = (string)(key.GetValue("readerInfo"));
-                    displaySystemInfo = "User ID: " + (string)(key.GetValue("UserName")).ToString().ToUpper() + " | Company: " + (string)(key.GetValue("companyName").ToString().ToUpper()) + " | Location: " + (string)(key.GetValue("readerInfo")).ToString().ToUpper(); //+ " | " + DateTime.Now.ToString("MM/dd/yyyy h:mm:ss tt");
+                    displaySystemInfo = "User ID: " + (string)(key.GetValue("UserName")).ToString().ToUpper() + " | Company: " + (string)(key.GetValue("companyName").ToString().ToUpper()) + " | PC Location: " + (string)(key.GetValue("readerInfo")).ToString().ToUpper(); //+ " | " + DateTime.Now.ToString("MM/dd/yyyy h:mm:ss tt");
                     userName = (string)(key.GetValue("UserName")).ToString();
+                    AntLocationInfo = (string)(key.GetValue("LocInfo"));
                     key.Close();
 
                     //if (roleValue == "ROLE_GUARD")
@@ -153,24 +242,163 @@ namespace RFID_FEATHER_ASSETS
                 CurrentDateTimer.Enabled = true;
                 CurrentDateTimer.Interval = 1000;
 
-                VerifyTimer.Interval = 2000;
+                VerifyTimer.Interval = 3000;
                 VerifyTimer.Tick += new EventHandler(VerifyTimer_Tick);
 
                 //ClearGridTimer.Interval = 30000;
                 //ClearGridTimer.Tick += new EventHandler(ClearGridTimer_Tick);
 
-                reader = new Reader.ReaderMethod();
-                ////Callback
-                //reader.AnalyCallback = AnalyData;
-                //reader.ReceiveCallback = ReceiveData;
-                //reader.SendCallback = SendData;
-                //auto_connect();
-                ReaderMethodProc();
+                //reader = new Reader.ReaderMethod();
+                //////Callback
+                ////reader.AnalyCallback = AnalyData;
+                ////reader.ReceiveCallback = ReceiveData;
+                ////reader.SendCallback = SendData;
+                ////auto_connect();
+                //ReaderMethodProc();
+
+                //Clou  
+                //clouReaderSetup();
+                ////CheckConnID();
+                clearAntLocBox();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void clearAntLocBox()
+        {
+            cmbLocationAnt1.Text = string.Empty;
+            cmbLocationAnt2.Text = string.Empty;
+            cmbLocationAnt3.Text = string.Empty;
+            cmbLocationAnt4.Text = string.Empty;
+        }
+
+        private void CheckConnID()
+        {
+            //#region 还原控制状态
+
+            //foreach (ToolStripItem item in menuStrip.Items)
+            //{
+            //    item.Enabled = true;
+            //}
+            //foreach (ToolStripItem item in tsm_Main.Items)
+            //{
+            //    item.Enabled = true;
+            //}
+
+            //#endregion
+
+            if (String.IsNullOrEmpty(ConnID))
+            {
+                //foreach (ToolStripItem item in menuStrip.Items)
+                //{
+                //    item.Enabled = false;
+                //}
+                //tsmi_Connect.Enabled = true;
+                //tsmi_SearchDevice.Enabled = true;
+                //tsmi_Language.Enabled = true;
+                //foreach (ToolStripItem item in tsm_Main.Items)
+                //{
+                //    item.Enabled = false;
+                //}
+
+                gb_ReadControl.Visible = true;
+                //btnStartReading.Enabled = true;
+            }
+            else
+            {
+                if (IsStartRead)
+                {
+                    //foreach (ToolStripItem item in menuStrip.Items)
+                    //{
+                    //    item.Enabled = false;
+                    //}
+                    //tsmi_Connect.Enabled = true;
+                    //tsmi_Helper.Enabled = true;
+                    //tsb_Read_Epc.Enabled = false;
+                    //tsb_Read_EPCTID.Enabled = false;
+                    //tsb_Read_Global.Enabled = false;
+                    //tsb_Write_EPC.Enabled = false;
+                    //tsb_Write_UserData.Enabled = false;
+                    //tsb_WriteGlobal.Enabled = false;
+
+                    gb_ReadControl.Visible = false;
+                    //btnStartReading.Enabled = false;
+                }
+            }
+        }
+
+        private void clouReaderSetup()
+        {
+            bool isConnect = false;
+            ConnID = "COM1:115200";
+            isConnect = CLReader.CreateSerialConn(ConnID, this);
+            CLReader.CreateSerialConn(ConnID, new Verification());
+
+            String rt = "";
+            ClouReaderAPI.CLReader.RFID_OPTION.StopReader(ConnID);
+            rt = ClouReaderAPI.CLReader.RFID_OPTION.GetEPC(ConnID, GetReadTagParam(""));
+            //if (!rt.StartsWith("0")) { MessageBox.Show("Read failed，Controller/Antenna is off or not connected!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+            if (!rt.StartsWith("0"))
+            {
+                MessageBox.Show("Read failed, Controller is off or Antenna not selected!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                /*connectDeviceSetup();*/
+                return;
+            }
+            else
+                tsb_Read_Enable();
+
+            CLReader.DIC_CONNECT[ConnID].ProcessCount = 0;
+
+            //StartFlush();                                  
+            IsStartRead = true;
+        }
+
+        public String GetReadTagParam(String varParam)
+        {
+            //String rt = "1|1";
+
+            String rt = "";
+
+            #region 获取天线号 & 单次读取/循环读取
+
+            Int32 antNUM = 0;
+            Int32 singleOrWhile = -1;
+            //antNUM += 1;
+            //singleOrWhile = 1;
+            foreach (var item in gb_ReadControl.Controls)
+            {
+                CheckBox control = item as CheckBox;
+                if (control != null && control.Checked)
+                {
+                    antNUM += Int32.Parse(control.Tag.ToString());
+                }
+            }
+            //foreach (var item in gb_ReadType.Controls)
+            //{
+            //    RadioButton control = item as RadioButton;
+            //    if (control != null && control.Checked)
+            //    {
+                      singleOrWhile = 1;//Byte.Parse(control.Tag.ToString());
+            //    }
+            //}
+            rt += (Byte)antNUM + "|" + singleOrWhile + "|";
+
+            #endregion
+
+            #region 可选参数
+
+            if (!String.IsNullOrEmpty(varParam))
+            {
+                rt += varParam;
+            }
+
+            #endregion
+
+            rt = rt.TrimEnd('|');
+            return rt;
         }
 
         #region btnVerifyAsset
@@ -246,6 +474,11 @@ namespace RFID_FEATHER_ASSETS
                                 {
                                     IsRFIDTagExist = true;
                                     //txtRFIDTag.Text = string.Empty;
+                                    if (totalAssetRead < grdViewRFIDTag.Rows.Count)
+                                    {
+                                        VerifyTimer.Start();
+                                    }
+
                                     return;
                                 }
                                 else
@@ -327,8 +560,8 @@ namespace RFID_FEATHER_ASSETS
                                             row.Cells["colAssetID"].Value = verifyResult.assetId;
                                             row.Cells["colAssetDescription"].Value = verifyResult.description;
                                             //row.Cells["colTakeOutNote"].Value = verifyResult.takeOutInfo;
-                                            row.Cells["colLocation"].Value = readerInfo;
-
+                                            row.Cells["colLocation"].Value = antReadLocation;//readerInfo;
+                                            row.Cells["colClassification"].Value = verifyResult.assetType;
                                             //getownerInfo(verifyResult.ownerUserId);
 
                                             if (verifyResult.description.Contains("ID_CARD"))
@@ -394,6 +627,7 @@ namespace RFID_FEATHER_ASSETS
                                             //    playAlarmSound("Expired");
                                             //}
                                             //lblAssetCount.Visible = true;
+                                            grdViewRFIDTag.Refresh();
                                             lblAssetCount.Text = "Asset Counts: " + grdViewRFIDTag.Rows.Count;
 
                                             grdViewRFIDTag.FirstDisplayedScrollingRowIndex = grdViewRFIDTag.RowCount - 1;
@@ -543,7 +777,7 @@ namespace RFID_FEATHER_ASSETS
                 //transactDet.assetImageUrl = newImgFileNames;
                 //transactDet.imageUrls = imageUrls;
                 transactDet.updatedBy = userName;//updatedBy;
-                transactDet.readerInfo = readerInfo;
+                transactDet.readerInfo = antReadLocation;//readerInfo;
                 //transactDet.notes = notes;
                 transactDet.type = type;
                 transactDet.assetId = assetId;
@@ -872,6 +1106,86 @@ namespace RFID_FEATHER_ASSETS
         {
             //this.Refresh();
             //LoopTracking(); 
+            connectDeviceSetup();
+        }
+
+        private void connectDeviceSetup()
+        {
+            //if (!IsMultiConnect) { CloseNowConnect(); }
+            ConnectDeviceT addConnForm = new ConnectDeviceT(this, 0);
+            DialogResult dr = addConnForm.ShowDialog(this);
+            this.Focus();
+            if (dr == DialogResult.OK)
+            {
+                //tssl_NowConnID.Text = ConnID;
+                ////Init();
+            }
+            else if (dr == DialogResult.No)
+            {
+                MessageBox.Show("Open Connection Failure.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                connectDeviceSetup();
+            }
+            else ValidateRule();
+        }
+
+        private void Init()
+        {
+            InitReaderProerty();
+            CheckConnID();
+
+            #region 天线能力
+
+            foreach (var item in gb_ReadControl.Controls)
+            {
+                CheckBox cb = item as CheckBox;
+                if (cb != null)
+                {
+                    int index = Int32.Parse(cb.Name.Substring(cb.Name.Length - 1, 1));
+                    if (index > antCount)
+                    {
+                        cb.Enabled = false;
+                        cb.Checked = false;
+                    }
+                    else
+                    {
+                        cb.Enabled = true;
+                    }
+                }
+            }
+
+            #endregion
+
+            grdViewRFIDTag.AutoGenerateColumns = false;
+            Type type = grdViewRFIDTag.GetType();
+            System.Reflection.PropertyInfo pi = type.GetProperty("DoubleBuffered",
+            System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
+            pi.SetValue(grdViewRFIDTag, true, null);
+        }
+
+        private void InitReaderProerty()
+        {
+            string strReaderProperty = ClouReaderAPI.CLReader.RFID_OPTION.GetReaderProperty(ConnID);
+            string[] str_array = strReaderProperty.Split('|');
+            if (str_array.Length == 5)
+            {
+                try
+                {
+                    minDB = Int32.Parse(str_array[0]);
+                    maxDB = Int32.Parse(str_array[1]);
+                    antCount = Int32.Parse(str_array[2]);
+                    string[] str_bandList = str_array[3].Split(',');
+                    string[] str_RFIDProtocolList = str_array[4].Split(',');
+                    for (int i = 0; i < str_bandList.Length; i++)
+                    {
+                        bandList.Add(Int32.Parse(str_bandList[i]));
+                    }
+                    for (int i = 0; i < str_RFIDProtocolList.Length; i++)
+                    {
+                        RFIDProtocolList.Add(Int32.Parse(str_RFIDProtocolList[i]));
+                    }
+                }
+                catch { }
+            }
         }
 
         private void LoopTracking()
@@ -1011,13 +1325,40 @@ namespace RFID_FEATHER_ASSETS
 
         private void Tracking_FormClosed(object sender, FormClosedEventArgs e)
         {
-            ValidateRule();
+            //ValidateRule();
 
             if (RegisterUser.regOwnerCon) RegisterUser.reader.CloseCom();
             if (RegisterUser.cam != null) RegisterUser.cam.Stop();
 
             if (AssetRegistration.regAssetCon) AssetRegistration.reader.CloseCom();
             if (AssetRegistration.cam != null) AssetRegistration.cam.Stop();
+
+            //Clou
+            IsStartRead = false;
+            IsFlush = false;
+            ClouReaderAPI.CLReader.RFID_OPTION.StopReader(ConnID);
+
+            CloseNowConnect();
+
+            ValidateRule();
+        }
+
+        private void CloseNowConnect()
+        {
+            if (!String.IsNullOrEmpty(ConnID))
+            {
+                try
+                {
+                    if (IsStartRead)         // 正在读取标签的情况断开连接
+                    {
+                        ClouReaderAPI.CLReader.RFID_OPTION.StopReader(ConnID);
+                        IsStartRead = false;
+                    }
+                    ClouReaderAPI.CLReader.CloseConn(ConnID);
+                    ConnID = "";
+                }
+                catch { }
+            }
         }
 
         private void ValidateRule()
@@ -1031,8 +1372,9 @@ namespace RFID_FEATHER_ASSETS
                 //Environment.Exit(0);
                 IsCallingMainMenu = true;
 
-                this.Hide();
-                reader.CloseCom();
+                //this.Hide();
+                //reader.CloseCom();
+                this.Dispose();
                 LoginActivity LoginForm = new LoginActivity();
                 LoginForm.Show();
             }
@@ -1043,10 +1385,11 @@ namespace RFID_FEATHER_ASSETS
             //Return to Main Menu Form
             IsCallingMainMenu = true;
 
-            this.Hide();
-            reader.CloseCom();
-            MainMenu MenuForm = new MainMenu(tokenvalue, roleValue);
-            MenuForm.Show();
+            //this.Hide();
+            ////reader.CloseCom();
+            //MainMenu MenuForm = new MainMenu(tokenvalue, roleValue);
+            //MenuForm.Show();
+            this.Close();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -1654,6 +1997,490 @@ namespace RFID_FEATHER_ASSETS
             lblSystemInfo.Text = displaySystemInfo + " | Date: " + DateTime.Now.ToString("MM/dd/yyyy h:mm:ss tt");
         }
 
+        //Clou
+        #region Interface Method
+        // Tag Data
+        public void OutPutTags(ClouReaderAPI.Models.Tag_Model tag_Model)
+        {
+            //Console.WriteLine("EPC:" + tag.EPC + " - TID:" + tag.TID + " - UserData:" + tag.UserData);
+
+            //ReadTagBeep();
+            //if (!IsShowTag) return;
+            if (tag_Model == null || tag_Model.Result != 0x00) return;
+
+            bool isNew = false;
+            DataGridViewRow dgvr = null;
+            lock (dic_Rows)
+            {
+                try
+                {
+                    //if (!dic_Rows.ContainsKey(tag_Model.EPC + "|" + tag_Model.TID))
+                    //{
+                    //    dgvr = new DataGridViewRow();
+                        //dgvr.CreateCells(grdViewRFIDTag, new object[] { tag_Model.ReaderName, tag_Model.TagType, tag_Model.EPC, tag_Model.TID, tag_Model.UserData, tag_Model.TagetData, tag_Model.TotalCount, tag_Model.ANT1_COUNT, tag_Model.ANT2_COUNT, tag_Model.ANT3_COUNT, tag_Model.ANT4_COUNT, tag_Model.ANT5_COUNT, tag_Model.ANT6_COUNT, tag_Model.ANT7_COUNT, tag_Model.ANT8_COUNT, tag_Model.RSSI, tag_Model.Frequency, tag_Model.Phase, tag_Model.ReadTime });
+                        //dic_Rows.Add(tag_Model.EPC + "|" + tag_Model.TID, dgvr);
+                        isNew = true;
+                    //}
+                    //else
+                    //{
+                    //    dgvr = dic_Rows[tag_Model.EPC + "|" + tag_Model.TID];
+                    //}
+                }
+                catch { }
+            }
+            AddSingleTag(tag_Model, dgvr, isNew);
+
+            //txtRFIDTag.Invoke(new MethodInvoker(delegate
+            //{
+            //    txtRFIDTag.Text = tag_Model.EPC.ToString();
+            //    antReadLocation = tag_Model.ANT_NUM.ToString();
+
+            //    CheckRFIDTag();
+            //}));
+
+        }
+
+        public void AddSingleTag(Tag_Model tag_6C, DataGridViewRow dgvr, Boolean isNew)
+        {
+            if (this.grdViewRFIDTag.InvokeRequired)
+            {
+                this.grdViewRFIDTag.BeginInvoke(new AddTagT(AddSingleTag), tag_6C, dgvr, isNew);
+                return;
+            }
+            try
+            {
+                txtRFIDTag.Text = tag_6C.EPC.ToString();
+                //antReadLocation = tag_6C.ANT_NUM.ToString();
+
+                switch (tag_6C.ANT_NUM)
+                {
+                    case 1:
+                        antReadLocation = ant1Location;
+                        break;
+                    case 2:
+                        antReadLocation = ant2Location;
+                        break;
+                    case 3:
+                        antReadLocation = ant3Location;
+                        break;
+                    case 4:
+                        antReadLocation = ant4Location;
+                        break;
+                    default:
+                        //Console.WriteLine("Default case");
+                        break;
+                }
+
+                if (!isNew)
+                {
+                    //Int64 newStr = (Int64)dgvr.Cells["clm_TotalCount"].Value + 1;
+                    //dgvr.Cells["clm_TotalCount"].Value = newStr;
+                    //if (tag_6C.ANT_NUM <= 8)
+                    //{
+                    //    dgvr.Cells["clm_ANT" + tag_6C.ANT_NUM].Value = (Int64)dgvr.Cells["clm_ANT" + tag_6C.ANT_NUM].Value + 1;
+                    //}
+                    //dgvr.Cells["clm_RSSI"].Value = tag_6C.RSSI;
+                    //dgvr.Cells["clm_ReadTime"].Value = tag_6C.ReadTime;
+                }
+                else
+                {
+                    //grdViewRFIDTag.Rows.Add(dgvr);
+                    CheckRFIDTag();
+                }
+                //this.led_Tag_ReadCount.Text = CLReader.DIC_CONNECT[ConnID].ProcessCount.ToString();
+            }
+            catch { }
+        }
+
+        private void InitDataGridView()
+        {
+            //if (grdViewRFIDTag.InvokeRequired)
+            //{
+            //    grdViewRFIDTag.BeginInvoke(new MethodInvoker(InitDataGridView), null);
+            //    return;
+            //}
+            //try
+            //{
+            //    Int32 scrollHeight = grdViewRFIDTag.FirstDisplayedScrollingRowIndex;
+            //    BindingSource bs = new BindingSource();
+            //    bs.DataSource = ClouReaderAPI.CLReader.DIC_CONNECT[ConnID].dic_NowTags.Values;
+            //    bs.SuspendBinding();
+            //    grdViewRFIDTag.DataSource = bs;
+            //    grdViewRFIDTag.FirstDisplayedScrollingRowIndex = scrollHeight;
+            //}
+            //catch { }
+        }
+
+        public void WriteDebugMsg(string msg)
+        {
+
+        }
+
+        public void WriteLog(string msg)
+        {
+
+        }
+
+        public void PortConneting(string connID)
+        {
+
+        }
+
+        public void PortClosing(string connID)
+        {
+
+        }
+
+        public void OutPutTagsOver()
+        {
+            //this.led_Tag_Count.Text = dic_Rows.Count.ToString();
+            IsFlush = false;
+        }
+
+        public void GPIControlMsg(int gpiIndex, int gpiState, int startOrStop)
+        {
+
+        }
+
+        #endregion
+
+        private void Tracking_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            ClouReaderAPI.CLReader.RFID_OPTION.StopReader(ConnID);
+        }
+
+        private void btnStartReading_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if ((chkAnt1.Checked && string.IsNullOrEmpty(cmbLocationAnt1.Text)) || (chkAnt2.Checked && string.IsNullOrEmpty(cmbLocationAnt2.Text)) || (chkAnt3.Checked && string.IsNullOrEmpty(cmbLocationAnt3.Text)) || (chkAnt4.Checked && string.IsNullOrEmpty(cmbLocationAnt4.Text)) || (!chkAnt1.Checked && !chkAnt2.Checked && !chkAnt3.Checked && !chkAnt4.Checked))
+                {
+                    MessageBox.Show("Location is required.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                else
+                {
+                    btnStartReading.Text = "Please wait...";
+
+                    //validate and save location
+                    if (chkAnt1.Checked && !AntLocationInfo.Contains(cmbLocationAnt1.Text))
+                    {
+                        AntLocationInfo = AntLocationInfo + ',' + cmbLocationAnt1.Text;
+                        save = true;
+                    }
+                    if (chkAnt2.Checked && !AntLocationInfo.Contains(cmbLocationAnt2.Text))
+                    {
+                        AntLocationInfo = AntLocationInfo + ',' + cmbLocationAnt2.Text;
+                        save = true;
+                    }
+                    if (chkAnt3.Checked && !AntLocationInfo.Contains(cmbLocationAnt3.Text))
+                    {
+                        AntLocationInfo = AntLocationInfo + ',' + cmbLocationAnt3.Text;
+                        save = true;
+                    }
+                    if (chkAnt4.Checked && !AntLocationInfo.Contains(cmbLocationAnt4.Text))
+                    {
+                        AntLocationInfo = AntLocationInfo + ',' + cmbLocationAnt4.Text;
+                        save = true;
+                    }
+
+                    //string[] loc = AntLocationInfo.Split(',');
+                    //for (int i = 0; i < loc.Length; i++)
+                    //{
+                    //    if (loc[i].ToLower() == cmbLocationAnt1.Text.ToLower() || loc[i].ToLower() == cmbLocationAnt2.Text.ToLower() || loc[i].ToLower() == cmbLocationAnt3.Text.ToLower() || loc[i].ToLower() == cmbLocationAnt4.Text.ToLower())
+                    //    {
+                    //        save = false;
+                    //        break;
+                    //    }
+                    //    else
+                    //        save = true;
+
+                    //}
+                    if (save == true)
+                    {
+                        //Save AntLocation
+                        RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\AssetSystemInfo");
+
+                        //storing the values  
+                        key.SetValue("LocInfo", AntLocationInfo);
+                        key.Close();
+                    }
+
+                    //assign antenna value
+                    ant1Location = cmbLocationAnt1.Text;
+                    ant2Location = cmbLocationAnt2.Text;
+                    ant3Location = cmbLocationAnt3.Text;
+                    ant4Location = cmbLocationAnt4.Text;
+
+                    String rt = "";
+                    ClouReaderAPI.CLReader.RFID_OPTION.StopReader(ConnID);
+                    rt = ClouReaderAPI.CLReader.RFID_OPTION.GetEPC(ConnID, GetReadTagParam(""));
+                    if (!rt.StartsWith("0")) 
+                    { 
+                        MessageBox.Show("Read failed, Controller is off or Antenna not selected!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error); 
+                        /*connectDeviceSetup();*/
+                        btnStartReading.Text = "Start Reading";
+                        return; 
+                    }
+                    else
+                        tsb_Read_Enable();
+                }
+                        
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void tsb_Read_Enable()
+        {
+            CLReader.DIC_CONNECT[ConnID].ProcessCount = 0;  // 该连接的计数器清零。
+            //TJ_LastTagcount = 0;
+            ////StartFlush();                                   // 开始刷新状态
+            //if (rb_While.Checked)
+            //{
+                IsStartRead = true;
+                ////CheckConnID();//CheckEnableButton();
+            //}
+                gb_ReadControl.Visible = false;
+        }
+
+        public void StartFlush()
+        {
+            if (IsFlush == true) return;
+            ThreadPool.QueueUserWorkItem(new WaitCallback(delegate(object o)
+            {
+                IsFlush = true;
+                long flushCount = 0;
+                while (IsFlush)
+                {
+                    if (flushCount % 2 == 0) FlushState();
+                    flushCount++;
+                    System.Threading.Thread.Sleep(500);
+                    // Application.DoEvents();
+                }
+            }));
+        }
+
+        public void FlushState()
+        {
+            if (this.lb_ReceiveCount.InvokeRequired)
+            {
+                this.grdViewRFIDTag.BeginInvoke(new FlushStateT(FlushState), null);
+                return;
+            }
+            Monitor.Enter(grdViewRFIDTag);
+            try
+            {
+                //long nowTagCount = CLReader.DIC_CONNECT[ConnID].ProcessCount;
+                //this.lb_ReceiveCount.Text = nowTagCount.ToString();
+                //this.tssl_CacheSize.Text = CLReader.DIC_CONNECT[ConnID].receiveBufferManager.DataCount.ToString();
+                //// this.lb_tagTotalCount.Text = CLReader.DIC_CONNECT[ConnID].dic_NowTags.Count.ToString();
+                //// this.lb_tagTotalCount.Text = dic_Rows.Count.ToString();
+                //this.led_Tag_Count.Text = dic_Rows.Count.ToString();
+                //Int32 totalMinutes = (Int32)((DateTime.Now - TJ_Run_Start).TotalMilliseconds / 1000);
+                //// lb_ReadTime.Text = totalMinutes +" S";
+                //led_Time.Text = totalMinutes.ToString();
+                //long l_Speed = Math.Abs(nowTagCount - TJ_LastTagcount);
+                //// lb_ReadTagSpeed.Text = (l_Speed < 0 ? 0 : l_Speed) + " T/S";
+                //led_Speed.Text = l_Speed.ToString();
+                //TJ_LastTagcount = CLReader.DIC_CONNECT[ConnID].ProcessCount;
+
+                //float cpuLoad = pc_Processor.NextValue();
+                //tssl_CPULoad.Text = cpuLoad.ToString("F2") + "%";           // CPU使用率
+
+            }
+            catch { }
+            Monitor.Exit(grdViewRFIDTag);
+        }
+
+        private void cmbLocationAnt1_Leave(object sender, EventArgs e)
+        {
+            //if (AntLocationInfo == null)
+            //    AntLocationInfo = cmbLocationAnt1.Text;
+            //else
+            //{
+            //    string[] loc = AntLocationInfo.Split(',');
+            //    for (int i = 0; i < loc.Length; i++)
+            //    {
+            //        if (loc[i].ToLower() == cmbLocationAnt1.Text.ToLower())
+            //        {
+            //            save = false;
+            //            break;
+            //        }
+            //        else
+            //            save = true;
+
+            //    }
+            //    if (save == true)
+            //    {
+            //        AntLocationInfo = AntLocationInfo + ',' + cmbLocationAnt1.Text;
+
+            //        //Save AntLocation
+            //        RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\AssetSystemInfo");
+
+            //        //storing the values  
+            //        key.SetValue("LocInfo", AntLocationInfo);
+            //        key.Close();
+            //    }
+            //}
+        }
+
+        private void chkAnt1_CheckedChanged(object sender, EventArgs e)
+        {
+            cmbLocationAnt1.Text = string.Empty;
+            if (chkAnt1.Checked) 
+                cmbLocationAnt1.Enabled = true;
+            else 
+                cmbLocationAnt1.Enabled = false;
+        }
+
+        private void chkAnt2_CheckedChanged(object sender, EventArgs e)
+        {
+            cmbLocationAnt2.Text = string.Empty;
+            if (chkAnt2.Checked)
+                cmbLocationAnt2.Enabled = true;
+            else
+                cmbLocationAnt2.Enabled = false;
+        }
+
+        private void chkAnt3_CheckedChanged(object sender, EventArgs e)
+        {
+            cmbLocationAnt3.Text = string.Empty;
+            if (chkAnt3.Checked)
+                cmbLocationAnt3.Enabled = true;
+            else
+                cmbLocationAnt3.Enabled = false;
+        }
+
+        private void chkAnt4_CheckedChanged(object sender, EventArgs e)
+        {
+            cmbLocationAnt4.Text = string.Empty;
+            if (chkAnt4.Checked)
+                cmbLocationAnt4.Enabled = true;
+            else
+                cmbLocationAnt4.Enabled = false;
+        }
+
+        private void cmbLocationAnt2_Leave(object sender, EventArgs e)
+        {
+            //if (AntLocationInfo == null)
+            //    AntLocationInfo = cmbLocationAnt2.Text;
+            //else
+            //{
+            //    string[] loc = AntLocationInfo.Split(',');
+            //    for (int i = 0; i < loc.Length; i++)
+            //    {
+            //        if (loc[i].ToLower() == cmbLocationAnt2.Text.ToLower())
+            //        {
+            //            save = false;
+            //            break;
+            //        }
+            //        else
+            //            save = true;
+
+            //    }
+            //    if (save == true)
+            //    {
+            //        AntLocationInfo = AntLocationInfo + ',' + cmbLocationAnt2.Text;
+
+            //        //Save AntLocation
+            //        RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\AssetSystemInfo");
+
+            //        //storing the values  
+            //        key.SetValue("LocInfo", AntLocationInfo);
+            //        key.Close();
+            //    }
+            //}
+        }
+
+        private void cmbLocationAnt3_Leave(object sender, EventArgs e)
+        {
+            //if (AntLocationInfo == null)
+            //    AntLocationInfo = cmbLocationAnt3.Text;
+            //else
+            //{
+            //    string[] loc = AntLocationInfo.Split(',');
+            //    for (int i = 0; i < loc.Length; i++)
+            //    {
+            //        if (loc[i].ToLower() == cmbLocationAnt3.Text.ToLower())
+            //        {
+            //            save = false;
+            //            break;
+            //        }
+            //        else
+            //            save = true;
+
+            //    }
+            //    if (save == true)
+            //    {
+            //        AntLocationInfo = AntLocationInfo + ',' + cmbLocationAnt3.Text;
+
+            //        //Save AntLocation
+            //        RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\AssetSystemInfo");
+
+            //        //storing the values  
+            //        key.SetValue("LocInfo", AntLocationInfo);
+            //        key.Close();
+            //    }
+            //}
+        }
+
+        private void cmbLocationAnt4_Leave(object sender, EventArgs e)
+        {
+            //if (AntLocationInfo == null)
+            //    AntLocationInfo = cmbLocationAnt4.Text;
+            //else
+            //{
+            //    string[] loc = AntLocationInfo.Split(',');
+            //    for (int i = 0; i < loc.Length; i++)
+            //    {
+            //        if (loc[i].ToLower() == cmbLocationAnt4.Text.ToLower())
+            //        {
+            //            save = false;
+            //            break;
+            //        }
+            //        else
+            //            save = true;
+
+            //    }
+            //    if (save == true)
+            //    {
+            //        AntLocationInfo = AntLocationInfo + ',' + cmbLocationAnt4.Text;
+
+            //        //Save AntLocation
+            //        RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\AssetSystemInfo");
+
+            //        //storing the values  
+            //        key.SetValue("LocInfo", AntLocationInfo);
+            //        key.Close();
+            //    }
+            //}
+        }
+
+    }
+
+    public class Ant1Location
+    {
+        public string location { get; set; }
+        public string value { get; set; }
+    }
+    public class Ant2Location
+    {
+        public string location { get; set; }
+        public string value { get; set; }
+    }
+
+    public class Ant3Location
+    {
+        public string location { get; set; }
+        public string value { get; set; }
+    }
+    public class Ant4Location
+    {
+        public string location { get; set; }
+        public string value { get; set; }
     }
 
     //public class VerifyRequest
