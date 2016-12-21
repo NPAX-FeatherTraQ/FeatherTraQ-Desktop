@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="lblCurrentDateTime.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lblCurrentDateTime.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -171,12 +168,6 @@
   <metadata name="ClearGridTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="groupBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="label3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -204,15 +195,9 @@
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="groupBox2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="groupBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <metadata name="txtBaseLocation.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="txtBaseLocation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -243,9 +228,6 @@
   <data name="&gt;&gt;txtBaseLocation.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="label7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="label7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -285,9 +267,6 @@
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="txtClassification.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="txtClassification.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -318,9 +297,6 @@
   <data name="&gt;&gt;txtClassification.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="label4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="label4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -360,9 +336,6 @@
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="txtOwnerName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="txtOwnerName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -393,9 +366,6 @@
   <data name="&gt;&gt;txtOwnerName.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <metadata name="label9.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="label9.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -435,9 +405,6 @@
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <metadata name="txtValidityPeriod.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="txtValidityPeriod.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -468,9 +435,6 @@
   <data name="&gt;&gt;txtValidityPeriod.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <metadata name="lblValidUntil.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblValidUntil.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -510,9 +474,6 @@
   <data name="&gt;&gt;lblValidUntil.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <metadata name="lblDesc.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblDesc.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -549,9 +510,6 @@
   <data name="&gt;&gt;lblDesc.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <metadata name="txtTakeOutNote.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="txtTakeOutNote.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -585,9 +543,6 @@
   <data name="&gt;&gt;txtTakeOutNote.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <metadata name="lblMemo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblMemo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -624,9 +579,6 @@
   <data name="&gt;&gt;lblMemo.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <metadata name="txtAssetName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="txtAssetName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -660,9 +612,6 @@
   <data name="&gt;&gt;txtAssetName.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <metadata name="txtRFIDTag.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="txtRFIDTag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -696,9 +645,6 @@
   <data name="&gt;&gt;txtRFIDTag.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <metadata name="lblTag.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblTag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -741,9 +687,6 @@
   <data name="&gt;&gt;lblTag.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <metadata name="txtDescription.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="txtDescription.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -777,9 +720,6 @@
   <data name="&gt;&gt;txtDescription.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <metadata name="label8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="label8.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -849,9 +789,6 @@
   <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="lblLoadingInformation.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblLoadingInformation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -891,9 +828,6 @@
   <data name="&gt;&gt;lblLoadingInformation.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="lblSubmittingInformation.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblSubmittingInformation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -933,9 +867,6 @@
   <data name="&gt;&gt;lblSubmittingInformation.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="lblAssetPhoto3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAssetPhoto3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -975,9 +906,6 @@
   <data name="&gt;&gt;lblAssetPhoto3.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <metadata name="lblAssetPhoto2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAssetPhoto2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1017,9 +945,6 @@
   <data name="&gt;&gt;lblAssetPhoto2.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <metadata name="lblAssetPhoto1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAssetPhoto1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1059,9 +984,6 @@
   <data name="&gt;&gt;lblAssetPhoto1.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <metadata name="lblValidIDPhoto.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblValidIDPhoto.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1101,9 +1023,6 @@
   <data name="&gt;&gt;lblValidIDPhoto.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <metadata name="lblOwnerPhoto.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblOwnerPhoto.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1143,9 +1062,6 @@
   <data name="&gt;&gt;lblOwnerPhoto.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <metadata name="btnBack.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="btnBack.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1204,9 +1120,6 @@
   <data name="&gt;&gt;btnBack.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <metadata name="btnSubmit.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="btnSubmit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1240,9 +1153,6 @@
   <data name="&gt;&gt;btnSubmit.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <metadata name="lblOwnerPic.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblOwnerPic.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1282,9 +1192,6 @@
   <data name="&gt;&gt;lblOwnerPic.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <metadata name="lblAssetPic.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblAssetPic.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1324,9 +1231,6 @@
   <data name="&gt;&gt;lblAssetPic.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <metadata name="label6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="label6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1354,9 +1258,6 @@
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <metadata name="imgCapture5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="imgCapture5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1390,9 +1291,6 @@
   <data name="&gt;&gt;imgCapture5.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <metadata name="imgCapture4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="imgCapture4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1426,9 +1324,6 @@
   <data name="&gt;&gt;imgCapture4.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <metadata name="imgCapture3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="imgCapture3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1462,9 +1357,6 @@
   <data name="&gt;&gt;imgCapture3.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
-  <metadata name="imgCapture2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="imgCapture2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1498,9 +1390,6 @@
   <data name="&gt;&gt;imgCapture2.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
-  <metadata name="imgCapture1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="imgCapture1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1534,15 +1423,9 @@
   <data name="&gt;&gt;imgCapture1.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
-  <metadata name="grpBoxReportedInfo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="grpBoxReportedInfo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <metadata name="txtReportedNote.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="txtReportedNote.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1579,9 +1462,6 @@
   <data name="&gt;&gt;txtReportedNote.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="picPersonBroughtOut.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="picPersonBroughtOut.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1612,9 +1492,6 @@
   <data name="&gt;&gt;picPersonBroughtOut.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="label5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1651,9 +1528,6 @@
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="txtOwnerDescription.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="txtOwnerDescription.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
@@ -1687,9 +1561,6 @@
   <data name="&gt;&gt;txtOwnerDescription.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="btnVerifyAsset.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="btnVerifyAsset.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
@@ -1723,9 +1594,6 @@
   <data name="&gt;&gt;btnVerifyAsset.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <metadata name="txtOwnerPosition.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="txtOwnerPosition.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
@@ -1759,9 +1627,6 @@
   <data name="&gt;&gt;txtOwnerPosition.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1798,9 +1663,6 @@
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <metadata name="picOwner.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="picOwner.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1831,9 +1693,6 @@
   <data name="&gt;&gt;picOwner.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1900,9 +1759,6 @@
   <data name="&gt;&gt;grpBoxReportedInfo.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
-  <metadata name="btnReport.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="btnReport.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1969,14 +1825,17 @@
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <metadata name="grdViewRFIDTag.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="grdViewRFIDTag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="grdViewRFIDTag.ColumnHeadersHeight" type="System.Int32, mscorlib">
     <value>35</value>
+  </data>
+  <metadata name="colAssetTag.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colAssetTag.HeaderText" xml:space="preserve">
+    <value>ASSET TAG</value>
   </data>
   <metadata name="colDate.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2080,15 +1939,6 @@
   <data name="colIDOwner.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <metadata name="colAssetTag.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="colAssetTag.HeaderText" xml:space="preserve">
-    <value>ASSET TAG</value>
-  </data>
-  <data name="colAssetTag.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <metadata name="colAssetOwner.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -2134,9 +1984,6 @@
   <data name="&gt;&gt;grdViewRFIDTag.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <metadata name="lblLoginUserName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lblLoginUserName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
@@ -2178,9 +2025,6 @@
   </metadata>
   <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>675, 17</value>
-  </metadata>
-  <metadata name="statusStrip1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
   </metadata>
   <data name="lblMsgAssetNotRegister.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
@@ -2233,9 +2077,6 @@
   <data name="dataGridViewImageColumn1.HeaderText" xml:space="preserve">
     <value />
   </data>
-  <metadata name="led_Tag_Count.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="led_Tag_Count.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -2269,9 +2110,6 @@
   <data name="&gt;&gt;led_Tag_Count.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="lb_ReceiveCount.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lb_ReceiveCount.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2308,15 +2146,9 @@
   <data name="&gt;&gt;lb_ReceiveCount.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="gb_ReadControl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="gb_ReadControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <metadata name="cmbLocationAnt4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="cmbLocationAnt4.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -2344,9 +2176,6 @@
   <data name="&gt;&gt;cmbLocationAnt4.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="cmbLocationAnt3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="cmbLocationAnt3.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -2374,9 +2203,6 @@
   <data name="&gt;&gt;cmbLocationAnt3.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="cmbLocationAnt2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="cmbLocationAnt2.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -2404,9 +2230,6 @@
   <data name="&gt;&gt;cmbLocationAnt2.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="cmbLocationAnt1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="cmbLocationAnt1.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -2434,9 +2257,6 @@
   <data name="&gt;&gt;cmbLocationAnt1.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="label11.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="label11.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2470,9 +2290,6 @@
   <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <metadata name="label10.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="label10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2506,9 +2323,6 @@
   <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <metadata name="btnStartReading.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="btnStartReading.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
@@ -2539,9 +2353,6 @@
   <data name="&gt;&gt;btnStartReading.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <metadata name="chkAnt4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="chkAnt4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2572,9 +2383,6 @@
   <data name="&gt;&gt;chkAnt4.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <metadata name="chkAnt3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="chkAnt3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2605,9 +2413,6 @@
   <data name="&gt;&gt;chkAnt3.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <metadata name="chkAnt2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="chkAnt2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2638,9 +2443,6 @@
   <data name="&gt;&gt;chkAnt2.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <metadata name="chkAnt1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="chkAnt1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2699,9 +2501,6 @@
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -4415,6 +4214,36 @@
   <data name="&gt;&gt;ClearGridTimer.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;ReadLoopTimer.Name" xml:space="preserve">
+    <value>ReadLoopTimer</value>
+  </data>
+  <data name="&gt;&gt;ReadLoopTimer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMsgAssetNotRegister.Name" xml:space="preserve">
+    <value>lblMsgAssetNotRegister</value>
+  </data>
+  <data name="&gt;&gt;lblMsgAssetNotRegister.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSystemInfo.Name" xml:space="preserve">
+    <value>lblSystemInfo</value>
+  </data>
+  <data name="&gt;&gt;lblSystemInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewImageColumn1.Name" xml:space="preserve">
+    <value>dataGridViewImageColumn1</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewImageColumn1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewImageColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colAssetTag.Name" xml:space="preserve">
+    <value>colAssetTag</value>
+  </data>
+  <data name="&gt;&gt;colAssetTag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;colDate.Name" xml:space="preserve">
     <value>colDate</value>
   </data>
@@ -4493,12 +4322,6 @@
   <data name="&gt;&gt;colIDOwner.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;colAssetTag.Name" xml:space="preserve">
-    <value>colAssetTag</value>
-  </data>
-  <data name="&gt;&gt;colAssetTag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;colAssetOwner.Name" xml:space="preserve">
     <value>colAssetOwner</value>
   </data>
@@ -4516,30 +4339,6 @@
   </data>
   <data name="&gt;&gt;colIsCompared.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ReadLoopTimer.Name" xml:space="preserve">
-    <value>ReadLoopTimer</value>
-  </data>
-  <data name="&gt;&gt;ReadLoopTimer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblMsgAssetNotRegister.Name" xml:space="preserve">
-    <value>lblMsgAssetNotRegister</value>
-  </data>
-  <data name="&gt;&gt;lblMsgAssetNotRegister.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblSystemInfo.Name" xml:space="preserve">
-    <value>lblSystemInfo</value>
-  </data>
-  <data name="&gt;&gt;lblSystemInfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewImageColumn1.Name" xml:space="preserve">
-    <value>dataGridViewImageColumn1</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewImageColumn1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewImageColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Verification</value>

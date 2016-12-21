@@ -2008,26 +2008,26 @@ namespace RFID_FEATHER_ASSETS
             //if (!IsShowTag) return;
             if (tag_Model == null || tag_Model.Result != 0x00) return;
 
-            bool isNew = false;
+            bool isNew = true; //false;
             DataGridViewRow dgvr = null;
-            lock (dic_Rows)
-            {
-                try
-                {
-                    //if (!dic_Rows.ContainsKey(tag_Model.EPC + "|" + tag_Model.TID))
-                    //{
-                    //    dgvr = new DataGridViewRow();
-                        //dgvr.CreateCells(grdViewRFIDTag, new object[] { tag_Model.ReaderName, tag_Model.TagType, tag_Model.EPC, tag_Model.TID, tag_Model.UserData, tag_Model.TagetData, tag_Model.TotalCount, tag_Model.ANT1_COUNT, tag_Model.ANT2_COUNT, tag_Model.ANT3_COUNT, tag_Model.ANT4_COUNT, tag_Model.ANT5_COUNT, tag_Model.ANT6_COUNT, tag_Model.ANT7_COUNT, tag_Model.ANT8_COUNT, tag_Model.RSSI, tag_Model.Frequency, tag_Model.Phase, tag_Model.ReadTime });
-                        //dic_Rows.Add(tag_Model.EPC + "|" + tag_Model.TID, dgvr);
-                        isNew = true;
-                    //}
-                    //else
-                    //{
-                    //    dgvr = dic_Rows[tag_Model.EPC + "|" + tag_Model.TID];
-                    //}
-                }
-                catch { }
-            }
+            //lock (dic_Rows)
+            //{
+            //    try
+            //    {
+            //        //if (!dic_Rows.ContainsKey(tag_Model.EPC + "|" + tag_Model.TID))
+            //        //{
+            //        //    dgvr = new DataGridViewRow();
+            //            //dgvr.CreateCells(grdViewRFIDTag, new object[] { tag_Model.ReaderName, tag_Model.TagType, tag_Model.EPC, tag_Model.TID, tag_Model.UserData, tag_Model.TagetData, tag_Model.TotalCount, tag_Model.ANT1_COUNT, tag_Model.ANT2_COUNT, tag_Model.ANT3_COUNT, tag_Model.ANT4_COUNT, tag_Model.ANT5_COUNT, tag_Model.ANT6_COUNT, tag_Model.ANT7_COUNT, tag_Model.ANT8_COUNT, tag_Model.RSSI, tag_Model.Frequency, tag_Model.Phase, tag_Model.ReadTime });
+            //            //dic_Rows.Add(tag_Model.EPC + "|" + tag_Model.TID, dgvr);
+            //            isNew = true;
+            //        //}
+            //        //else
+            //        //{
+            //        //    dgvr = dic_Rows[tag_Model.EPC + "|" + tag_Model.TID];
+            //        //}
+            //    }
+            //    catch { }
+            //}
             AddSingleTag(tag_Model, dgvr, isNew);
 
             //txtRFIDTag.Invoke(new MethodInvoker(delegate
@@ -2071,22 +2071,22 @@ namespace RFID_FEATHER_ASSETS
                         break;
                 }
 
-                if (!isNew)
-                {
-                    //Int64 newStr = (Int64)dgvr.Cells["clm_TotalCount"].Value + 1;
-                    //dgvr.Cells["clm_TotalCount"].Value = newStr;
-                    //if (tag_6C.ANT_NUM <= 8)
-                    //{
-                    //    dgvr.Cells["clm_ANT" + tag_6C.ANT_NUM].Value = (Int64)dgvr.Cells["clm_ANT" + tag_6C.ANT_NUM].Value + 1;
-                    //}
-                    //dgvr.Cells["clm_RSSI"].Value = tag_6C.RSSI;
-                    //dgvr.Cells["clm_ReadTime"].Value = tag_6C.ReadTime;
-                }
-                else
-                {
+                //if (!isNew)
+                //{
+                //    //Int64 newStr = (Int64)dgvr.Cells["clm_TotalCount"].Value + 1;
+                //    //dgvr.Cells["clm_TotalCount"].Value = newStr;
+                //    //if (tag_6C.ANT_NUM <= 8)
+                //    //{
+                //    //    dgvr.Cells["clm_ANT" + tag_6C.ANT_NUM].Value = (Int64)dgvr.Cells["clm_ANT" + tag_6C.ANT_NUM].Value + 1;
+                //    //}
+                //    //dgvr.Cells["clm_RSSI"].Value = tag_6C.RSSI;
+                //    //dgvr.Cells["clm_ReadTime"].Value = tag_6C.ReadTime;
+                //}
+                //else
+                //{
                     //grdViewRFIDTag.Rows.Add(dgvr);
                     CheckRFIDTag();
-                }
+                //}
                 //this.led_Tag_ReadCount.Text = CLReader.DIC_CONNECT[ConnID].ProcessCount.ToString();
             }
             catch { }
@@ -2235,7 +2235,7 @@ namespace RFID_FEATHER_ASSETS
 
         private void tsb_Read_Enable()
         {
-            CLReader.DIC_CONNECT[ConnID].ProcessCount = 0;  // 该连接的计数器清零。
+            //CLReader.DIC_CONNECT[ConnID].ProcessCount = 0;  // 该连接的计数器清零。
             //TJ_LastTagcount = 0;
             ////StartFlush();                                   // 开始刷新状态
             //if (rb_While.Checked)

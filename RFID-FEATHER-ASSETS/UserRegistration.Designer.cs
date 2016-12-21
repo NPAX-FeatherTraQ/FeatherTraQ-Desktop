@@ -634,6 +634,7 @@
             this.cmbauthorities.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbauthorities.FormattingEnabled = true;
             this.cmbauthorities.Location = new System.Drawing.Point(75, 382);
+            this.cmbauthorities.MaxLength = 45;
             this.cmbauthorities.Name = "cmbauthorities";
             this.cmbauthorities.Size = new System.Drawing.Size(265, 24);
             this.cmbauthorities.TabIndex = 7;
@@ -702,6 +703,7 @@
             this.txtemail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtemail.Location = new System.Drawing.Point(75, 336);
+            this.txtemail.MaxLength = 255;
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(265, 22);
             this.txtemail.TabIndex = 6;
@@ -711,6 +713,7 @@
             this.txtlastName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtlastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtlastName.Location = new System.Drawing.Point(75, 244);
+            this.txtlastName.MaxLength = 45;
             this.txtlastName.Name = "txtlastName";
             this.txtlastName.Size = new System.Drawing.Size(265, 22);
             this.txtlastName.TabIndex = 4;
@@ -720,6 +723,7 @@
             this.txtposition.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtposition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtposition.Location = new System.Drawing.Point(75, 290);
+            this.txtposition.MaxLength = 45;
             this.txtposition.Name = "txtposition";
             this.txtposition.Size = new System.Drawing.Size(265, 22);
             this.txtposition.TabIndex = 5;
@@ -740,6 +744,7 @@
             this.txtfirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtfirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtfirstName.Location = new System.Drawing.Point(75, 198);
+            this.txtfirstName.MaxLength = 45;
             this.txtfirstName.Name = "txtfirstName";
             this.txtfirstName.Size = new System.Drawing.Size(265, 22);
             this.txtfirstName.TabIndex = 3;

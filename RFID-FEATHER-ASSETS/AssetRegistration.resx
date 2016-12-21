@@ -864,6 +864,9 @@
   <data name="cmbBaseLocation.Location" type="System.Drawing.Point, System.Drawing">
     <value>87, 247</value>
   </data>
+  <data name="cmbBaseLocation.MaxLength" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
   <data name="cmbBaseLocation.Size" type="System.Drawing.Size, System.Drawing">
     <value>264, 24</value>
   </data>
@@ -932,6 +935,9 @@
   </data>
   <data name="cmbAssetClassification.Location" type="System.Drawing.Point, System.Drawing">
     <value>88, 201</value>
+  </data>
+  <data name="cmbAssetClassification.MaxLength" type="System.Int32, mscorlib">
+    <value>20</value>
   </data>
   <data name="cmbAssetClassification.Size" type="System.Drawing.Size, System.Drawing">
     <value>264, 24</value>

@@ -2257,7 +2257,7 @@ namespace RFID_FEATHER_ASSETS
 
         private void tsb_Read_Enable()
         {
-            CLReader.DIC_CONNECT[ConnID].ProcessCount = 0;  // 该连接的计数器清零。
+            //CLReader.DIC_CONNECT[ConnID].ProcessCount = 0;  // 该连接的计数器清零。
             //TJ_LastTagcount = 0;
             ////StartFlush();                                   // 开始刷新状态
             //if (rb_While.Checked)
