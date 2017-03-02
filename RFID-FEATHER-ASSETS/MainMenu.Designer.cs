@@ -572,7 +572,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FEATHERTRAQ - Asset Securitization Solution";
+            this.Text = "FEATHERTRAQ - Asset Tracking & Securitization Solution";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainMenu_FormClosed);
             this.statusStrip1.ResumeLayout(false);

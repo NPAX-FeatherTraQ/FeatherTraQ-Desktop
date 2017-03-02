@@ -1831,12 +1831,6 @@
   <data name="grdViewRFIDTag.ColumnHeadersHeight" type="System.Int32, mscorlib">
     <value>35</value>
   </data>
-  <metadata name="colAssetTag.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="colAssetTag.HeaderText" xml:space="preserve">
-    <value>ASSET TAG</value>
-  </data>
   <metadata name="colDate.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1937,6 +1931,15 @@
     <value>ID Owner</value>
   </data>
   <data name="colIDOwner.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <metadata name="colAssetTag.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colAssetTag.HeaderText" xml:space="preserve">
+    <value>ASSET TAG</value>
+  </data>
+  <data name="colAssetTag.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <metadata name="colAssetOwner.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -4238,12 +4241,6 @@
   <data name="&gt;&gt;dataGridViewImageColumn1.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewImageColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;colAssetTag.Name" xml:space="preserve">
-    <value>colAssetTag</value>
-  </data>
-  <data name="&gt;&gt;colAssetTag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;colDate.Name" xml:space="preserve">
     <value>colDate</value>
   </data>
@@ -4320,6 +4317,12 @@
     <value>colIDOwner</value>
   </data>
   <data name="&gt;&gt;colIDOwner.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colAssetTag.Name" xml:space="preserve">
+    <value>colAssetTag</value>
+  </data>
+  <data name="&gt;&gt;colAssetTag.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;colAssetOwner.Name" xml:space="preserve">

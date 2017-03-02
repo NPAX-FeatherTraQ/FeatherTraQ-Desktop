@@ -85,23 +85,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnReport = new System.Windows.Forms.Button();
             this.grdViewRFIDTag = new System.Windows.Forms.DataGridView();
-            this.colDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colReaderLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colOwnerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAssetDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colClassification = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colBaseLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTakeOutNote = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colValidityPeriod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colViewerIcon = new System.Windows.Forms.DataGridViewImageColumn();
-            this.colAssetID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colIDTag = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colIDOwner = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAssetTag = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAssetOwner = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colRFIDTag = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colIsCompared = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblLoginUserName = new System.Windows.Forms.Label();
             this.ReadLoopTimer = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -122,6 +105,23 @@
             this.chkAnt3 = new System.Windows.Forms.CheckBox();
             this.chkAnt2 = new System.Windows.Forms.CheckBox();
             this.chkAnt1 = new System.Windows.Forms.CheckBox();
+            this.colDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colReaderLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colOwnerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAssetDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colClassification = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBaseLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTakeOutNote = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colValidityPeriod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colViewerIcon = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colAssetID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colIDTag = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colIDOwner = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAssetTag = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAssetOwner = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRFIDTag = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colIsCompared = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCapture5)).BeginInit();
@@ -556,127 +556,6 @@
             this.grdViewRFIDTag.RowHeadersVisible = false;
             this.grdViewRFIDTag.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdViewRFIDTag_CellContentDoubleClick);
             // 
-            // colDate
-            // 
-            this.colDate.FillWeight = 90F;
-            resources.ApplyResources(this.colDate, "colDate");
-            this.colDate.Name = "colDate";
-            this.colDate.ReadOnly = true;
-            this.colDate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // colReaderLocation
-            // 
-            resources.ApplyResources(this.colReaderLocation, "colReaderLocation");
-            this.colReaderLocation.Name = "colReaderLocation";
-            this.colReaderLocation.ReadOnly = true;
-            this.colReaderLocation.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // colOwnerName
-            // 
-            this.colOwnerName.FillWeight = 120F;
-            resources.ApplyResources(this.colOwnerName, "colOwnerName");
-            this.colOwnerName.Name = "colOwnerName";
-            this.colOwnerName.ReadOnly = true;
-            this.colOwnerName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // colAssetDescription
-            // 
-            this.colAssetDescription.FillWeight = 140F;
-            resources.ApplyResources(this.colAssetDescription, "colAssetDescription");
-            this.colAssetDescription.Name = "colAssetDescription";
-            this.colAssetDescription.ReadOnly = true;
-            this.colAssetDescription.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // colClassification
-            // 
-            resources.ApplyResources(this.colClassification, "colClassification");
-            this.colClassification.Name = "colClassification";
-            this.colClassification.ReadOnly = true;
-            // 
-            // colBaseLocation
-            // 
-            resources.ApplyResources(this.colBaseLocation, "colBaseLocation");
-            this.colBaseLocation.Name = "colBaseLocation";
-            this.colBaseLocation.ReadOnly = true;
-            // 
-            // colTakeOutNote
-            // 
-            this.colTakeOutNote.FillWeight = 130.6182F;
-            resources.ApplyResources(this.colTakeOutNote, "colTakeOutNote");
-            this.colTakeOutNote.Name = "colTakeOutNote";
-            this.colTakeOutNote.ReadOnly = true;
-            this.colTakeOutNote.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // colValidityPeriod
-            // 
-            this.colValidityPeriod.FillWeight = 180F;
-            resources.ApplyResources(this.colValidityPeriod, "colValidityPeriod");
-            this.colValidityPeriod.Name = "colValidityPeriod";
-            this.colValidityPeriod.ReadOnly = true;
-            this.colValidityPeriod.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // colStatus
-            // 
-            this.colStatus.FillWeight = 80F;
-            resources.ApplyResources(this.colStatus, "colStatus");
-            this.colStatus.Name = "colStatus";
-            this.colStatus.ReadOnly = true;
-            this.colStatus.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // colViewerIcon
-            // 
-            this.colViewerIcon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
-            this.colViewerIcon.FillWeight = 120F;
-            resources.ApplyResources(this.colViewerIcon, "colViewerIcon");
-            this.colViewerIcon.Name = "colViewerIcon";
-            this.colViewerIcon.ReadOnly = true;
-            this.colViewerIcon.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colAssetID
-            // 
-            resources.ApplyResources(this.colAssetID, "colAssetID");
-            this.colAssetID.Name = "colAssetID";
-            this.colAssetID.ReadOnly = true;
-            // 
-            // colIDTag
-            // 
-            resources.ApplyResources(this.colIDTag, "colIDTag");
-            this.colIDTag.Name = "colIDTag";
-            this.colIDTag.ReadOnly = true;
-            this.colIDTag.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // colIDOwner
-            // 
-            resources.ApplyResources(this.colIDOwner, "colIDOwner");
-            this.colIDOwner.Name = "colIDOwner";
-            this.colIDOwner.ReadOnly = true;
-            // 
-            // colAssetTag
-            // 
-            resources.ApplyResources(this.colAssetTag, "colAssetTag");
-            this.colAssetTag.Name = "colAssetTag";
-            this.colAssetTag.ReadOnly = true;
-            this.colAssetTag.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // colAssetOwner
-            // 
-            resources.ApplyResources(this.colAssetOwner, "colAssetOwner");
-            this.colAssetOwner.Name = "colAssetOwner";
-            this.colAssetOwner.ReadOnly = true;
-            // 
-            // colRFIDTag
-            // 
-            resources.ApplyResources(this.colRFIDTag, "colRFIDTag");
-            this.colRFIDTag.Name = "colRFIDTag";
-            this.colRFIDTag.ReadOnly = true;
-            // 
-            // colIsCompared
-            // 
-            resources.ApplyResources(this.colIsCompared, "colIsCompared");
-            this.colIsCompared.Name = "colIsCompared";
-            this.colIsCompared.ReadOnly = true;
-            this.colIsCompared.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
             // lblLoginUserName
             // 
             resources.ApplyResources(this.lblLoginUserName, "lblLoginUserName");
@@ -826,6 +705,127 @@
             this.chkAnt1.Tag = "1";
             this.chkAnt1.UseVisualStyleBackColor = true;
             this.chkAnt1.CheckedChanged += new System.EventHandler(this.chkAnt1_CheckedChanged);
+            // 
+            // colDate
+            // 
+            this.colDate.FillWeight = 90F;
+            resources.ApplyResources(this.colDate, "colDate");
+            this.colDate.Name = "colDate";
+            this.colDate.ReadOnly = true;
+            this.colDate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colReaderLocation
+            // 
+            resources.ApplyResources(this.colReaderLocation, "colReaderLocation");
+            this.colReaderLocation.Name = "colReaderLocation";
+            this.colReaderLocation.ReadOnly = true;
+            this.colReaderLocation.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colOwnerName
+            // 
+            this.colOwnerName.FillWeight = 120F;
+            resources.ApplyResources(this.colOwnerName, "colOwnerName");
+            this.colOwnerName.Name = "colOwnerName";
+            this.colOwnerName.ReadOnly = true;
+            this.colOwnerName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colAssetDescription
+            // 
+            this.colAssetDescription.FillWeight = 140F;
+            resources.ApplyResources(this.colAssetDescription, "colAssetDescription");
+            this.colAssetDescription.Name = "colAssetDescription";
+            this.colAssetDescription.ReadOnly = true;
+            this.colAssetDescription.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colClassification
+            // 
+            resources.ApplyResources(this.colClassification, "colClassification");
+            this.colClassification.Name = "colClassification";
+            this.colClassification.ReadOnly = true;
+            // 
+            // colBaseLocation
+            // 
+            resources.ApplyResources(this.colBaseLocation, "colBaseLocation");
+            this.colBaseLocation.Name = "colBaseLocation";
+            this.colBaseLocation.ReadOnly = true;
+            // 
+            // colTakeOutNote
+            // 
+            this.colTakeOutNote.FillWeight = 130.6182F;
+            resources.ApplyResources(this.colTakeOutNote, "colTakeOutNote");
+            this.colTakeOutNote.Name = "colTakeOutNote";
+            this.colTakeOutNote.ReadOnly = true;
+            this.colTakeOutNote.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colValidityPeriod
+            // 
+            this.colValidityPeriod.FillWeight = 180F;
+            resources.ApplyResources(this.colValidityPeriod, "colValidityPeriod");
+            this.colValidityPeriod.Name = "colValidityPeriod";
+            this.colValidityPeriod.ReadOnly = true;
+            this.colValidityPeriod.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colStatus
+            // 
+            this.colStatus.FillWeight = 80F;
+            resources.ApplyResources(this.colStatus, "colStatus");
+            this.colStatus.Name = "colStatus";
+            this.colStatus.ReadOnly = true;
+            this.colStatus.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colViewerIcon
+            // 
+            this.colViewerIcon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
+            this.colViewerIcon.FillWeight = 120F;
+            resources.ApplyResources(this.colViewerIcon, "colViewerIcon");
+            this.colViewerIcon.Name = "colViewerIcon";
+            this.colViewerIcon.ReadOnly = true;
+            this.colViewerIcon.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colAssetID
+            // 
+            resources.ApplyResources(this.colAssetID, "colAssetID");
+            this.colAssetID.Name = "colAssetID";
+            this.colAssetID.ReadOnly = true;
+            // 
+            // colIDTag
+            // 
+            resources.ApplyResources(this.colIDTag, "colIDTag");
+            this.colIDTag.Name = "colIDTag";
+            this.colIDTag.ReadOnly = true;
+            this.colIDTag.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colIDOwner
+            // 
+            resources.ApplyResources(this.colIDOwner, "colIDOwner");
+            this.colIDOwner.Name = "colIDOwner";
+            this.colIDOwner.ReadOnly = true;
+            // 
+            // colAssetTag
+            // 
+            resources.ApplyResources(this.colAssetTag, "colAssetTag");
+            this.colAssetTag.Name = "colAssetTag";
+            this.colAssetTag.ReadOnly = true;
+            this.colAssetTag.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colAssetOwner
+            // 
+            resources.ApplyResources(this.colAssetOwner, "colAssetOwner");
+            this.colAssetOwner.Name = "colAssetOwner";
+            this.colAssetOwner.ReadOnly = true;
+            // 
+            // colRFIDTag
+            // 
+            resources.ApplyResources(this.colRFIDTag, "colRFIDTag");
+            this.colRFIDTag.Name = "colRFIDTag";
+            this.colRFIDTag.ReadOnly = true;
+            // 
+            // colIsCompared
+            // 
+            resources.ApplyResources(this.colIsCompared, "colIsCompared");
+            this.colIsCompared.Name = "colIsCompared";
+            this.colIsCompared.ReadOnly = true;
+            this.colIsCompared.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Verification
             // 
